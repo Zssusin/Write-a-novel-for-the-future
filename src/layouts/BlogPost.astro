@@ -5,13 +5,16 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { categoryLabel } from '../consts';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = Omit<CollectionEntry<'blog'>['data'], 'category'> & {
+	category?: CollectionEntry<'blog'>['data']['category'];
+};
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, category, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="zh-CN">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -45,6 +48,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.title h1 {
 				margin: 0 0 0.5em 0;
 			}
+			.category {
+				display: inline-block;
+				margin-bottom: 0.5em;
+				padding: 0.2em 0.8em;
+				border: 1px solid rgb(var(--gray));
+				border-radius: 999px;
+				color: rgb(var(--gray));
+				font-size: 0.85rem;
+			}
 			.date {
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
@@ -64,12 +76,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				</div>
 				<div class="prose">
 					<div class="title">
+						{category && <div class="category">{categoryLabel(category)}</div>}
 						<div class="date">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
 									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+										最后更新于 <FormattedDate date={updatedDate} />
 									</div>
 								)
 							}
