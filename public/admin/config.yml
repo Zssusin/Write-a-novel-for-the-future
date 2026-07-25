@@ -11,8 +11,8 @@ backend:
   base_url: https://sveltia-cms-auth.你的子域.workers.dev
 
 # 后台里「查看线上页面」按钮用的地址。
-# TODO: astro-paper.config.ts 里的 url 还是 example.com，一起改掉。
-site_url: https://example.com
+# 以后绑了自己的域名，这里和 astro-paper.config.ts 里的 url 要一起改。
+site_url: https://write-a-novel-for-the-future.chen202028.workers.dev
 
 # 媒体库。默认工作流是图片走 R2 外链、不进仓库（见 docs/图片工作流.md），
 # 这里留一个仓库内的兜底位置：偶尔一张小图不想开 R2 就直接拖进来。
