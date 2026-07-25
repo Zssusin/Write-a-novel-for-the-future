@@ -7,7 +7,9 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "npm run check:posts && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "uid": "node scripts/check-posts.mjs --new-uid",
+    "check:posts": "node scripts/check-posts.mjs",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",

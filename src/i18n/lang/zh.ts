@@ -21,6 +21,11 @@ export default {
     editPage: "编辑此页",
     previousPost: "上一篇",
     nextPost: "下一篇",
+    seriesLabel: "系列",
+    seriesProgress: "共 {{total}} 部分 · 当前第 {{current}} 部分",
+    partLabel: "第 {{n}} 部分",
+    nextPart: "下一部分",
+    translatedFrom: "译自",
   },
   pagination: {
     prev: "上一页",
@@ -32,6 +37,12 @@ export default {
     featured: "精选",
     recentPosts: "最新文章",
     allPosts: "全部文章",
+  },
+  sidebar: {
+    label: "侧栏",
+    referenceLinks: "参考站点",
+    allArchives: "查看完整归档",
+    allTags: "查看全部标签",
   },
   footer: {
     copyright: "版权所有",

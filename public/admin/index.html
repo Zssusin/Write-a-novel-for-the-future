@@ -1,0 +1,29 @@
+<!doctype html>
+<!--
+  后台入口。public/ 下的东西 Astro 原样拷到 dist，所以这个页面
+  部署后就是 https://你的域名/admin/ ——不需要写任何路由。
+
+  这不是一个「服务器」：整个后台就是这一个页面 + 同目录的 config.yml。
+  它在浏览器里直接调 GitHub API 读写仓库里的 md 文件，
+  没有数据库、没有后端、构建时也不参与，所以 Astro 升级不会碰到它。
+
+  怎么配（Worker、GitHub OAuth、权限）见 docs/后台发布.md。
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 后台不该出现在搜索结果里。robots.txt 里也挡了一层。 -->
+    <meta name="robots" content="noindex, nofollow" />
+    <title>飞向星空 · 后台</title>
+  </head>
+  <body>
+    <!--
+      版本写死，不用 latest。后台是发文章的唯一入口，
+      不能让上游某天推一个改动就把它弄坏 —— 升级要是主动的动作：
+      改这里的版本号，本地打开 /admin/ 确认还能用，再提交。
+      看最新版：npm view @sveltia/cms version
+    -->
+    <script src="https://unpkg.com/@sveltia/cms@0.172.4/dist/sveltia-cms.js"></script>
+  </body>
+</html>

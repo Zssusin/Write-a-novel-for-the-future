@@ -1,7 +1,7 @@
 ---
+uid: h09ysika
 title: 欢迎来到飞向星空
 pubDatetime: 2026-07-23T12:00:00+08:00
-slug: hello-world
 featured: true
 draft: false
 tags:

@@ -49,6 +49,14 @@ const rssHref = getRelativeLocaleUrl(
       cssVariable="--font-google-sans-code"
       preload={[{ subset: "latin", weight: 400, style: "normal" }]}
     />
+    <!-- 自托管的 Michroma（Atomic Rockets 同款），只用于拉丁标题 -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={getAssetPath("fonts/michroma-latin.woff2")}
+      crossorigin
+    />
 
     <!-- Primary meta -->
     <title>{title}</title>
@@ -119,6 +127,8 @@ const rssHref = getRelativeLocaleUrl(
   <body
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
   >
+    <!-- 环境背景：纯色底，深色下右上角钉一张土星（不平铺、不随滚动） -->
+    <div class="site-backdrop" aria-hidden="true"></div>
     <slot />
     <script>
       import "@/scripts/theme";

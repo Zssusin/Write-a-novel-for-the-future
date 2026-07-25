@@ -1,0 +1,165 @@
+# 后台的全部配置。改完刷新 /admin/ 就生效，不用重新构建。
+# 字段和 src/content.config.ts 里的 schema 必须对得上 ——
+# 这边写错了，后台照样让你保存，然后构建时才报错。改完记得本地跑一次 npm run build。
+
+backend:
+  name: github
+  repo: Zssusin/Write-a-novel-for-the-future
+  # Cloudflare Pages 构建的是 main。写错分支 = 存进去了但永远不上线。
+  branch: main
+  # ↓ 部署完 OAuth Worker 后把这行的地址换成你自己的，见 docs/后台发布.md
+  base_url: https://sveltia-cms-auth.你的子域.workers.dev
+
+# 后台里「查看线上页面」按钮用的地址。
+# TODO: astro-paper.config.ts 里的 url 还是 example.com，一起改掉。
+site_url: https://example.com
+
+# 媒体库。默认工作流是图片走 R2 外链、不进仓库（见 docs/图片工作流.md），
+# 这里留一个仓库内的兜底位置：偶尔一张小图不想开 R2 就直接拖进来。
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: posts
+    label: 文章
+    label_singular: 文章
+    folder: src/content/posts
+    create: true
+    # 文件名 = URL。取自下面那个 slug 字段，而不是标题 ——
+    # 标题是中文，直接拿来做文件名会得到一串百分号编码。
+    slug: "{{fields.slug}}"
+    extension: md
+    format: yaml-frontmatter
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields: [pubDatetime, title]
+    view_filters:
+      - { label: 只看草稿, field: draft, pattern: true }
+      - { label: 只看已发布, field: draft, pattern: false }
+    fields:
+      - label: 文件名
+        name: slug
+        widget: string
+        hint: 决定网址，只用小写英文和短横线。发出去之后就别再改了——改了外链和收藏会全断。
+        pattern:
+          - "^[a-z0-9]+(-[a-z0-9]+)*$"
+          - 只能用小写英文字母、数字和短横线，比如 dyson-sphere-1
+
+      # 永久标识。浏览器里跑不了 npm run uid，所以让后台自己生成。
+      # uuid 组件在「新建条目」那一刻生成一次，之后不可修改 —— 正是 uid 要的性质。
+      # prefix: u 让首位是字母，纯数字被 YAML 读成数字的坑就不存在。
+      - label: 永久标识
+        name: uid
+        widget: uuid
+        prefix: u
+        use_b32_encoding: true
+        hint: 自动生成，用来给以后的评论和浏览量当锚点。别动它。
+
+      - label: 标题
+        name: title
+        widget: string
+
+      - label: 摘要
+        name: description
+        widget: text
+        hint: 一两句话。会显示在列表、搜索结果和分享卡片上，别留空。
+
+      - label: 发布时间
+        name: pubDatetime
+        widget: datetime
+        # 存成带时区偏移的 ISO 形状，和现有文章一致
+        format: YYYY-MM-DDTHH:mm:ssZ
+        date_format: YYYY-MM-DD
+        time_format: HH:mm
+        hint: 别填未来的时间——静态站不会自己到点更新，填了未来时间这篇就直接不生成。
+
+      - label: 修改时间
+        name: modDatetime
+        widget: datetime
+        required: false
+        format: YYYY-MM-DDTHH:mm:ssZ
+        date_format: YYYY-MM-DD
+        time_format: HH:mm
+        hint: 改过旧文章才填，新文章留空。
+
+      - label: 标签
+        name: tags
+        widget: list
+        default: [现实科技]
+        field: { label: 标签, name: tag, widget: string }
+        hint: 栏目就是标签。四个栏目：现实科技 / 原创故事 / 工具箱 / 书目推荐。可以再加别的。
+
+      - label: 首页精选
+        name: featured
+        widget: boolean
+        required: false
+        default: false
+
+      - label: 草稿
+        name: draft
+        widget: boolean
+        required: false
+        default: false
+        hint: 勾上就不会出现在站上——本地 npm run dev 里也看不到，草稿是无条件隐藏的。
+
+      - label: 配图
+        name: ogImage
+        widget: string
+        required: false
+        hint: >-
+          填完整的外链地址（R2 那种）。不能填 /xxx.jpg 这样的站内绝对路径——
+          那样构建会直接失败（ImageNotFound）。留空就没有列表缩略图。
+
+      # 不填时 Sveltia 可能写出 series: null 而不是省掉这个键，
+      # 所以 schema 那边是 .optional().nullable()，校验脚本也认 null。
+      - label: 连载系列
+        name: series
+        widget: object
+        required: false
+        collapsed: auto
+        hint: 一个主题拆成多部分陆续发时才填。不是连载就整块留空。
+        fields:
+          - label: 系列名
+            name: name
+            widget: string
+            hint: 同一系列每篇必须一字不差，差一个字就成了两个系列。
+          - label: 第几部分
+            name: part
+            widget: number
+            value_type: int
+            min: 1
+            hint: 决定阅读顺序，和发布时间无关。允许跳号。
+
+      - label: 原文出处
+        name: source
+        widget: object
+        required: false
+        collapsed: auto
+        hint: 译文必须填。原创文章整块留空。
+        fields:
+          - { label: 原文标题, name: title, widget: string }
+          - { label: 原作者, name: author, widget: string, required: false }
+          - label: 原文链接
+            name: url
+            widget: string
+            pattern: ["^https?://", 要完整的 http(s) 地址]
+          - label: 授权说明
+            name: note
+            widget: string
+            required: false
+            hint: 怎么措辞由你定，比如「已获原作者邮件授权翻译」。
+
+      - { label: 正文, name: body, widget: markdown }
+
+  - name: pages
+    label: 单页
+    label_singular: 单页
+    # 单页只改不建，所以用 files 逐个列出，不给「新建」按钮
+    files:
+      - name: about
+        label: 关于
+        file: src/content/pages/about.md
+        fields:
+          - { label: 标题, name: title, widget: string }
+          - { label: 摘要, name: description, widget: text, required: false }
+          - { label: 正文, name: body, widget: markdown }

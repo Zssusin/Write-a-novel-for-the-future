@@ -1,0 +1,41 @@
+---
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+/*
+  译文出处。放在正文之前 —— 读者有权在读第一句之前就知道这是译文、
+  译自谁。署名不是页脚的补充说明，是文章的一部分。
+
+  note 原样输出：授权状况是作者的声明，组件不代为措辞、也不做校验。
+*/
+type Props = {
+  title: string;
+  author?: string | undefined;
+  url: string;
+  note?: string | undefined;
+};
+
+const { title, author, url, note } = Astro.props;
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(locale);
+---
+
+<aside
+  data-pagefind-ignore
+  class="border-accent/50 text-muted-foreground mt-6 border-s-2 ps-3 text-sm"
+>
+  <p>
+    <span>{t.post.translatedFrom}</span>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-accent ms-1 decoration-dashed underline-offset-4 hover:underline"
+    >
+      {title}
+    </a>
+    {author && <span class="ms-1">· {author}</span>}
+  </p>
+  {note && <p class="mt-1 text-xs">{note}</p>}
+</aside>

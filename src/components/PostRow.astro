@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import { getPostUrl } from "@/utils/getPostPaths";
+import config from "@/config";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+/*
+  归档树里的一行文章：MM-DD + 标题。
+  只有 ArchiveTree 的 full 模式（归档页）用到 —— 侧栏的 summary 模式
+  刻意不渲染文章标题，所以这里不再需要 compact 变体。
+*/
+type Props = CollectionEntry<"posts">;
+
+const { id, data, filePath } = Astro.props;
+
+const datetime = dayjs(data.pubDatetime).tz(
+  data.timezone ?? config.site.timezone
+);
+---
+
+<li class="flex items-baseline gap-x-2.5 py-1">
+  <time
+    datetime={datetime.toISOString()}
+    class="text-muted-foreground shrink-0 text-sm tabular-nums"
+  >
+    {datetime.format("MM-DD")}
+  </time>
+  <a
+    href={getPostUrl(id, filePath, Astro.currentLocale)}
+    class="text-accent decoration-dashed underline-offset-4 hover:underline focus-visible:no-underline focus-visible:underline-offset-0"
+  >
+    {data.title}
+  </a>
+</li>

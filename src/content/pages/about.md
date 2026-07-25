@@ -1,37 +1,21 @@
 ---
-title: "About"
-description: "A bit about me and this blog."
+title: "关于"
+description: "关于「飞向星空」这个站点，以及写它的人。"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+「飞向星空」是一个硬科幻爱好者的笔记本。
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+我把散落在各处的好东西收拢过来——翻译过来、注解清楚、或者干脆自己写下来，做成能反复回看的笔记。不追求日更，也不追求全，只放自己真心觉得值得留下的内容。
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+## 你会在这里读到
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+- **现实科技（翻译 + 注解）** — 把国外那些真正硬核的科技与科普好文译成中文，并补上背景、连上相关、标清哪些是事实、哪些是推测。
+- **原创故事** — 我自己写的科幻短篇与设定。
+- **给科幻作者的工具箱** — 写作、设定、世界观构建的方法与资源。
+- **书目推荐大全** — 值得一读的科幻与科普书单，附上推荐理由。
 
-## Features
+每个栏目用**标签**区分，去[标签页](/tags)可以按栏目浏览全部文章。
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+## 关于这个站
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
-
-and so much more.
-
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+用 [Astro](https://astro.build/) 搭建，主题基于 [AstroPaper](https://github.com/satnaing/astro-paper)，部署在 Cloudflare 上。追求的就是：打开快、看着清爽、明暗随心、可全文搜索——不花哨，能长久。

@@ -19,6 +19,11 @@ export interface UIStrings {
     editPage: string;
     previousPost: string;
     nextPost: string;
+    seriesLabel: string;
+    seriesProgress: string;
+    partLabel: string;
+    nextPart: string;
+    translatedFrom: string;
   };
   pagination: {
     prev: string;
@@ -30,6 +35,12 @@ export interface UIStrings {
     featured: string;
     recentPosts: string;
     allPosts: string;
+  };
+  sidebar: {
+    label: string;
+    referenceLinks: string;
+    allArchives: string;
+    allTags: string;
   };
   footer: {
     copyright: string;

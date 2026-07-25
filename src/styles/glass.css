@@ -1,0 +1,111 @@
+/*
+  ===================================================================
+  液态玻璃材质（Liquid Glass）
+  参数依据：
+    - 苹果 HIG「Materials」——官方只给行为规范，不给数值：
+      变体 regular/clear、分层规则「玻璃不能采样玻璃」、无障碍回退。
+    - 镜面边光（rim light）+ 霜面模糊为本站实现。
+    - 噪点层借鉴微软 Fluent Acrylic 官方配方
+      （背景→模糊→exclusion→色调→噪点），用来去掉「塑料感」。
+  分层规则（苹果 HIG 原文精神）：
+    导航层用玻璃，内容层不用。
+    所以全站只有顶部导航条挂 .glass，文章列表用 1px 细线分隔。
+    这也顺带满足了「玻璃不能采样玻璃」——根本不存在嵌套。
+  ===================================================================
+*/
+
+@font-face {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/michroma-latin.woff2") format("woff2");
+  /* 只覆盖拉丁字符，中文自动回落到系统字体 */
+  unicode-range: U+0000-00FF, U+2000-206F, U+2191, U+2193;
+}
+
+@layer base {
+  /*
+    ===== 环境背景 =====
+    做法照搬 ToughSF：纯色底 + 一张不平铺的图钉在角落，
+    正文永远落在纯色上，可读性不受影响。
+    图：NASA/JPL-Caltech，Cassini 拍摄的土星（PIA06193，公有领域）。
+    原图背景是纯黑，用 background-blend-mode: screen 与底色混合，
+    黑色部分正好被底色吃掉，不会露出方块边界。
+  */
+  .site-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--background);
+  }
+
+  [data-theme="dark"] .site-backdrop {
+    background-image: url("/images/saturn.webp");
+    background-position: top 4rem right -6rem;
+    background-repeat: no-repeat;
+    background-size: min(1100px, 92vw) auto;
+    background-blend-mode: screen;
+  }
+
+  /* 窄屏上图会顶到正文后面，缩一点并往外挪 */
+  @media (width < 48rem) {
+    [data-theme="dark"] .site-backdrop {
+      background-position: top 3rem right -30vw;
+      background-size: 150vw auto;
+      opacity: 0.55;
+    }
+  }
+}
+
+@layer components {
+  /* ===== 玻璃面板 ===== */
+  .glass {
+    position: relative;
+    isolation: isolate;
+    background: var(--glass-tint);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow), var(--glass-rim);
+    -webkit-backdrop-filter: var(--glass-filter);
+    backdrop-filter: var(--glass-filter);
+  }
+
+  /* 噪点层：去掉「塑料感」，来自 Fluent Acrylic 配方的最后一步 */
+  .glass::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer base {
+  /*
+    无障碍回退——苹果与微软都强制要求：
+    系统开启「降低透明度」时，玻璃换成实心面板。
+  */
+  @media (prefers-reduced-transparency: reduce) {
+    .glass {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      background: var(--glass-fallback);
+      box-shadow: var(--glass-shadow);
+    }
+    .glass::after {
+      opacity: 0;
+    }
+  }
+
+  /* 高对比模式下去掉半透明，保证可读 */
+  @media (prefers-contrast: more) {
+    .glass {
+      background: var(--glass-fallback);
+      border-color: var(--foreground);
+    }
+  }
+}

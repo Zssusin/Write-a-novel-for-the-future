@@ -21,6 +21,11 @@ export default {
     editPage: "Edit page",
     previousPost: "Previous Post",
     nextPost: "Next Post",
+    seriesLabel: "Series",
+    seriesProgress: "Part {{current}} of {{total}}",
+    partLabel: "Part {{n}}",
+    nextPart: "Next part",
+    translatedFrom: "Translated from",
   },
   pagination: {
     prev: "Prev",
@@ -32,6 +37,12 @@ export default {
     featured: "Featured",
     recentPosts: "Recent Posts",
     allPosts: "All Posts",
+  },
+  sidebar: {
+    label: "Sidebar",
+    referenceLinks: "Reference Sites",
+    allArchives: "Browse full archive",
+    allTags: "Browse all tags",
   },
   footer: {
     copyright: "Copyright",

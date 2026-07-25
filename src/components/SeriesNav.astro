@@ -1,0 +1,104 @@
+---
+import type { SeriesPart } from "@/utils/getSeries";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { useTranslations, tplStr } from "@/i18n";
+import config from "@/config";
+
+/*
+  连载系列的导航。两种形态，同一份数据：
+
+    toc   文章开头的目录。列出本系列全部部分，当前这篇不再是链接。
+          从第 3 部分进来的读者需要**立刻**看到前两部分存在。
+    next  文章末尾的「下一部分」。读完就接着读，不必滚回顶部。
+
+  末尾只放「下一部分」，不放「上一部分」：上一部分在顶部目录里已经有了，
+  而页面底部本来就有一组全站的上一篇/下一篇，再加两个链接就成了四个箭头。
+
+  data-pagefind-ignore 是必须的 —— 否则每一部分都会把同系列其他部分的
+  标题喂进搜索索引，搜任意一部分都命中全系列。
+*/
+type Props = {
+  name: string;
+  parts: SeriesPart[];
+  currentPart: number;
+  variant: "toc" | "next";
+};
+
+const { name, parts, currentPart, variant } = Astro.props;
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(locale);
+
+const partLabel = (part: number) => tplStr(t.post.partLabel, { n: part });
+
+// 「下一部分」= 排在当前之后的第一篇。用 > 而不是 currentPart + 1，
+// 这样中间空一个号（比如预留了第 3 部分）也不会断链。
+const next =
+  variant === "next"
+    ? (parts.find(part => part.part > currentPart) ?? null)
+    : null;
+---
+
+{
+  variant === "toc" ? (
+    <nav
+      data-pagefind-ignore
+      aria-label={t.post.seriesLabel}
+      class="border-border/70 bg-muted/40 mt-6 rounded-lg border px-4 py-3"
+    >
+      <p class="text-sm">
+        <span class="text-muted-foreground">{t.post.seriesLabel}</span>
+        <span class="ms-1.5 font-semibold">{name}</span>
+        {parts.length > 1 && (
+          <span class="text-muted-foreground ms-1.5 text-xs">
+            {tplStr(t.post.seriesProgress, {
+              total: parts.length,
+              current: currentPart,
+            })}
+          </span>
+        )}
+      </p>
+
+      {parts.length > 1 && (
+        <ol class="mt-2 space-y-1 text-sm">
+          {parts.map(part => (
+            <li class="flex gap-2">
+              <span class="text-muted-foreground shrink-0 tabular-nums">
+                {partLabel(part.part)}
+              </span>
+              {part.part === currentPart ? (
+                <span aria-current="true" class="font-medium">
+                  {part.title}
+                </span>
+              ) : (
+                <a
+                  href={getPostUrl(part.id, part.filePath, locale)}
+                  class="text-accent decoration-dashed underline-offset-4 hover:underline"
+                >
+                  {part.title}
+                </a>
+              )}
+            </li>
+          ))}
+        </ol>
+      )}
+    </nav>
+  ) : (
+    next && (
+      <a
+        data-pagefind-ignore
+        href={getPostUrl(next.id, next.filePath, locale)}
+        class="border-border/70 hover:border-accent flex items-center justify-between gap-3 rounded-lg border px-4 py-3 text-sm"
+      >
+        <span>
+          <span class="text-muted-foreground">{t.post.nextPart}</span>
+          <span class="text-accent ms-1.5">
+            {partLabel(next.part)} · {next.title}
+          </span>
+        </span>
+        <IconArrowRight class="size-4 shrink-0 rtl:-rotate-180" />
+      </a>
+    )
+  )
+}

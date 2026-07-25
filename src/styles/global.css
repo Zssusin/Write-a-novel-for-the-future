@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./theme.css";
 @import "./typography.css";
+@import "./glass.css";
 @import "rehype-callouts/theme/obsidian";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
@@ -27,6 +28,20 @@
 
 @utility app-layout {
   @apply max-w-app mx-auto w-full px-4;
+}
+
+/*
+  外壳：比 app-layout 宽，用来容纳「正文 + 常驻右侧栏」两列。
+  68rem − 2rem 内边距 − 15rem 侧栏 − 2.5rem 间距 ≈ 48.5rem 正文，
+  刚好等于原来 max-w-app（48rem）的阅读宽度 —— 加侧栏不牺牲正文。
+*/
+@utility app-shell {
+  @apply mx-auto w-full max-w-[68rem] px-4;
+}
+
+/* lg 以下自动塌成单列，侧栏落到正文下方 */
+@utility app-with-sidebar {
+  @apply grid gap-x-10 gap-y-12 lg:grid-cols-[minmax(0,1fr)_15rem];
 }
 
 @utility active-nav {

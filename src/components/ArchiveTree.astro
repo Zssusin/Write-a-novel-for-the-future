@@ -1,0 +1,167 @@
+---
+import type { CollectionEntry } from "astro:content";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import PostRow from "./PostRow.astro";
+import { getPostsByGroupCondition } from "@/utils/getPostsByGroupCondition";
+import config from "@/config";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+/*
+  年 → 月 归档树，带每级文章数。
+  折叠用原生 <details>/<summary>，不需要一行 JS，也不会有 FOUC。
+  形态参考 Blogger 的 BlogArchive widget（ToughSF 侧栏用的就是它）。
+
+  两种模式，区别不只是字号，而是**渲染多少 HTML**：
+
+    full    归档页专用。年 → 月 → 每篇文章，全部展开，每级带锚点。
+            页面体积 O(文章数)，但只有这一个页面，理应如此。
+
+    summary 侧栏专用。只到「月份 + 篇数」，月份链到归档页的锚点。
+            页面体积 O(月份数) —— 关键在这里：侧栏出现在每一个页面上，
+            如果它渲染全部文章标题，站点总体积就是 O(文章数²)。
+            折叠起来的 <details> 内容照样躺在 HTML 里，看不见 ≠ 不存在。
+*/
+
+type Props = {
+  posts: CollectionEntry<"posts">[];
+  mode?: "full" | "summary";
+  /** summary 模式下月份链接的目标，通常是归档页 */
+  archivesPath?: string;
+};
+
+const { posts, mode = "full", archivesPath = "" } = Astro.props;
+const summary = mode === "summary";
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const monthFormatter = new Intl.DateTimeFormat(locale, { month: "long" });
+
+/*
+  分组必须走站点时区，不能用 Date#getFullYear/getMonth ——
+  那两个方法取的是「构建机」的本地时区，会让月初/年初的文章
+  在本地构建和在 CI（UTC）构建时落进不同的月份。
+  这里跟 Datetime / PostRow 显示日期的口径保持一致。
+*/
+const siteTime = (post: CollectionEntry<"posts">) =>
+  dayjs(post.data.pubDatetime).tz(post.data.timezone ?? config.site.timezone);
+
+const byYear = Object.entries(
+  getPostsByGroupCondition(posts, post => siteTime(post).year())
+).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA));
+
+const newestYear = byYear[0]?.[0];
+
+const monthsOf = (yearPosts: CollectionEntry<"posts">[]) =>
+  Object.entries(
+    getPostsByGroupCondition(yearPosts, post => siteTime(post).month() + 1)
+  ).sort(([monthA], [monthB]) => Number(monthB) - Number(monthA));
+
+const newestFirst = (
+  a: CollectionEntry<"posts">,
+  b: CollectionEntry<"posts">
+) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime();
+
+// full 模式生成这些 id，summary 模式链过去
+const monthAnchor = (year: string, month: string) =>
+  `archive-${year}-${String(month).padStart(2, "0")}`;
+
+const monthLabel = (month: string) =>
+  monthFormatter.format(new Date(2000, Number(month) - 1, 1));
+
+const branchClass = "border-border/60 ms-1.5 border-s ps-3";
+---
+
+<div class="archive-tree">
+  {
+    byYear.map(([year, yearPosts]) => (
+      /* summary 里只展开最新一年，其余年份的月份行折叠但仍在 HTML 中 ——
+         月份行很少，这点体积可以接受，换来一次点击就能翻到旧年份。 */
+      <details open={!summary || year === newestYear}>
+        <summary
+          id={summary ? undefined : `archive-${year}`}
+          class:list={["font-semibold", summary ? "text-base" : "text-xl"]}
+        >
+          {year}
+          <span class="text-muted-foreground font-normal">
+            ({yearPosts.length})
+          </span>
+        </summary>
+
+        {summary ? (
+          <ul class={branchClass}>
+            {monthsOf(yearPosts).map(([month, monthPosts]) => (
+              <li class="py-0.5">
+                <a
+                  href={`${archivesPath}#${monthAnchor(year, month)}`}
+                  class="hover:text-accent text-sm"
+                >
+                  {monthLabel(month)}
+                  <span class="text-muted-foreground">
+                    ({monthPosts.length})
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class={branchClass}>
+            {monthsOf(yearPosts).map(([month, monthPosts]) => (
+              <details open>
+                <summary id={monthAnchor(year, month)}>
+                  {monthLabel(month)}
+                  <span class="text-muted-foreground">
+                    ({monthPosts.length})
+                  </span>
+                </summary>
+                <ul class={branchClass}>
+                  {monthPosts.sort(newestFirst).map(post => (
+                    <PostRow {...post} />
+                  ))}
+                </ul>
+              </details>
+            ))}
+          </div>
+        )}
+      </details>
+    ))
+  }
+</div>
+
+<style>
+  .archive-tree summary {
+    cursor: pointer;
+    list-style: none;
+    padding-block: 0.2rem;
+  }
+  .archive-tree summary::-webkit-details-marker {
+    display: none;
+  }
+  /* Blogger 那种三角标记，展开时转 90° */
+  .archive-tree summary::before {
+    content: "\25B8";
+    display: inline-block;
+    width: 1em;
+    color: var(--muted-foreground);
+    transition: transform 0.15s ease;
+  }
+  .archive-tree details[open] > summary::before {
+    transform: rotate(90deg);
+  }
+  .archive-tree summary span,
+  .archive-tree a span {
+    margin-inline-start: 0.35em;
+    font-size: 0.8em;
+  }
+  /* 从侧栏点月份跳过来时，别让目标贴在贴顶的导航条下面 */
+  .archive-tree summary[id] {
+    scroll-margin-top: 6rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .archive-tree summary::before {
+      transition: none;
+    }
+  }
+</style>

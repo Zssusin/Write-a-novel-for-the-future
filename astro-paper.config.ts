@@ -4,7 +4,7 @@ export default defineAstroPaperConfig({
   site: {
     // TODO: change to your real domain before deploying (used for canonical URLs, OG images, RSS).
     url: "https://example.com/",
-    title: "飞向星空",
+    title: "科幻工具站",
     description:
       "硬科幻爱好者的笔记：现实科技解读、原创故事、创作工具箱与书目推荐。",
     author: "chen", // TODO: your name or pen name
