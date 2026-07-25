@@ -21,7 +21,10 @@ const currentYear = new Date().getFullYear();
   >
     <Socials />
     <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>&#169; {currentYear} {config.site.title}</span>
+      <span>
+        &#169; {currentYear}{" "}
+        <span class="font-display">{config.site.title}</span>
+      </span>
       <span class="hidden sm:inline">&nbsp;·&nbsp;</span>
       <span>
         内容采用{" "}

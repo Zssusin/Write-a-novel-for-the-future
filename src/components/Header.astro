@@ -48,9 +48,17 @@ const isActive = (path: string) => {
   <div
     class="glass relative flex w-full items-baseline justify-between rounded-2xl px-4 py-3 sm:items-center sm:py-4"
   >
+    <!--
+      字标是全站唯一真正用上 Michroma 的地方（font-display → --font-stack-display）。
+      那个字体的 unicode-range 只声明了拉丁，所以它只对拉丁站名生效；
+      站名要是改回中文，这里会静默回落到系统字体，Michroma 就白预加载了。
+
+      没有 font-semibold：Michroma 只有 400 一个字重，写 600 会触发合成加粗，
+      几何字面被算法加粗会糊。它本身就够重。
+    -->
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      class="font-display absolute py-1 text-lg leading-8 whitespace-nowrap sm:static sm:my-auto sm:text-xl sm:leading-none"
     >
       {site.title}
     </a>

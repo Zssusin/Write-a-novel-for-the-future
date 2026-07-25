@@ -14,7 +14,15 @@ export default defineAstroPaperConfig({
       搜索引擎会把权重并到这边来。这是想要的行为，不用去关掉它。
     */
     url: "https://clarkebelt.org/",
-    title: "科幻工具站",
+    /*
+      站名 = 域名。这个字符串会出现在 <title>、og:site_name、页头字标、
+      页脚版权行、RSS 频道名，以及 og.png 那张分享图上。改一处，全站跟着走。
+
+      故意全小写、故意是拉丁字母：页头字标用 Michroma 渲染（--font-display），
+      而 Michroma 的 unicode-range 只覆盖拉丁，中文会回落成系统字体。
+      站名要是中文，那套字体就等于白加载。
+    */
+    title: "clarkebelt",
     description:
       "硬科幻爱好者的笔记：现实科技解读、原创故事、创作工具箱与书目推荐。",
     author: "chen", // TODO: your name or pen name
