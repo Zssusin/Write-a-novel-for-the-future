@@ -113,8 +113,10 @@ collections:
         widget: string
         required: false
         hint: >-
-          填完整的外链地址（R2 那种）。不能填 /xxx.jpg 这样的站内绝对路径——
-          那样构建会直接失败（ImageNotFound）。留空就没有列表缩略图。
+          首页/归档列表的缩略图，同时也是分享卡片的图。照这个格式填完整地址：
+          https://clarkebelt.org/img/2026/dyson-sphere.webp ——
+          不能填 /img/... 这样的站内路径，那样构建会直接失败（ImageNotFound）。
+          留空就是纯文字卡片。封面图压到 880px 宽就够，见 docs/图片工作流.md 3.5 节。
 
       # 不填时 Sveltia 可能写出 series: null 而不是省掉这个键，
       # 所以 schema 那边是 .optional().nullable()，校验脚本也认 null。
