@@ -7,11 +7,14 @@ backend:
   repo: Zssusin/Write-a-novel-for-the-future
   # Cloudflare 构建的是 main。写错分支 = 存进去了但永远不上线。
   branch: main
-  # OAuth 中转 Worker（GitHub 登录用），部署步骤见 docs/后台发布.md。
-  # 这个地址是照「子域 chen202028 + Worker 默认名 sveltia-cms-auth」推出来的，
-  # 不是抄来的 —— 部署完对一眼面板上的真实地址。要是重名了，Cloudflare 会
-  # 给你一个 sveltia-cms-auth-2 之类的名字，那这行就得跟着改。
-  base_url: https://sveltia-cms-auth.chen202028.workers.dev
+  # 故意没有 base_url。
+  #
+  # 登录走「Sign In with Token」——粘一个 GitHub fine-grained PAT 就行，
+  # 不需要 OAuth App，也不需要自己部署中转 Worker。见 docs/后台发布.md。
+  #
+  # 之所以选这条：只有你一个人用这个后台。OAuth App 拿到的 token 覆盖你账号下
+  # 所有仓库且收不窄；fine-grained PAT 能锁死在这一个仓库、只给 Contents 读写。
+  # 哪天要让不懂技术的人也来写稿，再回去补 OAuth 那条路。
 
 # 后台里「查看线上页面」按钮用的地址。
 # 以后绑了自己的域名，这里和 astro-paper.config.ts 里的 url 要一起改。
