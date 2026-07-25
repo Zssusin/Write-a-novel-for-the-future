@@ -1,23 +1,27 @@
 ---
+slug: atomic-rockets
 uid: sdzpdael
 title: Atomic Rockets：写硬科幻之前该去的那个站
+description: Atomic Rockets 从 1994 年开到今天，攒下了一整套给科幻作者查的火箭方程、发动机参数和太空战物理。这篇介绍它有什么、怎么用，以及哪些地方不该照抄。
 pubDatetime: 2026-07-25T10:00:00+08:00
-draft: false
-description: projectrho.com 上的 Atomic Rockets 从 1994 年开到今天，攒下了一整套给科幻作者查的火箭方程、发动机参数和太空战物理。这篇介绍它有什么、怎么用，以及哪些地方不该照抄。
+modDatetime: 2026-07-25T17:45:00-04:00
 tags:
   - 工具箱
   - 硬科幻
+  - 网站介绍
+featured: true
+draft: false
+ogImage: ''
+series: null
 ---
 
-先把名字捋清楚。`projectrho.com` 是域名，Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的、这篇要介绍的，是它下面 `/rocket/` 那个目录——**[Atomic Rockets](https://www.projectrho.com/public_html/rocket/)**。搜「Project Rho」和搜「Atomic Rockets」指向同一件事，后者才是它自己挂的招牌。
+Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的、这篇要介绍的，是它下面 `/rocket/` 那个目录——\*\*[Atomic Rockets](https://www.projectrho.com/public_html/rocket/)\*\*。搜「Project Rho」和搜「Atomic Rockets」指向同一件事，后者才是它自己挂的招牌。
 
 它 1994 年开站，到今天三十多年，一直是同一个人在攒。
 
 ## 它不是科普站
 
-这一点值得先说清，因为它决定了你该怎么用它。
-
-科普站的目标是让你读完觉得「懂了」。Atomic Rockets 的目标是让你**算出一个数**，填进你正在写的那一章里。它自己的说法是，提供「能做信封背面估算的提示和公式」（hints and equations that will allow back-of-the-envelope calculations），主要写给「想要一点科学准确性的科幻作者」。
+这一点值得先说清，因为它决定了你该怎么用它。科普站的目标是让你读完觉得「懂了」。Atomic Rockets 的目标是让你**算出一个数**，填进你正在写的那一章里。它自己的说法是，提供「能做信封背面估算的提示和公式」（hints and equations that will allow back-of-the-envelope calculations），主要写给「想要一点科学准确性的科幻作者」。
 
 它对自己的评价也很老实：
 
@@ -34,7 +38,7 @@ tags:
 
 齐奥尔科夫斯基火箭方程：
 
-```
+```plain
 Δv = Ve × ln(R)
 ```
 
