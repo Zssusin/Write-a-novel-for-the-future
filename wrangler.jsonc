@@ -1,0 +1,47 @@
+/*
+  Cloudflare Workers 的部署配置。`npx wrangler deploy` 只认这个文件 ——
+  没有它，部署会直接停在「Missing entry-point」。
+
+  这个站是纯静态的（astro.config.ts 里没有 adapter、没有 output: "server"），
+  所以这里**不需要 Worker 脚本**，只声明一个静态资源目录就够了：
+  Cloudflare 把 dist/ 整个当 CDN 发出去，没有函数在运行，也没有冷启动。
+
+  故意不装 @astrojs/cloudflare：那个 adapter 是给需要服务端渲染的站用的，
+  装了反而会把构建产物变成一个 Worker 脚本，白白多一层。
+*/
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  /*
+    这个名字决定 Worker 的名字和默认域名 <name>.<子域>.workers.dev。
+    **必须和 Cloudflare 面板里的 Project name 一致**，否则 wrangler 会
+    照这里的名字另建一个 Worker，面板上那个永远空着。
+    只能用小写字母、数字和连字符。
+  */
+  "name": "write-a-novel-for-the-future",
+
+  /*
+    Workers 运行时的行为基线，必填。纯静态站其实用不到它
+    （没有代码在跑），但缺了这一行 wrangler 会报错。
+    填一个过去的日期就行，以后没有理由动它。
+  */
+  "compatibility_date": "2026-07-01",
+
+  "assets": {
+    // npm run build 的产物目录。构建产物不进仓库（.gitignore 里有 dist），
+    // 由 Cloudflare 每次构建时自己生成。
+    "directory": "./dist",
+
+    /*
+      访问不存在的路径时发 dist/404.html，状态码 404。
+      默认行为是发一个空白的 404，Astro 那个 404 页面就白做了。
+    */
+    "not_found_handling": "404-page"
+
+    /*
+      html_handling 用默认的 auto-trailing-slash，正好匹配 Astro 的产物形状：
+      文章构建成 posts/xxx/index.html，访问 /posts/xxx 和 /posts/xxx/ 都能命中。
+      别改成 "none" —— 那样所有文章页都会 404。
+    */
+  }
+}
