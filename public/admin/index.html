@@ -7,7 +7,9 @@
   它在浏览器里直接调 GitHub API 读写仓库里的 md 文件，
   没有数据库、没有后端、构建时也不参与，所以 Astro 升级不会碰到它。
 
-  怎么配（Worker、GitHub OAuth、权限）见 docs/后台发布.md。
+  登录方式是「Sign In with Token」：粘一个只授权本仓库的 GitHub
+  fine-grained PAT，不需要 OAuth App，也不需要自己部署中转服务。
+  建令牌的步骤和权限见 docs/后台发布.md 第 1 节。
 -->
 <html lang="zh-CN">
   <head>
