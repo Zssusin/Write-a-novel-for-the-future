@@ -92,7 +92,8 @@ Documentation can be read in two formats\_ _markdown_ & _blog post_.
 **Static Search** - [Pagefind](https://pagefind.app/)  
 **Icons** - [Tablers](https://tabler-icons.io/)  
 **Code Formatting** - [Prettier](https://prettier.io/)  
-**Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)  
+**Deployment** - [Cloudflare Workers](https://workers.cloudflare.com/)  
+**Image storage** - [Cloudflare R2](https://developers.cloudflare.com/r2/)  
 **Linting** - [ESLint](https://eslint.org)  
 **Dynamic OG images** - [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/) + [Astro Fonts](https://docs.astro.build/en/guides/fonts/)
 

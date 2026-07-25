@@ -6,10 +6,14 @@ export default defineAstroPaperConfig({
       canonical 链接、OG 图地址、RSS、sitemap、robots.txt 里的地址全从这里拼。
       填错的后果是安静的：站能打开，但搜索引擎照 canonical 认为你的内容在别处。
 
-      以后绑了自己的域名，改这一行 —— 同时改 public/admin/config.yml 里的 site_url。
-      改域名那次记得留意：换了地址等于换了一套 URL，旧地址的收录会重新算。
+      再换域名的话改这一行 —— 同时改 public/admin/config.yml 里的 site_url。
+      两处必须一起改：只改一个，站照样能开，但两边说的不是同一个地址。
+
+      旧的 write-a-novel-for-the-future.chen202028.workers.dev 还在服务，
+      而且发的也是这份产物 —— 也就是说它会带着指向 clarkebelt.org 的 canonical，
+      搜索引擎会把权重并到这边来。这是想要的行为，不用去关掉它。
     */
-    url: "https://write-a-novel-for-the-future.chen202028.workers.dev/",
+    url: "https://clarkebelt.org/",
     title: "科幻工具站",
     description:
       "硬科幻爱好者的笔记：现实科技解读、原创故事、创作工具箱与书目推荐。",

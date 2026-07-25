@@ -5,14 +5,17 @@
 backend:
   name: github
   repo: Zssusin/Write-a-novel-for-the-future
-  # Cloudflare Pages 构建的是 main。写错分支 = 存进去了但永远不上线。
+  # Cloudflare 构建的是 main。写错分支 = 存进去了但永远不上线。
   branch: main
-  # ↓ 部署完 OAuth Worker 后把这行的地址换成你自己的，见 docs/后台发布.md
-  base_url: https://sveltia-cms-auth.你的子域.workers.dev
+  # OAuth 中转 Worker（GitHub 登录用），部署步骤见 docs/后台发布.md。
+  # 这个地址是照「子域 chen202028 + Worker 默认名 sveltia-cms-auth」推出来的，
+  # 不是抄来的 —— 部署完对一眼面板上的真实地址。要是重名了，Cloudflare 会
+  # 给你一个 sveltia-cms-auth-2 之类的名字，那这行就得跟着改。
+  base_url: https://sveltia-cms-auth.chen202028.workers.dev
 
 # 后台里「查看线上页面」按钮用的地址。
 # 以后绑了自己的域名，这里和 astro-paper.config.ts 里的 url 要一起改。
-site_url: https://write-a-novel-for-the-future.chen202028.workers.dev
+site_url: https://clarkebelt.org
 
 # 媒体库。默认工作流是图片走 R2 外链、不进仓库（见 docs/图片工作流.md），
 # 这里留一个仓库内的兜底位置：偶尔一张小图不想开 R2 就直接拖进来。
