@@ -27,6 +27,12 @@
   */
   "compatibility_date": "2026-07-01",
 
+  /*
+    唯一的一段服务端代码，只为把 R2 里的图片发到 /img/ 下面。
+    详细理由见 worker/index.js 顶部和 docs/图片工作流.md。
+  */
+  "main": "./worker/index.js",
+
   "assets": {
     // npm run build 的产物目录。构建产物不进仓库（.gitignore 里有 dist），
     // 由 Cloudflare 每次构建时自己生成。
@@ -36,12 +42,33 @@
       访问不存在的路径时发 dist/404.html，状态码 404。
       默认行为是发一个空白的 404，Astro 那个 404 页面就白做了。
     */
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
 
     /*
       html_handling 用默认的 auto-trailing-slash，正好匹配 Astro 的产物形状：
       文章构建成 posts/xxx/index.html，访问 /posts/xxx 和 /posts/xxx/ 都能命中。
       别改成 "none" —— 那样所有文章页都会 404。
     */
-  }
+
+    // 让 worker 能把请求交回资源层（worker/index.js 里的 env.ASSETS）
+    "binding": "ASSETS",
+
+    /*
+      **只有** /img/* 会先经过 Worker。其他所有路径 —— 文章、首页、CSS、
+      Pagefind 索引 —— 直接由资源层发出，不进 Worker、没有冷启动。
+      这一行是「站还是纯静态的」这句话成立的原因，别删。
+    */
+    "run_worker_first": ["/img/*"],
+  },
+
+  /*
+    R2 桶。bucket_name 必须是**已经存在**的桶，否则 wrangler deploy 直接失败。
+    所以顺序是：先建桶，再推这份配置。见 docs/图片工作流.md 第 1 节。
+  */
+  "r2_buckets": [
+    {
+      "binding": "IMG",
+      "bucket_name": "image",
+    },
+  ],
 }

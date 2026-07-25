@@ -5,8 +5,10 @@
 !/src
 !/public
 !/.github
+!/worker
 !tsconfig.json
 !astro.config.ts
+!wrangler.jsonc
 !package.json
 !.prettierrc
 !eslint.config.js
