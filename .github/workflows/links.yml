@@ -1,0 +1,94 @@
+# 外链失效检查（link rot）。
+#
+# 这个站的内容形态是策展 + 翻译：正文里指向 Atomic Rockets 的那些链接、
+# frontmatter 里的 source.url，本身就是内容的一部分。它们哪天 404 了，
+# 不会有任何人通知你 —— 但读者会先撞上，而且译文没了出处等于没了署名。
+#
+# 每周扫一次，坏了就开一个 issue（而不是让 workflow 变红：issue 能留着、
+# 能一条条勾掉，红叉过两天就被当背景噪音了）。
+#
+# 只扫 src/content。docs/ 里的链接是写给你自己看的，坏了影响有限，
+# 扫进来只会让噪音盖住真信号。
+name: 外链检查
+
+permissions:
+  contents: read
+  issues: write
+
+on:
+  schedule:
+    # 每周一 03:00 UTC = 北京时间 11:00
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+jobs:
+  links:
+    name: Check external links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: "☁️ Checkout repository"
+        uses: actions/checkout@v4
+
+      - name: "🔗 Run lychee"
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 让这一步自己别红 —— 下面还要拿它的结果去开 issue
+          fail: false
+          output: ./lychee/out.md
+          # 下面每个参数都是本地用 lychee 0.24.2 实跑验证过的，不是抄的模板：
+          #
+          #   输入写目录而不是 '**/*.md'：目录形式会把 .mdx 也一起收进来，
+          #     而且不会为「没有匹配到 mdx」刷一条 WARN。
+          #
+          #   --base-url：让 about.md 里 /tags 这种站内相对链接能解析。
+          #     顺带一个白捡的好处 —— 正文里 /img/... 的图会被解析成线上地址，
+          #     等于每周替你确认一遍「这张图真的传上 R2 了」。
+          #
+          #   --exclude-path 必须写**精确路径**。写成 'src/content/posts/_*'
+          #     实测会把整个 posts 目录一起排掉（链接数从 10 掉到 3），
+          #     那样这个 workflow 就等于什么都没检查。
+          #     代价：模板改名之后它的占位地址会开始报错 —— 那是响的失败，
+          #     看见了改这里就行。
+          #
+          #   --accept 放行 403 和 429：CI 跑在 GitHub 机房 IP 上，不少站
+          #     对这种来源直接拒绝或限流。代价是真的 403 会被放过，换来的是
+          #     报告里剩下的每一条都值得看，而不用每周先扒一遍误报。
+          #
+          #   代码块默认就不扫（不加 --include-verbatim 就跳过 verbatim），
+          #     所以文章里贴的示例地址不会进来。
+          args: >-
+            --no-progress
+            --max-retries 2
+            --timeout 20
+            --accept '200..=299,403,429'
+            --base-url 'https://clarkebelt.org'
+            --exclude-path 'src/content/posts/_模板-翻译系列.md'
+            --exclude 'example\.com'
+            --user-agent 'Mozilla/5.0 (compatible; clarkebelt-linkcheck/1; +https://clarkebelt.org)'
+            'src/content'
+
+      # 复用同一个 issue。每周新开一个的话，三周之后你就把这个通知静音了
+      - name: "🔎 Look for an already-open report"
+        if: steps.lychee.outputs.exit_code != 0
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number=$(gh issue list \
+            --repo "${{ github.repository }}" \
+            --state open \
+            --search '外链失效 in:title' \
+            --json number --jq '.[0].number // ""')
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - name: "📝 Open or update the report"
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: 外链失效报告
+          content-filepath: ./lychee/out.md
+          # 空 = 新开一个；有号码 = 在那个 issue 上追加一条评论
+          issue-number: ${{ steps.existing.outputs.number }}

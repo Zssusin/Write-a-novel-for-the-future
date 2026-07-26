@@ -24,11 +24,12 @@
     · 正文里有被转义的星号     —— 后台改过加粗链接的痕迹
     · 封面不是 webp            —— 后台的自动转码没生效
     · slug 和文件名对不上      —— 后台改了「文件名」但地址没跟着变
+    · 正文图没把尺寸写进文件名 —— 会让正文加载时跳版（CLS）
 
-  这三条的共同点：发生在「后台改 → 提交 → Cloudflare 构建」这条主路径上，
+  这几条的共同点：发生在「后台改 → 提交 → Cloudflare 构建」这条主路径上，
   而 exit 1 在那条链上等于整站发不出去。为一处显示瑕疵付这个代价太贵，
-  何况后两条在后台里根本修不了。每一条要不要升级成 problem，
-  各自的判断写在下面对应的位置。
+  何况后三条在后台里根本修不了（要动 git 或者重传图片）。
+  每一条要不要升级成 problem，各自的判断写在下面对应的位置。
 
   用法：
     npm run uid          生成一个新的 uid，贴进新文章的 frontmatter
@@ -38,7 +39,7 @@ import { randomInt } from "node:crypto";
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 // uid 的形状和文章目录跟 schema 共用一份，别在这里另抄一遍
-import { POSTS_DIR, UID_PATTERN } from "./post-rules.mjs";
+import { IMG_SIZE_IN_NAME, POSTS_DIR, UID_PATTERN } from "./post-rules.mjs";
 
 const LETTERS = "abcdefghijklmnopqrstuvwxyz";
 const ALPHABET = `0123456789${LETTERS}`;
@@ -214,6 +215,59 @@ for (const path of collectPosts(POSTS_DIR).sort()) {
         `\n    要真的改地址：git mv ${POSTS_DIR}/${file} ${POSTS_DIR}/${slug}.md` +
         `\n    （旧链接和收藏会全断，发出去之后一般就别改了。）` +
         `\n    不想改地址：把后台里的「文件名」一栏改回 ${basename}。`
+    );
+  }
+
+  /*
+    正文图能不能拿到 width/height。拿不到，图一加载完就把下面的正文顶一次（CLS）。
+
+    尺寸这件事没人能替作者知道：/img/ 是 R2 上的远程地址，构建时既不下载
+    也量不出来（为什么不下载，见 docs/图片工作流.md 第 6 节）。所以只能提醒。
+
+    两种写法的补救路径不一样，分开报：
+
+      ![](...)   —— src/utils/rehype/imageAttrs.ts 会照文件名里的 -宽x高 填。
+                    所以这里检查的是文件名。
+      <img>      —— 那个插件**看不到手写的 HTML**（.md 里是整块 raw 文本，
+                    .mdx 里是 JSX 节点，都不是 hast 元素）。所以这里检查的是
+                    标签上有没有真的写 width —— 文件名带尺寸也没用。
+
+    只看 /img/ 开头的：public/images/ 里的图 Astro 自己会处理，外站的管不着。
+  */
+  const isRemoteImg = src => /^(\/img\/|https?:\/\/[^/]+\/img\/)/.test(src);
+
+  const unsizedMarkdown = [
+    ...new Set(
+      [...body.matchAll(/!\[[^\]]*\]\(\s*([^)\s]+)/g)]
+        .map(match => match[1])
+        .filter(isRemoteImg)
+    ),
+  ].filter(src => !IMG_SIZE_IN_NAME.test(src.split(/[?#]/)[0]));
+
+  if (unsizedMarkdown.length > 0) {
+    notices.push(
+      `${file}\n    有 ${unsizedMarkdown.length} 张正文图没把尺寸写进文件名：` +
+        unsizedMarkdown.map(src => `\n      ${src}`).join("") +
+        `\n    没有尺寸就填不出 width/height，图一加载完正文就往下跳一次（CLS）。` +
+        `\n    量一下：file 图.webp  →  "…VP8 encoding, 1600x900…"` +
+        `\n    然后按 <名字>-<宽>x<高>.webp 改名重传，正文里的地址跟着改。` +
+        `\n    见 docs/图片工作流.md 第 3 节。`
+    );
+  }
+
+  const unsizedHtml = [...body.matchAll(/<img\b[^>]*>/g)]
+    .map(match => match[0])
+    .filter(tag => {
+      const src = tag.match(/\bsrc=["']([^"']+)["']/)?.[1] ?? "";
+      return isRemoteImg(src) && !/\bwidth\s*=/.test(tag);
+    });
+
+  if (unsizedHtml.length > 0) {
+    notices.push(
+      `${file}\n    有 ${unsizedHtml.length} 个手写的 <img> 没有 width/height：` +
+        unsizedHtml.map(tag => `\n      ${tag}`).join("") +
+        `\n    手写的标签构建时不会被加工（插件只认 markdown 的 ![](...) 写法），` +
+        `\n    所以尺寸和 loading="lazy" 都得自己写全，文件名带尺寸对它没用。`
     );
   }
 

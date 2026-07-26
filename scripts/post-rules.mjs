@@ -40,3 +40,22 @@ export const UID_PATTERN = /^[a-z][0-9a-zA-Z-]{7,39}$/;
 /** 格式不对时给人看的那句话。schema 和脚本共用，省得两边措辞不一样。 */
 export const UID_HINT =
   "uid 要 8–40 位：首位小写字母，其余字母、数字或连字符。用 `npm run uid` 生成，或由后台自动生成";
+
+/*
+  正文图的尺寸，写在文件名里：
+
+      /img/2026/dyson-sphere-1600x900.webp
+                             ↑ 宽 x 高
+
+  为什么是文件名：/img/ 是 R2 上的远程地址，构建时既不下载也量不出尺寸，
+  而给 Astro 配 image.domains 去下载远程图这条路已经被否掉了
+  （docs/图片工作流.md 第 6 节）。文件名本来就是这套体系里的真相来源
+  （「换内容就换文件名」那条规矩），让它多带一个事实最便宜。
+
+  两位到五位：挡掉 `chapter-2x3.webp` 这种其实是标题的一部分。
+
+  两个消费者共用这一份：
+    src/utils/rehype/imageAttrs.ts  —— 匹配上就把 width/height 写进 <img>
+    scripts/check-posts.mjs         —— 匹配不上就提醒一句（不拦构建）
+*/
+export const IMG_SIZE_IN_NAME = /-(\d{2,5})x(\d{2,5})\.[a-z0-9]+$/i;

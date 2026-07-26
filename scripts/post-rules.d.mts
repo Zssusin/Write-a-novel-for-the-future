@@ -11,3 +11,4 @@
 export declare const POSTS_DIR: string;
 export declare const UID_PATTERN: RegExp;
 export declare const UID_HINT: string;
+export declare const IMG_SIZE_IN_NAME: RegExp;
