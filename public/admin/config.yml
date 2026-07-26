@@ -69,19 +69,14 @@ media_libraries:
   #      不配的话浏览器直接卡在预检请求上 —— 后台会签 AWS SigV4 头，
   #      那属于「非简单请求」，一定会先发 OPTIONS。
   #
-  # cloudflare_r2:
-  #   access_key_id: 上面第 1 步拿到的 Access Key ID
-  #   account_id: Cloudflare 账户 ID（Dashboard 右侧栏，或 npx wrangler whoami）
-  #   bucket: image
-  #   # 拼地址用：public_url + "/" + 对象名。写成自己的域名而不是 r2.dev，
-  #   # 图片就还是从 /img/ 出去，缓存策略和现在完全一致。
-  #   public_url: https://clarkebelt.org/img
-  #   # 对象名 = 这个前缀 + 文件名。上传时**没法在界面里选目录**，
-  #   # 所以年份文件夹只能写死在这里，跨年了记得改。
-  #   prefix: 2026/
-  #   # 必须显式关掉。默认会发 x-amz-acl: public-read，而 R2 的 S3 接口
-  #   # 压根没实现 ACL（官方兼容性表里 x-amz-acl 是 ❌）。
-  #   acl: false
+  cloudflare_r2:
+    access_key_id: 4b78bae6fd8cc2cc6381f3d508cbf538
+    account_id: 4496da3ff5894affc28fd48211aff811
+    bucket: image
+    public_url: https://clarkebelt.org/img
+    prefix: 2026/
+    acl: false
+
 
 collections:
   - name: posts
