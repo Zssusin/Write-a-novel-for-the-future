@@ -48,26 +48,29 @@ media_libraries:
       # 中文文件名会变成一串百分号编码的对象名。转成短横线拼音/英文。
       slugify_filename: true
 
-  # ── Cloudflare R2 直传：填完下面两个值，去掉这一段的注释就能用 ──────────
+  # ── Cloudflare R2 直传（已启用，2026-07-26 验证通过）────────────────────
   #
-  # 上传目标就是 /img/ 背后那个桶，所以传完写进文章的地址
-  # （public_url + 对象名）正好是 worker/index.js 已经在服务的路径。
+  # 上传目标就是 /img/ 背后那个桶，所以 public_url + 对象名 拼出来的地址
+  # 正好是 worker/index.js 已经在服务的路径 —— 收图和发图共用一个出口。
   #
-  # 启用前必须做两件事，缺一个都会失败：
+  # 这一段能工作依赖两个**不在这个文件里**的前提，换桶/换域名时要一起动：
   #
-  #   1. 建 R2 API Token：Dashboard → R2 → Manage R2 API Tokens
-  #      → Create API Token，权限 Object Read & Write。
-  #      拿到的 Access Key ID 填在下面；Secret Access Key **不要填这里** ——
-  #      后台第一次打开媒体库时会问你要，存在浏览器本地。
-  #      （这个文件是公开的：https://clarkebelt.org/admin/config.yml 谁都能读。
-  #        Access Key ID 单独拿不到任何东西，等同于 AWS 的 AKID，可以公开。）
+  #   1. 一个 Object Read & Write 的 R2 API Token（Dashboard → R2 →
+  #      Manage R2 API Tokens）。下面只放 Access Key ID；Secret Access Key
+  #      由后台第一次打开媒体库时问你要，存在浏览器本地，不进仓库。
   #
-  #   2. 给桶配 CORS：R2 → image → Settings → CORS Policy：
-  #      [{"AllowedOrigins":["https://clarkebelt.org"],
-  #        "AllowedMethods":["GET","PUT","HEAD"],
-  #        "AllowedHeaders":["*"],"ExposeHeaders":["ETag"],"MaxAgeSeconds":3000}]
-  #      不配的话浏览器直接卡在预检请求上 —— 后台会签 AWS SigV4 头，
-  #      那属于「非简单请求」，一定会先发 OPTIONS。
+  #      Access Key ID 放在这里是安全的：这个文件公开可读
+  #      （https://clarkebelt.org/admin/config.yml），而 AKID 等同于用户名，
+  #      没有 Secret 拿它做不了任何事。
+  #
+  #   2. 桶上的 CORS 策略，AllowedOrigins 必须包含 https://clarkebelt.org。
+  #      后台会签 AWS SigV4 头，那属于「非简单请求」，浏览器一定先发 OPTIONS；
+  #      漏了这条就卡在预检上，界面只会显示一个含糊的网络错误。
+  #      注意 www.clarkebelt.org 目前**没有**放行 —— 从 www 打开后台传不了图。
+  #      自查：curl -X OPTIONS -H 'Origin: https://clarkebelt.org' \
+  #              -H 'Access-Control-Request-Method: PUT' \
+  #              https://<account_id>.r2.cloudflarestorage.com/image/x -D -
+  #            要看到 204 和 Access-Control-Allow-Origin。
   #
   cloudflare_r2:
     access_key_id: 4b78bae6fd8cc2cc6381f3d508cbf538
@@ -76,7 +79,6 @@ media_libraries:
     public_url: https://clarkebelt.org/img
     prefix: 2026/
     acl: false
-
 
 collections:
   - name: posts
@@ -161,23 +163,26 @@ collections:
         default: false
         hint: 勾上就不会出现在站上——本地 npm run dev 里也看不到，草稿是无条件隐藏的。
 
-      # 这里是 string 而不是 image，是有意的：image 组件会给你一个媒体库按钮，
-      # 但只要还没开 R2，从仓库媒体库选出来的值是 /images/... 这样的相对路径，
-      # 而这个字段填相对路径会让**构建直接失败**（见下面 hint）。
+      # widget: image 才有媒体库按钮（能直接拖图上传）。配 media_libraries 是关键：
       #
-      # 等上面的 cloudflare_r2 启用了，这三行可以换成：
-      #     widget: image
-      #     media_libraries: { default: false }   # 关掉仓库那个库，只能选 R2
-      # 那样就只可能选出绝对地址，构建失败这条路被堵死，还能直接在弹窗里传图。
+      #   default: false  →  关掉「仓库」那个库，这个字段只剩 R2 可选。
+      #
+      # 不关掉的话，从仓库库选出来的值是 /images/... 这样的**相对路径**，
+      # 而这个字段填相对路径会让构建直接失败（schema 是 image().or(z.string())，
+      # Astro 会把相对路径当构建时的本地资源去解析，找不到就 ImageNotFound）。
+      # 关掉之后就只可能选出 https://clarkebelt.org/img/... 的绝对地址，
+      # 那条失败路径被物理堵死。
+      #
+      # 要退回手填模式：把 widget 改回 string、删掉 media_libraries 这行。
       - label: 配图
         name: ogImage
-        widget: string
+        widget: image
         required: false
+        media_libraries: { default: false }
         hint: >-
-          首页/归档列表的缩略图，同时也是分享卡片的图。照这个格式填完整地址：
-          https://clarkebelt.org/img/2026/dyson-sphere.webp ——
-          不能填 /img/... 这样的站内路径，那样构建会直接失败（ImageNotFound）。
-          留空就是纯文字卡片。封面图压到 880px 宽就够，见 docs/图片工作流.md 3.5 节。
+          首页/归档列表的缩略图，同时也是分享卡片的图。点右边的按钮从 R2 选或直接拖一张上传，
+          存进去的是 https://clarkebelt.org/img/2026/xxx.webp 这样的完整地址。
+          留空就是纯文字卡片。上传时会自动转 webp、压到 1600px 宽，不用自己先压。
 
       # 不填时 Sveltia 可能写出 series: null 而不是省掉这个键，
       # 所以 schema 那边是 .optional().nullable()，校验脚本也认 null。
