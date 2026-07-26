@@ -12,6 +12,32 @@
 }
 
 /*
+  中文标点专用的一层，只有三个码位。
+
+  问题：Google Sans Code 排在字体栈最前面负责拉丁与数字，但它**也带着
+  U+2014 破折号和 U+2026 省略号的字形**，而且是窄的西文形状。结果中文的
+  「——」被画成两个短横「--」，「……」同理。汉字之间还不太明显，可一旦紧跟着
+  拉丁词就很难看：「clarkebelt--一个硬科幻…」读起来像命令行参数。
+
+  做法：在栈最前面插一层，用 unicode-range 把它限死在这三个码位上，
+  其余字符一律穿透到后面，所以拉丁排版一点不变。
+  src 全是 local()：这些字体在 macOS / Windows / Linux 上分别存在，
+  三端的 U+2014 都是全宽的（两个连起来正好是一条完整长破折号），而且零下载。
+  一个都没装就自动落到后面那层 —— 退回现在这个样子，不会更差。
+
+  只挑这三个是有意的：、。：「」那些是 CJK 专有码位，Google Sans Code
+  压根没有，本来就已经落到系统中文字体了，不需要在这里再抢一遍。
+*/
+@font-face {
+  font-family: "CJK Punctuation";
+  src:
+    local("PingFang SC"), local("Hiragino Sans GB"), local("Microsoft YaHei"),
+    local("Noto Sans CJK SC"), local("Noto Sans SC"),
+    local("Source Han Sans SC"), local("WenQuanYi Micro Hei");
+  unicode-range: U+2013, U+2014, U+2026;
+}
+
+/*
   中文优先的字体栈。Google Sans Code 没有中文字形，
   排在前面负责拉丁与数字，中文由系统字体接手（零下载、秒开）。
 */
@@ -20,8 +46,8 @@
     "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC",
     "Noto Sans SC", "Source Han Sans SC", "WenQuanYi Micro Hei";
   --font-stack-app:
-    var(--font-google-sans-code), -apple-system, BlinkMacSystemFont, "Segoe UI",
-    var(--font-cjk), system-ui, sans-serif;
+    "CJK Punctuation", var(--font-google-sans-code), -apple-system,
+    BlinkMacSystemFont, "Segoe UI", var(--font-cjk), system-ui, sans-serif;
   /* 拉丁标题用 Michroma（Atomic Rockets 同款），中文自动回落 */
   --font-stack-display: "Michroma", var(--font-cjk), var(--font-stack-app);
 }

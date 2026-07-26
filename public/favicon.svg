@@ -1,9 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-    <path d="M50.4 78.5a75.1 75.1 0 0 0-28.5 6.9l24.2-65.7c.7-2 1.9-3.2 3.4-3.2h29c1.5 0 2.7 1.2 3.4 3.2l24.2 65.7s-11.6-7-28.5-7L67 45.5c-.4-1.7-1.6-2.8-2.9-2.8-1.3 0-2.5 1.1-2.9 2.7L50.4 78.5Zm-1.1 28.2Zm-4.2-20.2c-2 6.6-.6 15.8 4.2 20.2a17.5 17.5 0 0 1 .2-.7 5.5 5.5 0 0 1 5.7-4.5c2.8.1 4.3 1.5 4.7 4.7.2 1.1.2 2.3.2 3.5v.4c0 2.7.7 5.2 2.2 7.4a13 13 0 0 0 5.7 4.9v-.3l-.2-.3c-1.8-5.6-.5-9.5 4.4-12.8l1.5-1a73 73 0 0 0 3.2-2.2 16 16 0 0 0 6.8-11.4c.3-2 .1-4-.6-6l-.8.6-1.6 1a37 37 0 0 1-22.4 2.7c-5-.7-9.7-2-13.2-6.2Z" />
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="clarkebelt">
+  <!--
+    站标：一颗带环的行星。
+
+    「克拉克带」指地球同步轨道那条环带 —— 一条以科幻作家命名的真实轨道，
+    正好是这个站站在的那道缝。环带这个意象同时也接着站点背景图
+    （卡西尼拍的土星，见 src/styles/glass.css），所以两处视觉是一套。
+
+    几个为小尺寸做的决定：
+    - 环被 mask 挖掉了中间那段，只留左右两片「翅膀」。也就是说环不压在星球上，
+      不需要靠底色描边就能看清 —— 而底色是随主题变的，靠不住。
+    - mask 里那个圆（r=9.8）比星球本体（r=7.8）大 2px，留出一道缝。
+      这道缝在 16px 下只剩 1 物理像素，再小就会让环和星球糊成一个椭圆。
+    - 没画卫星光点。16px 下任何小于 2px 的细节只会变成一团脏点。
+
+    颜色取自 src/styles/theme.css 里的 foreground / accent 两个 token，浅深各一套。
+    （注意：XML 注释里不能出现 ASCII 双连字符，所以这里没法直接写那两个
+    CSS 变量的完整名字。写了的话 librsvg 会直接拒绝解析整个文件。）
+
+    SVG 里的 media query 现代浏览器都认，所以标签页图标会跟着系统主题变。
+    favicon.ico 是这份的浅色栅格化版本，只有老浏览器会用到。
+  -->
+  <style>
+    .planet {
+      fill: #0d1729;
+    }
+    .ring {
+      fill: none;
+      stroke: #0b6f8a;
+      /*
+        3 而不是 2.4：viewBox 是 32 宽，所以栅格到 16px 时这条线只有 1.5 物理像素。
+        再细就会被抗锯齿抹成一片灰，整个标只剩一个圆点。
+      */
+      stroke-width: 3;
+    }
+    @media (prefers-color-scheme: dark) {
+      .planet {
+        fill: #e8f0ff;
+      }
+      .ring {
+        stroke: #55ccdd;
+      }
+    }
+  </style>
+
+  <defs>
+    <!--
+      挖掉星球所在的圆，环就只剩两侧。矩形故意开得比画布大很多：
+      它跟着下面那个 rotate 一起转，开小了转完会露出边界。
+    -->
+    <mask id="ring-behind-planet">
+      <rect x="-20" y="-20" width="72" height="72" fill="#fff" />
+      <circle cx="16" cy="16" r="9.8" fill="#000" />
+    </mask>
+  </defs>
+
+  <g transform="rotate(-22 16 16)" mask="url(#ring-behind-planet)">
+    <ellipse cx="16" cy="16" rx="14.5" ry="4.9" class="ring" />
+  </g>
+
+  <circle cx="16" cy="16" r="7.8" class="planet" />
 </svg>

@@ -1,27 +1,19 @@
 import type { APIRoute } from "astro";
 import satori from "satori";
 import sharp from "sharp";
-import { fontData, experimental_getFontFileURL } from "astro:assets";
-import { getFontPathByWeight } from "@/utils/getFontPathByWeight";
+import { getSatoriFonts, OG_FONT_FAMILY } from "@/utils/getSatoriFonts";
 import config from "@/config";
 
 export const GET: APIRoute = async context => {
-  const fonts = fontData["--font-google-sans-code"];
-  const regularFontPath = getFontPathByWeight(fonts, 400);
-  const boldFontPath = getFontPathByWeight(fonts, 700);
-
-  if (regularFontPath === undefined || boldFontPath === undefined) {
-    throw new Error("Cannot find the font path.");
-  }
-
-  const [regularData, boldData] = await Promise.all([
-    fetch(experimental_getFontFileURL(regularFontPath, context.url)).then(res =>
-      res.arrayBuffer()
-    ),
-    fetch(experimental_getFontFileURL(boldFontPath, context.url)).then(res =>
-      res.arrayBuffer()
-    ),
-  ]);
+  /*
+    这两段文字要一起报给 getSatoriFonts —— 它按这里出现的汉字去取字体子集。
+    以后往图上加新的文字节点，记得把那段文字也加进这个数组，
+    否则新加的那段会是豆腐块。
+  */
+  const fonts = await getSatoriFonts(
+    [config.site.title, config.site.description],
+    context.url
+  );
 
   const svg = await satori(
     {
@@ -34,7 +26,7 @@ export const GET: APIRoute = async context => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "Google Sans Code",
+          fontFamily: OG_FONT_FAMILY,
         },
         children: [
           {
@@ -143,20 +135,7 @@ export const GET: APIRoute = async context => {
       width: 1200,
       height: 630,
       embedFont: true,
-      fonts: [
-        {
-          name: "Google Sans Code",
-          data: regularData,
-          weight: 400,
-          style: "normal",
-        },
-        {
-          name: "Google Sans Code",
-          data: boldData,
-          weight: 700,
-          style: "normal",
-        },
-      ],
+      fonts,
     }
   );
 

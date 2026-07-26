@@ -39,8 +39,18 @@ const rssHref = getRelativeLocaleUrl(
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      站标是一颗带环的行星（克拉克带 = 地球同步轨道那条环带）。
+      三份都由 public/favicon.svg 派生，改了标就要重新生成后两份 ——
+      命令记在 docs/站标.md 里。
+
+      顺序有讲究：现代浏览器认 svg 那条就不会再去要 ico。
+      svg 里带 prefers-color-scheme，所以标签页图标会跟系统主题走；
+      ico 和 apple-touch-icon 没有这个能力，都是浅色版栅格化。
+    -->
     <link rel="icon" type="image/svg+xml" href={getAssetPath("favicon.svg")} />
     <link rel="icon" href={getAssetPath("favicon.ico")} />
+    <link rel="apple-touch-icon" href={getAssetPath("apple-touch-icon.png")} />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
