@@ -2,7 +2,7 @@
 slug: atomic-rockets
 uid: sdzpdael
 title: Atomic Rockets：写硬科幻之前该去的那个站
-description: Atomic Rockets 从 1994 年开到今天，攒下了一整套给科幻作者查的火箭方程、发动机参数和太空战物理。这篇介绍它有什么、怎么用，以及哪些地方不该照抄。
+description: Atomic Rockets 从 1994 年开到今天，攒下了一整套给科幻作者查的火箭方程、发动机参数和太空战物理。这篇介绍它有什么、怎么用。
 pubDatetime: 2026-07-25T10:00:00+08:00
 modDatetime: 2026-07-25T17:45:00-04:00
 tags:
