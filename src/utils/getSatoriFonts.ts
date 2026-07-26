@@ -81,6 +81,9 @@ async function loadCJKSubset(
     subsetCache.set(cacheKey, data);
     return data;
   } catch (error) {
+    // 这行字是构建日志里唯一能看出「OG 图缺字了」的地方，必须打出来。
+    // 全局的 no-console 是为了拦住组件里忘删的调试语句，不是拦这种。
+    // eslint-disable-next-line no-console
     console.warn(
       `[og] 取 Noto Sans SC 子集失败，这张图上的中文会缺字：${String(error)}`
     );

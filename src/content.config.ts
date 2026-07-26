@@ -2,8 +2,14 @@ import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 import config from "@/config";
+import { POSTS_DIR, UID_PATTERN, UID_HINT } from "../scripts/post-rules.mjs";
 
-export const BLOG_PATH = "src/content/posts";
+/*
+  文章目录。真正的定义在 scripts/post-rules.mjs —— 构建前的校验脚本也要用它，
+  而那个脚本是 node 直接跑的，import 不了这个文件（astro:content 只有构建时才有）。
+  这里只是把它转出去给 src/ 底下的代码用。
+*/
+export const BLOG_PATH = POSTS_DIR;
 
 const posts = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),
@@ -20,22 +26,12 @@ const posts = defineCollection({
         故意设成必填、不给默认值：漏写就让构建失败。
         事后补一个键，比事后迁移一堆已经写歪的数据便宜得多。
 
-        首位限定小写字母：纯数字的 uid 会被 YAML 读成数字而不是字符串。
-        「不重复」是跨文件的约束，zod 管不到，由 scripts/check-posts.mjs 校验。
-
-        长度放到 8–40 位，是为了同时容纳两种来源，两种都只生成一次、之后不变：
-
-          npm run uid   → 8 位，手写文章用，短、好认
-          后台（Sveltia CMS 的 uuid 组件）→ 27 位，形如 uC5T6KX3M6N7G4Y2Z1A0B9C8D7E
-                          浏览器里跑不了 npm，只能让它自己生成。
-                          它的 prefix 配成 "u"，首位是字母这条就还成立。
+        形状（为什么首位必须是字母、为什么长度是 8–40）定义在
+        scripts/post-rules.mjs —— 校验脚本和这里共用那一份，别在这里另写一个正则。
+        「不重复」是跨文件的约束，zod 一次只看一个文件，管不到，
+        由 scripts/check-posts.mjs 校验。
       */
-      uid: z
-        .string()
-        .regex(
-          /^[a-z][0-9a-zA-Z-]{7,39}$/,
-          "uid 要 8–40 位：首位小写字母，其余字母、数字或连字符。用 `npm run uid` 生成，或由后台自动生成"
-        ),
+      uid: z.string().regex(UID_PATTERN, UID_HINT),
       /*
         连载系列。一个主题拆成多部分陆续发出时填这里：
 

@@ -23,11 +23,5 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# pagefind
+# pagefind（每次 npm run build 由 dist/ 拷过来，不进仓库）
 public/pagefind
-
-# pnpm
-.pnpm-store
-
-# docker compose
-compose.override.yaml

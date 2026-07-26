@@ -19,6 +19,17 @@
   「[ImageNotFound] Could not find requested image」——
   看不出是 frontmatter 写错了。所以在这儿提前拦一道，给一句人话。
 
+  另外还有几条**只提醒、不拦构建**的（走 notices，不走 problems）：
+
+    · 正文里有被转义的星号     —— 后台改过加粗链接的痕迹
+    · 封面不是 webp            —— 后台的自动转码没生效
+    · slug 和文件名对不上      —— 后台改了「文件名」但地址没跟着变
+
+  这三条的共同点：发生在「后台改 → 提交 → Cloudflare 构建」这条主路径上，
+  而 exit 1 在那条链上等于整站发不出去。为一处显示瑕疵付这个代价太贵，
+  何况后两条在后台里根本修不了。每一条要不要升级成 problem，
+  各自的判断写在下面对应的位置。
+
   用法：
     npm run uid          生成一个新的 uid，贴进新文章的 frontmatter
     npm run check:posts  跑全部校验，构建前自动执行
@@ -26,23 +37,11 @@
 import { randomInt } from "node:crypto";
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
+// uid 的形状和文章目录跟 schema 共用一份，别在这里另抄一遍
+import { POSTS_DIR, UID_PATTERN } from "./post-rules.mjs";
 
-// 与 content.config.ts 里的 BLOG_PATH 保持一致
-const POSTS_DIR = "src/content/posts";
 const LETTERS = "abcdefghijklmnopqrstuvwxyz";
 const ALPHABET = `0123456789${LETTERS}`;
-/*
-  首字符必须是字母。这不是审美问题 ——
-  全是数字的 uid（比如 00000000）会被 YAML 解析成「数字」而不是字符串，
-  schema 报的是 "Expected string, received number"，排查起来很费劲。
-  让首位永远是字母，这种情况按构造就不可能出现。
-  熵还是够：26 × 36^7 ≈ 2×10^12。
-
-  长度收到 8–40 位、允许大写和连字符，是为了同时接受后台生成的那种 ——
-  浏览器里跑不了 npm，Sveltia CMS 的 uuid 组件只会吐 UUID 或 26 位 Base32。
-  两种来源都是「创建时生成一次，之后不再变」，对 uid 来说这才是关键。
-*/
-const UID_PATTERN = /^[a-z][0-9a-zA-Z-]{7,39}$/;
 
 function newUid() {
   // randomInt 是无偏的，别用 Math.random() % 36
@@ -80,6 +79,13 @@ function splitFrontmatter(path) {
 
 function readUid(frontmatter) {
   return frontmatter.match(/^uid:\s*["']?([^"'\s#]+)/m)?.[1] ?? null;
+}
+
+/**
+ * 后台写下的「文件名」字段。手写的文章没有这一栏，返回 null。
+ */
+function readSlug(frontmatter) {
+  return frontmatter.match(/^slug:\s*["']?([^"'\s#]+)/m)?.[1] ?? null;
 }
 
 /**
@@ -187,6 +193,28 @@ for (const path of collectPosts(POSTS_DIR).sort()) {
     } else {
       seenUids.set(uid, file);
     }
+  }
+
+  /*
+    后台那栏「文件名」只在**新建条目**的一刻决定文件叫什么，之后再改它，
+    文件不会跟着改名 —— 而地址是从文件名推导出来的（src/utils/getPostPaths.ts）。
+    所以改完的结果是：frontmatter 说自己叫 A，站上的地址还是 B，
+    而且后台不会有任何提示。
+
+    只报不拦，理由比转义星号那条还硬一层：这个问题**在后台里修不了**
+    （改名要动 git）。发文章的主路径是「后台改 → 提交 → Cloudflare 构建」，
+    在那条链上 exit 1 等于整站发不出去，而你还没法从后台把它修好。
+  */
+  const slug = readSlug(frontmatter);
+  const basename = file.replace(/\.mdx?$/, "").split("/").pop();
+  if (slug && slug !== basename) {
+    notices.push(
+      `${file}\n    frontmatter 里的 slug「${slug}」和文件名「${basename}」对不上。` +
+        `\n    地址按文件名生成，所以这篇的网址仍然是 /posts/${basename}/。` +
+        `\n    要真的改地址：git mv ${POSTS_DIR}/${file} ${POSTS_DIR}/${slug}.md` +
+        `\n    （旧链接和收藏会全断，发出去之后一般就别改了。）` +
+        `\n    不想改地址：把后台里的「文件名」一栏改回 ${basename}。`
+    );
   }
 
   const ogImage = readOgImage(frontmatter);

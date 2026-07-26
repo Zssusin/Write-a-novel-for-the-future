@@ -1,7 +1,7 @@
 {
-  "name": "astro-paper-tmp",
+  "name": "clarkebelt",
   "type": "module",
-  "version": "6.1.0",
+  "private": true,
   "engines": {
     "node": ">=22.12.0"
   },

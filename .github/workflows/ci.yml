@@ -1,9 +1,20 @@
+# 构建守门员。
+#
+# 发文章的主路径是「后台改 → 提交进 main → Cloudflare 构建」，那条链上唯一
+# 会发现问题的地方是 Cloudflare 的构建日志 —— 而它挂了不会主动告诉你，站上
+# 只是安静地停在上一个版本。所以这里也在 push 上跑一遍：GitHub 会为失败的
+# push 给你发邮件。
+#
+# 跑的就是本地那条 npm run build（里面含 check:posts 和 astro check），
+# 没有第二套构建方式 —— 两边不一致的话，这个 job 绿了也说明不了什么。
 name: CI
 
 permissions:
   contents: read
 
 on:
+  push:
+    branches: [main]
   pull_request:
     types:
       - opened
@@ -12,35 +23,38 @@ on:
       - reopened
   workflow_call:
 
+# 连着提交几篇文章时，让上一次自己停下
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Code standards & build
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    # 构建要去 Google 取字体、还要跑 pagefind 建索引，原来的 3 分钟偏紧
+    timeout-minutes: 10
 
     steps:
       - name: "☁️ Checkout repository"
         uses: actions/checkout@v4
 
-      - name: "📦 Install pnpm"
-        uses: pnpm/action-setup@v4
-        with:
-          version: "11.3.0"
-
-      - name: Use Node.js
+      - name: "🟩 Use Node.js"
         uses: actions/setup-node@v4
         with:
+          # package.json 的 engines 要求 ≥22.12
           node-version: "24"
-          cache: "pnpm"
+          cache: "npm"
 
+      # 用 ci 不用 install：只认 package-lock.json，装不出和本地不一样的版本树
       - name: "📦 Install dependencies"
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: "🔎 Lint code"
-        run: pnpm run lint
+        run: npm run lint
 
       - name: "📝 Checking code format"
-        run: pnpm run format:check
+        run: npm run format:check
 
       - name: "🚀 Build the project"
-        run: pnpm run build
+        run: npm run build

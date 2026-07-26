@@ -1,167 +1,87 @@
-# AstroPaper 📄
+# clarkebelt
 
-![AstroPaper](public/default-og.jpg)
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/community/file/1356898632249991861)
-![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)
+硬科幻爱好者的笔记站：现实科技解读、原创故事、创作工具箱、书目推荐。
 
-AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro blog theme. This theme is designed and crafted based on [my personal blog](https://satnaing.dev/blog).
+线上地址：<https://clarkebelt.org>
 
-Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README Documentation Section](#-documentation) for more info.
+## 它是怎么跑起来的
 
-## 🔥 Features
+一个纯静态站。文章是仓库里的 Markdown，推进 `main` 之后 Cloudflare 构建、
+把 `dist/` 整个当 CDN 发出去。
 
-- [x] type-safe markdown
-- [x] super fast performance
-- [x] accessible (Keyboard/VoiceOver)
-- [x] responsive (mobile ~ desktops)
-- [x] SEO-friendly
-- [x] light & dark mode
-- [x] static search ([Pagefind](https://pagefind.app/))
-- [x] draft posts & pagination
-- [x] sitemap & rss feed
-- [x] MDX support
-- [x] collapsible table of contents
-- [x] followed best practices
-- [x] highly customizable
-- [x] dynamic OG image generation for blog posts ([Blog Post](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/))
-- [x] i18n ready
+```
+写作 ──► /admin/（后台，浏览器里直接调 GitHub API）
+          │
+          ├─ 或者直接改 src/content/posts/*.md
+          ▼
+       commit 到 main
+          │
+          ▼
+   Cloudflare 构建（npm run build）
+          │
+          ▼
+   Workers 静态资源层 ──────────────► 文章、CSS、Pagefind 索引……
+          └─ 只有 /img/* 例外 ──► worker/index.js ──► R2 桶（图片）
+```
 
-_Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver** on Mac and **TalkBack** on Android. I couldn't test all other screen-readers out there. However, accessibility enhancements in AstroPaper should be working fine on others as well._
+全链路没有数据库，也没有需要盯着的服务器进程。唯一那段服务端代码是
+[`worker/index.js`](worker/index.js)（不到 40 行有效代码），存在的理由只有一个：
+让文章里的图片地址是 `/img/xxx`，而不是写死的 `pub-xxxx.r2.dev`——
+换域名、换桶、哪天离开 Cloudflare，正文一个字都不用动。
 
-## ✅ Lighthouse Score
+## 上手
 
-<p align="center">
-  <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
-    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
-  </a>
-</p>
-
-## 🚀 Project Structure
-
-Inside of AstroPaper, you'll see the following folders and files:
+需要 Node ≥ 22.12（用 nvm 装）。
 
 ```bash
-/
-├── public/
-│   ├── pagefind/          # auto-generated on build
-│   ├── favicon.svg
-│   └── default-og.jpg
-├── src/
-│   ├── assets/
-│   │   ├── icons/
-│   │   └── images/
-│   ├── components/
-│   ├── content/
-│   │   ├── pages/
-│   │   │   └── about.md
-│   │   └── posts/
-│   │       └── some-blog-posts.md
-│   ├── i18n/
-│   ├── layouts/
-│   ├── pages/
-│   ├── scripts/
-│   ├── styles/
-│   ├── types/
-│   ├── utils/
-│   ├── config.ts
-│   └── content.config.ts
-├── astro-paper.config.ts  # user-defined configurations
-└── astro.config.ts
+npm install
+npm run dev      # http://localhost:4321
 ```
 
-All blog posts are stored in the `src/content/posts/` directory. You can organise posts into subdirectories — the subdirectory name becomes part of the post URL.
+| 命令                  | 作用                                               |
+| :-------------------- | :------------------------------------------------- |
+| `npm run dev`         | 本地开发服务器                                     |
+| `npm run build`       | 校验 + 类型检查 + 构建 + Pagefind 建索引           |
+| `npm run preview`     | 本地预览构建产物                                   |
+| `npm run check:posts` | 只跑文章校验（uid 是否重复、系列 part 是否撞车……） |
+| `npm run uid`         | 生成一个新的 uid，贴进新文章的 frontmatter         |
+| `npm run lint`        | ESLint                                             |
+| `npm run format`      | Prettier 格式化                                    |
 
-## 📖 Documentation
+`npm run build` 是唯一一条构建路径——CI 和 Cloudflare 跑的都是它。
+本地过了，线上基本就不会挂。
 
-Documentation can be read in two formats\_ _markdown_ & _blog post_.
+## 写一篇文章
 
-- Configuration - [markdown](src/content/posts/how-to-configure-astropaper-theme.md) | [blog post](https://astro-paper.pages.dev/posts/how-to-configure-astropaper-theme/)
-- Add Posts - [markdown](src/content/posts/adding-new-post.md) | [blog post](https://astro-paper.pages.dev/posts/adding-new-posts-in-astropaper-theme/)
-- Customize Color Schemes - [markdown](src/content/posts/customizing-astropaper-theme-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
-- Predefined Color Schemes - [markdown](src/content/posts/predefined-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/predefined-color-schemes/)
+新文章放 `src/content/posts/<英文短横线名>.md`，文件名就是网址。
+frontmatter 的字段和约束定义在 [`src/content.config.ts`](src/content.config.ts)，
+跨文件的约束（uid 不重复、同系列 part 不重复）由
+[`scripts/check-posts.mjs`](scripts/check-posts.mjs) 在构建前检查。
 
-## 💻 Tech Stack
+具体工序见 `docs/`：
 
-**Main Framework** - [Astro](https://astro.build/)  
-**Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-**Styling** - [TailwindCSS](https://tailwindcss.com/)  
-**UI/UX** - [Figma Design File](https://www.figma.com/community/file/1356898632249991861)  
-**Static Search** - [Pagefind](https://pagefind.app/)  
-**Icons** - [Tablers](https://tabler-icons.io/)  
-**Code Formatting** - [Prettier](https://prettier.io/)  
-**Deployment** - [Cloudflare Workers](https://workers.cloudflare.com/)  
-**Image storage** - [Cloudflare R2](https://developers.cloudflare.com/r2/)  
-**Linting** - [ESLint](https://eslint.org)  
-**Dynamic OG images** - [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/) + [Astro Fonts](https://docs.astro.build/en/guides/fonts/)
+| 文档                             | 讲什么                                  |
+| :------------------------------- | :-------------------------------------- |
+| [后台发布](docs/后台发布.md)     | `/admin/` 怎么登录、怎么发、有哪些坑    |
+| [图片工作流](docs/图片工作流.md) | R2 建桶、上传、在文章里引用、封面图要求 |
+| [翻译工序](docs/翻译工序.md)     | 授权、分篇、译文与注解的写法            |
+| [站标](docs/站标.md)             | favicon 的唯一源文件与重新生成步骤      |
 
-## 👨🏻‍💻 Running Locally
+## 关于主题
 
-You can start using this project locally by running the following command in your desired directory:
+本站基于 [AstroPaper](https://github.com/satnaing/astro-paper) v6.1.0
+（作者 [Sat Naing](https://satnaing.dev)，MIT 许可，见 [LICENSE](LICENSE)）。
 
-```bash
-# pnpm
-pnpm create astro@latest --template satnaing/astro-paper
+**这是一次性快照，不跟随上游。** 主题代码是复制进来的，之后按本站需要改过不少
+（首页、归档、OG 图生成、字体加载、`src/styles/glass.css` 那套材质、系列导航与
+译文出处组件都是自己写的），已经没有机械化的升级路径。上游发新版时，只能人工
+挑补丁——所以别指望 `git merge`，也别为了「方便升级」把改动改回去。
 
-# npm
-npm create astro@latest -- --template satnaing/astro-paper
+## 技术栈
 
-# yarn
-yarn create astro --template satnaing/astro-paper
-
-# bun
-bun create astro@latest -- --template satnaing/astro-paper
-```
-
-Then start the project by running the following commands:
-
-```bash
-# install dependencies if you haven't done so in the previous step.
-pnpm install
-
-# start running the project
-pnpm dev
-```
-
-## Google Site Verification (optional)
-
-You can add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) by setting `site.googleVerification` in `astro-paper.config.ts`:
-
-```ts file="astro-paper.config.ts"
-export default defineAstroPaperConfig({
-  site: {
-    // ...
-    googleVerification: "your-google-site-verification-value",
-  },
-  // ...
-});
-```
-
-> See [this discussion](https://github.com/satnaing/astro-paper/discussions/334#discussioncomment-10139247) for adding AstroPaper to the Google Search Console.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command          | Action                                                                                                                           |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm install`   | Installs dependencies                                                                                                            |
-| `pnpm dev`       | Starts local dev server at `localhost:4321`                                                                                      |
-| `pnpm build`     | Type-checks, builds the site, runs Pagefind indexing, and copies the index to `public/pagefind/`                                 |
-| `pnpm preview`   | Preview your build locally, before deploying                                                                                     |
-| `pnpm sync`      | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `pnpm astro ...` | Run CLI commands like `astro add`, `astro check`                                                                                 |
-
-## ✨ Feedback & Suggestions
-
-If you have any suggestions/feedback, you can contact me via [my email](mailto:satnaingdev+astropaper@gmail.com). Alternatively, feel free to open an issue if you find bugs or want to request new features.
-
-## 📜 License
-
-Licensed under the MIT License, Copyright © 2026
-
----
-
-Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
+[Astro](https://astro.build/) · [TypeScript](https://www.typescriptlang.org/) ·
+[TailwindCSS](https://tailwindcss.com/) · [Pagefind](https://pagefind.app/)（静态搜索） ·
+[Sveltia CMS](https://github.com/sveltia/sveltia-cms)（后台） ·
+[Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/)（动态 OG 图） ·
+[Cloudflare Workers](https://workers.cloudflare.com/)（部署） ·
+[Cloudflare R2](https://developers.cloudflare.com/r2/)（图片）
