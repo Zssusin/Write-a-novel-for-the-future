@@ -28,6 +28,20 @@ const rssHref = getRelativeLocaleUrl(
   Astro.currentLocale ?? config.site.lang,
   "rss.xml"
 );
+
+/*
+  站标的缓存版本号。**换了站标就把这个数字 +1。**
+
+  为什么需要它：浏览器把 favicon 存在一个和普通 HTTP 缓存分开的库里
+  （Chrome 的 Favicons、Firefox 的 favicons.sqlite），那个库基本不看
+  cache-control，Ctrl+Shift+R 也刷不掉。所以换了图标之后，**所有访问过
+  这个站的人**都可能长期继续看到旧图标 —— 我们这次就是从 Astro 的 logo
+  换成自己的站标，不加这个的话老访客会一直看到 Astro 那个 A。
+
+  换 URL 是唯一可靠的办法：不同 URL 就是不同缓存键。
+  getAssetPath 只做去前导斜杠 + 拼接，查询串能安全穿过。
+*/
+const ICON_VERSION = 2;
 ---
 
 <!doctype html>
@@ -41,16 +55,23 @@ const rssHref = getRelativeLocaleUrl(
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--
       站标是一颗带环的行星（克拉克带 = 地球同步轨道那条环带）。
-      三份都由 public/favicon.svg 派生，改了标就要重新生成后两份 ——
-      命令记在 docs/站标.md 里。
+      三份都由 public/favicon.svg 派生，改了标就要重新生成后两份、
+      并且把上面的 ICON_VERSION +1 —— 步骤记在 docs/站标.md 里。
 
       顺序有讲究：现代浏览器认 svg 那条就不会再去要 ico。
       svg 里带 prefers-color-scheme，所以标签页图标会跟系统主题走；
       ico 和 apple-touch-icon 没有这个能力，都是浅色版栅格化。
     -->
-    <link rel="icon" type="image/svg+xml" href={getAssetPath("favicon.svg")} />
-    <link rel="icon" href={getAssetPath("favicon.ico")} />
-    <link rel="apple-touch-icon" href={getAssetPath("apple-touch-icon.png")} />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={getAssetPath(`favicon.svg?v=${ICON_VERSION}`)}
+    />
+    <link rel="icon" href={getAssetPath(`favicon.ico?v=${ICON_VERSION}`)} />
+    <link
+      rel="apple-touch-icon"
+      href={getAssetPath(`apple-touch-icon.png?v=${ICON_VERSION}`)}
+    />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 

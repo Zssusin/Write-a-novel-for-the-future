@@ -17,6 +17,30 @@ const { site, features } = config;
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
 
+/*
+  ===== 左上角那个组合标（图形标 + 字标）的三处决定 =====
+
+  1. 字标用 Michroma（font-display → --font-stack-display）。
+     全站只有这一处真正用上它。那个字体的 unicode-range 只声明了拉丁，
+     所以站名要是改回中文，这里会静默回落到系统字体，Michroma 就白预加载了。
+     另外没写 font-semibold：Michroma 只有 400 一个字重，写 600 会触发
+     合成加粗，几何字面被算法加粗会糊。它本身就够重。
+
+  2. 图形标是**内联 SVG**，不是 <img src="/favicon.svg">。原因是主题：
+     favicon.svg 里的颜色靠 prefers-color-scheme 写死，那跟的是「系统」主题；
+     而本站有自己的明暗切换按钮（往 <html> 上写 data-theme）。用 <img> 的话，
+     系统浅色 + 站内切到深色时，图标就和页面对不上了。
+     内联之后 currentColor 继承 <a> 的文字色、stroke-accent 走主题变量，
+     两者都跟着 data-theme 走，四种组合都对。
+     代价：这份图形和 public/favicon.svg 是两份，改站标要改两处 ——
+     docs/站标.md 里记了这件事。
+
+  3. size-8 / max-sm:size-7 是按字高配的，不是随手挑的。
+     Michroma 的 capHeight = 1536/2048 = 0.75em，桌面端 text-xl（20px）下约 15px；
+     星球直径 = 7.8×2/32 × 图标边长，size-8（32px）给出 15.6px，和字高齐平。
+     小一档（size-7）只有 13.6px，看着像掉了一号。
+*/
+
 // Strip the base prefix so isActive comparisons work regardless of deploy subdirectory.
 // e.g. with base "/blog": "/blog/posts/slug" → "/posts/slug"
 const relativePath = stripBase(Astro.url.pathname);
@@ -48,18 +72,35 @@ const isActive = (path: string) => {
   <div
     class="glass relative flex w-full items-baseline justify-between rounded-2xl px-4 py-3 sm:items-center sm:py-4"
   >
-    <!--
-      字标是全站唯一真正用上 Michroma 的地方（font-display → --font-stack-display）。
-      那个字体的 unicode-range 只声明了拉丁，所以它只对拉丁站名生效；
-      站名要是改回中文，这里会静默回落到系统字体，Michroma 就白预加载了。
-
-      没有 font-semibold：Michroma 只有 400 一个字重，写 600 会触发合成加粗，
-      几何字面被算法加粗会糊。它本身就够重。
-    -->
+    <!-- 组合标：图形标 + 字标。三处决定的理由见组件顶部的注释。 -->
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="font-display absolute py-1 text-lg leading-8 whitespace-nowrap sm:static sm:my-auto sm:text-xl sm:leading-none"
+      class="font-display absolute inline-flex items-center gap-2 py-1 text-lg leading-8 whitespace-nowrap sm:static sm:my-auto sm:text-xl sm:leading-none"
     >
+      <svg
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+        class="size-8 shrink-0 max-sm:size-7"
+      >
+        <defs>
+          <!-- 把星球那块挖掉，环就只剩左右两片，不压在星球上 -->
+          <mask id="header-logo-ring-cut">
+            <rect x="-20" y="-20" width="72" height="72" fill="#fff"></rect>
+            <circle cx="16" cy="16" r="9.8" fill="#000"></circle>
+          </mask>
+        </defs>
+        <g transform="rotate(-22 16 16)" mask="url(#header-logo-ring-cut)">
+          <ellipse
+            cx="16"
+            cy="16"
+            rx="14.5"
+            ry="4.9"
+            fill="none"
+            stroke-width="3"
+            class="stroke-accent"></ellipse>
+        </g>
+        <circle cx="16" cy="16" r="7.8" fill="currentColor"></circle>
+      </svg>
       {site.title}
     </a>
     <nav
