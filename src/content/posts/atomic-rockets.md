@@ -15,9 +15,9 @@ ogImage: https://clarkebelt.org/img/2026/AtomicRocketSeal256.png
 series: null
 ---
 
-Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的、这篇要介绍的，是它下面 `/rocket/` 那个目录——**[Atomic Rockets](https://www.projectrho.com/public_html/rocket/)**。搜「Project Rho」和搜「Atomic Rockets」指向同一件事，后者才是它自己挂的招牌。
+Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的、这篇要介绍的，是它下面 `/rocket/` 那个目录——\*\*[Atomic Rockets](https://www.projectrho.com/public_html/rocket/)\*\*。搜「Project Rho」和搜「Atomic Rockets」指向同一件事，后者才是它自己挂的招牌。
 
-它 1994 年开站，到今天三十多年，一直是同一个人在攒。
+它 1994 年开站，到今天三十多年，一直是同一个人在管理。
 
 ## 它不是科普站
 
@@ -87,7 +87,7 @@ Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的�
 - **正文里夹着大量小说原文引用。** 站主拿海因莱因、克拉克、普尔奈尔的段落当例证，说明「写对了是什么样子」。这些引用本身就是很好的阅读线索。
 - **注意页面的年代口味。** 站主自称 rocketpunk 爱好者，偏爱 1940–60 年代那种原子时代美学。这既是它的魅力，也是一层筛子——有些方案之所以被反复讨论，是因为它好看、有年代感，不完全是因为它最优。
 
-## 顺带：一份很好的片单书单
+## 顺带：一份很好的书单
 
 站里有个 [Atomic Rocket Seal of Approval](https://www.projectrho.com/public_html/rocket/sealofapproval.php)（原子火箭认证章），站主自己盖的、自称「完全多余」的章，发给那些**没经他帮忙、自己就把科学做对了**的作品。
 
@@ -113,4 +113,4 @@ Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的�
 
 Atomic Rockets 的价值就在这儿。它不会替你写小说，它做的是把物理定律给你摊开摆在桌上，让你的每一个例外都成为一次选择，而不是一次失误。
 
-网址再放一次：<https://www.projectrho.com/public_html/rocket/>
+网址：<https://www.projectrho.com/public_html/rocket/>
