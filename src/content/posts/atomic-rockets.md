@@ -15,7 +15,7 @@ ogImage: https://clarkebelt.org/img/2026/AtomicRocketSeal256.png
 series: null
 ---
 
-Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的、这篇要介绍的，是它下面 `/rocket/` 那个目录——\*\*[Atomic Rockets](https://www.projectrho.com/public_html/rocket/)\*\*。搜「Project Rho」和搜「Atomic Rockets」指向同一件事，后者才是它自己挂的招牌。
+Project Rho 是站主 Winchell Chung 的整个个人站；大家真正在说的、这篇要介绍的，是它下面 `/rocket/` 那个目录——**[Atomic Rockets](https://www.projectrho.com/public_html/rocket/)**。搜「Project Rho」和搜「Atomic Rockets」指向同一件事，后者才是它自己挂的招牌。
 
 它 1994 年开站，到今天三十多年，一直是同一个人在攒。
 

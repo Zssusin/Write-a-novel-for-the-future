@@ -10,6 +10,15 @@
     · uid 不能重复            —— 撞了，评论和浏览量就会混到一起
     · 同系列里 part 不能重复   —— 撞了，连载目录出现两个「第 2 部分」
 
+  还有一条例外，它是单文件约束但也放在这里：
+
+    · ogImage 必须是绝对地址
+
+  按理这该由 schema 管，但那个字段是 image().or(z.string())，
+  相对路径能过 zod，然后死在 Astro 的图片解析里，报的是
+  「[ImageNotFound] Could not find requested image」——
+  看不出是 frontmatter 写错了。所以在这儿提前拦一道，给一句人话。
+
   用法：
     npm run uid          生成一个新的 uid，贴进新文章的 frontmatter
     npm run check:posts  跑全部校验，构建前自动执行
@@ -58,15 +67,26 @@ function collectPosts(dir) {
   return found;
 }
 
-/** 只截开头那段 frontmatter，不做完整 YAML 解析 —— 够用且不引依赖。 */
-function readFrontmatter(path) {
-  return (
-    readFileSync(path, "utf8").match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? null
+/**
+ * 切成 frontmatter 和正文两段。不做完整 YAML 解析 —— 够用且不引依赖。
+ * 正文也要，因为下面有一条只能在正文里看的检查（被转义的星号）。
+ */
+function splitFrontmatter(path) {
+  const match = readFileSync(path, "utf8").match(
+    /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/
   );
+  return match ? { frontmatter: match[1], body: match[2] } : null;
 }
 
 function readUid(frontmatter) {
   return frontmatter.match(/^uid:\s*["']?([^"'\s#]+)/m)?.[1] ?? null;
+}
+
+/**
+ * 空字符串和整个字段缺失都返回空串 —— 这两种都是「没填封面」，都合法。
+ */
+function readOgImage(frontmatter) {
+  return frontmatter.match(/^ogImage:\s*["']?([^"'\s#]*)/m)?.[1] ?? "";
 }
 
 /*
@@ -114,16 +134,37 @@ if (process.argv.includes("--new-uid")) {
 }
 
 const problems = [];
+const notices = []; // 不阻断构建，只是值得看一眼
 const seenUids = new Map(); // uid -> 第一次出现的文件
 const seriesIndex = new Map(); // 系列名 -> Map<part, 文件>
 
 for (const path of collectPosts(POSTS_DIR).sort()) {
   const file = relative(POSTS_DIR, path);
-  const frontmatter = readFrontmatter(path);
+  const parts = splitFrontmatter(path);
 
-  if (frontmatter === null) {
+  if (parts === null) {
     problems.push(`${file}\n    没有 frontmatter。文件开头需要一段 --- 包起来的元数据。`);
     continue;
+  }
+
+  const { frontmatter, body } = parts;
+
+  /*
+    后台（Sveltia CMS）保存时会把「加粗包住链接」写坏，这是实测出来的：
+    **[x](y)  →  \*\*[x](y)\*\*
+    星号被转义成字面字符，读者看到的是一对光秃秃的 **。
+
+    只报不拦。因为发文章的主路径是「后台改 → 提交 → Cloudflare 构建」，
+    在那条链上 exit 1 意味着整篇文章直接不上线 —— 为一处显示瑕疵付这个代价
+    太贵了。这里只在 npm run check:posts 的输出里提醒一句。
+    详见 docs/后台发布.md 第 4 节。
+  */
+  if (/\\\*/.test(body)) {
+    notices.push(
+      `${file}\n    正文里有被转义的星号（\\*），加粗会显示成字面的 **。` +
+        `\n    多半是后台改过「**[链接](...)**」这种写法。修：` +
+        `\n      sed -i 's/\\\\\\*/*/g' ${POSTS_DIR}/${file}`
+    );
   }
 
   const uid = readUid(frontmatter);
@@ -146,6 +187,29 @@ for (const path of collectPosts(POSTS_DIR).sort()) {
     } else {
       seenUids.set(uid, file);
     }
+  }
+
+  const ogImage = readOgImage(frontmatter);
+  if (ogImage && !/^https?:\/\//.test(ogImage)) {
+    problems.push(
+      `${file}\n    ogImage "${ogImage}" 不是绝对地址。` +
+        `\n    这一栏必须写完整的 http(s) 地址，站内相对路径会让构建失败：` +
+        `\n      [ImageNotFound] Could not find requested image \`${ogImage}\`` +
+        `\n    改成 https://clarkebelt.org${ogImage.startsWith("/") ? "" : "/"}${ogImage}` +
+        `\n    （后台里从 R2 媒体库选图会自动写成绝对地址，不用手打。）`
+    );
+  } else if (ogImage && !/\.webp(\?|$)/i.test(ogImage)) {
+    /*
+      不阻断构建 —— 非 webp 的封面能用，只是白白多下载几倍字节。
+      但它同时是个信号：后台上传本该自动转 webp（config.yml 里的
+      transformations），出现非 webp 说明那段配置又没生效了。
+    */
+    notices.push(
+      `${file}\n    封面 ${ogImage.split("/").pop()} 不是 webp。` +
+        `\n    后台上传本应自动转 webp；出现别的格式，多半是 config.yml 里` +
+        `\n    media_libraries.default.config.transformations 没被读到。` +
+        `\n    见 docs/图片工作流.md 2.5 节。`
+    );
   }
 
   const series = readSeries(frontmatter);
@@ -181,6 +245,10 @@ if (problems.length > 0) {
 }
 
 console.log(`✓ 文章校验通过：${seenUids.size} 篇，uid 无重复`);
+
+for (const notice of notices) console.log(`\n  ⚠ ${notice}`);
+if (notices.length > 0) console.log("");
+
 /*
   把系列清单打出来。名字是手打的中文，「戴森球的工程学」和「戴森球工程学」
   在机器看来是两个系列，脚本没法判断哪个是笔误 —— 但列出来你一眼就看得见：

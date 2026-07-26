@@ -163,26 +163,46 @@ collections:
         default: false
         hint: 勾上就不会出现在站上——本地 npm run dev 里也看不到，草稿是无条件隐藏的。
 
-      # widget: image 才有媒体库按钮（能直接拖图上传）。配 media_libraries 是关键：
+      # widget: image 才有媒体库按钮（能直接拖图上传）。
       #
-      #   default: false  →  关掉「仓库」那个库，这个字段只剩 R2 可选。
+      # ===== 这里**故意没有** media_libraries: { default: false } =====
       #
-      # 不关掉的话，从仓库库选出来的值是 /images/... 这样的**相对路径**，
-      # 而这个字段填相对路径会让构建直接失败（schema 是 image().or(z.string())，
-      # Astro 会把相对路径当构建时的本地资源去解析，找不到就 ImageNotFound）。
-      # 关掉之后就只可能选出 https://clarkebelt.org/img/... 的绝对地址，
-      # 那条失败路径被物理堵死。
+      # 写过一次，实测踩坏了：它确实能把这个字段限制成只能选 R2（好处是选不出
+      # 相对路径），但代价是**上面那整段 default.config 一起失效** ——
+      # 自动转 webp、slugify_filename、max_file_size 全没了。
+      # 实证：那次上传进桶的是 AtomicRocketSeal256.png，既没转 webp
+      # 也没被 slugify。
       #
-      # 要退回手填模式：把 widget 改回 string、删掉 media_libraries 这行。
+      # 原因在 Sveltia 的代码里（0.172.4）：
+      #
+      #   EF = ({libraryName=`default`, fieldConfig:t}) => {
+      #     if (t?.media_libraries && e in t.media_libraries) {
+      #       let n = t.media_libraries[e];
+      #       return n !== !1 && i(n)      // ← 字段级 false，直接 return false
+      #   OF = ({fieldConfig:e}) => {
+      #     let t = EF({fieldConfig:e}),
+      #       {transformations, slugify_filename, max_file_size} =
+      #         typeof t == `boolean` ? {} : t?.config ?? {}   // ← 从 {} 里取，全丢
+      #
+      # 而且这两个目标在 Sveltia 里是互斥的：OF 永远只查 `default` 这一项
+      # （所有调用点都没传 libraryName），所以把 transformations 挪到
+      # cloudflare_r2 底下、或者用 media_libraries.all，都读不到。
+      #
+      # 取舍：压缩是**每个读者每次都要付**的成本，而「选错库」只是一次误操作。
+      # 所以留着压缩，把守卫挪到 scripts/check-posts.mjs —— 那里会在
+      # npm run check:posts（构建前自动跑）时报一句人话，而不是等构建炸出
+      # 一个看不懂的 ImageNotFound。
+      #
+      # 副作用：媒体库弹窗里会同时出现「仓库」和「R2」两个来源。挑 R2 那个。
       - label: 配图
         name: ogImage
         widget: image
         required: false
-        media_libraries: { default: false }
         hint: >-
-          首页/归档列表的缩略图，同时也是分享卡片的图。点右边的按钮从 R2 选或直接拖一张上传，
-          存进去的是 https://clarkebelt.org/img/2026/xxx.webp 这样的完整地址。
-          留空就是纯文字卡片。上传时会自动转 webp、压到 1600px 宽，不用自己先压。
+          首页/归档列表的缩略图，同时也是分享卡片的图。点按钮上传，
+          弹窗里**选 R2 那个来源**（仓库那个存进去是相对路径，构建会失败）。
+          存对了是 https://clarkebelt.org/img/2026/xxx.webp 这样的完整地址。
+          上传时自动转 webp、压到 1600px 宽，不用自己先压。留空就是纯文字卡片。
 
       # 不填时 Sveltia 可能写出 series: null 而不是省掉这个键，
       # 所以 schema 那边是 .optional().nullable()，校验脚本也认 null。
