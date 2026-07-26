@@ -11,7 +11,7 @@ tags:
   - 网站介绍
 featured: true
 draft: false
-ogImage: https://picsum.photos/id/28/1920/1280.webp
+ogImage: https://clarkebelt.org/img/2026/AtomicRocketSeal256.png
 series: null
 ---
 
