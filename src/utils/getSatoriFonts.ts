@@ -102,11 +102,24 @@ export async function getSatoriFonts(
   requestUrl: URL
 ): Promise<SatoriOptions["fonts"]> {
   const fonts = fontData["--font-google-sans-code"];
-  const regularFontPath = getFontPathByWeight(fonts, 400);
-  const boldFontPath = getFontPathByWeight(fonts, 700);
+
+  /*
+    **必须显式要 woff。** astro.config.ts 里那套字体生成两种格式：
+    woff2 给浏览器（是可变字体，两个文件覆盖全部字重），woff 给这里 ——
+    satori 只认 ttf / otf / woff，不认 woff2。
+
+    不传这个参数的话默认找 "truetype"，现在没有 ttf 了，于是
+    getFontPathByWeight 会退到该字重的第一个文件，构建挂在
+    `Error: Unsupported OpenType signature wOF2`。踩过一次。
+  */
+  const regularFontPath = getFontPathByWeight(fonts, 400, { format: "woff" });
+  const boldFontPath = getFontPathByWeight(fonts, 700, { format: "woff" });
 
   if (regularFontPath === undefined || boldFontPath === undefined) {
-    throw new Error("Cannot find the font path.");
+    throw new Error(
+      "找不到 OG 图要用的字体文件。检查 astro.config.ts 的 fonts.formats " +
+        '里还有没有 "woff" —— satori 不认 woff2。'
+    );
   }
 
   const allText = texts.join("");
