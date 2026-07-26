@@ -42,9 +42,13 @@ const moreLinkClass =
   "text-accent mt-3 inline-flex items-center gap-1 text-xs decoration-dashed underline-offset-4 hover:underline";
 ---
 
-<aside aria-label={t.sidebar.label} class="lg:sticky lg:top-24 lg:self-start">
+<!-- 贴顶位置跟着 --below-header 走，别写死像素：理由见 global.css 里那段注释 -->
+<aside
+  aria-label={t.sidebar.label}
+  class="lg:sticky lg:top-(--below-header) lg:self-start"
+>
   <div
-    class="space-y-8 lg:max-h-[calc(100svh-8rem)] lg:overflow-y-auto lg:pe-1"
+    class="space-y-8 lg:max-h-[calc(100svh_-_var(--below-header)_-_2rem)] lg:overflow-y-auto lg:pe-1"
   >
     {
       config.features.search === "pagefind" && (

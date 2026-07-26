@@ -48,6 +48,23 @@
   @apply underline decoration-wavy decoration-2 underline-offset-8;
 }
 
+/*
+  贴顶导航条的高度。**这个值是量出来的，不是算出来的**：无头浏览器打开首页，
+  扫像素列找玻璃面板的上下边 —— 8px（header 的 py-2）+ 72px 面板 + 8px = 88px。
+
+  为什么要有名字：页头里放进那个组合标之后，桌面端从 80px 长到了 88px
+  （logo 的行盒 32px 顶掉了原来 28px 的字标）。当时有两处 96px 的魔法数字
+  在悄悄靠「页头不超过 96」活着 —— 侧栏的 lg:top-24 和归档锚点的
+  scroll-margin-top: 6rem。余量从 16px 掉到 8px，没穿，但下次再动页头就会穿。
+
+  所以：改了页头的高度，改这一个数；下面两个派生值和用到它们的地方自己跟上。
+*/
+:root {
+  --header-h: 5.5rem;
+  /* 贴顶元素、锚点跳转的落点：让开导航条，再留 1rem 呼吸 */
+  --below-header: calc(var(--header-h) + 1rem);
+}
+
 :target {
   scroll-margin-block: 1rem;
 }

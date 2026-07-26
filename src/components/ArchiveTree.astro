@@ -157,7 +157,7 @@ const branchClass = "border-border/60 ms-1.5 border-s ps-3";
   }
   /* 从侧栏点月份跳过来时，别让目标贴在贴顶的导航条下面 */
   .archive-tree summary[id] {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: var(--below-header);
   }
   @media (prefers-reduced-motion: reduce) {
     .archive-tree summary::before {
