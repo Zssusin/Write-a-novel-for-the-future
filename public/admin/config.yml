@@ -20,10 +20,68 @@ backend:
 # 以后绑了自己的域名，这里和 astro-paper.config.ts 里的 url 要一起改。
 site_url: https://clarkebelt.org
 
-# 媒体库。默认工作流是图片走 R2 外链、不进仓库（见 docs/图片工作流.md），
-# 这里留一个仓库内的兜底位置：偶尔一张小图不想开 R2 就直接拖进来。
+# 仓库内的兜底媒体位置：偶尔一张小图不想开 R2 就直接拖进来。
+# 主力工作流是 R2，见下面的 media_libraries。
 media_folder: public/images
 public_folder: /images
+
+media_libraries:
+  # 上传前处理。这一段对所有上传目标生效，不需要任何凭证。
+  default:
+    config:
+      # 浏览器里直接转码，压完再传 —— 也就是说 docs/图片工作流.md 第 4 节那条
+      # sharp-cli 命令，用后台上传的话不用跑了。
+      #
+      # 输出格式只有 webp 一个选项：代码里的白名单就一项（`uM=["webp"]`），
+      # 填别的会被静默改成 webp。能被转换的输入是 avif/gif/jpeg/png/webp，
+      # 其它（比如 HEIC）原样上传，不会报错但也不会被压。
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          # 最长边。正文图 1600 够用；封面缩略图桌面端只有 176×112，
+          # 传大了也是浪费，但一张图两用，就按大的来。
+          width: 1600
+      # 转换之后才判断大小，所以这不是「原图不能超过多少」，
+      # 而是「压完还这么大就有问题」。正常一张 1600px webp 在 200KB 上下。
+      max_file_size: 1500000
+      # 中文文件名会变成一串百分号编码的对象名。转成短横线拼音/英文。
+      slugify_filename: true
+
+  # ── Cloudflare R2 直传：填完下面两个值，去掉这一段的注释就能用 ──────────
+  #
+  # 上传目标就是 /img/ 背后那个桶，所以传完写进文章的地址
+  # （public_url + 对象名）正好是 worker/index.js 已经在服务的路径。
+  #
+  # 启用前必须做两件事，缺一个都会失败：
+  #
+  #   1. 建 R2 API Token：Dashboard → R2 → Manage R2 API Tokens
+  #      → Create API Token，权限 Object Read & Write。
+  #      拿到的 Access Key ID 填在下面；Secret Access Key **不要填这里** ——
+  #      后台第一次打开媒体库时会问你要，存在浏览器本地。
+  #      （这个文件是公开的：https://clarkebelt.org/admin/config.yml 谁都能读。
+  #        Access Key ID 单独拿不到任何东西，等同于 AWS 的 AKID，可以公开。）
+  #
+  #   2. 给桶配 CORS：R2 → image → Settings → CORS Policy：
+  #      [{"AllowedOrigins":["https://clarkebelt.org"],
+  #        "AllowedMethods":["GET","PUT","HEAD"],
+  #        "AllowedHeaders":["*"],"ExposeHeaders":["ETag"],"MaxAgeSeconds":3000}]
+  #      不配的话浏览器直接卡在预检请求上 —— 后台会签 AWS SigV4 头，
+  #      那属于「非简单请求」，一定会先发 OPTIONS。
+  #
+  # cloudflare_r2:
+  #   access_key_id: 上面第 1 步拿到的 Access Key ID
+  #   account_id: Cloudflare 账户 ID（Dashboard 右侧栏，或 npx wrangler whoami）
+  #   bucket: image
+  #   # 拼地址用：public_url + "/" + 对象名。写成自己的域名而不是 r2.dev，
+  #   # 图片就还是从 /img/ 出去，缓存策略和现在完全一致。
+  #   public_url: https://clarkebelt.org/img
+  #   # 对象名 = 这个前缀 + 文件名。上传时**没法在界面里选目录**，
+  #   # 所以年份文件夹只能写死在这里，跨年了记得改。
+  #   prefix: 2026/
+  #   # 必须显式关掉。默认会发 x-amz-acl: public-read，而 R2 的 S3 接口
+  #   # 压根没实现 ACL（官方兼容性表里 x-amz-acl 是 ❌）。
+  #   acl: false
 
 collections:
   - name: posts
@@ -108,6 +166,14 @@ collections:
         default: false
         hint: 勾上就不会出现在站上——本地 npm run dev 里也看不到，草稿是无条件隐藏的。
 
+      # 这里是 string 而不是 image，是有意的：image 组件会给你一个媒体库按钮，
+      # 但只要还没开 R2，从仓库媒体库选出来的值是 /images/... 这样的相对路径，
+      # 而这个字段填相对路径会让**构建直接失败**（见下面 hint）。
+      #
+      # 等上面的 cloudflare_r2 启用了，这三行可以换成：
+      #     widget: image
+      #     media_libraries: { default: false }   # 关掉仓库那个库，只能选 R2
+      # 那样就只可能选出绝对地址，构建失败这条路被堵死，还能直接在弹窗里传图。
       - label: 配图
         name: ogImage
         widget: string
