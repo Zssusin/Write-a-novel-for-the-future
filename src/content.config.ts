@@ -74,6 +74,17 @@ const posts = defineCollection({
             message: "原文链接要是完整的 http(s) 地址",
           }),
           note: z.string().optional(),
+          /*
+            原文用的语言，会写成出处那一行的 `lang` 属性。
+
+            为什么要这一栏：页面整体是 lang="zh"，屏幕阅读器于是拿中文的发音
+            规则去念出处里的英文标题和人名 —— 出来的是一串音节，不是英文。
+            标出来之后读屏会切到对应的语音。视觉上没有任何变化。
+
+            默认 en：这个站译的几乎全是英文源。后台表单里**故意没有这一栏**，
+            填了也永远是 en。真遇到日文、俄文原文，手写一行 `lang: ja` 就行。
+          */
+          lang: z.string().default("en"),
         })
         .optional()
         .nullable(),

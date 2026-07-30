@@ -10,6 +10,14 @@ type Props = {
 const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 
 const currentYear = new Date().getFullYear();
+
+/*
+  版权行里的字标带 lang="en"：整页是 lang="zh"，不标的话屏幕阅读器会用
+  中文的发音规则去念 clarkebelt。视觉上没有任何变化。
+
+  它跟着「站名是拉丁字母」这个前提走 —— 站名改成中文就该去掉，
+  连同 Header.astro 那一处。完整理由在 Header.astro 顶部注释第 1 条。
+*/
 ---
 
 <footer
@@ -23,7 +31,7 @@ const currentYear = new Date().getFullYear();
     <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
       <span>
         &#169; {currentYear}{" "}
-        <span class="font-display">{config.site.title}</span>
+        <span class="font-display" lang="en">{config.site.title}</span>
       </span>
       <span class="hidden sm:inline">&nbsp;·&nbsp;</span>
       <span>

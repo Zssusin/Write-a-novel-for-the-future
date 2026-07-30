@@ -25,6 +25,9 @@ const t = useTranslations(locale);
      站名要是改回中文，这里会静默回落到系统字体，Layout.astro 里那个
      woff2 预加载就变成纯浪费。（同一个字体 Footer.astro 也在用。）
      也别加 font-semibold：Michroma 只有 400 一个字重，写 600 会触发合成加粗。
+     同理，下面那个 lang="en" 也是跟着「站名是拉丁字母」这个前提写的 ——
+     整页是 lang="zh"，不标的话读屏会用中文发音去念 clarkebelt。
+     站名改成中文，这两处（这里和 Footer.astro）的 lang 要一起去掉。
 
   2. 图形标必须是内联 SVG，不能换成 <img src="/favicon.svg"> —— 独立 SVG 文件里的
      prefers-color-scheme 跟的是**系统**主题，而本站有自己的明暗切换（data-theme）。
@@ -92,7 +95,7 @@ const isActive = (path: string) => {
         </g>
         <circle cx="16" cy="16" r="7.8" fill="currentColor"></circle>
       </svg>
-      {site.title}
+      <span lang="en">{site.title}</span>
     </a>
     <nav
       id="nav-menu"
