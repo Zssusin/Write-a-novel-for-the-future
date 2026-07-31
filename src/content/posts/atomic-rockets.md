@@ -11,7 +11,7 @@ tags:
   - 网站介绍
 featured: true
 draft: false
-ogImage: https://clarkebelt.org/img/2026/AtomicRocketSeal256.png
+ogImage: https://clarkebelt.org/img/2026/rho-nerva-og-1200x630.webp
 series: null
 ---
 
