@@ -26,9 +26,37 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
 const postsPath = getRelativeLocaleUrl(locale, "posts/");
 const aboutPath = getRelativeLocaleUrl(locale, "about/");
+
+/*
+  首页得自己写一份 <title>，不能让 Layout 回落到 site.title —— 那样整页标题
+  就只有 "clarkebelt" 十个字符，搜索结果里光一个品牌词，读者看不出这站是干嘛的。
+  （Bing 站长工具把它报成 Title too short，它的门槛是 15 字符。）
+
+  其他页不受影响：它们各自拼 "xx | clarkebelt"，用的是 site.title 不是这个常量。
+
+  长度上限比下限更值得盯：Google 中文结果大约 30 个全角宽度就截断。
+  这条按全角折算 ≈ 24.5（拉丁字母算半宽），留了点余量 —— 往后加字先数一下。
+*/
+const homeTitle = `${config.site.title} · 硬科幻笔记：现实科技解读与创作工具箱`;
+
+/*
+  同理，首页的 <meta name="description"> 也得自己写。回落到 site.description
+  的话，它跟上面这行标题几乎是同一句话（都在列栏目），搜索结果里两行重说一遍，
+  白扔一行展示位。所以这份只讲标题没说的：**怎么做**（翻译 + 注解、标清事实与
+  推测）和**选文标准**（不日更不求全）。
+
+  别改成动 site.description —— 那个是全站兜底，还兼着 RSS 频道简介
+  （src/pages/rss.xml.ts），动了会波及一片。
+
+  长度奔 60~80 个全角去：太短 Google 会自己扒正文来凑，而首页正文头一句是
+  「你好，旅行者」，扒出来没法看。这条 67 个字，也留在截断线以内。
+*/
+const homeDesc =
+  "把国外真正硬核的科技长文译成中文，补上背景、标清哪些是事实、哪些是推测。" +
+  "另有原创短篇、设定方法与书单。不日更、不求全，只留能反复回看的。";
 ---
 
-<Layout>
+<Layout title={homeTitle} description={homeDesc}>
   <Header />
   <div class="app-shell app-with-sidebar">
     <main
