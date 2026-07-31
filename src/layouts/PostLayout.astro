@@ -9,17 +9,39 @@ type Props = {
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
+  /*
+    <title> 是「文章标题 | 站名」，但 schema.org 的 headline 要的是**光标题**
+    —— 它会被原样拿去当搜索结果和分享卡片的标题，带上站名后缀就成了
+    「……那个站 | clarkebelt - clarkebelt」这种重复。调用方传不带后缀的那份。
+  */
+  headline?: string;
 };
 
 const { site } = config;
 
-const { title, description, ogImage, canonicalURL, pubDatetime, modDatetime } =
-  Astro.props;
+const {
+  title,
+  description,
+  ogImage,
+  canonicalURL,
+  pubDatetime,
+  modDatetime,
+  headline,
+} = Astro.props;
+
+/*
+  canonicalURL 是 frontmatter 里的**可选**转载覆盖字段，绝大多数文章不填 ——
+  所以不能直接拿它当 mainEntityOfPage，那样只有转载文章才有这一项。
+  兜底算法跟 Layout.astro 里 canonicalURL 的默认值保持一致。
+*/
+const pageURL = canonicalURL ?? new URL(Astro.url.pathname, Astro.site).href;
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: title ?? site.title,
+  headline: headline ?? title ?? site.title,
+  ...(description && { description }),
+  mainEntityOfPage: pageURL,
   image: ogImage,
   ...(pubDatetime && { datePublished: pubDatetime.toISOString() }),
   ...(modDatetime && { dateModified: modDatetime.toISOString() }),
@@ -33,11 +55,8 @@ const structuredData = {
 };
 ---
 
-<Layout {title} {description} {ogImage} {canonicalURL}>
+<Layout {title} {description} {ogImage} {canonicalURL} ogType="article">
   <Fragment slot="head">
-    <!-- Override og:type for article pages -->
-    <meta property="og:type" content="article" />
-
     {
       pubDatetime && (
         <meta

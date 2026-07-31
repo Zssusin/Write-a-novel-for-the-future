@@ -12,6 +12,12 @@ type Props = {
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
+  /*
+    文章页要报 "article"。**必须走这个 prop，不能在子布局里再补一条
+    <meta property="og:type">** —— og 协议里同名 property 出现两次时，
+    抓取器普遍取第一条（后面的当多值处理），于是文章页会被读成 website。
+  */
+  ogType?: "website" | "article";
 };
 
 const { site } = config;
@@ -21,6 +27,7 @@ const {
   description = site.description,
   ogImage = resolveDefaultOgImagePath(config),
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  ogType = "website",
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
@@ -97,7 +104,7 @@ const ICON_VERSION = 2;
     <link rel="sitemap" href={getAssetPath("sitemap-index.xml")} />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={site.title} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
