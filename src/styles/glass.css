@@ -321,7 +321,14 @@
       层排在 components 层后面，一定压得住。
     */
     margin-top: 1rem;
-    border-radius: 1.25rem;
+    /*
+      直角，不是圆角。理由是面积：圆角会在四个角上各切掉一块，而这块面板
+      是**内容**容器不是控件 —— 页头那种小块玻璃圆角是装饰，一整页正文的
+      容器圆角是在扣可用宽度（还逼着内边距不能太小，否则首行文字会顶到
+      弧线上）。收直之后内边距才敢从 2.25rem 收到 2rem，见下面。
+      页头 .glass 仍然是圆角：它是浮在内容之上的控件层，两者不该一样。
+    */
+    border-radius: 0;
     color: var(--foreground);
     background: var(--panel-tint);
     border: 1px solid var(--panel-border);
@@ -329,26 +336,32 @@
     -webkit-backdrop-filter: var(--panel-filter);
     backdrop-filter: var(--panel-filter);
     /*
-      内边距吃掉正文宽度：桌面端两侧各 2.25rem，正文从 48.5rem 收到 44rem。
-      为什么不把外壳加宽来补回去，见 global.css 里 app-shell 那段。
+      内边距是**直接从正文宽度里扣的**（完整的减法见 global.css 里
+      app-shell 那段）。所以这里每减 0.25rem，正文就宽 0.5rem。
+
+      手机上还要再往外争一次：外壳 app-shell 自带 px-4，390px 的屏幕上
+      光是「外壳边距 + 面板内边距」就吃掉 4rem，每行只剩 20 个汉字。
+      负外边距把外壳那 1rem 顶掉，面板铺满整屏宽 —— 这正是圆角改直角
+      换来的：贴边的圆角会露出四个缺口，直角贴边看着才是有意为之。
+
+      ⚠️ 这个 -1rem 是在**抵消 app-shell 的 px-4**，两个数必须一起改。
+      面板放进别的容器时记得覆盖掉，否则会横向溢出。
     */
-    /*
-      手机上横向只给 1rem。面板的内边距是直接从正文宽度里扣的，
-      390px 的屏幕上外壳已经占掉 2rem，再按桌面的 2.25rem 扣就只剩
-      每行 19 个汉字了。这里少扣一点，换回一个字。
-    */
+    margin-inline: -1rem;
     padding: 2rem 1rem;
   }
 
   @media (width >= 40rem) {
     .content-panel {
+      /* 有留白可看了，收回外壳里面，重新变成「浮在星空上」 */
+      margin-inline: 0;
       padding: 2.5rem 1.75rem;
     }
   }
 
   @media (width >= 64rem) {
     .content-panel {
-      padding: 2.75rem 2.25rem;
+      padding: 2.75rem 2rem;
     }
   }
 

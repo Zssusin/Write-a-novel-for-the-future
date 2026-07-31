@@ -94,13 +94,35 @@ const headingClass =
 
       top: -(--below-header)  把观察窗口的上边界压到贴顶导航条**下面**。
         不减这一块的话，被导航条盖住的标题也算「可见」，读者看到的是
-        下一节、高亮的却是上一节。数值直接从 CSS 变量读，跟着页头高度走
+        下一节、高亮的却是上一节。数值跟着页头高度走，从 CSS 变量量出来
         —— 别在这里写死像素，理由见 global.css 里 --header-h 那段。
 
       bottom: -70%  把下边界抬到视口 30% 处。于是「当前小节」= 落在屏幕
         上三分之一里的那个标题，跟人的阅读位置一致。不压的话，只要下一节
         标题刚从屏幕底部冒头就会抢走高亮，而读者其实还在读上一节。
   */
+
+  /*
+    ⚠️ 把 CSS 长度量成像素，别删这一步直接把变量拼进 rootMargin。
+
+    rootMargin **只认 px 和 %**，rem / em / calc() 一律让 IntersectionObserver
+    的构造函数抛 SyntaxError。而 --below-header 是 calc(var(--header-h) + 1rem)
+    —— 早先这里写的是 `-${belowHeader} 0px -70% 0px`，于是 observer 根本
+    没建出来，异常还顺着 initToc() 冒到模块顶层，把后面那行 astro:after-swap
+    的重新绑定也一起干掉了。表现是：目录**从来没有**高亮过，任何浏览器上
+    都一样，而页面其他部分完全正常，除了控制台一行报错没有任何症状。
+
+    用一个隐藏元素的高度去解析，比手算 rem × 根字号耐改：--header-h 以后
+    换成 clamp() 或 dvh 也不用回来动这里。
+  */
+  function measurePx(value: string): number {
+    const el = document.createElement("div");
+    el.style.cssText = `position:absolute;visibility:hidden;height:${value}`;
+    document.body.appendChild(el);
+    const px = el.getBoundingClientRect().height;
+    el.remove();
+    return px;
+  }
   function initToc() {
     const toc = document.querySelector(".toc");
     if (!toc) return;
@@ -118,9 +140,7 @@ const headingClass =
       .filter((el): el is HTMLElement => el !== null);
     if (headings.length === 0) return;
 
-    const belowHeader = getComputedStyle(document.documentElement)
-      .getPropertyValue("--below-header")
-      .trim();
+    const belowHeader = measurePx("var(--below-header, 6.5rem)");
 
     // 记录每个标题当前是否在观察窗口内，然后取**最靠上**的那个当作当前小节
     const visible = new Set<string>();
@@ -160,7 +180,7 @@ const headingClass =
         highlight();
       },
       {
-        rootMargin: `-${belowHeader || "6.5rem"} 0px -70% 0px`,
+        rootMargin: `-${belowHeader}px 0px -70% 0px`,
         threshold: 0,
       }
     );

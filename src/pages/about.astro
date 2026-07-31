@@ -28,8 +28,27 @@ const { Content } = await render(about);
 
   <Breadcrumb />
 
-  <Main pageTitle={about.data.title} class="app-prose">
-    <Content />
+  {
+    /*
+      app-prose 挂在**里面这个 div** 上，不是挂在 Main 上。
+
+      Main 的根元素就是 .content-panel，而 app-prose 自带 max-width: 65ch
+      —— 挂上去的话被限宽的是面板本身（实测 624px），比其他页面 840px 的
+      面板窄一大截，右边空出一条 216px 的星空，看着像布局塌了。
+      文章页的 #article 是同样的写法（app-prose max-w-app），两处保持一致。
+
+      ⚠️ 顺带一条踩过的坑，改这段注释的人注意：**别在任何源码文件里单独
+      写出 app-prose 去掉 app- 前缀之后的那个词**（哪怕是在注释里、哪怕
+      前面加个点）。Tailwind v4 扫源码是纯文本扫描，不区分代码和注释，
+      扫到那个裸词就当成用到了 typography 插件的基类，把整份基类样式
+      塞进产物 —— 实测 +12,583 字节（gzip +586），而站上没有任何元素用它。
+      要指代它就写 app-prose。
+    */
+  }
+  <Main pageTitle={about.data.title}>
+    <div class="app-prose max-w-app">
+      <Content />
+    </div>
   </Main>
 
   <Footer />

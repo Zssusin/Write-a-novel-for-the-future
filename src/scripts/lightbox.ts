@@ -25,11 +25,29 @@ import { tplStr } from "@/i18n";
   max-h-[90dvh] 卡住就到头了，1472×1171 的 NERVA 试车台照片在 1080p 屏上
   照样看不清细节，而那恰好是这个站最需要放大的一类图。
 
-  这里补的是滚轮缩放、拖拽平移、双击放大，外加左右键在同一篇文章的图片间
-  切换。触摸那套**原样保留、一行没动**：它已经调好了（缩放上限、双击
-  300ms 判定、平移边界），用 Pointer Events 重写成「一套代码管两端」听着
-  更干净，实际是拿一个能用的东西去换回归风险。新代码只认 pointerType
+  这里补的是滚轮缩放、单击逐档放大、拖拽平移，外加左右键在同一篇文章的
+  图片间切换。触摸那套**原样保留、一行没动**：它已经调好了（缩放上限、
+  双击 300ms 判定、平移边界），用 Pointer Events 重写成「一套代码管两端」
+  听着更干净，实际是拿一个能用的东西去换回归风险。新代码只认 pointerType
   === "mouse"，和触摸路径互不相干。
+
+  ── 三、桌面端为什么是单击放大，不是双击 ──
+
+  一开始桌面端抄了触摸端的双击：1× ↔ 2× 来回切。实测下来两个毛病。
+
+  一是它是**开关不是档位** —— 放大到 2× 之后再双击，图缩回 1× 而不是继续
+  放大，「我想再看清楚一点」这个动作得到的是相反的结果。想到 4× 只能改用
+  滚轮，而读者未必知道滚轮能缩放。
+
+  二是**光标在说谎**：图上的光标一直是 zoom-in（放大镜），这是在明确承诺
+  「点我会变大」，但当时单击**根本没有处理函数**，点下去什么都不发生。
+  遮罩上同理，放大状态下光标是 zoom-out 却关不掉窗（见下面 click 处的守卫）。
+
+  所以改成：单击 = 放大一档，到顶再点回到 1×；dblclick 处理函数直接删掉
+  —— 双击自然会先派发两次 click，就是连放两档（1 → 2.56×），行为合理。
+  **不要为了区分单双击加 250ms 延时**：那样每一次单击都会明显发粘，
+  而这里单击是主交互，代价直接落在最常用的动作上。
+  触摸端的双击开关保留不动，那在触屏上是通用惯例。
 */
 
 type Strings = {
@@ -60,8 +78,12 @@ const FALLBACK: Strings = {
 
 const ZOOM_MIN = 1;
 const ZOOM_MAX = 4;
-/** 双击放大到几倍。和触摸端双击保持一致 */
-const ZOOM_DOUBLE_CLICK = 2;
+/*
+  桌面端单击放大一档的倍率。1 → 1.6 → 2.56 → 4（撞上限被夹住）→ 再点回 1×。
+  三下到顶：档数太多要点半天，太少（比如 2×）就只剩一档中间态，失去「逐步
+  逼近」的意义。触摸端双击仍然是 1 ↔ 2 的开关，不走这个常量。
+*/
+const ZOOM_CLICK_STEP = 1.6;
 /*
   滚轮每一格的缩放倍率。1.0015 ^ deltaY —— 用指数而不是线性加法，
   是因为「从 1 到 2」和「从 2 到 4」在人眼里是同样大的一步。
@@ -274,30 +296,65 @@ function initLightbox(): void {
       updateCursor();
     }
 
+    /*
+      光标就是这个灯箱唯一的操作说明 —— 没有工具栏，没有提示文字，读者靠
+      它猜「这儿能干什么」。所以每一种形状都必须对应一个**真的会发生**的
+      结果，这也是当初那个 bug 的教训（图上挂着放大镜却点不动）。
+
+        grabbing  正在拖
+        zoom-in   还没到顶，点一下再放大一档 —— 整个放大过程都显示它，
+                  因为「还能接着点」正是这次要让读者发现的事
+        grab      已到 ZOOM_MAX 且图溢出了视口：点已经没得放了，改提示能拖
+        zoom-out  已到 ZOOM_MAX 但图根本没溢出（小图，比如 280px 的书封），
+                  拖也没意义，那就提示再点一下回到原大小
+
+      grab 的判定走 canPan() 而不是「scale > 1」：图小的时候放到 4× 也未必
+      溢出视口，那种情况下 clampPan 会把平移量全夹成 0，显示 grab 等于又许
+      了一个空头承诺 —— 和当初那个 bug 是同一种错。
+    */
     function updateCursor(): void {
       if (dragging) image.style.cursor = "grabbing";
-      else if (currentScale > 1) image.style.cursor = "grab";
-      else image.style.cursor = "zoom-in";
+      else if (currentScale < ZOOM_MAX) image.style.cursor = "zoom-in";
+      else image.style.cursor = canPan() ? "grab" : "zoom-out";
+
+      /*
+        遮罩：只有 1× 时点空白处才关得掉（原因见下面 click 监听）。放大之后
+        清掉行内值，落回 className 里那条 cursor-zoom-out 之外的默认箭头。
+      */
+      el.style.cursor = currentScale <= ZOOM_MIN ? "" : "default";
     }
 
     /*
-      把平移量夹在「图不会被拖出视野」的范围里。
+      平移的可用范围：图在缩放前的尺寸减去视口，多出来的一半就是能往每个
+      方向拖的量；图没溢出就是 0。
 
       注意单位：transform 写的是 scale() 再 translate()，所以 translate 的
       数值是**缩放前**的像素。视口宽度换算过去就是 clientWidth / scale ——
       下面这两行除法就是干这个的，别照着屏幕像素改。
     */
+    function panBounds(): { maxX: number; maxY: number } {
+      return {
+        maxX: Math.max(
+          0,
+          (image.clientWidth - el.clientWidth / currentScale) / 2
+        ),
+        maxY: Math.max(
+          0,
+          (image.clientHeight - el.clientHeight / currentScale) / 2
+        ),
+      };
+    }
+
+    /** 把平移量夹在「图不会被拖出视野」的范围里 */
     function clampPan(): void {
-      const maxX = Math.max(
-        0,
-        (image.clientWidth - el.clientWidth / currentScale) / 2
-      );
-      const maxY = Math.max(
-        0,
-        (image.clientHeight - el.clientHeight / currentScale) / 2
-      );
+      const { maxX, maxY } = panBounds();
       translateX = clamp(translateX, -maxX, maxX);
       translateY = clamp(translateY, -maxY, maxY);
+    }
+
+    function canPan(): boolean {
+      const { maxX, maxY } = panBounds();
+      return maxX > 0 || maxY > 0;
     }
 
     /*
@@ -360,13 +417,30 @@ function initLightbox(): void {
       { passive: false }
     );
 
-    image.addEventListener("dblclick", e => {
-      e.preventDefault();
-      zoomAt(
-        e.clientX,
-        e.clientY,
-        currentScale > ZOOM_MIN ? ZOOM_MIN : ZOOM_DOUBLE_CLICK
-      );
+    /** 单击放大一档；已经到顶就回到 1× */
+    function zoomStep(clientX: number, clientY: number): void {
+      if (currentScale >= ZOOM_MAX) {
+        resetTransform();
+        return;
+      }
+      zoomAt(clientX, clientY, currentScale * ZOOM_CLICK_STEP);
+    }
+
+    /*
+      记下最近一次按下用的是什么设备。触屏点一下也会补发一个 click（target
+      同样是图片），不挡的话手机上轻点一次就跟着放大一档 —— 而触摸端本来
+      有自己的双击开关，两套会打架：双击的第一下先派发 click 放到 1.6×，
+      紧接着 touchstart 里的双击判定又把它设成 2×，中间闪一帧。
+      触摸端的行为这次一点都不该变，所以在这儿拦住。
+
+      判定写成「不是 touch」而不是「等于 mouse」：笔（pointerType 为 "pen"）
+      不走 touchstart/touchmove 那套，把它一起排除掉的话手写笔用户就一个
+      放大入口都没有了。默认值给 "mouse" 是兜底 —— 万一某处的 click 没有
+      对应的 pointerdown（比如脚本派发的），宁可放大也不要点了没反应。
+    */
+    let lastPointerType = "mouse";
+    el.addEventListener("pointerdown", e => {
+      lastPointerType = e.pointerType;
     });
 
     image.addEventListener("pointerdown", e => {
@@ -490,11 +564,26 @@ function initLightbox(): void {
     el.addEventListener("touchend", settleTouch);
     el.addEventListener("touchcancel", settleTouch);
 
-    /* ── 点空白处关闭 ── */
+    /* ── 单击：图上放大，空白处关闭 ── */
 
+    /*
+      两件事合在**一个**监听器里，是因为它们共用 suppressClick 那道闸，
+      而且 click 从图片冒泡到遮罩时会依次经过两处 —— 分开写就得约定谁先
+      消费掉这个标志，多一个能踩的顺序坑。用 e.target 分派就没这问题：
+      关闭按钮和左右翻页按钮各有自己的 handler，它们的 target 两个分支都
+      不匹配，冒泡上来正好被忽略。
+
+      放大状态下点空白**不关窗**（currentScale <= ZOOM_MIN 这道守卫）：
+      放大之后遮罩上剩的空隙很窄，读者拖图看细节时手一滑就点在边上，
+      窗一关重来一遍很恼人。要退出还有 Esc、右上角的 ×，以及先点回 1×。
+    */
     el.addEventListener("click", e => {
       if (suppressClick) {
         suppressClick = false;
+        return;
+      }
+      if (e.target === image) {
+        if (lastPointerType !== "touch") zoomStep(e.clientX, e.clientY);
         return;
       }
       if (e.target === el && currentScale <= ZOOM_MIN) close();
