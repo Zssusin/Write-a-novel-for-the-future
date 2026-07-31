@@ -90,6 +90,47 @@
       }
     }
 
+    /*
+      ===== 数学公式（KaTeX）=====
+
+      样式表本体不在这里，它是 public/katex/katex.min.css，只在含公式的
+      文章页上单独 <link>（见 layouts/PostLayout.astro）。下面这几条是本站
+      的适配，改的都是排版，不碰 KaTeX 自己的字形定位。
+
+      行间公式（$$...$$）横向可滚。KaTeX 会把公式排成一个定宽的盒子，
+      窄屏上一条长式子（比如带 \frac 的火箭方程）会**撑破正文列宽**，
+      连带把整个页面横向撑出滚动条 —— 那时候动的不是公式，是整篇文章。
+      给它自己一个滚动容器，越界的只有公式本身。
+      （和 components/ResponsiveTable.astro 对宽表格的处理是同一个思路。）
+    */
+    .katex-display {
+      @apply overflow-x-auto overflow-y-hidden py-1;
+    }
+
+    /*
+      KaTeX 默认按 1.21em 放大公式。中文正文的行高本来就松，再放大会让
+      行间公式和上下文的字号差得很明显；行内公式尤其突兀 —— $v_e$ 夹在
+      汉字中间会比周围的字高出一截。压回接近正文的大小。
+    */
+    .katex {
+      font-size: 1.1em;
+    }
+
+    /*
+      公式跟着主题走。KaTeX 输出的元素绝大多数不写颜色，继承 currentColor
+      就够；但分数线、根号那些是靠 border-color 画的，浅色主题下它们会
+      继承到 * 选择器给的 --color-border（一条浅灰），在白底上几乎看不见。
+      显式钉成 currentColor，明暗两个主题都对。
+    */
+    .katex .frac-line,
+    .katex .overline .overline-line,
+    .katex .underline .underline-line,
+    .katex .hline,
+    .katex .hdashline,
+    .katex .rule {
+      border-color: currentColor;
+    }
+
     code {
       @apply bg-muted/75 text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
     }
@@ -102,8 +143,56 @@
       @apply border-s-accent/80 wrap-break-word opacity-80;
     }
 
-    details:not(.callout) {
+    /*
+      这条是给 remark-collapse 折叠出来的那个「Table of contents」用的
+      —— 注意它带着 [&_p]:hidden。剧透块也是 <details>，落进这条选择器的话
+      正文段落会被整个藏起来：点开之后**里面什么都没有**，而且不报错。
+      所以 .spoiler 必须一起排除，和 .callout 同理。
+    */
+    details:not(.callout):not(.spoiler) {
       @apply text-foreground inline-block cursor-pointer select-none [&_p]:hidden [&_ul]:my-0!;
+    }
+
+    /*
+      剧透块，由 :::spoiler 生成（见 utils/remark/directives.ts）。
+
+      用原生 <details> 而不是自己写 JS：展开收起、键盘操作、读屏播报、
+      以及浏览器的「页内查找」能自动展开匹配到的折叠内容，全是白拿的。
+      翻页之后也不会失效 —— 没有需要重新初始化的东西。
+    */
+    details.spoiler {
+      @apply border-border bg-muted/30 my-6 rounded-md border px-4 py-3;
+
+      summary {
+        @apply text-muted-foreground cursor-pointer list-none font-medium select-none;
+
+        /* 自己画三角，因为上面 list-none 把浏览器默认的那个去掉了。
+           去掉的原因是各家默认标记的位置和字号都不一样，中文行高下尤其歪。 */
+        &::before {
+          @apply text-accent mr-2 inline-block transition-transform content-['▸'];
+        }
+
+        /* Safari 的老写法，不写的话它还会再画一个自己的三角 */
+        &::-webkit-details-marker {
+          @apply hidden;
+        }
+      }
+
+      &[open] > summary {
+        @apply border-border/70 mb-3 border-b pb-2;
+
+        &::before {
+          @apply rotate-90;
+        }
+      }
+
+      /* 展开后内容的首尾不要再多一截外边距，块本身已经有 padding 了 */
+      > :nth-child(2) {
+        @apply mt-0;
+      }
+      > :last-child {
+        @apply mb-0;
+      }
     }
 
     summary {

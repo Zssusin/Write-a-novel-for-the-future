@@ -31,6 +31,22 @@ export interface UIStrings {
     wordCount: string;
     comments: string;
   };
+  /*
+    正文图片灯箱。这几条只被 scripts/lightbox.ts 用到 —— 它是客户端模块，
+    读不到 Astro 的 i18n，所以由文章页序列化成 JSON 塞在 #article 的
+    data-lightbox 上传过去。加字段时两边要一起改。
+  */
+  lightbox: {
+    /** 图片自身的 aria-label，后面会拼上 alt */
+    open: string;
+    /** 对话框的 aria-label */
+    dialog: string;
+    close: string;
+    prev: string;
+    next: string;
+    /** 第 {{index}} 张，共 {{total}} 张 */
+    counter: string;
+  };
   pagination: {
     prev: string;
     next: string;

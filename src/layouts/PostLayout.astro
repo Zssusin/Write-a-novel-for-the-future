@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import { getAssetPath } from "@/utils/withBase";
 import config from "@/config";
 
 type Props = {
@@ -9,6 +10,12 @@ type Props = {
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
+  /*
+    这篇文章里有没有数学公式。由 utils/remark/mathFlag.ts 在构建时算出来，
+    真值时才把 KaTeX 的样式表挂上 —— 为什么不能直接 import 那份 CSS，
+    见 scripts/sync-katex.mjs 顶部。
+  */
+  hasMath?: boolean;
   /*
     <title> 是「文章标题 | 站名」，但 schema.org 的 headline 要的是**光标题**
     —— 它会被原样拿去当搜索结果和分享卡片的标题，带上站名后缀就成了
@@ -27,6 +34,7 @@ const {
   pubDatetime,
   modDatetime,
   headline,
+  hasMath = false,
 } = Astro.props;
 
 /*
@@ -71,6 +79,23 @@ const structuredData = {
           property="article:modified_time"
           content={modDatetime.toISOString()}
         />
+      )
+    }
+
+    {
+      /*
+        KaTeX 样式表，只有含公式的文章会挂。
+
+        文件由 scripts/sync-katex.mjs 从 node_modules 复制到 public/katex/，
+        字体是相邻的 fonts/ 目录（CSS 里写的是相对路径，所以两者的相对位置
+        不能变）。缓存策略在根目录 _headers 里 —— 和 /pagefind/* 一样按
+        「路径固定、内容会变」处理，给的是 30 天而不是 immutable。
+
+        浏览器只会下载**实际用到**的那几个字体文件，所以一页公式再多，
+        20 个 woff2 里通常也只走两三个。
+      */
+      hasMath && (
+        <link rel="stylesheet" href={getAssetPath("katex/katex.min.css")} />
       )
     }
 

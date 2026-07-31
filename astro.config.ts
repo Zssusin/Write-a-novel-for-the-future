@@ -10,6 +10,9 @@ import sitemap from "@astrojs/sitemap";
 import { unified } from "@astrojs/markdown-remark";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
+import remarkMath from "remark-math";
+import remarkDirective from "remark-directive";
+import rehypeKatex from "rehype-katex";
 import rehypeCallouts from "rehype-callouts";
 import {
   transformerNotationDiff,
@@ -20,6 +23,8 @@ import { transformerFileName } from "./src/utils/transformers/fileName";
 import { rehypeImageAttrs } from "./src/utils/rehype/imageAttrs";
 import { rehypeFigures } from "./src/utils/rehype/figures";
 import { remarkReadingTime } from "./src/utils/remark/readingTime";
+import { remarkMathFlag } from "./src/utils/remark/mathFlag";
+import { remarkDirectives } from "./src/utils/remark/directives";
 import { cacheHeaders } from "./src/integrations/cacheHeaders";
 import config from "./astro-paper.config";
 
@@ -48,13 +53,39 @@ export default defineConfig({
         remarkToc,
         [remarkCollapse, { test: "Table of contents" }],
         /*
+          remarkMath 把 $...$ / $$...$$ 解析成 inlineMath / math 节点，
+          真正渲染成 HTML 的是下面 rehype 那行的 rehypeKatex。
+
+          remarkMathFlag 必须**紧跟在 remarkMath 后面** —— 它数的就是上面
+          那两种节点，排到前面去会永远数到 0，而且不报错，只是全站公式
+          悄悄丢掉样式表。理由详见那个文件顶部。
+        */
+        remarkMath,
+        remarkMathFlag,
+        /*
+          自定义块（:::spoiler 之类）。同样是两步：remarkDirective 只负责
+          **解析出**指令节点，remarkDirectives（复数，我们自己写的那个）
+          才把节点变成具体的标签，所以顺序不能反。
+          加新块改的是 utils/remark/directives.ts 里的 HANDLERS。
+        */
+        remarkDirective,
+        remarkDirectives,
+        /*
           只读树、不改树，所以位置无所谓；放最后是为了和下面 rehype 那行
           「加工的放前面、统计的放后面」保持同一个读法。
+
+          顺带：它只收 text / inlineCode 节点，math 那两种不在名单里，
+          所以公式里的符号不会被算进中文字数 —— 这是想要的。
         */
         remarkReadingTime,
       ],
       // imageAttrs 放最后：让它看得到前面插件生成出来的 <img>
-      rehypePlugins: [rehypeCallouts, rehypeFigures, rehypeImageAttrs],
+      rehypePlugins: [
+        rehypeCallouts,
+        rehypeFigures,
+        rehypeKatex,
+        rehypeImageAttrs,
+      ],
     }),
     shikiConfig: {
       themes: { light: "min-light", dark: "night-owl" },

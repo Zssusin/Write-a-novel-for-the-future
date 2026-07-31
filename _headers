@@ -44,6 +44,17 @@
 /pagefind/*
   cache-control: public, max-age=3600
 
+# KaTeX 的样式表和字体（public/katex/，由 scripts/sync-katex.mjs 从
+# node_modules 复制过来）。和 /pagefind/* 同一个判断：**路径固定、内容会随
+# 升级而变**，所以不能 immutable —— 升级 katex 之后 katex.min.css 是同一个
+# 地址、不同的内容，读者拿着一年的旧样式表会把新版生成的公式渲染成乱码。
+#
+# 字体倒是可以 immutable（KaTeX_Main-Regular.woff2 这种名字对应的字形基本
+# 不会变），但为一个目录写两条规则、还要记住哪条管哪个，不值得。
+# 30 天：一次阅读会话里的字体请求全部命中，升级后一个月内自然换掉。
+/katex/*
+  cache-control: public, max-age=2592000
+
 # 默认 OG 图。分享卡片抓取器会反复来取，而这张图基本不动。
 # 换图同样是换文件名（astro-paper.config.ts 里的 site.ogImage）。
 /default-og.jpg

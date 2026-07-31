@@ -31,6 +31,14 @@ export default {
     wordCount: "{{count}} 字",
     comments: "评论",
   },
+  lightbox: {
+    open: "放大图片",
+    dialog: "图片预览",
+    close: "关闭图片预览",
+    prev: "上一张",
+    next: "下一张",
+    counter: "第 {{index}} 张，共 {{total}} 张",
+  },
   pagination: {
     prev: "上一页",
     next: "下一页",

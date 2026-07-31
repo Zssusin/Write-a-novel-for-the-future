@@ -31,6 +31,14 @@ export default {
     wordCount: "{{count}} words",
     comments: "Comments",
   },
+  lightbox: {
+    open: "Zoom image",
+    dialog: "Image preview",
+    close: "Close image preview",
+    prev: "Previous image",
+    next: "Next image",
+    counter: "{{index}} of {{total}}",
+  },
   pagination: {
     prev: "Prev",
     next: "Next",
