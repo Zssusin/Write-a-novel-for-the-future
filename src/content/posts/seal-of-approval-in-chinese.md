@@ -3,6 +3,7 @@ uid: zsu14n1m
 title: 原子火箭认证章：这份硬科幻名单，中文读者能读到多少
 description: Atomic Rockets 站主发出的「原子火箭认证章」是一份很硬的作品名单。我把它整份核对了一遍中文引进情况——能读到的八部，和一本都没进来的那七本参考书。
 pubDatetime: 2026-07-30T10:00:00+08:00
+ogImage: https://clarkebelt.org/img/2026/seal-chinese-cover-880x440.webp
 tags:
   - 书目推荐
   - 硬科幻
@@ -111,6 +112,8 @@ Freefall 从 1998 年画到今天还在更新，Schlock Mercenary 连画了整�
 
 把两边摆在一起看，规律清楚得有点残忍。
 
+![四类作品的中文引进情况条形图：小说与系列 23 条中有中文版的 4 条，漫画与动画 11 条中 4 条，影视 8 条中 6 条，技术参考书 7 条中 0 条](/img/2026/seal-chinese-gap-1600x720.webp)
+
 进来的四本小说：一本被雷德利·斯科特拍成了电影，一本改编成了美剧，一本是公认的类型经典，剩下那本的作者早就是成名多年的畅销书作家。
 
 没进来的：独立出版、小众出版社、技术参考书。
@@ -132,5 +135,7 @@ Freefall 从 1998 年画到今天还在更新，Schlock Mercenary 连画了整�
 ---
 
 名单原页：<https://www.projectrho.com/public_html/rocket/sealofapproval.php>
+
+封面图：哈勃深空场，NASA / ESA / STScI，公有领域。
 
 引进情况是我自己逐条核对的，截至 2026 年 7 月。名单的归属和每一条的推荐理由都在 Chung 那边——这篇只是清点，不是原页面的翻译。有漏掉或者查错的中文版，欢迎指出来。
