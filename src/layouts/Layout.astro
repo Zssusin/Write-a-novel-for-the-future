@@ -178,7 +178,12 @@ const ICON_VERSION = 2;
   <body
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
   >
-    <!-- 环境背景：纯色底，深色下右上角钉一张土星（不平铺、不随滚动） -->
+    <!--
+      环境背景：深空。星场 + 星云 + 一道行星边缘，全部是 CSS 画的，没有图片请求。
+      两个主题共用同一张底 —— 明暗切换换的是上面那块内容面板，不是这里。
+      整块 fixed，不随滚动，所以长文章不会因此多出一个几万像素高的合成层。
+      画法和参数见 styles/glass.css。
+    -->
     <div class="site-backdrop" aria-hidden="true"></div>
     <slot />
     <script>

@@ -20,10 +20,20 @@ const backUrl = config.features.showBackButton
 ---
 
 <div class:list={["app-shell", { "app-with-sidebar": sidebar }]}>
+  {
+    /*
+      注意用的是 {/* *\/} 而不是 <!-- -->：Astro 会把 HTML 注释原样输出到
+      每一个页面里，这段说明就成了几百字节的死重量。花括号注释只存在于源码。
+
+      content-panel：把正文托在一块玻璃上，别去掉 —— 页面底是星空，
+      直接压在星星上的文字对比度是不确定的。理由见 styles/glass.css。
+      404 页故意没挂：那页的 main 是个居中容器，包成面板会变成一整屏空玻璃。
+    */
+  }
   <main
     data-backUrl={backUrl}
     id="main-content"
-    class:list={["min-w-0 pb-4", className]}
+    class:list={["content-panel min-w-0", className]}
   >
     <h1 class="text-2xl font-semibold sm:text-3xl">{pageTitle}</h1>
     <p class="mt-2 mb-6 italic">{pageDesc}</p>

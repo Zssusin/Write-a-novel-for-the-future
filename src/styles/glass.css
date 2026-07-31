@@ -7,10 +7,19 @@
     - 镜面边光（rim light）+ 霜面模糊为本站实现。
     - 噪点层借鉴微软 Fluent Acrylic 官方配方
       （背景→模糊→exclusion→色调→噪点），用来去掉「塑料感」。
-  分层规则（苹果 HIG 原文精神）：
-    导航层用玻璃，内容层不用。
-    所以全站只有顶部导航条挂 .glass，文章列表用 1px 细线分隔。
-    这也顺带满足了「玻璃不能采样玻璃」——根本不存在嵌套。
+
+  ── 分层规则（原来只有一条，现在是两条）──
+
+    .glass          外壳材质。只有顶部导航条用。底下永远是星空，所以恒暗。
+    .content-panel  内容材质。文章正文那一块，跟 data-theme 走。
+
+  苹果 HIG 的原话是「导航层用玻璃，内容层不用」，本站原来严格照做，
+  全站只有页头挂 .glass。现在破了这条 —— 因为背景从纯色换成了星场，
+  正文直接压在星星上没法读，必须有个面板托底。破的时候保住了它真正
+  想防的那件事：**正文底下的那层是不透明为主的**（浅色 0.94 / 深色 0.78），
+  玻璃感靠边光、投影和噪点给，不靠「能看穿」给。
+
+  「玻璃不能采样玻璃」仍然成立：页头和面板是兄弟，不嵌套。
   ===================================================================
 */
 
@@ -26,41 +35,259 @@
 
 @layer base {
   /*
-    ===== 环境背景 =====
-    做法照搬 ToughSF：纯色底 + 一张不平铺的图钉在角落，
-    正文永远落在纯色上，可读性不受影响。
-    图：NASA/JPL-Caltech，Cassini 拍摄的土星（PIA06193，公有领域）。
-    原图背景是纯黑，用 background-blend-mode: screen 与底色混合，
-    黑色部分正好被底色吃掉，不会露出方块边界。
+    ===== 环境背景：深空 =====
+
+    两个主题共用这一层（理由见 theme.css 顶部那段）。
+    整块是 position: fixed，所以滚动时不重绘，也不会因为文章很长
+    就撑出一个几万像素高的合成层。
+
+    为什么星星是 CSS 渐变而不是一张图：
+      · 一张能铺满 4K 又不露重复的星空图至少几百 KB，而这里是零字节；
+      · 星点是矢量的，HiDPI 上不糊，缩放不失真；
+      · 想调密度/亮度直接改数值，不用重新导图。
+    代价是源码里这一坨看着吓人 —— 但它是数据，不是逻辑。
   */
   .site-backdrop {
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
     background-color: var(--background);
   }
 
-  [data-theme="dark"] .site-backdrop {
-    background-image: url("/images/saturn.webp");
-    background-position: top 4rem right -6rem;
-    background-repeat: no-repeat;
-    background-size: min(1100px, 92vw) auto;
-    background-blend-mode: screen;
+  /*
+    星场。三层不同疏密的星点，各自按自己的尺寸平铺。
+    三个尺寸（211 / 383 / 701）**特意取的互质数**：合起来的重复周期是
+    它们的最小公倍数（约 5666 万像素），任何屏幕上都看不出接缝。
+    取整数倍（比如 200/400/800）的话周期只有 800px，一屏就能看见重复。
+  */
+  .site-backdrop::before {
+    content: "";
+    position: absolute;
+    inset: -10%;
+    background-image:
+      /* 亮星，最疏 */
+      radial-gradient(
+        1.6px 1.6px at 18% 22%,
+        rgba(255, 255, 255, 0.95),
+        transparent
+      ),
+      radial-gradient(
+        1.5px 1.5px at 74% 61%,
+        rgba(210, 232, 255, 0.9),
+        transparent
+      ),
+      radial-gradient(
+        1.7px 1.7px at 41% 84%,
+        rgba(255, 244, 224, 0.85),
+        transparent
+      ),
+      radial-gradient(
+        1.4px 1.4px at 88% 15%,
+        rgba(255, 255, 255, 0.8),
+        transparent
+      ),
+      /* 中等 */
+        radial-gradient(
+          1.1px 1.1px at 9% 47%,
+          rgba(226, 238, 255, 0.75),
+          transparent
+        ),
+      radial-gradient(
+        1px 1px at 55% 12%,
+        rgba(255, 255, 255, 0.7),
+        transparent
+      ),
+      radial-gradient(
+        1.2px 1.2px at 30% 66%,
+        rgba(198, 222, 255, 0.7),
+        transparent
+      ),
+      radial-gradient(
+        1px 1px at 82% 88%,
+        rgba(255, 236, 214, 0.65),
+        transparent
+      ),
+      radial-gradient(
+        1.1px 1.1px at 64% 35%,
+        rgba(255, 255, 255, 0.6),
+        transparent
+      ),
+      /* 星尘，最密最暗 */
+        radial-gradient(
+          0.8px 0.8px at 5% 8%,
+          rgba(220, 235, 255, 0.5),
+          transparent
+        ),
+      radial-gradient(
+        0.7px 0.7px at 24% 39%,
+        rgba(255, 255, 255, 0.45),
+        transparent
+      ),
+      radial-gradient(
+        0.8px 0.8px at 47% 55%,
+        rgba(210, 228, 255, 0.5),
+        transparent
+      ),
+      radial-gradient(
+        0.7px 0.7px at 68% 76%,
+        rgba(255, 255, 255, 0.4),
+        transparent
+      ),
+      radial-gradient(
+        0.8px 0.8px at 91% 44%,
+        rgba(224, 238, 255, 0.45),
+        transparent
+      ),
+      radial-gradient(
+        0.7px 0.7px at 13% 71%,
+        rgba(255, 255, 255, 0.4),
+        transparent
+      ),
+      radial-gradient(
+        0.8px 0.8px at 36% 5%,
+        rgba(206, 226, 255, 0.45),
+        transparent
+      );
+    background-size:
+      701px 701px,
+      701px 701px,
+      701px 701px,
+      701px 701px,
+      383px 383px,
+      383px 383px,
+      383px 383px,
+      383px 383px,
+      383px 383px,
+      211px 211px,
+      211px 211px,
+      211px 211px,
+      211px 211px,
+      211px 211px,
+      211px 211px,
+      211px 211px;
+    /* 三层各自错开，免得不同尺寸的星点在原点上叠成一颗 */
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      53px 97px,
+      53px 97px,
+      53px 97px,
+      53px 97px,
+      53px 97px,
+      127px 41px,
+      127px 41px,
+      127px 41px,
+      127px 41px,
+      127px 41px,
+      127px 41px,
+      127px 41px;
   }
 
-  /* 窄屏上图会顶到正文后面，缩一点并往外挪 */
+  /*
+    星云。四团很淡的色晕，不平铺、按视口百分比定位，
+    作用是打破「均匀黑底」——纯黑加白点看着像屏幕坏点，有色晕才像深空。
+    alpha 全部压在 0.3 以下：它是背景，不是主角。
+  */
+  .site-backdrop {
+    background-image:
+      radial-gradient(
+        62% 46% at 79% 10%,
+        rgba(58, 104, 196, 0.3) 0%,
+        transparent 68%
+      ),
+      radial-gradient(
+        54% 42% at 14% 74%,
+        rgba(116, 68, 178, 0.22) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        46% 34% at 33% 18%,
+        rgba(28, 138, 158, 0.16) 0%,
+        transparent 72%
+      ),
+      radial-gradient(
+        70% 50% at 50% 108%,
+        rgba(10, 40, 92, 0.45) 0%,
+        transparent 70%
+      );
+  }
+
+  /*
+    ===== 行星边缘 =====
+
+    一个直径远大于视口的圆，圆心按在视口左下角外面，所以只有右上那道弧
+    切进画面 —— 看到的是「行星的边」，不是「一个小球」。这是从轨道上
+    往下看的真实构图，也是换掉原来那张钉在右上角的土星缩略图的原因。
+
+    三层叠出来：
+      1. box-shadow  盘外的大气辉光，唯一画到圆外面的东西
+      2. 第一个渐变  紧贴边缘的大气薄层（96.5%~100% 那几档就是它）
+      3. 第二个渐变  星球表面 + 晨昏线，受光点在右上 72% 18%
+
+    颜色是地球式的蓝，没用贴图 —— 贴图要么糊要么大，而且没法跟着配色走。
+  */
+  .site-backdrop::after {
+    content: "";
+    position: absolute;
+
+    /*
+      定位这件事踩过一次坑，值得写下来：单位不能只用一种。
+
+      直径用 vw（决定弧的弯度：越大越平，越像一颗大行星），
+      但**弧顶的高度必须用 vh 定**。第一版整个用 vmax，结果 1440×1500
+      的竖屏上弧顶在 58% 高处、1920×1080 的宽屏上却跑到 38% —— 宽屏
+      vmax 取的是宽度，把整颗星球顶了上来，正好糊在侧栏文字后面。
+      现在写成「弧顶恒定在视口底部往上 --planet-rise」，两种比例都对。
+    */
+    --planet-size: 200vw;
+    --planet-rise: 24vh;
+
+    width: var(--planet-size);
+    height: var(--planet-size);
+    /* 圆心偏左，所以弧顶靠近左边，往右一路下沉 */
+    left: calc(50% - var(--planet-size) * 0.72);
+    bottom: calc(var(--planet-rise) - var(--planet-size));
+    border-radius: 50%;
+
+    box-shadow: 0 0 22vmax 1vmax rgba(86, 158, 244, 0.1);
+    background-image:
+      radial-gradient(
+        closest-side,
+        transparent 96.6%,
+        rgba(122, 192, 255, 0.3) 98.3%,
+        rgba(160, 214, 255, 0.36) 99%,
+        rgba(120, 186, 255, 0.1) 99.6%,
+        transparent 100%
+      ),
+      radial-gradient(
+        126% 126% at 72% 18%,
+        #20516f 0%,
+        #143a52 28%,
+        #0b2436 52%,
+        #05121f 76%,
+        #020810 100%
+      );
+  }
+
+  /*
+    窄屏：弧压得更低、辉光更淡。手机上行星占太多面积会盖掉星场，
+    而星场才是这套背景的主体。
+  */
   @media (width < 48rem) {
-    [data-theme="dark"] .site-backdrop {
-      background-position: top 3rem right -30vw;
-      background-size: 150vw auto;
-      opacity: 0.55;
+    .site-backdrop::after {
+      --planet-size: 300vw;
+      --planet-rise: 14vh;
+      box-shadow: 0 0 16vmax 1vmax rgba(86, 158, 244, 0.07);
     }
   }
 }
 
 @layer components {
-  /* ===== 玻璃面板 ===== */
+  /* ===== 外壳玻璃：顶部导航条 ===== */
   .glass {
     position: relative;
     isolation: isolate;
@@ -71,8 +298,63 @@
     backdrop-filter: var(--glass-filter);
   }
 
+  /*
+    ===== 内容玻璃：文章面板 =====
+
+    和 .glass 的关键差别是**不透明度**：这层底下要放正文，
+    星星从字后面飘过会让对比度变成一个不确定的值。
+    浅色 0.94 / 深色 0.78 之后，实测对比度分别是 13.8:1 和 14.7:1，
+    而且不随背后是星星还是空隙而变。
+
+    backdrop-filter 保留了，但它在这里的作用和页头不同：不是为了「看穿」，
+    而是把透过来的那一点点星点糊成均匀的辉光。没有它的话，
+    透出来的是一颗颗硬边小白点，读起来像屏幕脏了。
+  */
+  .content-panel {
+    position: relative;
+    isolation: isolate;
+    /*
+      面板是「浮」在星空上的，上面得有条缝，不然贴着页头看着像糊在一起。
+      放在这里而不是各个页面上：面包屑、返回键、页头三种前置元素的下边距
+      各不相同（4/8/8px），统一加 1rem 之后三种情况都落在 20~24px。
+      单页要更大间距的话，直接用 Tailwind 的 mt-* 覆盖 —— utilities
+      层排在 components 层后面，一定压得住。
+    */
+    margin-top: 1rem;
+    border-radius: 1.25rem;
+    color: var(--foreground);
+    background: var(--panel-tint);
+    border: 1px solid var(--panel-border);
+    box-shadow: var(--panel-shadow), var(--panel-rim);
+    -webkit-backdrop-filter: var(--panel-filter);
+    backdrop-filter: var(--panel-filter);
+    /*
+      内边距吃掉正文宽度：桌面端两侧各 2.25rem，正文从 48.5rem 收到 44rem。
+      为什么不把外壳加宽来补回去，见 global.css 里 app-shell 那段。
+    */
+    /*
+      手机上横向只给 1rem。面板的内边距是直接从正文宽度里扣的，
+      390px 的屏幕上外壳已经占掉 2rem，再按桌面的 2.25rem 扣就只剩
+      每行 19 个汉字了。这里少扣一点，换回一个字。
+    */
+    padding: 2rem 1rem;
+  }
+
+  @media (width >= 40rem) {
+    .content-panel {
+      padding: 2.5rem 1.75rem;
+    }
+  }
+
+  @media (width >= 64rem) {
+    .content-panel {
+      padding: 2.75rem 2.25rem;
+    }
+  }
+
   /* 噪点层：去掉「塑料感」，来自 Fluent Acrylic 配方的最后一步 */
-  .glass::after {
+  .glass::after,
+  .content-panel::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -88,6 +370,9 @@
   /*
     无障碍回退——苹果与微软都强制要求：
     系统开启「降低透明度」时，玻璃换成实心面板。
+
+    对内容面板来说这一条比对页头重要得多：整篇文章都压在它上面，
+    所以回退色必须是真正的实色，不是低 alpha 的近似。
   */
   @media (prefers-reduced-transparency: reduce) {
     .glass {
@@ -96,8 +381,23 @@
       background: var(--glass-fallback);
       box-shadow: var(--glass-shadow);
     }
-    .glass::after {
+    .content-panel {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      background: var(--panel-fallback);
+      box-shadow: var(--panel-shadow);
+    }
+    .glass::after,
+    .content-panel::after {
       opacity: 0;
+    }
+    /* 星场和行星也一起收掉，只留纯色底 */
+    .site-backdrop {
+      background-image: none;
+    }
+    .site-backdrop::before,
+    .site-backdrop::after {
+      display: none;
     }
   }
 
@@ -106,6 +406,13 @@
     .glass {
       background: var(--glass-fallback);
       border-color: var(--foreground);
+    }
+    .content-panel {
+      background: var(--panel-fallback);
+      border-color: var(--foreground);
+    }
+    .site-backdrop::before {
+      opacity: 0.35;
     }
   }
 }

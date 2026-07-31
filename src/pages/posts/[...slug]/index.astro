@@ -151,7 +151,10 @@ const ogImage = ogImageUrl
   <div class="app-shell app-with-sidebar">
     <main
       id="main-content"
-      class:list={["min-w-0", { "mt-8": !config.features.showBackButton }]}
+      class:list={[
+        "content-panel min-w-0",
+        { "mt-8": !config.features.showBackButton },
+      ]}
       data-pagefind-body
     >
       <h1
