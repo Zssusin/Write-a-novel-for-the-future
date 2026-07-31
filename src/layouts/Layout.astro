@@ -31,10 +31,23 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
+/*
+  末尾那个斜杠必须去掉。getRelativeLocaleUrl 按 Astro 的 trailingSlash 规则
+  给路径补斜杠 —— 对目录型路由（/posts/xxx/）是对的，但 rss.xml 是**文件**：
+  产物里就叫 dist/rss.xml，没有 rss.xml/index.html。补了斜杠之后
+  Cloudflare 的 auto-trailing-slash 找不到东西，直接落进 404 页。
+
+  这条链接是 RSS 的 autodiscovery 入口 —— 阅读器订阅本站域名时读的就是它，
+  所以指错了不是「少个斜杠」，是全站订阅不上（线上实测 /rss.xml/ → 404）。
+
+  仍然走 getRelativeLocaleUrl 而不是写死 "/rss.xml"：base 前缀和将来可能加回
+  的语言前缀都还由它算。这里只削掉最后那一个斜杠。
+  （getPostUrl 的调用点也是同一个写法，见 pages/posts/[...slug]/index.astro。）
+*/
 const rssHref = getRelativeLocaleUrl(
   Astro.currentLocale ?? config.site.lang,
   "rss.xml"
-);
+).replace(/\/+$/, "");
 
 /*
   站标的缓存版本号。**换了站标就把这个数字 +1。**

@@ -1,0 +1,50 @@
+# Cloudflare 静态资源的响应头。这个文件会被原样复制进 dist/，由 Workers
+# 的资源层读取（和 _redirects 一样，是平台约定的文件名，不是 Astro 的东西）。
+#
+# 为什么需要它：Workers 静态资源的默认值是
+#
+#     cache-control: public, max-age=0, must-revalidate
+#
+# 也就是**每一个资源、每一次回访都要回源验证一遍**。线上实测全站都是这个值，
+# 包括 /_astro/ 底下那些文件名里带内容哈希的产物。一个文章页有 6 个这样的
+# 子资源（CSS、ClientRouter 的 JS、两个字体、两个图标），等于每次回访白跑
+# 6 个条件请求，各换回一个 304。
+#
+# 规则匹配的是**路径**，不看查询串；同一路径命中多条时以最先匹配的为准。
+# 没写进来的路径（也就是所有 HTML）保持默认 —— 那是对的，文章内容会变，
+# 必须每次回来问一次。
+
+# Vite 产物：文件名里带内容哈希（Footer.DivAyPlC.css、fonts/ebe081c5cf2bc9bf.woff2）。
+# 内容一变哈希就变、URL 就变，所以旧 URL 的内容**永远不会变** —— immutable
+# 这个词在这里是字面意义上成立的，浏览器可以完全不再来问。
+/_astro/*
+  cache-control: public, max-age=31536000, immutable
+
+# 自托管字体（public/fonts/）。这些是我们自己放的，文件名里没有哈希，
+# 所以 immutable 的前提由**约定**保证：要换字体就换文件名。
+# 直接覆盖同名文件的话，读者那边最长会拿一年的旧字体。
+/fonts/*
+  cache-control: public, max-age=31536000, immutable
+
+# 站标三件套。同样没有哈希，但 Layout.astro 里的 ICON_VERSION 已经在用
+# ?v=N 做版本号了 —— 换图标时把那个数字 +1，URL 就变了，这里的长缓存不挡路。
+# （反过来说：**改了图标忘了 +1，这条会让旧图标留一年。**）
+/favicon.svg
+  cache-control: public, max-age=31536000, immutable
+/favicon.ico
+  cache-control: public, max-age=31536000, immutable
+/apple-touch-icon.png
+  cache-control: public, max-age=31536000, immutable
+
+# Pagefind 的搜索索引。这里**不能**用 immutable：pagefind.js、
+# pagefind-entry.json 这些是固定文件名，每次构建重新生成、内容会变
+# （.pf_meta / .pf_index 那些倒是带哈希的，但没必要为它们单列一条）。
+# 一小时足够让一次搜索会话里的分片请求全部命中，又不至于让读者在发新文章
+# 之后长期搜不到它。
+/pagefind/*
+  cache-control: public, max-age=3600
+
+# 默认 OG 图。分享卡片抓取器会反复来取，而这张图基本不动。
+# 换图同样是换文件名（astro-paper.config.ts 里的 site.ogImage）。
+/default-og.jpg
+  cache-control: public, max-age=31536000, immutable

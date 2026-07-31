@@ -19,6 +19,8 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { rehypeImageAttrs } from "./src/utils/rehype/imageAttrs";
 import { rehypeFigures } from "./src/utils/rehype/figures";
+import { remarkReadingTime } from "./src/utils/remark/readingTime";
+import { cacheHeaders } from "./src/integrations/cacheHeaders";
 import config from "./astro-paper.config";
 
 export default defineConfig({
@@ -29,6 +31,8 @@ export default defineConfig({
       filter: page =>
         config.features?.showArchives !== false || !page.endsWith("/archives/"),
     }),
+    // 把根目录的 _headers 复制进 dist/。为什么不能直接放 public/，见那个文件顶部
+    cacheHeaders(),
   ],
   i18n: {
     // Keep in sync with `site.lang` in astro-paper.config.ts.
@@ -43,6 +47,11 @@ export default defineConfig({
       remarkPlugins: [
         remarkToc,
         [remarkCollapse, { test: "Table of contents" }],
+        /*
+          只读树、不改树，所以位置无所谓；放最后是为了和下面 rehype 那行
+          「加工的放前面、统计的放后面」保持同一个读法。
+        */
+        remarkReadingTime,
       ],
       // imageAttrs 放最后：让它看得到前面插件生成出来的 <img>
       rehypePlugins: [rehypeCallouts, rehypeFigures, rehypeImageAttrs],

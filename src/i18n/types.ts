@@ -24,6 +24,12 @@ export interface UIStrings {
     partLabel: string;
     nextPart: string;
     translatedFrom: string;
+    tableOfContents: string;
+    /** 约 {{minutes}} 分钟 —— 数字由 remarkReadingTime 估出来 */
+    readingTime: string;
+    /** {{count}} 字 */
+    wordCount: string;
+    comments: string;
   };
   pagination: {
     prev: string;

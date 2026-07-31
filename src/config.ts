@@ -33,6 +33,8 @@ const config: ResolvedAstroPaperConfig = {
     showBackButton: userConfig.features?.showBackButton ?? true,
     editPost: userConfig.features?.editPost ?? { enabled: false },
     search: userConfig.features?.search ?? "pagefind",
+    // 默认关：不配置就一个第三方请求都不发
+    comments: userConfig.features?.comments ?? false,
   },
   socials: userConfig.socials ?? [],
   shareLinks: userConfig.shareLinks ?? [],

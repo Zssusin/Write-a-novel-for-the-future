@@ -26,6 +26,10 @@ export default {
     partLabel: "Part {{n}}",
     nextPart: "Next part",
     translatedFrom: "Translated from",
+    tableOfContents: "Contents",
+    readingTime: "{{minutes}} min read",
+    wordCount: "{{count}} words",
+    comments: "Comments",
   },
   pagination: {
     prev: "Prev",

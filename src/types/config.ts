@@ -59,6 +59,35 @@ interface FeaturesConfig {
    * Set to false to disable search entirely.
    */
   search?: "pagefind" | false;
+  /**
+   * 文章页评论。false = 不加载任何第三方脚本（默认）。
+   *
+   * 目前只接了 giscus —— 评论存在 GitHub Discussions 里，没有自己的数据库、
+   * 没有后端要维护，和这个站「纯静态」的形态一致。代价是读者必须有 GitHub
+   * 账号才能发言。
+   *
+   * 四个 id 从 https://giscus.app 的配置器拿，**不是随便填的字符串**：
+   * repoId / categoryId 是 GitHub 的内部 node id（形如 `R_kgDO...`），
+   * 填错了 giscus 会安静地什么都不显示。开启前的三步在 docs/评论.md 里。
+   */
+  comments?: GiscusConfig | false;
+}
+
+interface GiscusConfig {
+  provider: "giscus";
+  /** `owner/repo`，必须是**公开**仓库且已开启 Discussions */
+  repo: string;
+  /** 仓库的 GitHub node id，从 giscus.app 配置器复制 */
+  repoId: string;
+  /** Discussion 分类名，建议用 Announcements（只有维护者能开新帖） */
+  category: string;
+  /** 分类的 node id，同样从配置器复制 */
+  categoryId: string;
+  /**
+   * giscus 界面语言，默认按 site.lang 推。
+   * 取值见 https://github.com/giscus/giscus/tree/main/locales
+   */
+  lang?: string;
 }
 
 interface SocialLink {

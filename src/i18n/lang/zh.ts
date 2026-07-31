@@ -26,6 +26,10 @@ export default {
     partLabel: "第 {{n}} 部分",
     nextPart: "下一部分",
     translatedFrom: "译自",
+    tableOfContents: "目录",
+    readingTime: "约 {{minutes}} 分钟",
+    wordCount: "{{count}} 字",
+    comments: "评论",
   },
   pagination: {
     prev: "上一页",

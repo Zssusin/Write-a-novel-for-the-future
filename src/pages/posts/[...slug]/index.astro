@@ -5,6 +5,8 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Datetime from "@/components/Datetime.astro";
 import Sidebar from "@/components/Sidebar.astro";
+import ReadingTime from "@/components/ReadingTime.astro";
+import Comments from "@/components/Comments.astro";
 import Tag from "@/components/Tag.astro";
 import SeriesNav from "@/components/SeriesNav.astro";
 import SourceNote from "@/components/SourceNote.astro";
@@ -66,7 +68,17 @@ type Props = {
   seriesParts: SeriesPart[];
 };
 
-const { post, prevPost, nextPost, seriesParts } = Astro.props;
+/*
+  显式标注成 Props，而不是让它自己推。
+
+  Astro.props 在这种页面上本来就是从 getStaticPaths 的返回值推出来的，两边
+  形状一致时这行注解不改变任何类型 —— 它的作用是**让上面那个 Props 真的被用到**。
+  不写的话 TS 会报 ts(6196)「Props 声明了但没用过」：那个类型只是躺在文件里
+  给人看，编译器并不拿它校验任何东西，getStaticPaths 少给一个字段也不会响。
+
+  加上之后，Props 就成了这两者之间的合同：getStaticPaths 的产出必须能塞进它。
+*/
+const { post, prevPost, nextPost, seriesParts }: Props = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
 
 const {
@@ -81,9 +93,21 @@ const {
   hideEditPost,
   series,
   source,
+  uid,
 } = post.data;
 
-const { Content } = await render(post);
+/*
+  headings 是 Astro 解析 markdown 时顺带产出的标题表（含正文里实际用的 id），
+  给右侧栏的目录用；remarkPluginFrontmatter 是 remark 插件往 frontmatter 上
+  写的东西 —— 这里只有 utils/remark/readingTime.ts 塞的那两个数。
+
+  注意它**不是** post.data：post.data 是 zod 校验过的那份，只含文件里真写了的
+  字段。构建期算出来的值走的是这条通道。
+*/
+const { Content, headings, remarkPluginFrontmatter } = await render(post);
+
+const readingTime = remarkPluginFrontmatter.readingTime as number | undefined;
+const wordCount = remarkPluginFrontmatter.wordCount as number | undefined;
 
 let ogImageUrl: string | undefined;
 
@@ -132,8 +156,11 @@ const ogImage = ogImageUrl
         {title}
       </h1>
 
-      <div class="my-2 flex items-center gap-2">
+      {/* flex-wrap：手机上日期 + 时长 + 字数一行放不下，让它自己折行 */}
+      <div class="my-2 flex flex-wrap items-center gap-x-2 gap-y-1">
         <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+        <span aria-hidden="true" class="text-muted-foreground">|</span>
+        <ReadingTime minutes={readingTime} words={wordCount} />
         <span
           aria-hidden="true"
           class:list={[
@@ -197,8 +224,21 @@ const ogImage = ogImageUrl
       <hr class="my-8 border-dashed" />
 
       <AdjacentPostNav {prevPost} {nextPost} />
+
+      {
+        /*
+        评论放在「上一篇/下一篇」之后：想继续读的读者不用先滚过整个评论区。
+
+        判断写在**这里**而不是只写在 Comments 内部，是有实际后果的：Astro 收集
+        <script> 的依据是「这个组件有没有被渲染」，不是「它有没有吐出 HTML」。
+        让 Comments 渲染然后内部返回空，那段 giscus 脚本照样会被打进每个文章页
+        —— 实测 960 字节的死代码，还会白挂一个 MutationObserver。
+        在这里短路掉，关着评论时文章页就一个字节都不多。
+      */
+      }
+      {config.features.comments !== false && <Comments term={uid} />}
     </main>
-    <Sidebar />
+    <Sidebar {headings} />
   </div>
   <Footer />
 </PostLayout>

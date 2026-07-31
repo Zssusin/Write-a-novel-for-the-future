@@ -1,0 +1,165 @@
+---
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+/*
+  giscus 评论区。评论正文存在 GitHub Discussions 里 —— 没有数据库、没有后端，
+  站还是纯静态的。开启方法和那四个 id 从哪来，见 docs/评论.md。
+
+  ── 一篇文章对应哪个 discussion ──
+
+  giscus 默认按 URL 或 pathname 匹配。**这里不用那个**，用 mapping="specific"
+  + term = 文章的 uid。
+
+  理由就写在 content.config.ts 里 uid 那段注释上：URL 是从文件路径推导的，
+  改个文件名、挪个目录，URL 就变了。用 pathname 当匹配键的话，重命名一次
+  = 这篇文章下面的评论**全部消失**（它们还在 GitHub 上，但页面再也找不到
+  那个 discussion 了）。uid 是写下就不改的，正是为这种外挂数据准备的。
+
+  代价：Discussion 的标题会是一串 `sdzpdael` 这样的随机码，在 GitHub 上不好认。
+  可以进 Discussions 手动改标题 —— giscus 认的是 term 不是标题，改了不影响匹配。
+
+  ── 为什么脚本是用 JS 注进去的、而不是直接写一个 <script src> ──
+
+  两件事逼的：
+
+  1. giscus 要求把主题作为 data-theme 传进去，而本站的明暗是运行时切换的。
+     直接写死在 HTML 属性里，第一屏就可能和页面主题相反（读者存的是深色，
+     但服务端渲染时并不知道）。所以必须等到浏览器里、读到真实主题之后再建。
+
+  2. ClientRouter 翻页后 Astro 不会重新执行已经跑过的模块脚本，async 的
+     第三方脚本更是只在首次加载时跑一次 —— 从别的页面转场到文章页，
+     评论区就是空的。挂 astro:after-swap 手动重建是唯一可靠的办法。
+*/
+
+type Props = {
+  /** 文章的 uid，作为 giscus 的匹配键 */
+  term: string;
+};
+
+const { term } = Astro.props;
+const { comments } = config.features;
+
+const t = useTranslations(Astro.currentLocale ?? config.site.lang);
+
+/*
+  giscus 的界面语言。它自己的 locale 目录里中文是 zh-CN / zh-TW，
+  而本站的 site.lang 是 "zh" —— 直接传过去 giscus 认不出来，会退回英文界面。
+*/
+const GISCUS_LANG_ALIASES: Record<string, string> = { zh: "zh-CN" };
+
+const giscusLang =
+  comments === false
+    ? ""
+    : (comments.lang ??
+      GISCUS_LANG_ALIASES[config.site.lang] ??
+      config.site.lang);
+---
+
+{
+  comments !== false && (
+    <section class="mt-8" aria-labelledby="comments-heading">
+      <h2 id="comments-heading" class="mb-4 text-lg font-semibold">
+        {t.post.comments}
+      </h2>
+      {/*
+        脚本挂到这个容器上，容器本身留在 HTML 里。
+        data-* 把配置从构建期带到运行时 —— 下面那段脚本是普通的打包脚本，
+        读不到 Astro 的 config。
+      */}
+      <div
+        id="giscus-container"
+        data-repo={comments.repo}
+        data-repo-id={comments.repoId}
+        data-category={comments.category}
+        data-category-id={comments.categoryId}
+        data-term={term}
+        data-lang={giscusLang}
+      />
+    </section>
+  )
+}
+
+<script>
+  const GISCUS_ORIGIN = "https://giscus.app";
+
+  function currentTheme(): string {
+    return document.documentElement.getAttribute("data-theme") === "dark"
+      ? "dark"
+      : "light";
+  }
+
+  function mountGiscus() {
+    const container = document.querySelector<HTMLElement>("#giscus-container");
+    if (!container) return;
+
+    // 转场回来时容器里可能还留着上一篇的 iframe
+    container.replaceChildren();
+
+    const { repo, repoId, category, categoryId, term, lang } =
+      container.dataset;
+    if (!repo || !repoId || !category || !categoryId || !term) return;
+
+    const script = document.createElement("script");
+    script.src = `${GISCUS_ORIGIN}/client.js`;
+    script.async = true;
+    script.crossOrigin = "anonymous";
+
+    Object.assign(script.dataset, {
+      repo,
+      repoId,
+      category,
+      categoryId,
+      mapping: "specific",
+      term,
+      /*
+        strict=1：让 giscus 精确匹配 term，不做模糊搜索。
+        关掉的话标题相近的两篇文章有概率共用同一个 discussion。
+      */
+      strict: "1",
+      reactionsEnabled: "1",
+      emitMetadata: "0",
+      inputPosition: "top",
+      theme: currentTheme(),
+      lang: lang ?? "en",
+      /*
+        loading=lazy：iframe 滚到视口附近才真正加载。评论区在文章最底下，
+        绝大多数读者在看到它之前就已经读完走人了 —— 没有理由让它和正文
+        抢首屏带宽。这是这个组件里唯一一处性能相关的设置，别删。
+      */
+      loading: "lazy",
+    });
+
+    container.appendChild(script);
+  }
+
+  /*
+    主题跟随。giscus 装好之后是一个跨域 iframe，改不了它的 DOM，
+    只能按它约定的协议 postMessage 一个 setConfig 过去。
+
+    触发源用 <html data-theme> 的 MutationObserver，而不是去 scripts/theme.ts
+    里加一行回调 —— 那样两个文件就绑死了。观察属性变化的成本是零（只有点
+    切换按钮时才触发一次），换来的是这个组件完全自包含。
+  */
+  function syncTheme() {
+    const iframe = document.querySelector<HTMLIFrameElement>(
+      "iframe.giscus-frame"
+    );
+    iframe?.contentWindow?.postMessage(
+      { giscus: { setConfig: { theme: currentTheme() } } },
+      GISCUS_ORIGIN
+    );
+  }
+
+  // 和 scripts/theme.ts 里 __theme 同一个写法：只用一次的全局标记，不值得为它开 d.ts
+  const w = window as unknown as { __giscusThemeBound?: boolean };
+  if (!w.__giscusThemeBound) {
+    w.__giscusThemeBound = true;
+    new MutationObserver(syncTheme).observe(document.documentElement, {
+      attributeFilter: ["data-theme"],
+    });
+  }
+
+  mountGiscus();
+  document.addEventListener("astro:after-swap", mountGiscus);
+</script>

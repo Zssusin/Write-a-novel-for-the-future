@@ -53,6 +53,24 @@ export default defineAstroPaperConfig({
       enabled: false,
     },
     search: "pagefind",
+    /*
+      评论。默认关着 —— 关着的时候页面上一行痕迹都没有，也不会向
+      giscus.app 发任何请求。
+
+      要开：先按 docs/评论.md 走完三步（开 Discussions → 装 giscus app →
+      在 giscus.app 上生成 id），再把下面这段取消注释填进去。
+      repoId / categoryId 是 GitHub 的内部 node id，只能从那个配置器复制，
+      不是仓库名也不是分类名。
+
+      comments: {
+        provider: "giscus",
+        repo: "Zssusin/Write-a-novel-for-the-future",
+        repoId: "R_kgDO...",
+        category: "Announcements",
+        categoryId: "DIC_kwDO...",
+      },
+    */
+    comments: false,
   },
   // TODO: add your own links (github / mail / etc.). Empty for now.
   socials: [],

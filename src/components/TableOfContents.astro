@@ -1,0 +1,186 @@
+---
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+/*
+  文章目录，渲染在右侧栏顶部（只有文章页会传 headings 进来）。
+
+  标题从 Astro 的 `render(post)` 里拿 —— 那是它解析 markdown 时**顺带**产出的
+  结构，不需要我们再扫一遍正文，也不会和正文里实际的 id 对不上（锚点跳转
+  就是靠这个 id）。
+
+  只收 h2 和 h3：
+    · h1 是文章标题本身，它在 <article> 外面，收进来等于目录第一条指向自己。
+    · h4 及以下在这个站的文章里基本没出现过，收进来只会让 240px 宽的侧栏
+      挤成四层缩进。真写到那么深的层级时再说。
+
+  滚动高亮（scroll-spy）在下面那段脚本里，用 IntersectionObserver，
+  不监听 scroll 事件 —— 理由写在脚本上面。
+*/
+
+type Props = {
+  headings: { depth: number; slug: string; text: string }[];
+  class?: string;
+};
+
+const { headings, class: className = "" } = Astro.props;
+
+const t = useTranslations(Astro.currentLocale ?? config.site.lang);
+
+const items = headings.filter(h => h.depth === 2 || h.depth === 3);
+
+const headingClass =
+  "border-border/70 text-muted-foreground mb-3 border-b pb-1.5 text-xs font-semibold tracking-widest";
+---
+
+{
+  /*
+    少于两条就不渲染。只有一个二级标题的文章，目录里那一条永远是高亮的，
+    它不告诉读者任何事 —— 纯粹占地方。
+  */
+  items.length >= 2 && (
+    /*
+      max-lg:hidden —— 目录只在桌面出现。
+
+      窄屏下 app-with-sidebar 塌成单列，<aside> 整个排在 <main> **后面**，
+      也就是说这份目录会落在整篇文章的最下面。目录的用处是「还没读就先知道
+      有哪几节、想跳哪节就跳」；出现在读完之后，它一件也做不到，只剩下在
+      手机上多堆九行链接。
+
+      所以窄屏不是「把目录换个地方放」，是**这个位置的目录没有价值**。
+      真要给手机做目录，得是正文上方一个默认折叠的块 —— 那是另一个组件，
+      需要时再写。侧栏其余几块（搜索、标签、归档）留着是因为它们本来就是
+      读完之后才用的东西，落在底部不影响。
+    */
+    <nav
+      aria-labelledby="toc-heading"
+      class:list={["toc max-lg:hidden", className]}
+    >
+      <h2 id="toc-heading" class={headingClass}>
+        {t.post.tableOfContents}
+      </h2>
+      {/*
+        max-h + overflow 是给长文准备的：侧栏整体已经是 sticky，
+        目录本身再长过一屏的话，读者就够不到下半截了。
+      */}
+      <ul class="max-h-[50svh] space-y-1.5 overflow-y-auto text-sm">
+        {items.map(({ slug, depth, text }) => (
+          <li class:list={[{ "ps-4": depth === 3 }]}>
+            <a
+              href={`#${slug}`}
+              data-toc-link={slug}
+              class="text-muted-foreground hover:text-accent aria-[current=true]:text-accent block decoration-dashed underline-offset-4 transition-colors hover:underline aria-[current=true]:font-medium"
+            >
+              {text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+<script>
+  /*
+    滚动高亮。
+
+    为什么用 IntersectionObserver 而不是监听 scroll：scroll 事件在滚动时
+    每帧都触发，而每次回调里都要读一遍所有标题的 getBoundingClientRect()
+    —— 那是强制同步布局，标题一多就是肉眼可见的滚动卡顿。
+    IntersectionObserver 由浏览器在合成线程上算，只在「越过阈值」时叫我们
+    一次，正常滚动全程一次回调都不产生。
+
+    rootMargin 的两个数是关键：
+
+      top: -(--below-header)  把观察窗口的上边界压到贴顶导航条**下面**。
+        不减这一块的话，被导航条盖住的标题也算「可见」，读者看到的是
+        下一节、高亮的却是上一节。数值直接从 CSS 变量读，跟着页头高度走
+        —— 别在这里写死像素，理由见 global.css 里 --header-h 那段。
+
+      bottom: -70%  把下边界抬到视口 30% 处。于是「当前小节」= 落在屏幕
+        上三分之一里的那个标题，跟人的阅读位置一致。不压的话，只要下一节
+        标题刚从屏幕底部冒头就会抢走高亮，而读者其实还在读上一节。
+  */
+  function initToc() {
+    const toc = document.querySelector(".toc");
+    if (!toc) return;
+
+    const links = new Map<string, HTMLAnchorElement>();
+    for (const link of toc.querySelectorAll<HTMLAnchorElement>(
+      "[data-toc-link]"
+    )) {
+      links.set(link.dataset.tocLink!, link);
+    }
+    if (links.size === 0) return;
+
+    const headings = [...links.keys()]
+      .map(id => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+    if (headings.length === 0) return;
+
+    const belowHeader = getComputedStyle(document.documentElement)
+      .getPropertyValue("--below-header")
+      .trim();
+
+    // 记录每个标题当前是否在观察窗口内，然后取**最靠上**的那个当作当前小节
+    const visible = new Set<string>();
+
+    let current: HTMLAnchorElement | null = null;
+
+    function highlight() {
+      /*
+        没有任何标题在窗口内时（比如停在两个长小节之间），保持上一次的高亮
+        —— 读者仍然在那一节里，把高亮清掉反而是错的信息。
+      */
+      if (visible.size === 0) return;
+
+      const topMost = headings.find(h => visible.has(h.id));
+      if (!topMost) return;
+
+      const link = links.get(topMost.id);
+      if (!link || link === current) return;
+
+      current?.removeAttribute("aria-current");
+      link.setAttribute("aria-current", "true");
+      current = link;
+
+      /*
+        目录自身可能滚动（max-h + overflow），高亮跑到看不见的地方就白高亮了。
+        block: "nearest" = 已经可见就不动，避免每次高亮都抖一下。
+      */
+      link.scrollIntoView({ block: "nearest" });
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target.id);
+          else visible.delete(entry.target.id);
+        }
+        highlight();
+      },
+      {
+        rootMargin: `-${belowHeader || "6.5rem"} 0px -70% 0px`,
+        threshold: 0,
+      }
+    );
+
+    for (const heading of headings) observer.observe(heading);
+
+    /*
+      翻页时把 observer 拆掉。ClientRouter 换掉的是 DOM，observer 是挂在
+      旧节点上的 JS 对象 —— 不显式断开的话，每翻一页就多留一个还在观察
+      已被丢弃节点的 observer。
+    */
+    document.addEventListener(
+      "astro:before-swap",
+      () => observer.disconnect(),
+      {
+        once: true,
+      }
+    );
+  }
+
+  initToc();
+  document.addEventListener("astro:after-swap", initToc);
+</script>

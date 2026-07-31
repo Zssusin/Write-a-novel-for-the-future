@@ -1,0 +1,46 @@
+---
+import { useTranslations, tplStr } from "@/i18n";
+import config from "@/config";
+
+/*
+  「约 N 分钟 · M 字」。两个数都由 utils/remark/readingTime.ts 在构建期算好，
+  经 frontmatter 传过来 —— 这里只负责排版，不做任何计算。
+
+  为什么两个都显示：分钟数是估的（按固定字速换算，见那个插件里的取值理由），
+  字数是数出来的。把确定的那个也摆出来，读者自己有判断力的时候可以不信我的
+  字速假设。对这个站尤其成立 —— 译文和原创的实际阅读速度差挺多。
+*/
+
+type Props = {
+  minutes?: number;
+  words?: number;
+  class?: string;
+};
+
+const { minutes, words, class: className = "" } = Astro.props;
+
+const t = useTranslations(Astro.currentLocale ?? config.site.lang);
+---
+
+{
+  /*
+    remarkReadingTime 没跑到（理论上不会，但 frontmatter 是弱类型的通道，
+    这里不假设它一定有值）就整个不渲染，而不是显示「约 undefined 分钟」。
+  */
+  minutes !== undefined && (
+    <div
+      class:list={["text-muted-foreground flex items-center gap-2", className]}
+    >
+      <span class="text-sm">{tplStr(t.post.readingTime, { minutes })}</span>
+      {words !== undefined && (
+        <>
+          <span aria-hidden="true">·</span>
+          {/* 千分位：四位数的字数不加分隔符要数一下才知道是几千 */}
+          <span class="text-sm">
+            {tplStr(t.post.wordCount, { count: words.toLocaleString("en-US") })}
+          </span>
+        </>
+      )}
+    </div>
+  )
+}
