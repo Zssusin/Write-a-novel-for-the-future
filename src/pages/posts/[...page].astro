@@ -30,7 +30,8 @@ const t = useTranslations(locale);
 
   <Main pageTitle={t.pages.postsTitle} pageDesc={t.pages.postsDesc}>
     <ul>
-      {page.data.map(data => <Card {...data} />)}
+      {/* 每一页的第一张都顶在最上面，理由见 Card.astro 里 priority 那段 */}
+      {page.data.map((data, i) => <Card priority={i === 0} {...data} />)}
     </ul>
 
     <Pagination {page} />

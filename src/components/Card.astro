@@ -7,11 +7,33 @@ import { useTranslations, tplStr } from "@/i18n";
 import Datetime from "./Datetime.astro";
 import config from "@/config";
 
+/*
+  priority：这张卡片是不是列表里**排在最上面**的那张。
+
+  实测依据，别当成微优化删掉：无头浏览器量首页，LCP 元素就是列表第一张
+  缩略图本身（rho-nerva-og-1200x630.webp，134,516 B，641ms），不是标题
+  也不是正文。而它原本挂着 loading="lazy" —— 懒加载首屏的 LCP 图是纯亏：
+  浏览器得先算完布局、确认它进了视口才肯开始下载，白白给 LCP 垫一段延迟，
+  而它本来就在第一屏，一个字节也省不下来。
+
+  只给第一张开。第二张往后是真的在屏幕外，lazy 是对的。
+
+  ⚠️ 「谁是第一张」只有调用方知道，Card 看不见自己的位置。首页尤其要当心：
+  那里有 featured 和 recent 两个列表，真正顶在最上面的是 featured 的第一张，
+  只有 featured 为空时才轮得到 recent 的第一张。
+*/
 type Props = {
   variant?: "h2" | "h3";
+  priority?: boolean;
 } & CollectionEntry<"posts">;
 
-const { variant: Heading = "h2", id, data, filePath } = Astro.props;
+const {
+  variant: Heading = "h2",
+  priority = false,
+  id,
+  data,
+  filePath,
+} = Astro.props;
 
 const { title, description, ogImage, series, ...props } = data;
 
@@ -29,6 +51,55 @@ const coverAsset = typeof ogImage === "string" ? undefined : ogImage;
 const coverSrc = typeof ogImage === "string" ? ogImage : undefined;
 const hasCover = Boolean(coverAsset ?? coverSrc);
 
+/*
+  远程封面图的响应式档位。
+
+  为什么需要：ogImage 这一栏同时兼着社交预览图，尺寸是按 OG 卡片来的
+  （1200x630）。而列表里这张缩略图桌面端只有 176x112，被 object-cover
+  裁完实际只用到约 213 CSS px 宽 —— 实测首页 LCP 元素就是它，原图
+  134,516 B，而 440 那档只要 14,530 B。
+
+  ⚠️ 档位是靠**文件名约定**推出来的，不是查出来的。ogImage 是 R2 上的
+  远程 URL，构建时没有办法枚举它有哪些尺寸，所以这里假定
+  `foo-1200x630.webp` 旁边躺着 `foo-440x231.webp` 和 `foo-720x378.webp`。
+  这两个用 `node scripts/make-thumbs.mjs <原图>` 生成、upload-img.mjs 上传，
+  `npm run check:posts` 会挨个 HEAD 一遍，缺了会在输出里点名。
+
+  只出 440 和 720，不出 1080：手机上这张图是满宽显示，720 对一个 390px
+  的框是 1.85×，而它本来就要被 object-cover 裁掉一块，再翻一倍字节买那点
+  锐度不划算（实测 1080 档 78,056 B，比原图只省 42%）。
+*/
+const THUMB_WIDTHS = [440, 720];
+const coverParts = coverSrc?.match(/^(.*)-(\d+)x(\d+)(\.[a-z0-9]+)$/i) ?? null;
+const coverSrcset = coverParts
+  ? THUMB_WIDTHS.filter(w => w < Number(coverParts[2]))
+      .map(w => {
+        const h = Math.round(
+          (Number(coverParts[3]) * w) / Number(coverParts[2])
+        );
+        return `${coverParts[1]}-${w}x${h}${coverParts[4]} ${w}w`;
+      })
+      .join(", ")
+  : "";
+
+/*
+  216px 是**桌面那档裁切后的实际用宽**，不是 w-44 的 176。object-cover 要
+  填满 112 高的框，图按高缩放，宽会溢出到约 213px（1200/630 这种比例）。
+
+  别往上调：写 224 的话 2× 屏算出 448 > 440，浏览器会跳去取 720 那档，
+  桌面首屏白白从 14.5KB 变成 36KB。
+*/
+const THUMB_SIZES = "(min-width: 640px) 216px, 100vw";
+
+/*
+  派生图缺失时的兜底。srcset 选中的候选如果 404，浏览器**不会**自己退回
+  src —— 按规范它直接触发 error，读者看到的是一张裂图。清掉 srcset 让它
+  按 src 重取，最坏情况只是加载了原图（慢，但看得见）。
+  check:posts 会在构建时提前点名，这里是第二道防线。
+*/
+const FALLBACK_TO_SRC =
+  "this.onerror=null;this.removeAttribute('srcset');this.removeAttribute('sizes')";
+
 const thumbClass =
   "border-border h-44 w-full rounded-lg border object-cover sm:h-28 sm:w-44";
 ---
@@ -45,17 +116,22 @@ const thumbClass =
               src={coverAsset}
               alt=""
               width={440}
-              loading="lazy"
+              loading={priority ? "eager" : "lazy"}
+              fetchpriority={priority ? "high" : "auto"}
               decoding="async"
               class={thumbClass}
             />
           ) : (
             <img
               src={coverSrc}
+              srcset={coverSrcset || undefined}
+              sizes={coverSrcset ? THUMB_SIZES : undefined}
               alt=""
-              loading="lazy"
+              loading={priority ? "eager" : "lazy"}
+              fetchpriority={priority ? "high" : "auto"}
               decoding="async"
               class={thumbClass}
+              onerror={FALLBACK_TO_SRC}
             />
           )}
         </a>

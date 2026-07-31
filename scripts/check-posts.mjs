@@ -142,6 +142,7 @@ if (process.argv.includes("--new-uid")) {
 
 const problems = [];
 const notices = []; // 不阻断构建，只是值得看一眼
+const covers = []; // { file, ogImage }，留到最后统一查派生缩略图
 const seenUids = new Map(); // uid -> 第一次出现的文件
 const seriesIndex = new Map(); // 系列名 -> Map<part, 文件>
 
@@ -293,6 +294,7 @@ for (const path of collectPosts(POSTS_DIR).sort()) {
         `\n    见 docs/图片工作流.md 2.5 节。`
     );
   }
+  if (ogImage && /^https?:\/\//.test(ogImage)) covers.push({ file, ogImage });
 
   const series = readSeries(frontmatter);
   if (series?.malformed) {
@@ -327,6 +329,61 @@ if (problems.length > 0) {
 }
 
 console.log(`✓ 文章校验通过：${seenUids.size} 篇，uid 无重复`);
+
+/*
+  查每张封面的派生缩略图在不在。
+
+  Card.astro 的 srcset 是**靠文件名约定推**出来的（foo-1200x630.webp 旁边
+  应该有 foo-440x231.webp、foo-720x378.webp），构建时没法枚举 R2 里有什么，
+  所以只能挨个 HEAD 一下。缺了的话读者那边不是「图糊一点」而是：srcset
+  选中的候选 404，浏览器按规范直接报 error，**不会退回 src**。
+  （Card.astro 上挂了 onerror 兜底，但那是第二道，不该指望它。）
+
+  只报不拦，跟这个文件里其他显示类缺陷一个待遇：发文章的主路径是
+  「后台改 → 提交 → Cloudflare 构建」，在那条链上 exit 1 等于整篇不上线。
+  网络本身不通时只说一句，不逐篇刷屏 —— 离线构建不该被这个卡住。
+*/
+const THUMB_WIDTHS = [440, 720]; // 与 src/components/Card.astro 保持一致
+let netDown = false;
+
+for (const { file, ogImage } of covers) {
+  const parts = ogImage.match(/^(.*)-(\d+)x(\d+)(\.[a-z0-9]+)$/i);
+  if (!parts) {
+    notices.push(
+      `${file}\n    封面 ${ogImage.split("/").pop()} 文件名没带 -宽x高。` +
+        `\n    Card.astro 靠这个后缀推 srcset，推不出来就只能发原图` +
+        `\n    （能显示，但列表里每张都按 OG 尺寸下载）。`
+    );
+    continue;
+  }
+
+  const [, base, w, h, ext] = parts;
+  const missing = [];
+  for (const width of THUMB_WIDTHS) {
+    if (width >= Number(w)) continue;
+    const url = `${base}-${width}x${Math.round((Number(h) * width) / Number(w))}${ext}`;
+    try {
+      const res = await fetch(url, { method: "HEAD" });
+      if (!res.ok) missing.push(url);
+    } catch {
+      netDown = true;
+    }
+  }
+  if (missing.length > 0) {
+    notices.push(
+      `${file}\n    封面缺派生缩略图：` +
+        missing.map(u => `\n      ${u.split("/").pop()}`).join("") +
+        `\n    生成并上传：` +
+        `\n      node scripts/make-thumbs.mjs ${ogImage}` +
+        `\n      node scripts/upload-img.mjs <上一步打印的文件>`
+    );
+  }
+}
+if (netDown) {
+  notices.push(
+    `连不上网，派生缩略图这一项没查（离线构建时正常，不影响产物）。`
+  );
+}
 
 for (const notice of notices) console.log(`\n  ⚠ ${notice}`);
 if (notices.length > 0) console.log("");

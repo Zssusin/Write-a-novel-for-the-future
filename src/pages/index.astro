@@ -130,8 +130,9 @@ const homeDesc =
               {t.home.featured}
             </h2>
             <ul>
-              {featuredPosts.map(data => (
-                <Card variant="h3" {...data} />
+              {/* 第一张是首页的 LCP 元素，理由见 Card.astro 里 priority 那段 */}
+              {featuredPosts.map((data, i) => (
+                <Card variant="h3" priority={i === 0} {...data} />
               ))}
             </ul>
           </section>
@@ -145,8 +146,13 @@ const homeDesc =
               {t.home.recentPosts}
             </h2>
             <ul>
-              {recentPosts.slice(0, postsConfig.perIndex).map(data => (
-                <Card variant="h3" {...data} />
+              {/* featured 为空时，顶在最上面的才是 recent 的第一张 */}
+              {recentPosts.slice(0, postsConfig.perIndex).map((data, i) => (
+                <Card
+                  variant="h3"
+                  priority={featuredPosts.length === 0 && i === 0}
+                  {...data}
+                />
               ))}
             </ul>
           </section>
