@@ -80,9 +80,9 @@ GunBuster，B 站有正版番剧。
 
 ## 顺带：影视这边
 
-《2001太空漫游》《火星救援》《苍穹浩瀚》剧集都能看到中文版本，另外《阿波罗13号》《地心引力》和 Erik Wernquist 的短片 *Wanderers*（卡尔·萨根旁白）也都有中文字幕。
+《2001太空漫游》《火星救援》《苍穹浩瀚》剧集都能看到中文版本，另外《阿波罗13号》《地心引力》和 Erik Wernquist 的短片 _Wanderers_（卡尔·萨根旁白）也都有中文字幕。
 
-名单上真正没进中文的只有两部老片：*Destination Moon*（1950，海因莱因参与编剧）和 *Conquest of Space*（1955）。
+名单上真正没进中文的只有两部老片：_Destination Moon_（1950，海因莱因参与编剧）和 _Conquest of Space_（1955）。
 
 ## 读不到的那些
 
@@ -102,11 +102,11 @@ GunBuster，B 站有正版番剧。
 
 ### 小说这边的缺口
 
-确认没有任何中文版的，包括 Karl Gallagher 的 Torchship 三部曲、Thomas Mays 的 *A Sword Into Darkness*、Daniel Suarez 的 *Delta-V*（有德译，没有中译）、James Cambias 的 *Corsair*、Devon Eriksen 的 *Theft of Fire*、Ian Douglas 那九本陆战队系列、John Lumpkin、Glynn Stewart、Alistair Young、Richard Penn……
+确认没有任何中文版的，包括 Karl Gallagher 的 Torchship 三部曲、Thomas Mays 的 _A Sword Into Darkness_、Daniel Suarez 的 _Delta-V_（有德译，没有中译）、James Cambias 的 _Corsair_、Devon Eriksen 的 _Theft of Fire_、Ian Douglas 那九本陆战队系列、John Lumpkin、Glynn Stewart、Alistair Young、Richard Penn……
 
 ### 漫画这边
 
-Freefall 从 1998 年画到今天还在更新，Schlock Mercenary 连画了整二十年、2020 年完结——两部都是名单上分量很重的条目，**都只有汉化组的版本，没有正式中文版**。Warren Ellis 的 *The Ministry of Space* 同理。
+Freefall 从 1998 年画到今天还在更新，Schlock Mercenary 连画了整二十年、2020 年完结——两部都是名单上分量很重的条目，**都只有汉化组的版本，没有正式中文版**。Warren Ellis 的 _The Ministry of Space_ 同理。
 
 ## 这个筛子在筛什么
 
@@ -128,7 +128,7 @@ Freefall 从 1998 年画到今天还在更新，Schlock Mercenary 连画了整�
 
 **因为它是一份判据，不是一份书单。** Chung 发章的标准是单一的、公开的、而且是一个会自己算数的人给的——「没经我帮忙、自己就把科学做对了」。你想知道「硬到什么程度算硬」，看这份名单挑出了谁比看任何一篇定义都直接。
 
-读不到的那些，处境也不一样。Freefall 和 Schlock Mercenary 的全部内容都在作者官网上免费公开，门槛只是英文。参考书那边就实在得多——*The Spaceship Handbook* 早已绝版，两次印刷加起来五千册，二手价格上百美元，那是连英文读者都不容易够到的东西。
+读不到的那些，处境也不一样。Freefall 和 Schlock Mercenary 的全部内容都在作者官网上免费公开，门槛只是英文。参考书那边就实在得多——_The Spaceship Handbook_ 早已绝版，两次印刷加起来五千册，二手价格上百美元，那是连英文读者都不容易够到的东西。
 
 而这个缺口本身，大概就是这个站存在的理由。
 
