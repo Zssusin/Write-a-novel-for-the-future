@@ -55,8 +55,28 @@
       }
     }
 
+    /*
+      图注由 utils/rehype/figures.ts 从 markdown 的 title 参数生成：
+      ![替代文字](图片 "这句会变成图注")
+    */
+    figure {
+      @apply my-8;
+    }
+
+    /*
+      装照片的 figure 收窄到照片本身的宽度 —— 书封只有 280px，
+      图注要是横跨整个 736px 正文宽，就成了一条飘在图右边的孤字。
+      收窄之后图注跟着图对齐，宽图窄图都成立。
+
+      只对含 <img> 的生效：图表是内联 <svg>，它的 width 写的是 100%，
+      放进 fit-content 容器里会拿不到可解析的固有宽度，塌成默认的 300px。
+    */
+    figure:has(> img) {
+      @apply mx-auto w-fit max-w-full;
+    }
+
     figcaption {
-      @apply opacity-75;
+      @apply mt-2 text-sm opacity-75;
     }
 
     table {

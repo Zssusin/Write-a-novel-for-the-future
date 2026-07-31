@@ -18,6 +18,7 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { rehypeImageAttrs } from "./src/utils/rehype/imageAttrs";
+import { rehypeFigures } from "./src/utils/rehype/figures";
 import config from "./astro-paper.config";
 
 export default defineConfig({
@@ -44,7 +45,7 @@ export default defineConfig({
         [remarkCollapse, { test: "Table of contents" }],
       ],
       // imageAttrs 放最后：让它看得到前面插件生成出来的 <img>
-      rehypePlugins: [rehypeCallouts, rehypeImageAttrs],
+      rehypePlugins: [rehypeCallouts, rehypeFigures, rehypeImageAttrs],
     }),
     shikiConfig: {
       themes: { light: "min-light", dark: "night-owl" },

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 292" width="736" height="292"><g class="cb-det">
+<text x="0.0" y="20.0" font-size="21" font-weight="700" fill="var(--foreground)">「太空里没有隐形」是多远</text>
+<text x="0.0" y="44.0" font-size="13" fill="var(--muted-foreground)">一艘 154 米长、室温、关掉发动机静默漂行的战舰，能被红外看到的距离</text>
+<text x="0.0" y="64.0" font-size="13" fill="var(--muted-foreground)">——不是雷达技术问题，是热力学：舱内 290 K，背景 3 K。</text>
+<text x="0.0" y="121.0" font-size="13" fill="var(--muted-foreground)">地月距离</text>
+<path d="M156.0,104 H157.4 A1.4,1.4 0 0 1 158.8,105.4 V126.6 A1.4,1.4 0 0 1 157.4,128 H156.0 Z" fill="var(--foreground)" fill-opacity="0.16"/>
+<text x="168.8" y="121.0" font-size="14.5" font-weight="700" fill="var(--muted-foreground)">38.4<tspan dx="4" font-weight="400" font-size="12.5" fill="var(--muted-foreground)">万公里</tspan></text>
+<text x="252.8" y="121.0" font-size="12.5" fill="var(--muted-foreground)">（这张图上画不出来）</text>
+<text x="0.0" y="169.0" font-size="13" fill="var(--foreground)">静默战舰的红外探测距离</text>
+<path d="M156.0,152 H433.4 A4.0,4.0 0 0 1 437.4,156.0 V172.0 A4.0,4.0 0 0 1 433.4,176 H156.0 Z" fill="var(--accent)"/>
+<text x="447.4" y="169.0" font-size="14.5" font-weight="700" fill="var(--foreground)">3,880<tspan dx="4" font-weight="400" font-size="12.5" fill="var(--muted-foreground)">万公里</tspan></text>
+<text x="0.0" y="217.0" font-size="13" fill="var(--muted-foreground)">地球—火星最近距离</text>
+<path d="M156.0,200 H548.0 A4.0,4.0 0 0 1 552.0,204.0 V220.0 A4.0,4.0 0 0 1 548.0,224 H156.0 Z" fill="var(--foreground)" fill-opacity="0.16"/>
+<text x="562.0" y="217.0" font-size="14.5" font-weight="700" fill="var(--muted-foreground)">5,460<tspan dx="4" font-weight="400" font-size="12.5" fill="var(--muted-foreground)">万公里</tspan></text>
+<text x="0.0" y="266.0" font-size="12" fill="var(--muted-foreground)">探测距离约合地火最近距离的七成、地月距离的一百倍。数字取自 Atomic Rockets 的太空战侦测页，</text>
+<text x="0.0" y="284.0" font-size="12" fill="var(--muted-foreground)">前提是对方有钱、有耐心、愿意维持全天候巡天 —— 前提一换，结论就松动。</text>
+</g></svg>

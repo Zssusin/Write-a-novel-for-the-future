@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 296" width="736" height="296"><g class="cb-gap">
+<text x="0.0" y="20.0" font-size="21" font-weight="700" fill="var(--foreground)">认证名单上，有多少能读到中文</text>
+<text x="0.0" y="44.0" font-size="13" fill="var(--muted-foreground)">Atomic Rocket Seal of Approval，按作品／系列计，核对于 2026 年 7 月</text>
+<rect x="0" y="60" width="11" height="11" rx="3" fill="var(--accent)"/>
+<text x="17.0" y="70.0" font-size="12.5" fill="var(--muted-foreground)">有中文版</text>
+<rect x="88" y="60" width="11" height="11" rx="3" fill="var(--foreground)" fill-opacity="0.16"/>
+<text x="105.0" y="70.0" font-size="12.5" fill="var(--muted-foreground)">名单条目</text>
+<text x="0.0" y="117.0" font-size="15" fill="var(--foreground)">小说与系列</text>
+<path d="M96.0,100 H552.0 A4.0,4.0 0 0 1 556.0,104.0 V120.0 A4.0,4.0 0 0 1 552.0,124 H96.0 Z" fill="var(--foreground)" fill-opacity="0.16"/>
+<rect x="176.0" y="100" width="2" height="24" fill="none"/>
+<path d="M96.0,100 H170.0 A4.0,4.0 0 0 1 174.0,104.0 V120.0 A4.0,4.0 0 0 1 170.0,124 H96.0 Z" fill="var(--accent)"/>
+<text x="567.0" y="117.0" font-size="15" font-weight="700" fill="var(--foreground)">4<tspan dx="4" font-weight="400" fill="var(--muted-foreground)">/ 23</tspan></text>
+<text x="0.0" y="163.0" font-size="15" fill="var(--foreground)">漫画与动画</text>
+<path d="M96.0,146 H312.0 A4.0,4.0 0 0 1 316.0,150.0 V166.0 A4.0,4.0 0 0 1 312.0,170 H96.0 Z" fill="var(--foreground)" fill-opacity="0.16"/>
+<rect x="176.0" y="146" width="2" height="24" fill="none"/>
+<path d="M96.0,146 H170.0 A4.0,4.0 0 0 1 174.0,150.0 V166.0 A4.0,4.0 0 0 1 170.0,170 H96.0 Z" fill="var(--accent)"/>
+<text x="327.0" y="163.0" font-size="15" font-weight="700" fill="var(--foreground)">4<tspan dx="4" font-weight="400" fill="var(--muted-foreground)">/ 11</tspan></text>
+<text x="0.0" y="209.0" font-size="15" fill="var(--foreground)">影视</text>
+<path d="M96.0,192 H252.0 A4.0,4.0 0 0 1 256.0,196.0 V212.0 A4.0,4.0 0 0 1 252.0,216 H96.0 Z" fill="var(--foreground)" fill-opacity="0.16"/>
+<rect x="216.0" y="192" width="2" height="24" fill="none"/>
+<path d="M96.0,192 H210.0 A4.0,4.0 0 0 1 214.0,196.0 V212.0 A4.0,4.0 0 0 1 210.0,216 H96.0 Z" fill="var(--accent)"/>
+<text x="267.0" y="209.0" font-size="15" font-weight="700" fill="var(--foreground)">6<tspan dx="4" font-weight="400" fill="var(--muted-foreground)">/ 8</tspan></text>
+<text x="0.0" y="255.0" font-size="15" fill="var(--foreground)">技术参考书</text>
+<path d="M96.0,238 H232.0 A4.0,4.0 0 0 1 236.0,242.0 V258.0 A4.0,4.0 0 0 1 232.0,262 H96.0 Z" fill="var(--foreground)" fill-opacity="0.16"/>
+<text x="247.0" y="255.0" font-size="15" font-weight="700" fill="var(--foreground)">0<tspan dx="4" font-weight="400" fill="var(--muted-foreground)">/ 7</tspan></text>
+<text x="299.0" y="255.0" font-size="13" fill="var(--accent)">一本都没有引进</text>
+<text x="0.0" y="288.0" font-size="12" fill="var(--muted-foreground)">同一系列的多卷算一条；《2001太空漫游》的小说与电影各计一条</text>
+</g></svg>
