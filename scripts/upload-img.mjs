@@ -22,6 +22,11 @@
       CLOUDFLARE_ACCOUNT_ID=4496da3ff5894affc28fd48211aff811
       CLOUDFLARE_API_TOKEN=<在 Dashboard → 右上角头像 → API Tokens 建，
                             权限选 Account / Workers R2 Storage / Edit>
+
+  ⚠️ account id 写在这里是故意的，仓库公开也不用改：它本来就公开可读
+  （public/admin/config.yml 会随站点部署出去，见那个文件里 cloudflare_r2
+  那段注释）。真正一个字都不能进仓库的是 **API token** —— 而且它的值
+  **只在创建那一屏显示一次**，dashboard 列表里看不到值，丢了只能重建。
 */
 
 import { execFileSync } from "node:child_process";

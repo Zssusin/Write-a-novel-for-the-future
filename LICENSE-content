@@ -1,0 +1,58 @@
+# 内容许可 / Content License
+
+本仓库里的**代码**按 MIT 授权（见 [LICENSE](LICENSE)）。
+本仓库里的**文章**按下面这条授权。
+
+The **software** in this repository is under MIT (see LICENSE).
+The **articles** are under the license below.
+
+## 覆盖范围 / Scope
+
+按本文件授权：
+
+- `src/content/**` —— 全部文章、页面正文与 frontmatter
+
+**不**按本文件授权：
+
+- 其余一切（构建脚本、组件、样式、`docs/`、配置）→ MIT，见 LICENSE
+- 图片：不在本仓库里。图存放在 Cloudflare R2，正文只引用地址。
+  这些图各自的权利状态**不由本文件决定**，逐张单说。
+- 引用与合理使用的第三方内容（截图、引文、外站书影）：版权属于各自的
+  权利人，本文件不对它们作任何授权。
+
+## 许可 / License
+
+[知识共享 署名—非商业性使用—相同方式共享 4.0 国际
+(CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)
+
+法律文本以官方版本为准：
+<https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-Hans>
+
+简单说，你可以自由地转载和改写这些文章，只要：
+
+| | |
+| :--- | :--- |
+| **署名** | 注明作者与出处 <https://clarkebelt.org>，并指明是否作过修改 |
+| **非商业性使用** | 不得用于商业目的 |
+| **相同方式共享** | 基于本文改写后的作品，要用同样的许可发布 |
+
+想做本文件不允许的事（比如商业转载）——直接来问，多半是可以的。
+
+## ⚠️ 译文不适用 / Translations are NOT covered
+
+本站有一类内容是**外站文章的中文翻译**（frontmatter 里带 `source` 字段的
+那些）。**这类文章不按 CC BY-NC-SA 授权，本文件对它们不作任何授权。**
+
+原因：译文是演绎作品，原文的权利仍然属于原作者。本站至多只能就**译文本身
+新增的部分**表态，无权替原作者把原作的权利许可出去。每篇译文的授权状态写在
+它自己的 frontmatter 和文末出处栏里，以那里为准。
+
+想转载译文，请同时取得原作者的许可。
+
+—
+
+The Chinese translations of third-party articles (those carrying a `source`
+field in their frontmatter) are **excluded** from the CC BY-NC-SA grant above.
+A translation is a derivative work; the rights in the underlying article remain
+with its original author, and this repository cannot license them on their
+behalf. See each post's own source note for its status.

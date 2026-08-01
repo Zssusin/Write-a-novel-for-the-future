@@ -85,3 +85,22 @@ frontmatter 的字段和约束定义在 [`src/content.config.ts`](src/content.co
 [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/)（动态 OG 图） ·
 [Cloudflare Workers](https://workers.cloudflare.com/)（部署） ·
 [Cloudflare R2](https://developers.cloudflare.com/r2/)（图片）
+
+## 许可
+
+**代码和文章分开授权**，别把这个仓库整体当成 MIT 的。
+
+| 部分                                    | 许可            |                                    |
+| :-------------------------------------- | :-------------- | :--------------------------------- |
+| 代码（组件、脚本、样式、`docs/`、配置） | MIT             | [LICENSE](LICENSE)                 |
+| 文章（`src/content/**`）                | CC BY-NC-SA 4.0 | [LICENSE-content](LICENSE-content) |
+
+代码你随便拿去用。文章可以转载和改写，但要署名、非商业、并以相同许可分享。
+
+两条例外，都写在 [LICENSE-content](LICENSE-content) 里：
+
+- **译文不在 CC 授权范围内。** 带 `source` 字段的文章是外站文章的中文翻译，
+  原文的权利属于原作者，本仓库无权代为许可。转载译文请另外取得原作者同意。
+- **图片不在这个仓库里**，存在 R2 上，权利状态逐张单说。
+
+想做许可之外的事（比如商业转载），来问就是了。

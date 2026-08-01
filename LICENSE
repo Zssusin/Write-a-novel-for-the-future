@@ -1,6 +1,15 @@
 MIT License
 
 Copyright (c) 2023 Sat Naing
+Copyright (c) 2026 Zssusin (clarkebelt.org)
+
+This license covers the SOFTWARE in this repository only.
+
+The articles under `src/content/` are NOT covered by this license -- they are
+licensed separately under CC BY-NC-SA 4.0. See LICENSE-content.
+
+本许可只覆盖本仓库中的**软件**。`src/content/` 下的文章不在此列，
+单独按 CC BY-NC-SA 4.0 授权，见 LICENSE-content。
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
