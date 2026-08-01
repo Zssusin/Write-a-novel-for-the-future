@@ -54,23 +54,33 @@ export default defineAstroPaperConfig({
     },
     search: "pagefind",
     /*
-      评论。默认关着 —— 关着的时候页面上一行痕迹都没有，也不会向
-      giscus.app 发任何请求。
+      评论（giscus）。2026-07-31 开启，三步都走完了：仓库转公开 →
+      开 Discussions → 装 giscus app → 在 giscus.app 上生成下面四个值。
 
-      要开：先按 docs/评论.md 走完三步（开 Discussions → 装 giscus app →
-      在 giscus.app 上生成 id），再把下面这段取消注释填进去。
-      repoId / categoryId 是 GitHub 的内部 node id，只能从那个配置器复制，
-      不是仓库名也不是分类名。
+      repoId / categoryId 是 GitHub 的内部 node id，只能从 giscus.app 的
+      配置器复制，不是仓库名也不是分类名。repoId 已和 GitHub API 返回的
+      node_id 核对过一致。
 
-      comments: {
-        provider: "giscus",
-        repo: "Zssusin/Write-a-novel-for-the-future",
-        repoId: "R_kgDO...",
-        category: "Announcements",
-        categoryId: "DIC_kwDO...",
-      },
+      分类用 Announcements：只有仓库维护者能在这个分类下开新帖，读者只能在
+      giscus 已经建好的帖子里回复。换成 General 的话任何人都能在你的
+      Discussions 里另开话题，那些帖子和文章对不上，纯粹是噪音。
+
+      ⚠️ 仓库必须一直是**公开**的。转回私有的话匿名读者读不到 discussion，
+      评论区会静默变成一个报错的 iframe。
+
+      要关掉就把这一整块换成 `comments: false` —— 那时页面上一行痕迹都没有，
+      也不会向 giscus.app 发任何请求（判断写在文章页里，见
+      src/pages/posts/[...slug]/index.astro 那段注释）。
+
+      匹配键用的是文章 uid，不是 URL，理由见 src/components/Comments.astro。
     */
-    comments: false,
+    comments: {
+      provider: "giscus",
+      repo: "Zssusin/Write-a-novel-for-the-future",
+      repoId: "R_kgDOThtHMw",
+      category: "Announcements",
+      categoryId: "DIC_kwDOThtHM84DCZy-",
+    },
   },
   // TODO: add your own links (github / mail / etc.). Empty for now.
   socials: [],
