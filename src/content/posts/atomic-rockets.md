@@ -129,6 +129,6 @@ Atomic Rockets 的价值就在这儿。它不会替你写小说，它做的是�
 
 网址：<https://www.projectrho.com/public_html/rocket/>
 
-***
+---
 
 两张发动机照片取自 Wikimedia Commons，均为公有领域，摄影署名见各自图注。两张图表为本站自制：比冲取各发动机的真空实测值（RS-25 452 秒、NERVA XE 841 秒、NEXT 4,170 秒），探测距离与热力学论证出自 Atomic Rockets 的太空战侦测页。
