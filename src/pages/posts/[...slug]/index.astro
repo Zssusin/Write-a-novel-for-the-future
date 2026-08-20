@@ -286,7 +286,18 @@ const ogImage = ogImageUrl
   }
   createProgressBar();
 
+  /*
+    和文件末尾 __scrollResetBound 同一个理由：这段脚本带 data-astro-rerun，
+    每导航一次重跑一遍，而 document 活得比页面长 —— 不设闸的话滚动监听器
+    只增不减，翻十页就有十份在每个滚动帧里跑。
+
+    这里绑一次就够：下面的处理函数每次都自己去找当前页面的 #myBar
+    （进度条由上面的 createProgressBar 每页重建），不持有跨页的引用。
+  */
   function updateScrollProgress() {
+    if (window.__scrollProgressBound) return;
+    window.__scrollProgressBound = true;
+
     document.addEventListener("scroll", () => {
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;

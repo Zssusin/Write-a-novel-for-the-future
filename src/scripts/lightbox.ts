@@ -99,17 +99,21 @@ const ZOOM_WHEEL_BASE = 1.0015;
 const DRAG_SLOP = 4;
 
 /*
-  这三个标记走 declare global，而不是 Comments.astro 里那种就地 cast。
-  原因是它们要被 index.astro 的 `<script is:inline>` 用到 —— 那段脚本原样
-  输出到浏览器，写不了 TS 的类型断言语法，只能靠全局声明让编辑器闭嘴。
-  （__scrollResetBound 属于那段脚本，不属于灯箱，放在这里是因为它是全站
-  唯一一处 declare global，再开一个 d.ts 不值得。）
+  这几个标记走 declare global，而不是 Comments.astro 里那种就地 cast。
+  原因是它们要被 index.astro 和 BackToTopButton.astro 的 `<script is:inline>`
+  用到 —— 那些脚本原样输出到浏览器，写不了 TS 的类型断言语法，只能靠全局
+  声明让编辑器闭嘴。
+  （除 __closeLightbox / __lightboxBound 外都不属于灯箱，放在这里是因为
+  它是全站唯一一处 declare global，再开一个 d.ts 不值得。）
 */
 declare global {
   interface Window {
     __closeLightbox?: (() => void) | null;
     __lightboxBound?: boolean;
     __scrollResetBound?: boolean;
+    __scrollProgressBound?: boolean;
+    __bttScrollBound?: boolean;
+    __bttHandleScroll?: (() => void) | null;
   }
 }
 
