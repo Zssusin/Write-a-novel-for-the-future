@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run check:posts && node scripts/sync-katex.mjs --check && astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "npm run check:posts && node scripts/sync-katex.mjs --check && astro check && rm -rf public/pagefind && astro build && pagefind --site dist && cp -r dist/pagefind public/",
     "uid": "node scripts/check-posts.mjs --new-uid",
     "check:posts": "node scripts/check-posts.mjs",
     "sync:katex": "node scripts/sync-katex.mjs",
