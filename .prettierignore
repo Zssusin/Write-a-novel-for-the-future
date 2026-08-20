@@ -17,3 +17,20 @@
 
 # Ignore MDX files
 *.mdx
+# 内容目录不归 prettier 管。
+#
+# 文章主要在 /admin/ 后台写，而后台是浏览器直接调 GitHub API 往 main 提交
+# （public/admin/config.yml 里 backend.branch: main），不经过任何本地 git ——
+# 装 pre-commit 钩子拦不住它。
+#
+# 而后台序列化 markdown 的口味和 prettier 不一样：分隔线它输出 ***，
+# prettier 要 ---。这不是谁写错了，是两个工具的默认值对不上，所以
+# **每次**在后台改一篇带分隔线的文章，format:check 都会红一次。
+# 9bfabd2 就是这么来的，把 CI 卡了三周，期间 build 一次都没跑。
+#
+# 摘出去损失的只是散文的排版一致性，不影响构建产物。内容的真正守门员是
+# check:posts（frontmatter、缩略图）和 astro build，那两道还在。
+# 代码部分照旧全归 prettier 管。
+#
+# 想手动格式化某篇时：npx prettier --write --ignore-path /dev/null <文件>
+/src/content
