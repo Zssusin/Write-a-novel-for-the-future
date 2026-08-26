@@ -1,5 +1,5 @@
 ---
-slug: tothestars
+slug: project-to-the-stars
 uid: u2ktbaxn5hjhyffi6vnz7n5mgoi
 title: 优秀的魔法少女小圆同人科幻作品：《To the Stars》
 description: 这是一部基于《魔法少女小圆》宇宙观的衍生作品。文中探讨了人类文明的演变，描述了一个跨越星系的二型文明如何通过临床永生、人工智能和先进的治理结构进行扩张。
