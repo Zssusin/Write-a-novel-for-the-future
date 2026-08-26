@@ -11,7 +11,7 @@ tags:
   - 硬科幻
 featured: false
 draft: false
-ogImage: /images/pasted-image-1787764816140.webp
+ogImage: https://clarkebelt.org/images/pasted-image-1787764816140.webp
 series: null
 source: null
 ---
