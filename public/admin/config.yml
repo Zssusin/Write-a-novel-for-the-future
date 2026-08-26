@@ -243,7 +243,23 @@ collections:
             required: false
             hint: 怎么措辞由你定，比如「已获原作者邮件授权翻译」。
 
-      - { label: 正文, name: body, widget: markdown }
+      # modes 的默认值是 [rich_text, raw] —— 富文本在前，于是编辑器每次打开
+      # 都是富文本模式，保存时整篇正文要走一趟「markdown → 富文本树 → markdown」。
+      # docs/后台发布.md 第 4 节那个「会反复回来」的坑就出在这个来回上：
+      # `**[链接](...)**` 的星号被转义成 `\*\*`，成对的 `**` 还会被吞掉一半
+      # （2026-08-26 在 project-to-the-stars 上两处都撞见了）。
+      #
+      # 把 raw 放到第一位，编辑器默认就开在 Markdown 源码模式 —— 0.172.4 和
+      # 0.200.0 的源码里 useRichText 取的都是 `modes[0] === 'rich-text'`，富文本的
+      # 序列化器于是根本不会碰正文。那一节写的规避办法（「切到 Markdown
+      # 源码模式再改」）本来就是这个，只是原来每次要手动切，现在是默认。
+      #
+      # 保留 rich_text 是为了留着工具栏那条路 —— modes 多于一项才会出现
+      # 切换按钮。想彻底堵死就写成 modes: [raw]，代价是再也用不了富文本。
+      - label: 正文
+        name: body
+        widget: markdown
+        modes: [raw, rich_text]
 
   - name: pages
     label: 单页
@@ -256,4 +272,8 @@ collections:
         fields:
           - { label: 标题, name: title, widget: string }
           - { label: 摘要, name: description, widget: text, required: false }
-          - { label: 正文, name: body, widget: markdown }
+          # 同上：默认开在 Markdown 源码模式，别让富文本序列化器碰正文。
+          - label: 正文
+            name: body
+            widget: markdown
+            modes: [raw, rich_text]

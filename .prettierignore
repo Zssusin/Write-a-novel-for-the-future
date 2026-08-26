@@ -34,3 +34,15 @@
 #
 # 想手动格式化某篇时：npx prettier --write --ignore-path /dev/null <文件>
 /src/content
+
+# KaTeX 的样式表不归 prettier 管。
+#
+# 这个目录整个是 scripts/sync-katex.mjs 从 node_modules 原样拷过来的，
+# 上游发的就是压缩过的一行 CSS。prettier 会把它展开成 1156 行 ——
+# 于是 public/ 里多出一个「派生且和上游不一致」的文件，正是那个脚本
+# 开头明说要避免的情况；而且展开后 28,091 B，比上游的 24,727 B 多 3.4 KB，
+# 每个打开带公式文章的读者都要多下这一截。
+#
+# 实测过：升级到 0.18.4 之后 format:check 会红在这个文件上（之前那份
+# 是被 prettier 展开过的，所以一直是绿的）。要改的是这条规则，不是那个文件。
+/public/katex
