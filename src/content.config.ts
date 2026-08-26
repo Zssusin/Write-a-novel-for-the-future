@@ -96,7 +96,18 @@ const posts = defineCollection({
         coerce 两种都吃，等于把这一整类失败去掉。
       */
       pubDatetime: z.coerce.date(),
-      modDatetime: z.coerce.date().optional().nullable(),
+      /*
+        preprocess 把空串挡在 coerce 前面：Sveltia CMS 的 datetime 组件在
+        `required: false` 又没填的时候，写出来的是 `modDatetime: ''`，
+        而不是干脆省掉这个键。空串进 coerce 就是 `new Date('')` —— Invalid Date，
+        报「Expected type \"date\", received \"object\"」，整站构建直接挂。
+        （series / source 上的 nullable 是同一类问题的另一副面孔：
+        后台的「没填」不等于「这个键不存在」。）
+      */
+      modDatetime: z.preprocess(
+        v => (typeof v === "string" && v.trim() === "" ? null : v),
+        z.coerce.date().optional().nullable()
+      ),
       title: z.string(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),

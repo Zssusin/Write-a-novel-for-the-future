@@ -12,6 +12,7 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import remarkMath from "remark-math";
 import remarkDirective from "remark-directive";
+import remarkCjkFriendly from "remark-cjk-friendly";
 import rehypeKatex from "rehype-katex";
 import rehypeCallouts from "rehype-callouts";
 import {
@@ -50,6 +51,26 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [
+        /*
+          中文里的加粗。CommonMark 判断一对 ** 能不能成对，看的是紧挨着它的
+          那个字是不是标点 —— 而中文的《》（）“” 全是标点，于是这种再正常
+          不过的写法两头都判不成立，整段加粗**静默失效**，星号原样打在页面上：
+
+            有一部名为**《飞向星空》（To the Stars）**的宏大史诗
+                      ↑ 后面是《，开不了            ↑ 前面是），收不了
+
+          它不报错、构建不失败，只有看渲染结果才发现。project-to-the-stars
+          一篇里就中了三处（2026-08-26）。
+
+          这个插件实装的是 CommonMark 那份 CJK 友好提案：汉字和标点相邻时
+          按中日韩的规矩判断，上面那行就正常加粗了。装它而不是在正文里
+          手动补空格 —— 补空格等于让每个作者都记住这条规则，而且中文里
+          会多出可见的空格。
+
+          只放宽、不收紧：原来能加粗的写法一个都不会变（升级前后 diff 过
+          全部三篇文章的 HTML，只有上面那三处从星号变成了 <strong>）。
+        */
+        remarkCjkFriendly,
         remarkToc,
         [remarkCollapse, { test: "Table of contents" }],
         /*
