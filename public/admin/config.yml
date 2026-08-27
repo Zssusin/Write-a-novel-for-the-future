@@ -20,8 +20,9 @@ backend:
 # 以后绑了自己的域名，这里和 astro-paper.config.ts 里的 url 要一起改。
 site_url: https://clarkebelt.org
 
-# 仓库内的兜底媒体位置：偶尔一张小图不想开 R2 就直接拖进来。
-# 主力工作流是 R2，见下面的 media_libraries。
+# 全站兜底的媒体位置。文章**不走这里** —— posts 那个集合自己覆盖了
+# media_folder（见下面的 collections），图片跟着文章走。
+# 这一份只服务于 pages（关于页之类），以及资源库页面里的散图。
 media_folder: public/images
 public_folder: /images
 
@@ -48,37 +49,19 @@ media_libraries:
       # 中文文件名会变成一串百分号编码的对象名。转成短横线拼音/英文。
       slugify_filename: true
 
-  # ── Cloudflare R2 直传（已启用，2026-07-26 验证通过）────────────────────
+  # ── Cloudflare R2 直传：2026-08-26 撤掉 ────────────────────────────
   #
-  # 上传目标就是 /img/ 背后那个桶，所以 public_url + 对象名 拼出来的地址
-  # 正好是 worker/index.js 已经在服务的路径 —— 收图和发图共用一个出口。
+  # 撤的原因不是它不能用（能用，验证过），是**它多了一个选择**。
+  # 有两个上传目标，每次插图就得先想「这张该进哪个」；选错了不会当场报错，
+  # 而是过一会儿构建才炸，或者悄悄丢掉尺寸信息。
   #
-  # 这一段能工作依赖两个**不在这个文件里**的前提，换桶/换域名时要一起动：
+  # 现在只剩仓库这一个目标，图片进 src/content/posts/img/，
+  # 剩下的 Astro 全包了（尺寸、缩略图、内容哈希）。
+  # 代价是图片进 git —— 迁过来的 19 张一共 1.2 MB，这个量级不值得为它
+  # 维护第二条路。真涨到几百兆再回来看这段。
   #
-  #   1. 一个 Object Read & Write 的 R2 API Token（Dashboard → R2 →
-  #      Manage R2 API Tokens）。下面只放 Access Key ID；Secret Access Key
-  #      由后台第一次打开媒体库时问你要，存在浏览器本地，不进仓库。
-  #
-  #      Access Key ID 放在这里是安全的：这个文件公开可读
-  #      （https://clarkebelt.org/admin/config.yml），而 AKID 等同于用户名，
-  #      没有 Secret 拿它做不了任何事。
-  #
-  #   2. 桶上的 CORS 策略，AllowedOrigins 必须包含 https://clarkebelt.org。
-  #      后台会签 AWS SigV4 头，那属于「非简单请求」，浏览器一定先发 OPTIONS；
-  #      漏了这条就卡在预检上，界面只会显示一个含糊的网络错误。
-  #      注意 www.clarkebelt.org 目前**没有**放行 —— 从 www 打开后台传不了图。
-  #      自查：curl -X OPTIONS -H 'Origin: https://clarkebelt.org' \
-  #              -H 'Access-Control-Request-Method: PUT' \
-  #              https://<account_id>.r2.cloudflarestorage.com/image/x -D -
-  #            要看到 204 和 Access-Control-Allow-Origin。
-  #
-  cloudflare_r2:
-    access_key_id: 4b78bae6fd8cc2cc6381f3d508cbf538
-    account_id: 4496da3ff5894affc28fd48211aff811
-    bucket: image
-    public_url: https://clarkebelt.org/img
-    prefix: 2026/
-    acl: false
+  # 桶和 worker 都**没动**，https://clarkebelt.org/img/... 的老地址照常能开。
+  # 要恢复直传：git log -- public/admin/config.yml 里翻这一段回来。
 
 collections:
   - name: posts
@@ -86,6 +69,21 @@ collections:
     label_singular: 文章
     folder: src/content/posts
     create: true
+    # ===== 图片跟着文章走 =====
+    #
+    # 相对路径（不以 / 开头）在 Sveltia 里是**相对 collection 的 folder** 解析的，
+    # 所以 `img` = src/content/posts/img/，正好落在文章旁边。
+    #
+    # 为什么非要落在 src/ 底下：只有 src/ 里的图 Astro 才当成「本地资源」——
+    # 构建时它会自己量尺寸、写进 <img> 的 width/height、按用途生成缩略图、
+    # 给文件名加内容哈希。放 public/ 或者外链都拿不到这一套，
+    # 得靠文件名里手写 `-宽x高` 去补（那是 2026-08 之前的老办法，已经废掉）。
+    #
+    # public_folder 写成 ./img，正文里就是 `![](./img/foo.webp)`。
+    # 省掉它的话 Sveltia 会拿 media_folder 的值兜底、写成 `img/foo.webp` ——
+    # 实测 Astro 两种都认，所以这里写不写都不会坏，写全只是为了读起来明确。
+    media_folder: img
+    public_folder: ./img
     # 文件名 = URL。取自下面那个 slug 字段，而不是标题 ——
     # 标题是中文，直接拿来做文件名会得到一串百分号编码。
     slug: "{{fields.slug}}"
@@ -165,43 +163,20 @@ collections:
 
       # widget: image 才有媒体库按钮（能直接拖图上传）。
       #
-      # ===== 这里**故意没有** media_libraries: { default: false } =====
-      #
-      # 写过一次，实测踩坏了：它确实能把这个字段限制成只能选 R2（好处是选不出
-      # 相对路径），但代价是**上面那整段 default.config 一起失效** ——
-      # 自动转 webp、slugify_filename、max_file_size 全没了。
-      # 实证：那次上传进桶的是 AtomicRocketSeal256.png，既没转 webp
-      # 也没被 slugify。
-      #
-      # 原因在 Sveltia 的代码里（0.172.4）：
-      #
-      #   EF = ({libraryName=`default`, fieldConfig:t}) => {
-      #     if (t?.media_libraries && e in t.media_libraries) {
-      #       let n = t.media_libraries[e];
-      #       return n !== !1 && i(n)      // ← 字段级 false，直接 return false
-      #   OF = ({fieldConfig:e}) => {
-      #     let t = EF({fieldConfig:e}),
-      #       {transformations, slugify_filename, max_file_size} =
-      #         typeof t == `boolean` ? {} : t?.config ?? {}   // ← 从 {} 里取，全丢
-      #
-      # 而且这两个目标在 Sveltia 里是互斥的：OF 永远只查 `default` 这一项
-      # （所有调用点都没传 libraryName），所以把 transformations 挪到
-      # cloudflare_r2 底下、或者用 media_libraries.all，都读不到。
-      #
-      # 取舍：压缩是**每个读者每次都要付**的成本，而「选错库」只是一次误操作。
-      # 所以留着压缩，把守卫挪到 scripts/check-posts.mjs —— 那里会在
-      # npm run check:posts（构建前自动跑）时报一句人话，而不是等构建炸出
-      # 一个看不懂的 ImageNotFound。
-      #
-      # 副作用：媒体库弹窗里会同时出现「仓库」和「R2」两个来源。挑 R2 那个。
+      # 这里**不要**写 media_libraries: { default: false }。
+      # 实测过：字段级的 false 会把上面那整段 default.config 一起干掉 ——
+      # 自动转 webp、slugify_filename、max_file_size 全失效。原因在
+      # Sveltia 的代码里，字段级配置命中 false 就直接 return，
+      # 后面取 transformations 时是从 {} 里取的，什么都拿不到。
+      # （历史上这里有一大段关于「仓库 vs R2 两个来源怎么选」的说明。
+      #   R2 那条路 2026-08-26 撤了，只剩一个上传目标，那个坑不复存在。）
       - label: 配图
         name: ogImage
         widget: image
         required: false
         hint: >-
-          首页/归档列表的缩略图，同时也是分享卡片的图。点按钮上传，
-          弹窗里**选 R2 那个来源**（仓库那个存进去是相对路径，构建会失败）。
-          存对了是 https://clarkebelt.org/img/2026/xxx.webp 这样的完整地址。
+          首页/归档列表的缩略图，同时也是分享卡片的图。点按钮上传就行 ——
+          存进去是 ./img/xxx.webp，构建时 Astro 自己量尺寸、自己出缩略图。
           上传时自动转 webp、压到 1600px 宽，不用自己先压。留空就是纯文字卡片。
 
       # 不填时 Sveltia 可能写出 series: null 而不是省掉这个键，

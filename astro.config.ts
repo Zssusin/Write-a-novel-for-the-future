@@ -48,6 +48,10 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  image: {
+    // 试验：让正文图自带 srcset。手机上一张 1280 宽的图现在是原样发的。
+    layout: "constrained",
+  },
   markdown: {
     processor: unified({
       remarkPlugins: [

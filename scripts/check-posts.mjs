@@ -39,7 +39,7 @@ import { randomInt } from "node:crypto";
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 // uid 的形状和文章目录跟 schema 共用一份，别在这里另抄一遍
-import { IMG_SIZE_IN_NAME, POSTS_DIR, UID_PATTERN } from "./post-rules.mjs";
+import { POSTS_DIR, UID_PATTERN } from "./post-rules.mjs";
 
 const LETTERS = "abcdefghijklmnopqrstuvwxyz";
 const ALPHABET = `0123456789${LETTERS}`;
@@ -142,7 +142,6 @@ if (process.argv.includes("--new-uid")) {
 
 const problems = [];
 const notices = []; // 不阻断构建，只是值得看一眼
-const covers = []; // { file, ogImage }，留到最后统一查派生缩略图
 const seenUids = new Map(); // uid -> 第一次出现的文件
 const seriesIndex = new Map(); // 系列名 -> Map<part, 文件>
 
@@ -220,39 +219,57 @@ for (const path of collectPosts(POSTS_DIR).sort()) {
   }
 
   /*
-    正文图能不能拿到 width/height。拿不到，图一加载完就把下面的正文顶一次（CLS）。
+    正文图在不在仓库里。
 
-    尺寸这件事没人能替作者知道：/img/ 是 R2 上的远程地址，构建时既不下载
-    也量不出来（为什么不下载，见 docs/图片工作流.md 第 6 节）。所以只能提醒。
+    2026-08-26 之前，图片放在 R2 上，正文写的是 /img/... 这种远程地址。
+    远程地址 Astro 构建时不下载也量不出尺寸，所以尺寸得靠文件名里手写
+    `-宽x高` 去补，还得自己压、自己传、自己生成缩略图。
 
-    两种写法的补救路径不一样，分开报：
+    现在图片跟着文章走（src/content/posts/img/），正文写相对路径。
+    Astro 认得出这是本地资源，于是自己量尺寸、自己填 width/height、
+    自己按用途生成缩略图、自己加内容哈希。上面那一整套人工步骤全没了。
 
-      ![](...)   —— src/utils/rehype/imageAttrs.ts 会照文件名里的 -宽x高 填。
-                    所以这里检查的是文件名。
-      <img>      —— 那个插件**看不到手写的 HTML**（.md 里是整块 raw 文本，
-                    .mdx 里是 JSX 节点，都不是 hast 元素）。所以这里检查的是
-                    标签上有没有真的写 width —— 文件名带尺寸也没用。
-
-    只看 /img/ 开头的：public/images/ 里的图 Astro 自己会处理，外站的管不着。
+    所以这里检查的东西也跟着翻了个面：以前查「文件名带没带尺寸」，
+    现在查「这张图是不是还留在远端」。远端的图不会报错、也能显示，
+    只是拿不到 Astro 的那一套 —— 值得说一句，不值得拦构建。
   */
-  const isRemoteImg = src => /^(\/img\/|https?:\/\/[^/]+\/img\/)/.test(src);
+  const isRemoteImg = src => /^(\/img\/|https?:\/\/)/.test(src);
 
-  const unsizedMarkdown = [
-    ...new Set(
-      [...body.matchAll(/!\[[^\]]*\]\(\s*([^)\s]+)/g)]
-        .map(match => match[1])
-        .filter(isRemoteImg)
-    ),
-  ].filter(src => !IMG_SIZE_IN_NAME.test(src.split(/[?#]/)[0]));
+  const bodyImages = [...body.matchAll(/!\[([^\]]*)\]\(\s*([^)\s]+)/g)];
 
-  if (unsizedMarkdown.length > 0) {
+  const remoteImgs = [
+    ...new Set(bodyImages.map(m => m[2]).filter(isRemoteImg)),
+  ];
+
+  if (remoteImgs.length > 0) {
     notices.push(
-      `${file}\n    有 ${unsizedMarkdown.length} 张正文图没把尺寸写进文件名：` +
-        unsizedMarkdown.map(src => `\n      ${src}`).join("") +
-        `\n    没有尺寸就填不出 width/height，图一加载完正文就往下跳一次（CLS）。` +
-        `\n    量一下：file 图.webp  →  "…VP8 encoding, 1600x900…"` +
-        `\n    然后按 <名字>-<宽>x<高>.webp 改名重传，正文里的地址跟着改。` +
-        `\n    见 docs/图片工作流.md 第 3 节。`
+      `${file}\n    有 ${remoteImgs.length} 张正文图还指着仓库外面：` +
+        remoteImgs.map(src => `\n      ${src}`).join("") +
+        `\n    远程图 Astro 量不出尺寸，也不会生成缩略图 ——` +
+        `\n    图一加载完正文就往下跳一次（CLS），列表里还得下整张原图。` +
+        `\n    搬进来：把文件放到 ${POSTS_DIR}/img/，正文改成 ./img/<文件名>` +
+        `\n    见 docs/图片工作流.md。`
+    );
+  }
+
+  /*
+    空的替代文字。
+
+    机器补不了 —— alt 是「这张图在说什么」，那是判断不是变换。
+    但它能数出来有几张欠着，否则整篇没有一个 alt 也是静默通过的
+    （2026-08 那篇 6 张图全空，就是这么溜进去的）。
+
+    只报不拦：一句 alt 写不写，不该拦住整站发布。
+    `![](...)` 里方括号是空的、或者只有空白，都算欠着。
+  */
+  const emptyAlt = bodyImages.filter(m => m[1].trim() === "");
+  if (emptyAlt.length > 0) {
+    notices.push(
+      `${file}\n    有 ${emptyAlt.length} 张正文图没写替代文字：` +
+        emptyAlt.map(m => `\n      ![](${m[2]})`).join("") +
+        `\n    读屏的人在这几处什么都听不到（有的读屏器会去念文件名）。` +
+        `\n    写在方括号里：![这张图在说什么](${emptyAlt[0][2]})` +
+        `\n    纯装饰、说了反而添乱的图，留空是对的 —— 那就忽略这条。`
     );
   }
 
@@ -272,29 +289,43 @@ for (const path of collectPosts(POSTS_DIR).sort()) {
     );
   }
 
+  /*
+    封面。
+
+    这条规则 2026-08-26 整个反了过来。以前封面在 R2 上，必须写成完整的
+    http(s) 地址 —— 写相对路径能过 zod，然后死在 Astro 的图片解析里，
+    报一句看不懂的 ImageNotFound，所以那时候这是条 problem。
+
+    现在相对路径才是对的：./img/foo.webp 会被 schema 里的 image() 解析成
+    真正的资源，Astro 拿它自己出列表缩略图（440 宽那档），
+    分享卡片仍然拿原图。scripts/make-thumbs.mjs 那一步不用跑了。
+
+    绝对地址**依然能用**（schema 是 image().or(z.string())，Card.astro
+    两条分支都留着），只是拿不到上面那一套，所以降级成提醒。
+  */
   const ogImage = readOgImage(frontmatter);
-  if (ogImage && !/^https?:\/\//.test(ogImage)) {
-    problems.push(
-      `${file}\n    ogImage "${ogImage}" 不是绝对地址。` +
-        `\n    这一栏必须写完整的 http(s) 地址，站内相对路径会让构建失败：` +
-        `\n      [ImageNotFound] Could not find requested image \`${ogImage}\`` +
-        `\n    改成 https://clarkebelt.org${ogImage.startsWith("/") ? "" : "/"}${ogImage}` +
-        `\n    （后台里从 R2 媒体库选图会自动写成绝对地址，不用手打。）`
+  if (ogImage && /^https?:\/\//.test(ogImage)) {
+    notices.push(
+      `${file}\n    封面 ${ogImage} 是远程地址。` +
+        `\n    能显示，但 Astro 量不出尺寸、也不会生成列表用的小图 ——` +
+        `\n    首页每张卡片都得下整张 OG 原图。` +
+        `\n    搬进来：文件放到 ${POSTS_DIR}/img/，这一栏改成 ./img/<文件名>`
     );
-  } else if (ogImage && !/\.webp(\?|$)/i.test(ogImage)) {
+  } else if (ogImage && !/\.(webp|avif)(\?|$)/i.test(ogImage)) {
     /*
-      不阻断构建 —— 非 webp 的封面能用，只是白白多下载几倍字节。
-      但它同时是个信号：后台上传本该自动转 webp（config.yml 里的
-      transformations），出现非 webp 说明那段配置又没生效了。
+      不阻断构建 —— 非 webp 的封面能用。列表缩略图 Astro 会转，
+      但**分享卡片拿的是原图**，所以一张没压过的 png 会原样发出去。
+
+      它同时是个信号：后台上传本该自动转 webp（config.yml 里的
+      transformations），出现别的格式说明那段配置又没生效。
     */
     notices.push(
       `${file}\n    封面 ${ogImage.split("/").pop()} 不是 webp。` +
+        `\n    列表小图 Astro 会转，但分享卡片拿的是原图，等于原样发出去。` +
         `\n    后台上传本应自动转 webp；出现别的格式，多半是 config.yml 里` +
-        `\n    media_libraries.default.config.transformations 没被读到。` +
-        `\n    见 docs/图片工作流.md 2.5 节。`
+        `\n    media_libraries.default.config.transformations 没被读到。`
     );
   }
-  if (ogImage && /^https?:\/\//.test(ogImage)) covers.push({ file, ogImage });
 
   const series = readSeries(frontmatter);
   if (series?.malformed) {
@@ -331,59 +362,15 @@ if (problems.length > 0) {
 console.log(`✓ 文章校验通过：${seenUids.size} 篇，uid 无重复`);
 
 /*
-  查每张封面的派生缩略图在不在。
+  2026-08-26 删掉了一整块「查封面的派生缩略图在不在」。
 
-  Card.astro 的 srcset 是**靠文件名约定推**出来的（foo-1200x630.webp 旁边
-  应该有 foo-440x231.webp、foo-720x378.webp），构建时没法枚举 R2 里有什么，
-  所以只能挨个 HEAD 一下。缺了的话读者那边不是「图糊一点」而是：srcset
-  选中的候选 404，浏览器按规范直接报 error，**不会退回 src**。
-  （Card.astro 上挂了 onerror 兜底，但那是第二道，不该指望它。）
+  那块存在的理由是：封面在 R2 上，Card.astro 只能靠文件名约定去猜
+  foo-1200x630.webp 旁边有没有 foo-440x231.webp，猜错了读者看到裂图，
+  所以构建前得挨个 HEAD 一遍。
 
-  只报不拦，跟这个文件里其他显示类缺陷一个待遇：发文章的主路径是
-  「后台改 → 提交 → Cloudflare 构建」，在那条链上 exit 1 等于整篇不上线。
-  网络本身不通时只说一句，不逐篇刷屏 —— 离线构建不该被这个卡住。
+  封面搬进仓库之后，缩略图是 Astro 构建时生成的 —— 它要么生成成功，
+  要么构建失败，不存在「线上少一个文件」这种中间态。没有可查的东西了。
 */
-const THUMB_WIDTHS = [440, 720]; // 与 src/components/Card.astro 保持一致
-let netDown = false;
-
-for (const { file, ogImage } of covers) {
-  const parts = ogImage.match(/^(.*)-(\d+)x(\d+)(\.[a-z0-9]+)$/i);
-  if (!parts) {
-    notices.push(
-      `${file}\n    封面 ${ogImage.split("/").pop()} 文件名没带 -宽x高。` +
-        `\n    Card.astro 靠这个后缀推 srcset，推不出来就只能发原图` +
-        `\n    （能显示，但列表里每张都按 OG 尺寸下载）。`
-    );
-    continue;
-  }
-
-  const [, base, w, h, ext] = parts;
-  const missing = [];
-  for (const width of THUMB_WIDTHS) {
-    if (width >= Number(w)) continue;
-    const url = `${base}-${width}x${Math.round((Number(h) * width) / Number(w))}${ext}`;
-    try {
-      const res = await fetch(url, { method: "HEAD" });
-      if (!res.ok) missing.push(url);
-    } catch {
-      netDown = true;
-    }
-  }
-  if (missing.length > 0) {
-    notices.push(
-      `${file}\n    封面缺派生缩略图：` +
-        missing.map(u => `\n      ${u.split("/").pop()}`).join("") +
-        `\n    生成并上传：` +
-        `\n      node scripts/make-thumbs.mjs ${ogImage}` +
-        `\n      node scripts/upload-img.mjs <上一步打印的文件>`
-    );
-  }
-}
-if (netDown) {
-  notices.push(
-    `连不上网，派生缩略图这一项没查（离线构建时正常，不影响产物）。`
-  );
-}
 
 for (const notice of notices) console.log(`\n  ⚠ ${notice}`);
 if (notices.length > 0) console.log("");
