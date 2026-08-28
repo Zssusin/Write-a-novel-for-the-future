@@ -18,29 +18,45 @@ const t = useTranslations(Astro.currentLocale);
 {
   page.lastPage > 1 && (
     <nav
-      class="mt-auto mb-8 flex justify-center gap-4"
+      class="mt-auto mb-8"
       role="navigation"
       aria-label="Pagination Navigation"
     >
-      <LinkButton
-        disabled={!page.url.prev}
-        href={page.url.prev as string}
-        class:list={["select-none", { "opacity-50": !page.url.prev }]}
-        aria-label={t.a11y.goToPreviousPage}
-      >
-        <IconArrowLeft class="inline-block rtl:rotate-180" />
-        {t.pagination.prev}
-      </LinkButton>
-      {page.currentPage} / {page.lastPage}
-      <LinkButton
-        disabled={!page.url.next}
-        href={page.url.next as string}
-        class:list={["select-none", { "opacity-50": !page.url.next }]}
-        aria-label={t.a11y.goToNextPage}
-      >
-        {t.pagination.next}
-        <IconArrowRight class="inline-block rtl:rotate-180" />
-      </LinkButton>
+      {/*
+        上一页/下一页分头顶到两端，而不是挤在中间：这两个才是「外侧页边」，
+        手机上也更好够到。禁用态渲染的是 <span>（见 LinkButton），
+        仍然占位，所以第一页上「下一页」不会滑到左边去。
+      */}
+      <div class="flex justify-between gap-4">
+        <LinkButton
+          disabled={!page.url.prev}
+          href={page.url.prev as string}
+          class:list={["select-none", { "opacity-50": !page.url.prev }]}
+          aria-label={t.a11y.goToPreviousPage}
+        >
+          <IconArrowLeft class="inline-block rtl:rotate-180" />
+          {t.pagination.prev}
+        </LinkButton>
+        <LinkButton
+          disabled={!page.url.next}
+          href={page.url.next as string}
+          class:list={["select-none", { "opacity-50": !page.url.next }]}
+          aria-label={t.a11y.goToNextPage}
+        >
+          {t.pagination.next}
+          <IconArrowRight class="inline-block rtl:rotate-180" />
+        </LinkButton>
+      </div>
+      {/*
+        页码是 folio，不是导航控件，所以单独一行压在外侧页边 ——
+        NASA GSM 5.14：「Folio placement should always be in the outside margins.」
+        手册自己每一页的章节号（5.14、5.17…）就压在右下角，是同一个做法。
+
+        用 text-end 而不是 text-right：外侧页边在 RTL 下是左边，逻辑属性自己跟对。
+      */}
+      <p class="text-muted-foreground mt-3 text-end text-xs">
+        {page.currentPage} / {page.lastPage}
+      </p>
     </nav>
   )
 }

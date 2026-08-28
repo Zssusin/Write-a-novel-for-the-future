@@ -91,6 +91,23 @@
       @apply border-border mx-auto border;
     }
 
+    /*
+      技术图表加外框。这是 NASA GSM 的明文标准，手册里写了两遍：
+
+        「Outline boxes should be used around all technical diagrams.」（5.17b 内页网格）
+        「the use of an outline box around all diagrams will help organize」（5.8 技术出版物）
+
+      加框的理由是图表得从文字流里**立住** —— 照片自带实体边界，曲线和坐标轴
+      没有，不框住就会散在正文里。上面 img 那条一起留着：两者同族，
+      版面上才是一套规矩，而不是「这张有框那张没有」。
+
+      内边距别去掉：图表的坐标轴标注是画到 viewBox 边缘的，
+      贴着框线会像被夹住。
+    */
+    figure > svg {
+      @apply border-border border p-2;
+    }
+
     img[role="button"] {
       @apply cursor-zoom-in;
 
@@ -114,6 +131,7 @@
 
       只对含 <img> 的生效：图表是内联 <svg>，它的 width 写的是 100%，
       放进 fit-content 容器里会拿不到可解析的固有宽度，塌成默认的 300px。
+      图表要的是满宽 + 外框（见上面 figure > svg），本来也不该收窄。
     */
     figure:has(> img) {
       @apply mx-auto w-fit max-w-full;
