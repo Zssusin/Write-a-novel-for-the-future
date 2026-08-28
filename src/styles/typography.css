@@ -27,6 +27,11 @@
       以后发现哪个边框/标记在深色下颜色不对，先来这里看是不是又漏了一个。
     */
     --tw-prose-body: var(--foreground);
+    /*
+      同一类问题的下一个：blockquote 的直接文本和它自动插入的引号标记
+      落在 --tw-prose-quotes 上（段落文字有下面的白名单兜着，这两样没有）。
+    */
+    --tw-prose-quotes: var(--foreground);
 
     h1,
     h2,
@@ -36,15 +41,18 @@
       @apply text-foreground mb-3;
     }
 
-    h3 {
-      @apply italic;
-    }
+    /*
+      ⚠️ 这里故意没有沿用上游 AstroPaper 给 h3 加的 italic，别加回来。
+
+      中文字体没有斜体字形，浏览器只能把汉字机械倾斜（synthetic oblique），
+      排版上是错误做法。标题层级靠 prose 自带的字号阶梯区分已经够了。
+      下面 blockquote 的 not-italic、Main/ShareLinks 里不用 italic，同一个理由。
+    */
 
     p,
     strong,
     ol,
     ul,
-    figcaption,
     table,
     code {
       @apply text-foreground;
@@ -98,8 +106,12 @@
       @apply mx-auto w-fit max-w-full;
     }
 
+    /*
+      调灰用色值而不用 opacity：透明度会连带作用于图注里的链接，
+      还会和底下的玻璃面板叠出一个不受控的混合色。
+    */
     figcaption {
-      @apply mt-2 text-sm opacity-75;
+      @apply text-muted-foreground mt-2 text-sm;
     }
 
     table {
@@ -162,8 +174,9 @@
       @apply flex-[1_0_100%] bg-inherit p-0;
     }
 
+    /* not-italic：盖掉 prose 默认的 font-style: italic，理由见上面 h3 那段 */
     blockquote {
-      @apply border-s-accent/80 wrap-break-word opacity-80;
+      @apply border-s-accent/80 wrap-break-word not-italic opacity-80;
     }
 
     /*
@@ -192,7 +205,7 @@
         /* 自己画三角，因为上面 list-none 把浏览器默认的那个去掉了。
            去掉的原因是各家默认标记的位置和字号都不一样，中文行高下尤其歪。 */
         &::before {
-          @apply text-accent mr-2 inline-block transition-transform content-['▸'];
+          @apply text-accent mr-2 inline-block transition-transform content-['▸'] motion-reduce:transition-none;
         }
 
         /* Safari 的老写法，不写的话它还会再画一个自己的三角 */

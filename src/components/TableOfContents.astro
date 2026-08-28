@@ -108,9 +108,8 @@ const headingClass =
     rootMargin **只认 px 和 %**，rem / em / calc() 一律让 IntersectionObserver
     的构造函数抛 SyntaxError。而 --below-header 是 calc(var(--header-h) + 1rem)
     —— 早先这里写的是 `-${belowHeader} 0px -70% 0px`，于是 observer 根本
-    没建出来，异常还顺着 initToc() 冒到模块顶层，把后面那行 astro:after-swap
-    的重新绑定也一起干掉了。表现是：目录**从来没有**高亮过，任何浏览器上
-    都一样，而页面其他部分完全正常，除了控制台一行报错没有任何症状。
+    没建出来。表现是：目录**从来没有**高亮过，任何浏览器上都一样，
+    而页面其他部分完全正常，除了控制台一行报错没有任何症状。
 
     用一个隐藏元素的高度去解析，比手算 rem × 根字号耐改：--header-h 以后
     换成 clamp() 或 dvh 也不用回来动这里。
@@ -186,21 +185,7 @@ const headingClass =
     );
 
     for (const heading of headings) observer.observe(heading);
-
-    /*
-      翻页时把 observer 拆掉。ClientRouter 换掉的是 DOM，observer 是挂在
-      旧节点上的 JS 对象 —— 不显式断开的话，每翻一页就多留一个还在观察
-      已被丢弃节点的 observer。
-    */
-    document.addEventListener(
-      "astro:before-swap",
-      () => observer.disconnect(),
-      {
-        once: true,
-      }
-    );
   }
 
   initToc();
-  document.addEventListener("astro:after-swap", initToc);
 </script>

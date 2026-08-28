@@ -14,10 +14,6 @@ import { tplStr } from "@/i18n";
   搬成模块以后是一个带内容哈希的 .js：全站共用一份、压缩过、
   _headers 里 /_astro/* 那条 immutable 规则直接生效，第二个文章页起零下载。
 
-  代价是要自己接翻页 —— is:inline 有 data-astro-rerun 帮忙，ClientRouter
-  每次导航都把整段重跑一遍；模块只在首次加载时执行一次。所以下面文件末尾
-  显式监听了 astro:after-swap，和 scripts/theme.ts 是同一套写法。
-
   ── 二、桌面端为什么要单独补 ──
 
   原来的实现只有 touchstart/touchmove/touchend：双指缩放、双击放大、
@@ -98,25 +94,6 @@ const ZOOM_WHEEL_BASE = 1.0015;
 */
 const DRAG_SLOP = 4;
 
-/*
-  这几个标记走 declare global，而不是 Comments.astro 里那种就地 cast。
-  原因是它们要被 index.astro 和 BackToTopButton.astro 的 `<script is:inline>`
-  用到 —— 那些脚本原样输出到浏览器，写不了 TS 的类型断言语法，只能靠全局
-  声明让编辑器闭嘴。
-  （除 __closeLightbox / __lightboxBound 外都不属于灯箱，放在这里是因为
-  它是全站唯一一处 declare global，再开一个 d.ts 不值得。）
-*/
-declare global {
-  interface Window {
-    __closeLightbox?: (() => void) | null;
-    __lightboxBound?: boolean;
-    __scrollResetBound?: boolean;
-    __scrollProgressBound?: boolean;
-    __bttScrollBound?: boolean;
-    __bttHandleScroll?: (() => void) | null;
-  }
-}
-
 function readStrings(article: HTMLElement): Strings {
   const raw = article.dataset.lightbox;
   if (!raw) return FALLBACK;
@@ -146,9 +123,6 @@ function initLightbox(): void {
   /*
     可放大的图 = 正文里没有被 <a> 包住的 <img>。
     被链接包住的图点下去应该跳走，那是作者写链接时的意图，灯箱不抢。
-
-    每次都重新查而不是缓存一份：ClientRouter 换页后 #article 是新节点，
-    缓存下来的数组会指向一堆已经不在文档里的元素。
   */
   const zoomableImages = (): HTMLImageElement[] =>
     Array.from(article.querySelectorAll("img")).filter(
@@ -598,7 +572,6 @@ function initLightbox(): void {
     document.body.appendChild(el);
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", onKeyDown);
-    window.__closeLightbox = close;
 
     requestAnimationFrame(() => overlay?.classList.add("opacity-100"));
     closeButton.focus();
@@ -620,7 +593,6 @@ function initLightbox(): void {
     function close(): void {
       if (!overlay) return;
       overlay = null;
-      window.__closeLightbox = null;
 
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = "";
@@ -691,19 +663,3 @@ function initLightbox(): void {
 }
 
 initLightbox();
-
-/*
-  翻页处理。两件事，都只绑一次 —— 模块本身在整个 SPA 生命周期里只执行一次，
-  但保险起见还是加了 __lightboxBound：Astro 在某些导航路径下会重新求值模块。
-
-  before-swap 关灯箱：不关的话遮罩会留在新页面上，而它引用的 #article
-  已经没了，读者卡在一个关不掉的黑屏里。
-  after-swap 重新初始化：新页面的 #article 是新节点，事件要重新委托上去。
-*/
-if (!window.__lightboxBound) {
-  window.__lightboxBound = true;
-  document.addEventListener("astro:before-swap", () =>
-    window.__closeLightbox?.()
-  );
-  document.addEventListener("astro:after-swap", initLightbox);
-}

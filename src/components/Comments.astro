@@ -21,15 +21,9 @@ import config from "@/config";
 
   ── 为什么脚本是用 JS 注进去的、而不是直接写一个 <script src> ──
 
-  两件事逼的：
-
-  1. giscus 要求把主题作为 data-theme 传进去，而本站的明暗是运行时切换的。
-     直接写死在 HTML 属性里，第一屏就可能和页面主题相反（读者存的是深色，
-     但服务端渲染时并不知道）。所以必须等到浏览器里、读到真实主题之后再建。
-
-  2. ClientRouter 翻页后 Astro 不会重新执行已经跑过的模块脚本，async 的
-     第三方脚本更是只在首次加载时跑一次 —— 从别的页面转场到文章页，
-     评论区就是空的。挂 astro:after-swap 手动重建是唯一可靠的办法。
+  giscus 要求把主题作为 data-theme 传进去，而本站的明暗是运行时切换的。
+  直接写死在 HTML 属性里，第一屏就可能和页面主题相反（读者存的是深色，
+  但服务端渲染时并不知道）。所以必须等到浏览器里、读到真实主题之后再建。
 */
 
 type Props = {
@@ -93,9 +87,6 @@ const giscusLang =
     const container = document.querySelector<HTMLElement>("#giscus-container");
     if (!container) return;
 
-    // 转场回来时容器里可能还留着上一篇的 iframe
-    container.replaceChildren();
-
     const { repo, repoId, category, categoryId, term, lang } =
       container.dataset;
     if (!repo || !repoId || !category || !categoryId || !term) return;
@@ -151,15 +142,9 @@ const giscusLang =
     );
   }
 
-  // 和 scripts/theme.ts 里 __theme 同一个写法：只用一次的全局标记，不值得为它开 d.ts
-  const w = window as unknown as { __giscusThemeBound?: boolean };
-  if (!w.__giscusThemeBound) {
-    w.__giscusThemeBound = true;
-    new MutationObserver(syncTheme).observe(document.documentElement, {
-      attributeFilter: ["data-theme"],
-    });
-  }
+  new MutationObserver(syncTheme).observe(document.documentElement, {
+    attributeFilter: ["data-theme"],
+  });
 
   mountGiscus();
-  document.addEventListener("astro:after-swap", mountGiscus);
 </script>

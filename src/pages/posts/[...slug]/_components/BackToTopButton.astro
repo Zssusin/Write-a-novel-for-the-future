@@ -31,7 +31,7 @@ const t = useTranslations(Astro.currentLocale);
   class:list={[
     "sticky bottom-8 z-50 float-end",
     "md:me-1",
-    "translate-y-14 opacity-0 transition duration-500",
+    "translate-y-14 opacity-0 transition duration-500 motion-reduce:transition-none",
   ]}
 >
   <button
@@ -55,30 +55,22 @@ const t = useTranslations(Astro.currentLocale);
   </button>
 </div>
 
-<script is:inline data-astro-rerun>
-  function backToTop() {
-    const rootElement = document.documentElement;
-    const btnContainer = document.querySelector("#btt-btn-container");
-    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
-    const progressIndicator = document.querySelector("#progress-indicator");
+<script>
+  const rootElement = document.documentElement;
+  const btnContainer = document.querySelector("#btt-btn-container");
+  const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+  const progressIndicator = document.querySelector<HTMLElement>(
+    "#progress-indicator"
+  );
 
-    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
-      return;
-
+  if (btnContainer && backToTopBtn && progressIndicator) {
     backToTopBtn.addEventListener("click", () => {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     });
 
-    let lastVisible = null;
-    function handleScroll() {
-      /*
-        从文章页转到没有这个按钮的页面（首页、标签页）时，这段脚本不再重跑，
-        下面那个指针就一直指着这一页的闭包。不认出来的话，往后每个滚动帧都要
-        为一堆已经脱离文档的元素白读一次 scrollHeight —— 而那是强制同步布局。
-      */
-      if (!btnContainer.isConnected) return;
-
+    let lastVisible: boolean | null = null;
+    const handleScroll = () => {
       const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
       const scrollTop = rootElement.scrollTop;
       const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
@@ -97,37 +89,19 @@ const t = useTranslations(Astro.currentLocale);
         btnContainer.classList.toggle("translate-y-14", !isVisible);
         lastVisible = isVisible;
       }
-    }
+    };
 
-    /*
-      scroll 监听器只绑一次，处理函数每次导航换成新的那个。
-
-      这段脚本带着 data-astro-rerun，每导航一次就整段重跑；而 ClientRouter
-      换的是 <body> 内容，document 本身活过换页 —— 直接绑的话监听器只增不减，
-      翻十页就有十份 handleScroll 在每个滚动帧里跑，每份还各读一次
-      scrollHeight/clientHeight（强制同步布局），旧的那些又拽着上一页
-      已经脱离文档的 btnContainer 不放。这和 index.astro 末尾
-      __scrollResetBound 挡的是同一个坑。
-
-      闸只设在监听器上：上面 handleScroll 闭包里的 btnContainer、
-      progressIndicator、lastVisible 全部属于当前这一页，不能让第一页的
-      那份一直用下去，所以每次重跑都把指针换成新的。
-    */
-    window.__bttHandleScroll = handleScroll;
-
-    if (!window.__bttScrollBound) {
-      window.__bttScrollBound = true;
-      let ticking = false;
-      document.addEventListener("scroll", () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            window.__bttHandleScroll?.();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-    }
+    // scroll 每帧都触发，而 handleScroll 要读 scrollHeight/clientHeight
+    // （强制同步布局），rAF 把它压到每帧最多一次。
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
   }
-  backToTop();
 </script>

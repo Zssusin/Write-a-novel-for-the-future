@@ -44,22 +44,6 @@ function setup(): void {
 
 setup();
 
-// Re-run after View Transitions navigation.
-document.addEventListener("astro:after-swap", setup);
-
-// Carry the theme-color value across View Transitions to prevent the
-// Android navigation bar from flashing during page transitions.
-document.addEventListener("astro:before-swap", event => {
-  const color = document
-    .querySelector("meta[name='theme-color']")
-    ?.getAttribute("content");
-  if (color) {
-    (event as { newDocument: Document }).newDocument
-      .querySelector("meta[name='theme-color']")
-      ?.setAttribute("content", color);
-  }
-});
-
 /*
   跟随系统的明暗切换 —— 但**只在读者还没自己选过的时候**。
 

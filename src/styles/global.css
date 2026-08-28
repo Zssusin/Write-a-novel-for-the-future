@@ -12,6 +12,17 @@
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
   }
+  /*
+    中西文混排的两项渐进增强，不支持的浏览器静默忽略：
+      text-autospace     汉字与拉丁/数字相邻处自动加隙（Chrome 141+ / Safari 18.4+）。
+                         正文手敲的空格照常有效，这条只兜住漏敲的地方。
+      text-spacing-trim  相邻全角标点间的空隙压缩（Chrome 123+）。
+    显式写出、不依赖浏览器初始值：两个属性都刚落地，各家初始行为未必一致。
+  */
+  body {
+    text-autospace: normal;
+    text-spacing-trim: normal;
+  }
   a,
   button {
     @apply outline-accent outline-offset-1 focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;

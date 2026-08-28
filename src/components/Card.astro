@@ -2,7 +2,6 @@
 import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 import { getPostUrl } from "@/utils/getPostPaths";
-import { toTransitionName } from "@/utils/toTransitionName";
 import { useTranslations, tplStr } from "@/i18n";
 import Datetime from "./Datetime.astro";
 import config from "@/config";
@@ -127,7 +126,7 @@ const thumbClass =
           "focus-visible:no-underline focus-visible:underline-offset-0",
         ]}
       >
-        <Heading transition:name={toTransitionName(title)}>
+        <Heading>
           {title}
         </Heading>
       </a>

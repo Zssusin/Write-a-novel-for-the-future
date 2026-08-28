@@ -14,7 +14,6 @@ import { getPostSlug, getPostUrl } from "@/utils/getPostPaths";
 import { getSeriesIndex, type SeriesPart } from "@/utils/getSeries";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { slugifyStr } from "@/utils/slugify";
-import { toTransitionName } from "@/utils/toTransitionName";
 import { useTranslations } from "@/i18n";
 import EditPost from "./_components/EditPost.astro";
 import ShareLinks from "./_components/ShareLinks.astro";
@@ -157,10 +156,7 @@ const ogImage = ogImageUrl
       ]}
       data-pagefind-body
     >
-      <h1
-        style={{ viewTransitionName: toTransitionName(title) }}
-        class="text-accent inline-block text-2xl font-bold sm:text-3xl"
-      >
+      <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl">
         {title}
       </h1>
 
@@ -264,57 +260,20 @@ const ogImage = ogImageUrl
   灯箱是打包模块，不是下面那种内联脚本 —— 它 8 KB 出头，内联意味着
   每个文章页的 HTML 里各存一份明文。打包之后全站共用一个带哈希的文件，
   _headers 里 /_astro/* 的 immutable 规则接管，第二篇起零下载。
-  代价是没有 data-astro-rerun 可用，翻页重新初始化写在那个文件末尾。
 */
 }
 <script>
   import "@/scripts/lightbox";
 </script>
 
-<script is:inline data-astro-rerun>
-  function createProgressBar() {
-    const progressContainer = document.createElement("div");
-    progressContainer.className =
-      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
-
-    const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0 bg-accent";
-    progressBar.id = "myBar";
-
-    progressContainer.appendChild(progressBar);
-    document.body.appendChild(progressContainer);
-  }
-  createProgressBar();
-
+{
   /*
-    和文件末尾 __scrollResetBound 同一个理由：这段脚本带 data-astro-rerun，
-    每导航一次重跑一遍，而 document 活得比页面长 —— 不设闸的话滚动监听器
-    只增不减，翻十页就有十份在每个滚动帧里跑。
-
-    这里绑一次就够：下面的处理函数每次都自己去找当前页面的 #myBar
-    （进度条由上面的 createProgressBar 每页重建），不持有跨页的引用。
-  */
-  function updateScrollProgress() {
-    if (window.__scrollProgressBound) return;
-    window.__scrollProgressBound = true;
-
-    document.addEventListener("scroll", () => {
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      if (document) {
-        const myBar = document.getElementById("myBar");
-        if (myBar) {
-          myBar.style.width = scrolled + "%";
-        }
-      }
-    });
-  }
-  updateScrollProgress();
-
+  阅读进度只有一处指示：右下角返回顶部按钮外圈的那个环
+  （BackToTopButton.astro）。原来顶部还有一条进度条，同一页面两个
+  进度指示是冗余的，各自还都在滚动帧里干活 —— 去掉了条，留了环。
+*/
+}
+<script is:inline>
   function addHeadingLinks() {
     const headings = Array.from(
       document.querySelectorAll("h2, h3, h4, h5, h6")
@@ -379,19 +338,4 @@ const ogImage = ogImageUrl
     }
   }
   attachCopyButtons();
-
-  /*
-    翻页后回到顶部。
-
-    包在 __scrollResetBound 里，是因为外面这个 <script> 带着
-    data-astro-rerun —— 每导航一次整段就重跑一次，不设闸的话
-    astro:after-swap 上的监听器会一次次往上堆，翻十页就有十个。
-    （灯箱原来那段用的也是这个写法，见 scripts/lightbox.ts 末尾。）
-  */
-  if (!window.__scrollResetBound) {
-    window.__scrollResetBound = true;
-    document.addEventListener("astro:after-swap", () =>
-      window.scrollTo({ left: 0, top: 0, behavior: "instant" })
-    );
-  }
 </script>

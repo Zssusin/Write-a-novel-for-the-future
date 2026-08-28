@@ -103,7 +103,7 @@ const moreLinkClass =
           <h2 class={headingClass}>{t.nav.tags}</h2>
           <ul class="flex flex-wrap gap-x-4 gap-y-2">
             {tags.slice(0, 12).map(({ tag, tagName }) => (
-              <Tag {tag} {tagName} size="sm" animate={false} />
+              <Tag {tag} {tagName} size="sm" />
             ))}
           </ul>
           {tags.length > 12 && (
