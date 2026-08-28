@@ -40,18 +40,37 @@
       标题走 --heading 而不是 --foreground：浅色下两者相同（墨色），
       深色下标题是琥珀 #ffdd55 —— Atomic Rockets 的标题就是这个颜色，
       整套深色皮就是照他家配的（见 theme.css）。
+
+      font-serif = 中文宋体。这是「期刊感」最强的那个信号：
+      学术期刊的标题就是宋体，黑体标题读起来是 PPT 和公众号。
+      正文仍然是黑体，别顺手把 serif 铺到 p 上 —— 理由（SimSun 小字号
+      点阵化）写在 theme.css 的字体那段里。
     */
     h1,
     h2,
     h3,
-    h4,
+    h4 {
+      @apply text-heading mb-3 font-serif;
+    }
+
+    /* 表头跟着正文走：它是数据，不是标题 */
     th {
       @apply text-heading mb-3;
     }
 
-    /* 手册式分节：h2 底下一条细规则线，和页头那条 2px 粗线同一族 */
+    /* 分节规则线：发丝线，不是粗线 —— 全站只有刊头那条允许是粗的 */
     h2 {
-      @apply border-border border-b pb-1;
+      @apply border-border border-b pb-2;
+    }
+
+    /*
+      中文正文的行距要比拉丁排版的惯例松。汉字是方块字、字面率高，
+      prose 默认的 1.75 在中文里发挤；期刊类长文一般落在 1.8–2.0。
+      只给 p 和 li：标题自己有更紧的行距，跟着放会散架。
+    */
+    p,
+    li {
+      line-height: 1.9;
     }
 
     /*

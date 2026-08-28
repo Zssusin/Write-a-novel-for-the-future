@@ -50,7 +50,13 @@
   .content-panel {
     margin-top: 1rem;
     background: var(--panel);
-    border-top: 2px solid var(--foreground);
+    /*
+      发丝线，不是原来那条 2px 墨线。全站**只有刊头那条规则线是粗的** ——
+      页头下面紧跟着面板顶边，两条粗线叠在一起版面就压得喘不过气。
+      现在面板是纯白、外壳是浅灰，边界靠这一档明度差就够了，
+      线只负责收口。
+    */
+    border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     /*
       手机上铺满整屏：负外边距顶掉 app-shell 的 px-4，390px 的屏幕上
@@ -72,7 +78,12 @@
 
   @media (width >= 64rem) {
     .content-panel {
-      padding: 2.75rem 2rem;
+      /*
+        上下比左右松得多，是有意的：**竖向内边距不花钱**。
+        左右每加 0.25rem，正文就窄 0.5rem（完整的减法见 global.css 的
+        app-shell 那段）；上下加多少都不影响每行字数，只换来页面的呼吸。
+      */
+      padding: 3.25rem 2rem;
     }
   }
 }

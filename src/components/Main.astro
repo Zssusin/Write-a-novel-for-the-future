@@ -35,7 +35,9 @@ const backUrl = config.features.showBackButton
     id="main-content"
     class:list={["content-panel min-w-0", className]}
   >
-    <h1 class="text-heading text-2xl font-semibold sm:text-3xl">{pageTitle}</h1>
+    <h1 class="text-heading font-serif text-2xl font-semibold sm:text-3xl">
+      {pageTitle}
+    </h1>
     {/* 副标题的「次要感」用灰色给，不用 italic —— 中文没有斜体字形 */}
     <p class="text-muted-foreground mt-2 mb-6">{pageDesc}</p>
     <slot />

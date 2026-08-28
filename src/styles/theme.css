@@ -11,6 +11,13 @@
   --color-border: var(--border);
   --font-app: var(--font-stack-app);
   --font-display: var(--font-stack-display);
+  /*
+    覆盖 Tailwind 自带的 serif / mono 两档，于是 font-serif、font-mono
+    两个工具类直接指到本站的栈上。code/pre 也跟着走 —— v4 的 preflight
+    给它们用的就是 --font-mono。
+  */
+  --font-serif: var(--font-stack-serif);
+  --font-mono: var(--font-stack-mono);
 
   /*
     直角。手册风的硬边一次性给全站：把 Tailwind 的整个圆角阶压平，
@@ -31,10 +38,14 @@
 /*
   中文标点专用的一层，只有三个码位。
 
-  问题：Google Sans Code 排在字体栈最前面负责拉丁与数字，但它**也带着
-  U+2014 破折号和 U+2026 省略号的字形**，而且是窄的西文形状。结果中文的
-  「——」被画成两个短横「--」，「……」同理。汉字之间还不太明显，可一旦紧跟着
-  拉丁词就很难看：「clarkebelt--一个硬科幻…」读起来像命令行参数。
+  问题：字体栈里排在中文前面的那些拉丁字体**都带着 U+2014 破折号和
+  U+2026 省略号的字形**，而且是窄的西文形状。结果中文的「——」被画成
+  两个短横「--」，「……」同理。汉字之间还不太明显，可一旦紧跟着拉丁词
+  就很难看：「clarkebelt--一个硬科幻…」读起来像命令行参数。
+
+  ⚠️ 这一层跟具体用哪个拉丁字体**无关**，别因为换了字体就以为可以删。
+  最早是 Google Sans Code 触发的，但换成 -apple-system / Segoe UI 之后
+  问题一模一样 —— 任何西文字体的破折号都是西文宽度。
 
   做法：在栈最前面插一层，用 unicode-range 把它限死在这三个码位上，
   其余字符一律穿透到后面，所以拉丁排版一点不变。
@@ -42,8 +53,8 @@
   三端的 U+2014 都是全宽的（两个连起来正好是一条完整长破折号），而且零下载。
   一个都没装就自动落到后面那层 —— 退回现在这个样子，不会更差。
 
-  只挑这三个是有意的：、。：「」那些是 CJK 专有码位，Google Sans Code
-  压根没有，本来就已经落到系统中文字体了，不需要在这里再抢一遍。
+  只挑这三个是有意的：、。：「」那些是 CJK 专有码位，西文字体压根没有，
+  本来就已经落到系统中文字体了，不需要在这里再抢一遍。
 */
 @font-face {
   font-family: "CJK Punctuation";
@@ -66,18 +77,58 @@
 }
 
 /*
-  中文优先的字体栈。Google Sans Code 没有中文字形，
-  排在前面负责拉丁与数字，中文由系统字体接手（零下载、秒开）。
+  ===================================================================
+  字体：四档，各有各的活儿。这套分工是「期刊感」的一半来源。
+
+    app      正文与界面。黑体 + 系统西文 sans。
+    serif    **内容标题**。中文宋体 —— 学术期刊最强的那个信号。
+    mono     数据与代码：文档号、日期、图号、<code>。
+    display  刊名（字标）专用，Michroma，只有页头页脚那两处。
+
+  ⚠️ 最要紧的一条：**正文的西文不再用等宽体**。
+
+  之前 Google Sans Code 排在 app 栈的最前面，等于整站的西文正文
+  全是等宽 —— 那是 README / 终端的信号，不是出版物的。同样一句
+  「Project Rho 是站主 Winchell Chung 的个人站」，等宽排出来像日志，
+  比例字排出来才像文章。等宽收回它本来的岗位：**数据和代码**，
+  在那儿它表达的是「这是一个可核对的值」，是加分项。
+
+  中文一律零下载：宋体黑体两套都走 local，系统里本来就有
+  （PingFang / 苹方、微软雅黑、思源、Noto）。唯一下载的西文字体
+  还是只有 Michroma 那一个，刊名用。
+
+  ⚠️ 宋体栈把思源/Noto 排在 SimSun 前面是有意的：Windows 的 SimSun
+  在小字号下是点阵字形，很糊。所以宋体只用在**标题**（字大），
+  正文仍然是黑体 —— 别把 serif 拿去铺正文。
+  ===================================================================
 */
 :root {
-  --font-cjk:
+  /* 中文黑体：正文、界面 */
+  --font-cjk-sans:
     "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC",
     "Noto Sans SC", "Source Han Sans SC", "WenQuanYi Micro Hei";
+  /* 中文宋体：标题。思源/Noto 优先，SimSun 垫底，理由见上 */
+  --font-cjk-serif:
+    "Source Han Serif SC", "Noto Serif CJK SC", "Noto Serif SC", "Songti SC",
+    "STSong", "SimSun", serif;
+
   --font-stack-app:
-    "CJK Punctuation", var(--font-google-sans-code), -apple-system,
-    BlinkMacSystemFont, "Segoe UI", var(--font-cjk), system-ui, sans-serif;
-  /* 拉丁标题用 Michroma（Atomic Rockets 同款），中文自动回落 */
-  --font-stack-display: "Michroma", var(--font-cjk), var(--font-stack-app);
+    "CJK Punctuation", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, var(--font-cjk-sans), system-ui, sans-serif;
+  --font-stack-serif:
+    "CJK Punctuation", Georgia, "Times New Roman", Times, var(--font-cjk-serif),
+    serif;
+  /*
+    末尾垫一层中文黑体是必需的：等宽栈里没有中文字形，而读数经常是
+    混排的（「2,411 字 · 约 7 分钟」）。不垫的话中文会掉进 generic
+    monospace，各系统给的等宽中文字体都很难看。
+    垫上之后：数字和拉丁是等宽，中文还是正常黑体。
+  */
+  --font-stack-mono:
+    var(--font-google-sans-code), ui-monospace, SFMono-Regular, Menlo, Consolas,
+    var(--font-cjk-sans), monospace;
+  /* 刊名用 Michroma（Atomic Rockets 同款），中文自动回落 */
+  --font-stack-display: "Michroma", var(--font-cjk-sans), var(--font-stack-app);
 }
 
 /*
@@ -96,26 +147,36 @@
   现在没有第二层：所有 token 在这里各声明一次，.content-panel 只是
   一块用 --panel 上色的实心面板（见 surfaces.css），不再重声明 token。
 
+  ── 浅色为什么是**纯白**而不是米色 ──
+
+  上一版面板是暖米色 #fdfbf5（1976 年那本手册的纸），配色上没错，
+  但屏幕上的暖白读起来是「旧纸的复制品」，不是「一份干净的出版物」。
+  期刊要的是白纸黑字：面板 #ffffff 一点不掺，外壳给一档很浅的中性灰，
+  于是白页浮在灰桌面上 —— 层次靠这一档明度差和发丝线给，不靠色相。
+
+  ⚠️ 外壳那档灰是**中性偏冷**的，别调回暖色：一旦发黄，纯白面板
+  立刻显脏（并排对比时人眼对白点极敏感）。
+
   对比度（WCAG，算出来的，别凭感觉改）：
-    浅色  正文 14.98:1（面板上 15.91:1）· accent 5.38:1 ·
-          muted-fg 6.37:1 · 白字压 accent 5.91:1
+    浅色  正文压白 17.40:1 · accent 7.37:1 · muted-fg 7.34:1 ·
+          外壳上正文 15.95:1
     深色  正文 14.19:1 · accent 9.60:1 · 琥珀标题 13.63:1 ·
           muted-fg 7.49:1
-  全部 AA 以上，最低是浅色 accent 那档（AA 线 4.5）——
-  NASA 蠕虫红本尊 #fc3d21 在纸底上只有 3.3:1，所以压暗成 #b23c17，
-  想把它调鲜前先重算。
+  全部 AA 以上。accent 从 #b23c17 再压深到 #9d2f12：换成纯白底之后
+  原来那档偏橙，在白纸上显得跳；同一个色相压深之后是砖红，
+  仍然是 NASA 蠕虫红那一支，但读起来是印刷品不是海报。
   ===================================================================
 */
 :root {
-  --background: #f7f4ec; /* 纸面 */
-  --panel: #fdfbf5; /* 图纸，比纸面亮一档 */
-  --foreground: #211f1a; /* 墨 */
-  --heading: #211f1a; /* 浅色不搞花样：标题就是墨色 */
-  --accent: #b23c17; /* NASA 蠕虫红，压暗到 AA */
+  --background: #f4f5f7; /* 桌面：中性浅灰，托住白页 */
+  --panel: #ffffff; /* 纸：纯白，不掺 */
+  --foreground: #1a1a1a; /* 墨 */
+  --heading: #1a1a1a; /* 浅色不搞花样：标题就是墨色 */
+  --accent: #9d2f12; /* NASA 蠕虫红压深，白纸上的砖红 */
   --accent-foreground: #ffffff;
-  --muted: #eae5d8;
-  --muted-foreground: #5d594c;
-  --border: #c9c2b0;
+  --muted: #eef0f3;
+  --muted-foreground: #565656;
+  --border: #d8d8d8; /* 发丝线 */
 }
 
 [data-theme="dark"] {

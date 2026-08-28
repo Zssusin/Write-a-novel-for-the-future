@@ -63,8 +63,13 @@ const extent =
     .filter(Boolean)
     .join(" · ") || "—";
 
+/*
+  标签是文字（黑体），值是读数（等宽）。这一对是铭牌的全部质感来源 ——
+  等宽让「CB-TM-20260725」「2026-07-30」读起来像可核对的量，
+  而不像一句话。混排的中文会落到黑体上，见 theme.css 的 mono 栈。
+*/
 const labelClass = "text-muted-foreground text-xs tracking-widest";
-const valueClass = "mt-1 text-sm";
+const valueClass = "mt-1 font-mono text-sm";
 ---
 
 {

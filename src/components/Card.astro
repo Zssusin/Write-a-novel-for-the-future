@@ -121,7 +121,8 @@ const thumbClass =
       <a
         {href}
         class:list={[
-          "text-accent inline-block text-lg font-medium",
+          // 宋体：列表里的篇名也是「内容标题」，跟文章页的 h1 同一档
+          "text-accent inline-block font-serif text-lg font-medium",
           "decoration-dashed underline-offset-4 hover:underline",
           "focus-visible:no-underline focus-visible:underline-offset-0",
         ]}
