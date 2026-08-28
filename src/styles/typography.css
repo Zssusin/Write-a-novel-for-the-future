@@ -33,12 +33,22 @@
     */
     --tw-prose-quotes: var(--foreground);
 
+    /*
+      标题走 --heading 而不是 --foreground：浅色下两者相同（墨色），
+      深色下标题是琥珀 #ffdd55 —— Atomic Rockets 的标题就是这个颜色，
+      整套深色皮就是照他家配的（见 theme.css）。
+    */
     h1,
     h2,
     h3,
     h4,
     th {
-      @apply text-foreground mb-3;
+      @apply text-heading mb-3;
+    }
+
+    /* 手册式分节：h2 底下一条细规则线，和页头那条 2px 粗线同一族 */
+    h2 {
+      @apply border-border border-b pb-1;
     }
 
     /*
@@ -167,7 +177,7 @@
     }
 
     code {
-      @apply bg-muted/75 text-foreground rounded p-1 wrap-break-word before:content-none after:content-none;
+      @apply bg-muted/75 text-foreground rounded-sm p-1 wrap-break-word before:content-none after:content-none;
     }
 
     .astro-code code {

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "./theme.css";
 @import "./typography.css";
-@import "./glass.css";
+@import "./surfaces.css";
 @import "rehype-callouts/theme/obsidian";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
@@ -62,7 +62,7 @@
   再往上加也不划算：中文每行 48 个字已经在舒适区上限（拉丁排版的经验值
   是 45–75 字符，中文字宽是它的两倍，对应更少），超过就要开始丢行了。
   加宽已经付出的代价：13 吋笔记本（1280px = 80rem）上左右留白从 6rem
-  掉到 4rem，星空露出来的少了一截。
+  掉到 4rem。
 */
 @utility app-shell {
   @apply mx-auto w-full max-w-[72rem] px-4;
@@ -73,13 +73,16 @@
   @apply grid gap-x-10 gap-y-12 lg:grid-cols-[minmax(0,1fr)_15rem];
 }
 
+/* 实线不用波浪线：手册风里波浪线太俏皮，当前项就是一条平直的规则线 */
 @utility active-nav {
-  @apply underline decoration-wavy decoration-2 underline-offset-8;
+  @apply underline decoration-2 underline-offset-8;
 }
 
 /*
-  贴顶导航条的高度。**这个值是量出来的，不是算出来的**：无头浏览器打开首页，
-  扫像素列找玻璃面板的上下边 —— 8px（header 的 py-2）+ 72px 面板 + 8px = 88px。
+  贴顶导航条的高度。**这个值是量出来的，不是算出来的**：无头浏览器打开首页
+  量 header 的 getBoundingClientRect —— 8px（header 的 py-2）+ 72px 导航条
+  + 2px 底部墨线 + 8px = 90px。玻璃时代是 88px，换手册皮那条 2px 规则线
+  比原来上下各 1px 的玻璃边框净多出 2px。
 
   为什么要有名字：页头里放进那个组合标之后，桌面端从 80px 长到了 88px
   （logo 的行盒 32px 顶掉了原来 28px 的字标）。当时有两处 96px 的魔法数字
@@ -89,7 +92,7 @@
   所以：改了页头的高度，改这一个数；下面两个派生值和用到它们的地方自己跟上。
 */
 :root {
-  --header-h: 5.5rem;
+  --header-h: 5.625rem;
   /* 贴顶元素、锚点跳转的落点：让开导航条，再留 1rem 呼吸 */
   --below-header: calc(var(--header-h) + 1rem);
 }

@@ -156,7 +156,11 @@ const ogImage = ogImageUrl
       ]}
       data-pagefind-body
     >
-      <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl">
+      {
+        /* 标题用 --heading 不用 accent：浅色是墨色大标题（手册的做法），
+           深色是琥珀（Atomic Rockets 的做法）。accent 留给链接。 */
+      }
+      <h1 class="text-heading inline-block text-2xl font-bold sm:text-3xl">
         {title}
       </h1>
 
@@ -311,7 +315,7 @@ const ogImage = ogImageUrl
         : "-top-3";
 
       const copyButton = document.createElement("button");
-      copyButton.className = `copy-code absolute end-3 ${topClass} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.className = `copy-code absolute end-3 ${topClass} rounded-sm bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
       copyButton.innerHTML = copyButtonLabel;
       codeBlock.setAttribute("tabindex", "0");
       codeBlock.appendChild(copyButton);

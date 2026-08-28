@@ -57,20 +57,27 @@ const isActive = (path: string) => {
 <a
   id="skip-to-content"
   href="#main-content"
-  class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"
+  class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 transition-all focus:top-4"
 >
   {t.a11y.skipToContent}
 </a>
 
+{
+  /*
+    页头是一条「信头」：实底 + 底边一道 2px 墨线（NASA GSM 每页顶上那条
+    粗规则线），不再是浮在星空上的玻璃胶囊。bg-background 必须留着 ——
+    页头是 sticky 的，滚动时正文要从它底下钻过去，没有实底就叠字。
+  */
+}
 <header
-  class="app-shell sticky top-0 z-40 flex flex-col items-center justify-between py-2 sm:flex-row"
+  class="app-shell bg-background sticky top-0 z-40 flex flex-col items-center justify-between py-2 sm:flex-row"
 >
   <div
-    class="glass relative flex w-full items-baseline justify-between rounded-2xl px-4 py-3 sm:items-center sm:py-4"
+    class="border-foreground relative flex w-full items-baseline justify-between border-b-2 py-3 sm:items-center sm:py-4"
   >
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="font-display absolute inline-flex items-center gap-2 py-1 text-lg leading-8 whitespace-nowrap sm:static sm:my-auto sm:text-xl sm:leading-none"
+      class="font-display text-heading absolute inline-flex items-center gap-2 py-1 text-lg leading-8 whitespace-nowrap sm:static sm:my-auto sm:text-xl sm:leading-none"
     >
       <svg
         viewBox="0 0 32 32"

@@ -1,0 +1,67 @@
+/*
+  ===================================================================
+  版面材质：技术手册
+
+  两条硬规则，全站的「硬壳感」都从这里来：
+    1. 全部实色。没有透明度、没有 backdrop-filter、没有投影 ——
+       层次只靠两档底色（--background / --panel）和 1px/2px 的线给。
+    2. 直角。圆角阶已经在 theme.css 里整体压平，这里不用再管。
+
+  前一版这个文件叫 glass.css（深空背景 + 液态玻璃），已整体退役，
+  实现和当时的取舍看 git 历史。退役顺带解决了两件悬案：
+  低端机上 blur(28px) 的滚动开销，和 backdrop-filter 劫持 fixed
+  包含块的坑（BackToTopButton.astro 注释里那件事）。
+  ===================================================================
+*/
+
+@layer components {
+  /*
+    内容面板：正文那张「图纸」。比纸面亮/浅一档的实色，
+    顶上一条 2px 墨线压着 —— 技术文档表格的经典画法，粗线在上。
+
+    ⚠️ 宽度的账没变，别动：内边距是直接从正文宽度里扣的
+    （完整减法见 global.css 的 app-shell 注释）。
+
+    面板贴着页头看着会糊在一起，所以自带 1rem 上缝。面包屑、返回键、
+    页头三种前置元素的下边距各不相同（4/8/8px），统一加 1rem 之后
+    三种情况都落在 20~24px。单页要更大间距用 mt-* 覆盖 ——
+    utilities 层排在 components 层后面，一定压得住。
+  */
+  .content-panel {
+    margin-top: 1rem;
+    background: var(--panel);
+    border-top: 2px solid var(--foreground);
+    border-bottom: 1px solid var(--border);
+    /*
+      手机上铺满整屏：负外边距顶掉 app-shell 的 px-4，390px 的屏幕上
+      每行能多排 4 个汉字。⚠️ 这个 -1rem 和 app-shell 的 px-4 必须一起改。
+      竖边线这一档不画 —— 贴着屏幕边缘的竖线看着像画框。
+    */
+    margin-inline: -1rem;
+    padding: 2rem 1rem;
+  }
+
+  @media (width >= 40rem) {
+    .content-panel {
+      /* 有留白可看了，收回外壳里面，竖边线补上，围成完整的图框 */
+      margin-inline: 0;
+      padding: 2.5rem 1.75rem;
+      border-inline: 1px solid var(--border);
+    }
+  }
+
+  @media (width >= 64rem) {
+    .content-panel {
+      padding: 2.75rem 2rem;
+    }
+  }
+}
+
+@layer base {
+  /* 高对比模式：分隔线全部提到前景色 */
+  @media (prefers-contrast: more) {
+    .content-panel {
+      border-color: var(--foreground);
+    }
+  }
+}

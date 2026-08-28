@@ -8,22 +8,15 @@ const t = useTranslations(Astro.currentLocale);
 
 {
   /*
-    定位一律用 sticky，手机上也是 —— 这里**不能**用 fixed。
+    定位一律用 sticky，手机上也是。
 
-    本组件挂在 <main class="content-panel"> 里面，而 .content-panel 带
-    backdrop-filter（glass.css，把面板背后的星点糊成均匀辉光）。按 CSS 规范，
-    backdrop-filter 不为 none 的元素会成为其 fixed 后代的**包含块** ——
-    于是 position:fixed 锚的不再是视口，而是那块面板。实测 390×844 下
-    按钮的 bottom 落在 8387px（面板底部 8364 之下），整个跑到屏幕外，
-    手机上那颗悬浮球就此消失；把 backdrop-filter 临时改成 none，
-    同一处立刻回到 868px（视口内）—— 这就是对照实验的结论。
-
-    md 档原本就是 sticky，所以这里只是把手机档统一到同一套机制：
-    bottom-8 让它悬在视口底部上方 2rem，float-end 贴右侧内边距，
-    效果和原来的 fixed 一致，区别只是滚出 <main> 之后（页脚区域）
-    它会跟着走，而不是继续钉在屏幕上。
-
-    ⚠️ 别改回 fixed。除非先把这个组件挪出 .content-panel。
+    历史包袱，想改成 fixed 之前先读：玻璃时代的 .content-panel 带
+    backdrop-filter，按 CSS 规范它会成为 fixed 后代的**包含块**，
+    fixed 按钮直接锚到面板底部跑出屏幕（实测 390×844 下 bottom 落在
+    8387px，视口外）。现在面板是实色的（surfaces.css），fixed 理论上
+    能用了 —— 但 sticky 的行为完全够用，而且不依赖「面板身上没有
+    backdrop-filter / filter / transform」这种隐式前提：谁哪天给面板
+    加一条 filter，都不会再悄悄弄丢这颗按钮。所以维持 sticky。
   */
 }
 <div
@@ -37,10 +30,10 @@ const t = useTranslations(Astro.currentLocale);
   <button
     data-button="back-to-top"
     class:list={[
-      "group bg-background relative px-2 py-1",
-      "size-14 rounded-full shadow-xl",
-      "md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none",
-      "md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg",
+      // 实底 + 边线，不再是半透明玻璃；投影也去掉了 —— 手册风的层次只靠线给
+      "group bg-background border-border relative border px-2 py-1",
+      "size-14 rounded-full",
+      "md:h-8 md:w-fit md:rounded-md md:focus-visible:rounded-none",
     ]}
   >
     <span

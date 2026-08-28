@@ -173,15 +173,14 @@ const ICON_VERSION = 2;
     </script>
   </head>
   <body
-    class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
+    class="bg-background font-app text-foreground selection:bg-accent selection:text-accent-foreground flex min-h-svh flex-col"
   >
-    <!--
-      环境背景：深空。星场 + 星云 + 一道行星边缘，全部是 CSS 画的，没有图片请求。
-      两个主题共用同一张底 —— 明暗切换换的是上面那块内容面板，不是这里。
-      整块 fixed，不随滚动，所以长文章不会因此多出一个几万像素高的合成层。
-      画法和参数见 styles/glass.css。
-    -->
-    <div class="site-backdrop" aria-hidden="true"></div>
+    {
+      /*
+        selection 的底色是全不透明的 accent，别改回带 /75 那种半透明档：
+        蠕虫红压暗到 AA 之后，再叠 25% 的纸面底就浮回 3.7:1，白字压不住。
+      */
+    }
     <slot />
     <script>
       import "@/scripts/theme";
