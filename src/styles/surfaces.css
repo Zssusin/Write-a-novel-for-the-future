@@ -16,6 +16,26 @@
 
 @layer components {
   /*
+    GSM 的招牌双规则线：2px 粗线 + 2px 空隙 + 1px 细线，粗在上细在下。
+    细线是绝对定位的伪元素，画在盒子**外面**、不占布局 —— 挂上这个类
+    高度一个像素都不变（页头在用，--header-h 因此不用重新量；细线落在
+    页头自己 8px 的下内边距里，也不会画到别人身上）。
+  */
+  .rule-double {
+    position: relative;
+    border-bottom: 2px solid var(--foreground);
+  }
+
+  .rule-double::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    /* padding-box 底边往下 5px = 2px 边框 + 2px 空隙，线高 1px */
+    bottom: -5px;
+    border-bottom: 1px solid var(--foreground);
+  }
+
+  /*
     内容面板：正文那张「图纸」。比纸面亮/浅一档的实色，
     顶上一条 2px 墨线压着 —— 技术文档表格的经典画法，粗线在上。
 

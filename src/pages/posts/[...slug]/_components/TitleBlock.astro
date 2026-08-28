@@ -1,0 +1,109 @@
+---
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import Tag from "@/components/Tag.astro";
+import { slugifyStr } from "@/utils/slugify";
+import { tplStr, useTranslations } from "@/i18n";
+import config from "@/config";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+/*
+  标题块（title block）：工程图纸角上的那块铭牌，机械制图的标准件。
+  文档号 / 日期 / 篇幅 / 标签，一格一项，小字标签压在值上面。
+
+  文档号 CB-TM-YYYYMMDD：CB = clarkebelt，TM = Technical Memorandum
+  （NASA 技术备忘录的编号习惯，如 NASA TM X-74335）。从**发布**日期派生
+  （不是修订日期，编号不该跟着改稿漂移），补录旧文也不会让已有编号变动。
+  但它只是版面上的身份牌 —— 真正的稳定主键仍是 frontmatter 的 uid，
+  评论和阅读量都锚在那上面。同一天发两篇会撞号，撞了再议后缀。
+
+  篇幅两个数的来历（原 ReadingTime.astro 的注释，那个组件已并进这里）：
+  分钟数是按固定字速**估**的（utils/remark/readingTime.ts），字数是数出来的。
+  把确定的那个也摆出来，读者不信字速假设时可以自己换算 ——
+  译文和原创的实际阅读速度差挺多。
+*/
+
+type Props = {
+  pubDatetime: string | Date;
+  modDatetime?: string | Date | null;
+  timezone?: string;
+  minutes?: number;
+  words?: number;
+  tags: string[];
+};
+
+const {
+  pubDatetime,
+  modDatetime,
+  timezone: postTimezone,
+  minutes,
+  words,
+  tags,
+} = Astro.props;
+
+const t = useTranslations(Astro.currentLocale ?? config.site.lang);
+const tz = postTimezone ?? config.site.timezone;
+
+const pub = dayjs(pubDatetime).tz(tz);
+const isModified = Boolean(modDatetime && modDatetime > pubDatetime);
+const shown = isModified ? dayjs(modDatetime).tz(tz) : pub;
+
+const docNo = `CB-TM-${pub.format("YYYYMMDD")}`;
+
+const extent =
+  [
+    words !== undefined
+      ? tplStr(t.post.wordCount, { count: words.toLocaleString("en-US") })
+      : null,
+    minutes !== undefined ? tplStr(t.post.readingTime, { minutes }) : null,
+  ]
+    .filter(Boolean)
+    .join(" · ") || "—";
+
+const labelClass = "text-muted-foreground text-xs tracking-widest";
+const valueClass = "mt-1 text-sm";
+---
+
+{
+  /*
+    格线画法：容器铺 --border 色、gap-px 露出 1px 缝，格子用 --panel 盖回来。
+    比逐格算「第几列要不要左边框」省事，而且随断点塌成单列时格线自动跟对。
+  */
+}
+<dl
+  class="border-border bg-border mt-4 grid grid-cols-1 gap-px border sm:grid-cols-3"
+>
+  <div class="bg-panel p-3">
+    <dt class={labelClass}>{t.post.docNo}</dt>
+    <dd class={valueClass}>{docNo}</dd>
+  </div>
+  <div class="bg-panel p-3">
+    <dt class={labelClass}>
+      {isModified ? t.post.updatedAt : t.post.publishedAt}
+    </dt>
+    <dd class={valueClass}>
+      <time datetime={shown.toISOString()}>{shown.format("YYYY-MM-DD")}</time>
+    </dd>
+  </div>
+  <div class="bg-panel p-3">
+    <dt class={labelClass}>{t.post.extent}</dt>
+    <dd class={valueClass}>{extent}</dd>
+  </div>
+  {
+    tags.length > 0 && (
+      <div class="bg-panel p-3 sm:col-span-3">
+        <dt class={labelClass}>{t.post.tagLabel}</dt>
+        <dd class="mt-1.5">
+          <ul class="flex flex-wrap gap-2">
+            {tags.map(tag => (
+              <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />
+            ))}
+          </ul>
+        </dd>
+      </div>
+    )
+  }
+</dl>

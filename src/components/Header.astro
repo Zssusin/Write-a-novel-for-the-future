@@ -64,16 +64,17 @@ const isActive = (path: string) => {
 
 {
   /*
-    页头是一条「信头」：实底 + 底边一道 2px 墨线（NASA GSM 每页顶上那条
-    粗规则线），不再是浮在星空上的玻璃胶囊。bg-background 必须留着 ——
-    页头是 sticky 的，滚动时正文要从它底下钻过去，没有实底就叠字。
+    页头是一条「信头」：实底 + 底边的双规则线（rule-double，NASA GSM
+    每页顶上那对粗细线，见 surfaces.css），不再是浮在星空上的玻璃胶囊。
+    bg-background 必须留着 —— 页头是 sticky 的，滚动时正文要从它底下
+    钻过去，没有实底就叠字。
   */
 }
 <header
   class="app-shell bg-background sticky top-0 z-40 flex flex-col items-center justify-between py-2 sm:flex-row"
 >
   <div
-    class="border-foreground relative flex w-full items-baseline justify-between border-b-2 py-3 sm:items-center sm:py-4"
+    class="rule-double flex w-full items-baseline justify-between py-3 sm:items-center sm:py-4"
   >
     <a
       href={getRelativeLocaleUrl(locale, "")}

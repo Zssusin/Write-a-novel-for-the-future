@@ -10,6 +10,10 @@ export interface UIStrings {
   post: {
     publishedAt: string;
     updatedAt: string;
+    /** 标题块里「CB-TM-YYYYMMDD」那格的标签 */
+    docNo: string;
+    /** 标题块里「N 字 · 约 M 分钟」那格的标签 */
+    extent: string;
     sharePostIntro: string;
     sharePostOn: string;
     sharePostViaEmail: string;

@@ -1,6 +1,5 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
-import IconHash from "@/assets/icons/IconHash.svg";
 import config from "@/config";
 
 type Props = {
@@ -14,25 +13,23 @@ const { tag, tagName, size = "lg" } = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
 const href = getRelativeLocaleUrl(locale, `tags/${tag}/`);
 
+/*
+  标签是「铭牌」：1px 边框的小方块（直角来自全局压平的圆角阶），
+  不再是 # 加虚线下划线 —— # 是社交平台的话题习惯，图纸上没有这个。
+  悬停时边框和文字一起换 accent，没有位移动效（原来的 -mt-0.5 上跳
+  是俏皮话，手册不说俏皮话）。
+*/
 const linkClass = [
-  "flex items-center gap-0.5",
-  "border-foreground border-b-2 border-dashed",
-  "hover:border-accent hover:text-accent hover:-mt-0.5",
-  "focus-visible:text-accent focus-visible:border-none",
-  { "text-sm": size === "sm" },
-  { "text-lg": size === "lg" },
-];
-
-const iconClass = [
-  "opacity-80",
-  { "size-5": size === "lg" },
-  { "size-4": size === "sm" },
+  "inline-flex items-center border px-2 py-0.5 tracking-wide",
+  "border-border hover:border-accent hover:text-accent",
+  "focus-visible:text-accent",
+  { "text-xs": size === "sm" },
+  { "text-sm": size === "lg" },
 ];
 ---
 
 <li>
   <a {href} class:list={linkClass}>
-    <IconHash class:list={iconClass} />
     {tagName}
   </a>
 </li>

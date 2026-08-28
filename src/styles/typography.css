@@ -33,6 +33,9 @@
     */
     --tw-prose-quotes: var(--foreground);
 
+    /* 图号计数器，一篇文章从 1 数起。用法见下面 figcaption 那段 */
+    counter-reset: fig;
+
     /*
       标题走 --heading 而不是 --foreground：浅色下两者相同（墨色），
       深色下标题是琥珀 #ffdd55 —— Atomic Rockets 的标题就是这个颜色，
@@ -117,21 +120,55 @@
     }
 
     /*
+      图号：figcaption 自动编成「图 1」「图 2」……（计数器在 .app-prose
+      顶部 counter-reset）。计数挂在 figcaption 上而不是 figure 上 ——
+      没写图注的图不占号，编号只跟读者看得见的说明走。
+      「图」字硬编码在 CSS 里：content 做不了 i18n，本站是中文单语站，认了。
+
       调灰用色值而不用 opacity：透明度会连带作用于图注里的链接，
-      还会和底下的玻璃面板叠出一个不受控的混合色。
+      在面板底色上叠出一个不受控的混合色。
     */
     figcaption {
-      @apply text-muted-foreground mt-2 text-sm;
+      counter-increment: fig;
+      border-top: 1px solid var(--border);
+      @apply text-muted-foreground mt-2 pt-2 text-sm;
+
+      &::before {
+        content: "图 " counter(fig);
+        @apply text-foreground me-2 font-medium;
+      }
     }
 
+    /*
+      三线表（booktabs）：2px 粗线封顶封底、表头下一条细线，**没有竖线**，
+      行与行之间也不画 —— LaTeX booktabs 和中文期刊「三线表」共同的规矩。
+      两条粗线和面板顶线、页头规则线是同一族（见 surfaces.css）。
+    */
     table {
+      border-top: 2px solid var(--foreground);
+      border-bottom: 2px solid var(--foreground);
+
+      /*
+        这两个变量是 @tailwindcss/typography 写死的浅色灰（顶上
+        --tw-prose-body 那段注释说的同一类问题）：它拿它们画 thead 的
+        下边线和 tbody 的行线。原来的全框线把它们盖住了，现在框线撤了
+        就会露出来 —— thead 那条接到 --border 正好当三线表的中线，
+        tbody 的行线在下面显式关掉。
+      */
+      --tw-prose-th-borders: var(--border);
+      --tw-prose-td-borders: var(--border);
+
       th,
       td {
-        @apply border-border border p-2;
+        @apply p-2;
       }
 
       th {
         @apply py-1.5;
+      }
+
+      tbody tr {
+        border-bottom: 0;
       }
     }
 
