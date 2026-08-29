@@ -54,10 +54,16 @@ const moreLinkClass =
   "text-accent mt-3 inline-flex items-center gap-1 text-xs decoration-dashed underline-offset-4 hover:underline";
 ---
 
-<!-- 贴顶位置跟着 --below-header 走，别写死像素：理由见 global.css 里那段注释 -->
+<!--
+  贴顶位置跟着 --below-header 走，别写死像素：理由见 global.css 里那段注释。
+
+  lg:mt-4 是对齐用的，不是留白：版心（.content-panel）自带 1rem 上外边距，
+  侧栏不补同样一档的话，两栏的第一行就差 16px 错开 —— 中间那条栏线会把
+  这点错位放大得很明显。两个数必须一起改。
+-->
 <aside
   aria-label={t.sidebar.label}
-  class="lg:sticky lg:top-(--below-header) lg:self-start"
+  class="lg:sticky lg:top-(--below-header) lg:mt-4 lg:self-start"
 >
   <div
     class="space-y-8 lg:max-h-[calc(100svh_-_var(--below-header)_-_2rem)] lg:overflow-y-auto lg:pe-1"
