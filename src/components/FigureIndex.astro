@@ -1,0 +1,78 @@
+---
+import type { FigureEntry } from "@/utils/rehype/figures";
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+
+/*
+  图表目录（list of figures），渲染在右侧栏的文章目录下面。
+
+  这是在补技术手册文档格式里本来就有的那一件东西：NASA 的技术备忘录
+  （TM）在 CONTENTS 之后必有一页 LIST OF FIGURES —— 因为图在这类文档里
+  不是插图，是**证据**，读者常常绕过正文直奔某张图。站上 seal-of-approval
+  一篇就有 9 张，正文里翻找它们只能靠滚。
+
+  数据从 utils/rehype/figures.ts 来（构建时编号时顺手收的），走
+  remarkPluginFrontmatter 通道，见文章页 index.astro 里那段。
+
+  为什么不做滚动高亮：文章目录那份有（IntersectionObserver 盯标题），
+  这份不该有 —— 图不是章节，读者滚过一张图不代表他「在」那张图上，
+  跟着亮一下反而是错的信息。这里只做跳转，零 JS。
+*/
+
+type Props = {
+  figures: FigureEntry[];
+  class?: string;
+};
+
+const { figures, class: className = "" } = Astro.props;
+
+const t = useTranslations(Astro.currentLocale ?? config.site.lang);
+
+const headingClass =
+  "border-border/70 text-muted-foreground mb-3 border-b pb-1.5 text-xs font-semibold tracking-widest";
+---
+
+{
+  /*
+    少于两张就不渲染，和文章目录同一条规则（TableOfContents.astro 里那段）：
+    只有一条的清单不告诉读者任何事，纯粹占地方。
+
+    max-lg:hidden 也同理 —— 窄屏下侧栏整个落在文章**后面**，
+    一份「跳到某张图」的清单出现在读完之后，一件事也做不到。
+  */
+}
+{
+  figures.length >= 2 && (
+    <nav
+      aria-labelledby="figures-heading"
+      class:list={["max-lg:hidden", className]}
+    >
+      <h2 id="figures-heading" class={headingClass}>
+        {t.post.listOfFigures}
+      </h2>
+      {/* max-h + overflow：九张图就已经比目录还长了，侧栏是 sticky 的，
+          不封顶的话下面几块（搜索、标签、归档）会被挤出屏幕。 */}
+      <ol class="max-h-[32svh] space-y-1.5 overflow-y-auto text-sm">
+        {figures.map(figure => (
+          <li>
+            <a
+              href={`#${figure.id}`}
+              class="text-muted-foreground hover:text-accent flex gap-2 decoration-dashed underline-offset-4 hover:underline"
+            >
+              {/*
+                和图注上那个编号**长得一样**：同字体、同字号，只是不加粗。
+                都是「图 3」这三个字符，在两处显示成两种字体会读成两样东西。
+                （所以这里不用等宽 —— 图注里的 .fig-label 也不是等宽。
+                 对齐靠 shrink-0：「图 1」到「图 9」本来就一样宽。）
+              */}
+              <span class="shrink-0 tabular-nums">{figure.label}</span>
+              {/* 图注常常是一整句（书名 + 译者 + 出版社），截到两行；
+                  完整的那份就在图下面，这里只需要认得出是哪张 */}
+              <span class="line-clamp-2">{figure.caption}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}

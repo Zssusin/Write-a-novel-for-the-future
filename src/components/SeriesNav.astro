@@ -32,6 +32,18 @@ const t = useTranslations(locale);
 
 const partLabel = (part: number) => tplStr(t.post.partLabel, { n: part });
 
+const wordsLabel = (words: number) =>
+  tplStr(t.post.wordCount, { count: words.toLocaleString("en-US") });
+
+/*
+  全系列总字数。「共 5 部分」只说了有几篇，没说要读多久 —— 五篇短笔记和
+  五篇两万字的长文对读者是两件完全不同的事，而目录正是他决定要不要开始读的地方。
+
+  只加得到数的部分（words 可选，见 getSeries.ts）。一个都没有就整个不显示，
+  显示一个偏小的假总数比不显示更糟。
+*/
+const totalWords = parts.reduce((sum, part) => sum + (part.words ?? 0), 0);
+
 // 「下一部分」= 排在当前之后的第一篇。用 > 而不是 currentPart + 1，
 // 这样中间空一个号（比如预留了第 3 部分）也不会断链。
 const next =
@@ -56,6 +68,7 @@ const next =
               total: parts.length,
               current: currentPart,
             })}
+            {totalWords > 0 && ` · ${wordsLabel(totalWords)}`}
           </span>
         )}
       </p>
@@ -78,6 +91,15 @@ const next =
                 >
                   {part.title}
                 </a>
+              )}
+              {/*
+                字数靠右，像纸质目录上的页码 —— 一列对齐的数比跟在标题后面
+                好扫，而且标题多长都不影响它的位置。
+              */}
+              {part.words !== undefined && (
+                <span class="text-muted-foreground ms-auto shrink-0 font-mono text-xs tabular-nums">
+                  {wordsLabel(part.words)}
+                </span>
               )}
             </li>
           ))}

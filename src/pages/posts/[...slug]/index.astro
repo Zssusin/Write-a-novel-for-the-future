@@ -9,6 +9,7 @@ import SeriesNav from "@/components/SeriesNav.astro";
 import SourceNote from "@/components/SourceNote.astro";
 import { getPostSlug, getPostUrl } from "@/utils/getPostPaths";
 import { getSeriesIndex, type SeriesPart } from "@/utils/getSeries";
+import type { FigureEntry } from "@/utils/rehype/figures";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import EditPost from "./_components/EditPost.astro";
@@ -96,8 +97,12 @@ const {
 
 /*
   headings 是 Astro 解析 markdown 时顺带产出的标题表（含正文里实际用的 id），
-  给右侧栏的目录用；remarkPluginFrontmatter 是 remark 插件往 frontmatter 上
-  写的东西 —— 这里只有 utils/remark/readingTime.ts 塞的那两个数。
+  给右侧栏的目录用；remarkPluginFrontmatter 是构建期插件往 frontmatter 上
+  写的东西 —— 阅读时长和字数（utils/remark/readingTime.ts）、公式标记
+  （utils/remark/mathFlag.ts），以及图表目录（utils/rehype/figures.ts）。
+
+  名字里带 remark，但 rehype 插件写进去的一样收得到：两边共用同一个 vfile，
+  Astro 在整条管道跑完之后才把它读出来。
 
   注意它**不是** post.data：post.data 是 zod 校验过的那份，只含文件里真写了的
   字段。构建期算出来的值走的是这条通道。
@@ -108,6 +113,8 @@ const readingTime = remarkPluginFrontmatter.readingTime as number | undefined;
 const wordCount = remarkPluginFrontmatter.wordCount as number | undefined;
 // utils/remark/mathFlag.ts 塞的：真值时 PostLayout 才挂 KaTeX 的样式表
 const hasMath = remarkPluginFrontmatter.hasMath === true;
+// utils/rehype/figures.ts 塞的：带图注的图，按出现顺序，给侧栏的图表目录
+const figures = (remarkPluginFrontmatter.figures ?? []) as FigureEntry[];
 
 let ogImageUrl: string | undefined;
 
@@ -246,7 +253,7 @@ const ogImage = ogImageUrl
       }
       {config.features.comments !== false && <Comments term={uid} />}
     </main>
-    <Sidebar {headings} />
+    <Sidebar {headings} {figures} />
   </div>
   <Footer />
 </PostLayout>

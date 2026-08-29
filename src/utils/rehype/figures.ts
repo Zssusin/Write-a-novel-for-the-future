@@ -35,6 +35,28 @@
   边界：只认独占一段的图片 —— markdown 里 `![]()` 单独成行时生成的是
   <p><img></p>，这里把整个 <p> 换成 <figure>（<figure> 塞在 <p> 里是非法
   HTML，浏览器会把它拆开，版式当场散架）。行内混排的图片不碰，也不需要碰。
+
+  三、图号。
+
+  「图 1」「图 2」…… 原来是 CSS 计数器画的（typography.css 里
+  figcaption::before + counter(fig)）。挪到这里，是因为 CSS 生成的内容
+  **只存在于渲染结果里**：DOM 里没有这个数，页面上也没有可以指过去的锚点。
+  于是三件事都做不了 ——
+
+    · 侧栏列不出「图表目录」（列出来也无从跳转）
+    · 正文里写不了「见图 3」并自动链过去
+    · 读者复制一段图注，编号不会跟着走
+
+  在这里编号，figure 拿到 id="fig-N"，图注里多一个 <span class="fig-label">，
+  三件事同时成立。代价是 CSS 少了一条自动性：以后手写的 <figure> 不会
+  自动得到编号 —— 但这个站的图全部来自 markdown 的 `![]()`，都经过这里。
+
+  编号只给**写了图注的图**，和原来 CSS 里 counter-increment 挂在 figcaption
+  上是同一条规则：没有说明文字的图不占号。
+
+  编号计数器必须建在**转换函数内部**：unified 的插件函数只在搭管道时调用
+  一次，返回的 transformer 被所有文章复用。计数器写在外层的话，第二篇文章
+  的第一张图会从上一篇的号往下接。
 */
 
 import { readFileSync, existsSync } from "node:fs";
@@ -55,6 +77,45 @@ type Node = {
   properties?: Record<string, unknown>;
   children?: Node[];
 };
+
+/*
+  和 readingTime.ts / mathFlag.ts 走同一条通道：把构建期算出来的东西写进
+  file.data.astro.frontmatter，页面用 `await render(post)` 的
+  remarkPluginFrontmatter 取。名字里带 remark 但 rehype 插件写的一样收得到 ——
+  两边共用的是同一个 vfile，Astro 在整条管道跑完之后才把它读出来。
+*/
+type FileWithFrontmatter = {
+  data?: {
+    astro?: {
+      frontmatter?: Record<string, unknown>;
+    };
+  };
+};
+
+/** 一张图在「图表目录」里的一条。 */
+export type FigureEntry = {
+  /** 锚点 id，形如 fig-3 */
+  id: string;
+  /**
+   * 现成的编号文字，如「图 3」。
+   *
+   * 存整串而不是存数字 + 让侧栏自己拼：拼的话「图」字就有了第三个出处
+   * （这里、remark/directives.ts、侧栏组件），而它们必须永远一致 ——
+   * 图注上写「图 3」、目录里写「Fig 3」是不能接受的。存整串，
+   * 图注和目录读的就是同一个值。
+   */
+  label: string;
+  /** 图注原文（不含编号） */
+  caption: string;
+};
+
+/*
+  「图」这个字硬编码在这里。原来它硬编码在 CSS 的 content 里（那处连
+  i18n 的可能性都没有），挪过来至少变成了一个能改的常量。站是中文单语
+  （astro.config.ts 的 i18n.locales 只有 zh），真加第二种语言时，这里和
+  remark/directives.ts 里 :fig 那条要一起按文章语言取。
+*/
+export const FIG_WORD = "图";
 
 const isBlank = (n: Node) =>
   n.type === "text" && typeof n.value === "string" && n.value.trim() === "";
@@ -103,8 +164,44 @@ function inlineChart(src: string, alt: string): Node {
   return svg;
 }
 
+/*
+  校验正文里的图号引用。
+
+  认的是**指向图锚点的链接**，不看是谁写的 —— :fig[3] 生成的，和作者手写的
+  [见图 3](#fig-3)，都得指得中。判断放在这里而不是 remark 阶段：图号是这个
+  插件编的，remark 跑的时候还不知道这篇有几张图。
+
+  指不中就**让构建失败**。整个文件的其他地方（未登记的指令、没带尺寸的远程图）
+  都是静默降级，这一处例外，因为后果不一样：一个断掉的「见图 5」不是少了点
+  样式，是把读者指向一张不存在的图 —— 那是错的信息，不是缺的信息。
+  和 check-posts.mjs 对 uid 的态度一致。
+*/
+function checkFigureRefs(tree: Node, total: number): void {
+  const walk = (node: Node) => {
+    if (node.type === "element" && node.tagName === "a") {
+      const href = node.properties?.href;
+      const m = typeof href === "string" ? /^#fig-(\d+)$/.exec(href) : null;
+      if (m) {
+        const n = Number(m[1]);
+        if (n < 1 || n > total) {
+          throw new Error(
+            `[figures] 正文里引用了「${FIG_WORD} ${n}」，但这篇只有 ${total} 张带图注的图。` +
+              `（图号只给写了图注的图，见 utils/rehype/figures.ts）`
+          );
+        }
+      }
+    }
+    for (const child of node.children ?? []) walk(child);
+  };
+  walk(tree);
+}
+
 export function rehypeFigures() {
-  return (tree: Node) => {
+  return (tree: Node, file: FileWithFrontmatter) => {
+    /* ⚠️ 计数器建在这里，不是外层 —— 外层的话第二篇会接着上一篇的号数。
+       理由写在文件顶部「三、图号」那段。 */
+    const figures: FigureEntry[] = [];
+
     const walk = (node: Node) => {
       const kids = node.children;
       if (!kids) return;
@@ -131,14 +228,35 @@ export function rehypeFigures() {
             properties: {},
             children: [content],
           };
+
           if (caption) {
+            const n = figures.length + 1;
+            const id = `fig-${n}`;
+            const label = `${FIG_WORD} ${n}`;
+            figure.properties!.id = id;
+            figures.push({ id, label, caption });
+
             figure.children!.push({
               type: "element",
               tagName: "figcaption",
               properties: {},
-              children: [{ type: "text", value: caption }],
+              children: [
+                /*
+                  编号是图注里的一个真元素，不是 ::before。样式（间距、字重）
+                  在 typography.css 的 .fig-label 上 —— 和原来那条 ::before
+                  一模一样，换的只是它从哪儿来。
+                */
+                {
+                  type: "element",
+                  tagName: "span",
+                  properties: { className: ["fig-label"] },
+                  children: [{ type: "text", value: label }],
+                },
+                { type: "text", value: caption },
+              ],
             });
           }
+
           kids[i] = figure;
           continue;
         }
@@ -147,5 +265,13 @@ export function rehypeFigures() {
       }
     };
     walk(tree);
+
+    checkFigureRefs(tree, figures.length);
+
+    /* 少于两张就不往下传：侧栏的图表目录和文章目录用同一条规则
+       （见 components/TableOfContents.astro 里那段）—— 只有一条的清单
+       不告诉读者任何事。判断留在页面那边做，这里只负责如实交出来。 */
+    const frontmatter = file.data?.astro?.frontmatter;
+    if (frontmatter) frontmatter.figures = figures;
   };
 }

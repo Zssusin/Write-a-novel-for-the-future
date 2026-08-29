@@ -30,6 +30,13 @@
 */
 
 /*
+  「图」字从编号那边借，不在这里另写一个 —— 两处一旦走散，正文里的
+  「见 图 3」就会指向一条写着「Fig 3」的图注，而且不报错。
+  （utils/rehype/figures.ts 负责编号，这里只负责生成指过去的链接。）
+*/
+import { FIG_WORD } from "../rehype/figures";
+
+/*
   和 readingTime.ts / mathFlag.ts 一样，只声明用得到的字段，不引 @types/mdast。
   directive 相关的三个 type 来自 mdast-util-directive。
 */
@@ -64,6 +71,7 @@ export type DirectiveOptions = {
 };
 
 const CONTAINER = "containerDirective";
+const TEXT = "textDirective";
 
 /*
   取出块的标题，并把它从正文里摘掉。
@@ -215,6 +223,41 @@ const HANDLERS: Record<string, Handler> = {
     node.data ??= {};
     node.data.hName = "figure";
     node.data.hProperties = { class: "quote-frame" };
+  },
+
+  /*
+    图号交叉引用。**行内**写法，一个数：
+
+        承力结构见 :fig[3]。
+
+    渲染成指向 #fig-3 的链接，文字是「图 3」——「图」字由指令补上，
+    所以正文里写「见 :fig[3]」，不是「见图 :fig[3]」。
+
+    为什么要一条指令，而不是让作者手写 [见图 3](#fig-3)：手写那种要作者
+    自己记住图号，而图号是构建时按出现顺序编的 —— 中间插一张图，后面所有
+    引用**静默指错**。写成 :fig[3] 至少让「3 是个图号」这件事对工具可见，
+    于是 utils/rehype/figures.ts 编完号之后能挨个校验，指不中就让构建失败。
+    （手写的 #fig-N 链接也一并校验，见那边的 checkFigureRefs。）
+
+    标签不是正整数就不管，落到下面那道 span 兜底：`:fig[前面那张]` 这种写法
+    本来就形不成引用，报错也没有可修的目标。
+
+    ⚠️ 只有**写了图注**的图才有号。没图注的图不占号，也就引用不到 ——
+    这条规则在 figures.ts 那边，改一处得改两处。
+  */
+  fig(node) {
+    if (node.type !== TEXT) return;
+
+    const raw = node.children?.[0]?.value;
+    if (typeof raw !== "string" || !/^\d+$/.test(raw.trim())) return;
+
+    const n = Number(raw.trim());
+    if (n < 1) return;
+
+    node.data ??= {};
+    node.data.hName = "a";
+    node.data.hProperties = { href: `#fig-${n}`, class: "fig-ref" };
+    node.children = [{ type: "text", value: `${FIG_WORD} ${n}` }];
   },
 };
 

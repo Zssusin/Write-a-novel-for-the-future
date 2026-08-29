@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import { getPostUrl } from "@/utils/getPostPaths";
 import { useTranslations, tplStr } from "@/i18n";
 import Datetime from "./Datetime.astro";
+import { getPostExtent } from "@/utils/getPostExtent";
 import config from "@/config";
 
 /*
@@ -40,6 +41,17 @@ const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
 
 const href = getPostUrl(id, filePath, Astro.currentLocale);
+
+/*
+  字数。文章页的铭牌上是「N 字 · 约 M 分钟」两个数，列表里**只放字数**：
+
+    · 列表是用来扫的，一行里塞两个量就开始要人分辨哪个是哪个了。
+    · 两个数里字数是数出来的，分钟数是按固定字速估的（见 TitleBlock 里那段）。
+      扫列表时给确定的那一个。
+
+  数从哪儿来、为什么不用 render()，见 utils/getPostExtent.ts。
+*/
+const { words } = getPostExtent(Astro.props);
 
 /*
   ogImage 复用为列表首图。schema 是 image().or(z.string())，所以两种形态都要接：
@@ -131,7 +143,24 @@ const thumbClass =
           {title}
         </Heading>
       </a>
-      <Datetime {...props} />
+      {/* 日期和字数同一行：手册风里这两样都是「读数」，分两行读者要找两次 */}
+      <div class="flex flex-wrap items-center gap-x-2">
+        <Datetime {...props} />
+        {
+          words !== undefined && (
+            <>
+              <span class="text-muted-foreground text-sm" aria-hidden="true">
+                ·
+              </span>
+              <span class="text-muted-foreground font-mono text-sm">
+                {tplStr(t.post.wordCount, {
+                  count: words.toLocaleString("en-US"),
+                })}
+              </span>
+            </>
+          )
+        }
+      </div>
       <p class="mt-1">{description}</p>
     </div>
   </div>

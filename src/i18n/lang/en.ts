@@ -29,6 +29,7 @@ export default {
     nextPart: "Next part",
     translatedFrom: "Translated from",
     tableOfContents: "Contents",
+    listOfFigures: "Figures",
     readingTime: "{{minutes}} min read",
     wordCount: "{{count}} words",
     comments: "Comments",

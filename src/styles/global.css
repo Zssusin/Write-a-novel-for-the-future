@@ -97,6 +97,26 @@
   --below-header: calc(var(--header-h) + 1rem);
 }
 
+/*
+  锚点跳转的落点。
+
+  ⚠️ 2026-08-29 之前这里是 `scroll-margin-block: 1rem`，**全站的锚点跳转都是坏的**：
+  侧栏目录点进去、别人分享的 #标题 链接打开，目标标题都落在贴顶导航条底下
+  74px 的地方（实测 1440px 视口：标题 top=16，页头 bottom=90）。读者看到的是
+  上一节的末尾，还以为链接指错了。
+
+  1rem 大概是「给锚点留点呼吸」的意思，但它没把导航条算进去 —— 而
+  --below-header 正是为这件事定义的（见上面那条注释：「贴顶元素、锚点跳转的落点」）。
+  ArchiveTree.astro 里早就是这么写的，只有这条通用规则没跟上。
+
+  为什么这条压得住 typography.css 里的规则：那个文件整个包在 @layer base 里，
+  而这条在 layer 外面 —— **无层样式赢过任何有层样式，跟选择器权重无关**。
+  所以图、标题、脚注的落点都只能由这一条统一给，别再去各自的选择器上加
+  scroll-margin-top，加了也不生效（试过了）。
+
+  block-end 保留 1rem：反向滚动（比如 shift+tab 退回来）时不需要让开页头。
+*/
 :target {
-  scroll-margin-block: 1rem;
+  scroll-margin-block-start: var(--below-header);
+  scroll-margin-block-end: 1rem;
 }

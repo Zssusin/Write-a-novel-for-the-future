@@ -29,6 +29,7 @@ export default {
     nextPart: "下一部分",
     translatedFrom: "译自",
     tableOfContents: "目录",
+    listOfFigures: "图表",
     readingTime: "约 {{minutes}} 分钟",
     wordCount: "{{count}} 字",
     comments: "评论",

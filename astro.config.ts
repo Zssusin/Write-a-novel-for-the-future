@@ -52,6 +52,19 @@ export default defineConfig({
     // 试验：让正文图自带 srcset。手机上一张 1280 宽的图现在是原样发的。
     layout: "constrained",
   },
+  /*
+    ⚠️ 改了下面任何一个 remark / rehype 插件之后，**本地构建看到的可能是旧结果**。
+
+    内容层把渲染好的 HTML 缓存在 node_modules/.astro/data-store.json 里，
+    失效依据是**文章文件**的摘要 —— 插件代码不在里面。所以插件改了、
+    文章没改，`astro build` 会安安静静地把上一次的 HTML 再发一遍，
+    不报错、不提示，很容易让人以为是自己的改动没生效。
+
+        rm -f node_modules/.astro/data-store.json && npm run build
+
+    CI 上没这个问题（每次都是干净检出），所以它只坑本地。
+    没把这条清理写进 build 脚本，是因为那样每次发文都要重渲全站文章。
+  */
   markdown: {
     processor: unified({
       remarkPlugins: [

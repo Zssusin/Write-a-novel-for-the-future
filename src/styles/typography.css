@@ -33,9 +33,6 @@
     */
     --tw-prose-quotes: var(--foreground);
 
-    /* 图号计数器，一篇文章从 1 数起。用法见下面 figcaption 那段 */
-    counter-reset: fig;
-
     /*
       标题走 --heading 而不是 --foreground：浅色下两者相同（墨色），
       深色下标题是琥珀 #ffdd55 —— Atomic Rockets 的标题就是这个颜色，
@@ -183,11 +180,6 @@
     }
 
     /*
-      图号：figcaption 自动编成「图 1」「图 2」……（计数器在 .app-prose
-      顶部 counter-reset）。计数挂在 figcaption 上而不是 figure 上 ——
-      没写图注的图不占号，编号只跟读者看得见的说明走。
-      「图」字硬编码在 CSS 里：content 做不了 i18n，本站是中文单语站，认了。
-
       调灰用色值而不用 opacity：透明度会连带作用于图注里的链接，
       在面板底色上叠出一个不受控的混合色。
     */
@@ -217,19 +209,44 @@
     }
 
     /*
-      编号只给**真的图**：figure 里得有 <img> 或 <svg>。
+      图号「图 1」「图 2」……
 
-      不能挂在裸 figcaption 上 —— 引文框（.quote-frame，下面那段）也是
-      <figure> + <figcaption>，那条 figcaption 装的是署名。不限定的话
-      每个引文框都会占掉一个图号，正文里的「图 3」和图注上的「图 4」
-      就对不上了，而且署名前面会冒出一个「图 5」。
+      2026-08-29 之前这里是 CSS 计数器：figcaption 上 counter-increment，
+      ::before 里 content: "图 " counter(fig)。编号现在由
+      utils/rehype/figures.ts 在构建时写成一个真的 <span class="fig-label">，
+      这里只剩样式 —— 视觉上一模一样（还是 me-2 + font-medium + 墨色）。
+
+      为什么值得换掉一个能用的方案：CSS 生成的内容只存在于渲染结果里，
+      DOM 里没有那个数。于是侧栏列不出图表目录、正文写不了「见图 3」、
+      读者复制图注编号不跟着走。完整理由在 figures.ts 顶部「三、图号」。
+
+      顺带解决的：原来那条选择器得写成
+      `figure:is(:has(> img), :has(> svg)) > figcaption` 来避开引文框
+      （.quote-frame 也是 <figure> + <figcaption>，那条装的是署名，
+      不限定的话每个引文框都会吃掉一个图号）。现在编号只发给这个插件
+      自己造的图片 figure，这道防线成了结构性的，不再靠选择器精度。
     */
-    figure:is(:has(> img), :has(> svg)) > figcaption {
-      counter-increment: fig;
+    .fig-label {
+      @apply text-foreground me-2 font-medium;
+    }
 
-      &::before {
-        content: "图 " counter(fig);
-        @apply text-foreground me-2 font-medium;
+    /*
+      图号引用（正文里的 :fig[3]，以及作者手写的 #fig-N 链接）。
+
+      不加下划线、不换颜色：它在句子中间，和「图 3」那个标签是同一个东西，
+      读者需要的是「这四个字可以点」，不是一个抢眼的链接。虚线下划线留给
+      hover —— 和站上其他链接一致（decoration-dashed）。
+
+      跳过去别被导航条盖住这件事不在这里做，也不在 figure 上做 ——
+      全站由 global.css 的 :target 一条统一给（那条在 @layer 外面，
+      压得住这里的任何规则，理由写在那儿）。
+    */
+    .fig-ref {
+      @apply text-inherit no-underline decoration-dashed underline-offset-4;
+
+      &:hover,
+      &:focus-visible {
+        @apply text-accent underline;
       }
     }
 
