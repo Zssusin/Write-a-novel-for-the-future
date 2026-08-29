@@ -127,12 +127,38 @@
       @apply border-border border p-2;
     }
 
+    /*
+      图片的链接态：**边框颜色就是「这张图能点」的提示**。
+
+      抄的是 Atomic Rockets。他家 main.css 里给图片边框排了一整套状态色
+      （不可点 = 与卡纸同色等于隐形、可点 #55CCDD、访问过 #880000、
+      悬停 #FF0000）—— 那是 90 年代浏览器给链接图片自动加彩边的老规矩，
+      他们没关掉，反而做成了信息。这里只留「可点」这一档，用 accent。
+
+      role="button" 是 scripts/lightbox.ts 在运行时加的（它跳过被 <a>
+      包住的图，那种是作者自己写的链接，灯箱不抢）。所以这条规则**天然
+      只在灯箱真的装好之后才生效** —— JS 没跑或跑挂了，边框就老老实实是
+      发丝线，不会骗读者去点一张点不开的图。
+
+      不加 transition：手册风里状态切换是瞬时的，而且这样滚动时零开销。
+    */
     img[role="button"] {
       @apply cursor-zoom-in;
+
+      &:hover,
+      &:focus-visible {
+        @apply border-accent;
+      }
 
       &:focus-visible {
         @apply outline-2 outline-offset-2 outline-dashed;
       }
+    }
+
+    /* 作者手写的链接图（灯箱会跳过它们）走同一套提示 */
+    a:hover > img,
+    a:focus-visible > img {
+      @apply border-accent;
     }
 
     /*
@@ -166,9 +192,40 @@
       在面板底色上叠出一个不受控的混合色。
     */
     figcaption {
-      counter-increment: fig;
       border-top: 1px solid var(--border);
       @apply text-muted-foreground mt-2 pt-2 text-sm;
+
+      /*
+        图注的宽度**不参与**撑开 figure。
+
+        上面那条 figure:has(> img){w-fit} 想把边框收到照片那么宽，但
+        fit-content 取的是「所有子元素里最宽的那个的 max-content」——
+        图注是一行不换行的长句，它的 max-content 往往比照片还宽。实测
+        280px 的书封配 436px 的图注，那条图注顶线左右各探出 78px，
+        像一条飘在图外的横杠。
+
+        width:0 让图注对这个计算的贡献变成 0（于是 figure 只按照片算），
+        min-width:100% 再把它撑回容器宽度。Atomic Rockets 干的是同一件事，
+        只是他们直接在 HTML 里写 <figcaption style="width:585px">
+        ——照片宽度是构建期已知的常量。我们用 CSS 做，不依赖内联样式。
+
+        对满宽的 <svg> 图表无副作用：那种 figure 本来就是块级满宽，
+        min-width:100% 拿到的就是满宽。
+      */
+      width: 0;
+      min-width: 100%;
+    }
+
+    /*
+      编号只给**真的图**：figure 里得有 <img> 或 <svg>。
+
+      不能挂在裸 figcaption 上 —— 引文框（.quote-frame，下面那段）也是
+      <figure> + <figcaption>，那条 figcaption 装的是署名。不限定的话
+      每个引文框都会占掉一个图号，正文里的「图 3」和图注上的「图 4」
+      就对不上了，而且署名前面会冒出一个「图 5」。
+    */
+    figure:is(:has(> img), :has(> svg)) > figcaption {
+      counter-increment: fig;
 
       &::before {
         content: "图 " counter(fig);
@@ -261,6 +318,95 @@
     /* not-italic：盖掉 prose 默认的 font-style: italic，理由见上面 h3 那段 */
     blockquote {
       @apply border-s-accent/80 wrap-break-word not-italic opacity-80;
+    }
+
+    /*
+      引文框：由 :::source 生成（语法和输出结构见 utils/remark/directives.ts）。
+
+      ── 画法 ──
+
+          ━━━━━━━━━━━━━━━━━━━━━━━  2px 墨线
+          来源名                     ← .quote-frame-head
+          ───────────────────────  1px 发丝线
+          引文正文……
+          ━━━━━━━━━━━━━━━━━━━━━━━  2px 墨线
+                          署名       ← .quote-frame-foot，落在框外
+
+      **和三线表是同一族**：上下两条粗线封口、里面一条细线分栏头，没有竖线。
+      署名落在下粗线**外面**，那是三线表「资料来源」注的位置 —— 它说明的是
+      这个块的出处，不是块里的内容。
+
+      Atomic Rockets 的 figure.textbox 是同一个结构（顶栏来源、底栏署名），
+      但他家两条栏是 #00113B 实色块 + Michroma 白字。这里不填色：站上刚统一
+      成一张纸（见 theme.css 配色那段），正文里插一块深色会把版面重新劈开。
+      规则线够用 —— 让「有名有姓」这件事成立的是结构，不是底色。
+    */
+    .quote-frame {
+      border-top: 2px solid var(--foreground);
+      @apply my-8;
+
+      > .quote-frame-head {
+        border-bottom: 1px solid var(--border);
+        /*
+          等宽 + 拉开字距：和标题铭牌（TitleBlock）的标签是同一套手法，
+          读起来是「一个可核对的出处」，不是一句话。
+        */
+        @apply text-heading py-2 font-mono text-sm tracking-wider;
+
+        /*
+          来源名带链接时不换颜色，跟着头栏走 —— 下划线已经说明它可点了。
+          Atomic Rockets 那条栏也是这么处理的（textboxtopname 里的
+          a:link 直接写死成栏的白色，不用站点链接色）。
+
+          不这么做的话，「有链接的来源」和「没链接的来源」在深色下会是
+          两个颜色（一个链接蓝、一个琥珀），同一种东西长两副样子。
+        */
+        a {
+          @apply hover:text-accent text-inherit;
+        }
+      }
+
+      /*
+        盖掉上面那条 blockquote：竖线和 80% 不透明度在这儿都是重复的
+        —— 框已经把「这是引文」说清楚了，再压一次只会让引文比正文难读。
+      */
+      > blockquote {
+        border-bottom: 2px solid var(--foreground);
+        /*
+          ps-0：prose 给 blockquote 的左内边距要去掉。留着的话引文正文比
+          上面的来源名、下面的署名往右缩 17px —— 整站就一个左边缘
+          （见 surfaces.css 版心那段），框里也不能例外。
+        */
+        @apply border-s-0 py-4 ps-0 opacity-100;
+
+        > :first-child {
+          @apply mt-0;
+        }
+
+        > :last-child {
+          @apply mb-0;
+        }
+
+        /*
+          关掉 prose 自动插的那对弯引号。
+
+          @tailwindcss/typography 会给 blockquote 的首尾段加 open-quote /
+          close-quote，那是**拉丁排版**的默认：中文引文自己带「」，再套一层
+          西文弯引号就成了 “「…」”。而且这个框本身已经在说「这是引来的」，
+          再加一对引号是第三次重复。
+
+          只关框里的：站上普通的 > 引用不归这段管。
+        */
+        > p:first-of-type::before,
+        > p:last-of-type::after {
+          content: none;
+        }
+      }
+
+      /* 上边线由 blockquote 的下边框画了，这里不再画第二条 */
+      > .quote-frame-foot {
+        @apply border-t-0 pt-2 text-end;
+      }
     }
 
     /*

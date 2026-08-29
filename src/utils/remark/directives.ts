@@ -37,6 +37,8 @@ type Node = {
   type: string;
   name?: string;
   value?: string;
+  /* link 节点用；下面 :::source 的来源名可以是个链接 */
+  url?: string;
   attributes?: Record<string, string | null | undefined> | null;
   data?: {
     hName?: string;
@@ -116,6 +118,103 @@ const HANDLERS: Record<string, Handler> = {
     node.data ??= {};
     node.data.hName = "details";
     node.data.hProperties = { class: "spoiler" };
+  },
+
+  /*
+    引文框：一整段外来引文，**带名带署名**地框起来。
+
+        :::source[Atomic Rockets · Basic Design]{href="https://…" by="Winchell Chung"}
+        这些方法「horribly simplistic」，但「far better than just making up your figures」。
+        :::
+
+    来源名也可以写成属性：`:::source{from="…"}`。方括号那种优先，
+    因为它是一棵 mdast 子树，可以带 **加粗**、`代码`、行内链接。
+    三样都是可选的：只写正文也能用，退化成一个纯规则线的框。
+
+    ── 为什么值得单开一种块 ──
+
+    这站干的事就是译介，引文不是修辞而是主体内容。普通的 > 引用只说
+    「这段是引来的」，说不出**从哪引的**、**谁写的** —— 而这两件事恰恰是
+    读者判断可信度的全部依据。Atomic Rockets 那套 figure.textbox 就是这个
+    思路（顶栏写来源、底栏写署名），只是他家用深蓝色块，这里用规则线：
+    上下两条粗线、头栏下一条发丝线，和三线表是同一族（见 typography.css）。
+
+    ── 输出结构 ──
+
+        <figure class="quote-frame">
+          <div class="quote-frame-head">来源名</div>   ← 可选
+          <blockquote>…正文…</blockquote>
+          <figcaption class="quote-frame-foot">署名</figcaption>  ← 可选
+        </figure>
+
+    正文包一层 <blockquote> 是语义要求：这确实是引用，读屏和「引文」类
+    工具认的是这个标签，不是那个 class。
+  */
+  source(node) {
+    if (node.type !== CONTAINER) return;
+
+    const attrs = node.attributes ?? {};
+    const attr = (key: string): string => {
+      const value = attrs[key];
+      return typeof value === "string" ? value.trim() : "";
+    };
+    const href = attr("href");
+    const by = attr("by");
+
+    /*
+      头栏取值：方括号标签优先，其次 {from="…"}。两个都没有就不画头栏
+      —— 不造一句「来源」之类的占位，那种默认文案只会骗读者。
+    */
+    let head: Node | undefined;
+    const first = node.children?.[0];
+    if (first?.data?.directiveLabel) {
+      head = first;
+      node.children = node.children?.slice(1) ?? [];
+    } else if (attr("from")) {
+      head = {
+        type: "paragraph",
+        children: [{ type: "text", value: attr("from") }],
+      };
+    }
+
+    const children: Node[] = [];
+
+    if (head) {
+      /*
+        给了 href 就把整个来源名包成链接。包在**外面**而不是自己造一个
+        <a> 塞文本进去：方括号标签里可能已经有加粗、行内代码，
+        整棵子树平移过去就行。
+      */
+      if (href) {
+        head.children = [
+          { type: "link", url: href, children: head.children ?? [] },
+        ];
+      }
+      head.data = {
+        ...head.data,
+        hName: "div",
+        hProperties: { class: "quote-frame-head" },
+      };
+      children.push(head);
+    }
+
+    children.push({ type: "blockquote", children: node.children ?? [] });
+
+    if (by) {
+      children.push({
+        type: "paragraph",
+        data: {
+          hName: "figcaption",
+          hProperties: { class: "quote-frame-foot" },
+        },
+        children: [{ type: "text", value: by }],
+      });
+    }
+
+    node.children = children;
+    node.data ??= {};
+    node.data.hName = "figure";
+    node.data.hProperties = { class: "quote-frame" };
   },
 };
 
