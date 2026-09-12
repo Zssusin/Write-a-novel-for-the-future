@@ -1,5 +1,4 @@
 ---
-import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
 import IconArrowNarrowUp from "@/assets/icons/IconArrowNarrowUp.svg";
 import { useTranslations } from "@/i18n";
 
@@ -8,7 +7,7 @@ const t = useTranslations(Astro.currentLocale);
 
 {
   /*
-    定位一律用 sticky，手机上也是。
+    定位一律用 sticky，手机和桌面端保持一致。
 
     历史包袱，想改成 fixed 之前先读：玻璃时代的 .content-panel 带
     backdrop-filter，按 CSS 规范它会成为 fixed 后代的**包含块**，
@@ -23,38 +22,51 @@ const t = useTranslations(Astro.currentLocale);
   id="btt-btn-container"
   class:list={[
     "sticky bottom-8 z-50 float-end",
-    "md:me-1",
+    "me-1",
     "translate-y-14 opacity-0 transition duration-500 motion-reduce:transition-none",
   ]}
 >
   <button
     data-button="back-to-top"
+    data-label={t.post.backToTop}
+    aria-label={t.post.backToTop}
+    title={t.post.backToTop}
     class:list={[
-      // 实底 + 边线，不再是半透明玻璃；投影也去掉了 —— 手册风的层次只靠线给
-      "group bg-background border-border relative border px-2 py-1",
-      "size-14 rounded-full",
-      "md:h-8 md:w-fit md:rounded-md md:focus-visible:rounded-none",
+      // 实底 + 边线，手册风的层次只靠线给（surfaces.css）
+      // 全端保持圆钮（theme.css:26），外圈承载进度环，内显箭头与数字进度
+      "group bg-background border-border hover:border-accent/60 relative flex flex-col items-center justify-center border",
+      "size-14 rounded-full transition-colors md:size-12",
     ]}
   >
     <span
       id="progress-indicator"
-      class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"
+      class="absolute inset-0 -z-10 block scale-110 rounded-full bg-transparent"
     ></span>
-    <IconArrowLeft class="inline-block rotate-90 md:hidden" />
-    <span class="group-hover:text-accent sr-only text-sm md:not-sr-only">
-      <IconArrowNarrowUp class="inline-block size-4" />
-      {t.post.backToTop}
+    <IconArrowNarrowUp
+      class="text-foreground group-hover:text-accent size-4.5 transition-all duration-200 group-hover:-translate-y-0.5 md:size-4"
+      aria-hidden="true"
+    />
+    <span
+      id="progress-percent"
+      class="text-muted-foreground group-hover:text-accent mt-0.5 font-mono text-[11px] leading-none font-semibold transition-colors md:text-[10px]"
+    >
+      0%
     </span>
+    <span class="sr-only">{t.post.backToTop}</span>
   </button>
 </div>
 
 <script>
   const rootElement = document.documentElement;
   const btnContainer = document.querySelector("#btt-btn-container");
-  const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+  const backToTopBtn = document.querySelector<HTMLButtonElement>(
+    "[data-button='back-to-top']"
+  );
   const progressIndicator = document.querySelector<HTMLElement>(
     "#progress-indicator"
   );
+  const progressPercent =
+    document.querySelector<HTMLElement>("#progress-percent");
 
   if (btnContainer && backToTopBtn && progressIndicator) {
     backToTopBtn.addEventListener("click", () => {
@@ -62,18 +74,33 @@ const t = useTranslations(Astro.currentLocale);
       document.documentElement.scrollTop = 0;
     });
 
+    const baseLabel = backToTopBtn.dataset.label ?? "回到顶部";
     let lastVisible: boolean | null = null;
     const handleScroll = () => {
       const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
       const scrollTop = rootElement.scrollTop;
-      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+      const scrollPercent =
+        scrollTotal > 0
+          ? Math.min(
+              100,
+              Math.max(0, Math.round((scrollTop / scrollTotal) * 100))
+            )
+          : 0;
 
       progressIndicator.style.setProperty(
         "background-image",
         `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
       );
 
-      const isVisible = scrollTop / scrollTotal > 0.3;
+      if (progressPercent) {
+        progressPercent.textContent = `${scrollPercent}%`;
+      }
+
+      const dynamicLabel = `${baseLabel} (${scrollPercent}%)`;
+      backToTopBtn.setAttribute("title", dynamicLabel);
+      backToTopBtn.setAttribute("aria-label", dynamicLabel);
+
+      const isVisible = scrollTotal > 0 && scrollTop / scrollTotal > 0.3;
 
       if (isVisible !== lastVisible) {
         btnContainer.classList.toggle("opacity-100", isVisible);
@@ -83,6 +110,9 @@ const t = useTranslations(Astro.currentLocale);
         lastVisible = isVisible;
       }
     };
+
+    // 初始化执行一次，确保带有 hash 锚点或恢复滚动位置进页面时正确展示
+    handleScroll();
 
     // scroll 每帧都触发，而 handleScroll 要读 scrollHeight/clientHeight
     // （强制同步布局），rAF 把它压到每帧最多一次。
