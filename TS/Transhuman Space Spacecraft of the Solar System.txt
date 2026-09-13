@@ -1,0 +1,3526 @@
+Written by Kenneth Peters
+Additional material by David Pulver
+Edited by Sean Punch
+Illustrated by Christopher Shy
+
+GURPS System Design ■ Steve Jackson
+Creative Director ■ Philip Reed
+Playtesters:
+Frederick Brackin,
+Jürgen Hubert,
+Anthony Jackson,
+M.A. Lloyd,
+and Phil Masters.
+
+Managing Editor ■ Andrew Hackard
+GURPS Line Editor ■ Sean Punch
+
+Transhuman Space Line Editor ■ David Pulver
+Project Administrator ■ Monique Chapman
+Production Artist ■ Philip Reed
+Production Assistance ■ Wayne Barrett and Gene Seabolt
+Print Buyer ■ Monica Stephens
+GURPS Errata Coordinator ■ Andy Vetromile
+Sales Manager ■ Ross Jepson
+
+GURPS, Warehouse 23, and the all-seeing pyramid are registered trademarks of Steve Jackson Games
+Incorporated. Transhuman Space, Pyramid, Spacecraft of the Solar System, and the names of all products
+published by Steve Jackson Games Incorporated are registered trademarks or trademarks of Steve Jackson
+Games Incorporated, or used under license. Transhuman Space: Spacecraft of the Solar System is copyright
+© 2002 by Steve Jackson Games Incorporated. All rights reserved. Printed in the USA.
+ISBN 1-55634-597-6
+
+1 2 3 4 5 6 7 8 9 10
+
+STEVE JACKSON GAMES
+
+INTRODUCTION . . . . . . . . . . . . . .3
+
+1. LOCAL SPACE VEHICLES . . . . . .4
+
+SURFACE-TO-SURFACE TRANSPORT . . . . . .5
+Common Local Space
+Vehicle Classes . . . . . . . . . . . . . . . .5
+Traveling as a Passenger . . . . . . . . . .6
+WORKHORSES . . . . . . . . . . . . . . . . . . . . . .7
+Certifications and Licenses . . . . . . . . .8
+
+2. CIVILIAN DEEP-SPACE
+VESSELS . . . . . . . . . . . . . . .10
+
+DEEP-SPACE TRANSPORTS . . . . . . . . . . . .11
+Commercial Spacecraft Classes . . . .11
+Triplanetary Lines . . . . . . . . . . . . . . .12
+Cargo Containers . . . . . . . . . . . . . . .14
+Mars Interplanetary . . . . . . . . . . . . .15
+PERSONAL SPACECRAFT . . . . . . . . . . . . . .16
+Independents . . . . . . . . . . . . . . . . . . .17
+Internal Fittings and Systems . . . . . .19
+UNUSUAL DEEP-SPACE VEHICLES . . . . . .20
+Bioships . . . . . . . . . . . . . . . . . . . . . . .22
+
+3. MILITARY VESSELS . . . . . . . .24
+
+EUROPEAN SPACE CONTROL
+AGENCY (ESCA) . . . . . . . . . . . . . .25
+A Fractured Fleet . . . . . . . . . . . . . . .25
+Common Military
+Spacecraft Classes . . . . . . . . . . . .25
+Doctrine, Organization,
+and Deployment . . . . . . . . . . . . . .26
+Other ESCA Nations . . . . . . . . . . . . .27
+PEOPLES’ LIBERATION ARMY NAVY
+SPACE FORCE (PLAN-SF) . . . . . . .32
+UNITED STATES AEROSPACE
+FORCE (USAF) . . . . . . . . . . . . . . .37
+Deep Space Wings . . . . . . . . . . . . . . .38
+USTRANSCOM . . . . . . . . . . . . . . . . .40
+Shipboard Combat . . . . . . . . . . . . . .43
+TRANSPACIFIC SOCIALIST
+ALLIANCE (TSA) . . . . . . . . . . . . . .44
+Rogue AKVs . . . . . . . . . . . . . . . . . . .46
+
+INDEX . . . . . . . . . . . . . . . . . . .48
+
+ABOUT GURPS
+
+Steve Jackson Games is committed to full support
+of the GURPS system. Our address is SJ Games, Box
+18957, Austin, TX 78760. Please include a selfaddressed, stamped envelope (SASE) any time you write
+us! Resources include:
+Pyramid (www.sjgames.com/pyramid/). Our
+online magazine includes new GURPS rules and articles.
+It also covers Dungeons and Dragons, Traveller, World
+of Darkness, Call of Cthulhu, and many more top games
+– and other Steve Jackson Games releases like In
+Nomine, Illuminati, Car Wars, Toon, Ogre Miniatures,
+and more. Pyramid subscribers also have access to
+playtest files online!
+New supplements and adventures. GURPS continues to grow, and we’ll be happy to let you know what’s
+new. A current catalog is available for an SASE. Or check
+out our website (below).
+Errata. Everyone makes mistakes, including us –
+but we do our best to fix our errors. Up-to-date errata
+sheets for all GURPS releases, including this book, are
+available from SJ Games; be sure to include an SASE. Or
+download them from the Web – see below.
+
+Gamer input. We value your comments, for new
+products as well as updated printings of existing titles!
+Internet. Visit us on the World Wide Web at
+www.sjgames.com for an online catalog, errata, updates,
+Q&A, and much more. GURPS has its own Usenet
+group, too: rec.games.frp.gurps.
+GURPSnet. This e-mail list hosts much of the
+online discussion of GURPS. To join, e-mail majordomo@io.com with “subscribe GURPSnet-L” in the body,
+or point your web browser to gurpsnet.sjgames.com.
+The Spacecraft of the Solar System web page is
+www.sjgames.com/transhuman/spacecraft/.
+
+Page References
+Rules and statistics in this book are specifically for
+GURPS Basic Set, Third Edition Revised. Any page reference that begins with a B refers to GURPS Basic Set
+– e.g., p. B102 means p. 102 of GURPS Basic Set, Third
+Edition Revised. Page references that begin with CI indicate GURPS Compendium I; TS is Transhuman
+Space. For a full list of abbreviations, see
+p. CI181 or the updated list at www.sjgames.com/
+gurps/abbrevs.html.
+
+A
+
+A
+
+In the silence of space, there is
+BOUT THE UTHOR
+movement. Thousands of shapes
+glide between worlds in a stately
+The bioroid known as Kenneth L.
+dance, propelled by fires hotter than
+Peters has been playing roleplaying games
+any sun, seeing with eyes of light.
+since emerging from his exowomb. Since
+These new chariots, with skins of
+serving with the USMC as a MAGTF Planmetal and diamond, allow man to
+ner, he has been observed playing GURPS,
+move among the planets and seek his
+Shadowrun, and 2300AD while infiltrating
+fortune in the dawn of a new century.
+the local educational facilities to acquire
+Spacecraft provide the means
+training in anthropology.
+by which humanity has
+spread from Earth to the
+far reaches of the solar
+system. From NASA’s
+BOUT RANSHUMAN PACE
+ill-fated Horus I to
+The
+Transhuman Space series presents a unique
+the strange Nadezhda
+hard-science
+and high-biotech universe for roleplaying.
+bioship, Transhuman
+Set
+in
+the
+solar
+system in the year 2100, it is a setting
+Space: Spacecraft of the
+rich
+in
+adventure,
+mystery, and exploration of the possiSolar System describes
+bilities
+of
+existence.
+The core book in the line is Transdozens of vessels, as
+written
+by David Pulver. It presents an
+human
+Space,
+well as the organizations
+overview
+of
+the
+solar
+system
+of 2100.
+that use them.
+
+A
+
+T
+
+S
+
+Local space vehicles are designed for
+short-range operations rather than interplanetary flight. They range from powerful
+heavy lift vehicles that boost hundreds of
+tons of cargo into orbit to tiny
+
+workpods that busily swarm around orbital
+spaceports. Local space vehicles are the
+most common vessels in the solar system;
+many do not receive official names, only
+numbers.
+
+SURFACETO-SPACE
+TRANSPORT
+
+Spacecraft built to lift payloads into
+Earth, Venus, or even Mars orbit, or to perform sustained suborbital flights, are very
+different designs from deep-space craft.
+Escaping the relatively high gravity is not
+easy, and requires engines capable of sustaining multi-G burns for minutes at a time.
+
+MERCURY-CLASS
+HEAVY LIFT VEHICLE
+
+The Columbia Aerospace Mercury is a
+common laser-lift passenger transatmospheric vessel in use on Earth and Mars.
+Although overshadowed by sleek TAVs
+such as the Pegasus (p. TS192), these
+HLVs are used for the majority of heavy
+lift and personnel transport, and are the
+most economical way to lift large numbers
+of passengers into low Earth orbit. The
+Mercury is not particularly sophisticated,
+but it is reliable and cheap – a prime concern given the tight margins of the space
+transport business.
+The Mercury is quite large, with a conical streamlined hull measuring 55’ wide
+and 95’ high when ready for launch. The
+craft cannot take off or move under its own
+power – it is towed to the launch site, and a
+vertical gantry is used to raise it to an
+upright position, with crew and passengers
+boarding through a tower gate. The tight
+passenger accommodations and overworked environmental systems can make
+trips uncomfortable if there are significant
+delays, although most orbital flights are
+over relatively quickly. After the craft disembarks its cargo and passengers, it gets a
+maintenance check, boards passengers and
+cargo that are headed back to the surface,
+and glides down to a spaceport – sometimes
+the same one it lifted from, but just as
+often a different port.
+
+For security and space reasons,
+passengers are rarely allowed carry-on
+luggage, but each passenger is allowed up
+to 10 cubic feet and 250 lbs. in the cargo
+area as part of the ticket price, with extra
+space or mass available for a fee. Total payload is approximately 1,576.3 tons, including 800 passengers and a full cargo load. A
+launch on Earth requires 140 spaces of ablative plastic reaction mass, all of which is
+used before entering orbit – effectively doubling its delta-v. Performance for the hydrogen-oxygen maneuvering rockets assumes
+all of the ablative plastic has been expended. There are 23.33 spaces available for
+future modifications. Batteries can power
+all systems for 16.7 hours.
+
+COMMON LOCAL SPACE
+VEHICLE CLASSES
+
+Heavy Lift Vehicle (HLV): A singlestage laser rocket (or sometimes a chemical rocket) designed to transport a load of
+cargo into space.
+Orbital Transfer Vehicle (OTV): A
+cheap “space truck” for short-range hops
+between adjacent orbital facilities, or for
+quick voyages such as from Earth orbit to
+Lunar orbit or L4/L5.
+Transatmospheric Vehicle (TAV): A
+single-stage-to-orbit or hypersonic suborbital cargo or passenger vehicle.
+Workpod: A cheap one- or two-person
+spacecraft with manipulator arms and a
+simple chemical or fission rocket.
+These are civilian vessels; see p. 25 for
+military spacecraft classes.
+
+Crew: Pilot (Electronics Operation (Communications), Electronics Operation
+(Sensors), Piloting (Aerospace), Piloting (Low-Performance Spacecraft)).
+NAI-run cybershells usually suffice as
+stewards, as flights rarely last more
+than a few hours and passengers are
+restricted in their movements.
+
+TRAVELING AS A PASSENGER
+
+The biggest concern of passenger carriers in
+2100 is security. Deadly accidents and crashes
+caused by air hijackers in the early 21st century
+prompted draconian policies for the first commercial spacecraft. There have been several
+cycles of easing and tightening security in the
+wake of various real or perceived threats; in particular, tensions following the Pacific War and
+the attack on the Mars space elevator have led to
+heightened levels of alertness. In 2100, fairly
+strict security precautions are a fact of life on
+both aerospace and local space transports, especially in Mars and Earth-Lunar space, and
+around Mercury.
+Security starts before passengers are permitted to board the craft. Passengers are subjected to
+a battery of tests to check for weapons and contraband. Major spaceports in the inner solar system (Mercury to Mars) have especially tight
+security, as everyone knows just how much
+damage a suicidal TAV could cause. Chemsniffers and surveillance dust are everywhere, and
+an attempt to evade or disrupt the monitoring
+will result in a cavity search and HyMRI scan;
+airport and spaceport security are extremely
+unsympathetic toward anyone who does not play
+by the rules. Most ports also conduct biological
+spot testing of the environment and random
+
+passengers in order to control the possible spread
+of disease and detect known criminals. An airport or spaceport should be considered CR 4 in
+the receiving area, CR 5 in the boarding area.
+Civilian port security personnel are usually
+unarmed, or armed only with electrolasers
+(p. TS155), but are backed up by armed guards
+or cybershells, and – in large or sensitive ports –
+by specialized paramilitary forces or even nearby military garrisons.
+Aboard the craft, the most important security precaution is that the passengers and pilot
+(living or infomorph) never interact directly.
+On aerospace vehicles, the crew compartment
+is only accessible through a separate external
+entryway. It is completely isolated from the
+rest of the craft, and includes its own foodpreparation equipment and restrooms. The
+bulkhead separating the two areas is often
+armored for additional protection.
+Except on long-duration trips, passengers
+are restricted in their movements. It only takes
+one clumsy individual to upset a lot of people,
+never mind injure himself or others. Dedicated
+NAIs keep an eye on passengers, alert for suspicious behavior. On space vessels, passengers
+are usually asked to strap in for burns of 0.05 G
+or more.
+
+Design: Streamlined cylinder (459.8
+spaces, foamed alloy, medium frame);
+cDR/cPF 3/1F, 1/1S, 1/1B (aluminum
+armor).
+Modules: Old cockpit; small PESA; small
+fixed radar [F]; 25 compact laser rocket; 0.5 compact hydrogen-oxygen rocket; 45 tanks (hydrogen-oxygen); 6
+luxury cabin; 50 passenger seats; 2
+small entry module; 2 large entry module; 0.5 battery; 300 cargo (1,500 tons).
+Statistics: EMass 1,105; CMass 2,900;
+LMass 3,819. Cost M$30.5. cHP 338.
+Size Modifier +6/+8. HT 12. Maintenance Interval: 3.62 hours. RRA 0.
+Performance: Laser Rocket: sAccel: 2.59
+G. Burn Endurance: 0.09 hours (5.4
+minutes). Burn Points: 840. Delta-
+
+V: 2.56 mps. No air speed. HO Rocket:
+sAccel: 0.09 G. Burn Endurance: 0.091
+hours (5.46 minutes). Burn Points: 30.
+Delta-V: 0.09 mps. No air speed.
+
+MOLNIYA BALLISTIC
+RAMJET TAV
+
+The RKK Livanov Molniya (Russian
+for “lightning”) is a large transport designed
+for hypersonic flights through Earth’s upper
+atmosphere. It can fly from Los Angeles to
+Beijing in under an hour, or connect New
+York City to Paris in half an hour.
+Ballistic transports face stiff competition from transonic turbofan transports,
+especially as telepresence has eroded the
+need for fast transportation, but they
+
+WORKHORSES
+
+remain in use for business travelers
+and fast package delivery. Ruthless market pressures make travel on ballistic transports relatively inexpensive, although
+accommodations are spartan and perks are
+few. In this cutthroat market, Livanov is one
+of the few companies that produce ballistic
+liners in any quantity.
+The Molniya is a 200’-long, 120’-wide
+streamlined delta. With a full load of 320
+passengers and 25 tons of cargo, the payload is 55.3 tons.
+
+BUMBLEBEE WORKPOD
+
+Crew: Pilot and Copilot (Electronics Operation (Communications), Electronics
+Operation (Sensors), Piloting (Aerospace)); 2 Stewards (Diplomacy,
+Savoir-Faire (Servant)).
+Design: Streamlined delta (512 spaces, carbon composite, light frame, smart,
+responsive, lifting body); cDR/cPF
+1.4/1F, 1/1S, 1/1B (carbon composite
+armor).
+Modules: Old basic bridge; small fixed
+radar [F]; 30 compact turbo-scramjet;
+450 tanks (ultralight, jet fuel); 20 passenger seats; small entry module; 2
+large entry module; 1 battery; 5 cargo
+(25 tons).
+Statistics: EMass 640; CMass 3,125;
+LMass 5,555. Cost M$166.09. cHP
+240. Size Modifier +9. HT 12. Maintenance Interval: 3.1 hours. RRA 0.
+Performance: No space performance. Fuel
+Endurance: 10 hours. Air Speed: 6,635
+mph (1.84 mps). Stall Speed: 356 mph.
+
+Crew: Pilot (Electronics Operation (Communications), Piloting (High-Performance Spacecraft)).
+
+In terms of sheer numbers, these vessels are the most common spacecraft in the
+solar system. The equivalent of tugs, shuttle
+buses, and pickup trucks, they are as indispensable as they are unglamorous.
+
+The Vosper-Babbage Bumblebee is a
+small, one-man spacecraft designed to
+assist in orbital construction projects.
+Dozens of these craft can be seen around
+most large construction facilities. Eurospatiale and Tenzan Heavy Industries manufacture similar designs. It is rare to see a
+Bumblebee that is not personalized to some
+extent, with the owner’s name hand-painted
+on the hull or animated corporate logos
+playing on the surface.
+The workpod is a simple sphere, 15’ in
+diameter. Its liquid-crystal surface displays
+a safety-yellow pattern by default, but most
+operators replace sections of this pattern
+with colorful designs to differentiate the
+craft visually. Behind the pilot are the fuel
+tanks holding water for the fission drive. All
+but the most foolhardy pilot wears a vacc
+suit, as accidents around crowded habitats
+can occur even with AI traffic management.
+
+CERTIFICATIONS AND LICENSES
+
+Hundreds of thousands of people live
+and work in space, but only a fraction have
+the skills needed to crew a space vessel. To
+weed out unqualified personnel, businesses
+and insurance companies often require
+prospective crews to possess appropriate certifications and licenses from recognized testing facilities.
+The following licenses are common. The
+GM is encouraged to make up his own; it is
+a convenient way of listing qualifications for
+NPCs. Licensing and certification fees vary
+by location and testing facility; a typical
+charge is $1,000, with a yearly retest costing
+$200.
+S-License: The most basic space
+license. It certifies that the individual is not a
+hazard to those around him. It is a prerequisite for all other space certifications and
+licenses. Requires Free Fall-10 and Computer Operation-10 – and Vacc Suit-10 for biosapients incapable of operating unprotected
+in vacuum.
+
+Design: Sphere hull (3.375 spaces, foamed
+alloy, light frame); cDR/cPF 1/1 (titanium alloy armor). Liquid-crystal skin.
+Modules: Old cockpit; small radar; 0.25
+compact fission drive (water reaction
+mass); 1.7 tanks (ultralight, water); 2
+small robot arms; 0.5 battery.
+Statistics: EMass 23; CMass 36; LMass
+49. Cost M$2.91. cHP 5. Size Modifier
++3. HT 12. Maintenance Interval:
+11.73 hours. RRA 0.
+Performance: sAccel: 0.84 G. Burn
+Endurance: 0.08 hours (4.8 minutes).
+Burn Points: 240. Delta-V: 0.74 mps.
+No air speed.
+
+SCHAFFER ORBITAL
+TRANSFER VEHICLE
+
+An upgraded version of a NASA
+design, the Columbia Aerospace Schaffer
+was one of the first mass-produced
+
+Pilot’s License: Certification in a particular Piloting specialty. Requires Piloting-11
+in that specialty. Most licensing agencies also
+require familiarity with the specific craft the
+pilot would be flying.
+Host Services: Sometimes called the
+“good cookie,” this certification is generally
+required for anyone who works as a steward
+or flight attendant aboard a spacecraft.
+Requires First Aid-9, Savoir-Faire (Servant)11, and 100 hours (1/2 point) of training in
+Freight Handling.
+Operations License: Requires Electronics Operation (Communications)-12 and
+Electronics Operation (Sensors) -12. Habitat
+operations licenses usually require some
+level of Administration skill as well.
+Certified Medical Technician (CMT):
+Requires Diagnosis-12, Electronics Operation (Medical)-12, and First Aid-12.
+
+OTVs, and played a significant role in the
+early colonization of Earth-Lunar space.
+The first chemical rocket-powered Schaffer
+entered service in 2020 with NASA and the
+ESA. Production ceased in 2076, after
+decades of service and a multitude of
+upgrades. Most of the original operators
+replaced these vehicles with more advanced
+craft, such as the Kagoshima (p. TS191).
+Many were sold off into private hands and
+to businesses; a handful were transported to
+Mars.
+Today, these craft are extremely
+common in LEO and the L5 Junk Jungle,
+often operated by independent cargo
+haulers or by the “vacuum cleaners” who
+sweep out orbital debris. Many have
+undergone
+modifications,
+ranging
+from the installation of more advanced
+drives and cockpits to “meteor-defense”
+weaponry; it’s rare to see an original factory model. The version listed here is
+
+representative of the most common
+combination of modifications.
+The hull is a cylinder 45’ long and 22’
+wide. The two solar panels are 45’ × 45’,
+and help recharge the batteries, which can
+power the vessel for 49.6 hours. Typical
+payload is 148.5 tons. There are 3.6 spaces
+remaining for additional modifications.
+Crew: Pilot/Navigator (Astrogation, Piloting (Low-Performance Spacecraft));
+Communications/Sensor
+Operator
+(Electronics Operation (Communications), Electronics Operation (Sensors)); Steward/Cargo Master (Freight
+Handling, Savoir-Faire (Servant)).
+Design: Cylinder hull (34.848 spaces, titanium alloy, light frame); cDR/cPF
+1/1F, 1/1S, 1/1B (titanium alloy
+armor).
+Modules: Old basic bridge; small PESA;
+fixed medium radar [F]; 1 HI fusion
+torch (water); 15 tanks (water); cabin; 2
+passenger seats; small entry module; 5
+battery; external cradle (125 tons); 4
+ksf solar panels; 4 cargo (20 tons).
+Statistics: EMass 179; CMass 440; LMass
+553. Cost M$12.26. cHP 30. Size Modifier +4/+5. HT 12. Maintenance Interval: 5.71 hours. RRA 0.
+Performance: sAccel: 0.003 G. Burn
+Endurance: 625 hours. Burn Points:
+6,750. Delta-V: 20.6 mps. No air speed.
+Variant: Salvage operators unable to
+afford a more expensive purposedesigned salvage vessel often settle for
+the “Angry Schaffer.” Replace the two
+
+Salvage
+operators often
+settle for the
+“Angry
+Schaffer.”
+
+passenger seats with a 2.5-MJ light
+laser tower, an additional 2 cargo
+spaces, and a 1-space power pack
+(18 shots). They usually do not load
+their external cradle. EMass 195;
+CMass 338; LMass 450. Cost
+M$14.97. sAccel: 0.004. Burn Points:
+9,000. Delta-V: 27.5 mps.
+
+TAHMAS INTERSTATION
+TRANSPORT POD
+
+The Tahmas (Hebrew for “nighthawk”)
+transport is a Columbia Aerospace design
+that dates back almost 20 years, with the
+first model entering production in 2081. It is
+a utilitarian craft that shuttles small cargoes
+of people and goods between the teeming
+orbital habitats in Earth-Lunar space. The
+forward cockpit is directly connected to the
+passenger compartment, and a standard
+bulkhead door leads right into the storage
+area.
+The transport is a cylinder only 20’
+long and 10’ wide, so there is little room to
+exercise or relax. The air filtration units are
+notoriously unreliable if used for long periods of time. Many owners replace the entire
+life-support system with new modules to
+make lengthy trips more comfortable. Typical payload is 3.4 tons. The batteries can
+power all systems for 8 hours.
+Crew: Pilot (Astrogation, Electronics
+Operation (Communications), Electronics Operation (Sensors), Piloting
+(Low-Performance Spacecraft)).
+Design: Cylinder hull (3.2 spaces, titanium
+alloy, heavy frame); cDR/cPF 0.5/1F,
+0.2/1S, 0.2/1B (titanium alloy armor).
+Modules: Old cockpit; small fixed radar
+[F]; 0.25 HI fusion torch; 1 tanks
+(hydrogen); 0.5 passenger seats; small
+entry module; 0.2 battery; 0.5 cargo
+(2.5 tons).
+Statistics: EMass 15; CMass 19; LMass
+19. Cost M$1.41. cHP 6. Size Modifier
++2/+3. HT 12. Maintenance Interval:
+16.8 hours. RRA 0.
+Performance: sAccel: 0.005 G. Burn
+Endurance: 100 hours. Burn Points:
+1,800. Delta-V: 5.5 mps. No air speed.
+
+Civilians own the vast majority of the
+hundreds of space vessels active in the solar
+system. Post-Pacific War advances in vessel
+construction and the development of relatively cheap fusion pulse drives have
+reduced the cost of operating and maintaining interplanetary craft to the point where
+moderately wealthy individuals can
+
+afford space flight. Large corporations
+(often with government subsidies) operate
+fleets of heavy transports that move goods
+and people between Earth and its colonies.
+Meanwhile, independent entrepreneurs,
+research foundations, and the extremely
+rich own or lease a growing number of
+vessels.
+
+DEEP-SPACE
+TRANSPORTS
+
+equipment that feeds rock dust from
+the cargo bays. Typical payload (excluding rock dust) is 252.3 tons, while 200
+spaces of cargo are dedicated to rock dust
+(5,200 tons). Trade goods and other spacecraft are carried on external cradles, for a
+total payload of 502.3 tons. There are 24.5
+spaces remaining for additional expansions.
+
+The independent cargo haulers receive
+most of the media’s attention, but large corporations are responsible for over 90% of
+Crew: Pilot/Navigator (Astrogation, Pilotall shipments. The largest of these firms,
+ing (Low-Performance Spacecraft));
+Mars Interplanetary and Triplanetary Lines,
+Communications/Sensor
+Operator
+are responsible for the majority of bulk
+(Electronics Operation (Communicaspace transport in 2100. However, small
+tions), Electronics Operation (Sensors));
+independent companies and even crewCargo Master (Freight Handling).
+operated “freehaulers” abound. Sometimes
+operating out of remodeled vessels
+whose original hulls date back to
+the “second age of sail,” they perform jobs the big companies will
+OMMERCIAL
+not touch – even if that means
+transporting illegal or restricted
+PACECRAFT LASSES
+goods.
+Deep-Space Operations Vehicle (DSOV): A
+long-endurance vessel used to establish outposts or
+conduct scientific expeditions.
+OLUB LASS
+Executive Space Vehicle (ESV): A small, privately
+operated
+vessel optimized for high delta-v and
+TILITY PACE
+comfort.
+EHICLE
+Heavy Space Transport Vehicle (HSTV): A
+heavy,
+deep-space cargo vessel.
+AVPK Moiseyev’s GolubPassenger
+Space Vehicle (PSV): A fusion-drive
+class USV is one of the few
+“fastliner”
+with
+spin gravity and lots of cabins.
+vessels to use mass-driver
+Utility
+Space
+Vehicle (USV): A generic
+propulsion. Originally designed
+“freighter”
+used
+to
+carry
+people, haul cargo, and perfor near-Earth asteroid mining
+form
+other
+workhorse
+tasks.
+Often operated by coroperations in the 2050s, various
+porate
+fleets.
+refurbished examples remain in
+use today. Its main users are
+fringe asteroid, Lunar-orbit, and
+L5 communities who have bought
+second- or third-hand vessels. Many serve
+Design: Cylinder hull (640 spaces, titanium
+as glorified interstation transports,
+alloy, light frame); cDR/cPF 5/2F,
+although the craft is also popular with sur1/1S, 1/1B (foamed alloy armor). Hull
+vivalists thanks to its lack of a visible drive
+radiators (4 ksf). Liquid-crystal skin.
+signature. “Golub” is Russian for “dove,”
+Modules: Old basic bridge; small PESA;
+and vessels in the class were originally
+small fixed radar [F]; 2 2.5-MJ light
+named after birds; however, their current
+laser towers [S]; 15 mass driver engine
+owners have renamed most of those still in
+(rock dust); 4 bunkroom; large entry
+service.
+module; minifac workshop; 2 rock
+Constructed from materials readily
+crusher; 33 old fission reactor (64
+available in the asteroids and translunar
+MW); 1 battery; 1 power pack; 2 exterspace, the vessel is a cylinder 250’ long and
+nal cradles (250 tons each); 550 cargo
+40’ wide. Much of the length is dedicat(rock dust, 14,300 tons).
+ed to the mass-driver engine and
+
+G
+U
+V
+
+-C
+S
+
+S
+
+C
+
+C
+
+TRIPLANETARY LINES
+
+Triplanetary Lines is a comparatively old
+space transport company, founded in 2056 by a
+consortium of forward-thinking investors from
+the United States, Norway,
+Korea, and the Gulf States. They
+were the first to offer regular
+scheduled service between
+Earth, Mars, and Mercury
+(hence the company name). In
+the 2080s, they pioneered commercial service to the larger
+Main Belt stations and Saturn.
+Triplanetary Lines was also the
+first major carrier to use fusion
+pulse drives. Their early investment in this technology gave
+them an edge, especially in the
+Deep Beyond market – although
+in recent years, aggressive competition from Mars Interplanetary has eroded their share of the
+lucrative Earth-Mars route.
+In 2095, Triplanetary Lines’ space crews
+voted to unionize in the face of possible
+replacement by infomorphs and bioroids. Organized as the Farhauler’s Guild, they consolidated employee-held stock, giving them much
+influence with the board of directors. Employee benefit programs are generous, even by 2100
+standards; the health package goes so far as to
+cover some performance-enhancing nanomods.
+On the other hand, employees are expected to
+work more hours over a longer period than is
+usual in 2100.
+Triplanetary Lines has been attempting to
+regain its share of the Earth-Mars trade, which
+is presently dominated by Mars Interplanetary.
+
+Statistics: EMass 1,036; CMass 8,688;
+LMass 15,838. Cost M$36.68. cHP
+259. Size Modifier +5/+10. HT 12.
+Maintenance Interval: 3.31 hours.
+RRA 4.
+Performance: sAccel: 0.00017 G. Burn
+Endurance: 1,833.33 hours. Burn
+Points: 1,120. Delta-V: 3.428 mps.
+No air speed.
+
+They are offering generous discount packages
+to businesses and individuals willing to sign
+long-term shipping agreements for business
+worth $5,000,000 or more a year.
+Shipping contracts require an upfront payment of at least
+$20,000,000, which is set aside as
+credit. All shipping rates are then
+5% or more below normal, with
+charges coming off the credit
+before additional billing. Unofficially, the company also offers a
+“streamlined bureaucracy” (“no
+questions asked”) policy for certain clients who request “discretion” about what they want
+carried.
+Triplanetary primarily operates PSVs and USVs, with a
+handful of HSTVs for the EarthSaturn and Earth-Mercury runs.
+Typical Triplanetary vessels
+include the Sudbury (p. TS191) and Meizi (p.
+TS193) classes, as well as a few Spokane (pp.
+14-15) and Zhongguang (p. 16) craft. For shipping cargo on relatively unprofitable routes
+(such as Venus and some Belt colonies), it operates low-cost automated slowhaulers such as
+the Parus plasma sail craft (pp. 13-14). The
+company has considered purchasing an antimatter pulse drive craft as a passenger flagship
+for the Earth-Saturn route, but no decision has
+been made. It currently uses freelancers and
+independents for any trips that require faster
+travel times than those attainable with its existing fleet. These subcontractors must use
+Farhauler’s Guild crews.
+
+MOCHI-CLASS
+PASSENGER SPACE
+VEHICLE
+
+Manufactured in 2085 by South
+African aerospace concern MDB Integrated Systems, the Mochi class (named
+
+after African mountains and rivers) is
+popular with independents looking for a
+relatively inexpensive craft that can be used
+for a wide variety of tasks. Its most common role is as a fast, cheap passenger
+transport and cargo hauler, where it
+fills a niche between the Sudbury
+class and the Meizi class. The
+largest operator is Triplanetary
+Lines, with nine Mochi-class vessels
+in service on mixed cargo-passenger
+runs to Mercury, the Main Belt, and Saturn,
+where the full capacity of a Meizi would be
+excessive.
+The Mochi’s hull is a cylinder 200’ long
+and 45’ wide. At the midsection, two 120’
+spin arms connect two identical 30’-long,
+15’-wide cylinders. These spin capsules can
+generate up to 0.4 G at maximum rate, but a
+more comfortable level of 0.12 G is usual. A
+typical payload is 806.5 tons. There are 13.4
+empty spaces in the main hull – often used
+to install additional passenger quarters or
+amenities such as zero-G pools.
+Crew: Commander/Pilot (Astrogation,
+Electronics Operation (Communications), Electronics Operation (Sensors), Piloting (Low-Performance
+Spacecraft)); 6 Engineers (Mechanic
+(Fusion Drive), Mechanic (Robotics),
+other Mechanic skills as appropriate));
+Medic
+(Diagnosis,
+Physician,
+Surgery); Cargo Master (Administration, Freight Handling).
+Design: [Hull] Cylinder hull (648 spaces,
+carbon composite, heavy frame,
+smart); cDR/cPF 5/1F, 2/1S, 3/1B
+(metal matrix composite armor). [Pod
+#1 and #2] Cylinder hull (10.8 spaces,
+metal matrix composite, medium
+frame); cDR/cPF 1/1F, 1/1S, 1/1B
+(metal matrix composite armor). Hull
+radiators (25 ksf).
+Modules: [Hull] New basic bridge; medium PESA; medium radar; 50 HI fusion
+pulse drive; 400 tanks (ultralight,
+nuclear pellets); 2 cabin; 4 luxury
+cabin; 2 passenger seats; 2 large entry
+module; small entry module; minifac
+workshop; light storm shelter (2-space:
+encloses passenger seats, cPF 100);
+
+Parus are
+unmanned
+craft, as trip
+times of two
+years or more
+per AU are not
+unheard of.
+5 battery; surgery; 150 cargo (750
+tons). [Pods] 5 cabin; 5 cargo (25 tons).
+Statistics: EMass 2,026; CMass 5,233;
+LMass 7,633. Cost M$148.22. cHP
+[Hull] 961, [Pods] 27. Size Modifier
+[Hull] +5/+9, [Pods] +3/+4. HT 12.
+Maintenance Interval: 3.29 hours.
+RRA 25.
+Performance: sAccel: 0.04 G. Burn
+Endurance: 200 hours. Burn Points:
+28,800. Delta-V: 88 mps. No air speed.
+
+PARUS-CLASS HEAVY
+SPACE TRANSPORT
+VEHICLE
+
+The Parus (Russian for “sail”) was one
+of the first deep-space transports – although
+it would likely be classified as an USV
+rather than as an HSTV by 2100 standards.
+It played a crucial role in colonization and
+development programs during the “second
+age of sail.”
+These are unmanned craft, as trip times
+of two years or more per AU are not
+unheard of. Over two dozen of the craft
+were constructed at great cost by 2050.
+Only a half-dozen remain in service today,
+hauling cargo from Mars to the Belt and
+back. Individual craft are named after
+famous sailing vessels.
+
+CARGO CONTAINERS
+
+Cargo is never simply piled up in a vessel.
+To ensure proper stowage and protection, it is
+either palletized or loaded into sealed containers for shipment. This can be assumed without
+further elaboration when cargo is carried internally; however, when cargo is carried externally, it can be useful to have statistics for the
+containers themselves.
+Design: All containers are built as
+steel box hulls with ultra-light frames
+(see High Frontier). They are armored
+with 0.2 cDR of steel armor. They can
+fold down to 5% of their original height.
+Accessing a container normally means unsealing it. To avoid this, install an airlock.
+Very Small: 4’ × 8’ × 6’. 0.384 spaces (192
+cf). 1 ton. M$0.001. cHP 0.
+Small: 10’ × 8’ × 8’. 1.28 spaces (640 cf).
+2 ton. M$0.002. cHP 1.
+Average: 10’ × 10’ × 8’. 1.6 spaces (800
+cf). 3 tons. M$0.003. cHP 1.
+The 30’-by-17’ cylinder hull is dwarfed
+by the plasma sail, and is practically invisible
+within the plasma trail produced. The sight is
+quite breathtaking, and is often featured in
+educational programs dealing with the early
+days of space travel. A typical payload is 125
+tons carried on the external cradle.
+Crew: Unmanned. Infomorph occupies
+unmanned controls and uses Electronics Operation (Communications), Electronics Operation (Sensors), and
+Piloting (Plasma Sail).
+Design: Cylinder hull (13.872 spaces, carbon composite, light frame); cDR/cPF
+1/1F, 1/1S, 1/1B (carbon composite
+armor).
+Modules: Old unmanned controls; small
+PESA; 1 plasma sail; 8 tanks (ultralight, hydrogen); 0.1 battery; 1.5 old
+fission reactor (1 MW); 1 external cradle (125 tons).
+Statistics: EMass 46; CMass 175; LMass
+179. Cost M$11.79. cHP 16. Size Modifier +4/+4. HT 12. Maintenance Interval: 5.82 hours. RRA 0.
+
+Large: 20’ × 8’ × 8’. 2.56 spaces (1,280
+cf). 4 tons. M$0.004. cHP 1.
+Very Large: 40’ × 8’ × 8’. 5.12 spaces
+(2,560 cf). 8 tons. M$0.008. cHP 2.
+Containers can be given climate controls
+(-30°F to 230°F) for M$0.0005 and 0.0025
+MW per space. All climate-controlled
+containers include a rechargeable Dcell (5 kWh) as a backup power supply.
+Containers can be fitted with airlocks and life support and used as
+sealed lab modules, or equipped with
+modules such as rock crushers
+(p. TS184) and loaded onto a vessel as needed.
+They can even be unloaded and modified into
+housing and storage – which is not uncommon
+in L5’s Junk Jungle. Military units often deploy
+connected containers to form an “instant base,”
+using earthmoving equipment and armor plates
+to add reinforcement.
+
+Performance: sAccel: 0.00006 G. Burn
+Endurance: 8,000 hours. Burn Points:
+1,730. Delta-V: 5.28 mps. No air speed.
+
+SPOKANE-CLASS
+HEAVY SPACE
+TRANSPORT VEHICLE
+
+Designed in 2092 by Columbia Aerospace, the Spokane class is a new HSTV
+concept that departs from the design philosophy used in older heavy transports. Rather
+than hauling cargo in internal holds, most of
+its payload is carried on external cradles.
+Four of the cradles, located near the front of
+the craft, have entry modules incorporated
+for easy access to the attached payload. This
+results in a smaller hull that is far cheaper
+than many comparable heavy transports.
+Twenty vessels have been purchased to
+date, primarily by the large shipping cartels.
+Individual vessels are usually named after
+Native American tribes.
+
+Crews appreciate the fact that the
+Spokane has enough cabins for individual occupancy, and that its common areas
+are roomier than most. However, some
+operators dislike the fact that the passage
+tube leading from the habitation section to
+the engineering access room at the rear of
+
+MARS INTERPLANETARY
+
+Partially owned by the Xiao Chu Corporation, Mars Interplanetary (MIp) was
+responsible for moving the vast majority of
+the current Mars and Mercury colonists to
+their new homes. Thanks to its role in the
+spread of humanity to other planets, the
+company enjoys considerable prestige,
+especially in China.
+Members of the Farhauler’s Guild do
+not share this favorable opinion. In 2079,
+Mars Interplanetary replaced most of its
+human employees with bioroids and
+NAIs. MIp maintains that it simply could
+not operate at its previous staffing levels
+and remain competitive, especially since
+demand for its large colony transports was
+falling as the Mars colony became more
+self-sufficient. The Farhauler’s Guild disputes these claims, while attempting to
+convince people that Mars Interplanetary
+vessels are less safe than human-crewed
+vessels.
+Mars Interplanetary is the largest operator of HSTVs and PSVs in the solar system, with a dozen Zhongguang- and
+Meizi-class transports. The bulk of its business is still shipping cargo and personnel
+between Earth and Mars, but it has been
+recruiting independents to expand its operations to Mercury and Saturn. These contracts often cover a set number of trips;
+only proven independents are offered longterm associations or the possibility of
+incorporation into the Mars Interplanetary
+fleet. Farhauler’s Guild members refuse to
+work for Mars Interplanetary, and consider
+any independent who signs up with MIp to
+be a traitor.
+
+the vessel is not pressurized, and
+regard the fact that this tube tends to be
+rendered impassible by any unrepaired
+combat damage to the side of the hull as the
+design’s one real flaw.
+The hull is 390’ long and 50’ wide,
+studded with external cradles. Each cradle
+can carry up to three loaded Very Large
+cargo containers. The Spokane’s retractable
+radiators are longer than they are wide,
+measuring 50’ × 450’; their angle can be
+adjusted slightly to accommodate different
+cargo pod layouts.
+To assist in loading and unloading
+external cargo, the Spokane is outfitted with
+several robotic arms that can travel the
+entire length of the hull on rails. These are
+often used in conjunction with several Naga
+snakebots (p. TS124) to position small
+cargo containers or help secure large ones.
+Most Spokanes carry one or two Bumblebee
+workpods (pp. 7-8) for assistance in moving
+larger cargo. Total payload, including fully
+loaded cradles and 100 tons of small craft,
+is 5,351.5 tons. There are 9.65 spaces available for additional modifications. Should
+the main drive fail, the batteries can power
+all systems for 4.8 hours.
+Crew: Pilot/Navigator (Astrogation,
+Piloting (Low-Performance Spacecraft));
+Communications/Sensor
+Operator (Electronics Operation
+(Communications), Electronics Operation (Sensors)); 2 Cargo Masters
+(Administration, Freight Handling).
+Design: Cylinder hull (1,560 spaces, carbon composite, heavy frame, smart);
+cDR/cPF 5/1F, 3/1S, 5/1B (carbon
+composite armor). Hull radiators (10
+ksf), folding radiator wings (40 ksf).
+Modules: New basic bridge; small PESA;
+medium radar; 100 HI fusion pulse
+drive; 850 tanks (ultralight, nuclear
+pellets); 6 cabin; 6 large entry module;
+2 large robot arms; 2 medium robot
+arms; minifac workshop; light storm
+shelter (1-space: encloses bridge, cPF
+100); spacedock hangar (40’ long, 20’
+wide, 20’ high: 32 spaces); 22 external
+cradles (125 tons each); surgery; 1 battery; 500 cargo (2,500 tons).
+
+Statistics: EMass 3,964; CMass
+14,415; LMass 19,515. Cost
+M$282.08. cHP 1,992. Size Modifier
+[Hull] +6/+10, [Radiators] +9. HT 12.
+Maintenance Interval: 2.38 hours.
+RRA 50.
+Performance: sAccel: 0.03 G. Burn
+Endurance: 212.5 hours. Burn Points:
+22,950. Delta-V: 70.125 mps. No air
+speed.
+
+ZHONGGUANG-CLASS
+HEAVY SPACE
+TRANSPORT VEHICLE
+
+The MAST-designed Zhongguang
+(“China”)-class HSTV is the largest space
+vessel ever built, designed to transport
+immense amounts of high-value cargo (such
+as robofacs or pods of colonists in nanostasis) across interplanetary distances. The vessel was introduced in 2083, but early
+examples were plagued with design problems, including defects in the life-support
+and fire-suppression systems that led to several deaths. These have since been fixed, and
+the vessel is now the standard by which all
+other fusion-driven HSTVs are measured.
+The vessels retain certain quirks, however. Perhaps the most vexing is that the
+engine and neck sections have underpowered temperature and humidity control systems. Parts of the engine room often feel
+like a sauna, while fungal growths in isolated areas of the vessel are fairly common due
+to condensation. Some crews install their
+own workarounds, which can give Zhongguang interiors the appearance of mechanical jungles filled with tubes, pipes, and
+homebuilt air conditioners.
+The Zhongguang is a three-part combination hull design. The front portion is the
+crew quarters, consisting of a 25’-diameter
+sphere connected to a box 40’ long by 10’
+wide by 10’ high that houses the main
+access hatches and workshops. Attached to
+the rear of this is a much larger box hull
+measuring 200’ long by 80’ wide by 50’
+high that serves as the cargo hold. Immediately behind that area is the drive and fuel
+module: a massive cylinder 110’ wide
+
+and 100’ long. Total actual surface
+area is 109.9 ksf. A typical payload masses 8,001.5 tons.
+Crew: Commander (Leadership, Piloting
+(Low-Performance Spacecraft)); Second Officer/Navigator (Astrogation,
+Electronics Operation (Communications), Electronics Operation (Sensors),
+Piloting (Low-Performance Spacecraft)); 15 Engineers (Mechanic
+(Fusion Drive), Mechanic (Robotics),
+other Mechanic skills as appropriate); 4
+Cargo Masters (Administration,
+Freight Handling).
+Design: [Crew] Sphere hull (15.63 spaces);
+[Neck] box hull (8 spaces); [Cargo] box
+hull (1,600 spaces); [Engine] cylinder
+hull (1,936 spaces); [All] foamed alloy,
+medium frame, smart; [All] cDR/cPF
+1/1 (metal matrix composite armor).
+Hull radiators (20 ksf).
+Modules: [Crew] Old basic bridge; medium radar; 2 bunkroom; cabin; light
+storm shelter (2-space: encloses
+bunkrooms, cPF 100). [Neck] 2 fixed
+small PESA [F/S]; 4 large entry module; 2 minifac workshop. [Cargo] 1,600
+cargo (8,000 tons). [Engine] 36 HI
+fusion pulse drive; 1,900 tanks (ultralight, nuclear pellets).
+Statistics: EMass 4,172; CMass 23,574;
+LMass 34,974. Cost M$387.55. cHP
+[Crew] 29, [Neck] 27, [Cargo] 900,
+[Engine] 818. Size Modifier [Crew] +4,
+[Neck] +5, [Cargo] +7/+9, [Engine]
++8/+8. HT 12. Maintenance Interval:
+2.03 hours. RRA 18.
+Performance: sAccel: 0.006 G. Burn
+Endurance: 1,319.44 hours. Burn
+Points: 28,500. Delta-V: 87 mps. No air
+speed.
+
+PERSONAL
+
+SPACECRAFT
+
+The prices and availability of highperformance spacecraft put them in reach of
+wealthy individuals or small groups.
+Many private spacecraft are refitted or
+
+second-hand models dating back to
+the Pacific War or the “second age of
+sail.”
+
+MOJAVE EXECUTIVE
+SPACE VEHICLE
+
+Scaled Composites’ flagship design,
+the Mojave, sets the standard for luxury personal spacecraft. Fast yet relatively economical, the craft can reach Mars in less
+than a month at an operating cost of under
+half a million dollars. An Earth-Mars-Earth
+round trip can be done on one load of
+nuclear pellets in approximately two
+months. In case of attack, or for meteor
+defense, it has two tower-mounted light
+lasers.
+Mojave craft are named much like sailboats, without any particular rhyme or reason. The design is popular among the idle
+rich, and Scaled Composites has sold nearly 30 of the craft since the design was introduced in 2093.
+The hull is a streamlined cylinder 95’
+long and 25’ wide. The craft has the distinctive Scaled Composites organic styling:
+absolutely no rough edges, and tasteful preprogrammed color patterns for the liquidcrystal coating. The light laser towers
+retract into blisters on the “top” and “bottom” of the craft so as not to present an
+unsightly militaristic profile, and can fire
+four shots each before the power pack needs
+to recharge. Typical payload is 11.1 tons.
+
+Crew: Pilot/Navigator (Astrogation, Piloting (Low-Performance Spacecraft));
+Communications/Sensor
+Operator
+(Electronics Operation (Communications), Electronics Operation (Sensors)). As a practical matter, the owner
+of the vessel usually directs an infomorph pilot, with the bridge serving
+more as a lounge area and safety zone
+in case of high radiation levels.
+Design: Streamlined cylinder (95 spaces,
+metal matrix composite, extra-heavy
+frame, smart); cDR/cPF 14/1F, 5/1S,
+5/1B (diamondoid armor). Hull radiators (5 ksf). Liquid-crystal skin.
+
+INDEPENDENTS
+
+Dozens of independent cargo vessels
+operate in the solar system. These “freehaulers” work outside the carefully managed
+and calculated schedules and routes of the big
+commercial carriers – and often outside the
+law. There is no system-wide law-enforcement
+organization. It’s all just a matter of finding
+buyers and locating what they want.
+The oldest independent outfits are owned
+by individuals and companies that took
+advantage of the initial expansion into space.
+Newer independents are often the result of
+these older companies going out of business,
+their former employees striking out on their
+own and acquiring second-hand spacecraft or
+forming partnerships with colonial businesses. Still other independents are colonial entrepreneurs, often hailing from the asteroids or
+the Lagrange colonies.
+Many independents belong to the
+Farhauler’s Guild (p. TS98), but just as many
+do not. Emotions often run high over the
+Guild, and there is a lot of bitterness on both
+sides. Non-Guild members complain of being
+harassed if they refuse to join, and some
+accuse the Guild of biochauvinism or racism.
+The Guild sees unaffiliated freehaulers as a
+threat to its ability to negotiate collectively
+with the big companies and governments, and
+some Guild members insist they would have
+no problem with companies using bioroids or
+AIs if they had the same rights and pay as
+humans. Some Guild and non-Guild crews are
+friendly rivals, but regular dockside brawls,
+“accidents,” and the occasional armed confrontation are more typical of the conflict.
+
+Modules: New basic bridge; medium
+PESA; medium radar; 2 2.5-MJ light
+laser towers [S]; 10 HI fusion pulse
+drive; 50 tanks (ultralight, nuclear pellets); 4 luxury cabin; light storm shelter
+(1-space: encloses bridge, cPF 100);
+hall; large entry module; minifac workshop; 0.5 power pack; 2 cargo (10
+tons).
+
+Statistics: EMass 803; CMass 1,114;
+LMass 1,414. Cost M$186.77. cHP
+528. Size Modifier +4/+8. HT 12.
+Maintenance Interval: 2.93 hours.
+RRA 5.
+Performance: sAccel: 0.04 G. Burn
+Endurance: 125 hours. Burn Points:
+18,000. Delta-V: 55 mps. No air speed.
+Variant: The Chihuahuan is a “budget”
+version of the Mojave. Change armor
+to metal matrix composite. Remove
+liquid-crystal skin and reduce luxury
+cabins to normal. Structure is no longer
+smart. Add an additional 4 cargo.
+EMass 941; CMass 1,272; LMass
+1,572. Cost M$77.48. sAccel: 0.03.
+Burn Points: 13,500. Delta-V: 41.25
+mps.
+
+SUNLANCE EXECUTIVE
+SPACE VEHICLE
+
+The Vosper-Babbage Sunlance is one
+of the fastest spacecraft in the system,
+breaking several records since its introduction in 2095. Solar Express (p. TS96) is the
+primary user of the design; images of their
+10 yellow-and-purple vessels are featured
+in virtually all of their advertising. SOLEX
+permits each pilot to give an unofficial
+name to his vessel, and allows a limited
+amount of custom detailing for some longterm employees.
+The Sunlance is a spartan design,
+stripped down to the barest essentials. The
+pilot’s compartment is an extremely
+cramped cockpit with a crawlway leading
+back to a fairly roomy cabin. The craft usually operates with a living crew, but it is
+fully capable of unmanned operation. An
+access hatch at the back of the cabin leads
+to an even more cramped crawlway that
+
+The Sunlance is one of
+the fastest spacecraft
+in the system.
+
+stretches 50 feet to the engineering
+section. There is no internal access to the
+cargo bays, which are electronically sealed
+and monitored during the trip.
+The hull is a cylinder 100’ long and
+averaging 25’ wide, tapered toward the
+front (near the cockpit) to give it a streamlined appearance. The designers did their
+best to give the craft a distinctive aesthetic
+that makes it look fast even when docked,
+although the unglamorous truth is that the
+vessel is 70% fuel tanks. Typical payload is
+85.3 tons – usually high-value cargo to justify the fuel expenses.
+Crew: Pilot (Astrogation, Electronics
+Operation (Communications), Electronics Operation (Sensors), Piloting
+(Low-Performance Spacecraft)). Most
+pilots are assisted and accompanied by
+one or more infomorphs and cybershells that handle maintenance.
+Design: Cylinder hull (100 spaces, diamondoid, light frame, smart); cDR/cPF
+5/1F, 2/1S, 1/1B (diamondoid armor).
+Hull radiators (5 ksf).
+Modules: New cockpit; small PESA; small
+fixed radar [F]; 10 HI fusion pulse
+drive; 70 tanks (ultralight, nuclear pellets); cabin; small entry module; minifac workshop; 0.5 battery; 17 cargo (85
+tons).
+Statistics: EMass 108; CMass 613; LMass
+1,033. Cost M$73.24. cHP 68. Size
+Modifier +4/+8. HT 12. Maintenance
+Interval: 4.67 hours. RRA 5.
+Performance: sAccel: 0.07 G. Burn
+Endurance: 175 hours. Burn Points:
+44,100. Delta-V: 134.75 mps. No air
+speed.
+Variant: The Japanese Space Self Defense
+Force converted one vessel into a
+propulsion test bed for an antimatter
+pulse drive. It is currently used by
+JSSDF as a fast deep-space courier.
+The Rei uses a HI antimatter pulse
+drive in place of the fusion pulse drive,
+and adds a 2-gram antimatter bay.
+EMass 109; CMass 614; LMass 1,034.
+Cost M$79.25. sAccel: 0.08 G. Burn
+Endurance: 175 hours. Burn Points:
+50,400. Delta-V: 154 mps.
+
+INTERNAL FITTINGS AND SYSTEMS
+
+Access crawlways allow the maintenance
+of remote parts of the vessel. On most craft,
+these spaces are only big enough for one person
+at a time, and connect the habitation section to
+the engineering area. Vessels largely maintained by cybershells have
+smaller, unpressurized spaces,
+while some designs – especially those with compact drives –
+have tunnels just large enough
+to admit microbots.
+Bridge systems serve as
+the nerve center of the vessel,
+and as compact workspaces
+that are easily shielded from
+radiation. On-duty crews usually interact with each other and
+the vessel via virtual-reality
+simulations; these simulations
+are often tailored to the tastes of
+individual crewmembers, and
+are sometimes idiosyncratic. A
+modern bridge is a decidedly
+spooky place to visit, with the
+crew jacked in and silent much
+of the time.
+Bulkheads, are the main load-bearing
+structures of the vessel, divide it into major airtight sections. Interior bulkheads have DR
+equal to hull cDR × 10.
+Computers are ubiquitous on a vessel. The
+vessel’s systems management agent – a basic
+NAI-4 or NAI-5 – controls all of the hundreds
+of distributed systems, and helps manage the
+bulk of the data that is sent to the vessel’s crew
+or more powerful infomorphs. It is very limited
+in how it can develop, in order to prevent potential viral infestation (see Fifth Wave).
+Emergency panels are installed throughout
+the vessel, notably in crew and passenger quarters, the bridge, and the engineering sections.
+Each panel includes space for a battery (usually a D cell) for emergency power, at least two
+air masks, a small medical kit, an optical
+hookup to the vessel’s data network, and a
+physical connection to the craft’s power
+systems. Military vessels can lock out an
+
+individual panel’s access to the network and
+power – in extreme cases by severing its physical links to the rest of the vessel!
+External markings are common, although
+they are more a matter of taste than utility.
+Smaller vessels, notably
+those that operate close to
+habitats and move at low
+relative speeds, always
+incorporate high-visibility
+additions such as lights,
+radio beacons, and custom
+paint jobs. Larger vessels
+keep individual markings
+to a minimum unless they
+have a liquid-crystal skin –
+in which case they can be
+programmed with all manner of logos or animations.
+Military vessels, even those
+with chameleon surfaces,
+tend to remain matte black,
+and have only a handful of
+identification signs. In all
+cases, integral IFF systems
+provide the information that
+local traffic-control networks use to manage
+traffic.
+Floors and walls are usually metal or composite grates secured by pins. These provide
+convenient handgrips and attachment points, as
+well as easy access to emergency systems and
+engineering panels. Most spacers wear
+footwear that can “lock” into the grates for
+anchoring. Handguides and Velcro panels can
+also be attached to the grates, at the convenience of the crew.
+Handguides are small, motorized handgrips, or even pulleys, attached to tracks in the
+walls. They are placed where distances or
+obstacles are a handicap (such as down the long
+axis of a vessel), and provide quick transportation without the danger of clumsily colliding
+with walls or systems. Handguides normally
+operate at Move 5, but can accelerate to Move
+10 during emergencies.
+Continued on next page . . .
+
+INTERNAL FITTINGS AND SYSTEMS
+(CONTINUED)
+
+Hatches are pressure-tight doors set into
+interior partitions and bulkheads. Most have
+removable pins and emergency manual controls so that they do not become impassable in
+the event of power failure. They have DR 25
+and 50 hit points.
+Hives are omnipresent aboard most vessels, with many craft having dozens. Mosthouse cleaning and repair cyberswarms that
+control corrosion, destroy fungal growths, and
+perform routine maintenance. Military vessels
+will also have bughunter and sentry swarms.
+The hives are free, but the swarms must be purchased separately; see pp. TS168-171.
+
+UNUSUAL
+DEEP-SPACE
+VEHICLES
+
+Some designs don’t fit into neat classifications. These spacecraft either have historical significance or are simply too
+strange to categorize.
+
+SHEPARD-CLASS
+DEEP-SPACE
+OPERATIONS VEHICLE
+
+The Shepard-class DSOV’s heritage
+stretches back to the earliest days of space
+colonization, when America’s Horus I
+became infamous due to the failed attempt
+to land a manned mission on Mars. However, the Horus I design was fundamentally
+sound, and was refined to produce the Shepard design, which went on to become highly successful in the mid-21st century. The
+Shepard class is named for Alan B.
+
+Interior partitions divide the ship into
+smaller airtight sections. Partitions have DR 8
+on civilian craft. Those on military vessels
+incorporate extra ballistic and spall protection,
+and have DR 15.
+Safety displays are found in every compartment, and provide information on radiation
+shielding, location of emergency systems, and
+atmospheric status, as well as a communications link with the bridge. Displays on transnational company vessels show information in
+English and Chinese, and are visible from any
+orientation and in low-light conditions. Embedded v-tags broadcast the same information in
+dozens of other languages.
+
+Shepard, the first American in space. Vessels of this class originally bore the names
+of astronauts from the Mercury, Gemini,
+and Apollo programs.
+Spacecraft of this class participated in
+many landmark events, including the Martian Exodus to Silas Duncan Station, the first
+manned voyage to Titan, and the Shezbeth
+Expedition. Between the 2040s and 2070,
+23 vessels were built for NASA, the USAF,
+and the Titan Consortium. Numerous variants appeared as new technologies were
+incorporated into the design. The earliest
+models used nuclear light bulb or ion
+drives. Some examples had more cabins
+and less lab space. Starting in 2064, the
+majority of Shepards were rebuilt by
+Columbia Aerospace as long-range research
+vessels, to support operations near Saturn
+and in the outer system. This refit included
+the installation of a modern high-impulse
+fusion pulse drive, which drastically
+improved performance.
+Most of the Shepards were eventually
+sold off, to various corporations, foundations, and governments, or were scrapped.
+However, at least eight vessels remain
+in service in 2100, almost all of which have
+the fusion pulse drive upgrade. The
+United States Astrographical Survey
+
+operates four of these for exploration
+in the Deep Beyond.
+These vessels have small crews and
+modest cargo capacities by 2100 standards,
+but they are extremely reliable, and capable
+of long voyages. One reason the Shepard is
+so reliable is its amazing number of redundant systems and safety measures, many of
+them added in reaction to the loss of the
+Horus I. These features allow the craft to
+survive damage that would otherwise be
+catastrophic. For example, access to the
+spin pod arms is restricted at both ends by
+access modules (one on the main hull, one
+on the pod), which helps to contain any
+damage. In an emergency, both pods can be
+jettisoned, with pod #1 functioning as a
+lifeboat.
+Shepard-class vessels are cylinders
+300’ long and 50’ wide, with two 150’ long
+arms holding 30’-long, 20’-wide spin cylinders. The spin apparatus can provide up to
+0.5 G, although this tends to be somewhat
+uncomfortable over long periods. Only two
+of the four large entry modules in the main
+hull allow external access; the other two
+give internal access to the spin arms. Typical payload, including 500 tons of carried
+craft, is 599.7 tons.
+Crew: Commander/Pilot (Leadership,
+Piloting (Low-Performance Spacecraft)); Navigator (Astrogation, Electronics Operation (Communications),
+Electronics Operation (Sensors),
+Gunner (Beams)); 5 Engineers
+(Mechanic (Fusion Drive), Mechanic
+(Robotics), other Mechanic skills as
+appropriate)); Medic (Diagnosis,
+Physician, Surgery); Cargo Master
+(Administration, Freight Handling).
+Design: [Hull] Cylinder hull (1,200 spaces,
+foamed alloy, medium frame); cDR/
+cPF 1/1F, 1/1S, 1/1B (titanium alloy
+armor). [Pod #1 and #2] Cylinder hull
+(19.2 spaces, foamed alloy, light
+frame); cDR/cPF 1/1F, 1/1S, 1/1B (titanium alloy armor). Hull radiators (10
+ksf).
+Modules: [Hull] Old basic bridge; 2 large
+PESA; 2 large radar; small ladar; 2.5MJ light laser tower [S]; 15 HI
+fusion pulse drive; 1,010 tanks
+
+(ultralight, nuclear pellets); 4 cabin; 4
+large entry module; 2 minifac workshop; hall; heavy storm shelter (1space: encloses bridge, cPF 1,000); 5
+battery; 14 old fission reactor (26
+MW); 25 ksf solar cells (2 MW at 1
+AU); 2 spacedock hangar (30’ long, 35’
+wide, 20’ high: 42 spaces each); surgery; 15 cargo (75 tons). [Pod #1] 8
+cabin; 2 lab; large entry module; 1 battery; 5 cargo (50 tons). [Pod #2] 4 lab;
+small entry module; large entry module; 9 cargo (27 tons).
+Statistics: EMass 3,618; CMass 10,278;
+LMass 16,338. Cost M$240.46. cHP
+[Hull] 780, [Pods] 19. Size Modifier
+[Hull] +6/+10, [Pods] +3/+4. HT 12.
+Maintenance Interval: 1.29 hours.
+RRA 8.
+Performance: sAccel: 0.006 G. Burn
+Endurance: 1,683.33 hours. Burn
+Points: 36,360. Delta-V: 111.1 mps. No
+air speed.
+Variant: The original Horus I was closely
+related. Delete light laser, one large
+PESA, and radar. Change shelter to
+light (cPF 100). Remove batteries in
+hull. Reduce fission plant to 10 spaces
+(18 MW). Drive becomes a nuclear
+light bulb and tanks are increased to
+1,040 spaces. Of interest to historians is
+that the accident that crippled the
+Horus I is one that the design was
+specifically designed to handle. Recreations of the event have left many puzzling questions unresolved, resulting in
+occasional calls to salvage the hulk for
+analysis. EMass 2,698; CMass 3,818;
+LMass 4,338. Cost M$217.71. sAccel:
+0.02 G. Burn Endurance: 11.56 hours.
+Burn Points: 830. Delta-V: 2.543 mps.
+
+NADEZHDA BIOSHIP
+
+Named Nadezhda (Russian for “hope”)
+by her designers, this vessel is actually alive
+– an amazingly crafted organic machine
+assembled from a multitude of specialized
+bioroid components. Nadezhda is a cyborg
+as opposed to a true biological organism,
+with some systems consisting of electromechanical implants, albeit with many
+biological elements.
+
+BIOSHIPS
+
+Fully biological spacecraft are not possible in
+2100. Ships such as Nadezhda require extensive
+technological assistance to survive. Treat bioships
+in Transhuman Space as bioshells (p. TS73) with
+the following template (-5 points):
+Advantages: Acceleration Tolerance [10]; Bioroid
+Body [0]; High Pain Threshold [10]; Injury
+Tolerance (No Neck) [5]; Internal Senses* [20];
+Sanitized Metabolism [5]; Vacuum Support
+[40].
+Disadvantages: Inconvenient Size (Large) [-10];
+Lame (Legless) [-35]; No Manipulators [-50].
+* The Internal Senses advantage lets the bioship see, hear, taste, and speak internally. Without
+this advantage, the vessel is completely unaware of
+activities inside it.
+Nadezhda also has Radiation Tolerance 100
+[28] (p. TS132), Increased Life Support 2 [-20], and
+Short Lifespan 3 [-30].
+Build a bioship hull as a nanocomposite structure with a ×1.5 price multiplier. This makes the
+vessel biomechanical and gives it the template
+above, as well as the ability to heal itself. Hull armor
+cannot be biomechanical and does not regenerate.
+Certain modules can also be made biomechanical, at double cost. These include tanks, all crew
+quarters and seats, all accessories, and surface features. When determining Maintenance Interval (p.
+TS189), do not include the cost of biomechanical
+components in the calculation.
+Bioships do not necessarily have to pay character points for their HT or cHP, or for technological devices built into them, such as radars,
+communications gear, and armor plates. If the GM
+requires it, ST is purchased with the No Fine Manipulators limitation (-40%).
+Current bioships require immense quantities of
+nutrients to function properly. If they are not fed,
+starvation will result in the craft falling apart
+(reduce HT by one per day of starvation). Food
+requirement in man-days per day is equal to 6 ×
+(cube root of EMass). Increased Life Support will
+multiply this requirement.
+For more information about living ships, see
+pp. BIO106-110.
+
+MacroTech Genetics and Manticore Genetics designed Nadezhda both
+for publicity and to test radical new biomod technology that they hope will let
+them break out into the expanding
+space parahuman-design business. The
+craft was mostly designed on Earth, but
+the full-scale prototype was grown and
+assembled in orbit under tight security.
+It has only appeared outside of its testing area twice, and its creators have yet
+to announce its completion publicly.
+Even so, it has ignited a firestorm of
+controversy among pan-sapient rights
+organizations.
+The vessel is a massive and
+extremely complex bioshell composed
+of many different nanofactured and
+gengineered organisms working in concert. Its designers have refused to state
+which of their researchers are behind
+this seemingly impossible creation, but
+many rival biotech companies are
+engaged in a mad scramble to find out.
+Nadezhda vaguely resembles a
+giant orca in profile – an aesthetic
+choice calculated to give the vessel a
+strong visual impact. The hull appears
+to be manufactured but is actually a
+chitinous nanocomposite carapace. Airlocks and cargo doors are modified
+sphincters, while sections of the hull
+bend and flex dynamically in response
+to structural stress. The inside of the
+craft borders on the bizarre: fleshy
+pockets hold computer terminals, while
+the walls periodically ripple and change
+color. Internal compartments are
+formed from bone and cartilage, with
+some nanocomposite bracing.
+The crew monitors the bioship
+from a specially constructed bridge
+near the front, and can tap into its consciousness via slinky feed. The bioship
+processes the crew’s waste; in turn, the
+crew uses some of the bioship’s waste
+products. Waste that cannot be recycled
+is encapsulated and either ejected or
+stored for later removal. (Rival biotech
+companies may send agents to recover
+these capsules to get some insight into
+the vessel’s metabolism!).
+
+Nadezhda is an amazing achievement,
+but certain problems may preclude further
+development. First, Nadezhda has an astronomical metabolic requirement, primarily
+due to the need to generate a living environment for the crew. As well, some serious
+difficulties with the custom bioroid subsystems have yet to be worked out, notably
+cancerous growths in the living flesh
+beneath the carapace. Despite these drawbacks, it may be years before other companies can match this accomplishment.
+The vessel is built as a biomechanical
+cylinder 75’ long and 35’ wide. The
+onboard mass driver, a cybernetic implant,
+has 100 spaces of rock dust to use as reaction mass, stored as cargo. The vessel’s
+metabolic requirements are equivalent to
+108 people; each space of food will feed it
+for 115 days. Typical payload, not including
+rock dust, is 41.1 tons, and includes 2
+spaces of food.
+Crew: Commander/Pilot (Leadership,
+Piloting (Low-Performance Spacecraft)); Navigator (Astrogation, Electronics Operation (Communications),
+Electronics Operation (Sensors));
+Engineer (Mechanic (Mass Driver),
+Mechanic (Robotics), other
+
+Mechanic skills as appropriate); 4
+Medical Technicians (Biochemistry,
+Diagnosis, Physician, Surgery); Cargo
+Master (Administration, Freight Handling). An infomorph directs the various bioroids on board and handles the
+majority of maintenance tasks.
+Design: Cylinder hull (1,267.2 spaces,
+nanocomposite, extra-heavy frame,
+smart, biomechanical); cDR/cPF
+0.2/1F, 0.2/1S, 0.2/1B (nanocomposite
+armor). Chameleon surface (biomechanical).
+Modules: New basic bridge; large PESA;
+medium radar; 10 mass driver engine
+(rock dust); 4 cabin (biomechanical); 2
+large entry module (biomechanical); 2
+battery; 4 new fusion reactor (12 MW);
+2 external cradles (125 tons each, biomechanical); surgery; 105 cargo (525
+tons).
+Statistics: EMass 222; CMass 1,563;
+LMass 2,863. Cost: unknown (one-ofa-kind prototype). cHP 625. Size Modifier +5/+7. HT 12. Maintenance
+Interval: 7.57 hours. RRA 0.
+Performance: sAccel: 0.00064 G. Burn
+Endurance: 500 hours. Burn Points:
+1,150. Delta-V: 3.52 mps. No air speed.
+
+It might not yet be the worldcrushing war machine of popular
+science fiction, but the military
+space vessel of 2100 is still a harbinger of destruction, bristling with
+multi-megajoule lasers and carrying an arsenal of suicidal robotic
+missiles.
+
+EUROPEAN
+SPACE CONTROL
+AGENCY (ESCA)
+
+Largely an outgrowth of the civilian
+European Space Agency (ESA), ESCA has
+evolved into an effective multinational
+defense force. Despite being plagued by
+differences between its constituent space
+forces, it has managed to standardize the
+tactics, equipment, and support infrastructure of its members, and to fund joint
+research and development.
+ESCA controls European Union space
+assets. This includes the defense platforms
+in Earth orbit that were once maintained by
+the individual member nations. The main
+focus of ESCA is indeed defense; however,
+the major powers also maintain deep-space
+forces that are capable of projecting power
+across the solar system. These exist primarily to protect E.U.-dominated corporate
+interests on Mercury and in the asteroids, and secondarily to provide a
+flexible intervention capability for
+operations such as police actions and
+humanitarian relief efforts, often in
+the chaotic L5 and Main Belt regions.
+ESCA’s main wartime combat
+experience was fending off stray missiles and orbital debris during the
+Pacific War. However, its forces have
+had plenty of involvement in “operations other than war” (see p. TS100)
+in L5 and the Main Belt. ESCA has
+also provided orbital support for E.U.
+peacekeeping operations in Africa and
+other trouble spots.
+
+A FRACTURED FLEET
+
+The strength of the ESCA deepspace fleet is estimated at approximately 36 SDVs and almost 50
+support vessels, as well as a bewildering array of orbital facilities and
+defense platforms. Control of these
+assets is divided between independent
+
+national space forces, with 75% of
+them belonging to France, Germany, and
+the United Kingdom. National governments, especially those of France and the
+U.K., have opposed the full integration of
+their fleets. As a result, ESCA’s authority
+extends primarily to orbital defense, where
+the brief time scales and the threat to the
+entire European Union demand a unified
+command structure.
+The space forces have attracted many
+nationalists who are disgruntled with the
+perceived homogenization of their homelands by the European Union. These factions are especially prominent in the Royal
+Navy Space Service and Force aérospatiale.
+Officers and enlisted personnel within these
+cliques have a Sense of Duty to their country; some even have Fanaticism. They promote like-minded officers (counting as a
+Patron) and quietly influence defense policy to ensure the continued independence of
+the space forces. In other space forces
+(notably Germany and Poland), nationalist
+factions enjoy less overt support; being a
+nationalist there is a Secret that can lead to
+serious embarrassment.
+
+COMMON MILITARY
+SPACECRAFT CLASSES
+
+Light Space Dominance Vehicle (LSDV): A
+smaller warcraft that sacrifices firepower or
+armor for increased delta-v.
+Microgravity Assault Vehicle (MAV): An
+armored shuttle designed to convey boarding parties to enemy vessels – either by docking or by
+ramming.
+Space Control Vehicle (SCV): An assault carrier designed to support space-to-surface combat
+missions.
+Space Defense Platform (SDP): An orbital
+battle station.
+Space Dominance Vehicle (SDV): A heavily
+armored warcraft.
+Transatmospheric Combat Air Vehicle
+(TCAV): An orbital or suborbital military spaceplane.
+
+DOCTRINE,
+ORGANIZATION, AND
+DEPLOYMENT
+
+The French, German, and United Kingdom space forces are the largest in ESCA,
+and operate the majority of its deep-space
+vessels. Despite the occasional nationalistic
+officer, the individual forces that make up
+ESCA exercise and plan together. Vessels
+may operate in national or multinational
+task forces, but operations with only one or
+two deep-space vessels are typical. It is
+common for an officer in one force to do a
+tour of duty in another; thus, a French SDV
+might have a British weapons officer serving aboard.
+
+Bundesraumwaffe
+Germany’s space force is modern: new
+Hermann Oberth- and Gram-class vessels
+make up over half its SDV fleet. In addition
+to operating orbital assets, the Bundesraumwaffe is tasked with coordinating
+E.U. operations in and around Luna and L4,
+and has a high proportion of local space
+vehicles for these purposes. As well, it routinely assists Force aérospatiale in operations in L5. Finally, it controls deep-space
+assets, and shares responsibility for NearEarth Asteroid and Venus patrols with the
+Royal Navy – sometimes venturing into the
+Main Belt to assist the latter force in the
+suppression of bioroid trafficking.
+The Bundesraumwaffe often undertakes humanitarian missions; therefore, it
+operates a Zhongguang HSTV that has been
+
+converted into a mobile hospital. The
+Bundesraumwaffe has a close relationship with Systems Technologies AG.
+
+Force Aérospatiale
+Like the USAF, France’s Force
+aérospatiale is a joint air and space force.
+Roughly half its budget is devoted to Earthbased combat and transport aircraft, including a sizable force of TCAVs. In space, it is
+in charge of coordinating ESCA operations
+in L5 and Mercury, and provides the majority of E.U. vessels for patrols and contingencies in these regions. Force aérospatiale
+is fully capable of large-scale independent
+operations where French interests or prestige are at stake, and its vessels often carry
+Foreign Legion ground troops.
+France has expended much financial
+and political capital on its space force,
+going so far as to break with its European
+Union partners by refusing to participate
+in the SDV-90 program in favor of its own
+homegrown design. However, Force
+aérospatiale maintains a close professional relationship with other ESCA members, and French space forces are
+prominent in multinational ESCA exercises and deployments.
+
+Royal Navy Space Service
+and Royal Air Force
+Royal Navy Space Service: The RNSS
+is a component of an older military service,
+the “wet” Royal Navy, and its personnel
+must compete with their surface counterparts for promotion and funding. Unlike the
+French and German space forces, it does
+not operate any orbital weapons systems or
+
+TCAVs. This has given the RNSS an
+unusual focus on deep-space operations,
+which has served it in good stead during
+recent police actions in the Main Belt. The
+RNSS works closely with the Royal Marine
+Commandos (Commachio Group), the
+U.K.’s elite “microgravity assault” unit.
+Royal Air Force: The RAF operates the
+U.K.’s share of ESCA’s orbital and groundbased space-defense systems, as well as
+conventional (mostly unmanned) combat
+aircraft and TCAVs, such as the Tempest.
+
+Other Contingents
+The French, German, and United Kingdom contingents dominate ESCA, but some
+of the smaller European Union countries
+also have a presence in space – even if that
+means little more than contributing funding
+or the occasional engineer or scientist. All
+European Union nations contribute to
+ESCA’s space-defense system. Multinational contingents of technicians man groundand space-based command-and-control
+centers, service cybershell space-defense
+platforms, and operate ground-based
+defenses. A few nations have small, independent deep-space forces as well, notably
+Italy, Poland, and Spain.
+
+LSDV-5 (HERMANN
+OBERTH CLASS)
+
+Designed by System Technologies AG
+and MedAir SpA, the LSDV-5 first flew in
+2096, and is presently the cutting edge of
+the European Union’s SDV fleet, representing the majority of new German, Italian,
+French, and Spanish acquisitions. Unlike
+Chinese and U.S. SDVs, it is optimized for
+operation in the inner system – and in
+Earth-Lunar space in particular. Vessels are
+named after European aerospace pioneers
+and industrialists; e.g., Gianni Caproni,
+Marcel Dassault, Henri Farman, and Wernher von Braun.
+The LSDV-5’s HT antimatter pulse
+drive gives it exceptional acceleration, and
+hence excellent maneuverability. Its antimatter bay contains a 66.7-hour supply of
+antimatter – enough for more than four
+
+full burns. The bay is buried deep
+inside the hull, and can be ejected in an
+emergency. In reality, this option does more
+for the crew’s morale than it does to
+improve safety, as an accident would result
+in an explosion long before the bay could be
+safely disconnected.
+The LSDV-5 is a much smaller design
+than the SDV-90, measuring a mere 160’
+long and 45’ wide. The hull is sharply
+sloped on the front to make maximum use
+of its armor, with sensors and communications equipment placed in rounded blisters
+along the hull. The living quarters and
+bridge are located at the front of the ship,
+followed by the tanks and the antimatter
+pulse drive. The folding radiators are somewhat unusual, extending out from the hull
+to measure 80’ wide, but gracefully curved
+to 375’ in length. Typical combat payload is
+538.2 tons, including 4 Predator AKVs on
+external cradles and 10 munitions packages.
+There are 1.72 spaces left for additional
+modules and expansions.
+
+OTHER ESCA NATIONS
+
+Finland: The Suomen Ilmavoimat
+(Finnish Air Force) operates a squadron of
+Tempests (p. 30). A Finnish crew also maintains a single old SDV located in Earth
+orbit, which is used for ESCA training.
+Italy: The Italian Aerospace Force
+operates one LSDV-5 (with two under construction) and several support craft, as well
+as various TAVs and TACVs.
+Poland: Has a mid-sized aerospace
+force of TAVs plus two elderly SDVs. It is
+considering the purchase of two new
+LSDV-5’s to replace them.
+Québec: A squadron of eight Tempest
+TACVs are operated by la Force aérospatiale du Québec.
+Turkey: Turkey has embarked on an
+ambitious building program and intends to
+field four SDVs by 2112. Currently they
+operate two dozen TACVs and contribute
+crews to various SDPs.
+
+Crew: Commander (Leadership, Shiphandling, Tactics); Pilot (Piloting
+(High-Performance Spacecraft)); Navigator (Astrogation, Electronics Operation (Communications), Electronics
+Operation (Sensors)); 2 Weapons Officers (Gunner (Beams), Gunner (Railgun)); 20 Engineers (Mechanic
+(Antimatter Drive), Mechanic (Robotics), other Mechanic as appropriate);
+Medic (Diagnosis, Physician, Surgery).
+As living quarters are sparse, most
+of the crew is usually cybershells or
+infomorphs.
+Design: Streamlined cylinder (518.4
+spaces, metal matrix composite, extraheavy frame, smart); cDR/cPF 70/10F,
+10/2S, 5/1B (metal matrix composite
+armor). Hull radiators (15 ksf), folding
+radiator wings (60 ksf). Chameleon
+surface.
+Modules: New basic bridge; 2 medium
+ladar; large PESA; 2 medium radar;
+120 HT antimatter pulse drive; 300
+tanks (ultralight, nuclear pellets); 0.08
+antimatter bay (8 grams); 4 10-MJ
+heavy laser towers [S]; 4 2.5-MJ light
+lasers [S]; coilgun [F]; 2 cabin; heavy
+storm shelter (1-space: encloses bridge,
+cPF 1,000); 4 external cradles (125
+tons each); minifac workshop; large
+entry module; surgery; 5 cargo (25
+tons).
+Statistics: EMass 4,411; CMass 6,749;
+LMass 8,549. Cost M$798.59. cHP
+1,616. Size Modifier [Hull] +5/+9,
+[Radiators] +9. HT 12. Maintenance
+Interval: 1.42 hours. RRA 60.
+Performance: sAccel: 0.17 G. Burn
+Endurance: 15.63 hours. Burn Points:
+9,570. Delta-V: 29.23 mps. No air
+speed.
+Variant: The manufacturers originally
+hoped for foreign sales, but the high
+cost of antimatter and the specialized
+nature of the design discouraged most
+buyers. In 2094, MedAir announced
+the development of a less-expensive
+export version, the LSDV-6 Soldati,
+which replaced the HT antimatter pulse
+drive with a more conventional HI
+fusion pulse drive. The Japanese
+
+Space Self Defense Force purchased
+three LSDV-6s, while the Indian Aerospace Force acquired two, and has two
+more on order. Remove the antimatter
+bay and reduce side armor to cDR/cPF
+5/1. EMass 3,833; CMass 6,121;
+LMass 7,971. Cost M$572. sAccel:
+0.08 G. Burn Endurance: 62.5 hours.
+Burn Points: 18,000. Delta-V: 55 mps.
+
+KÖNIGSBERG-CLASS
+SPACE DOMINANCE
+VEHICLE
+
+This System Technologies design is
+actually a “pre-SDV,” since the first members of the class were built in 2081, before
+the influence of the new Chinese SDVs. It
+is the best example of the sphere school of
+warcraft design: a sphere lacks any specific
+weak point in its armor and is somewhat
+easier to maneuver. This is useful for shortrange engagements of the kind that ESCA
+believes is most likely to occur in the congested L4 and L5 zones patrolled by the
+German and French space forces. The
+drawback is that the armor mass slows the
+vessel down, despite the use of advanced
+nanocomposites and an antimatter pulse
+drive.
+Vessels in this class are named
+afterEuropean cities – mostly in France
+and Germany, since those nations operate
+the majority of these craft, although Italy
+and Spain also use them. Multinational
+ESCA crews operate two vessels, including the Königsberg itself. There is usually
+a vessel of this class on patrol near Mercury to protect European antimatter production facilities.
+The spacecraft is a 95’-diameter sphere
+studded with laser towers. The crew quarters, bridge, and spacedock are located in
+the front of the vessel, with the antimatter
+bay buried deep inside the hull. When
+deployed, the radiator wings are only 95’ ×
+95’. The original design called for a much
+larger antimatter drive and 215’ radiator
+arrays, but structural limits forced a
+redesign. Payload is 252.7 tons, including 200 tons of carried craft. The
+
+power pack provides enough energy for two
+volleys. The drive has 99 MW of excess
+power if not used to power the weapons.
+The antimatter bay holds enough antimatter
+for 167 hours of operation, reducing the
+need for frequent refueling.
+Crew: Commander (Leadership, Shiphandling, Tactics); Pilot (Piloting (LowPerformance Spacecraft)); Navigator
+(Astrogation, Electronics Operation
+(Communications), Electronics Operation (Sensors)); 2 Weapons Officers
+(Gunner (Beams), Gunner (Railgun));
+20 Engineers (Mechanic (Antimatter
+Drive), Mechanic (Robotics), other
+Mechanic as appropriate); 2 Medics
+(Diagnosis, Physician, Surgery). Often
+carries 6 battlesuit-equipped soldiers.
+Design: Sphere hull (857.375 spaces,
+nanocomposite, extra-heavy frame,
+smart); cDR/cPF 55/5 (nanocomposite
+armor). Hull radiators (27 ksf), folding
+radiator wings (18 ksf). Chameleon
+surface.
+Modules: New command bridge; 2 large
+ladar; large PESA; 2 large radar; 90 HT
+antimatter pulse drive; 600 tanks (ultralight, nuclear pellets); 0.15 antimatter
+bay (15 grams); 8 10-MJ heavy
+
+laser towers [S]; 12 2.5-MJ light laser
+towers [S]; 8 cabin; bunkroom; heavy
+storm shelter (2-space: encloses bridge,
+cPF 1,000); minifac workshop; large
+entry module; spacedock hangar (20’
+long, 20’ wide, 25’ high: 20 spaces); 5
+power pack; surgery; 10 cargo (50
+tons).
+Statistics: EMass 7,666; CMass 11,518;
+LMass 15,118. Cost M$1,444.73. cHP
+1,692. Size Modifier [Hull] +8, [Radiators] +8. HT 12. Maintenance Interval: 1.05 hours. RRA 45.
+Performance: sAccel: 0.08 G. Burn
+Endurance: 41.67 hours. Burn Points:
+12,000. Delta-V: 36.67 mps. No air
+speed.
+Variant: France still favors the sphere concept, and pulled out of the SDV-90 project in favor of a modified Königsberg
+design optimized for higher delta-v.
+Vessels presently constructed include
+the Cyrano de Bergerac (after which
+the class is named) and Jules Verne.
+Replace the HT antimatter pulse drive
+with an HI antimatter pulse drive. Cost
+M$1,354.73. Maintenance Interval:
+1.09 hours. sAccel: 0.04 G. Burn
+Endurance: 166.67 hours. Burn Points:
+24,000. Delta-V: 73.3 mps.
+
+EUROFIGHTER TEMPEST
+TCAV
+
+The Tempest is a multi-role unmanned
+combat vehicle fielded by nearly all European Union aerospace forces. It was part of
+the same long-term set of requirements formulated in 2081 that led to the SDV-90
+(p. TS192). The program was plagued with
+accusations of corruption, but the final production design by Vosper-Babbage is considered the best of the contenders.
+Production began in 2087, with 87 vessels
+currently in service (six have been lost in
+training accidents and other mishaps).
+The Tempest can travel at Mach 8.3,
+skim the very edge of space, and safely
+reenter atmosphere, but it is incapable of
+entering orbit – which has led to grumbling
+among the space forces that wanted a craft
+capable of entering LEO and engaging targets in higher orbits. Constant upgrades to
+the SAI infomorph packages continue to
+extend the design’s operational life; ESCA
+plans to field the Tempest until at least 2120.
+Being unmanned, the Tempest is significantly smaller than the PLAN-SF Diaoche
+(p. 36). It is a diamond-shaped delta
+
+55’ long, 33’ wide, and 17’ high. Its lasers
+are powered by an onboard power pack
+(nine volleys), while most other systems
+run off the battery (eight hours).
+Crew: Unmanned. Infomorph uses Electronics Operation (Communications),
+Electronics Operation (Sensors), Gunner (Beams), and Piloting (Aerospace).
+Infomorph occupies the mainframe in
+the unmanned controls.
+Design: Streamlined delta (10.648 spaces,
+carbon composite, heavy frame, smart,
+responsive, lifting body); cDR/cPF
+7/1F, 5/1S, 5/1B (carbon composite
+armor). Liquid-crystal skin.
+Modules: New unmanned controls; small
+PESA; small fixed radar [F]; 2 compact
+turbo-scramjet; 5 tanks (ultralight, jet
+fuel); 2 2.5-MJ light lasers [F]; 0.2 battery; 1 power pack.
+Statistics: EMass 138; CMass 165; LMass
+192. Cost M$21.25. cHP 73. Size Modifier +6. HT 12. Maintenance Interval:
+8.68 hours. RRA 0.
+Performance: No space performance. Fuel
+Endurance: 1.67 hours. Air Speed:
+5,975 mph (1.66 mps). Stall Speed:
+240 mph.
+
+MAV-IIB PUMA
+MICROGRAVITY
+ASSAULT VEHICLE
+
+The Vosper-Babbage Puma MAV is a
+“boarding pod” designed for high-threat
+attacks on orbital facilities, space colonies,
+asteroid bases, and space vessels. A boarding action is dangerous; a target that
+appears to have surrendered might still have
+hidden weapons or self-destruct charges. As
+such, after the majority of the target’s
+weapons are disabled or suppressed, the
+MAVs are launched from a safe distance
+(typically 10-50 miles) at bone-crushing
+accelerations, then rapidly decelerate,
+allowing an assault force to perform the
+boarding action without risking the mother
+ship.
+The basic design is a streamlined cylinder 25’ long and 10’ in diameter, with a
+heavily armored “nosecap” (which can
+punch through light armor, if the MAV rams
+its target), followed by a troop compartment, and then fuel tanks and rocket nozzles. There are 40 Pumas in ESCA service.
+Individual craft do not have official names,
+but their passengers usually take the time to
+give them a nickname and paint various slogans on the nose.
+Crew: Pilot (Piloting (High-Performance
+Spacecraft)). In many cases, the craft is
+entirely automated, running an LAI
+infomorph on the cockpit mainframe.
+Can carry up to 16 battlesuited or
+cybershell marines.
+Design: Streamlined cylinder (4 spaces,
+metal matrix composite, extra-heavy
+frame); cDR/cPF 14/2F, 5/1S, 2/1B
+(metal matrix composite armor).
+Modules: Old cockpit; small PESA; small
+fixed ladar [F]; 1 compact keroseneoxygen rocket; 1 tanks (ultralight,
+kerosene-oxygen); passenger seats;
+small entry module.
+Statistics: EMass 42; CMass 51; LMass
+58. Cost M$9.03. cHP 60. Size Modifier +2/+4. HT 12. Maintenance Interval:
+6.66 hours. RRA 0.
+
+Performance: sAccel: 9.75 G. Burn
+Endurance: 0.003 hours (11 seconds).
+Burn Points: 110. Delta-V: 0.322 mps.
+No air speed.
+
+AVSKÈRMAR SPACE
+DEFENSE PLATFORM
+
+Designed by Hvide Stjerne A/S in Denmark, the Avskèrmar (“shield”) SDP has
+been the standard European Union space
+defense platform design since 2070. It is
+used mainly in the inner system (especially
+Earth, Luna, and Mercury orbit) due to its
+reliance on solar power.
+The hull is a simple 25’-diameter
+sphere with two 71’ × 71’ folding solar panels. Its power pack provides enough power
+for 5 shots, and the battery powers all other
+systems for 8.8 hours. The platform remains
+in low-power mode (allowing the solar
+cells to recharge the batteries and
+power pack) until alerted or
+attacked.
+
+Crew: Unmanned. Infomorph uses
+Electronics Operation (Communications), Electronics Operation (Sensors), and Gunner (Beam).
+Infomorph occupies the mainframe in
+the unmanned controls. Maintenance is
+performed by cyberswarms.
+Design: Sphere hull (15.625 spaces, titanium alloy, heavy frame, smart);
+cDR/cPF 25/5 (metal matrix composite
+armor). Chameleon surface.
+Modules: Old unmanned controls; small
+fixed radar [F]; small PESA; 0.25 compact metal-oxygen rocket; 7 tanks
+(metal-oxygen); 10-MJ heavy laser
+[F]; 0.1 battery; 1.2 power pack; 10 ksf
+folding solar panels.
+Statistics: EMass 319; CMass 392; LMass
+466. Cost M$32.59. cHP: 59. Size
+Modifier +4. HT 12, Maintenance
+Interval: 7.01 hours.
+Performance: sAccel: 0.15 G, Burn
+Endurance: 0.187 hours (11.2 minutes), Burn Points: 10, Delta-V: 0.31
+mps. No air speed.
+
+PEOPLES’
+LIBERATION
+ARMY NAVY
+SPACE FORCE
+(PLAN-SF)
+
+space. The TSA’s use of pre-positioned AKVs to attack interplanetary and
+translunar shipping came close to cutting
+off Mars, as well as interdicting helium-3
+energy supplies that were supposed to
+arrive from Luna. The U.S. energy embargo
+on gas-giant helium-3 caused further shortages.
+After the conflict, China resolved to
+repair its weaknesses in deep space,
+embarking on an extensive modernization
+program. Lessons learned in the Pacific War
+were applied to the ongoing Gang Shou
+SCV and the Xingzhai SDV programs,
+resulting in the first of a new breed of deepspace combatants. During this time, the
+PLAN-SF developed many of the tactical
+doctrines and technologies now taken for
+granted by other space forces.
+
+From its humble beginnings as an arm
+of the PLA Navy to its baptism of fire during the Pacific War, China’s PLAN-SF has
+continually adapted to shifting strategic and
+political requirements. Now, almost two
+decades after the Pacific
+War, the largest military
+space fleet is undertaking a
+bold plan to completely
+ANKS
+reinvent itself, shaking the
+The
+PLAN-SF
+rank
+structure
+is identical to that of the
+delicate balance of power
+PLA
+Navy.
+It
+is
+common
+practice
+for
+both officers and enlistamong the major space
+taiko
+(“space”)
+to their rank in order to
+ed
+personnel
+to
+attach
+forces.
+differentiate themselves from their surface counterparts.
+Enlisted personnel (Rank 0-2) are common on Chinese
+OCTRINE
+vessels, in marked contrast to the USAF and ESCA, where
+most such positions are filled by infomorphs. However, offiPrior to the Pacific
+cers fill all bridge positions. At least Rank 6 is needed to comWar, PLAN-SF strategy
+mand a large military vessel, but Rank 3-5 officers often
+was to maintain complete
+command smaller craft. A Rank 2 NCO typically commands
+control of various “stratenoncombat craft. China does not use sapient infomorphs in its
+gic nexuses” around Mars
+military vessels (including its AKVs), preferring to use NAIs
+and Earth. War plans conand LAIs.
+centrated on fixed defensPolitical reliability is still important to promotion, which
+es, heavily armed satellites,
+leads
+to a distressing number of mediocre leaders. Special
+and agile, short-range
+“cadre”
+infomorphs monitor all officers (Rank 3+) in order to
+orbital combatants, such as
+ensure
+that
+they are performing their duties efficiently. These
+AKVs. Only a few deepinfomorphs
+answer only to the Central Military Commission
+space vessels were in serv(China’s
+central
+military command) and its General Political
+ice – the emphasis was on
+Division
+(GPD);
+as such, officers do not trust them. Howevorbital battle.
+the
+infomorphs
+do not actively work against those they
+er,
+In the Pacific War, the
+monitor;
+rather,
+they
+exist to testify as to an officer’s political
+PLAN-SF proved successloyalty
+and
+professional
+conduct, should these things come
+ful in sweeping the TSA
+into
+question.
+out of Earth’s skies and
+A cadre infomorph is an LAI-7 with Fanaticism (Loyalthen supporting ground
+ty
+to
+China) [-15] loaded onto a wearable or implanted virtuoperations with orbital
+al
+interface
+(p. TS142) assigned to the officer.
+strikes. However, things
+did not go so well in deep
+
+R
+
+D
+
+BASES
+
+PLAN-SF facilities are heavily defended,
+with dozens of AKV bays and beam-weapon
+emplacements, as well as various automated
+defense platforms and cybershells. Friendly
+vessels are expected to maneuver within this
+defensive network and support weak points as
+necessary.
+Phobos (Mars): Headquarters to the Deep
+Space Fleet, and perhaps the single most heavily defended facility outside of Earth-Luna
+space. Rumors abound that the PLAN-SF may
+relocate its headquarters to Phobos in the next
+decade.
+Shi Yusheng Station (Earth-Luna): This
+military habitat is the primary orbital training
+facility for the PLAN-SF. The station itself is an
+unremarkable torus design, and only lightly
+armed. Roughly 2,000 permanent personnel
+and trainees are stationed at the facility.
+
+DEPLOYMENT
+
+The PLAN-SF invented the modern
+concept of space dominance vehicles, and
+has the largest inventory of any single space
+power – more than 30 – as well as dozens of
+smaller craft. Some 90% of these vessels
+are in Earth-Luna and Mars space, and
+operate in three “named” fleets: the Deep
+Space Fleet, the Earth Fleet, and the
+Reserve Fleet. Organization is copied from
+the PLA Navy, with some changes to reflect
+PLAN-SF’s much smaller size.
+Each fleet is divided into dadui
+(“groups”) of up to five vessels, roughly
+equivalent to USAF or ESCA squadrons.
+These detach jiangting (“individual
+
+Jiuquan Launch Facility (Earth): Half of
+this aerospace complex serves as the PLAN-SF
+boot camp, technical training facility, and command center for the Earth Fleet.
+Beijing Aerospace Command and Control
+Center (Earth): Technically controlled by the
+Chinese civilian space agency, the China
+National Space Administration (CNSA), this
+facility houses a large PLAN-SF detachment
+responsible for tracking and identifying potentially hostile targets in orbit.
+Jiangli Station (Saturn): The PLAN-SF
+maintains a small detachment at the station,
+ostensibly to advise on defensive matters and
+liaison with Deep Space Fleet vessels. Growing
+tensions over U.S. reconnaissance missions
+may lead to increased PLAN-SF involvement.
+
+vessels”) for patrols and other routine tasks.
+During the Pacific War, the Earth Fleet
+became large enough to form zhidua
+(“flotillas”) of up to 30 vessels.
+The PLAN-SF does not have its own
+infantry force. Instead, it “borrows” elements of the PLAN Haijun Luzhandui
+(“Marine Corps”). The haijun kongjianzhandui (“space marine”) units are a special
+branch, drawn from the elite 67th Space
+Infantry Division (SID). The Division’s
+three brigades (1,500 troops) are well
+trained and motivated; service in the unit is
+considered an honor, and reflects well on
+one’s family. Training focuses on hands-on
+exercises rather than relying on slinky or
+InVid simulations.
+
+RIGUANG-CLASS
+LIGHT SPACE
+DOMINANCE VEHICLE
+
+Designed by MAST in 2096 and set to
+enter mass production by Hsaio Ch’u at the
+Phobos shipyards, the Riguang (“Sun”)class LSDV is the most advanced military
+vessel in PLAN-SF service, and the first
+Chinese warcraft to use an antimatter pulse
+drive. Originally designed simply as an
+adjunct to the expensive Gang Shou-class
+SCVs (see In The Well), it has proven to be
+an outstanding design – perhaps even a successor to the Xingzhai class (pp. 35-36) if
+the problems with powering all of its
+weapons in combat can be resolved. The
+first examples of the class, the Riguang
+Qiang (“Sun Spear”) and Riguang Dao
+(“Sun Sword”) are currently conducting a
+shakedown cruise between Mars and Earth.
+Full production is expected to start in early
+2101 to fill out the requirement for 10 vessels by 2108.
+The 200’-long, 50’-wide cylinder is
+noticeably sleeker than earlier PLAN-SF
+
+designs – Hsaio Ch’u took great care
+to make the vessel aesthetically pleasing
+as well as combat effective. The design was
+the first to make extensive use of feng shui
+advisors, making the interior unique. The
+bridge has a large fish tank, and access hallways are carefully placed to facilitate the
+flow of chi through the vessel. The radiators
+are small (89’ × 89’), but have patterns
+embossed on the surface to give them the
+appearance of giant butterfly wings. Typical
+payload is 364 tons, including 5 extra munitions packs and 300 tons of carried craft.
+Crew: Commander (Leadership, Shiphandling, Tactics); Pilot (Piloting (LowPerformance Spacecraft)); Navigator
+(Astrogation, Electronics Operation
+(Communications), Electronics Operation (Sensors)); 2 Weapons Officers
+(Gunner (Beams), Gunner (Railgun));
+20 Engineers (Mechanic (Antimatter
+Drive), Mechanic (Robotics), other
+Mechanic as appropriate); Medic
+(Diagnosis, Physician, Surgery). Usually, all but the bridge crew and medic
+are cybershells.
+
+Design: Cylinder hull (800 spaces,
+nanocomposite, extra-heavy frame,
+smart); cDR/cPF 65/5F, 10/1S, 5/1B
+(nanocomposite armor). Hull radiators
+(32 ksf), folding radiator wings (16
+ksf). Chameleon surface.
+Modules: New basic bridge; 2 fixed medium ladar [F/S]; large PESA; large
+radar; 95 HI antimatter pulse drive; 555
+tanks (ultralight, nuclear pellets); 0.14
+antimatter bunker (14 grams); 6 10-MJ
+heavy lasers [S]; 3 10-MJ heavy lasers
+[F]; 8 2.5-MJ light laser towers [S];
+coilgun [F]; 150’ new particle beam
+[F]; 6 cabin; heavy storm shelter (1space: encloses bridge, cPF 1,000);
+minifac workshop; 2 small entry module; spacedock hangar (40’ long, 20’
+wide, 25’ high: 40 spaces); surgery; 5
+cargo (25 tons).
+Statistics: EMass 3,873; CMass 7,767;
+LMass 10,897. Cost M$703.72. cHP
+2,160. Size Modifier [Hull] +6/+9,
+[Radiators] +7. HT 12. Maintenance
+Interval: 1.51 hours. RRA 47.
+Performance: sAccel: 0.06 G. Burn
+Endurance: 146.05 hours. Burn Points:
+31,550. Delta-V: 96.39 mps. No air
+speed.
+
+XINGZHAI-CLASS SPACE
+DOMINANCE VEHICLE
+
+The Xingzhai (“Star”)-class SDV
+makes up the bulk of the PLAN Deep Space
+Fleet, although some earlier pre-SDVs
+remain in service. Twenty vessels have been
+constructed. It is one of the earliest “second-generation” SDV designs, but it has
+proven very reliable, and is expected to
+remain in front-line service until at least
+2120.
+The Xingzhai program started in 2073,
+and included the concept – at the time
+unheard-of in a dedicated deep-space
+design – of abandoning spin capsules in
+favor of microgravity-adapted crews.
+There were several changes in the wake of
+the Pacific War, including a higher-impulse
+drive and modified armament. The prototype, Jiuxing Hao (“Eternal Star”), was
+
+completed in 2086, and production
+begun in 2088.
+The Xingzhai class has undergone a
+number of upgrades over its history, intended to keep it competitive against newer craft
+such as the SDV-90 and DFS-3. Its basic
+design is now standard for SDVs: a 350’long, 60’-wide cylinder with 141’ × 141’
+folding radiator wings. In addition to the six
+Zhenyang AKVs in launch bays, the spacedock usually carries an additional 500 tons
+of AKVs or support equipment for the
+marine detachment. Typical payload is
+1,456 tons. There are 6.1 spaces available
+for expansion.
+Crew: Commander (Leadership, Shiphandling, Tactics); Pilot (Piloting (LowPerformance Spacecraft)); Navigator
+(Astrogation, Electronics Operation
+(Communications), Electronics Operation (Sensors)); 2 Weapons Officers
+(Gunner (Beams)); 20 Engineers
+(Mechanic (Fusion Drive), Mechanic
+(Robotics), other Mechanic as appropriate); 3 Medics (Diagnosis, Physician, Surgery). Most vessels carry 24
+battlesuit-equipped marines.
+Design: Cylinder hull (2,016 spaces, carbon composite, extra-heavy frame,
+smart); cDR/cPF 65/20F, 15/2S, 5/1B
+(metal matrix composite armor). Hull
+radiators (70 ksf), folding radiator
+wings (40 ksf). Chameleon surface.
+Modules: Old command bridge; 3 medium
+ladar; 2 large PESA; 2 medium radar;
+200 HI fusion pulse drive; 1,500 tanks
+(ultralight, nuclear pellets); 6 10-MJ
+heavy laser towers [S]; 4 10-MJ heavy
+lasers [F]; 8 2.5-MJ light lasers [S]; 2
+2.5-MJ light lasers [B]; 300’ old particle beam [F]*; 4 cabin; 6 bunkroom;
+passenger seats; heavy storm shelter
+(2-space: encloses bridge, cPF 1,000);
+light storm shelter (1-space: encloses
+passenger seats, cPF 100); minifac
+workshop; 2 large entry module; spacedock hangar (55’ long, 20’ wide, 25’
+high: 55 spaces); 20.5 new fission reactor (80 MW); 6 vehicle bays
+(Zhenyang AKV: 150 tons, 0.08 ksf, 6
+spaces each); surgery; 10 cargo (50
+tons).
+
+Statistics: EMass 11,768; CMass
+22,224; LMass 31,224. Cost
+M$927.39. cHP 4,378. Size Modifier
+[Hull] +6/+10, [Radiators] +9. HT 12.
+Maintenance Interval: 1.32 hours.
+RRA 105.
+Performance: sAccel: 0.04 G. Burn
+Endurance: 187.5 hours. Burn Points:
+27,000. Delta-V: 82.5 mps. No air
+speed.
+* If the particle beam is powered, the
+vessel may not fire 6 heavy lasers that turn.
+
+DIAOCHE-CLASS TCAV
+
+The Diaoche (“Crane”)-class TCAV
+entered production in 2090 after a heated
+design competition that lasted only a single
+year. The Diaoche is in service with the
+PLAN-SF and PLA Air Force, but to date,
+no version has been offered for export. Only
+45 of these craft are in PLAN-SF service;
+the much smaller Ying (“Hawk”) TCAV
+(see In The Well) has proved adequate for
+most missions. However, the Air Force possesses 240 of these craft, with squadrons
+located throughout China.
+The Diaoche does not require external
+boosters to enter orbit, unlike earlier TCAV
+designs. Instead, it uses advanced turboscramjets for atmospheric travel and highthrust chemical rockets for high-altitude
+maneuvering. It is not designed for prolonged engagements, and is vulnerable to
+conventional aerospace assets, but it can
+engage LEO targets from within the atmosphere, deploy small satellite systems or
+cyberswarm networks, and possibly engage
+enemy vessels in higher orbits with its laser.
+Unfortunately, the craft’s combat endurance
+is limited: the power pack only provides
+enough energy for 6 full-power shots from
+the dorsal laser array, and rocket fuel
+endurance is measured in minutes at full
+burn.
+At 70’ in length, this is the largest
+TCAV in service. In fact, the main reason
+the Gang Shou has such a large spacedock
+is because of the requirement to carry at
+least one full flight of these craft. Typical
+payload is 15.1 tons – usually additional
+ASAT weapons or microsatellites.
+
+Crew: Pilot (Electronics Operation
+(Communications), Electronics Operation (Sensors), Gunner (Beams),
+Piloting (Aerospace), Piloting (HighPerformance Spacecraft)).
+Design: Streamlined delta (21.952 spaces,
+carbon composite, light frame, responsive, lifting body); cDR/cPF 7/1F,
+5/1S, 5/1B (metal matrix composite
+armor).
+Modules: Old cockpit; small PESA; small
+fixed radar [F]; 2 compact turboscramjet; 0.25 compact kerosene-oxygen rocket; 7 tanks (ultralight, jet fuel);
+3.5 tanks (ultralight, kerosene-oxygen);
+10-MJ heavy laser [F]; 0.1 battery; 1.5
+power pack; 3 cargo (15 tons).
+Statistics: EMass 160; CMass 237; LMass
+300. Cost M$21.98. cHP 29. Size Modifier +7. HT 12. Maintenance Interval:
+4.27 hours. RRA 0.
+Performance: sAccel: 0.52 G. Burn
+Endurance: 0.043 hours (2.58 minutes). Burn Points: 80. Delta-V: 0.246
+mps. Fuel Endurance: 2.33 hours. Air
+Speed: 4,695 mph (1.30 mps). Stall
+Speed: 235 mph.
+
+UNITED
+STATES
+
+throughout the system. Rather than
+defend fixed locations, the USAF
+expects to move rapidly onto offensive
+operations during any conflict, using its
+qualitative edge in mobility and technology
+to form ad hoc combat units wherever they
+are needed most.
+
+AEROSPACE
+FORCE (USAF) DEPLOYMENT
+
+After a successful campaign to protect
+U.S. space assets from stray Chinese and
+TSA weapons during the Pacific War, and
+operations against Gypsy Angel pirates
+afterwards, the USAF is riding high on its
+stored political capital and public support.
+This has enabled it to grab the lion’s share
+of the national defense funding, much to the
+chagrin of the other services.
+
+DOCTRINE
+
+Compared to ESCA, the PLAN-SF, or
+the TSA, the United States Aerospace Force
+is spread very thin, with assets scattered
+
+RANKS
+
+Habitat and vessel crews are organized much
+like miniature squadrons. The Commanding Officer
+(Rank 6) and Executive Officer (Rank 5) are in
+overall command, with captains (Rank 4) in charge
+of the lieutenants (Rank 3) that man most of the vessels’ systems. Enlisted personnel are largely technical specialists in the Aerospace Command, and are
+practically nonexistent on space vessels and facilities.
+USAF officers often joke that in Deep Space
+Command, “a captain is a corporal and a colonel is
+a sergeant.” Rank divisions are very strict on space
+vessels, as the human crew consists entirely of officers (infomorphs may be NCOs). Promotion can be
+painfully slow, which can be a shock for officers
+from other services or from Aerospace Command.
+To represent this, USAF officers may spend up to 3
+character points to establish time-in-grade and timein-service. This seniority only counts for the current
+Military Rank, but GMs may allow the player to
+simply buy off the difference when purchasing a
+higher Military Rank.
+
+The USAF attempts to keep at least
+half of its vessels out on patrol at all times.
+Some vessels are sent on unannounced
+“tours” to other Space Wings or out-of-theway colonies, as fuel budgets permit. Most
+of these missions are intended to disrupt
+any long-term analysis of fleet dispositions,
+but they do broaden the perceived presence
+of the United States in space and provide
+crews with useful experience.
+The USAF cooperates very closely
+with the U.S. Army’s 82nd Spaceborne, but
+its relationship with the rest of the Army,
+and with the Navy, is cooler. The Army
+resents the USAF emphasis on spacecontrol and deep-strike operations over airlift and close air support, while the
+Navy (and its congressional lobby)
+still bears a grudge over having been
+denied a chance to operate deepspace vessels.
+
+DEEP SPACE WINGS
+
+The “wing” is the largest combat unit in
+the USAF. A Space Wing can consist of up to 20
+large vessels and a dozen or more auxiliaries
+(cargo transports, large shuttles, executive
+space vehicles, etc.). Wings generally consist of
+three to five squadrons. Each squadron has a
+few large vessels or stations (in Deep Space
+Wings, typically two SDVs) and several smaller ones, plus supporting personnel.
+30th Space Wing: Based out of Rhea
+(p. TS47), the 30th is responsible for defending
+U.S. interests in the Deep Beyond, including
+ensuring the safety of helium-3 shipments; protecting U.S. bases and colonies at Cassini Station, Rhea, Titan, and Hyperion; and assisting
+vessels in distress. Four Block C Archangel
+SDVs and various other vessels patrol the
+region around Saturn and make occasional sorties as far out as Neptune. See Deep Beyond for
+additional information.
+90th Space Wing: This wing’s area of
+responsibility is deep-space patrol in the inner
+system, in particular to protect U.S. deep-space
+commerce in the “triangle trade” between
+Earth-Lunar space, Mercury, and Mars. In
+peacetime, this often involves rendering aid to
+vessels or near-Earth asteroid bases. It is also
+tasked to assist the 91st in the defense of Mercury, and its inner-system patrols near the sun
+often double as science missions for the U.S.
+Astrographical Survey. The 90th fields six
+Angel SDVs, one Grizzly SCV, and eight auxiliary vessels.
+
+91st Space Wing: Assigned to defend Mars
+and patrol the inner system, the 91st Space
+Wing has the distinction of the worst safety
+record of all the Deep Space Wings, despite
+numerous maintenance standdowns. Both the
+USAF and SIA are investigating potential Chinese or terrorist sabotage. The wing consists of
+six Angel SDVs, three Grizzly SCVs, and
+almost two dozen auxiliaries. As a heavily
+transport-oriented wing, it is expected to support contingencies that require interplanetary
+troop deployments (including reinforcing Mercury and Titan). For more information, see In
+The Well.
+341st Space Wing: The 341st Space Wing
+is based out of Columbia Station in Earth orbit.
+In peacetime, it supports the orbital SDP network in close cooperation with the 21st Space
+Wing (Aerospace Command), and is also
+tasked with handling contingencies at Luna,
+L4, and L5. The 341st currently fields two
+Angel SDVs, with another two undergoing refit
+to the Block C upgrade, plus a large number of
+local space vessels (OTVs, MAVs, etc).
+50th Space Wing: Not officially acknowledged to exist, the 50th Space Wing is sometimes credited with testing (and perhaps
+operating) a variety of experimental or prototype vessels, or special operations craft (such as
+modified civilian vessels used for electronic
+surveillance or black operations). Conspiracy
+theorists claim they use technology salvaged
+from alien relics on Mars and Pluto.
+
+DCS-4 GRIZZLY
+SPACE CONTROL
+VEHICLE
+
+BASES
+
+For reasons known only to the USAF command,
+all facilities located on planetoids or planets are “Air
+Force Bases,” while those in orbit are “Aerospace
+Force Bases.” Both on Earth and elsewhere, local
+contractors largely operate the facilities. This makes
+the bases more cosmopolitan, but it is also a potential
+security hazard. Counterintelligence is a rapidly
+expanding occupational field in the USAF . . .
+Some examples:
+Cassini AFB (Rhea): The HQ of the 30th Space
+Wing. The posting is relatively boring, but increased
+tension with the Chinese colony on Titan has many
+worried.
+Titan AFB (Saturn): A large spaceport serving
+mainly as a staging area for military landings on
+Titan. Only a single squadron of UCAVs and a handful of support personnel are present to “show the
+flag.” The Joint Chiefs are considering expanding the
+base to support a permanent Army detachment
+despite objections by some USAF generals.
+Mars Orbit AFB (Mars): Commanded by the
+colorful Brigadier General Gendo Tobikuma, “Blue
+Star” is the HQ of the 91st Space Wing. The facility
+is earmarked for expansion, to the relief of the overcrowded and overworked crew.
+Vandenburg AFB (Earth): Shared with NASA,
+Vandenburg AFB is the site of the world’s largest concentration of TCAVs, with 74 in various states of
+readiness. As operations at Vandenburg expand under
+Lieutenant General Gloria Silvas’ command, the base
+has become a popular target for groups opposing the
+weaponization of space and atmospheric damage
+from TCAV and shuttle launches.
+
+Designed as the fast transport
+and AKV carrier counterpart to
+the DFS-3, the Columbia Aerospace DCS-4 can carry an entire
+battalion of Army personnel and
+their associated support equipment, or enough AKVs to seriously threaten a fleet. It represents a
+major increase in the USAF’s
+ability to project force across the
+solar system. It was approved in
+2088, with the first vessel completed in 2090.
+Fifteen vessels were planned,
+but only seven are currently in
+active service, with the pathfinder
+vessel being used alternately for
+training and for testing new technologies for later installation on
+production models. Vessels in
+service are named after bears,
+including those from myth; e.g.,
+the Kodiak, Sunbear, and Ghost
+Bear of the 91st Space Wing.
+The DCS-4 is a 450’-long,
+50’-wide cylinder. Not designed
+to go toe-to-toe with other combat
+vessels, it cannot retract its 224’ ×
+224’ radiator wings and carries
+relatively little armor. Typical
+payload includes 8 Predator
+AKVs on external cradles, and
+various other craft in the spacedock, for a total of 3,407.6 tons.
+There are 56 spaces available for future
+upgrades.
+
+Crew: Commander (Leadership, Shiphandling, Tactics); Pilot (Piloting (LowPerformance Spacecraft)); Navigator
+(Astrogation, Electronics Operation
+(Communications), Electronics Operation (Sensors)); Weapons Officer
+(Gunner (Beams), Gunner (Railgun));
+35 Engineers (Mechanic (Fusion
+Drive), Mechanic (Robotics), other
+Mechanic skills as appropriate); 8
+
+Medics
+(Diagnosis,
+Physician,
+Surgery). The DCS-4 can carry 200
+battlesuited infantry in its bunkrooms,
+or over 1,000 cybershell troops in
+cargo. Most of the spacedock is usually given over to UCAVs and drop
+capsules.
+Design: Cylinder hull (1,800 spaces, metalmatrix composite, heavy frame, smart);
+cDR/cPF 25/2F, 8/1S, 5/1B (diamondoid armor). Hull radiators (55 ksf),
+radiator wings (100 ksf). Chameleon
+surface.
+
+USTRANSCOM
+
+initiated in response to the discovery of China’s Xingzhai SDV
+by U.S. intelligence. The final
+design is considered typical of
+The United States Transportation Command, based
+most advanced SDVs: a 375’out of Scott AFB on Earth, is responsible for all translong, 50’-wide streamlined
+portation and logistics for the U.S. military – from concylinder bristling with AKV bays
+tracting mag-lev transport of Army tanks around the
+and laser towers. The first three
+United States to moving Navy assets on chartered space
+production vessels saw combat
+transports to Titan and Mars. In an era where national
+almost immediately after their
+holdings can be on other planets, the role of transportaconstruction – notably in the
+tion in logistics is absolutely critical.
+post-war “Snark Hunt” against
+Currently, most U.S. military transport in space is
+rogue AKVs. Today, these powhandled by contracted shipping companies, a fact that
+erful vessels are the embodiment
+has many U.S. policy makers worried, as it places a lot
+of American military power, and
+of power in the hands of the independent Farhauler’s
+are often featured in USAF
+Guild and the large shipping cartels. The USAF has
+recruitment ads.
+scoffed at such fears, and points to the successful transThe DFS-3 is heavily
+portation of Navy assets to Mars as proof it can be done
+armed, but vessels on patrol are
+without expanding USTRANSCOM control of their
+also expected to gather signals
+vessels.
+intelligence (SIGINT), and the
+most distinctive feature of the
+vessel is the advanced passive
+Modules: New command bridge; 2 large
+sensor array from Nanodynamics. Mission
+ladar; 2 large PESA; 2 large radar; 300
+specialists from the SIA and NTIB are often
+HI fusion pulse drive; 1,000 tanks
+attached to DFS-3 crews, and travel routes
+(ultralight, nuclear pellets); 4 10-MJ
+are arranged to fill reconnaissance requireheavy laser towers [S]; 6 2.5-MJ light
+ments that cannot be conducted by sensor
+laser towers [S]; 10 cabin; 50
+networks or drones.
+bunkroom; heavy storm shelter (2There are now 20 DFS-3s in USAF
+space: encloses bridge, cPF 1,000);
+service, with another five under construcminifac workshop; 2 large entry modtion. All current vessels are of the Block B
+ule; spacedock hangar (120’ long, 40’
+design (instituted in 2093) with the excepwide, 20’ high: 192 spaces); 8 external
+tion of four Block C Archangel upgrades
+cradles (125 tons each); 3 surgery; 100
+(see Deep Beyond). Current DFS-3s are
+cargo (500 tons).
+named after minor angels from the Bible,
+Statistics: EMass 5,822; CMass 15,230;
+Koran, and Kabbalah; e.g., the 91st Space
+LMass 21,230. Cost M$1,766.32. cHP
+Wing’s Dina, Gaghiel, Qamiel, Ramona,
+2,280. Size Modifier [Hull] +6/+10,
+Tabris, and Zafrire.
+[Radiators] +10. HT 12. Maintenance
+Typical payload is 1,067 tons, includInterval: 0.95 hours. RRA 150.
+ing 4 AKVs in bays, 500 tons of carried
+Performance: sAccel: 0.08 G. Burn
+craft, and 10 munitions packages. The radiEndurance: 83.33 hours. Burn Points:
+ator wings are 187’ × 187’ when fully
+24,000. Delta-V: 73.33 mps. No air
+extended. The DFS-3 is incapable of powspeed.
+ering all of its weapons systems using the
+drive’s MHD system alone. For this reason,
+a power pack is installed to provide power
+NGEL PACE
+for two volleys; the vessel is then limited to
+firing either the lasers or the particle beams
+OMINANCE EHICLE
+in any given turn. The drive produces 199
+The Columbia Aerospace YDFS-3 was
+MW of excess power when the weapons are
+the winner of the USAF’s Large Deep
+not being used.
+Space Combatant Program, which was
+
+DFS-3 A
+S
+D
+V
+
+Crew: Commander (Leadership,
+Shiphandling, Tactics); Pilot (Piloting (Low-Performance Spacecraft));
+Navigator (Astrogation, Electronics
+Operation (Communications), Electronics Operation (Sensors)); 2
+Weapons Officers (Gunner (Beams),
+Gunner (Railgun)); 24 Engineers
+(Mechanic (Fusion Drive), Mechanic
+(Robotics), other Mechanic skills as
+appropriate); 2 Medics (Diagnosis,
+Physician, Surgery); Mission Specialist (Electronics Operation (Sensors),
+Intelligence Analysis, SIGINT Collection/Jamming, Traffic Analysis). The
+DFS-3 has enough room to carry up to
+20 infantry and associated equipment.
+Design: Streamlined cylinder (1,500
+spaces, metal-matrix composite, extraheavy frame, smart); cDR/cPF 98/10F,
+10/1S, 10/1B (nanocomposite armor).
+Hull radiators (60 ksf), folding radiator
+wings (70 ksf). Chameleon surface.
+Modules: New command bridge; 2 medium ladar; 2 large PESA; large fixed
+PESA +4 [F]; 2 large radar; 250 HI
+fusion pulse drive; 920 tanks (ultralight, nuclear pellets); 8 10-MJ heavy
+laser towers [S]; 2 10-MJ heavy lasers
+[B]; 6 2.5-MJ light laser towers [S];
+coilgun [F]; 2 350’ new particle accelerator [F/F]; 8 cabin; 5 bunkroom;
+heavy storm shelter (2-space: encloses
+
+bridge, cPF 1,000); minifac workshop; 2 large entry module; spacedock
+hangar (75’ long, 20’ wide, 12’ high: 36
+spaces); 4 vehicle bays (Predator
+AKV: 110 tons, 0.112 ksf; 6 spaces
+each); 10 power pack; surgery; 10
+cargo (50 tons).
+Statistics: EMass 7,565; CMass 14,152;
+LMass 19,672. Cost M$2,108.96. cHP
+3,888. Size Modifier [Hull] +6/+10,
+[Radiators] +9. HT 12. Maintenance
+Interval: 0.87 hours. RRA 125.
+Performance: sAccel: 0.07 G. Burn
+Endurance: 92 hours. Burn Points:
+23,180. Delta-V: 70.84 mps. No air
+speed.
+Variant: The competing Nanodynamics
+Space Systems YDFS-2 design was
+functionally similar to the basic DFS-3.
+Remove one particle beam and the
+power packs, and add an additional 4
+10-MJ heavy laser towers [S] and 4
+2.5-MJ light laser towers [S]. Replace
+the fusion drive with an HI antimatter
+pulse drive engine (same drive spaces
+and tanks). Add an additional 5 cargo
+and a 0.24-space antimatter bay (24
+grams); 4.46 empty spaces remain.
+EMass 7,410; CMass 14,023; LMass
+19,543. Cost M$2,166.38. sAccel: 0.09
+G. Burn Points: 29,810. Delta-V: 91.08
+mps.
+
+SEM-23B
+PEREGRINE REMOTE
+SURVEY VEHICLE
+
+Vosper-Babbage’s Peregrine is a purpose-built reconnaissance and survey vehicle, designed to extend the range of a
+larger vessel’s sensor network. It grew out
+of a failed attempt to develop a long-range
+AKV, but has since proven its worth in
+U.S., French, and South African
+service. Its main limitation is that
+if the main drive is not active, it
+has only limited battery
+endurance. For this reason, the
+craft does not utilize its radar
+unless something unusual is
+detected on the PESA, or it is
+ordered to start scanning.
+The Peregrine is a 35’-long, 10’wide cylinder, and does not carry
+cargo or mount radiators. Kits allowing installation in launch bays
+designed for the SIM-7 Predator are
+common.
+Crew: Unmanned. Infomorph uses
+Electronics Operation (Communications), Electronics Operation
+(Sensors), and Piloting (HighPerformance Spacecraft).
+Design: Cylinder hull (5.6 spaces, titanium alloy, light frame); cDR/cPF
+5/1F, 1/1S, 1/1B (carbon composite
+armor). Chameleon surface.
+Modules: Old unmanned controls; medium
+fixed PESA [S]; medium fixed radar
+[F]; 1 compact HI fusion pulse drive;
+2.55 tanks (ultralight, nuclear pellets);
+1 battery.
+Statistics: EMass 44; CMass 59; LMass
+74. Cost M$6.47. cHP 10. Size Modifier +2/+5. HT 12. Maintenance Interval:
+7.87 hours. RRA 0.
+Performance: sAccel: 0.1 G.
+Burn Endurance: 42.5
+hours. Burn Points:
+15,300. Delta-V: 46.75
+mps. No air speed.
+
+AC-425 SEMINOLE
+
+MICROGRAVITY
+ASSAULT VEHICLE
+
+Sometimes referred to as an “assault
+boat” by Army personnel, the AC-425 is a
+small spacecraft designed for the rapid
+insertion of combat personnel onto hostile
+planetoids or space vessels. Not particularly
+popular with troops, it has gained a variety
+of nicknames, ranging from “suicide hotdog” to “CSP-1: Coffin, Self Propelled.”
+Most of the concern centers on the MAV’s
+inability to hide when moving to its target.
+Attempts at emissions cloaking have
+proven ineffective, but rumors persist of
+SIA and Special Forces variants with
+advanced drive-masking technology.
+The AC-425 was funded by the
+U.S. Army in 2085 as part of its Force
+2100 program, and was heavily influenced by lessons learned during the
+Hyperion campaign. The Army contracted Vosper-Babbage to produce
+five vessels for testing between 2087
+and 2093. The test design was modified to better accommodate cybershells, and limited production began
+in 2098. The production models are
+named after famous Native American
+warriors.
+The craft can carry an entire platoon of battlesuited or cybershell personnel in its spacedock, ready for
+instantaneous deployment. It can also provide limited fire support from its own 2.5MJ laser, and in an emergency can even be
+used as an impromptu AKV. It is 35’ long
+and 15’ wide, dominated by the spacedock
+and grappling equipment. Typical payload
+is 5 tons. Due to its size, the craft is usually
+carried on external grapples, loading passengers through the spacedock rather than
+the entry module.
+
+Crew: Unmanned. Infomorph uses Electronics Operation (Communications),
+Electronics Operation (Sensors), Gunner (Beams), and Piloting (High-Performance Spacecraft).
+
+SHIPBOARD COMBAT
+
+Boarding actions are fairly common. They
+rarely occur in the middle of a space battle, but
+military and paramilitary forces often need to
+board a relatively defenseless merchant vessel
+to search for contraband, or to seize control of
+a vessel that has surrendered or been disabled,
+or to capture a space station.
+Most boarding actions involving spacecraft are one-sided affairs, since the boarding
+party usually has the option of retreating to its
+mother ship and destroying the target. Of
+course, the defenders may know this – which
+may drive them to desperate measures. Boarding with MAVs or other small craft ensures that
+even if the defender has rigged the vessel to
+self-destruct, he cannot do much more than
+destroy the boarding party itself.
+Fighting is only likely to occur when
+boarding a large space station (which the
+defender knows is too big or too valuable to be
+destroyed); when the defenders are not fanatical enough to self-destruct, but wish to make
+the attackers pay a price; or, most commonly,
+when the defenders panic (for example, after a
+military boarding party discovers contraband).
+
+Design: Streamlined cylinder (12.6 spaces,
+nanocomposite, medium frame);
+cDR/cPF 35/2F, 15/1S, 5/1B (diamondoid armor). Chameleon surface.
+Modules: New unmanned controls; small
+fixed ladar [F]; small PESA; 1 compact
+kerosene-oxygen rocket; 3 tanks (ultralight, kerosene-oxygen); 2.5-MJ light
+laser [F]; 2 small robot arms; small
+entry module; 0.5 power pack; 0.1 battery; spacedock hangar (25’ long, 10’
+wide, 10’ high: 5 spaces); 0.5 cargo
+(2.5 tons).
+Statistics: EMass 126; CMass 152; LMass
+173. Cost M$39.18. cHP 32. Size Modifier +3/+5. HT 12. Maintenance Interval: 6.39 hours. RRA 0.
+Performance: sAccel: 3.25 G. Burn
+Endurance: 0.009 hours (32 seconds).
+Burn Points: 110. Delta-V: 0.322 mps.
+No air speed.
+
+A defending force may also hope to exact
+enough of a price to force the boarders to negotiate . . . or even to capture unwary intruders as
+hostages. Cybershells and cyberswarms add
+additional uncertainty: a small transport vessel
+known to be rated for minimal life support
+could hold hundreds of combat cybershells or
+cyberswarms that have no compunction about
+sacrificing themselves.
+Spacecraft are fairly sturdy, but a firefight
+taking place inside a vessel may damage it!
+One way to determine the effects is to roll damage done for weapons fired inside the craft,
+subtract the DR of interior partitions, and keep
+a running total of the results. Every time total
+damage reaches a multiple of (cHP/10), roll on
+the Major Damage Table (p. TS203).
+Example: A hijacker fires a 10mm PDW
+on board a Sudbury. A PDW does 3d damage
+per shot, averaging 10.5 points of damage. Interior partitions are DR 8 on civilian vessels
+(p. 20), so the final damage per shot is 2.5
+points – or 30 points for a burst of 12 rounds. A
+Sudbury has 1,320 cHP, so 5 bursts (150 damage) cause a major damage result.
+
+TRANSPACIFIC
+SOCIALIST
+ALLIANCE
+(TSA)
+
+The TSA Aerospace Forces suffered a
+resounding defeat by the Chinese PLANSF during the Pacific War. By the end of the
+war, over 95% of their orbital assets and
+several of their ground facilities had been
+destroyed. Their command and control system was in complete chaos – resulting in a
+loss of control over their extensive network
+of AKVs and SDPs – and dozens of their
+highest-ranking officers were killed.
+In the wake of the peace agreement, the
+TSA has slowly rebuilt its fleet, careful to
+hide its true strength and spread its few
+assets far apart to avoid any possibility of a
+quick defeat.
+
+DOCTRINE
+
+The TSA’s various nations operate a
+space force that is only a shadow of its former self. Its few surviving warships are
+archaic, and production of new craft is limited by the lack of TSA-owned orbital construction facilities and trade restrictions. To
+circumvent this, Indonesia hopes to expand
+its trade with the Duncanites, exchanging
+technical information and hard currency for
+use of Duncanite space facilities and construction expertise. Partly as a result of this,
+the TSA has moved some of its vessels into
+the Deep Beyond – ostensibly as part of an
+effort to disable rogue AKVs, but in reality
+to ensure that they are not static targets for
+any future Chinese strikes. This move has
+alarmed some Duncanite communities, who
+fear it may escalate ongoing Chinese
+harassment into a full-scale war, but those
+who choose to deal with the TSA see the
+benefits as justifying the risk.
+
+DEPLOYMENT
+
+The TSA does not possess a unified
+aerospace force; each country has a completely independent military that cooperates
+on matters of mutual defense and equipment contracting. Peru and Indonesia maintain the TSA’s strongest space forces, with
+the remaining members providing funds
+and bases of operation.
+The TSA’s current deep space
+fleet consists of five LSDVs and a dozen
+smaller craft (mostly converted commercial vessels). Most combatants are refurbished
+survivors of the Pacific
+War and inferior to any
+The
+modern design – at least
+officially. The agreement
+TSA
+with the Duncanites has
+does
+created much uncertainty
+about their current strnot
+ength and capabilities.
+The TSA no longer
+possess
+has a large force in orbit –
+a unified
+at least, not publicly. Its
+members do have a few
+aerohundred communication
+and surveillance satellites,
+space
+but most space defenses
+force.
+are ground-based lasers,
+backed up by a few dozen
+TAVs and TACVs which
+are mostly used to service
+satellites and provide strategic airlift. However, there are suspicions that the TSA has
+some commercial satellites that are actually
+disguised SDPs or AKV bases.
+
+SALAHUDIN
+SAMBOJA-CLASS
+UNMANNED SPACE
+DOMINANCE VESSEL
+
+Designed in 2099, the Salahudin Samboja class of vessels reflects a dramatically
+different design paradigm from the other
+space powers. While other military space
+vessels use extensive automation to
+reduce crew sizes, all but the smallest
+
+craft are still expected to have a living
+being responsible for their operation.
+The TSA military saw the opportunity to
+save money and mass by removing living
+beings entirely – everything a human or
+bioroid crew can do is easily accomplished
+with AIs, ghosts, and cybershells. This
+reflected the TSA’s view of its warcraft:
+they were intended solely for offensive
+space-superiority or raiding operations
+against enemy commerce and bases. With
+few extraterrestrial holdings to support, the
+TSA saw little need to design the vessels for
+peacekeeping, gunboat diplomacy, or other
+tasks that required a trusted human being on
+the bridge.
+The Salahudin Samboja-class is purely
+a warship, designed with the maximum feasible amount of armor and firepower in a
+vessel of its size. It does not carry troops or
+cargo and has no accommodations for crew
+of any kind (in fact, most components are
+designed with minimal access space, relying on cyberswarms and small cybershells
+for maintenance). Externally the ship does
+not appear wildly different from other SDV
+designs. The hull is a flattened streamlined
+cylinder 220’ long and 60’ wide, bristling
+with laser arrays and sensor panels. The
+retractable radiator arrays are extremely
+large for the vessel’s size, however, extending to an impressive 212’ × 212’. Typical
+payload is 1,420 tons, including 10 munitions packs and 12 Amazon AKVs
+(p. TS192).
+The first vessel of the class is not being
+produced in a TSA facility. Instead, the
+majority of the work is being done by the
+Red Duncanites at Liang Mountain. The
+TSA is providing the weapon systems, sensors and technical personnel, shipped
+in through intermediaries. The first vessel,
+named for a famous Indonesian naval commander during the Pacific War, will be completed by July of 2100. The Chinese have
+become aware of the project, and the
+PLAN-SF may stage a second attack at
+Liang Mountain to destroy the Salahudin
+Samboja before it is fully operational.
+Crew: Unmanned. The vessel usually
+maintains two or three infomorphs:
+a ghost or SAI in the new
+
+BASES
+
+The TSA no longer has any large
+deep-space facilities in Earth-Lunar space,
+although there are rumors of pre-War automated facilities in the Junk Jungle and the
+Belt. Several AKV launch facilities remain
+unaccounted for, as their command and
+control facilities were destroyed in the
+early days of the conflict. Most surviving
+bases are small and either mobile or
+extremely well hidden, and may include
+small observation and depot facilities on
+Venus and in the Deep Beyond.
+
+unmanned controls and one or two
+NAIs responsible for controlling the
+various cybershell and cyberswarm
+maintenance units.
+Design: Streamlined cylinder (1,267.2
+spaces, metal matrix composite, heavy
+frame); cDR/cPF 112/50F, 15/2S,
+15/2B (metal matrix composite armor).
+Hull radiators (35 ksf), folding radiator
+wings (90 ksf). Chameleon surface.
+Modules: New unmanned controls; old
+unmanned controls; 2 large radar; 2
+large PESA; large fixed ladar [F]; 160
+compact HI fusion pulse drive; 850
+tanks (ultralight, nuclear pellets); 10
+10-MJ heavy laser towers [S]; 4 10-MJ
+heavy lasers [F]; 3 2.5-MJ light lasers
+[B]; 200’ new particle beam [F]; 2 coilguns [F/F]; 1 heavy storm shelter (0.1
+space; encloses both unmanned controls, cPF 1,000); 2 minifac workshop;
+12 vehicle bays (Amazon AKV: 110
+tons, 0.08 ksf; 6 spaces each); 7.5 new
+fusion reactor (40 MW); 5 cargo (25
+tons).
+Statistics: EMass 8,221; CMass 14,741;
+LMass 19,841. Cost M$1,271.86. cHP
+1,475. Size Modifier [Hull] +6/+10,
+[Radiators] +10. HT 12. Maintenance
+Interval: 1.12 hours. RRA 122.
+Performance: sAccel: 0.07 G. Burn
+Endurance: 88.54 hours. Burn Points:
+2,231. Delta-V: 68.17 mps. No air
+speed.
+
+ROGUE AKVS
+
+Years after the end of the Pacific War,
+relics of the conflict continue to pose a danger to space navigation. Most infamous are
+the various AKVs deployed by the TSA
+before the war. During the conflict, many of
+these deadly machines lost contact with
+their control sites. They continue to operate
+as if the war continues. All were built to
+ignore civilian vessels, but since IFF standards have changed and many designs have
+entered service over the years, the AIs on
+rogue AKVs – lacking updates – often
+come to the conclusion that civilian vessels
+are unidentified combat craft. The jumbled
+commands issued during the Pacific War
+and the loss of the command codes are
+sources of distress even with the TSA, who
+are no more safe from rogue AKVs than
+anyone else. Despite several campaigns to
+
+locate and destroy them, dozens are
+suspected to be hiding in the L5 Junk
+Jungle or the Deep Beyond in 2100.
+Another problem is that the adaptive
+learning algorithms of the LAI software
+used on the early AKVs were not particularly stable: the LAIs tended to learn many
+unanticipated and undesired thinking patterns. As the TSA never expected the AKVs
+to be deployed for this long, this was
+deemed to be a minor problem that could be
+corrected with periodic updates. For this
+reason, many rogue AKV infomorphs have
+the following digital entity lens:
+Rogue AKV: An AKV AI that has
+become dangerously unstable. Delete Honesty, Reprogrammable Duty, and all Taboo
+Traits. Increase cost by 35 points. Some are
+simply cunning; others display disadvantages such as Bloodlust, Delusions (“Everyone is my enemy!”), and Extreme
+Fanaticism.
+
+The final complication is that
+these AKVs are well hidden. Most were
+placed before there was any coordinated
+system of monitoring interplanetary flights.
+The PLAN-SF monitored TSA space activity before the war, but lost a significant
+amount of that information due to infowar
+and covert operations. The AKVs were typically placed at strategic locations (as they
+lacked delta-v) by other vessels, but maintained a very low power profile. Sometimes
+they used heat sinks bored into small asteroids to mask their infrared signature. Those
+located in the L5 Junk Jungle were disguised as garbage, relying on passive or dispersed sensors to detect potential targets.
+Many of these sensors have been destroyed
+or deactivated, which makes the rogue
+AKVs located there little more than dangerous booby traps. Luckily, none of the Pacific War AKVs were equipped with nuclear
+weapons or XLMPs.
+There is no official reward offered for
+locating or destroying a rogue AKV, but
+doing so will count toward gaining a positive Reputation with almost everyone living
+in space. Spacers have a fear of rogue
+AKVs that far outstrips the AKVs’ actual
+capabilities. The loss of the Charlevoix in
+June of 2099 has only ratcheted paranoia to
+new heights. Many private groups have
+offered bounties on confirmed rogue AKV
+kills, up to several million dollars each.
+
+KUPU-KUPU-CLASS
+AUTONOMOUS KILL
+VEHICLE
+
+The Kupu-Kupu (“Butterfly”) was the
+most common AKV used by the TSA,
+deployed in great numbers during the Pacific War. Some were stationed on TSA bases
+or spacecraft (and often destroyed before
+they could be launched), while others were
+secretly pre-positioned in hidden locations
+– mostly in Earth orbit, L4, L5, and Lunar
+orbit, and aboard merchant vessels – that
+allowed them to survive China’s first strike
+. . . and in some cases, to continue fighting
+even after the TSA made peace.
+
+The Kupu-Kupu is representative
+of the cheap “captor mine” AKVs that
+were common before the war, and is based
+on the earlier Russian Istrebitel SputnikovG killer satellites. It has a sphere hull 20’ in
+diameter. Its only weapons are a 2.5-MJ
+light laser, a coilgun . . . and itself. The
+AKV will activate as close as possible to its
+target and immediately move both to ram
+and strike with a KKMP. The laser is used
+to attack targets of opportunity, or to further
+damage its target. If other rogues are in the
+area, they may cooperate. Typical payload
+is 9.5 tons, consisting of a single KKMP
+munitions pack.
+Crew: Unmanned. Infomorph uses Electronics Operation (Communications),
+Electronics Operation (Sensors), Gunner (Beams), Gunner (Railgun), and
+Piloting (High-Performance Spacecraft)). These AKVs have much higher
+than average Piloting skills, with a skill
+level of 20.
+Design: Sphere hull (8 spaces, foamed
+alloy, medium frame, smart); cDR/cPF
+20/5 (carbon composite armor).
+Chameleon surface.
+Modules: Old unmanned controls; medium
+fixed PESA [F]; medium fixed radar
+[F]; 0.5 compact kerosene-oxygen
+rocket; 3 tanks (ultralight, keroseneoxygen); 2.5-MJ light laser [S]; coilgun [F]; 0.2 battery; 1 power pack; 1
+new fission reactor (2 MW).
+Statistics: EMass 227; CMass 257; LMass
+278. Cost M$12.26. cHP 19. Size Modifier +3. HT 12. Maintenance Interval:
+11.42 hours. RRA 0.
+Performance: sAccel: 0.96 G. Burn
+Endurance: 0.019 hours (1.14 minutes). Burn Points: 70. Delta-V: 0.200
+mps. No air speed.
+Notes: Many AKVs have far lower HT than
+normal as the result of wear and tear. In
+addition, many have long since run out
+of fuel for their fission reactor, and idle
+with only the PESA active. If such an
+AKV detects a target, it will immediately attack and attempt to do as much
+damage as possible before its battery
+and power pack are depleted.
+
+AC-425, see Seminole MAV.
+AKVs, rogue, 46, 47.
+Angel SDV, 38, 40, 41.
+Angry Schaffer, 9.
+Avskèrmar SDP, 31.
+Bioships, 21-23; template, 22.
+Boarding actions, 43.
+Bumblebee workpods, 7, 8, 15.
+Bundesraumwaffe, 26.
+Cargo, 14.
+Certifications, 8.
+Chihuahuan, 18.
+Combat, shipboard, 43.
+Computers, 19.
+Cyberswarms, 20.
+DCS-4, see Grizzly SDV.
+Deep-space operations vehicles, see
+DSOVs.
+DFS-3, see Angel SDV.
+Diaoche-class TCAV, 36.
+DSOVs, 11.
+ESVs, 11.
+Eurofighters, see Tempest.
+European Space Control Agency
+(ESCA), 25-31.
+Executive space vehicles, see ESVs.
+
+Farhauler’s Guild, 12, 15, 17.
+Feng shui, 34.
+Fittings, internal, 19-20.
+Force aérospatiale, 26.
+Freehaulers, 17.
+Golub-class USV, 11, 12.
+Grizzly SDV, 38-40.
+Heavy lift vehicles, see HLVs.
+Heavy space transport vehicles, see
+HSTVs.
+Helium-3, 32, 38.
+Hermann Oberth class, 26-28.
+HLVs, 5.
+Horus I, 20, 21.
+HSTVs, 11.
+Independent cargo vessels, 17.
+Königsberg-class SDV, 28, 29.
+Kupu-Kupu-class AKV, 47.
+Licenses, 8.
+Light space dominance vehicles, see
+LSDVs.
+LSDVs, 25.
+LSDV-5, see Hermann Oberth class.
+LSDV-6 Soldati, 28.
+Mars Interplanetary, 11, 12, 15.
+MAVs, 25.
+
+MAV-IIB Puma MAV, 31.
+Mercury-class HLV, 5, 6.
+Microgravity assault vehicles, see
+MAVs.
+Mochi-class PSV, 12, 13.
+Mojave ESV, 17, 18.
+Molniya ballistic ramjet TAV, 6, 7.
+Nadezhda bioship, 21-23.
+Orbital transfer vehicles, see OTVs.
+OTVs, 5.
+Parus-class HSTV, 12-14.
+Passenger space vehicles, see PSVs.
+Peoples’ Liberation Army Navy Space
+Force (PLAN-SF), 32-36, 44;
+bases, 33; ranks, 32.
+Peregrine RSV, 42.
+Phobos, 33, 34.
+PSVs, 11.
+Puma MAV, 31.
+Rei, 18.
+Riguang-class LSDV, 34, 35.
+Royal Air Force, 27.
+Royal Navy Space Service, 26-27.
+Salahudin Samboja-class unmanned
+SDV, 44, 45.
+Schaffer OTV, 8, 9.
+SCVs, 25.
+SDPs, 25.
+SDVs, 25.
+Security, 6.
+SEM-23B, see Peregrine RSV.
+Seminole MAV, 42, 43.
+Shepard-class DSOV, 20, 21.
+Shezbeth Expedition, 20.
+Silas Duncan Station, 20.
+Solar Express (SOLEX), 18.
+Soldati, 28.
+Space control vehicles, see SCVs.
+Space defense platforms, see SDPs.
+Space dominance vehicles, see SDVs.
+Sphere philosophy, 28, 29.
+Spokane-class HSTV, 12, 14-16.
+Sunlance ESV, 18.
+Systems, internal, 19-20.
+Tahmas interstation transport pod, 9.
+TAVs, 5.
+TCAVs, 25.
+Tempest TCAV, 27, 30.
+Transatmospheric combat air vehicles,
+see TCAVs.
+Transatmospheric vehicles, see TAVs.
+Transpacific Socialist Alliance (TSA),
+44-47; bases, 45.
+Traveling, 6.
+Triplanetary Lines, 11-13.
+U.S. Army, 42.
+United States Aerospace Force
+(USAF), 37-42; bases, 39; Deep
+Space Wings, 38; ranks, 37.
+United States Transportation
+Command (USTRANSCOM), 40.
+USVs, 11.
+Utility space vehicles, see USVs.
+Vehicle classes, commercial, 11; local
+space, 5; military, 25.
+Workpods, 5.
+Xingzhai-class SDV, 32, 35, 36, 40.
+YDFS-2, 41.
+Zhongguang-class HSTV, 12, 15, 16,
+26.
+

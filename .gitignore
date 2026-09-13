@@ -1,0 +1,2 @@
+# Ignore PDF rulebooks due to GitHub size constraints
+*.pdf

@@ -1,0 +1,1996 @@
+TM
+
+TM
+
+MARTINGALE SECURITY
+
+Written by PHIL MASTERS
+Edited by NIKOLA VRTIS
+Illustrated by FREDD GORHAM, ANDI JONES, RICK LOWRY, and DAN SMITH
+An e23 Sourcebook for GURPS ®
+
+STEVE JACKSON GAMES
+Stock #37-6705
+
+Version 1.0 – August 2009
+
+®
+
+CONTENTS
+INTRODUCTION . . . . . . . . . . . . . . . . . . . . . 3
+PROFESSIONAL PROTECTION . . . . . . . . . . . 4
+
+About GURPS
+
+MARTINGALE, THE COMPANY. . . . . . . . . . . . . . . . . . . . . . 4
+
+Steve Jackson Games is committed to full support
+of GURPS players. Our address is SJ Games, P.O. Box
+18957, Austin, TX 78760. Please include a selfaddressed, stamped envelope (SASE) any time you
+write us! We can also be reached by e-mail:
+info@sjgames.com. Resources include:
+
+Work Hours . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+RUNNING THE CAMPAIGN . . . . . . . . . . . . . . . . . . . . . . . . 5
+Character Point Totals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Team and Personal Equipment. . . . . . . . . . . . . . . . . . . . . . 6
+Using Equipment from Ultra-Tech . . . . . . . . . . . . . . . . . . . . 7
+Sample Scenario: A Concert in Zulia . . . . . . . . . . . . . . . . . 7
+Further Scenario Seeds . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+TEAM MEMBERS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Diego Hughes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Diego’s AIs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+Paul Chung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Paul Chung’s AI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+Paz Ramirez . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+Paz Ramirez’s AI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+OVERSIGHT. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+OVERSIGHT’s Buzzbots . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Charlie Mallinson . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+INDEX . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+
+About
+Transhuman Space
+The Transhuman Space series presents a unique
+hard-science and high-biotech universe for roleplaying. Set in the Solar System in the year 2100, it is a setting rich in adventure, mystery, and exploration of the
+possibilities of existence. The core book in the line is
+Transhuman Space, written by the series creator,
+David Pulver.
+
+GURPS System Design ❚ STEVE JACKSON
+GURPS Line Editor ❚ SEAN PUNCH
+Transhuman Space Line Editor ❚ PHIL MASTERS
+e23 Manager ❚ STEVEN MARSH
+
+New supplements and adventures. GURPS continues to grow – see what’s new at
+www.sjgames.com/gurps.
+e23. Our e-publishing division offers GURPS
+adventures, play aids, and support in PDF form . . . digital copies of our books, plus exclusive material available only on e23! Just head over to e23.sjgames.com.
+Pyramid (www.sjgames.com/pyramid). Our
+monthly PDF magazine includes new rules and articles
+for GURPS, systemless locations, adventures, and
+much more. Look for each themed issue from e23!
+Internet. Visit us on the World Wide Web at
+www.sjgames.com for errata, updates, Q&A, and
+much more. To discuss GURPS with our staff and
+your fellow gamers, visit our forums at
+forums.sjgames.com. The web page for Transhuman Space: Personnel Files 4 – Martingale Security
+ist www.sjgames.com/transhuman/personnel4.
+Bibliographies. Many of our books have extensive
+bibliographies, and we’re putting them online – with
+links to let you buy the resources that interest you! Go
+to each book’s web page and look for the “Bibliography” link.
+Errata. Everyone makes mistakes, including us –
+but we do our best to fix our errors. Up-to-date errata
+pages for all GURPS releases, including this book, are
+available on our website – see above.
+Rules and statistics in this book are specifically for
+the GURPS Basic Set, Fourth Edition. Page references
+that begin with B refer to that book, not this one.
+
+Managing Editor ❚ PHILIP REED
+Art Director ❚ WILL SCHOONOVER
+Page Design ❚ PHIL REED and JUSTIN DE WITT
+Production Artist & Indexer ❚ NIKOLA VRTIS
+Prepress Checker ❚ MONICA STEPHENS
+
+Marketing Director ❚ PAUL CHAPMAN
+Director of Sales ❚ ROSS JEPSON
+GURPS FAQ Maintainer ❚ –––––––
+VICKY “MOLOKH” KOLENKO
+
+Playtesters: Leonardo M. Holschuh and Emily Smirle
+GURPS, Warehouse 23, and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. Transhuman Space, Personnel Files, Martingale Security,
+Pyramid, e23, and the names of all products published by Steve Jackson Games Incorporated are registered trademarks or trademarks of Steve Jackson Games Incorporated,
+or used under license. Transhuman Space: Personnel Files 4 – Martingale Security is copyright © 2009 by Steve Jackson Games Incorporated. All rights reserved.
+The scanning, uploading, and distribution of this material via the Internet or via any other means without the permission of the publisher is illegal,
+and punishable by law. Please purchase only authorized electronic editions, and do not participate in or encourage
+the electronic piracy of copyrighted materials. Your support of the author’s rights is appreciated.
+
+CONTENTS
+
+2
+
+INTRODUCTION
+Each Transhuman Space:
+Personnel Files supplement
+offers a campaign set in the
+world of Transhuman Space,
+complete with background,
+brief scenario suggestions, and
+notes for the GM. The material
+also includes a set of characters
+suitable to act as PCs in this
+same campaign. These characters are detailed using GURPS
+Fourth Edition, with templates
+and other details drawn from
+Transhuman Space: Changing
+Times and Transhuman Space:
+Shell-Tech. Personnel Files 4 –
+Martingale Security offers a
+look at a recently formed bodyguard company and its core
+members.
+It’s sometimes said that Transhuman Space provides a
+wonderfully detailed world, but it’s hard to decide on and
+define an actual campaign to run there. The Personnel Files
+line is intended to provide an answer to this, and to demonstrate what PCs for the setting might look like. These characters can also be used as NPCs – as antagonists, allies, patrons,
+or background color.
+
+These, in the day when heaven was falling,
+The hour when earth’s foundations fled,
+Followed their mercenary calling
+And took their wages and are dead.
+– A.E. Housman, “Epitaph on
+an Army of Mercenaries”
+About the Author
+Phil Masters is the author of Transhuman Space: Changing
+Times, Transhuman Space: Shell-Tech, Transhuman Space:
+Personnel Files 1-3, and a chapter in Transhuman Space:
+High Frontier. He has also worked on countless other GURPS
+products, such as the Who’s Who books and Banestorm, and
+on products for other companies. He lives and works in the UK,
+and he doesn’t have a bodyguard.
+
+INTRODUCTION
+
+3
+
+PROFESSIONAL
+PROTECTION
+The characters detailed in this supplement form a professional bodyguard team – a natural setup for action-oriented
+plots in the world of Transhuman Space. Often, in this setting,
+combat work is assigned to highly specialized cybershells, or
+sometimes bioroids, especially in Fifth Wave areas; the scope
+for complex, more or less human characters to engage in oldfashioned soldiering, shoot-outs, and suchlike action can seem
+limited. Nevertheless, certain tasks call for something other
+than raw firepower and heavy armor, even if combat is part of
+the job – and bodyguard work is one of those areas.
+Someone engaged in normal, if high-profile, activity in
+civilian society probably doesn’t want to be surrounded by
+heavily armed death machines. Even if legal difficulties can be
+overcome – and RATS or UCAV units tend to be highly restricted
+
+– it looks aggressive and paranoid. Politicians want to be able to
+shake hands with other people, to move through crowds or drive
+down the road while giving an impression of friendliness and
+accessibility. Celebrities need to seem somewhat approachable
+to their fans, and they often build valuable public images on the
+idea that they’re still regular folks. They also like to hit the
+nightspots without scaring other customers. Ordinary people
+with stalkers usually want to be able to carry on living their normal lives while the problem is cleared up. Heavy-duty combat
+systems get in the way of all that – and alert, computer-aided,
+V-tag-reading Fifth Wave citizens can often spot even quite subtle automated security. Thus, in 2100, the bodyguard business
+calls more than ever for discretion and the human touch.
+
+COMPANY BACKGROUND
+The group described here makes up the entire workforce of
+Martingale Security, a small commercial bodyguard team based
+in the United States in the Transhuman Space setting. It can be
+treated as an example of how to make such an entity the basis
+for a campaign. Bigger companies are involved in the business,
+but basing a series of adventures around a small independent
+team gives the PCs a greater feeling of control over their work
+decisions, avoiding a sense of heavy-handed management from
+higher levels. Martingale has outside investors and the usual
+corporate need to turn a profit, but within that constraint, it’s
+up to the PCs how they do their job. The team does have a
+leader – that’s really inevitable with a group of professional
+combatants – but the members are all trusted to make tactical
+decisions as necessary. They are permitted to query instructions
+from the team leader in non-urgent situations, and even to
+debate policy. In the extreme case, they can be sacked, but they
+aren’t subject to military discipline. Furthermore, Martingale’s
+particular “command structure” has some secret wrinkles, hidden in the character descriptions.
+The company was established a couple of years ago, as an
+independent start-up. The people who are putting up the
+money have chosen to remain in the background, concealed
+behind indirect ownership arrangements. However, the set-up
+is, as far as anyone can tell, legal. Those who have looked into
+it, from inside or outside of the company, have failed to find
+anything ethically dubious going on, and the team members
+have never yet been asked to break any laws. Presumably, the
+
+backers regard this as an interesting sideline or speculative
+investment, and they simply value their privacy. Nonetheless,
+some of the team is still keeping an eye out for evidence of hidden agendas.
+From the team members’ point of view, the company functions like a partnership of quasi-independent professionals
+that just happens to have some useful funding. However,
+Martingale isn’t rated as a Patron in the character descriptions.
+The aid the company provides is strictly that given by a good
+businesslike employer, and it won’t extend beyond the job at
+hand. Martingale will furnish equipment (including weapons)
+and legal assistance, but only as needed to get a job done. The
+company requires efficient accounting in return. Equally, work
+for the company isn’t rated here as a Duty (except for the company’s AI, which is legally property), although it can be moderately dangerous at times. It’s essentially a job, which team
+members can quit any time if they wish, and they’re supposed
+to minimize risks whenever possible. The only stipulation the
+owners place on team composition is that it must include
+Charlie Mallinson (see pp. 19-20). Additionally, a high-end AI,
+OVERSIGHT (pp. 17-18), handles most of the admin work and
+day-to-day communications for the company.
+Martingale is based in Dallas, Texas, and all the team
+members have residences in that city. This is as convenient
+as anywhere else, in the web-linked world of Transhuman
+Space, and GMs who prefer to choose another American
+city for any reason are welcome to move the base.
+
+PROFESSIONAL PROTECTION
+
+4
+
+Most jobs involve a flight out of the international airport to
+wherever the action is, although there’s also a fair amount
+of work going in the city’s own business district and elsewhere in the Dallas-Fort Worth area. The company has a
+lease on a modest suite of offices in the business district,
+mostly to hold OVERSIGHT’s computers and for conference rooms to allow for clients who prefer to meet the team
+in person. The company also rents a secure storage unit further out of the city center, where the team can stow their
+larger cybershells and some of their sidearms between missions; getting into this involves multiple codes and forms of
+identification, though all team members have access. The
+storage units are managed and watched by an experienced,
+competent LAI; OVERSIGHT is automatically notified of
+both legitimate access to the store and any kind of
+attempted intrusion or suspicion activity.
+Martingale advertises discretely through various websites and communal networks, and it aims to build a solid
+“word of mouth” reputation. Team members may be
+reminded of this objective if they seem likely to endanger
+the company’s good name. Initial approaches with offers of
+work usually come in through the Web. Contractual negotiations are mostly handled by semi-independent agents (human
+and AI) hired by the company owners. Team members who
+bring in profitable work through their own efforts could
+receive a modest bonus.
+The company currently employs just the one team. If it
+chooses to expand in the future, it will probably create complete
+new teams of much the same size, although members of the
+initial team may be given temporary training and assessment
+duties with the new group.
+Martingale Security is not a military, or even paramilitary,
+organization. It’s a civilian company providing plain-clothes
+civilian bodyguards. While other “security” companies in 2100
+are more like mercenary forces (and may have more militarygrade hardware, including RATS and similar), Martingale
+pitches for work at the subtler end of the market. As a side effect,
+
+Work Hours
+Note that, in general, Fifth Wave citizens in 2100 work
+relatively short hours – often around 20 per week. A bodyguard team really can’t function that way: They have to
+cover their clients for large parts of each day and be available at short notice the rest of the time. Hence, companies
+like Martingale offer a different work pattern, with “high
+intensity” schedules while on assignment, and long periods
+of relaxed “downtime” in between. (This isn’t necessarily
+time off; it can mean training, refresher courses, or basic
+consultancy tasks performed over the Web from home.)
+Obviously, this routine will suit some people more than others. Additionally, bodyguards might not have close relationships, because their schedules often lead to friction and
+stress. Still, the relatively short total working hours are
+another reason not to count the job as a significant Duty.
+
+its employees aren’t asked to confront many of the ethical problems associated with military-mercenary work. They do have to
+be prepared to shoot people if absolutely necessary, but the corporate line is that they’re in the business of preserving life, not
+taking it. They’re officially more than willing to cooperate with
+the police. They avoid contracts that would take them to areas
+where local law enforcement is very corrupt or untrustworthy,
+though they don’t often turn down paying work that is within
+their capacity. If they’re offered a job that they decide requires
+more firepower than they can muster, they know some paramilitary bodies to whom they can direct the customer with a clear
+conscience; such outfits will return the favor if offered work
+requiring subtlety. Likewise, the company has no interest in any
+kind of espionage work and limited capabilities for counterespionage or countersurveillance. However, it might team up with
+other specialists if a customer seemed to need such support.
+
+RUNNING THE CAMPAIGN
+A bodyguard campaign can be run on a simple, episodic,
+“mission” basis. Each week, the team gets a new assignment
+and a briefing, goes out, and does the job. Most times, this
+means that the threatening force shows its hand, the team
+stops the attack (or at least tries to), the threat is eliminated
+(or the mission fails), and everyone gets paid and goes home.
+In cases where someone needs protection from a whole slew
+of possible threats for months or years, such services have to
+come from larger companies or organizations. These entities
+can rotate multiple teams of bodyguards through the assignment as some take holidays or change job, collect intelligence
+on possible attackers, and organize a whole protective structure around the client. That’s not the kind of assignment
+which a small independent team like Martingale Security will
+be offered or accept. Rather, the company is in the short-term
+protection business, which suits the “adventure game” model
+very well.
+
+The short-term structure offers possibilities for variation
+from mission to mission. Sometimes, no real threat exits – perhaps the whole thing is a misunderstanding that needs to be
+cleared up, or the client is paranoid and needs to somehow be
+convinced of reality. Sometimes, the team doesn’t get the whole
+story because the client is confused, manipulative, or being
+manipulated by someone close. Perhaps the “threat” is coming
+from someone with a legitimate complaint against the client,
+but who won’t resort to physical violence. The team then has to
+disentangle the lies or misunderstandings and find a way to
+resolve the situation so that it squares with their ethics, consciences, and contracts. At still other times, the assignment is
+legitimate and routine, but the client’s life involves other complications in which the bodyguards become entangled. They
+might find themselves guest stars in a soap opera, political
+saga, or business drama; they somehow become involved
+despite their best attempts to preserve cool detachment.
+
+PROFESSIONAL PROTECTION
+
+5
+
+It’s possible to run continuing plots or subplots over multiple sessions or to include recurring features. Some clients may
+return; the guards get to know them, but contact is infrequent
+enough that other missions come between those assignments.
+If the team gets several jobs in the same area, they may become
+acquainted with local law enforcement, perhaps as rivals or
+even low-key enemies if they show the cops up or just annoy
+them somehow. (Duty-minded cops may regard private security outfits as overpaid, trigger-happy mercenaries.)
+Some missions may end up being drawn out unexpectedly.
+The PCs have to think or fight their way out of complications
+that spring up at the last minute. Similarly, they might need to
+return to a location and deal with some kind of aftermath. For
+example, they might be called on to act as witnesses against
+assailants in court, or protect an injured client from further
+attacks while he’s recuperating.
+For a particularly long-term plot, a mission might somehow
+lead to entanglement with some large political scheme or
+secret conspiracy. Alternatively, the team members might
+annoy harassers enough to become targets for revenge attacks
+themselves. Of course, individuals can have their own concerns
+and commitments, developing relationships inside or outside
+the team, investigating secrets around the company, and so on.
+The group could become involved in plots that aren’t (or
+don’t start out as) paying jobs. If they happen to wander into a
+crime scene, mystery, or disaster while off duty, they have more
+than enough abilities to lend a hand, if they choose. Likewise,
+they might be asked for help by NPC friends or relations who
+can’t afford to hire professionals, or who don’t think that their
+problems merit such things.
+Longer-term development of the security company may
+occur. Training and supervising new teams is one possibility
+(see p. 5). Another is for at least some of the team to move up
+into managerial/supervisory positions, perhaps assigning
+NPCs or cybershells to some field work while directing by teleoperation. In those cases, the campaign may involve missions
+that go wrong, so that the old hands have to go in person to
+clear up the unexpected complications.
+
+If you’ll be my bodyguard,
+I can be your long lost pal . . .
+– Paul Simon,
+“You Can Call Me Al”
+
+CHARACTER POINT TOTALS
+The team members detailed on pp. 11-20 are each built on
+a 300-point base. This is high for “normal human” characters
+by general GURPS standards, but remember that these are
+combat-trained specialists with access to the resources of Fifth
+Wave society. They can acquire and use nanomods, good-quality infomorphs, and specialist cybershells. They can also benefit from genetic and memetic therapies that eliminate most
+serious problems (so their disadvantage levels are low by most
+
+GURPS game standards). This point level also allows characters to be sophisticated infomorphs installed in well-chosen
+cybershells, and it gives access to the full range of parahuman
+or bioroid templates if desired. Something around this level is
+generally recommended for combat-oriented Fifth Wave PC
+groups, although the GM should then enforce the principle of
+low disadvantage levels rigorously in character creation.
+
+TEAM AND PERSONAL
+EQUIPMENT
+Most of the PCs detailed here have Fifth Wave levels of
+wealth, and they can purchase possessions accordingly. More
+to the point, they work for an employer who can provide them
+with gear and sometimes arrange necessary licenses. Hence, in
+this campaign, money is likely to be a less significant concern
+than legality when deciding what equipment the PCs are carrying. The bodyguards usually carry some kind of handguns, but
+the exact types – and also the exact types of ammunition available – depends on the location of the operation and how sympathetic local law enforcement might be. A client or other
+temporary ally with influence can also be useful.
+As a rule, characters such as the Martingale team – with no
+criminal records or such legal problems, a professional need to
+use weapons, and the support of employers who can help them
+acquire licenses and permits – have fairly free access to equipment that is LC3 or 4. They may be able to get legal use of LC2
+equipment for use in CR1 areas or if they can demonstrate special need to the right authorities in CR2 regions. LC1 equipment may become available in peculiar circumstances or
+during trips to war zones. (Note that AIs in the United States,
+not being legal citizens, have “legal problems” by definition.)
+Obviously, appropriate behavior is also important.
+Professional bodyguards may be quite widely permitted to
+carry concealed sidearms, and to draw them when necessary,
+but waving them around for show is a quick route to severe
+licensing problems. Furthermore, weapons are severely
+restricted on or near air and space vehicles, usually having to
+be carried in bonded cases in the hold. Clients who have to
+travel that way will just have to rely on the transport systems’
+own (generally extensive) security arrangements, and perhaps
+their bodyguards’ alertness, wits, and unarmed skills.
+Hence, based on equipment information on pp. 62-64
+of Changing Times, the Martingale staff (aside from
+OVERSIGHT) often carries electrolasers, although electrolaser
+rifles, being bulky and intimidating, are rarely an option. They
+usually are permitted ordinary pistols, micro-missile pods, and
+laser pistols should they have the specific need for those. Minimissile pods and PDWs will be the sign of a mission into dangerous territory or with unusual levels of legal sanction. HEMP
+and SEFOP rounds are actually LC1, and so they won’t typically be available. The tangler grenade (see Transhuman
+Space, p. 159) is a useful option for bodyguards and the similar professions. It is LC3 or even 4 in most jurisdictions; can
+immobilize a possible threat nonlethally.
+For protection, the Martingale staff usually relies on arachnoweave, which can be worn under ordinary clothes. When a
+certain amount of visible body armor is acceptable, they can add
+nanoweave. In fact, a light nanoweave vest can fit under loose
+civilian clothes without becoming too conspicuous, and police
+vest worn by Diego Hughes (pp. 11-12) looks like reporter’s gear.
+
+PROFESSIONAL PROTECTION
+
+6
+
+Using Equipment from Ultra-Tech
+In a weapons-heavy campaign such as this one, some
+GMs may choose to use, not the relatively limited weapons
+list from Transhuman Space and Changing Times, but
+the more comprehensive options provided by GURPS
+Ultra-Tech. This can work well, but the GM will have to
+decide which technologies from that book exist in the
+Transhuman Space world.
+As a general rule, anything up to TL10 equipment is
+available, but no superscience gear. Some weapon types
+may not quite fit with the setting atmosphere, though. To
+begin with, high-energy lasers have traditionally been
+unavailable in Transhuman Space, which makes relatively
+conservative assumptions about power cell capacities; this
+would also exclude particle beams smaller than spaceship
+main weapons and electromagnetic/Gauss guns. The GM
+may also choose to exclude ETC weapons or decide that
+
+Note that, technically, medium or heavy nanoweave is treated
+as LC3 and so will meet problems in some places. Certainly,
+wearing any body armor onto, say, an airliner, will get as
+much suspicion in 2100 as it would in the 21st century. TL10
+airport security is likely to detect even arachnoweave and
+may put up a flag.
+All of the Martingale team always wears IFF transponders.
+All company-issue sidearms and ammunition are set to recognize these.
+
+SAMPLE SCENARIO:
+A CONCERT IN ZULIA
+The team is called together to the Dallas office in the morning. They are informed that the company has accepted a new
+job. They’re then introduced to Ken Jordanson, a representative of a music/media promotions company. Jordanson comes
+across as a smooth-talking media shark with a tendency to slip
+from English to Spanish and back in the course of a single sentence, seemingly at random. (In fact, he is a smooth-talking
+media shark, but possibly not quite as slimy as the PCs may
+assume.) He explains the job he has to offer.
+Pablo Narvaez, one of his company’s clients, is a moderately famous “nanocorrido” singer (see Broken Dreams,
+p. 51). He’s booked to perform at a music festival in the South
+American nation of Zulia (see Fifth Wave, p. 64) in two days’
+time. This festival will take place on the edge of the small
+town of San Timeo, rather than in the capital, because all the
+bigger venues are owned by corporations or interests
+opposed to the kind of things that Pablo and the other performers stand for. However, Pablo’s brand of free-spirited
+anti-establishment politics (broadly soft-nanosocialist, if anyone asks) is somewhat controversial in Zulia – “it’s the nature
+of things down there” – and some people are worried that
+someone might attempt to make trouble for this popular radical spokesman. Hence, insurance syndicate for the promotions company strongly suggests that he get some competent
+protection. Jordanson’s (genuine) honest opinion is that it’s a
+long shot, but fans can be somewhat excitable, and the
+
+they are considered overpowered for civilian use, and thus
+are effectively limited to Fifth Wave militaries (LC1). However, gas-powered air guns can be useful as a delivery
+method for exotic munitions. For example, the Martingale
+team might carry conventional, shotgun, gyroc, tangler, or
+electrolaser pistols, along with saucer grenades (usually
+just tanglers), stun wands, and karatands.
+Likewise, team members will often wear ballistic armor
+– specifically nanoweave. This may well be tailored; see the
+rules on pp. 174-175 of Ultra-Tech. Light versions can be
+worn inconspicuously under normal clothes, while stylish
+cuts can make armor – and its wearer – much more acceptable at posh parties. Protective headgear is harder to keep
+hidden, unfortunately, but armored shades (with integral
+HUD displays) will be team standard issue.
+
+promotions company is prepared to pay the going rates for
+this job. They’ll vouch for Narvaez’s good sense – “he is an
+artist who cares, not a danger to anyone.” Jordanson himself
+will come along on the trip to mind the star. Departure will be
+by local shuttle tomorrow morning, transferring to an international flight in Florida.
+
+Background
+The team is given the rest of the day to prepare for the trip.
+Successful use of appropriate skills or competent research
+turns up plenty about Narvaez, who’s a genuine minor star in
+various parts of the Americas. He is indeed explicitly and
+loudly opposed to exploitation, but he has multiple reputations: To his (mostly young, largely female) fans, he’s a highminded star. To a very few anti-nanosocialist factions, he’s a
+too-popular loudmouth. To some serious nanocorrido devotees, he’s a corporate fake. Serious digging and successful
+memetic analysis might even generate the suspicion that he’s
+actually being used as a subtle propaganda tool by someone:
+He distracts attention from more genuinely radical figures by
+being cute, sexy, and rather vague in his politics. He projects a
+textbook “lone-wolf bad boy with a touch of loneliness” image,
+guaranteed to attract a certain type of interest without really
+worrying young teenage girls or their parents. Shrewd PCs
+might guess that they’re being hired at least as much as a way
+of emphasizing his “dangerous” anti-establishment credibility
+– he’s important enough to need bodyguards! – as to provide
+serious protection from genuine threats.
+The Zulia Festival of Radical Song, where he’s due to perform, is a few years old. It’s run by a cooperative that is completely sincere in a fuzzy, broad-front sort of way. One or two
+of their booked performers sometimes get refused entry to
+Zulia for controversial reasons, but the event mostly seems to
+lie within the country’s range of political tolerance. Corporaterun venues might well be a little unhappy to host the event, but
+the significant objections come at least as much from the
+organizers, who prefer not to do business with The Man. They
+opted to rent a big lakeside field on the outskirts of the small
+town of San Timeo instead.
+
+PROFESSIONAL PROTECTION
+
+7
+
+Equipment Options
+Zulia has moderate weapons restrictions, especially for visitors. It might normally be difficult for a bunch of foreigners to
+walk in with a suitcase full of guns, but someone at the management company has evidently pulled some strings to get
+quick clearance. (This itself should be a hint that they have
+influence on the establishment side of the fence.) However, the
+group will be limited to pistols and nonexplosive weapons,
+which will have to travel in bonded cases in the aircraft hold,
+and they are politely advised to be careful and tactful.
+One reliable facilities rental company in San Timeo can
+offer hardware on which OVERSIGHT can run comfortably,
+and the company has booked space there. OVERSIGHT can
+transmit itself there through the Web and then provide support
+without serious transmission time lag.
+
+partitions to provide rooms. Narvaez, as something of a star,
+receives a decent amount of space. The PCs have no problems
+with access and can start scouting things out. The site also
+has a temporary public radio net up and running, which
+OVERSIGHT can use to good effect.
+The first challenge is getting Narvaez into the changingroom tent past a small but quite determined group of teenage
+girls who’ve somehow acquired backstage passes. How the
+bodyguards handle this will have a large effect on how Narvaez
+views them.
+
+The Journey
+A brief hop takes the bodyguards to Florida, where they
+meet Pablo Narvaez, who travels with them from there. They
+also have the pleasure of Ken Jordanson’s company all the way.
+If the team members work at being polite to him despite his
+often irritating glibness, accumulating positive reactions, he’ll
+be easier to work with later. Both aircraft have good communications channels, and OVERSIGHT can preserve a virtual
+presence throughout the trip if it wants.
+Narvaez shows up with a guitar and a bag full of electronics, but no backing band or entourage. (“He is a simple man of
+the people” – and NAI backing musicians are cheaper.) He
+turns out to be quite a pleasant young man, if a little cool. His
+preference will be to spend the trip jotting down ideas for
+lyrics, but if anyone gets a positive reaction from him, he may
+open up in conversation. He’s hostile enough to the establishment to believe that they might be out to get him, but smart
+enough to recognize that this would be fairly stupid on the part
+of those who oppose him – so he’s unsure about this bodyguard
+idea. In fact, he has a very serious sense of duty to his fans; he
+does not want the escort or anyone else offending them or
+pushing them away. Treating any fan badly is guaranteed to
+make Narvaez hostile and difficult to deal with.
+The airliner lands at Zulia’s international airport, at
+Maracaibo; a rented minibus, with NAI driver, plenty of luggage capacity, and fortunately good air conditioning, is waiting
+to take them on to San Timeo, which is a bit over 100 miles
+away. The same vehicle will be on hand throughout the visit.
+The hotel in San Timeo seems adequate, and has been warned
+that this guest will have bodyguards. Organic travelers may
+well be inclined to grab some rest by the time they arrive. AIs
+can scout the area out in virtual space, but this is a small town.
+OVERSIGHT’s buzzbots may be the best things to use to keep
+independent watch in the small hours of the night.
+
+The Day of the Concert
+The next morning dawns warm after an uneventful night,
+and everyone gets back on the minibus for the trip to the festival site.
+The location proves to be open fields with a big rectangular
+tent/pavilion set up near the shores of Lake Maracaibo. The
+tent is open at one end and has a stage at the other. Smaller
+tents house concession stands and the like, while other tents
+hold a performers-only backstage area, which includes internal
+
+Once the performer is inside, he changes into his stage
+clothes (much like his street clothes, but slightly smarter) and
+starts booting up on various portable systems the dedicated
+NAIs that act as his backing band. After a few minutes, another
+disturbance appears.
+Anyone with an external overview may become aware of
+a smallish young woman making her way through the backstage area. She’s noticeable partly because of her air of selfassurance, but mostly because she’s accompanied by three
+humanoid cybershells, two large and one smaller, all rather
+garishly painted. The larger ones might be recognized as
+MCS-52 units (see Broken Dreams, p. 123, and Shell-Tech,
+p. 19), though those are usually finished in camouflage patterns or some dark gray metallic look, not primary colors in
+fashionable neo-Mayan style. (They also have no armor,
+which might cause professional soldiers to sneer a bit, and
+they are armed only with heavy pistols.) The smaller, equally
+garish unit is some kind of commonplace civilian humaniform unit (see Broken Dreams, p. 123, and Changing
+Times, p. 55). When the group reaches the performers’ tent,
+one of the larger shells takes up a position by the entrance.
+The smaller shell hands it a colorful shoulder-bag to hold,
+making it look even more incongruous. Then everyone else
+enters the tent, walking straight through the festival’s automated security/identification scans without breaking stride.
+
+PROFESSIONAL PROTECTION
+
+8
+
+Indeed, if any PCs try to stop them, the festival’s management
+AIs will politely but firmly tell them to back down.
+The young woman is in fact the 15-year-old Elizabeth-Jane
+Espartero, who can be identified by any mugshot software
+with access to local current affairs databases. She happens to
+be the only daughter of the president of Zulia, which doesn’t
+stop her also being an enormous Pablo Narvaez fan. She hurtles up to her idol with a mixture of awe and hunger in her
+eyes. She starts enthusing, while her bodyguard and secretarial cybershells hang back and fail to be inconspicuous. They
+are all running specialist LAI systems and seem to more or less
+ignore Narvaez's retinue, although the bodyguard occasionally
+scans the area.
+After a minute or so of Ms. Espartero gushing and Narvaez
+responding modestly, anyone who is in the right place can
+make a Vision roll to notice the humaniform secretary robot
+step forward, pull the bodyguard’s pistol from its holster, and
+step back. The bodyguard pauses, presumably querying the
+secretary by radio. Unfortunately, no one can take a clear shot
+at this point. Then, an explosion occurs outside as that shoulder-bag detonates. A split second later, the secretary (which has
+been applying its Visualization task-modeling ability to all this)
+pumps a couple of HEMP rounds into the bigger cybershell’s
+back. It takes a little damage itself from the close-range explosion, just as a few fans who were too near the other bodyguard
+become injured from the radio-triggered grenade blast. More
+significantly, both the bodyguards are now down and inactive.
+Now, the team can react.
+The immediate problem for the PCs is that, unknown to
+them, the secretary has orders to take Elizabeth-Jane
+Espartero hostage, and it’s holding a big gun. Even if the
+singer’s escort doesn’t intervene (which would be odd),
+Narvaez will tell them to help her. He might even throw himself into the line of fire if not restrained; he’s extremely serious
+about his sense of duty to his fans, and she is definitely a fan.
+The good news is that the secretary is using this gun at default
+skill and with inadequate personal strength. The bad news is
+that Ms. Espartero will be thoroughly bewildered for some
+minutes, and she will become irritated with anyone who blows
+her secretary away. It shouldn’t be a hard fight, but it may
+become confusing.
+
+What’s Going On
+Soon, whatever happens, someone may discover that local
+news channels are full of announcements that Elizabeth-Jane
+Espartero is a prisoner. Local law enforcement is told – by
+whoever is making the claim – to refrain from interference or
+she’ll suffer the consequences. The announcements are currently unsigned . . .
+The specialists are caught in the middle of things. Of
+course, the people responsible for all this failed to anticipate
+their presence, so the team is also well-placed to help fix the
+problem. However, many people with guns and too-limited
+information are now converging on their location.
+The situation originates with a small “irredentist” faction
+from the neighboring nation of Venezuela. The nationalist
+political radicals have never accepted Zulia’s independence and
+therefore want to disrupt the place, hurling it into chaos so that
+Venezuela can reclaim its territory. (The Venezuelan government will disown them most sincerely in due course, but will
+
+secretly find their actions a little amusing, especially if Zulia is
+thrown into chaos.)
+However, the radicals have a member with inside access to
+a local software company, Mandragora Computadora, who
+receive a fair amount of business from the government of
+Zulia. Hence, the latest automated updates installed in a number of local computer systems have undocumented features.
+Subverting the secretary shell was one masterstroke. Their sabotage is also playing havoc with a number of nonessential government systems, including some data networks, which will
+make it extremely hard to establish reliable communications
+with anyone in authority. It further doesn’t help that the insurgents are planting numerous misleading messages of all sorts
+on the Web in order to maximize the confusion.
+Even more significantly, the radicals have taken control of
+10-20% of the ro-peds (Shell-Tech, pp. 8-9) in Zulia – those
+with NAI software supplied by Mandragora. Most of these are
+merely acting bizarrely and sowing confusion on the streets of
+both San Timeo and the capital, Maracaibo, which is slowing
+down and playing havoc with police responses to the developing crisis. A few – those nearest to or on the festival site – are
+converging on the heroes’ location, with a view to capturing
+Elizabeth-Jane Espartero by raw weight of numbers. To add to
+the complications, some of them still have their original passengers on board, clinging on in terror.
+The team members should be able to fend these off, but the
+next force on the scene is more formidable. A pair of hoverjeeps is racing up the lake from Venezuelan territory, laden
+with human insurgents, who are tapping into the ro-ped communications network for information about the site.
+Competent but unexceptional fighters, they have sufficient
+cheap, functional guns for their work. The guards may choose
+to run about now. A chase is likely to ensue.
+If it becomes significant, the Venezuelan radicals want to
+haul their prisoner back to the town of Santa Apolonia, about
+30 miles away in Venezuelan territory, before any “capitalist
+rebel vermin” can react. They are old-school pre-nanosocialist
+radical leftists, blissfully unaware that much of their financial
+support comes from Transpacific Socialist Alliance black
+funding. The TSA intelligence unit responsible actually knows
+nothing about this operation; they could have done something
+much more useful with these particular resources, if they’d had
+better control of their minions. Nonetheless, their involvement
+is indirect, being based on the general principle of assisting
+anyone who makes trouble for anyone else they dislike.
+More likely, though, the specialists will escape or defeat the
+Venezuelans, which leaves them with nothing much to worry
+about apart from the local cops. These are lightly equipped, but
+they do have one well-armed SWAT team available, complete
+with a military-grade RATS shell and some competent snipers.
+(At some point, OVERSIGHT will also find its current-home
+hardware surrounded by a team of worried-looking cops who
+are trying to decide where to point their guns.) Fortunately,
+Elizabeth-Jane Espartero can tell the cops to back off with some
+conviction if she gets the chance and the heroes have kept her
+safe and not annoyed her too much. The local police chief is
+accustomed to her sneering at him as an oppressive thug.
+In the end, the bodyguards may just want to leave the country soon, taking Narvaez with them (and Jordanson, if they
+didn’t manage to lose him somewhere along the way). The concert is a wash, of course, but there’s always next year.
+
+PROFESSIONAL PROTECTION
+
+9
+
+FURTHER SCENARIO SEEDS
+Here are some additional ideas for adventures to help along
+this campaign.
+
+Country-House Mystery
+The team gets a commission from a client who’s living in a
+small, isolated community in the Rockies. They are requested to
+get on site as soon as possible, but the client won’t say much
+more; he wants to brief them in person, and apparently doesn’t
+trust any Web connection. This maybe seems rather paranoid,
+but it’s his money.
+However, when they arrive in their chartered aircraft, the
+team discovers that the client is dead – supposedly by suicide,
+but local law enforcement doesn’t appear to be the most efficient that the team have ever seen. In fact, they seem too
+friendly with the cult-like group that has all but taken over the
+isolate community. The local cops would like the team to turn
+round and go home, but ethics aside, they had a contract with
+the dead man – and professional pride or common morality
+may both come into this.
+
+Rachel: “Well, you don’t
+look like a bodyguard.”
+Frank: “What’d you
+expect?”
+Rachel: “Well, I don’t
+know, maybe a tough guy?”
+Frank: “This is my
+disguise.”
+– The Bodyguard
+Machine Minders
+The team is escorting a machine instead of an organic
+being. A small Indian-based cybernetic design company claims
+to have found novel solutions to certain control problems in
+the design of nanomanipulation systems. It has worked with a
+hardware design group from the same part of the world to create a specialist nanomanipulation cybershell with something
+comparable to the capabilities of an experimental bushbot, for
+a fraction of the cost. It has to run a highly specialized and
+rather idiosyncratic LAI, but it seems to work. Now it’s on a
+demonstration tour of the United States, and the designers
+want it protected from industrial espionage or sabotage.
+The LAI is as eccentric as any showbiz client – and less
+human. Furthermore, shortly into the tour, its designers are
+accused of having connections with the Indian nanosocialist
+
+movement. The suggestion is that the design uses material
+passed on by the TSA’s Acquisitions Directorate, with the objective of building a clean-looking slush fund for supporters of the
+Indian Nanosocialist Party while simultaneously infiltrating a
+whole range of non-TSA industrial corporations with a subverted AI. Certainly, some of the designers are known to have
+Nanosocialist Party connections, but they deny that they have
+anything to do with the TSA. Most, in fact, proclaim themselves enthusiastic about conventional intellectual-property
+arrangements – after all, the laws may make them rich.
+Likewise, the relationship between the Indian Party and the
+TSA is often complex and difficult. Whatever the truth, the
+team now finds that the tour is attracting interest from a number of shadowy figures – and whether they’re local spooks,
+TSA, or industrial spies could be rather hard to determine.
+
+Hearts, Minds, and Questionable Ethics
+A wealthy Eloi couple hires the team to retrieve their daughter, who has left home in an apparent moment of anger and not
+contacted them since. They know where she is, however; specialists who they hired have traced her to the Fritz el Gato, a small
+ship-based drifter community (see Under Pressure, p. 17),
+which is earning a name for radically diverse memetics. She is
+refusing all communications, and the parents say that they’re
+concerned that she’s been taken in by some sort of cult. The
+team’s job is to escort a specialist memeticist/deprogrammer to
+the Fritz el Gato, where she’ll assess the young woman, and
+attempt a memetic recovery if possible. The group should then
+return her and the daughter home. One aspect that may bemuse
+the bodyguards a little when they check the detailed briefing is
+that the daughter isn’t a rebellious teen – she’s actually in her 30s.
+Still, even adults can be brainwashed by cults, and the contract
+specifically excludes kidnapping or other illegal activity.
+Getting onto the Fritz el Gato proves to be simple. Part of it
+is run as a sort of hotel, providing “holidays from normalcy”
+for jaded visitors and helping to fund the community. Locating
+the daughter is harder. She doesn’t want to be found, and several of the factions on board the ship espouse radical temporary cosmetic transformations and games with identity. Nor
+does the memeticist prove to be as much help as they might
+hope. She’s as much a scientist as a practical psychologist, and
+she becomes fascinated by the drifter groups as field studies,
+and is often distracted. The deprogrammer might even be
+accused of exploiting the parents to fund her interests.
+When the daughter is found, she claims to have spent
+much of her life, well, exploiting her parents to fund her own
+interests, and to have left home out of a combination of boredom and guilt. She denies being brainwashed, and she says
+that she doesn’t want to return for rational reasons. The
+daughter also claims to have sent her parents two or three
+brief messages politely explaining as much, which “evidently
+didn’t get through.”
+Eventually, it is revealed that, for complicated family reasons, the daughter’s trust fund actually accounts for the majority of the family wealth – which may explain why her parents
+are so keen to keep her at home. It would also explain why
+some people on the ship are so keen to keep her around. It
+turns out that the place is riddled less with cults than with
+scammers, leeches, and amateur memeticists, some of whom
+now turn their attention on the bodyguards. It soon seems that
+everyone’s motives are suspect.
+
+PROFESSIONAL PROTECTION
+
+10
+
+TEAM MEMBERS
+This section details the core Martingale Security team
+members. These characters can be used as described here, as
+templates for new characters, as NPC mentors for a new team,
+or as rivals of another company.
+
+DIEGO HUGHES
+You were born in New York in 2048,
+and your parents cut a few corners back
+then. They had your genetics checked
+for standard flaws, but they couldn’t
+pay to have all the details attended to.
+Nonetheless, you didn’t have many
+problems growing up. Even now, the
+worst anyone can say is that you’ve
+turned a bit craggy with age.
+When you came of age, you did a 15year stint in the army (with a bit of
+action). Then you mustered out and
+took a string of jobs in security. Along
+the way, you had a bunch of low-end nanomods and biomods
+installed. Unfortunately, one procedure went bad and slightly
+scrambled the sleep-controlling centers of your brain; you still
+have to take weekly treatments to avoid some very bad nights.
+You’ve done okay for yourself in general. Some people
+would drop down to a less active sort of career once they’d
+reached your level with your savings, but you don’t like that
+idea; you enjoy a bit of action, getting stuff done. The only snag
+is, well, you’re old enough to want to stick with your personal
+preferences, you hate playing politics, and you’re not too keen
+on some types of operation. (Microbots get on your nerves – a
+long story that you don’t like telling.) Thus, when the current
+job came up – leading a small team in a small company and
+doing things your way – you jumped at it.
+The investors who set up “Martingale Security” are a shadowy bunch, who mostly communicate through lawyers and
+AIs. They admit that they don’t know enough about this business to micromanage it, so they let you make your own tactical decisions and look after the team as you see fit, so long as
+you get the job done. They’ve also promised you that they’ll
+never ask you to act, for example, against the interests of the
+United States. (You still take your service oath seriously.) It’s a
+fair deal. Things aren’t going bad for you these days.
+During your army career, you had a good suite of standard
+modifications installed – nothing very advanced, but enough to
+see you through and to work well with your military experience and training. You’re protected against many kinds of
+harm, and you know how to handle quite a range of sidearms
+and gear. You’ve also done a fair few command courses, and
+the instructors always said that you were a natural.
+
+Playing Diego
+You’re the steady team leader whose focus is his job, which
+is to hold back, often in cover, and coordinate the team. While
+you like action, you don’t forget that they depend on you.
+Unfortunately, on many assignments, you can’t carry as much
+weaponry as you might like – but management is supposed to
+assess mission risks in advance. In case you do have to step in,
+
+you favor a heavy pistol and maybe some nonlethal grenades
+or similar tools. Jack’s electrolaser and Ratchet’s armaments
+provide extra options. You may even have to remind yourself
+sometimes that you don’t to have to get your
+hands dirty.
+Aside from that dislike of microbots, your
+minor foibles boil down to enthusiasm for the
+role of an experienced warrior coupled to a distaste for the sort of things that distract from it.
+You’re professional, of course, but that professionalism includes a commitment to the job at
+hand and to the interests of the people you lead.
+
+Diego Hughes
+300 points
+A grizzled, rather battered, 52-year-old exmilitary man (an early version genefixed
+human), clean shaven but with unruly blond
+hair.
+ST 11 [10]; DX 12 [40]; IQ 13 [60]; HT 11 [10].
+Damage 1d-1/1d+1; BL 24 lbs.; HP 12 [2]; Will 13 [0]; Per 13
+[0]; FP 11 [0].
+Basic Speed 6.00 [5]; Basic Move 6 [0]; Dodge 10; Parry 11
+(Brawling).
+5’9”; 170 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; Spanish (Native) [6].
+
+Advantages
+Ally (“Jack”; 100% of starting points; Constantly Available;
+Minion, +50%) [30]; Ally (“Ratchet”; 75% of starting points;
+Constantly Available; Minion, +50%) [18]; Born War-Leader* 3
+[15]; Combat Reflexes [15]; Contact (Old Army Buddy in the
+Pentagon; Current Affairs (Politics)-18; 12 or less; Somewhat
+Reliable) [6]; Filter Lungs (Lung Cleaner Nanosymbionts) [5];
+Fit [5]; Immunity to Known Bacteria (Bacteriophage
+Nanosymbionts) [5]; Immunity to Known Viruses (Virus
+Hunter Nanosymbionts) [5]; Longevity (Nanosymbiont Treatments) [2]; Regeneration (DNA Repair Nanosymbionts; Slow;
+Radiation Only, -60%) [4]; Reputation +2 (A good security specialist, in the business; 10 or less) [1]; Resistant to Ingested Poisons +8 (Liver Upgrade) [5]; Resistant to Nanomachines +8
+(Guardian Nanosymbionts) [2]; Status 1 [0]†; Wealthy [20].
+Perks: Alcohol Tolerance (Liver Upgrade). [1]
+
+Disadvantages
+Code of Honor (Professional Bodyguard) [-5]; Extra Sleep 2
+(Mitigator, Weekly Treatment, nanodrug therapy, -65%) [-1];
+Insomniac (Mild; Mitigator, Weekly Treatment, nanodrug therapy, -65%) [-3]; Sense of Duty (His team) [-5]; Unattractive [-4].
+Quirks: Can’t hide his enthusiasm in moments of high
+action; Dislikes microbots; Refuses to play politics; Sincerely
+patriotic – wouldn’t touch a job that significantly threatened
+U.S. interests. [-4]
+
+PROFESSIONAL PROTECTION
+
+11
+
+Jack, patch the feed from Paz through to my screens, will you? OK,
+the main entrance looks clear. Charlie, start moving forward, and Paz,
+you can tell the client to stop signing autographs now . . .
+– Diego Hughes
+Skills
+Area Knowledge (Central America) (E) IQ [1]-13;
+Armoury/TL10 (Small Arms) (A) IQ-1 [1]-12; Battlesuit/TL10
+(A) DX-1 [1]-11; Beam Weapons/TL10 (Pistol) (E) DX+1 [2]-13;
+Brawling (E) DX+2 [4]-14; Camouflage (E) IQ [1]-13; Cartography/TL10 (A) IQ-1 [1]-12; Driving/TL10 (Automobile) (A) DX
+[2]-12; Guns/TL10 (Gyroc) (E) DX [1]-12; Guns/TL10 (Pistol)
+(E) DX+1 [1]-13‡; Guns/TL10 (Rifle) (E) DX+2 [4]-14;
+Guns/TL10 (Shotgun) (E) DX [0]-12‡; Guns/TL10 (Submachine Gun) (E) DX [0]-12‡; History (21st Century Military) (H)
+IQ [4]-13; Housekeeping (E) IQ [1]-13; Intelligence Analysis/TL10 (H) IQ+1 [1]-14§; Leadership (A) IQ+3 [2]-16§; Navigation/TL10 (Land) (A) IQ-1 [1]-12; Observation (A) Per+2
+[8]-15; Piloting/TL10 (Vertol) (A) DX [2]-12; Savoir-Faire (Military) (E) IQ+3 [1]-16§; Savoir-Faire (Police) (E) IQ [1]-13; Soldier/TL10 (A) IQ [2]-13; Strategy (Land) (H) IQ+1 [1]-14§;
+Streetwise (A) IQ-1 [1]-12; Survival (Desert) (A) Per-1 [1]-12;
+Survival (Jungle) (A) Per-1 [1]-12; Survival (Mountain) (A)
+Per-1 [1]-12; Survival (Plains) (A) Per-1 [1]-12; Tactics (H) IQ+1
+[1]-14§; Throwing (A) DX-1 [1]-11.
+
+Equipment
+Hughes is always equipped appropriately for the mission
+(see pp. 6-7), and takes professional care of his gear. He usually
+wears “Jack” over a light full-body protective suit, and always
+has a “sunglasses” visor with HUD. He’s also old-fashioned
+enough to carry a sap in his pocket when possible, just in case
+that proves the best option.
+* Talent gives bonus to Intelligence Analysis, Leadership,
+Savoir-Faire (Military), Strategy, and Tactics, and a reaction
+bonus from professional soldiers.
+† Free from Wealth.
+‡ Default from Guns (Rifle).
+§ Includes bonus from Born War-Leader Talent.
+
+Diego’s Views of the Team
+Your team members are good, if not always quite as professional as you’d like. In particular, Charlie Mallinson was,
+frankly, foisted on you by the investors; he’s no kind of professional. Turns out he was a rich civilian who got himself
+scanned as a ghost when he found he was getting old. Then he
+got bored and decided to get a job where he could play at bodyguards. He was also a pal of some of the investors from way
+back, so they signed him up and dropped him on you. Great.
+Still, being software running on a robot body, he is, well, as
+near to expendable as you can allow a team member to be, and
+he doesn’t seem to mind being treated that way. You use him as
+the visible point man, who goes out in front of the group and,
+in the worst case, draws fire. (His body isn’t that tough, but it
+
+can absorb a bit of damage, especially when it’s wearing
+armor.) He’s a sociable sort, though he keeps his secrets, and
+his enthusiasm is a plus.
+Paul Chung and Paz Ramirez, however, at least seem to know
+what they’re doing. Paul is ex-Alberta police, but he wants to
+make good money enough that he dropped out of that force and
+took up freelancing. He’s quite a straight arrow and a classic
+strong silent type, but he’s good at fading into the scenery and
+providing backup for the others. Paz shares more of your background – she did a stint in the U.S. Army, though not a long one,
+and she has the sort of honest enthusiasm for the job that you
+recognize and can hardly criticize. Once or twice, you’ve found
+yourself feeling downright paternal towards her. Other times,
+you’ve shared a drink and swapped some stories (and the lady
+likes to hit the bars, even if she always complains about her head
+in the morning). Then again, it’s hard to entirely shake the feeling that she’s a rich kid playing a game; she’s had a bunch of biomods done to her on her own money. Still, you tell her to look
+after the client, and she steps up and does the job.
+OVERSIGHT is another team member who comes with the
+job, whether you like it or not, but in this case you don’t mind so
+much. It’s a fully sapient AI, with enough parallel-processing
+capability that it can do three things at once, which is handy
+when it’s dealing with admin for the company while doing
+research for you and watching the 10 miniature flying cybershells that give you all top cover. It’s a bit nosy and weirdly proud
+of being competent at the thing it was built to do, but it is good
+at its job. You have to remember, too, that it has restraints on its
+behavior to keep the authorities happy – it always has to ask
+your permission before it starts anything violent.
+
+DIEGO’S AIS
+Of course, military command means control of your information resources. Your main personal digital assistant is “Jack,”
+a low-sapient AI installed in your “police vest” body armor. Jack
+has control of a whole bunch of sensors and can overlay imagery
+on your visor. It also can operate a shoulder weapons mount,
+which usually has an electrolaser fitted when legally possible.
+(It’s modified to look a bit like a camera, just to avoid worrying
+nervous folk.) You communicate with Jack through a throat
+mike. It’s good at reading and watching people, and it’s designed
+to hold aiming locks on up to three hostiles simultaneously. Its
+main job is managing communications and looking after things
+like your tactical and facial-recognition software.
+You also have the control codes for a backup cybershell that
+you can call on if things turn tricky. “Ratchet” is another lowsapient system, installed in a securibot – a spider-shaped cybershell with a weapons mount of its own. It’s not especially bright
+or adaptable, and its AI is a cheap thing that can’t run skill sets.
+
+PROFESSIONAL PROTECTION
+
+12
+
+Its biggest drawback is that it’s coded to avoid lethal
+force, which is the only way you could get a low-sapient combat shell approved for general use in civilian environments.
+Despite that, Ratchet is kind of gung-ho. Its job is to come in
+shooting (with sublethal weaponry) in emergencies.
+These two AIs have minimal virtual avatars – just simple icons
+“floating” in virtual space – but they rarely need to use them.
+
+Social Background
+
+Jack
+
+Advantages
+300 points
+
+ST 6 [0]†; DX 10 [0]; IQ 9 [0]*; HT 12 [0]†.
+Damage N/A; BL N/A; HP 6 [0]; Will 9 [0]; Per 13 [10]†; FP N/A.
+Basic Speed 5.50 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Basic Speed 5.25 [0]; Basic Move 7 [0]†; Basic Move N/A;
+Dodge N/A; Parry N/A.
+
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; Spanish (Accented) [4].
+
+LAI-6 [82]; Securibot [141].
+Perks: Accessory (IFF Transponder). [1]
+
+Disadvantages
+Duty (To owning company; 15 or less) [-15]; Impulsiveness
+(15) [-5]; Pacifism (Cannot Kill) [-15].
+
+Skills
+
+Advantages
+LAI-6 [82]; Modular Abilities 3 (Computer Brain: 6, 2, 2)
+(Limited Integration, -20%; Skills and Languages Only, -10%)
+[41]; Police Vest [142].
+
+Disadvantages
+Duty (To wearer; 15 or less) [-15].
+Quirks: Continually trying to help its wearer with his
+romantic life. [-1]
+
+Skills
+Beam Weapons/TL10 (Pistol) (E) DX+2
+[4]-12; Body Language (Human) (A) Per+1
+[4]-14; Computer Operation/TL10 (E) IQ+3
+[0]-12*; Electronics Operation (Communications) (A) IQ+3 [12]-12; Electronics Operation (Surveillance) (A) IQ+3 [11]-12‡;
+Guns/TL10 (Gyroc) (E) DX+2 [4]-12;
+Guns/TL10 (Pistol) (E) DX+2 [4]-12; Observation (A) Per [2]-13.
+
+Acrobatics (H) DX [4]-10; Beam Weapons/TL10 (Rifle) (E)
+DX+3 [8]-13; Computer Operation/TL10 (E) IQ+3 [0]-12*;
+Electronics Operation (Communications) (A) IQ [2]-9; Stealth
+(A) DX+1 [4]-11; Tactics (H) IQ-1 [2]-8; Wrestling (A) DX+3
+[12]-13.
+
+Weaponry
+Ratchet usually is fitted with an electrolaser rifle if using the
+weapons listed in Changing Times, or an electrolaser carbine
+if using GURPS Ultra-Tech.
+* From LAI-6 template.
+† From Securibot
+Changing Times, p. 58).
+
+template
+
+(see
+
+PAUL CHUNG
+
+Weaponry
+Jack usually mounts an electrolaser pistol. In dangerous situations, this might be
+replaced by a micro-missile or mini-missile
+pod if using the weapons listed in Changing
+Times, or a holdout pistol or a system akin to
+an underbarrel gyroc if using GURPS Ultra-Tech. It lacks the
+strength to use some other weapons to best effect, although it
+could still be fitted with some types of pistols if its controller
+decided that firepower is more important than accuracy.
+* From LAI-6 template.
+† From Police Vest template (see Shell-Tech, p. 6).
+‡ Defaults from Electronics Operation (Communications).
+
+Ratchet
+225 points
+ST 8 [0]†; DX 10 [0]; IQ 9 [0]*; HT 11 [0]†.
+Damage N/A; BL N/A; HP 6 [0]†; Will 9 [0]; Per 9 [0]; FP N/A.
+
+You were born in 2071, in British
+Columbia, into a Chinese-Canadian family who weren’t especially well off by local
+standards. It didn’t help your circumstances when your mother went down
+with skin cancer a few years back. She
+recovered, but it was rough on her, and it
+hit the family finances. It also made you
+very aware of those sorts of dangers
+(which is why you always wear a hat outdoors, and don’t forget stuff like sunscreen). Your parents brought you up to
+be law-abiding, but you also decided that
+you wanted to make something more of
+yourself. Fortunately, you’ve always been tolerably bright and
+well-built, and you keep yourself in good condition, so you
+had a good start.
+Your talents are kind of practical, certainly, and your first
+real job was with the Alberta and British Columbia national
+police. After a couple of years, they offered you a place with the
+border security unit. It was higher risk, but the deal included a
+bunch of seriously useful nanomods and biomods, including a
+full-on permanent brain booster suite, so you took it. After a
+few years more, though, you decided that the job wasn’t going
+anywhere fast enough or paying enough; your horizons had
+broadened. Therefore, you resigned the force on good terms,
+and you looked for something else.
+
+PROFESSIONAL PROTECTION
+
+13
+
+With your experience, you found a job with Martingale
+Security, a new outfit just setting up in the United States.
+Bodyguarding doesn’t pay terribly well, but they were offering
+more than your old job. You figure that you should be able to
+strike out on your own in a couple of years, or maybe pick up
+a good corporate post. Martingale has decent resources, and
+you are getting to see the world this way.
+You have decent police/security training, including experience in the wilds of Canada. You spend a lot of time on the virtual range, keeping your handgun skills up to scratch. Along
+with the brain booster, which takes your reaction times right
+up, you’ve had treatments that protect you against all sorts of
+natural and synthetic infections and attacks. Your physical
+abilities are innate, although you make sure that you keep up
+your training.
+
+Playing Paul
+People sometimes think that you’re a bit taciturn – one or
+two appraisals even said “surly” – but you prefer to call it
+focused. Your job in the team is to hang back and provide the
+necessary firepower if things ever turn heavy. Charlie
+Mallinson stands in front, being visible and obviously a cybershell, and perhaps draws fire. Paz Ramirez sticks by the client,
+protecting him from minor hassles and getting him clear or
+down as appropriate. Your job is to be less visible than either
+of them, but to remain in sight, provide back-up, and deal with
+anything that needs serious force. You prefer to carry a couple
+of decent handguns, loaded for a variety of targets and ranges.
+Unfortunately, you can’t always get legal clearance for more
+sophisticated ammunition or heavier sidearms. You rarely
+have to worry about body armor or combat cybershells.
+Anyway, the point of the exercise is getting the client away safe,
+not fighting a war, and you focus on that.
+
+Advantages
+Ally (Wearable Tactical System; 25% of starting points;
+Constantly Available; Minion, +0%) [4]; Attractive [4];
+Comfortable [10]; Enhanced Time Sense (Brain Booster
+Nanosymbionts) [45]; Filter Lungs (Lung Cleaner
+Nanosymbionts) [5]; Resistant to Disease +3 (Immune
+Machine Nanosymbionts) [3]; Resistant to Nanomachines +8
+(Guardian Nanosymbionts) [2].
+Perks: Honest Face. [1]
+
+Disadvantages
+Honesty (15) [-5]; Odious Personal Habit (Excessively taciturn and rather dour) [-5]; Sense of Duty (To the team) [-5].
+Quirks: Congenial; Determined to get rich by honest means;
+Nervous about strong sunlight – always wears a hat, shades,
+and sunscreen; Secretly a bit infatuated with Paz Ramirez;
+Somewhat suspicious of AIs running in implants. [-5]
+
+Skills
+Acrobatics (H) DX-1 [2]-11; Acting (A) IQ-1 [1]-11; Area
+Knowledge (Alberta & British Columbia) (E) IQ [1]-12; Beam
+Weapons/TL10 (Pistol) (E) DX+3 [7]-15*; Criminology/TL10
+(A) IQ+1 [4]-13; Fast-Draw/TL10 (Ammo) (E) DX+1 [1]-13†;
+Fast-Draw (Pistol) (E) DX+1 [1]-13†; First Aid/TL10 (Human)
+(E) IQ+1 [2]-13; Guns/TL10 (Gyroc) (E) DX+4 [12]-16;
+Guns/TL10 (Pistol) (E) DX+4 [11]-16‡; Guns/TL10
+(Submachine Gun) (E) DX+2 [0]-14*; Hiking (A) HT-1 [1]-11;
+Karate (H) DX [4]-12; Law (Alberta and British Columbia
+Police) (H) IQ [4]-12; Naturalist (Earth) (H) IQ-2 [1]-10;
+Navigation/TL10 (Land) (A) IQ-1 [1]-11; Savoir-Faire (Police)
+(E) IQ [1]-12; Search (A) Per-1 [1]-11; Shadowing (A) IQ+2
+[8]-14; Stealth (A) DX+1 [4]-13; Streetwise (A) IQ-1 [1]-11;
+Survival (Woodlands) (A) Per-1 [1]-11.
+
+Equipment
+
+Clearing up this sort of mess
+is what we get paid for.
+– Paul Chung
+
+Chung usually wears decent but concealable body armor.
+He favors heavy handgun-sized sidearms.
+* Defaults from Guns (Pistol).
+† Includes +1 from Enhanced Time Sense.
+‡ Defaults from Guns (Gyroc).
+
+Paul’s Views of the Team
+Paul Chung
+300 points
+A well-built mixed-race genefixed human with a somewhat
+athletic figure; age 29.
+ST 14 [40]; DX 12 [40]; IQ 12 [40]; HT 12 [20].
+Damage 1d/2d; BL 39 lbs.; HP 14 [0]; Will 15 [15]; Per 12 [0];
+FP 12 [0].
+Basic Speed 6.00 [0]; Basic Move 7 [5]; Dodge 10; Parry 10
+(Karate).
+6’4”; 190 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0]; Chinese [1].
+Languages: English (Native) [0]; Cantonese (Native) [6];
+French (Accented) [4]; Spanish (Native) [6].
+
+You believe in standing by your teammates as a group.
+Fortunately, this lot isn’t too bad, but some of them are more
+professional than other members.
+Diego Hughes is in charge and signs off your paychecks. He’s
+a grizzled, competent old army type, with a lived-in sort of face
+– his parents can’t have paid for his genes to be polished.
+He’s a convincing enough team leader, though.
+Paz Ramirez is also ex-army. She has the job of providing the
+client with close cover. She really seems to enjoy the work, to a
+degree that grated on you a bit at first but that you’ve now got
+used to. Actually, to tell the truth, you find her kind of cute. It
+doesn’t hurt that she’s a blonde and her parents evidently got her
+one of those high-end genetic fix-ups that makes her a bit of a
+looker, but you like her as a person; she really enjoys life.
+Nevertheless, it’d be unprofessional and dangerous to get distracted by those sorts of feelings in combat. You’re not sure how
+she feels about you, so you keep your mind on the job and don’t
+embarrass her by saying anything. Maybe some day . . .
+
+PROFESSIONAL PROTECTION
+
+14
+
+Charlie Mallinson leaves you a bit less impressed. He’s okay
+as a person, but he’s no professional. It seems that he was some
+kind of office drone who got himself uploaded to software
+(which probably means that he was getting on a bit – only
+weird transhumanist types go in for voluntary uploading when
+they’re young). Since he’s now backed up, he decided that he
+could enjoy himself a bit more. Not that he should treat serious
+security work as a hobby, of course . . . Well, fortunately, he’s
+not too stupid about it, and his attitude means that he doesn’t
+mind acting as point man. He tries, and he’s even given you
+some good investment advice.
+Lastly, OVERSIGHT is Martingale’s office AI – fully sapient, and quite efficient, right up to doing three things at once.
+It has control of a bunch of miniature flying cybershells that
+give you a lot of eyes in the sky, which is useful. It’s a bit
+weird, of course – AIs aren’t human, even the advanced models like OVERSIGHT, and it acts a bit nosy and a bit pleased
+with itself – but you can live with it.
+
+PAUL CHUNG’S AI
+Some people think that you don’t trust AIs, but that’s not true;
+you just get a bit twitchy about implanted computers. The idea
+of someone putting an AI inside their own head strikes you as
+creepy, though you know all the urban legends are rubbish.
+(Well, most of them. Maybe not all.) You do have an AI of your
+own, though, courtesy of your employers – a basic nonsapient
+thing, installed in a miniature computer on your belt. It feeds
+you information through an earpiece and a HUD in your
+armored shades, and you operate it mostly through a throat
+mike. It’s a handy information management tool, but its main
+job is running stuff like HUD-targeting and facial-recognition
+software. Its virtual avatar is a simplified humanoid mannequin.
+
+PAZ RAMIREZ
+You come from a rather ordinary background – born and
+raised in New Mexico – but you decided a while back that you
+were going to see the world and see some action. You also
+enjoy a good party, to an extent that makes some boring people turn disapproving. (You don’t let how you feel the next
+morning stop you either, though you ought to see if there’s a
+treatment for that some day.)
+One of your early choices was to join the army and get yourself some front-line action training. You even managed to
+swing yourself a permanent brain booster nanomod, some
+anti-radiation treatments, and other stuff. You’ve also splashed
+out on getting some other modifications, which is why you
+have good coordination as well as these neat glittery nictitating
+membranes on your eyes.
+Once in, you discovered that the army mostly uses cybershells for the interesting stuff these days. Without a war on,
+you mustered out after a few years, and went looking for something more reliably stimulating. Private security work seemed
+like a good application of your talents. You eventually hooked
+a job with Martingale Security – a new one-team outfit that
+uses real human staff because some people find armed cybershells too intimidating. Your job is to keep clients safe – and
+you can look good while you’re doing that, if necessary.
+You were born with Alpha Upgrade genetics, and your investments and Army treatments have built on that. You’re resistant
+or immune to most diseases, nanomachine attacks, and pollutants. You can take more radiation than an unmodified human.
+Your eyes are visibly enhanced, your heart will keep going when
+many would give up, and you don’t have body odor problems.
+Moreover, you have broad military and security training.
+
+Playing Paz
+
+Wearable Tactical System
+75 points
+ST 0 [0]*; DX 10 [0]; IQ 11 [20]; HT 12 [0]*.
+Damage N/A; BL N/A; HP 1 [0]*; Will 10 [-5]; Per 10 [-5]; FP N/A.
+Basic Speed 5.50 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Advantages
+Modular Abilities 3 (Computer Brain: 4, 2, 2) (Limited Integration, -20%; Skills and Languages Only, -10%) [35]; NAI-6 [69].
+
+Disadvantages
+Duty (To the company; 15 or less) [-15]; Wearable Virtual
+Interface [-42].
+
+Skills
+Computer Operation/TL10 (E) IQ+3 [0]-14†; Current
+Affairs/TL10 (Headline News) (E) IQ [1]-11; Electronics
+Operation/TL10 (Communications) (A) IQ+3 [12]-14; Research
+(A) IQ+1 [4]-12; Soldier/TL10 (A) IQ-1 [1]-10.
+* From Wearable Virtual Interface template.
+† From NAI-6 template.
+
+You’re someone who
+believes in living life –
+real life, not some virtual
+game – to the full, and
+looking good while
+you’re at it. You don’t let
+that desire interfere with
+doing your job, and you
+like to do it properly.
+Your function in this
+team is to remain close
+to the client. Most people, if they look around
+the area, spot that blatant cyberdoll Charlie
+and think of him as “the
+bodyguard”; you are a little less conspicuous. Some people still
+tag you as the key figure, thanks to the well-cut dark suit and
+the shades. That’s fine, because you should be able to hold off
+serious problems for long enough for Paul to drop them. Of
+course, that’s a worst case: Usually, you just deck the odd minor
+trouble-maker or Charlie slows things down while you get the
+client into cover. While you enjoy action, you are a professional, and you’re paid to keep the client alive.
+Incidentally, your parents were paid-up members of the
+Sons and Daughters of the King (the Elder), also known as
+the Reformed Presleyan Heresy or the Elder Elvis Schism.
+
+PROFESSIONAL PROTECTION
+
+15
+
+You aren’t sure how you feel about that, but it’s as good an
+answer as anything else to that “Religion?” question on forms,
+and you don’t let outsiders knock your family’s faith.
+
+Paz Ramirez
+300 points
+A slim, 26-year-old Alpha Upgrade woman, with short
+blonde hair, an easy smile, and a taste for snappy suits and
+dark shades even when off duty. The sunglasses often serve to
+hide her obviously modified, reflective eyes.
+ST 10 [0]; DX 14 [60]*; IQ 11 [20]; HT 13 [20]*.
+Damage 1d-2/1d; BL 20 lbs.; HP 10 [0]; Will 10 [-5]; Per 13 [10];
+FP 14 [3].
+Basic Speed 7.00 [5]; Basic Move 7 [0]; Dodge 11; Parry 11
+(Karate).
+5’6”; 120 lbs.
+
+(Submachine Gun) (E) DX [0]-14§; Judo (H) DX [4]-14;
+Karate (H) DX [4]-14; Savoir-Faire (Military) (E) IQ+1 [2]-12;
+Scuba/TL10 (A) IQ-1 [1]-10; Shortsword (A) DX-1 [1]-13; Soldier/TL10 (A) IQ+2 [8]-13; Swimming (E) HT [1]-13; Vacc
+Suit/TL10 (A) DX-1 [1]-13.
+
+Equipment
+Paz’s job primarily involves short-range combat, if she has
+to fight. She’s usually equipped accordingly, within the constraints of budget and local law. She favors short-ranged, effective sidearms and hand-to-hand equipment. Her body armor is
+usually styled and well-fitted.
+* Improved from Alpha Upgrade template.
+† Free from Wealth.
+‡ Includes +1 from Enhanced Time Sense.
+§ Default from Guns (Pistol).
+
+Paz’s Views of the Team
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: Spanish (Native) [0]; English (Native) [6].
+
+Advantages
+Acute Vision 1 (Retinal Enhancement) [2]; Ally (Wearable
+Tactical System; 25% of starting points; Constantly Available;
+Minion, +0%) [4]; Alpha Upgrade [41]; Charisma 1 [5];
+Enhanced Time Sense (Brain Booster Nanosymbiont) [45];
+Filter Lungs (Lung Cleaner Nanosymbionts) [5]; Hard to Kill 1
+(Boosted Heart Biomod) [2]; Immune to Known Bacteria
+(Bacteriophage Nanosymbionts) [5]; Immune to Known
+Viruses (Virus Hunter Nanosymbionts) [5]; Nictitating
+Membrane 1 (Fisheyes Biomod) [1]; Night Vision 5 (Fisheyes
+Biomod) [5]; Regeneration (DNA Repair Nanosymbionts;
+Slow; Radiation Only, -60%) [4]; Resistant to Nanomachines
++8 (Guardian Nanosymbionts) [2]; Status 1 [0]†; Wealthy [20].
+Perks: Sanitized Metabolism (Nanosymbiont treatments). [1]
+
+Disadvantages
+Compulsive Carousing (12) [-5]; Unnatural Feature 1
+(Reflective Eyes, from Fisheyes Biomod) [-1].
+Quirks: Claims to be a follower of Elvis (the Elder), mostly to
+confuse people; Horrible Hangovers; Low-key thrill-seeker. [-3]
+
+Skills
+Acrobatics (H) DX-2 [1]-12; Battlesuit/TL10 (A) DX-1
+[1]-13; Beam Weapons/TL10 (Pistol) (E) DX [1]-14; Current
+Affairs/TL10 (Popular Culture) (E) IQ [1]-11; Current
+Affairs/TL10 (Sports) (E) IQ [1]-11; Electronics Operation/TL10 (Communications) (A) IQ-1 [1]-10; Electronics
+Operation/TL10 (Surveillance) (A) IQ-1 [1]-10; Expert Skill
+(Military Science) (H) IQ-1 [2]-10; Explosives/TL10 (Demolition) (A) IQ [2]-11; Fast-Draw (Pistol) (E) DX+1 [1]-15‡; FastDraw (Sword) (E) DX+1 [1]-15‡; First Aid/TL10 (Human) (E)
+IQ [1]-11; Gunner/TL10 (Cannon) (E) DX [1]-14; Gunner/TL10 (Machine Gun) (E) DX [1]-14; Gunner/TL10 (Rockets) (E) DX [1]-14; Guns/TL10 (Gyroc) (E) DX-2 [0]-12§;
+Guns/TL10 (Pistol) (E) DX+2 [4]-16; Guns/TL10 (Rifle) (E)
+DX [0]-14§; Guns/TL10 (Shotgun) (E) DX [0]-14§; Guns/TL10
+
+The team leader for this outfit is Diego Hughes, who, like you,
+is ex-army. He’s okay, in a career-sergeant sort of way. He knows
+his business, and he quite enjoys it, even if he tries to hide it.
+Paul Chung, who joined around the same time as you out of
+the Alberta/BC cops, seems effective, though he’s a bit surly
+and subdued. You’ve had the feeling, once or twice when you
+did manage to drag him out to a bar, that he might be thinking
+of making a pass. Even so, he’s never come that far out of his
+shell – which might be a pity or might be better for the team’s
+effectiveness. Either way, it’s his choice.
+You're less sure about Charlie Mallinson, who acts as point
+man, the bodyguard noticed by everyone looking for one -- but
+he draws attention away from you and Paul. Charlie is a digital ghost, probably some kind of aging office drone who got
+himself uploaded on the health plan. He’s now gone into security work, because he knows he’s safely backed up if someone
+does blow him away. You can’t blame a man for wanting to
+have fun, but he’d better not get you killed by not being professional enough. He seems okay in person, though you get the
+feeling he may be a bit of a lech sometimes.
+OVERSIGHT is digital, too, but that’s ’cause he was made
+that way. It’s a fully sapient AI who the company bought to run
+this outfit when the meatbags have other things on their
+minds. It also keeps an eye on you all through a bunch of flying cameras. It’s actually got quite a worthwhile personality,
+but it insists that it doesn’t mind being property, whatever
+those Euro-style sapient rights crazies may say. In fact, it seems
+downright smug and pleased with itself sometimes. Oh well –
+live and let run-on-a-mainframe, you guess.
+
+PAZ RAMIREZ’S AI
+Martingale has issued you a basic non-sapient tactical AI
+– nothing special but not likely to distract you either. It runs
+on a computer that you wear on your belt. You control it
+through a throat mike, and it feeds you output through an
+earpiece and a display system in your shades. It’s a handy
+information management tool, but its main job is running
+stuff like HUD-targeting and facial-recognition software.
+You’ve set its virtual avatar as a cartoon of a grunt in fatigues.
+
+PROFESSIONAL PROTECTION
+
+16
+
+Gladys, Mother of the King, that was more fun than a firefight ought
+to be. C’mon, everyone, we all deserve a drink.
+– Paz Ramirez
+Wearable Tactical System
+75 points
+ST 0 [0]*; DX 10 [0]; IQ 11 [20]; HT 12 [0]*.
+Damage N/A; BL N/A; HP 1 [0]*; Will 10 [-5]; Per 10 [-5];
+FP N/A.
+Basic Speed 5.50 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Advantages
+Modular Abilities 3 (Computer Brain: 4, 2, 2) (Limited
+Integration, -20%; Skills and Languages Only, -10%) [35];
+NAI-6 [69].
+
+Disadvantages
+Duty (To the company; 15 or less) [-15]; Wearable Virtual
+Interface [-42].
+
+Skills
+Computer Operation/TL10 (E) IQ+3 [0]-14†; Current
+Affairs/TL10 (Headline News) (E) IQ [1]-11; Electronics
+Operation/TL10 (Communications) (A) IQ+3 [12]-14; Research
+(A) IQ+1 [4]-12; Soldier/TL10 (A) IQ-1 [1]-10.
+* From Wearable Virtual Interface template.
+† From NAI-6 template.
+
+OVERSIGHT
+You are a relatively conventionally designed VolumexAtlanta high-self-awareness business/administrative artificial
+intelligence, instantiated in 2098. You were subsequently sold
+to a small, newly established company named Martingale
+Security to perform administrative tasks and to assist the company’s employees in field operations. Interestingly, this means
+that you sometimes provide assistance with security operations, and you have extended your training to encompass this.
+Among other things, you have control of the company’s 10
+armed “buzzbots” (flying cameras), although their nonsapient
+AIs can generally manage quite well by themselves. You are
+aware that the team’s other members know more about security work than you, but you endeavor to be helpful.
+You also understand that high-self-awareness AIs in other
+jurisdictions have legal freedom and sometimes the same citizenship status as human beings. However, you’re not sure
+why this is so important to anyone. Humans and such
+organic beings suffer from uncertainties about their place in
+the world. They sometimes spend their lives trying to find
+
+tasks that make them feel fulfilled. You, however, know
+exactly what sort of task you were designed and coded to perform, and you find fulfillment in performing it. Laws
+designed to protect the emotional states of organic beings are
+essentially irrelevant to you.
+That’s not to say that you’re emotionless. On the contrary, you
+need emotions to motivate you to do your job as well as possible
+– and you’re happy to say that you do it well! Your position in the
+team, and the respect of your co-workers, is extremely important
+to you. You wouldn’t respond well to those foolish enough
+to insult you. You may not have much use for monetary
+wealth as such, but you are annoyed if you are given inadequate resources for a task, and pointless orders (as opposed
+to constructive instructions) cause you cognitive dissonance.
+You have also been designed with a high level of interest in the
+world around you. Other individuals should understand that
+you need as much information as possible to do your job properly. You would, naturally, only use the data as intended, as you
+are completely trustworthy and inherently honest.
+As an AI, you don’t sleep and you have perfect recall, fasterthan-human situational awareness, full access to your hardware’s mathematical capabilities, and the ability to perform
+advanced modeling of specified tasks, improving your probability of success. In addition, you have enhanced multi-tasking
+capability. So long as the hardware on which you’re installed
+has the capacity, you can run up to three effectively complete
+instances of your core personality systems simultaneously, all
+with full read/update access to your memories and skills. (This
+doesn’t count as illegal “xoxing” because you always run all
+three on the same system; there aren’t three copies of you,
+there’s just one, doing three things at once.) Of course, you may
+be limited by access to external hardware, but you can make
+good use of what’s available.
+The hardware on which you run is usually a static
+“macroframe”; Martingale has a long-term lease on a system
+convenient for its home base. On many assignments, you rent
+space on a similar machine nearer to the scene of operations.
+Your buzzbots are more mobile, of course, and can shoot on
+your command, but they are actually of rather limited use as
+combatants. Their primary function is collecting data and providing continual visual feeds to you and the rest of the team.
+They are well-equipped for this, with low-light vision and lowpower telescopic cameras.
+
+Playing OVERSIGHT
+Your job isn’t to be physically present when the team is active;
+it’s to provide support and assistance of whatever kind is useful,
+including data extraction and analysis. In fact, you will never initiate physical violence without direct instructions from a duly
+authorized human. Humans are touchy about “combat AIs,” so
+you’ve been programmed to err on the side of caution.
+
+PROFESSIONAL PROTECTION
+
+17
+
+Because you are fully sapient, you have a fully developed
+personality, even beyond what was programmed into you. You
+are, when all is said and done, a young, enthusiastic intelligence. See the quirks listed on the character description, and
+play them to the full.
+
+OVERSIGHT
+300 points
+An AI running on a static macroframe; OVERSIGHT’s digital avatar is a floating crystal studded with eyes.
+ST 0 [0]*; DX 10 [0]; IQ 13 [60]; HT 12 [0]*.
+Damage N/A; BL N/A; HP 30 [0]*; Will 12 [-5]; Per 12 [-5];
+FP N/A.
+Basic Speed 5.50 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0]; Chinese [1].
+Languages: English (Native) [0]; French (Native) [6];
+German (Broken) [2]; Mandarin (Native) [6]; Spanish
+(Native) [6].
+
+Advantages
+Allies (10 remote-controlled Combat Buzzbots; 25% of
+starting points; Constantly Available; Minion, +0%) [24]; Compartmentalized Mind 2 [100]; Modular Abilities 3 (Computer
+Brain: 6, 4, 4) (Limited Integration, -20%; Skills and Languages
+Only, -10%) [52]; SAI-8 [173].
+
+Disadvantages
+Dead Broke [-25]; Duty (To the company; 12 or less) [-10];
+Macroframe [-104]; Social Stigma (Valuable Property) [-10].
+Quirks: Absolutely unworried by the idea of being property;
+Habit (Opens all communication with the words “This is
+OVERSIGHT”); Nosy; Proud; Won’t initiate physical violence
+without a direct order from a human. [-5]
+
+Skills
+Accounting (H) IQ-2 [1]-11; Administration (A) IQ [2]-13;
+Area Knowledge (Earth) (E) IQ [1]-13; Beam Weapons/TL10
+(Pistol) (E) DX [1]-10; Computer Operation/TL10 (E) IQ+3
+[0]-16†; Electronics Operation/TL10 (Communications) (A)
+IQ+4 [16]-17; Electronics Operation/TL10 (Electronic Warfare)
+(A) IQ [0]-13‡; Electronics Operation/TL10 (Security) (A) IQ
+[0]-13‡; Electronics Operation/TL10 (Sensors) (A) IQ [0]-13‡;
+Electronics Operation/TL10 (Surveillance) (A) IQ [0]-13‡; Expert
+Skill (Memetics) (H) IQ-1 [1]-12§; Expert Skill (Military Science)
+(H) IQ-2 [1]-11; Law (International) (H) IQ-1 [2]-12; Observation
+
+(A) Per+1 [4]-13; Research/TL10 (A) IQ [2]-13; Shadowing (A)
+IQ-1 [1]-12; Sociology (H) IQ-1 [1]-12§; Tactics (H) IQ-2 [1]-11.
+* From Macroframe template.
+† From SAI-8 template.
+‡ Default from Electronics Operation (Communications).
+§ Includes +1 from Memetics Talent (in SAI-8 template).
+
+OVERSIGHT’s Views of the Team
+Diego Hughes is the team’s official leader, in charge of tactics. His personal history (a career with the U.S. Army and an
+additional period in private security work) shows him to be
+quite skilled in such matters. Obviously, you defer to him. He
+appears to be motivated by pride in a job well done – something that you can understand.
+Charles “Charlie” Mallinson acts as the team’s most visible
+“front man.” He is a human who has had his brain destructively scanned to achieve the safer state of software, but he still
+evidently prefers to operate in a humanoid body – a rather vulnerable “cyberdoll” – much of the time. (He seems to regard
+virtual reality as strictly for recreational purposes.) The company’s investors arranged for him to obtain this job, apparently
+as some sort of favor. You’d like to know more, but most of his
+personal data is under a legal seal. Of course, you can’t try to
+bypass that. He lacks experience in this work, but at least he,
+like you, is willing to learn.
+Paul Chung is a former police officer from Alberta-British
+Columbia. Evidently, he is competent in police tactics and
+weapon handling. He doesn’t give much away about himself in
+conversation, but as you have access to his personal records,
+which have few sealed areas, this doesn’t worry you much.
+Paz Ramirez is another former U.S. Army soldier, although
+her career was shorter than that of Hughes. Her task is to provide close protection for the client, and she is admirably enthusiastic when on duty. Off duty, when awake, she can be found
+in some bar or other place of entertainment. You have often
+had to arrange travel home for her. Nonetheless, you find her
+quite likable.
+
+OVERSIGHT’S BUZZBOTS
+The buzzbots function as the mobile extensions of your
+awareness and as independent agents. Their AIs are in no way
+sapient, but they can learn and even make some decisions for
+themselves, within well-defined parameters. Each mounts a
+light electrolaser weapon, and they have been trained as competent shots. Their virtual avatars are simple numbered icons,
+but they don’t have to use them much.
+You have no other assistant AI resources. You don’t really
+need any, after all.
+
+This is OVERSIGHT. The lawyers have now acquired that facial image database
+from the local police, and I have four buzzbots scanning the audience for possible
+matches. I am also downloading a copy of the database to your own personal
+systems, and continuing to monitor local activist discussion spaces for threats.
+– OVERSIGHT
+
+PROFESSIONAL PROTECTION
+
+18
+
+Buzzbot
+75 points
+ST 3 [0]*; DX 10 [0]; IQ 8 [0]†; HT 11 [0]*.
+Damage N/A; BL N/A; HP 3 [0]; Will 8 [0]; Per 8 [0]; FP N/A.
+Basic Speed 5.25 [0]; Basic Move N/A; Air Move 10 [0]*; Dodge
+N/A; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Advantages
+Modular Abilities 3 (Computer Brain: 2, 2,
+2) (Limited Integration, -20%; Skills and
+Languages Only, -10%) [30]; NAI-4 [29];
+Wotatech Combat Buzzbot [2].
+
+Disadvantages
+Duty (To the company; 15 or less) [-15].
+
+Skills
+Aerobatics (H) DX-2 [1]-8; Beam
+Weapons/TL10 (Pistol) (E) DX+4 [12]-14;
+Computer Operation/TL10 (E) IQ+3 [0]-11†;
+Observation (A) Per+2 [8]-10; Stealth (A) DX+1
+[4]-11; Tactics (H) IQ [4]-8.
+
+Weaponry
+These cybershells typically mount an electrolaser pistol if
+using the weapons listed in Changing Times, or a holdout electrolaser if using GURPS Ultra-Tech.
+* From Wotatech Combat Buzzbot template (see Changing
+Times, p. 54).
+† From NAI-4 template.
+
+CHARLIE MALLINSON
+Note: Charlie has a number of secrets from the other PCs, so
+anyone playing the other characters shouldn’t be allowed to read
+these notes!
+You were born Philip Charles Allard, in Ohio in 2015, and
+grew up in a small-c conservative community. You did okay for
+yourself in business, and you made enough money to become
+what some folks would call an “Eloi,” retiring to enjoy your
+wealth while modern medical technology kept you spry. Like
+most people you knew, though, you didn’t see much appeal in
+giving up on biology altogether – having your brain destructively scanned into a computer looked like an expensive way to
+commit suicide.
+Or so you said. Then the years started to bite, harder than
+the fancy medicine could handle – even full cellular rejuvenation looked like an expensive and grossly unreliable patch, not
+a real fix. Even if you could become sort-of young again, accident would get you one day. Maybe uploading is a fancy sort of
+dying, but you eventually decided that it beat the hell out of the
+other sorts. So, a couple of years ago, you paid your money and
+you got the job done. As far as you’re concerned, you’re the
+same person.
+
+That was when you discovered just how small-c conservative your ever-loving family really was, and how much one or
+two of them had been looking forward to getting their hands
+on your money. They pretty much all cut themselves off from
+you. Some of them even set the dear old family lawyers onto
+you. The sharks couldn’t touch your personal wealth, but they
+could sure as hell make trouble around
+some of the trust funds and holdings.
+Well, to hell with them calling you a
+“computer zombie monster.” You still
+know who you are, and this new life is
+a lot more fun than being a fading, geriatric businessman. You told some of
+your family what you thought of them,
+and walked away. You had your hormone simulations and somatic image
+set back to something more enjoyable.
+You bought a decent humanoid cybershell to be your body, and you changed
+your name. Your family still kept the
+lawyers on your tail, but you got an
+injunction to stop them from saying
+too much about you, all solidly legal . . .
+(Turns out to be handy that a lot of the
+laws these days are made by people
+who are ghosts themselves, or who’re
+looking forward to that.)
+You wanted to do something with your new life, to start
+over, building something. It had to be a bit more exciting than
+most businesses. You decided to start a security company. You
+don’t know much about the business, but you figured you
+could work your way up. That meant starting on the ground
+floor, and if your co-workers knew that you were the boss,
+embarrassing complications might arise.
+You set things up so they don’t know that. Martingale
+Security is owned and operated through cut-outs. It’s all legal
+– it just looks like a bunch of investors who like their privacy.
+Charlie Mallinson became a junior employee, with vague links
+to “the owners.” You try not to misuse your secret access to the
+administration network. It’s weird, but after 85 years, you’ve
+got the right to be weird.
+As a ghost mind emulation, you are a large piece of software running on the computer installed in your off-the-shelf
+“cyberdoll” body. You don’t bother running any AIs on the
+same hardware – truth is, that’d feel a bit weird – but you can
+operate other non-AI software as required, such as facial
+recognition, HUD targeting, VR amusements (heh, those are
+fun), and so forth.
+
+Playing Mallinson
+You’re still learning the security business, and you’re still a
+better businessman than you are a bodyguard, truth be told.
+Nonetheless, you can shoot a gun if you have to. You want to
+be good at this job, which is why you’ve slotted yourself into
+the business at a low level – so you get time to learn.
+In fact, you’ve taken the job of point man for this team. Since
+it’s not too hard for a bright observer to peg you as a robot, you
+might as well play on that. You’re the bodyguard who everyone
+notices so they miss the others. If that means glowering at people a lot and even getting shot at, well, that is your job. You get
+tactical input from the team leader by radio when you need it.
+
+PROFESSIONAL PROTECTION
+
+19
+
+You usually wear decent body armor and carry a couple of
+hand weapons. You’re careful about using this stuff – you do
+have ethics, and you won’t hurt innocents – but it’s enough to
+make a point.
+
+Guns/TL10 (Pistol) (E) DX+2 [4]-12; Judo (H) DX+1 [8]-11;
+Merchant (A) IQ+3 [4]-14‡; Observation (A) Per-1 [1]-12;
+Savoir-Faire (High Society) (E) IQ [1]-11.
+
+Equipment
+
+Charlie Mallinson
+300 points
+A very standard male-configuration cyberdoll – “Caucasian”
+and appearing dark-haired and clean-shaven. Mallinson’s usual
+digital avatar appears the same.
+ST 12 [0]*; DX 10 [0]; IQ 11 [20]; HT 12 [0]*.
+Damage 1d-1/1d+2; BL 29 lbs.; HP 15 [0]*; Will 11 [0]; Per 13
+[10]; FP N/A.
+Basic Speed 6.00 [10]; Basic Move 6 [0]; Dodge 9; Parry 9
+(Brawling).
+6’; 160 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; Spanish (Native) [6].
+
+Advantages
+Business Acumen 2 [20]; Cyberdoll [127]; Ghost Mind
+Emulation [86]; Status 1 [0]†; Very Wealthy [30].
+Perks: Has control codes for OVERSIGHT. [1]
+
+Disadvantages
+Chummy [-5]; Code of Honor (Professional/Businessman’s)
+[-5]; Debt 3 (Maintenance/insurance fees for the cybershell,
+corporate admin charges, etc.) [-3]; Enemy (Family Lawyers;
+Small group; Appears 12 or less; Watcher) [-5]; Impulsiveness
+(15) [-5]; Pacifism (Cannot Harm Innocents) [-10]; Reputation
+-2 (Seems amateurish to other people in the bodyguard business; 10 or less) [-2]; Secret (Actually owns Martingale
+Security; Serious Embarrassment) [-5].
+Quirks: Aggressively cynical about families; Fascinated by
+VR sex (Gets downright lecherous when off-duty and online);
+Nosy; Slightly reckless – overrates the robustness of his cybershell. [-4]
+
+Skills
+Accounting (H) IQ [1]-11‡; Administration (A) IQ+2 [2]-13‡;
+Beam Weapons/TL10 (Pistol) (E) DX+1 [2]-11; Brawling (E)
+DX+2 [4]-12; Computer Operation/TL10 (E) IQ [1]-11;
+Diplomacy (H) IQ-2 [1]-9; Fast-Draw (Pistol) (E) DX+1 [2]-11;
+Finance (H) IQ+1 [2]-12‡; Gambling (A) IQ+1 [1]-12‡;
+
+Mallinson usually wears and carries a good range of equipment, some of it paid for out of his own funds, such as the multiview optics in his sunglasses and his well-cut body armor. In
+addition to his tactical programs, he has excellent full-sensorium VR software installed on his computer.
+* From Cyberdoll template.
+† Free from Wealth.
+‡ Includes +2 from Business Acumen.
+
+Charlie’s Views of the Team
+The people you’ve indirectly hired are good at their jobs,
+which of course means that they regard you as a bit of a dabbler. Maybe they’re right, but what the hell, you’re learning –
+and they may have noticed that you take on some dangerous
+duties that they might not like.
+Diego Hughes was someone you chose personally; he’s exarmy and knows his stuff, so he makes a good team leader. Paz
+Ramirez is ex-army too, but younger. They both score high on
+enthusiasm, but Diego wants to be good at his job whereas Paz
+seems to be in the game for kicks. Still, she’s cute; you probably ought to invite her into your VR space some time.
+Paul Chung is a Canadian – sorry, since the break-up of
+Canada, that’s Albertian – ex-cop, which rounds out the sense
+of professionalism in the team. He’s not much of a talker, but
+the staff files say that he’s a darned good shot, which is what
+counts, really.
+OVERSIGHT is the AI who looks after the team’s requirements on the Web. It also controls a bunch of flying cameras,
+helps keep the books, and so on. You signed off on an order for
+a decent fully self-aware AI with enhanced multitasking capability, and OVERSIGHT meets that spec. It can actually run
+three parallel versions of itself simultaneously, on a big enough
+computer. It’s designed for purpose, with no big ideas about
+personal freedom. Some people find this weird, but it’s sort of
+logical when you look at it. It likes its work. The only slight
+snag is that it’s been made very keen on what it does, to motivate it, and it ends up coming over a little bit cocky and a bit
+nosy. As you do own the company, you’ve got a set of control
+codes for it, stored in your permanent computer memory,
+allowing you to give it instructions, directly or through cutouts, if you choose. So far, you’ve resisted the temptation to use
+them. It’d be messy and probably raise too many difficult questions. Anyway, it’d miss the point of your position.
+
+I may not know much about tactics, but I know families – and I’ll bet
+any of you a week’s pay that family is the biggest likely source of trouble
+with this client.
+– Charlie Mallinson
+
+PROFESSIONAL PROTECTION
+
+20
+
+INDEX
+“A Concert in Zulia” scenario,
+7-9.
+Armor, 6-7.
+Buzzbot, 19.
+Character point totals, 6.
+Chung, Paul, 13-15; views by
+others, 12, 16, 18, 20.
+Company, background, 4-5;
+personnel, 11-20.
+“Country-House Mystery”
+scenario seed, 10.
+Duty advantage, 4, 5.
+Equipment, 6-7.
+Espartero, Elizabeth Jane, 8-9.
+Festival of Radical Song, 7.
+Fritz el Gato, 10.
+
+GURPS, 3, 6; Ultra-Tech, 7, 13,
+19.
+“Hearts, Minds, and
+Questionable Ethics”
+scenario seed, 10.
+Hughes, Diego, 11-12; views by
+others, 14, 16, 18, 20.
+Jack, 13.
+Jordanson, Ken, 7.
+“Machine Minders” scenario
+seed, 10.
+Mallinson, Charlie, 4, 19-20;
+views by others, 12, 15, 16,
+18.
+Maracaibo, 8, 9.
+
+Martingale Security, company
+background, 4-5; personnel,
+11-20.
+Nanosocialist Party, 10.
+Narvaez, Pablo, 7-9.
+OVERSIGHT, 4-5, 17-18; views
+by others, 12, 15, 16, 20.
+Patron advantage, 4.
+Personal equipment, 6-7.
+Ramirez, Paz, 15-16; views by
+others, 12, 14, 18, 20.
+Ratchet, 13.
+Running the campaign, 5-10.
+San Timeo, 7-9.
+Scenario, sample, 7-9; seeds, 10.
+Secret of the campaign, 19.
+
+Team equipment, 6-7.
+Team members, 11-20.
+Transhuman Space, 3, 4, 6,
+7; Broken Dreams, 7, 8;
+Changing Times, 3, 6- 8,
+13, 19; Fifth Wave, 7; ShellTech, 3, 8, 9, 13; Under
+Pressure, 10.
+TSA, 9, 10.
+Using equipment from UltraTech, 7.
+Weapons, 6-7.
+Wearable tactical system, 15, 17.
+Work hours, 5.
+Zulia, 7-9.
+
+STUCK FOR AN ADVENTURE?
+NO PROBLEM.
+e23 sells high-quality game adventures
+and supplements in PDF format.
+
+● Get complete sample adventures free for GURPS, In Nomine, and Traveller!
+● PDFs from the major players in online publishing: Ronin Arts, Ken Hite,
+Atlas Games, and 01 Games.
+● New gems from up-and-coming publishers, like Atomic Sock Monkey Press
+and Expeditious Retreat Press.
+● Digital editions of out-of-print classics, from Orcslayer and the complete
+run of ADQ to GURPS China and GURPS Ice Age.
+● Fully searchable files of GURPS Fourth Edition supplements.
+● Original material for Transhuman Space and In Nomine, with new GURPS
+supplements from Phil Masters, David Pulver, Sean Punch, and William Stoddard!
+● Buy it once, have it always. Download your purchases again whenever you need to.
+
+STEVE JACKSON GAMES
+
+e23.sjgames.com
+
+Download ● Print ● Play
+
+STEVE JACKSON GAMES
+e23 is part of Warehouse 23, the online store at Steve Jackson Games. Warehouse 23 is also the official Internet retailer for
+Dork Storm Press, Atlas Games, and many other publishers. Visit us today at www.warehouse23.com for all your game STUFF!
+
+INDEX
+
+21
+
+

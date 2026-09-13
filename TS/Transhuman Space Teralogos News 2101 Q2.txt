@@ -1,0 +1,562 @@
+TM
+
+2101, SECOND QUARTER
+
+TM
+
+Written by JAMAIS CASCIO, JÜRGEN HUBERT,
+PATRICK SWEENEY, and JON F. ZEIGLER
+Edited by PHIL MASTERS
+Illustrated by PAUL DALY
+An e23 Sourcebook for GURPS ®
+
+STEVE JACKSON GAMES
+Stock #37-6709
+
+Version 1.0 – March 2010
+
+®
+
+CONTENTS
+2101, SECOND QUARTER . . . . . . . . . . . . . . 3
+New Discoveries in Digital Archaeology . . . . . . . . . . . . . . 3
+Music Group Seeks WTO Protection . . . . . . . . . . . . . . . . . 3
+Islandia Citizen Executed on Ceres . . . . . . . . . . . . . . . . . . 4
+Romanian President Calls for “Independence” . . . . . . . . . 4
+Atheist Alliance Sues Kindercomp Manufacturer. . . . . . . 4
+
+Biochauvinism Claimed in Murder Investigation . . . . . . . 4
+Microtonalist Composer Jolene Kermani Dead . . . . . . . . 5
+U.S. Senate Debates Memory License Fee. . . . . . . . . . . . . 5
+Thai Monarch Urges Calm . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Memetic Crimes Bill Fails in Senate . . . . . . . . . . . . . . . . . 6
+Split Catholic Church To Decide Trademarks . . . . . . . . . . 6
+
+About GURPS
+Steve Jackson Games is committed to full support of
+GURPS players. Our address is SJ Games, P.O. Box 18957,
+Austin, TX 78760. Please include a self-addressed, stamped
+envelope (SASE) any time you write us! We can also be
+reached by e-mail: info@sjgames.com. Resources include:
+New supplements and adventures. GURPS continues to
+grow – see what’s new at www.sjgames.com/gurps.
+e23. Our e-publishing division offers GURPS adventures, play aids, and support in PDF form . . . digital copies
+of our books, plus exclusive material available only on e23!
+Just head over to e23.sjgames.com.
+Pyramid (www.sjgames.com/pyramid). Our monthly
+PDF magazine includes new rules and articles for GURPS,
+systemless locations, adventures, and much more. Look for
+each themed issue from e23!
+Internet. Visit us on the World Wide Web at
+www.sjgames.com for errata, updates, Q&A, and much
+
+more. To discuss GURPS with our staff and your
+fellow gamers, visit our forums at forums.sjgames.com.
+The web page for Transhuman Space: Teralogos News is
+at www.sjgames.com/transhuman/teralogos.
+Bibliographies. Many of our books have extensive bibliographies, and we’re putting them online – with links to let
+you buy the resources that interest you! Go to each book’s
+web page and look for the “Bibliography” link.
+Errata. Everyone makes mistakes, including us – but we
+do our best to fix our errors. Up-to-date errata pages for all
+GURPS releases, including this book, are available on our
+website – see above.
+Rules and statistics in this book are specifically for the
+GURPS Basic Set, Fourth Edition. Page references that
+begin with B refer to that book, not this one.
+
+INTRODUCTION
+Back in 2002-2003, the background for Steve Jackson
+Games’ Transhuman Space hard SF setting was expanded by
+a series of reports from that solar system’s leading news source,
+Teralogos News (Fifth Wave, p. 64), distributed through an
+e-mail mailing list. Since then, this rich collection of setting
+details, local color, and potential scenario seeds has only been
+available in the form of a little-known raw text file.
+So we’ve decided to do something about that. This is one of
+four free PDF files that collect those reports.
+The dates on each report are a bit of stylistic detail, related to
+the real-world dates on which the posts were originally distributed. Don’t take them too seriously as setting canon; after all,
+Transhuman Space doesn’t have a fixed future or “metaplot.”
+GURPS System Design ❚ STEVE JACKSON
+GURPS Line Editor ❚ SEAN PUNCH
+Transhuman Space Line Editor ❚ PHIL MASTERS
+e23 Manager ❚ STEVEN MARSH
+Page Design ❚ PHIL REED and JUSTIN DE WITT
+
+The incidents described in these reports can occur whenever
+suits your own campaign.
+– Phil Masters
+
+ABOUT THE EDITOR
+Phil Masters is the author of Transhuman Space:
+Changing Times, Transhuman Space: Shell-Tech,
+Transhuman Space: Personnel Files 1-5, and a chapter in
+Transhuman Space: High Frontier. He has also worked on
+countless other GURPS products, including GURPS Castle
+Falkenstein, The Discworld Roleplaying Game, and GURPS
+Y2K, and on products for other companies.
+
+Managing Editor ❚ PHILIP REED
+Assistant Managing Editor ❚ MONICA STEPHENS
+Art Director ❚ WILL SCHOONOVER
+Production Artist ❚ NIKOLA VRTIS
+Editorial Assistance ❚ JASON LEVINE
+
+INTRODUCTION
+
+Prepress Checker ❚ WILL SCHOONOVER
+Marketing Director ❚ PAUL CHAPMAN
+Director of Sales ❚ ROSS JEPSON
+GURPS FAQ Maintainer ❚ –––––––
+VICKY “MOLOKH” KOLENKO
+
+2
+
+2101, SECOND
+QUARTER
+NEW DISCOVERIES IN
+DIGITAL ARCHAEOLOGY
+GREATER SAN FRANCISCO,
+United States/Teralogos: April 3, 2101
+Posting today to a popular infotech news site, digital
+archaeologist Auberon MacWilliams announced the recovery
+of “a true gem of early computer science.”
+MYCROFT is a typical Low-Sapient AI operating system,
+first released by System Technologies AG in 2085 for the home
+and small-office markets. Sales of MYCROFT have suffered
+considerably in recent years, so in November, System
+Technologies chose to release the foundation source code for
+the operating system. MacWilliams immediately began
+reverse-engineering the source code, searching for clues to the
+“ancestry” of MYCROFT.
+What he discovered astonished him. “I found dozens of
+modules identical to portions of the 2005-era Linux kernel,” he
+said in today’s announcement. “This is by far the largest surviving block of code ever found from that period. MYCROFT was
+clearly built on a foundation of code from the last great era of
+open-source programming.”
+MacWilliams’ discovery is potentially embarrassing for
+System Technologies, which has long been an advocate for
+strong intellectual property rights and “closed-source” programming. System Technologies has so far declined to comment to MacWilliams’ announcement.
+– filed by John F. Zeigler
+
+MUSIC GROUP SEEKS
+WTO PROTECTION
+SILAS DUNCAN STATION, Ceres/Teralogos: April 10, 2101
+The Lords of the Belt, a popular Duncanite musical group,
+has filed an official complaint with the World Trade
+Organization, seeking its protection against the ongoing
+piracy of its work in progress. A copy of a new song, “Biometal
+Lullaby,” appeared late last month on the new music channel of the Transpacific Socialist Alliance information web.
+
+It is unknown at this time how many Lords of the Belt fans
+have illegally copied and listened to the song.
+“I’m burnt and cored, and I want to tox the downlift or elf
+who dooped our song,” said Lords of the Belt lead singer,
+Parallax Verge, apparently expressing anger over the theft of the
+piece. A preliminary search of the employees of 0G33 Studios,
+where the band was recording their latest songs, indicated no
+connections to the TSA. Unlike most current musical groups, the
+Lords of the Belt continue to record and perform in person.
+“Gordo is asymp over this,” continued Mr. Verge, referring
+to Gordon 25, the band’s songwriter. Gordon 25 is well-known
+for his regular attempts at self-modification. “We’re on track to
+purge and refit again this cycle. That’ll toss all of the new songs
+downwell, and we’ll have to start over.”
+
+I’m burnt and cored, and I
+want to tox the downlift or elf
+who dooped our song.
+The WTO spokesbot released the standard response, pending further examination of the band’s claims. “The World Trade
+Organization stands shoulder-to-shoulder with all content
+manufacturers and disseminators in opposition to intellectual
+property theft. We will do the utmost to assure a satisfactory
+result.” It is believed that, if the band’s complaint is accepted,
+it will be added to the WTO’s ongoing lawsuit against the TSA.
+Reports that the band had initially tried to hire the private
+security company Kinetic Logic to track down the violators
+could not be confirmed. Among Duncanites, private security
+firms are often the only law there is, but these agencies have
+little influence beyond the Main Belt and Trojans.
+Nanosocialists who frequent the TSA music channel claim
+that the lawsuit by Lords of the Belt is motivated by spite, as
+the majority of comments left by downloaders about the song
+have been highly critical.
+– filed by Jamais Cascio
+
+GURPS, Warehouse 23, and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. Transhuman Space, Teralogos News, “2101, Second Quarter,”
+Pyramid, e23, and the names of all products published by Steve Jackson Games Incorporated are registered trademarks or trademarks of Steve Jackson Games Incorporated,
+or used under license. Transhuman Space: Teralogos News – 2101, Second Quarter is copyright © 2010 by Steve Jackson Games Incorporated.
+Some art © 2010 JupiterImages Corporation. All rights reserved.
+The scanning, uploading, and distribution of this material via the Internet or via any other means without the permission of the publisher is illegal,
+and punishable by law. Please purchase only authorized electronic editions, and do not participate in or encourage
+the electronic piracy of copyrighted materials. Your support of the author’s rights is appreciated.
+
+TERALOGOS NEWS: 2101, SECOND QUARTER
+
+3
+
+ISLANDIA CITIZEN
+EXECUTED ON CERES
+SILAS DUNCAN STATION, Ceres/Teralogos: April 22, 2101
+Despite international protests, Islandia citizen Ray Joseph
+Clement, 34, was executed today on Silas Duncan Station on
+Ceres. Found guilty two days ago of criminal negligence that
+resulted in the death of his co-worker Ariel Ling in an industrial accident, Duncanite deemster Judge Giuseppe Levine
+signed the convicted Islander’s body over to Ling’s security broker, Ceres Mutual, as compensation for the loss of Ling. Ceres
+Mutual has lobotomized Clement and put his body up for sale
+as a bioshell on the open market.
+When asked for a statement, Judge Levine said: “Some
+groundhogs and Elfs back near Earth might believe that the
+sentence was cruel or unusual. Maybe so, but that’s what punishment should be, if it’s going to deter other folks from making the same bad choice. This Clement character agreed to the
+jurisdiction of my court when he entered into a contract with
+Mutual Assured Defense and I gave him a fair trial. If I didn’t,
+I wouldn’t stay in business.”
+Silas Duncan Station is an anarchocapitalist society in
+which all services, including justice and law enforcement, are
+contracted out to firms like Mutual Assured Defense. Several
+Islandia and European pan-sapient rights groups, already up
+in arms about alleged Duncanite bioroid abuse, have called for
+boycotts of Green Duncanite products.
+– filed by Jürgen Hubert
+
+ROMANIAN PRESIDENT
+CALLS FOR “INDEPENDENCE”
+
+with the Union and engage in such an inhumane practice,
+there will be very serious consequences indeed.”
+– filed by Jon F. Zeigler
+
+ATHEIST ALLIANCE
+SUES KINDERCOMP
+MANUFACTURER
+NEW YORK, United States/Teralogos: May 7, 2101
+The Atheist Alliance, a prominent anti-religious advocacy
+group, has filed a class-action lawsuit against Gemini
+Volksrobotics, an Australia-based firm which is a primary manufacturer of children’s companion cybershells or “kindercomps.”
+“We’ve subjected the behavior of Gemini kindercomps to
+careful analysis,” said Atheist Alliance chairman Madrigal
+Carstairs. “It’s clear that these machines are designed to infect
+children’s minds with theist concepts. We’re talking about the
+memetic sabotage of an entire generation of children.”
+Officials at Gemini Volksrobotics ridiculed the allegations,
+and vowed to fight the lawsuit aggressively. “Our kindercomps
+aren’t designed to teach children anything but basic social and
+academic skills,” said Gemini CEO John Perrine. “If children
+encounter religious concepts and ask the kindercomp AIs to
+explain them, that’s their choice, not ours.”
+The Atheist Alliance filed the suit in the federal district
+court in New York City, where Gemini Volksrobotics maintains
+its U.S. corporate headquarters. Aside from unspecified monetary damages, the suit asks that Gemini Volksrobotics be
+ordered to disclose all memetic technologies incorporated into
+its kindercomp software, and to pay for a replacement AI for
+any member of the class whose parents or guardian request it.
+– filed by Jon F. Zeigler
+
+BUCHAREST, Romania/Teralogos: April 28, 2101
+President Alexamdru Berca of Romania issued a statement
+threatening the withdrawal of his country from the European
+Union, unless a number of outstanding disputes can be resolved.
+“The Romanian economy is being strangled by the Union’s
+regulation of artificial labor,” said President Berca. “We
+increasingly find that membership in the Union is more of a
+liability than an advantage.”
+Romania has been struggling for decades with chronic labor
+shortages, the result of one of the lowest birth rates in Europe.
+Since the 2050s, successive governments have tried to encourage
+immigration to make up the difference, with little success due to
+internal instability and a low standard of living. President Berca
+swept to power in the last elections on a platform that promised
+to repeal legislation forbidding the manufacture of bioroids and
+bioshells. However, since beginning his term of office he has
+been unable to evade the European Union’s strict restrictions on
+such manufacture, despite intense − and increasingly heated −
+negotiations with senior E.U. officials.
+In a hastily convened press conference this morning,
+Quebec’s Pierre Landry, the chair of the European Parliament’s
+Committee on Pan-Sapient Rights, responded angrily to
+President Berca’s stance.
+“Artificial labor indeed!” Landry responded. “Let us be quite
+clear, the Berca government is planning to begin the wholesale
+manufacture of slaves. Should Romania repudiate its treaties
+
+BIOCHAUVINISM CLAIMED
+IN MURDER INVESTIGATION
+DENVER, Colorado, USA/Teralogos: May 16, 2101
+In a raucous virtual rally that all but shut down traffic in the
+city’s Coda Uncola hyperspace, thousands of pan-sapient rights
+avatars protested alleged police biochauvinism in the Denver
+DVI serial murders.
+Since the first killing took place on April 23, five bodies have
+been found with their virtual interface implants removed. The
+most recent victim, Madison Corrales, 62, was found dead yesterday morning near the South Monaco Parkway, police said.
+“The city and the police are deliberately ignoring a whole
+other set of victims in these tragic crimes,” said protest organizer Westin Carr, a Christian Hyperevolutionist minister and
+chairminder of the Denver branch of the Pan-Sapient Rights
+Alliance. “Along with the five humans who died, five digital
+intelligences have been kidnapped or extinguished. The mayor
+and the police chief talked about five victims. I see ten.”
+Police sources have confirmed that each of the stolen
+implants was a distributed virtual interface system that contained a sapient artificial intelligence. Implants containing
+SAIs remain rare, due to expense and the reluctance of many
+citizens to share their bodies with another sapient being.
+
+TERALOGOS NEWS: 2101, SECOND QUARTER
+
+4
+
+The five human victims were each subdued with a shock glove,
+then killed by neurological trauma related to the microbotfacilitated removal of their distributed implants, police said.
+Yesterday’s rally was sparked after a report in the Rocky
+Nugget, a widely accessed city slog, claimed police detectives
+had questioned Denver abolitionist Ethan Blake in connection
+with the murders. Rocky Nugget speculated the police were
+investigating hard-core AI rights activists who might have
+committed the killings in an attempt to “liberate” the SAIs
+from their owners. Denver Police officials declined comment,
+other than to say all leads were being vigorously pursued, and
+no motive has yet been established.
+Participants in today’s rally said they were outraged at the
+killer abolitionist meme. “As ethical pan-sapients, we fundamentally treasure all forms of life: human, transhuman, and
+digital,” said demonstrator Tate Webb, a ghost who lost his two
+closest friends when Corrales was murdered − the victim and
+his SAI, Doppler V. “I loved them both,” said Webb, “but
+Corrales is dead, and D-V might still be suffering somewhere −
+and meanwhile, hir backup is trapped in legal limbo. The cops
+need to stop chasing hotheads like Blake, and start looking for
+the real criminals − the ones who hate and fear our kind.”
+– filed by Patrick Sweeney
+
+MICROTONALIST COMPOSER
+JOLENE KERMANI DEAD
+CHELTENHAM, United Kingdom/Teralogos: May 26, 2101
+Physicist and influential composer Jolene Kermani, 103,
+died today of heart failure at her home.
+Born Jolene Fraser in 1997 in Birmingham, Kermani displayed musical talent as a child, but aside from early piano lessons received little formal education in music. Instead, she
+attended the University of Birmingham, receiving a doctorate
+in physics in 2025. The next 12 years were spent pursuing postdoctoral research in nanoscale physics, making significant
+contributions to early nanotechnology research.
+It was while attending university that she began her career
+as a composer. In 2016, she received a musical composition
+program as a birthday present, and “on a lark,” began to play
+with it. Over the next several months, she created increasingly
+complex arrangements and compositions, often working late
+at night or during study breaks. She kept her hobby secret even
+from friends and family, but in 2018 began publishing the finished compositions to the Web under a pseudonym. Although
+her grasp of musical theory and composition was entirely selftaught, these early works won widespread attention for their
+clarity and originality.
+It was after her 2028 marriage to Parvez Kermani, a
+Birmingham mathematics professor, that her career as a composer took flight. At his urging, she began experimenting with
+fractional tones and “microtones,” using the subtle harmonies
+and resonances that could be found by working between the
+tones of the standard chromatic scale. Her first Symphony for
+Synthetic Instruments was published in 2036, and won widespread acclaim. Her 13th symphony, released in 2045, was to
+become an unofficial anthem of the U.K.’s Preservationist
+movement following its use as the soundtrack in the popular
+2062 InVid Requiem for Two Worlds.
+Although Jolene Kermani was one of the primary movers
+of the microtonalist movement, she remained stubbornly
+
+anonymous until 2073, when a persistent web researcher
+finally managed to establish the authorship of her compositions. For the rest of her life she remained reclusive, making
+no public statements and accepting none of the praise or
+awards offered her. A committed Preservationist, Kermani
+refused modern medical treatment and made no arrangements for uploading.
+Jolene Kermani is survived by her brother, Ian Fraser of
+Kaliningrad; her husband, Parvez Kermani of Cheltenham;
+her son, William Kermani of Sydney, Australia; two grandchildren, Whistler Kermani-Takahashi of Islandia, and Jolene
+Kermani Trudeau of Ottawa, Canada; and six great-grandchildren. She is to be cremated and interred in a private ceremony on June 5. Memorial donations to the Cotswolds
+Preservationist Society.
+– filed by Jon F. Zeigler
+
+U.S. SENATE DEBATES
+MEMORY LICENSE FEE
+WASHINGTON, D.C., United States/Teralogos: June 3, 2101
+Over protests from minority Republicans, the United States
+Senate today held hearings on the possibility of new fees to be
+imposed on manufacturers and wearers of digital cognitive
+implants, including virtual interface implants and sensory link
+(“slink”) hardware. Producers of content have long complained
+that the digital implants allow the user to have a perfect memory of content that they experience and to transmit that memory to others. In the case of upslink and downslink hardware,
+that transmission is explicit in the design of the systems.
+“In the past, human memory was imperfect, and a person
+would have to return to the original content to enjoy it in its
+full form. Even copies were insufficient. The digital revolution
+of a century ago changed that. But we now are confronted by
+a new revolution, where copyright-infringing digital copying is
+directly built in to the memories of increasing numbers of people,” said United Content Owners vice-president Michael Post,
+the first person to testify at today’s hearings.
+The draft legislation would impose a per-unit tax on the
+manufacturers of digital cognitive implants and, in one version
+of the bill, a monthly license fee to all implant users. The funds
+generated would be directed to the United Content Owners
+group, to be distributed to its members. The fees would be
+applied to all residents of U.S. territories with digital cognitive
+implants. Visitors with implants would be required to pay a flat
+rate upon entering the United States.
+Meredith Walker, second term Republican Senator from
+Massachusetts, opposed both the legislation and the hearings. “By considering these laws, we are only giving aid and
+comfort to those who wish to empower corporations at the
+expense of citizens and hold human development back to the
+pre-digital age.” Senator Walker left the hearings early, after
+Senator Albert Clark (D-NV) referred to her as “the esteemed
+Senator from the TSA,” referring to the radical Transpacific
+Socialist Alliance.
+The World Trade Organization, a strong advocate of thousands of content producers and disseminators, released a statement supportive of the hearings. A recent WTO report, Global
+Action 2100, recommended that a digital-cognitive licensing
+scheme be adopted on a system-wide scale.
+– filed by Jamais Cascio
+
+TERALOGOS NEWS: 2101, SECOND QUARTER
+
+5
+
+THAI MONARCH
+URGES CALM
+BANGKOK, Thailand/Teralogos: June 9, 2101
+In a prepared statement webcast last night, King Rama XV
+asked his people to “exercise restraint” following a week of violent anti-nanosocialist demonstrations.
+The king’s statement appeared to moderate the ongoing
+rioting in Bangkok and other cities, which started on June 2
+outside the Indonesian embassy, but soon spread throughout
+the Kingdom. Hundreds of homes and workplaces owned by
+suspected nanosocialist sympathizers have been destroyed by
+monarchist radicals. The death toll stands at 32, with over 600
+reported injured.
+The violence flared up after a blunt statement from the
+Indonesian government on June 1 denied all knowledge of the
+whereabouts of the missing Thai royal regalia. The regalia,
+including the Great Crown of Victory, the Sword of Victory, the
+Royal Staff, the Royal Fan, and the Royal Slippers, disappeared
+in the closing stages of the Pacific War in 2085. Thai monarchists have long accused ministers of the former nanosocialist
+government, who fled the country to Indonesia, of taking the
+regalia with them. For years, Thai diplomats and agents of the
+royal family have used all available channels to seek the return
+of the regalia, but Indonesia and other members of the
+Transpacific Socialist Alliance have been uncooperative.
+The missing regalia have become symbolic of the trials
+Thailand has endured during the former nanosocialist dictatorship and the Pacific War. Much of the king’s ceremonial role has
+been curtailed by the absence of the regalia, which also traditionally play a vital role in the coronation of any new monarch.
+Although King Rama XV is an Alpha genetic upgrade and is
+expected to enjoy several more decades in good health, the question of ensuring a legitimate succession remains a serious concern. Without the regalia, many monarchists believe that no
+legitimate successor to Rama XV can be crowned.
+– filed by Jon F. Zeigler
+
+MEMETIC CRIMES
+BILL FAILS IN SENATE
+WASHINGTON DC, United States/Teralogos: June 16, 2101
+The Senate today rejected a bill which would have criminalized certain kinds of “memetic transmission,” with a majority
+of lawmakers accepting the argument that the bill would fail to
+pass constitutional muster. The vote was 63 to 55 against the
+bill, with two senators absent or abstaining.
+“Naturally I’m disappointed,” said Senator Patrick Walsh
+(D-Seattle-Tacoma), who was one of the bill’s sponsors in the
+Senate. “There are some awful memes out there, preying on
+the mental health and well-being of our citizens. We have got
+to find a way to deal with the criminals who build and release
+these memes without any thought for the harm they cause.”
+The decisive vote against the bill was a personal defeat for
+Walsh, who had staked much of his political reputation on its
+passage. Opponents of the legislation were jubilant. “This is a
+victory for the American people,” said Linda Cordova, vice
+president of the advocacy group Thought Freedom. “Senator
+Walsh and his cronies are very good at muddying the issue.
+
+I’ll clarify it. Memes are ideas. Memes are speech. From the
+First Amendment on down, the law says that the government
+has no business regulating ideas or speech.”
+Senator Walsh said that he had no plans to re-introduce
+similar legislation, making it almost certain that no law
+addressing memetic dissemination will be passed this year.
+– filed by Jon F. Zeigler
+
+Memes are ideas. Memes
+are speech. From the First
+Amendment on down, the
+law says that the government
+has no business regulating
+ideas or speech.
+
+SPLIT CATHOLIC CHURCH
+TO DECIDE TRADEMARKS
+KÖNIGSBERG-KALININGRAD/Teralogos: June 23, 2101
+Representatives from the Catholic Church and the Catholic
+Church (Reformed) are scheduled to meet this week in the free
+city of Königsberg to discuss the ongoing trademark and intellectual property rights dispute between the two denominations. In prepared statements, each side expressed hope that
+the meetings would be productive.
+Recent conversions of Catholics to “alternative religions”
+have alarmed leaders in both the Traditional Vatican and the
+Reform Papal Seat in Chicago. Islam and Mormonism have
+grown steadily in traditional Catholic regions, while Christian
+Hyperevolutionism and Buddhism have gained popularity at
+Reform Catholicism’s expense in the developed world. The
+struggle over intellectual property is seen by many as having
+distracted both denominations from the larger crisis.
+The dispute over ownership of long-established Catholic
+Church concepts such as Pope and the confessional has been a
+stumbling block to improved relations between the two faiths
+since their acrimonious split in 2038. Throughout the 2040s,
+Traditional and Reformed Catholic denominations sparred in
+court over the intellectual property rights for widely recognized
+Catholic terms, concepts, and content. The death of Traditional
+Catholic Pope Clement XV in 2053 caused both sides to tone
+down the rhetoric, leading to a period of relative tolerance.
+It is widely believed that the 2090 ascension of Cardinal Anne
+DuChamps to the position of Pope Martha of the Reformed
+Catholic Church infuriated many high-ranking Catholic conservatives. The selection of a woman as Pope was hailed by many
+in Europe and the United States, where the modern Catholic
+reform movement started. Traditional Catholics, dominant in
+Africa and South America, called upon Pope Zachary II to
+denounce the new Reform Pope. The Vatican’s decision to again
+seek control over pre-schism Catholic intellectual property came
+within weeks of Martha’s ascension.
+– filed by Jamais Cascio
+
+TERALOGOS NEWS: 2101, SECOND QUARTER
+
+6
+
+STUCK FOR AN ADVENTURE?
+
+NO PROBLEM.
+e23 sells high-quality game adventures
+and supplements in PDF format.
+● Get complete sample adventures free for
+
+GURPS, In Nomine, and Traveller!
+● PDFs from the major players in online
+
+publishing: Ronin Arts, Ken Hite,
+Atlas Games, and 01 Games.
+● New gems from up-and-coming publishers,
+
+like Atomic Sock Monkey Press and
+Expeditious Retreat Press.
+● Digital editions of out-of-print classics, from
+
+Orcslayer and the complete run of ADQ
+to GURPS China and GURPS Ice Age.
+● Fully searchable files of GURPS Fourth Edition
+
+supplements.
+● Original material for Transhuman Space and
+
+In Nomine, with new GURPS supplements
+from William Stoddard, David Pulver,
+Phil Masters, and Sean Punch!
+● Buy it once, have it always. Download your
+
+purchases again whenever you need to.
+
+STEVE JACKSON GAMES
+
+e23.sjgames.com
+
+Download ● Print ● Play
+
+STEVE JACKSON GAMES
+e23 is part of Warehouse 23, the online store at Steve Jackson Games.
+Warehouse 23 is also the official Internet retailer for Dork Storm Press, Atlas Games, and many other publishers.
+Visit us today at www.warehouse23.com for all your game STUFF!
+
+

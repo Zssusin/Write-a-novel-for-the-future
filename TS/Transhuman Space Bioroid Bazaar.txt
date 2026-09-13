@@ -1,0 +1,3251 @@
+TM
+
+Written by PHIL MASTERS
+Edited by NIKOLA VRTIS
+Illustrated by ANDY CLARKSON, NEIL COOK,
+JUSTIN DE WITT, THOMAS FLOYD, MATTHEW KRESGE,
+CHRISTOPHER SHY, DAN SMITH, and MATTHEW TAGGART
+Additional Material by JAMAIS CASCIO, DAVID CHART,
+DAVID MORGAN-MAR, KENNETH PETERS, DAVID L. PULVER,
+SEAN PUNCH, GENE SEABOLT, JOHN SNEAD, CONSTANTINE THOMAS,
+JONATHAN WOODWARD, and JON F. ZEIGLER
+GURPS System Design z STEVE JACKSON
+GURPS Line Editor z SEAN PUNCH
+Assistant GURPS Line Editor z JASON “PK” LEVINE
+Transhuman Space Line Editor z PHIL MASTERS
+GURPS Project Manager z STEVEN MARSH
+Production Artist and Indexer z NIKOLA VRTIS
+Page Design z PHIL REED and JUSTIN DE WITT
+
+Chief Executive Officer z PHILIP REED
+Chief Operating Officer z SAMUEL MITSCHKE
+Managing Editor z MIRANDA HORNER
+Director of Sales z ROSS JEPSON
+Art Direction and Prepress Checker z NIKKI VRTIS
+GURPS FAQ Maintainer z
+VICKY “MOLOKH” KOLENKO
+
+GURPS, Pyramid, Warehouse 23, the all-seeing pyramid, Transhuman Space, Bioroid Bazaar, and the names of all products published
+by Steve Jackson Games Incorporated are trademarks or registered trademarks of Steve Jackson Games Incorporated, or used under license.
+Transhuman Space: Bioroid Bazaar is copyright © 2015 by Steve Jackson Games Incorporated. All rights reserved.
+The scanning, uploading, and distribution of this material via the Internet or via any other means without the permission of the publisher is illegal, and punishable by law. Please
+purchase only authorized electronic editions, and do not participate in or encourage the electronic piracy of copyrighted materials. Your support of the author’s rights is appreciated.
+
+STEVE JACKSON GAMES
+Stock #37-6715
+
+Version 1.0 – January 2015
+
+®
+
+CONTENTS
+INTRODUCTION . . . . . . . . . 3
+Nomenclature . . . . . . . . . . . . . . . . . 3
+Publication History. . . . . . . . . . . . . 3
+About the Author . . . . . . . . . . . . . . 3
+
+1. GAME FEATURES . . . . . 4
+Monetary Costs . . . . . . . . . . . . . . . . 4
+
+“RACIAL INTERACTION” TRAITS . . . 4
+Genotype/Model Appearance. . . . . 4
+Genotype/Model Reputations . . . . 5
+Pheromone Effects . . . . . . . . . . . . . . 5
+
+OTHER CHARACTER TRAITS . . . . . . 6
+Advantages and Perks. . . . . . . . . . . 6
+The Bioshell Lens. . . . . . . . . . . . . . . 6
+Disadvantages and Quirks . . . . . . . 6
+Bioroid IQ . . . . . . . . . . . . . . . . . . . . 7
+Features . . . . . . . . . . . . . . . . . . . . . . 8
+Meta-Traits . . . . . . . . . . . . . . . . . . . 8
+Pheromone Control Options . . . . . . 9
+
+2. HUMAN UPGRADES AND
+PARAHUMANS. . . . . . . 11
+Arctic Aquamorph . . . . . . . . . . . . 11
+Ariadne. . . . . . . . . . . . . . . . . . . . . . 11
+Avatars . . . . . . . . . . . . . . . . . . . . . . 11
+Brownie . . . . . . . . . . . . . . . . . . . . . 12
+Chiroptian . . . . . . . . . . . . . . . . . . . 12
+Drylander. . . . . . . . . . . . . . . . . . . . 12
+Freefall Designs. . . . . . . . . . . . . . . 12
+Han Alpha Variant . . . . . . . . . . . . 13
+Herakles. . . . . . . . . . . . . . . . . . . . . 13
+Kouros . . . . . . . . . . . . . . . . . . . . . . 14
+
+MacLarren Clone . . . . . . . . . . . . . 14
+Mahatma . . . . . . . . . . . . . . . . . . . . 14
+Mars Adapt (“Red Bear”) . . . . . . . 14
+Misha . . . . . . . . . . . . . . . . . . . . . . . 14
+Pandora . . . . . . . . . . . . . . . . . . . . . 15
+Problematic Early Designs. . . . . . 15
+Purushagor . . . . . . . . . . . . . . . . . . 16
+Ranger . . . . . . . . . . . . . . . . . . . . . . 16
+Salud . . . . . . . . . . . . . . . . . . . . . . . 16
+Social Engineering Projects. . . . . 16
+The Feasibility of
+the Guardian Project . . . . . . . . 17
+Utopia . . . . . . . . . . . . . . . . . . . . . . 18
+Zhiminde . . . . . . . . . . . . . . . . . . . . 18
+
+Valkyrie . . . . . . . . . . . . . . . . . . . . . 28
+Void Flyer . . . . . . . . . . . . . . . . . . . 28
+Xenocop. . . . . . . . . . . . . . . . . . . . . 28
+
+3. BIOROIDS . . . . . . . . . . 19
+Aquatic Designs. . . . . . . . . . . . . . . 19
+Busr . . . . . . . . . . . . . . . . . . . . . . . . 20
+Chronos . . . . . . . . . . . . . . . . . . . . . 20
+Clarke-1 Vac . . . . . . . . . . . . . . . . . 21
+Bioroids and Gender . . . . . . . . . . . 21
+Europan. . . . . . . . . . . . . . . . . . . . . 22
+Hamlin . . . . . . . . . . . . . . . . . . . . . . 22
+Hecate . . . . . . . . . . . . . . . . . . . . . . 23
+Houri . . . . . . . . . . . . . . . . . . . . . . . 23
+May-I . . . . . . . . . . . . . . . . . . . . . . . 23
+Omokage Labs Slave Designs . . . 23
+Nonhumanoid Bioroids . . . . . . . . 25
+Rodosha. . . . . . . . . . . . . . . . . . . . . 25
+Spartan . . . . . . . . . . . . . . . . . . . . . 26
+Tiaoqi . . . . . . . . . . . . . . . . . . . . . . . 26
+Titan Wrestler . . . . . . . . . . . . . . . . 26
+Triad Pleasure Models . . . . . . . . . 27
+
+4. UPLIFTED ANIMALS . . . 29
+Doolittle Dolphin . . . . . . . . . . . . . 29
+Ganesh . . . . . . . . . . . . . . . . . . . . . . 30
+Monkey Plus . . . . . . . . . . . . . . . . . 30
+Neo-Pinniped. . . . . . . . . . . . . . . . . 30
+Rat King. . . . . . . . . . . . . . . . . . . . . 30
+War-Dop “D-Model” . . . . . . . . . . . 31
+
+INDEX . . . . . . . . . . . . . . 32
+
+About GURPS
+Steve Jackson Games is committed to full support of
+GURPS players. Our address is SJ Games, P.O. Box
+18957, Austin, TX 78760. Please include a self-addressed,
+stamped envelope (SASE) any time you write us!
+We can also be reached by e-mail: info@sjgames.com.
+Resources include:
+New supplements and adventures. GURPS continues to
+grow – see what’s new at gurps.sjgames.com.
+Warehouse 23. Our online store offers GURPS adventures, play aids, and support in PDF form . . . digital copies
+of our books, plus exclusive material available only on
+Warehouse 23! Just head over to warehouse23.com.
+Pyramid (pyramid.sjgames.com). Our monthly PDF
+magazine includes new rules and articles for GURPS, systemless locations, adventures, and much more. Look for
+each themed issue from Warehouse 23!
+
+Internet. Visit us on the World Wide Web at
+sjgames.com for errata, updates, Q&A, and much more.
+To discuss GURPS with our staff and your fellow gamers,
+visit our forums at forums.sjgames.com. The web page
+for Transhuman Space: Bioroid Bazaar can be found at
+gurps.sjgames.com/bioroidbazaar.
+Bibliographies. Many of our books have extensive bibliographies, and we’re putting them online – with links to let
+you buy the resources that interest you! Go to each book’s
+web page and look for the “Bibliography” link.
+Errata. Everyone makes mistakes, including us – but we
+do our best to fix our errors. Up-to-date errata pages for all
+GURPS releases, including this book, are available on our
+website – see above.
+Rules and statistics in this book are specifically for the
+GURPS Basic Set, Fourth Edition. Page references that
+begin with B refer to that book, not this one.
+
+CONTENTS
+
+2
+
+INTRODUCTION
+“GRA?” The snakehead looked ostentatiously unimpressed,
+rolling his shoulders to emphasize his artificial muscle mass.
+“These are international waters. You’ve got no jurisdiction here,
+Euro . . .”
+“I advise you to ask your legal AIs about hot pursuit,” the
+GRA agent interrupted. “The biphibs had you in sight all the
+way from territorial waters. We have adequate jurisdiction, I
+assure you.”
+“Huh.” The snakehead’s eyes defocused for a moment; he was
+trying to hide it, but he had checked. “That’s another thing. Those
+are Seawolfs. Since when did your mob use combat ’roids?”
+“My associates here are U.S. Navy,” the agent answered with
+a cold smile, indicating the slick-skinned special operators who
+were holding PDWs trained on the snakehead and his Xenocopbootleg bodyguard. “We’re always happy to cooperate with local
+law enforcement. Now, shall we talk about your unfortunate
+cargo?”
+“Talk all you like,” the snakehead mustered one more sneer.
+“But don’t tell me that you care about ’roids, Ms. GRA. You of all
+people know that they ain’t human.”
+The agent’s smile slipped. “You’re running Hecates,” she
+snapped. “Believe me, some things can make me care.”
+This supplement covers a small but significant gap that
+had been left in the update of the Transhuman Space line to
+GURPS Fourth Edition. It completes the game-mechanical
+conversion of all the bioroid and parahuman types detailed in
+Third Edition supplements, along with any uplifted animals
+that might reasonably be used as player characters in games.
+Biosapient templates from the main Transhuman Space
+book were converted in Transhuman Space: Changing Times.
+Changing Times also laid down general principles for such
+conversions, but there wasn’t room for everything there. In
+effect, Transhuman Space: Bioroid Bazaar does for biotech
+what Transhuman Space: Shell-Tech did for robotics.
+But that’s not all! Bioroid Bazaar adds some new templates
+and variants, along with the new and modified game features
+required to make all these templates complete. For reasons of
+space, though, templates for some “tool creatures” not really
+suitable for use as PCs had to be left out. They may appear in
+another supplement about biotech in Transhuman Space.
+
+NOMENCLATURE
+In this volume, the series of supplements that defines the
+game world are cited as Transhuman Space (in bold italics).
+The setting itself – the solar system in the year 2100 – is referred
+to as Transhuman Space, without boldface or italics. However,
+campaigns exploring that setting are Transhuman Space campaigns, because they are based on those supplements.
+
+PUBLICATION HISTORY
+As mentioned above, this supplement converts templates
+from numerous Third Edition Transhuman Space books to
+Fourth Edition; see the individual entries for specific origins.
+Some of this conversion was performed already in the new
+
+version of GURPS Bio-Tech for Fourth Edition; some of the
+templates first appeared there, albeit sometimes under different names or in variant forms. However, the versions here are
+designed to remain consistent with the treatments in past
+Transhuman Space books and may include specific features
+related to the types’ situation in society, such as Reputations.
+In addition, some material provided here first appeared in
+Transhuman Space: Personnel Files 2: The Meme Team,
+Transhuman Space: Wings of the Rising Sun, and GURPS
+Power-Ups 2: Perks.
+
+They could speak,
+sing, read, write, work,
+love and die; but they
+were not covered by
+human law, which
+simply defined them as
+“homunculi” and gave
+them a legal status close
+to animals or robots.
+– Cordwainer Smith,
+“The Ballad
+of Lost C’mell”
+ABOUT THE AUTHOR
+Phil Masters is the Transhuman Space Line Editor and the
+author of several previous supplements for the line, including
+Changing Times and Shell-Tech. He is British and has been a
+roleplaying-game writer for over 30 years. He has worked
+with Steve Jackson Games for over 20 years, as well as writing
+for Hero Games, White Wolf, Posthuman Studios, Osprey
+Publishing, and others. His credits also include the Discworld
+Roleplaying Game, which is something else that he’s been
+updating recently. His web site is at www.philm.demon.co.uk.
+He is not genetically modified, so far as he knows. But how
+can you tell?
+
+INTRODUCTION
+
+3
+
+CHAPTER ONE
+
+GAME FEATURES
+Some templates in this volume incorporate exotic features.
+Most work exactly as described in the Basic Set. In other cases,
+the relevant information is in Changing Times, pp. 33-47.
+Some still require a little more explanation.
+Although parahumans and bioroids may have some impressive abilities, keep in mind when designing new templates that
+this is a relatively realistic setting. “Paranormal” advantages
+and abilities that defy the laws of physics (e.g., conservation of
+mass or energy) are unavailable.
+
+MONETARY COSTS
+The cash prices for all preexisting types that appear in this
+supplement have been left as in the original material, for consistency. However, these costs were actually determined
+using methods that related to Third Edition game mechanics.
+A GM using the current version of GURPS Bio-Tech might
+prefer to rely on the calculation methods given on pp. 65-66
+of that book; in these cases, recalculating values should be
+fairly straightforward.
+
+“RACIAL INTERACTION”
+TRAITS
+Some parahumans and bioroids have difficulties dealing
+with other sapient beings. Others are designed to be good at
+the task.
+
+GENOTYPE/MODEL
+APPEARANCE
+Some templates have Appearance ratings, positive or negative. A setting-specific rule applies here: The Appearance modifier represents how typical members of the genotype or
+bioroid design appear to human beings, who are still by far the
+dominant sapients in Transhuman Space. Human genetic
+upgrades count as humans for this and most other purposes.
+The modifier also applies to many parahumans and bioroids
+who are built along human lines and think like humans, at the
+GM’s option. Others of the same genotype or model may partly
+or entirely ignore this “racial” Appearance in their interactions
+with each other, though, because it resembles what they see in
+any mirror – unless they have been thoroughly indoctrinated
+with baseline-human aesthetics. The GM decides for NPCs on
+a case-by-case basis.
+Example: Snow Viper bioroids (p. 20) have Ugly on their templates. Humans see them as weird and slightly sinister, reacting
+to this at -2. However, typical Snow Vipers see each other as
+ordinary, and no Appearance modifiers apply in their interactions. They aren’t taught to think like humans in this respect –
+they’re built as soldiers, and that would be bad for discipline.
+A character with such a template also can vary his Appearance from the template standard by paying (or taking back) the
+difference in points; humans and near-humans then react to
+the character using the changed rating. This may or may not
+
+affect other characters with the same template, depending how
+close the GM decides that it comes to the human baseline. It’s
+usually simplest and fairest to rule that human upgrades,
+parahumans, and most (but not all) humanoid bioroids react
+like baseline humans.
+Completely nonhuman characters (uplifted animals and
+nonhumanoid bioroids) likewise can take a personal Appearance rating, good or bad, to reflect how they look to others of
+their own template-defined type. Alternatively, they can have
+an Appearance that affects both humans and their own species
+by applying the Universal enhancement (p. B21).
+Example 1: By a quirk of the manufacturing process, Corporal White, USMC, is a graceful Snow Viper bioroid with very
+symmetrical features; other Snow Vipers find him Attractive.
+Snow Viper looks are just too far off the human norm for this
+to affect ordinary humans, though. White pays the usual 4
+points for Attractive, and his Snow Viper comrades react to
+him at +1, but humans still react to him at -2.
+Example 2: Monkey Plus uplifts (p. 30) don’t have an Appearance rating on their template; to humans, they just look like
+monkeys. However, one of them, Scruffy, had an accident at
+one point, and his owners are too mean to pay for the resulting scarring to be corrected. Neither humans nor other
+Monkey Plus uplifts find him a pleasant sight, and so he has
+Unattractive (Universal), worth -5 points; everyone reacts to
+him at -1.
+
+Unnatural Features
+see p. B22
+A related rule applies to the Unnatural Features disadvantage. For simplicity, assume that for this purpose, “race” for
+a human upgrade or parahuman always means human.
+
+GAME FEATURES
+
+4
+
+Upgrades and parahumans generally aim to pass in human
+society as more or less human, so very odd features can inconvenience them, and this disadvantage can appear on their
+“racial” templates. However, many aspects that would have
+counted as “unnatural” in earlier eras will just look like interesting cosmetic work in 2100, so it’s rare, and the GM should
+be cautious about adding this to templates! What counts and
+what doesn’t is a case-by-case decision; for example, body-covering fur is widely available through nanovirus treatments as
+
+well as being included in some parahuman templates, and is
+regarded as a sensible lifestyle choice in colder regions, so it
+doesn’t qualify as Unnatural Features.
+Bioroids and uplifted animals, meanwhile, just “look like
+they look.” Unnatural Features can never be part of their
+templates, although individuals may acquire peculiarities
+that qualify.
+
+I know what he says –
+he says that his kids will fit
+better in the big wide world.
+But he’s just trying to please
+that Canadian girlfriend of
+his. No fur! Naked faces!
+It’s disgusting!
+– Overheard in Nuuk,
+Greenland, 2100
+
+A very few parahuman or bioroid designs have Reputations
+applicable to every individual of the type, usually because
+they’ve become notorious for distinctive behavior arising from
+design flaws, or because the people who originally created
+them indoctrinated most of them with peculiar ideas. Where
+people in general assume things about a type because of their
+obvious appearance – such as, for example, sinister-looking
+combat bioroids, which are treated as dangerous killers – treat
+this as a Social Stigma. When not everyone recognizes the type
+or automatically responds in the same way, a Reputation may
+be more appropriate.
+In such cases, a low frequency of recognition may indicate
+that members of the type aren’t always identified; most parahumans and bioroids look much like ordinary humans, after
+all. The effective frequency may go down if an individual
+makes a special effort to “act normal,” or up if he insists on
+making his type obvious in some way. Even then, some people
+simply may not share the common view of the type, so recognition rarely becomes automatic.
+
+GENOTYPE/MODEL
+REPUTATIONS
+
+Pheromone Effects
+Some bioroid and parahuman types in Transhuman
+Space supplements have the Pheromone Control advantage, which in GURPS Third Edition meant that they could
+voluntarily release clouds of powerful sex pheromones,
+causing other people nearby to become attracted to the
+character and subject to the Lecherousness disadvantage.
+Some also have other advantages, representing a similar
+ability to release “dominance pheromones.” However,
+there are realism problems with this.
+First, pheromones simply might not work. In the real
+world, experiments with human pheromones suggest that
+some chemicals may trigger sexual attraction or other
+responses in humans – but the results are debatable, and the
+effects are weak at best. This is not entirely surprising,
+because for vertebrate species that do respond to pheromones, they seem to work largely through the “vomeronasal
+organ” (VNO). This organ appears to be atrophied or inactive in humans (as well as apes and birds). Hence, pheromones that achieve these effects probably would have to be
+specially designed chemicals that modified human neurochemistry by other routes. This might be difficult, even at
+TL10. Of course, simpler pheromones still might work on
+other beings – animals, parahumans, or bioroids with a natural or “reactivated” VNO.
+
+Second, if such powerful “mind control” chemicals
+were available, the fact surely would be widely known.
+Aside from bioroids and parahumans with innate pheromone powers, anyone could carry them in, say, miniature
+aerosols. This in turn would cause other people to
+develop countermeasures, such as custom nanomods,
+nose filters, or chemical detectors to warn of their release.
+The character advantage then would be of limited use,
+although the existence of pheromones might force PCs to
+take yet more precautions against exotic attacks. If, however, the technology existed but had been kept largely
+secret, the advantage might need to be accompanied by
+an Unusual Background – although it would be hard to
+keep the fact from public knowledge if numerous “pleasure model” bioroids had it.
+Hence, given that Transhuman Space aims to be logically coherent, a GM may choose to exclude this advantage
+or downgrade it to something weaker. This in turn means
+that templates designed with the advantage can have different point values, according to the GM’s decision. See
+Meta-Traits (pp. 8-10) for relevant traits, adjustable to fit
+different campaign assumptions, and Pheromone Control
+Options (p. 9) for help in deciding how powerful humaninfluencing pheromones should be.
+
+GAME FEATURES
+
+5
+
+OTHER CHARACTER TRAITS
+Some features relate more to the character’s physiology or
+psychology.
+
+sexual reproduction; it’s a 0-point feature if you can only reproduce this way.
+
+ADVANTAGES AND PERKS
+
+Passing Appearance
+
+Removing a “template advantage” or “template perk” from an
+individual character qualifies as taking a disadvantage, which
+counts against any disadvantage limits for the campaign.
+
+Radiation Tolerance
+see p. B79
+The number listed with any appearance of this advantage is
+the divisor applied to the effective dose of radiation received.
+
+New Perks
+A few new perks are used in templates in this book.
+
+Extreme Sexual Dimorphism
+You have exaggerated male or female sexual attributes. This
+gives +1 to Sex Appeal – but also +1 to others’ attempts to identify you, and -1 to Disguise or Shadowing when trying to
+remain anonymous. You may purchase this perk up to three
+times; both the bonuses and the penalties are cumulative (i.e.,
+Extreme Sexual Dimorphism 3 gives +3 to Sex Appeal and
+attempts at identification, and -3 to Disguise and Shadowing).
+Cosmetic surgery might grant this perk, especially given
+TL10 medical technology. However, opting for such an appearance is widely considered gauche in 2100.
+
+Feathers
+You have feathers. These prevent sunburn and help shed
+water, eliminating up to -2 in penalties for being wet – notably
+for Cold (p. B430).
+
+Bioroids with this perk can pass very easily as human of
+some innocuous or even dominant class. Their designers carefully avoided any of the subtle visual cues that might mark
+them out, including any too-perfect facial symmetry.
+Note that a more general version of this perk appears in
+other supplements.
+
+Scales
+You have scales, like a reptile. This prevents sunburn
+and can also justify purchasing Damage Resistance 1-5
+(p. B46) separately.
+
+DISADVANTAGES AND QUIRKS
+A wide range of “realistic” disadvantages may appear on
+parahuman and bioroid templates. A disadvantage should
+appear on a template only if it applies to at least 50% of all
+characters with that template – and preferably more. Most
+“template disadvantages” are inherent in the character’s genes
+or basic design, although some, such as Reputations (p. 5), are
+related to views of the type held more-or-less universally by the
+public. It is possible to eliminate some template disadvantages,
+at the GM’s option, but this usually requires radical and expensive medical treatments, or the acquisition of an extraordinary
+personal public image.
+If the cost of a disadvantage is followed by a *, then the trait
+requires a self-control number; see pp. B120-121.
+
+Build-Related Disadvantages
+see pp. B18-20
+
+Overweight, Skinny, Dwarfism, etc. always are rated relative
+Parthenogenesis
+to your species’ norm, so none of these disadvantages can appear
+on “racial” templates; particular genotypes and models are just
+Prerequisite: Female.
+“built as they’re built.” Some types have a different Size ModiYou can become pregnant by inducing voluntary horfier, though! Effects on knockback, swimming ability, etc.
+monal changes via biofeedback or by taking a pill. The fetus
+should be represented by variations in ST and, if necessary,
+is effectively your clone. This is only a perk if you can also use
+racial skill bonuses, perks, or quirks. See also Thin Frame, p. 7.
+The Tennin in the original version of
+Changing Times does have Skinny. For
+consistency, replace Skinny with Thin
+Frame, increasing the template value by 4
+points. The same applies to the Wu Tsao
+When converting any bioroid template to a bioshell type, delete any IQ
+and ZR-5 variants. For alternate versions
+or Will modifiers and purely mental advantages or disadvantages, and add
+of the Tennin, see pp. 12-13.
+everything on the standard bioshell template or the intrusion variant
+
+The Bioshell Lens
+
+(Changing Times, p. 59) that isn’t already present. Note that Per modifiers
+may stand; they often reflect good or bad sensory organs rather than brain
+structures. The exact type of Telecommunication hardware installed varies
+from case to case.
+Some bioshell characters have serious Secrets or high-value Social Stigmas, Enemies, etc. However, the details vary considerably between individuals and locations, and many have no such problems.
+
+GAME FEATURES
+
+Compulsive Behavior
+see pp. B128-129
+One new compulsion occasionally
+shows up in Transhuman Space as a side
+effect of attempts to “engineer in” mathematical gifts.
+
+6
+
+Compulsive Counting: You hate approximations when you
+could have exact numbers. Whenever you encounter a largebut-countable set of similar objects, you must take the time to
+get an exact count. If the objects number in the hundreds, you
+may try for a good approximation based on area or volume.
+For a task like loading a gun’s magazine, taking an inventory,
+or just walking down a path with many evenly placed signposts, a failed-self-control roll means you take double the usual
+time without receiving the benefits of Time Spent (p. B346). If
+you are forced to rush, any roll for the task is at -5, as if you had
+taken half the necessary time. This wastes a lot of your time in
+mostly trivial chunks. People who have to work with you but
+who aren’t interested in precision may come to react to you
+at -1 or worse. -5 points.*
+
+Gullibility
+see p. B137
+Few templates for human variants or bioroids have Gullibility, but that doesn’t mean it isn’t a problem for some bioengineered characters. Young bioroids, not yet fully trained
+and socialized, are often very gullible; their brains are designed
+to be accepting. One who is intended to receive a lot of skill and
+socialization training after “decanting” may come out of the
+vats with this disadvantage with a self-control number of 6.
+Responsible trainers and supervisory AIs ensure that the problem is first reduced and then eliminated before the new
+bioroid has to deal with the world unaided, but Gullibility is
+almost always a plausible disadvantage for a bioroid character.
+
+Short Arms
+-10 points
+This “disadvantage” represents the points regained by
+applying the Short limitation from Extra Arms (p. B53) to the
+normal two arms possessed by most characters. Creatures
+with SM -1 or smaller tend to have this disadvantage almost
+automatically, as they simply cannot have as much reach as a
+human-sized character.
+
+Short Legs
+-2 points
+Creatures with the Quadruped meta-trait have no arms but
+can kick and can use their front legs for very limited manipulation. However, some of them can only do so at Reach C, if only
+because they are small. Hence, they can have this disadvantage,
+which is equivalent to applying a Short limitation worth -50% to
+the Extra Legs advantage that is part of Quadruped.
+Creatures without Quadruped but with Horizontal and
+Shorts Arms should also be assumed to have short legs, but do
+not get any more points for it.
+
+New Quirks
+Two new quirks are required for templates in this
+supplement.
+
+Cannot Jump
+Your leg structures just don’t permit any kind of useful jumping action. You are limited to stepping over gaps
+and obstacles.
+
+Bioroid IQ
+Transhuman Space biotechnology permits a certain
+amount of intelligence enhancement, through genetic
+engineering, nanotech neural modification, and even
+gross surgical augmentation. However, few bioroid models have IQ levels much above the human average. Even
+given that GURPS “IQ” isn’t quite the same thing as realworld “intelligence,” this may seem odd, but there are
+good reasons, some technological and some legal.
+One obvious factor is that politicians – or rather the
+public who they have to keep appeased – don’t particularly
+want to be superseded mentally or physically by vatgrown artificial people. Thus, a lot of bioroid industry regulation incorporates subtle but pervasive limitations on
+intelligence enhancement, mostly in the fine print. In this
+respect at least, public opinion may have some strong
+moral arguments behind it.
+High intelligence is all very well, but tinkering with
+brain structures – particularly the structures of fast-grown
+bioroid brains – is prone to unforeseen consequences. Piling on neural tissue and in vitro conditioning for mental
+focus without restraint eventually produces bioroids (or
+whatever) who are crazy – and crazy in a creepy way, not
+in a cuddly, geeky way. Engineers who try to construct
+high-intelligence bioroids don’t create lines of well-balanced manager-intellectuals or bright-eyed researchers;
+they produce rooms full of drool-flecked idiots savants and
+hyper-neurotic human computers. At best, these beings
+are very bad for the “bioroids are your friendly, happily
+subservient meat robot buddies” memetic campaigns; at
+worst, some of them have pursued deranged obsessions,
+subverted computer systems, and more than once,
+crashed organizations they were supposed to be empowering by attempting to transform them into posthuman
+think tanks that speak to God.
+However, some managers will be tempted by the
+chimerical vision of a (real-world) IQ 165 willing serf
+and chafe at those rules, and criminal groups such as the
+Martian Triads are willing to service such demands. By
+some assessments, illegal attempts to produce “superbrights” have been worse for the image of the bioroid
+industry than all the sex toys put together; InVid footage
+of macrocephalic midgets with bloodshot eyes and a tendency to talk in numbers really do play very badly with
+the public. The legitimate industry has largely given up
+fighting those regulations.
+Nevertheless, a bioroid character could have raised
+IQ. Some individuals enjoy serendipitous combinations
+of brain structure, training, and real-world experience,
+and turn out impressively bright. But not many are built
+that way.
+
+Thin Frame
+Your species/genotype has a build that would count as
+Skinny if you were a baseline human. Your weight is around
+2/3 that of a typical human of your ST, and you have -2 to ST
+when you resist knockback.
+
+GAME FEATURES
+
+7
+
+I had worked hard for nearly two years, for the sole
+purpose of infusing life into an inanimate body. For this
+I had deprived myself of rest and health. I had desired it
+with an ardor that far exceeded moderation; but now
+that I had finished, the beauty of the dream vanished,
+and breathless horror and disgust filled my heart.
+– Mary Shelley, Frankenstein
+
+FEATURES
+A few zero-point features used in the templates merit
+discussion.
+Reflective Eyes: Sight organs resembling those of a cat have
+been engineered into some parahumans and bioroids, usually
+as part of the process of giving them good night vision.
+(Uplifted cats have them, too!) Very occasionally, these eyes
+might give away someone who is trying to be stealthy, but
+mostly, they just look striking or startling. Humans can get
+something similar as a biomod (Fisheyes; see Changing Times,
+p. 65). With humans, this trait counts as a minor Unnatural
+Feature, but it’s not unnatural for a parahuman or bioroid
+where it’s part of the standard design.
+Taboo Traits (Aggressiveness): The character cannot have
+Bad Temper, Berserk, Bloodlust, Bully, or Stubbornness. The
+optional rule in Changing Times, p. 43, permitting such mental disadvantages with a self-control number of 15 can apply
+here, although Berserk is highly unlikely.
+Taboo Trait (Fixed IQ): Normally, this is found on uplifted
+animal templates (and is already included in the Domestic
+Animal meta-trait on p. B263). This feature indicates a
+species whose brains and minds lack the degree of variability
+found in humans, with the result that they cannot justify a
+personal GURPS IQ score that differs from the racial average
+by as much as a full level. Hence, their IQ cannot be bought
+up from the level defined by the species template, and is likely
+to fall below that level only in the case of young or brain-damaged specimens. Optionally, in cinematic games, a few members of the species can buy their IQ up by +1, to represent
+amazingly bright animal companions or frighteningly capable individual predators.
+Taboo Trait (Unattractiveness): The character cannot have
+an Appearance rating of less than Average, unless this can
+be explained as the result of accident or disease, and there
+is a very good reason why this damage hasn’t been corrected
+medically.
+Unaffected by SAD: Many genotypes and bioroids intended
+for use in radically unusual environments have the human
+
+tendency to suffer Seasonal Affective Disorder (see
+Transhuman Space: Under Pressure, p. 54) edited out of
+their brains. Those for which this is a well-known design feature may have this noted.
+In addition, some templates have other features – such as
+peculiarities of their reproductive functions or very distinctive
+visible attributes – listed for ease of reference or casual interest.
+
+META-TRAITS
+Some features that may be engineered into genotypes or
+bioroids are represented by bundles of advantages, disadvantages, etc. that are treated as meta-traits.
+
+Active VNO
+-4 points
+You have a functioning vomeronasal organ (see Pheromone
+Effects, p. 5), with direct connections to your nervous system.
+This renders you highly susceptible to pheromonal influence.
+In game terms, it gives Susceptible 4 (Pheromones) [-4] and a
+feature, “Responds strongly to dominance pheromones,”
+which means that, for example, an NPC with this trait reacts at
+an additional +3 to anyone using such pheromones. A PC with
+the trait should roleplay being very impressed in the same situation, at the very least.
+In addition to responding strongly to large doses of
+pheromones, you may react more subtly but still positively to
+chemicals released naturally by other people, reinforcing
+social bonds. Hence, this meta-trait is often accompanied by
+the Congenial quirk or the disadvantages Chummy or Gregarious, but this is not mandatory.
+This trait is unavailable in a campaign with the “No
+Pheromones” option (p. 9) applied. Even if it is available, it
+usually will be found only in parahumans or bioroids
+designed as servants or as part of some large-scale social engineering project. Because the relevant genes have to come from
+a nonhuman species, or be entirely artificial, the result is
+always a parahuman or bioroid, not simply a human upgrade.
+
+GAME FEATURES
+
+8
+
+The meta-trait might also be given to anyone as a nanomod or
+even by the use of a proteus nanovirus, but this would be rare
+at best, as few people are likely to voluntarily render themselves (or their children) more vulnerable to chemical control.
+Still, it might be promoted as part of a radical idealist “community reinforcement” project.
+
+Perfume Glands
+6 points
+You have special glands that enable you to switch at will
+between natural body odor; an effective personal deodorant;
+and a perfume that is powerfully but subtly appealing to the
+widest possible range of humans and near-humans (possibly
+the nearest thing to “sex pheromones” in some games – see
+Pheromone Control Options, below). By switching scents, you
+can mask yourself to a limited extent against beings or
+devices that could identify or track you by scent. This gives
+you Obscure 1 (Smell) [2] and a +2 “racial” bonus to Sex
+Appeal skill (Scent-Based, -20%) [4]. However, any choice
+lingers for several minutes.
+Incidentally, it is possible to achieve a similar bonus to
+Sex Appeal, temporarily, by careful choice and use of expensive perfumes; that is covered by generic rules for extra time
+for skill use, high-quality equipment, and so on. Likewise, it’s
+possible to emulate the Obscure effect by careful use of hightech deodorants. If you rely on this meta-trait, you can’t claim
+a double bonus by also using purchased scents, although
+other preparation (such as good choice of clothes when using
+Sex Appeal) continues to provide bonuses. The benefit of the
+
+meta-trait is that it allows the character to create these effects
+at will, with no preparation time or cash expense.
+Note: No templates in this supplement have this metatrait. However, it would certainly be within the capabilities
+of biotechnology in 2100, as either an engineered feature or a
+biomod. It also makes a good replacement for Pheromone
+Control (below) if the GM decides that is unavailable.
+
+Pheromone Control
+Varies
+These meta-traits represent the ability to voluntarily release
+synthetic pseudo-pheromones to influence the behavior of people who inhale them (see Pheromone Effects, p. 5). These chemicals probably are related to or stimulate the production of the
+hormone oxytocin (as that is involved in the process of sexual
+pair-bonding and is associated with enhanced levels of trust
+and emotional receptiveness) or axillary steroids (which,
+among other effects, trigger low-level sexual arousal). Possible
+types of pheromone include Dominance (which works
+through the target’s pleasure/reward responses and parts of
+the brain that deal with social interactions, increasing his
+desire to interact with and defer to the user), Sex (for seduction effects), and Trust (which creates an amplified version
+of the effects of oxytocin, increasing willingness to believe
+anything the victim hears). Hence, multiple meta-traits may
+be available, and the power of each is determined by the
+game’s Pheromone Control Options (below) and their related
+game mechanics (p. 10).
+
+Pheromone Control Options
+As explained in Pheromone Effects (p. 5), the GM can
+decide how powerful human-influencing pheromones are
+in any Transhuman Space campaign, which in turn determines the nature and point cost of various meta-traits.
+There are several options.
+No Pheromones: Despite the best efforts of biotechnologists, it has proven impossible to control human psychology this way. Stories to the contrary are paranoid myths.
+At best, bioroid designs or biomods may produce pleasant
+perfumes. Delete the Active VNO and Pheromone Control
+meta-traits from all templates that have them, and adjust
+costs accordingly. (The latter might be replaced with Perfume Glands, above.) Any types whose intended function
+depends on these features are mythical.
+Susceptible Targets Only: The only beings susceptible to
+pheromone effects are those with an Active VNO (pp. 8-9),
+although they are usually highly susceptible. Both Active
+VNO and Pheromone Control (above) are LC1, as are any
+pheromone-based technologies that affect characters with
+the former meta-trait.
+Limited Pheromones: Pheromones (often synthetic
+chemicals closely based on natural human chemistry) have
+significant-but-mild effects on normal humans, and most
+parahumans and bioroids, if enough gets into their lungs.
+
+Targets with an Active VNO are highly susceptible. Pheromone Control and human-pheromone-based technologies
+are LC3; Active VNO is LC1.
+Moderate Pheromones: Synthetic pheromones work
+quite well on contact with the olfactory system, and an
+Active VNO makes characters very susceptible. Business
+negotiators and diplomats often wear discrete nose-plugs,
+and most conference rooms have automated chemsniffers
+installed. Use of pheromones without the target’s consent
+may be classed as assault. Active VNO, Pheromone Control, and pheromone-based technologies are LC2, or LC1 in
+societies with high regard for privacy or a tendency to
+moral panics.
+Strong Pheromones: As “Moderate Pheromones,” but the
+effects can seem tantamount to mind control. People get
+paranoid on the subject, and there probably have been some
+dramatic abuses that justify this. Active VNO, Pheromone
+Control, and pheromone-based technologies are at best LC1,
+and incidents may lead to them being declared LC0.
+The templates in this supplement are evaluated assuming the “Moderate Pheromones” option. However, a
+weaker option may be more plausible, while “Strong
+Pheromones” are more cinematic. See the notes in the
+relevant templates.
+
+GAME FEATURES
+
+9
+
+Some of the abilities below have the Scent-Based modifier,
+and some have Respiratory Agent. The difference is that ScentBased effects work with just a little contact with the target’s
+palate; extensive filtering is
+needed to stop them, and holding
+your breath typically won’t work.
+Respiratory Agents have to get
+into the target’s lungs, in reasonable quantities; holding your
+breath may defeat them for at
+least a couple of seconds, and
+Lung Cleaner nanosymbionts
+usually stop them completely.
+
+Respiratory Agent, +50%) [18] + Charisma 2 (Accessibility,
+Only on those with Active VNO, -70%; Scent-Based, -20%)
+[2]. 20 points.
+As a special effect, if Sex or
+Trust pheromones are successfully
+used on someone who already has
+the relevant disadvantage with selfcontrol 12 or 15, reduce the selfcontrol number one level (i.e., to 9
+or 12 respectively).
+
+Moderate Pheromones
+Pheromone Control (Dominance): Charisma 2 (Accessibility,
+Only on those with near-human
+biochemistry,
+-5%;
+ScentBased, -20%) [8]. 8 points.
+Pheromone Control (Sex): Affliction 1 (HT; Accessibility, Only on
+those attracted to your gender, -20%; Accessibility, Only on
+those with near-human biochemistry, -5%; Area Effect 1, +50%; Disadvantage, Lecherousness (12),
++15%; Emanation, -20%; ScentBased, +150%) [27]. 27 points.
+Pheromone Control (Trust):
+Affliction 1 (HT; Accessibility,
+Only on those with near-human
+biochemistry, -5%; Area Effect 1,
++50%; Disadvantage, Gullibility
+(12), +10%; Emanation, -20%;
+Scent-Based, +150%) [29]. 29
+points.
+
+No Pheromones
+No Pheromone Control is
+available. Perfume Glands (p. 9)
+may replace the meta-traits on
+individual templates.
+
+Susceptible Targets Only
+Pheromone Control (Dominance): Charisma 2 (Accessibility, Only on those with Active
+VNO, -70%; Scent-Based, -20%)
+[2]. 2 points.
+Pheromone Control (Sex):
+Affliction 1 (HT; Accessibility,
+Only on those with Active
+VNO, -70%; Area Effect 1, +50%;
+Disadvantage, Lecherousness (9),
++22%; Emanation, -20%; ScentBased, +150%) [24]. 24 points.
+Pheromone Control (Trust):
+Affliction 1 (HT; Accessibility,
+Only on those with Active
+VNO, -70%; Area Effect 1, +50%;
+Disadvantage, Gullibility (9),
++15%; Emanation, -20%; ScentBased, +150%) [23]. 23 points.
+
+As a special effect, if Sex or
+Trust pheromones are successfully
+used on someone who already has
+the relevant disadvantage with selfcontrol 9 or 12, reduce the self-control number one level (i.e., to 6 or 9
+respectively).
+
+Limited Pheromones
+Pheromone Control (Dominance): Charisma 1 (Accessibility, Only on those with
+near-human biochemistry, -5%;
+Scent-Based, -20%) [4] + Charisma 2 (Accessibility, Only on
+those with Active VNO, -70%;
+Scent-Based, -20%) [2]. 6 points.
+Pheromone Control (Sex):
+Affliction 1 (HT; Accessibility, Only on those attracted to your
+gender, -20%; Accessibility, Only on those with near-human
+biochemistry, -5%; Area Effect 1, +50%; Disadvantage, Lecherousness (15), +7%; Emanation, -20%; Respiratory Agent,
++50%) [17], and +3 “racial” bonus to Sex Appeal skill (Accessibility, Only on those with Active VNO, -70%; ScentBased, -20%) [2]. 19 points.
+Pheromone Control (Trust): Affliction 1 (HT; Accessibility,
+Only on those with near-human biochemistry, -5%; Area Effect
+1, +50%; Disadvantage, Gullibility (15), +5%; Emanation, -20%;
+
+Strong Pheromones
+Pheromone Control (Dominance): Charisma 4 (Accessibility,
+Only on those with nearhuman biochemistry, -5%; ScentBased, -20%) [15]. 15 points.
+Pheromone Control (Sex):
+Affliction 4 (HT-3; Accessibility,
+Only on those with near-human biochemistry, -5%; Area
+Effect 2, +100%; Disadvantage, Lecherousness (9), +22%;
+Emanation, -20%; Scent-Based, +150%) [139]. 139 points.
+Pheromone Control (Trust): Affliction 4 (HT-3; Accessibility,
+Only on those with near-human biochemistry, -5%; Area Effect
+2, +100%; Disadvantage, Gullibility (9), +15%; Emanation, -20%; Scent-Based, +150%) [136]. 136 points.
+As a special effect, if Sex or Trust pheromones are successfully used on someone who already has the relevant disadvantage with self-control 9, reduce the self-control number to 6.
+
+GAME FEATURES
+
+10
+
+CHAPTER TWO
+
+HUMAN
+
+UPGRADES AND
+PARAHUMANS
+The exact definition of “parahuman” is occasionally disputed in Transhuman Space, but the usual working definition
+is a new human-derived being not naturally interfertile with
+normal unmodified humans. This usually implies the presence
+of completely new genetic sequences, or configurations that
+result in an automatic mismatch when such a couple tries to
+have children. This makes parahumans members of a different
+species from Homo sapiens by most biologists’ definitions.
+“Upgrades,” meanwhile, are simply “tweaked” humans, fully
+interfertile with unmodified humanity.
+Even so, borderline cases exist. Some genetic templates
+using unusual but not completely synthetic sequences merely
+make interfertility highly unlikely, or lead to technically viable
+but somehow disabled offspring. For that matter, some
+unmodified human couples find that they have problems having children together due to some kind of genetic incompatibility. Definitions of “species” are debatable, too.
+
+Once out of nature I shall
+never take
+My bodily form from any
+natural thing . . .
+– W.B. Yeats, “Sailing to
+Byzantium”
+
+ARCTIC AQUAMORPH
+see Under Pressure, p. 94; 58 points
+A cold-adapted version of the Aquamorph (Changing
+Times, p. 48, and Transhuman Space, p. 116), uncomfortable
+outside the Arctic or Antarctic; the upper limit of their temperature comfort zone is always 80° F.
+
+Attribute Modifiers: ST+1 [10]; HT+2 [20].
+Secondary Characteristic Modifiers: Basic Move-1 [-5]; Basic
+Move-1 (Ground Only, -60%) [-2].
+Advantages: Amphibious [10]; Doesn’t Breathe (Oxygen Storage ¥50, -40%) [12]; Nictitating Membrane 1 [1]; Pressure
+Support 1 [5]; Resistant to Disease (+8) [5]; Temperature
+Tolerance 2 [2].
+Features: Aquatic Adaptations (very thick mottled or black
+skin; webbed fingers and toes).
+Date: 2078.
+Cost: $176,000.
+
+ARIADNE
+see Fifth Wave, p. 116; 52 points
+A female-only parahuman design, created by a radical
+feminist group as a first step toward removing the need for
+men entirely.
+Attribute Modifiers: IQ+1 [20]; HT+1 [10].
+Advantages: Attractive [4]; Combat Reflexes [15]; Longevity
+[2]; Resistant to Disease (+8) [5].
+Perks: Reproductive Control; Sanitized Metabolism. [2]
+Disadvantages: Overconfidence (12) [-5]; Reputation -1 (Weird
+man-hating genetic oddity; Almost Everyone; 7 or less) [-1].
+Features: Female-only births; No Appendix; Strong predisposition toward homosexuality; Taboo Traits (Genetic Defects).
+Date: 2066.
+Cost: $97,000.
+
+Variations
+Ariadne II: Add Early Maturation 1 [0], Extended Lifespan
+1 [2], Parthenogenesis (p. 6) [1], and Versatile [5]. 60 points.
+(2086, $112,000.)
+
+AVATARS
+see Fifth Wave, p. 117
+A parahuman design intended to resolve conflicts
+between the sexes by emphasizing the perceived differences,
+ensuring that members of each sex are well-adapted for
+their “natural” roles.
+
+HUMAN UPGRADES AND PARAHUMANS
+
+11
+
+Avatar (Female)
+64 points
+
+Sense (Sonar; Reduced Range 1/2, -10%) [18]; Sharp Claws
+[5]; Sharp Teeth [1]; Ultrahearing [5].
+Perks: Fur; No Degeneration in Zero-G. [2]
+Disadvantages: Unnatural Features 5 (Bat-like face and wings)
+[-5]; Unusual Biochemistry [-5]; Vulnerability (Crushing ¥2)
+[-30].
+Quirks: Thin Frame (p. 7). [-1]
+Features: Early Maturation 1; Taboo Traits (Genetic Defects).
+Date: 2077.
+Cost: $167,000.
+
+Attribute Modifiers: DX+1 [20]; HT+2 [20].
+Advantages: Beautiful [12]; Resistant to Disease (+8) [5]; Voice
+[10].
+Perks: Extreme Sexual Dimorphism 2 (p. 6). [2]
+Disadvantages: Shyness (Mild) [-5].
+Features: Taboo Traits (Aggressiveness, p. 8; Genetic Defects;
+Mental Instability).
+Date: 2061.
+Cost: $127,000.
+
+Notes and Variations
+
+Avatar (Male)
+
+Chiroptians are physically light, with hollow bones; one will
+weigh about half as much as a typical human of the same height.
+
+73 points
+Attribute Modifiers: ST+2 [20]; HT+2 [20].
+Secondary Characteristic Modifiers: Per +2 [10].
+Advantages: Handsome [12]; High Pain Threshold [10]; Resistant to Disease (+8) [5].
+Perks: Extreme Sexual Dimorphism 2 (p. 6). [2]
+Disadvantages: Overconfidence (12) [-5].
+Quirks: Proud. [-1]
+Features: Taboo Traits (Genetic Defects; Mental Instability).
+Date: 2061.
+Cost: $127,000.
+
+BROWNIE
+see Fifth Wave, p. 115; 15 points
+
+Camazotz: An earlier, experimental “bat-parahuman,” primarily intended as proof of concept for a being that could live
+on some possible extrasolar planets; much material from the
+Camazotz program was reused in the Chiroptian. Few of this
+type were ever born, and fewer achieved adulthood, but some
+are still around. Delete Doesn’t Breathe, Extended Lifespan,
+Extra Arms, Immunity to Disease, Longevity, Radiation Tolerance, No Degeneration in Zero-G, and both Features from the
+Chiroptian. The Camazotz was slightly less strong on average,
+and needed slightly lower gravity to fly (actually 0.3 G, a -35%
+limitation), but neither makes a point cost difference. 23
+points. (2071, $123,000.)
+
+DRYLANDER
+see Fifth Wave, p. 114; 34 points
+
+An early type, optimized for health and durability by
+redesigning the gross structure of the human body at the cost
+of an odd appearance.
+
+A parahuman specifically adapted to life in arid regions
+of Earth.
+
+Attribute Modifiers: ST-1 [-10]; HT+2 [20].
+Secondary Characteristic Modifiers: Basic Move-1 [-5].
+Advantages: Acute Hearing 2 [4]; Acute Vision 1 [2]; Catfall
+[10]; Resistant to Disease +8 [5]; Longevity [2].
+Perks: No Degeneration in Zero-G. [1]
+Disadvantages: Disturbing Voice [-10]; Unattractive [-4].
+Features: Taboo Traits (Genetic Defects; Mental Instability).
+Date: 2055.
+Cost: $44,000.
+
+Attribute Modifiers: ST-1 [-10]; DX+1 [20].
+Advantages: Filter Lungs [5]; Nictitating Membrane 1 [1];
+Night Vision 5 [5]; Reduced Consumption 1 [2]; Resistant to
+Poison (+3) [5]; Temperature Tolerance 5 [5].
+Perks: Scales (p. 6). [1]
+Features: Reflective Eyes (p. 8); Taboo Traits (Genetic Defects;
+Mental Instability).
+Date: 2077.
+Cost: $85,000.
+
+CHIROPTIAN
+
+FREEFALL DESIGNS
+
+see High Frontier, p. 78; 67 points
+A type originally created in response to wildly optimistic
+projections regarding Martian terraforming. Bat genes give
+them a number of radically nonhuman features, including
+wing membranes that enable them to fly given a combination
+of low gravity and an Earth-like atmosphere. Some now live in
+domed communities on Titan or in larger space colonies, but
+many remain in the “Flying Dome” in Luna City.
+Attribute Modifiers: ST-1 [-10]; DX+1 [20].
+Advantages: 3D Spatial Sense [10]; Acute Hearing 2 [4]; Acute
+Taste and Smell 1 [2]; Doesn’t Breathe (Oxygen Storage
+¥25, -50%) [10]; Extended Lifespan 1 [2]; Extra Arms 2
+(Foot Manipulators, -30%) [14]; Flight (Requires Low Gravity, 0.35 G, -30%; Temporary Disadvantage, No Fine Manipulators, -30%; Winged, -25%) [8]; Immunity to Disease [10];
+Longevity [2]; Radiation Tolerance 2 (p. 6) [5]; Scanning
+
+The Tennin (Changing Times, p. 49) represents the current
+standard for zero-G-oriented parahumanity. That and a few
+other, effectively indistinguishable designs are good enough
+for many spacer parents. However, some variants and more
+ambitious designs do exist.
+
+Kumo
+see Deep Beyond, p. 113; 19 points
+A radical development of Tennin anatomy, replacing legs
+entirely with arms.
+Attribute Modifiers: ST-2 [-20].
+Secondary Characteristic Modifiers: Basic Move-2 [-10].
+Advantages: 3D Spatial Sense [10]; Attractive [4]; Extra Arms
+2 (Foot Manipulators, -30%) [14]; Longevity [2]; Radiation
+Tolerance 5 (p. 6) [10]; Resistant to Disease (+8) [5].
+
+HUMAN UPGRADES AND PARAHUMANS
+
+12
+
+Perks: No Degeneration in Zero-G. [1]
+Quirks: Thin Frame (p. 7). [-1]
+Features: Home gravity of 0 G; Taboo Traits (Genetic Defects).
+Racial Skills: Free Fall (A) DX+1 [4].
+Date: 2082.
+Cost: $70,000.
+
+Proto-Tennin
+see Deep Beyond, p. 112; 4 points
+The earliest attempt at a microgravity-adapted design, without some of the Tennin’s advanced features.
+Attribute Modifiers: ST-1 [-10]; HT-1 [-10].
+Advantages: 3D Spatial Sense [10]; Radiation Tolerance 2
+(p. 6) [5]; Resistant to Disease (+8) [5].
+Perks: No Degeneration in Zero-G. [1]
+Quirks: Thin Frame (p. 7). [-1]
+Features: Home gravity of 0 G.
+Racial Skills: Free Fall (A) DX+1 [4].
+Date: 2050.
+Cost: $54,000.
+
+Tennin III
+see Deep Beyond, p. 115; 72 points
+An advanced Tennin development with modifications for
+creative intelligence, but with some health problems.
+Attribute Modifiers: ST-1 [-10]; IQ+2 [40]; HT-1 [-10].
+Advantages: 3D Spatial Sense [10]; Attractive [4]; Extra Arms
+2 (Foot Manipulators, -30%; Short, -50%) [4]; Immunity to
+Disease [10]; Less Sleep 1 [2]; Longevity [2]; Radiation Tolerance 5 (p. 6) [10]; Versatile [5].
+Perks: No Degeneration in Zero-G; Reproductive Control. [2]
+Quirks: Thin Frame (p. 7). [-1]
+Features: Home gravity of 0 G; No Appendix; Taboo Traits
+(Genetic Defects).
+Racial Skills: Free Fall (A) DX+1 [4].
+Date: 2085.
+Cost: $109,000.
+
+Variations
+Untreated Tennin III: If for some reason a Tennin III hasn’t
+received appropriate nanotherapy, preferably in childhood,
+add Epilepsy [-30], reducing the template value to 42 points.
+
+HAN ALPHA VARIANT
+see In the Well, p. 85; 21 points
+A common upgrade among ethnic Han Chinese anywhere,
+and by far the single most common type among the Chinese
+population on Mars. It is so widespread that it is considered
+totally unremarkable in that population, and it is the basis for
+many bioroid and parahuman designs on that planet.
+Attribute Modifiers: HT+1 [10].
+Advantages: Attractive [4]; Longevity [2]; Resistant to Disease
+(+8) [5].
+Features: Traits (Genetic Defects, Mental Instability); Women
+have light menses and easy childbirth.
+Date: 2055.
+Cost: $40,000.
+
+Notes
+Many Martian Han Alphas have an Andraste biomod
+(Transhuman Space, p. 161, and Changing Times, p. 64). However, the Mars-Adapted meta-trait (Transhuman Space, p. 131,
+and Changing Times, p. 43) isn’t included in the genotype.
+
+Tennin II (“Anu”)
+see Deep Beyond, p. 113; 72 points
+
+HERAKLES
+
+A “next generation” Tennin with “ideal parahuman” features.
+
+see Fifth Wave, p. 116; 192 points
+
+Attribute Modifiers: ST-1 [-10]; IQ+1 [20]; HT+1 [10].
+Advantages: 3D Spatial Sense [10]; Attractive [4]; Extra Arms
+2 (Foot Manipulators, -30%; Short, -50%) [4]; Immunity to
+Disease [10]; Less Sleep 1 [2]; Longevity [2]; Radiation Tolerance 5 (p. 6) [10]; Rapid Healing [5].
+Perks: No Degeneration in Zero-G; Reproductive Control. [2]
+Quirks: Thin Frame (p. 7). [-1]
+Features: Home gravity of 0 G; No Appendix; Taboo Traits
+(Genetic Defects; Mental Instability).
+Racial Skills: Free Fall (A) DX+1 [4].
+Date: 2079.
+Cost: $114,000.
+
+A recent Homo superior design, pushing the limits of available genetic technology, possibly too far.
+Attribute Modifiers: ST+3 [30]; DX+4 [80]; IQ+2 [40]; HT+4
+[40].
+Advantages: Attractive [4]; Extended Lifespan 1 [2]; Less Sleep
+4 [8]; Longevity [2]; Rapid Healing [5]; Resistant to Disease
+(+8) [5]; Resistant to Poison (+3) [5].
+Perks: Reproductive Control; Sanitized Metabolism. [2]
+Disadvantages: Bad Temper (12) [-10]; Increased Consumption 1 [-10]; Overconfidence (12) [-5]; Unusual Biochemistry [-5].
+Quirks: Proud. [-1]
+
+HUMAN UPGRADES AND PARAHUMANS
+
+13
+
+Features: Early Maturation 1; No Appendix; Taboo Traits
+(Genetic Defects; Mental Instability).
+Date: 2086.
+Cost: $221,000.
+
+Features: Early Maturation 1; Strong tendency to homosexuality; Taboo Traits (Genetic Defects).
+Date: 2075.
+Cost: N/A.
+
+Notes
+The GURPS Third Edition version of the Herakles had complete Immunity to Disease and Poison. This has been downgraded to Resistant here because that seems more plausible –
+the template is beyond the limits that GURPS Bio-Tech considers reasonable for TL10 as it is. However, a GM who prefers full
+consistency between editions is welcome to restore these advantages to higher levels. Conversely, one who wishes to emphasize
+that this design really pushes the limits of what Transhuman
+Space science can accomplish can simply delete the Taboo
+Traits – and then take full advantage of what this permits, producing 14-year-old near-superhumans who are also a mass of
+psychological problems and subtle genetic malfunctions.
+Designs this radical are usually treated as at least LC3. Only
+carefully regulated clinics and doctors can offer them.
+
+KOUROS
+
+Cheap editions of great books
+may be delightful, but cheap editions
+of great men are absolutely detestable.
+– Oscar Wilde,
+“The True Function
+and Value of Criticism”
+
+MAHATMA
+see Fifth Wave, p. 119; 42 points
+
+see Fifth Wave, p. 118; 40 points
+A radical hermaphrodite design, intended as an escape
+from archaic conflicts over gender roles.
+Attribute Modifiers: IQ+1 [20]; HT+1 [10].
+Advantages: Hermaphromorph (Preparation Required, 1
+minute, -20%) [4]; Language Talent [10]; Longevity [2];
+Resistant to Disease (+8) [5]; Versatile [5].
+Perks: Reproductive Control; Sanitized Metabolism. [2]
+Disadvantages: Combat Paralysis [-15]; Unnatural Features 2
+(Highly distinctive asexual appearance) [-2].
+Quirks: Attentive. [-1]
+Features: No Appendix; Taboo Traits (Aggressiveness, p. 8;
+Genetic Defects; Mental Instability).
+Date: 2082.
+Cost: $82,000.
+
+MACLARREN CLONE
+see High Frontier, p. 109; 103 points
+Hiroshi MacLarren is a billionaire whose parents had a
+parahuman design custom-made for their child. He has since
+had himself cloned thousands of times.
+No wealth-related advantages have been included in this
+template, because wealth isn’t actually part of the type’s genetics. Nonetheless, virtually all MacLarren clones have the
+Wealth advantage (usually at the Wealthy level), with several
+levels of Independent Income.
+Attribute Modifiers: ST-1 [-10]; DX+2 [40]; IQ+3 [60]; HT+1 [10].
+Advantages: Attractive [4]; Eidetic Memory [5]; Extended
+Lifespan 1 [2]; Lightning Calculator [2]; Longevity [2];
+Mathematical Ability 1 [10]; Rapid Healing [5]; Resistant to
+Disease (+8) [5]; Versatile [5].
+Disadvantages: Compulsive Counting (12) (p. 7) [-5]; Insomniac (Mild) [-10]; Low Pain Threshold [-10]; Unusual Biochemistry [-5]; Weakness (Airborne pollen; 1d/5 minutes;
+Fatigue Only, -50%) [-5].
+Quirks: Alcohol Intolerance; Attentive. [-2]
+
+An early radical upgrade design, with an intentional penchant for religious experiences.
+Attribute Modifiers: DX+1 [20]; HT+1 [10].
+Advantages: Attractive [4]; Fearlessness 2 [4]; Resistant to Disease (+8) [5].
+Perks: Autotrance. [1]
+Quirks: Attentive; Rarely Shows Excitement. [-2]
+Features: Taboo Traits (Genetic Defects).
+Date: 2057.
+Cost: $64,000.
+
+MARS ADAPT (“RED BEAR”)
+see In the Well, p. 85; 38 points
+A parahuman optimized to survive on the surface of Mars
+with minimal technological support.
+Attribute Modifiers: HT+1 [10].
+Secondary Characteristic Modifiers: HP+1 [2]; FP+2 [6];
+Basic Move-1 [-5].
+Advantages: Damage Resistance 2 (Flexible, -20%) [8]; MarsAdapted [9]; Nictitating Membrane 1 [1]; Reduced Consumption 2 (Water Only, -50%) [2]; Temperature Tolerance
+4 [4].
+Perks: Fur. [1]
+Features: Home gravity of 0.38 G; Taboo Traits (Genetic
+Defects).
+Date: 2082.
+Cost: $156,000.
+
+MISHA
+see Fifth Wave, p. 115; 25 points
+An “econiche” parahuman design adapted to arctic conditions, borrowing ursid genetics.
+Attribute Modifiers: ST+1 [10]; HT+1 [10].
+Secondary Characteristic Modifiers: Basic Move-1 [-5].
+
+HUMAN UPGRADES AND PARAHUMANS
+
+14
+
+Advantages: Damage Resistance 1 (Flexible, -20%) [4]; Metabolism Control 2 (Hibernation, Triggered by Extreme
+Cold, -60%) [4]; Resistant to Disease (+8) [5]; Resistant to
+Poison (+3) [5]; Temperature Tolerance 10 [10].
+Perks: Fur. [1]
+Disadvantages: Bad Temper (12) [-10]; Sleepy (1/2 the time) [-8].
+Quirks: Staid. [-1]
+Features: No Appendix; Taboo Traits (Genetic Defects).
+Date: 2055.
+Cost: $69,000.
+
+Notes
+Some Mishas use drugs to control their hibernation trigger.
+One dose costs $250 and suppresses the problem for 1d-1 days,
+with a minimum of 1. However, for as long as the benefits last,
+the Misha loses all ability to hibernate and gains additional
+temporary disadvantages worth 1d ¥ -10 points. The GM
+chooses the actual disadvantages involved at whim. Possibilities include reduced DX, HT, and Will; reduced self-control on
+their Bad Temper; or Flashbacks, Impulsiveness, Paranoia, or
+Phantom Voices.
+
+PANDORA
+see Fifth Wave, p. 119; 64 points
+A parahuman design with a brain intended to match artificial intelligences for speed of thought, and hence to be capable
+of close communion with AIs. Unfortunately, Pandoras talk as
+fast as they think.
+Attribute Modifiers: IQ+2 [40]; HT-1 [-10].
+Advantages: Enhanced Time Sense [45].
+Disadvantages: Overconfidence (15) [-2]; Stuttering (Accessibility, No penalty if talking to someone with Enhanced
+Time Sense, -10%) [-9].
+Features: Taboo Traits (Genetic Defects).
+Date: 2073.
+Cost: $114,000.
+
+Variations
+Sigma: An extension of the Pandora design with even more
+neural improvements. Unfortunately, not only was the
+brain/speech center interface problem not resolved, the
+changes led to borderline mental instability. Change Overconfidence to (9) [-7], and add DX+1 [20], Less Sleep 5 [10], Lightning Calculator [2], Mathematical Ability 1 [10], and Attentive
+[-1]. 100 points. (2079, $120,000.)
+
+PROBLEMATIC
+EARLY DESIGNS
+These human upgrades date back to the early days of massmarket human germline engineering. They not only show their
+age by being inferior to later templates, but also have real problems, sometimes very serious. They slipped onto the market
+before these were identified, causing catastrophes for individuals and corporations. However, people with these templates may
+still occasionally be encountered. Aside from members of the
+original generations, unscrupulous fly-by-night genetic consultants occasionally employ copies of the relevant gene sequences,
+especially if the symptoms will take years to emerge.
+
+Germline Improvement
+Modification (“Pre-Alpha”)
+see Broken Dreams, p. 120; 7 points
+An early, supposedly straightforward “human upgrade”
+with a tendency to develop extreme pain sensitivity in adulthood. Children with this upgrade do not suffer from the Low
+Pain Threshold disadvantage, effectively raising the value of
+the template by 10 points until puberty.
+Attribute Modifiers: HT+1 [10].
+Advantages: Longevity [2]; Resistant to Disease (+8) [5].
+Disadvantages: Low Pain Threshold [-10].
+Features: No Appendix; Taboo Traits (Genetic Defects; Mental
+Instability).
+Date: 2048.
+Cost: $20,000.
+
+J7-S53
+-56 points
+The main objective of the J7-S53 gene sequence design program of the late 2040s, along with a modest increase in average
+dexterity, was to improve resistance to disease, as was accomplished successfully by later types. However, at that time, the
+engineers’ ambitions far exceeded the knowledge available and
+the capacity of their computer models to handle complex interactions in the immune system. Worse, some sales executives,
+desperate to recover the runaway expense of the project, insisted
+on pushing the design onto the market much too soon.
+The result was a number of children in several countries
+with severe autoimmune conditions. Precise symptoms vary,
+but victims are generally unhealthy, making them vulnerable to
+numerous environmental problems. Chronic pain is usual,
+although that at least can be controlled by standard drug treatments. Many victims suffer from conditions that lead to
+reduced Appearance, and many have developed completely
+debilitating neurological problems later in life. Improved night
+vision seems to be a near-universal minor side effect.
+As the “upgrade” had mostly been sold to parents who were
+looking for a low-cost option, few could afford the complex
+treatments that their offspring needed. Some of the children
+spent years in the care of medical services that were understandably keen to recover the cost from the responsible parties.
+Others just died young.
+Some companies involved in the project were driven out of
+business by a tsunami of lawsuits; the others took years to
+recover from the public relations catastrophe. In fact, the
+whole biotech industry suffered badly from this incident, and
+multiple companies ended up contributing to the cost of looking after the child-victims, simply to protect the whole idea of
+genetic upgrading. There are about 2,300 J7-S53 subjects left
+alive, many in long-term medical care but some surviving in
+the community. About 650 have undergone radical and experimental medical treatments that effectively remove the whole
+template except for the reduced HT and Basic Speed, and usually help cure some of the secondary effects. A further 83 have
+undergone digital uploading. The companies and trusts
+responsible for long-term care of victims are quietly encouraging these radical options, hoping to replace long-term cash
+drains with one-off expenditures, and that the public can be
+helped to forget this disaster.
+
+HUMAN UPGRADES AND PARAHUMANS
+
+15
+
+Obviously, the J7-S53 sequences are no longer used in medicine anywhere in the world, except as a warning in ethics lectures. This template represents the basic problems inherent in
+the design; most individuals add a lot more disadvantages.
+Attribute Modifiers: ST-1 [-10]; HT-3 [-30].
+Secondary Characteristic Modifiers: HP-2 [-4]; FP-1 [-3];
+Basic Speed-1.00 [-20].
+Advantages: High Manual Dexterity 2 [10]; Night Vision 2 [2];
+Resistant to Disease (+3) [3].
+Disadvantages: Chronic Pain (Mild; 2 hour interval; 12 or less;
+Mitigator, daily drug regime, -60%) [-4].
+Date: 2049.
+Cost: N/A.
+
+Methuselah
+see Broken Dreams, p. 120; 20 points
+An early upgrade design, aiming for a substantially
+increased lifespan, with some success but also with disastrous
+neurological side effects.
+Attribute Modifiers: ST+1 [10]; HT+3 [30].
+Advantages: Extended Lifespan 1 [2]; Longevity [2]; Resistant
+to Disease (+8) [5]; Resistant to Poison (+3) [5].
+Disadvantages: Epilepsy [-30]; Extra Sleep 2 [-4].
+Features: No Appendix.
+Date: 2045.
+Cost: $20,000.
+
+Notes
+If researchers do produce a treatment capable of suppressing this type’s Epilepsy, it probably will be a nanodrug initially,
+requiring periodic treatment; apply a Mitigator limitation to
+the disadvantage, increasing the template cost accordingly. A
+permanent solution would of course simply remove the disadvantage, although it might produce side effects such as further
+levels of Extra Sleep.
+
+Advantages: Amphibious [10]; Doesn’t Breathe (Oxygen Storage ¥50, -40%) [12]; Enhanced Move 1.5 (Water) [30];
+Immunity to Disease [10]; Nictitating Membrane 1 [1];
+Night Vision 5 [5]; Pressure Support 2 [10]; Temperature
+Tolerance 1 [1].
+Disadvantages: No Legs (Semi-Aquatic) [0].
+Features: Taboo Traits (Genetic Defects); Unaffected by SAD
+(p. 8).
+Date: 2087.
+Cost: $176,000.
+
+RANGER
+see Fifth Wave, p. 115; 67 points
+A wilderness-oriented design, with sensory and digestive
+modifications and a self-reliant attitude.
+Attribute Modifiers: ST+1 [10]; DX+1 [20]; HT+1 [10].
+Advantages: Absolute Direction [5]; Acute Hearing 2 [4]; Acute
+Taste and Smell 3 [6]; Discriminatory Smell [15]; Reduced
+Consumption 2 (Cast-Iron Stomach, -50%) [2]; Resistant to
+Disease (+8) [5]; Resistant to Poison (+3) [5].
+Disadvantages: Bad Temper (15) [-5]; Light Sleeper [-5]; Overconfidence (12) [-5].
+Features: No Appendix; Taboo Traits (Genetic Defects; Mental
+Instability).
+Date: 2079.
+Cost: $110,000.
+
+SALUD
+see Broken Dreams, p. 121; 62 points
+A TSA upgrade project, optimized for survival in hostile,
+toxic environments, with radical changes that must have
+pushed it close to parahuman status. It is unclear whether any
+products of this program survived the Pacific War.
+Attribute Modifiers: HT+3 [30].
+Advantages: Immunity to Disease [10]; Immunity to Poison [15]; Longevity [2]; Radiation Tolerance 5 (p. 6)
+[10]; Rapid Healing [5].
+Disadvantages: Increased Consumption 1 [-10].
+Features: Taboo Traits (Genetic Defects).
+Date: 2082.
+Cost: $150,000.
+
+SOCIAL
+ENGINEERING PROJECTS
+
+PURUSHAGOR
+see Under Pressure, p. 95; 79 points
+An ultra-radical TSA design, mostly found in Bangladeshi
+underwater habitats, adapted to aquatic life to the extent of
+having a fishlike tail rather than legs.
+
+The idea of modifying the human baseline, not for the
+good of the individual but for the benefit of society, is a
+potent meme in 2100 – a dream for a few, a nightmare for
+many. It has actually been attempted in only a few cases,
+by authoritarian leaders or fanatical factions. In fact, far
+more governments and other groups have been accused of
+working on such projects than have actually expended serious
+effort on the idea. Apart from anything else, many elite groups
+recognize, when they really think about this, that an overly uniform population, or some subtler error in the design, could
+lead to disaster. Also, it’s likely to make existing populations
+dangerously unhappy.
+
+HUMAN UPGRADES AND PARAHUMANS
+
+16
+
+However, it’s worth noting that most upgrade and parahuman types are designed with a place in society in mind – and
+sometimes, one person’s sociable, sensitive, efficient team
+leader is someone else’s sinister, conformist hive manager. At
+the extreme, neurological work intended to increase ambition, competitiveness, intelligence, and focus could produce
+smart sociopaths. Genetic consultants deny that this is ever
+their aim, and few parents would admit to hoping for any
+such thing – but some “survivalist” factions would willingly
+edit a lot of socialization out of their children in the name of
+“self-reliance.” Some fairly popular types such as the Ishtar
+(Changing Times, p. 48) have been accused of veering too far
+in this direction.
+
+Guardian
+see Fifth Wave, p. 117; 137 points
+The possibly nonexistent “leader” parahuman design from
+an alleged TSA project to create an optimal, orderly posthuman society.
+Attribute Modifiers: DX+1 [20]; IQ+1 [20]; HT+2 [20].
+Advantages: Attractive [4]; Combat Reflexes [15]; Extended
+Lifespan 1 [2]; Fit [5]; Hard to Kill 2 [4]; Longevity [2];
+Pheromone Control (Dominance) [8]; Pheromone Control
+(Sex) [27]; Resistant to Disease (+8) [5]; Voice [10].
+Disadvantages: Overconfidence (12) [-5].
+Features: Early Maturation 1; Taboo Traits (Genetic Defects;
+Mental Instability; Unattractiveness, p. 8).
+Date: 2081 (?).
+Cost: $185,000.
+
+Notes
+Remember to adjust the cost of this template according to
+the GM’s decision about the effectiveness of pheromones in the
+campaign (see pp. 5 and 9-10).
+The Guardian concept is strongly dependent on the use of
+pheromones to ensure its ability to dominate others, especially
+Helot IIs (p. 18). Hence, if the GM decides that pheromones
+don’t work at all (the “No Pheromones” setting), the type will
+be less effective, though far from useless for its supposed purpose given its IQ and Voice. Conversely, in cinematic campaigns with the “Strong Pheromones” option, Guardians can
+make excellent villainous masterminds – although the oldest of
+them is still only age 19 in 2100. Nonetheless, a group of precocious, scheming Guardians with a small army of fanatically
+loyal Helots could make quite a threat.
+Even if pheromones are effective in the campaign, the
+type’s control of sex pheromones might be considered superfluous – leader figures really shouldn’t need to seduce their
+followers very often – so that advantage could be deleted at
+the GM’s option.
+
+Hamas (Beta)
+see Broken Dreams, p. 120; 47 points
+The experimental product of a Caliphate program, still in
+progress, to produce zealous defenders of Islam.
+Attribute Modifiers: IQ+1 [20]; HT+1 [10].
+Secondary Characteristic Modifiers: Per+1 [5].
+Advantages: Combat Reflexes [15]; Longevity [2]; Resistant to
+Disease (+8) [5]; Single-Minded [5].
+
+The Feasibility of the Guardian Project
+The TSA “Guardian Project” is defined by the Guardian
+(above) and Helot II (p. 18) parahuman templates, and is
+discussed in Broken Dreams, p. 49. The idea that it might
+have existed is certainly a factor in international politics in
+2100, and plenty of people believe that something on those
+lines was being attempted before the Pacific War. But
+could it ever have worked?
+Strictly in terms of the germline modifications supposedly involved, the answer is “maybe.” Much depends on
+how effective pheromone control could be. If pheromones
+don’t work on anyone vaguely human, the project may
+have wasted some effort, and would have a harder task
+making the Helots adequately compliant, whereas a
+“Strong Pheromones” option (p. 9) would make it frighteningly plausible. However, a society’s leaders can’t always
+expect to deal with their minions face to face, so the
+Guardians would really need to wring every ounce of
+advantage from their Appearance and Voice, along with
+training in rhetoric and access to memetic science. They’d
+also need plenty of computer support; the Project concept
+implies a hierarchical, highly controlled society. Even with
+the Guardians’ superior IQ and economic planning tools
+developed by the TSA, this might not work too well. After
+all, there are reasons why current TSA societies are diverse
+and decentralized.
+
+In terms of actually reconfiguring society to fit the new
+pattern supposedly envisaged, things become more complicated. Implementing the Project’s ideas would be both a
+massive effort and a hard sell to current populations, even
+with advanced memetic science. Many leaders in TSA
+nations are sincere democratic socialists, or at least populists, who would find the idea of turning the mass of the
+population into “willing slaves” loathsome. According to
+the supposed leaked documents, the Project was based in
+Peru; however, many people think it looks more like the
+product of prewar Thai “mad science” thinking, although
+no evidence for this has emerged from any Thai records in
+the country’s post-nanosocialist era. The TSA rulers who
+would most likely approve are the governors of the handful
+of military dictatorships within the Alliance – provided that
+their children could be the ones to receive the Guardian
+enhancements. Some more idealistic TSA factions might
+go along with the idea, as a route to some ideal of society
+determined by ideologically sound leaders, but they’d have
+a debate on their hands.
+Incidentally, very similar considerations would apply to
+the Caliphate’s “Istislaam” project (see p. 18 and Broken
+Dreams, p. 120), which definitely does exist. However, the
+people responsible for that are subtler and are piggybacking their ideas on some traditional Islamic social memes.
+
+HUMAN UPGRADES AND PARAHUMANS
+
+17
+
+Disadvantages: Impulsiveness (12) [-10]; Overconfidence
+(12) [-5].
+Features: Taboo Traits (Genetic Defects).
+Date: 2090.
+Cost: $100,000.
+
+Helot
+see Fifth Wave, p. 118; 12 points
+A “social man” upgrade genotype, designed to function
+comfortably in crowded urban societies – and possibly to produce a docile, conformist citizen population.
+Attribute Modifiers: HT+1 [10].
+Advantages: Resistant to Disease (+8) [5].
+Quirks: Broad-Minded; Humble; Staid. [-3]
+Features: Taboo Traits (Aggressiveness, p. 8; Genetic Defects;
+Mental Instability; Unattractiveness, p. 8).
+Date: 2080.
+Cost: $37,000.
+
+Variations
+Helot II: A possibly imaginary parahuman extension of the
+Helot design, which would have represented the “citizen caste”
+in the TSA project that also (supposedly) produced the Guardian (p. 17). Add DX+1 [20] and Active VNO (p. 8) [-4] (assuming the “Moderate Pheromones” option, pp. 9-10), so the
+template value becomes 28 points. (Possibly 2081, $39,000.)
+
+Long Live the New Flesh!
+– David Cronenberg,
+Videodrome
+
+Istislaam (Beta)
+see Broken Dreams, p. 120; 43 points
+Another experiment still in progress in the Caliphate, the
+Istislaam program is intended to produce devoted and obedient but very competent citizens.
+Attribute Modifiers: IQ+2 [40].
+Advantages: Fearlessness 3 [6]; Longevity [2]; Single-Minded [5].
+Perks: Deep Sleeper. [1]
+Disadvantages: Slave Mentality (Only in the presence of an
+Alim, -75%) [-10].
+Quirks: Mild Overconfidence. [-1]
+Features: Taboo Traits (Genetic Defects).
+Date: 2090.
+Cost: $100,000.
+
+UTOPIA
+see Toxic Memes, p. 64; 320 points
+A (probably!) hypothetical “next generation ultimate”
+parahuman. The design is almost certainly well beyond what
+
+bioengineering can accomplish in 2100, if only because the
+life-extension techniques involved are still highly experimental,
+if they have even been conceived yet.
+Attribute Modifiers: ST+2 [20]; DX+4 [80]; IQ+4 [80]; HT+4
+[40].
+Secondary Characteristic Modifiers: HP+2 [4].
+Advantages: Combat Reflexes [15]; Handsome/Beautiful [12];
+Hard to Kill 2 [4]; Immunity to Disease [10]; Immunity to
+Poison [15]; Language Talent [10]; Rapid Healing [5]; Unaging [15]; Versatile [5]; Voice [10].
+Perks: Sanitized Metabolism. [1]
+Disadvantages: Unusual Biochemistry [-5].
+Quirks: Imaginative. [-1]
+Features: No Appendix; Taboo Traits (Genetic Defects; Mental
+Instability).
+Date: 2095-2100+?
+Cost: $1,265,000.
+
+Notes
+If this type exists but some less fantastical rumors are true,
+then the template should lose the Taboo Traits, and any individual would likely have -20 to -50 or so points in problems such as
+Absent-Mindedness, Bad Temper, Chronic Depression, Curious,
+Impulsiveness, Low Self-Image, Manic-Depressive, Odious Personal Habits (Hyperactivity), On the Edge, or Short Attention
+Span. GenTech Pacifica would probably be able to develop
+drugs or nanotech that could act as Mitigators for these disadvantages, but might then control access to them as a way of
+keeping the test subjects under their control. The Immunities to
+Disease and Poison on this template are certainly challenging,
+even for Transhuman Space’s genetic engineering, and test products might also be prone to autoimmune conditions such as pernicious anemia, lupus, or rheumatoid arthritis.
+The GURPS Third Edition version of the template included
+Early Maturation 2, but it is unclear how this was intended to
+interact with Unaging. It seems unlikely that even a radical
+parahuman design like this one would be designed to reach
+physical maturity in four to five years; even if genetic engineers
+could safely induce that level of accelerated cellular growth,
+there would be huge issues regarding the individual’s intellectual, emotional, and social development. Nor is it certain that
+many parents would actually want offspring who effectively
+bypass almost all of childhood. In any case, the “more plausible” version of the template replaces Unaging with Extended
+Lifespan 3 [6], Longevity [2], and Early Maturation 3, giving a
+template cost of 313 points.
+
+ZHIMINDE
+see In the Well, p. 85; 16 points
+The earliest Mars-optimized parahuman type, now superseded by more advanced designs.
+Attribute Modifiers: ST-1 [-10]; HT+1 [10].
+Secondary Characteristic Modifiers: HP+1 [2].
+Advantages: Mars-Adapted [9]; Resistant to Disease (+8) [5].
+Features: Altered Sex Ratio (2:1 female-male births); Home
+gravity of 0.38 G; Taboo Traits (Genetic Defects; Mental
+Instability; Unattractiveness, p. 8).
+Date: 2058.
+Cost: $50,000.
+
+HUMAN UPGRADES AND PARAHUMANS
+
+18
+
+CHAPTER THREE
+
+BIOROIDS
+See Changing Times, p. 43, for notes on appropriate Social
+Stigmas and Wealth levels for bioroid characters in different
+areas. Furthermore, because they are mandatory, these may
+not have to count against campaign disadvantage limits, at the
+GM’s discretion.
+
+AQUATIC DESIGNS
+Subaqua operations are one area where bioroid workers can
+be very useful. However, the fundamental problems involved in
+creating actual water-breathers remain largely unsolved.
+
+Gillmorph
+see Under Pressure, p. 94; 333 points
+A nonhumanoid design based on killer-whale morphology,
+but smaller and with added work arms and tentacles, and multiple eyes. Despite the name, this is an air-breathing creature,
+albeit with highly optimized lungs. Disturbing Voice here represents a mixture of weird nonhuman pitches and cetacean
+staccato whistling.
+Attribute Modifiers: ST+17 (Size, -20%) [136]; DX+1 [20]; IQ-1
+[-20]; HT+3 [30].
+Secondary Characteristic Modifiers: SM +2; Per+2 [10].
+Advantages: 360° Vision [25]; Acute Hearing 2 [4]; Damage
+Resistance 1 (Tough Skin, -40%) [3]; Doesn’t Breathe (Oxygen Storage ¥200, -20%) [16]; Enhanced Move 1 (Water;
+Temporary Disadvantage, No Manipulators, -50%) [10];
+Enhanced Tracking 3 [15]; Extra Arms 6 (Extra-Flexible,
++50%; No Physical Attack, -50%; Temporary Disadvantage,
+
+Bad Grip 2, -10%) [54]; Immunity to Disease [10]; Injury
+Tolerance (No Neck) [5]; Nictitating Membrane 1 [1]; Pressure Support 2 [10]; Scanning Sense (Sonar; Reduced
+Range 1/5, -20%) [16]; Sharp Teeth [1]; Temperature Tolerance 1 [1]; Ultrasonic Speech [10].
+Disadvantages: Bioroid Body [-4]; Disturbing Voice [-10];
+Increased Life Support (Massive) [-10]; No Legs (Aquatic) [0].
+Features: Sexless.
+Date: 2098.
+Cost: $1,750,000.
+
+Notes and Variations
+The original template gave this creature the equivalent of
+Enhanced Tracking 5, but as it has only four pairs of eyes (and
+they do operate in pairs), three levels is more appropriate.
+Gillmorph Bioshell: For the bioshell version of this design,
+“Immunity to Disease” increases to “Immunity to Metabolic
+Hazards” for skull hit location only; applying the -70% limitation for this to the 20 points for the increase makes the cost of
+this [6]. Also, delete the IQ penalty, change the Per modifier to
++1 [5], and add Absolute Direction (Requires Signal, -20%) [4],
+Telecommunication (Cable Jack; Sensie, +80%) [9], Telecommunication (Radio; Sensie, +80%) [18], Accessory (Small Computer) [1], and Electrical (Partial, Skull hit location only, -70%)
+[-6]. This makes the template cost 380 points. Given the number of arms and eyes included in the Gillmorph design, it
+would be reasonable to require that any AI installed in such a
+bioshell should have to be specially designed to manage it.
+
+Nemo
+see Under Pressure, p. 94; 76 points
+An advanced humanoid bioroid capable of extended dives
+and deep-water operations. The modifications designed to
+grant this model partial tolerance of extreme pressures and
+changes of pressure have the beneficial side effect of making it
+resistant to various other problems.
+Attribute Modifiers: ST+1 [10]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+1 [2].
+Advantages: Amphibious [10]; Doesn’t Breathe (Oxygen Storage ¥50, -40%) [12]; Enhanced Move 1/2 (Water) [10]; Nictitating Membrane 1 [1]; Pressure Support 1 [5]; Resistant
+to Disease (+8) [5]; Resistant to Gaseous/Inhaled Poisons
+(+3) [3]; Temperature Tolerance 1 [1].
+Perks: Immunity to Gas Narcosis. [1]
+Disadvantages: Bioroid Body [-4].
+Features: Aquatic Adaptations (Smooth mottled gray or black
+skin; webbed fingers and toes); Unaffected by SAD (p. 8).
+Date: 2082.
+Cost: $135,000.
+
+BIOROIDS
+
+19
+
+Purushmachh
+see Under Pressure, p. 42; -75 points
+An extremely experimental design (only six individuals
+exist) with gill-like structures capable of extracting oxygen
+from seawater for limited periods before it has to switch to
+breathing air for at least five minutes. Being designed to operate in warm seas, and suffering heat loss problems at the best
+of times, a Purushmachh really needs a temperature range of
+72° to 90° when in water. Having to work in cooler conditions
+can reduce its gill-function time and increase its subsequent
+recovery period at the GM’s whim, as well as inflicting fatigue
+at an accelerated rate. Purushmachh also are designed to operate in a specific level of salinity, and find immersion in fresh or
+too-salty water very distressing.
+As an experiment, pushing the limits of current technology
+on a tight budget, the current-generation Purushmachh suffers from other compromises, making for
+less-than-formidable individual specimenss. Its creators are working hard to improve the design. At present, any Purushmachh encountered away from the
+lab or test areas is either on some kind of test run or
+a hunted escapee.
+Attribute Modifiers: ST-1 [-10]; DX-1 [-20]; IQ-2 [-40].
+Advantages: Amphibious [10]; Doesn’t Breathe
+(Gills, -50%; Maximum Duration, 20 minutes, -25%) [5]; Nictitating Membrane 1 [1]; Pressure Support 1 [5].
+Disadvantages: Bioroid Body [-4]; Weakness (Immersion in water of “wrong” salinity, Common; 1d per
+5 minutes) [-20].
+Quirks: Staid; Very temperature-sensitive when in
+water. [-2]
+Features: Aquatic Adaptations (Smooth gray skin,
+webbed fingers and toes).
+Date: 2098.
+Cost: N/A.
+
+(p. 11), making it similarly uncomfortable in warmer conditions. Effectively LC2 or 1.
+Attribute Modifiers: ST+1 [10]; HT+2 [20].
+Secondary Characteristic Modifiers: Basic Speed+2.00 (Costs
+Fatigue, 1 FP per second, -10%) [36]; Basic Move-1 [-5];
+Basic Move-1 (Ground Only, -60%) [-2].
+Advantages: Amphibious [10]; Combat Reflexes [15]; Doesn’t
+Breathe (Oxygen Storage ¥50, -40%) [12]; Nictitating Membrane 1 [1]; Pressure Support 1 [5]; Resistant to Disease
+(+8) [5]; Temperature Tolerance 3 [3].
+Disadvantages: Bioroid Body [-4]; Overconfidence (12) [-5];
+Short Arms (p. 7) [-10]; Ugly [-8].
+Features: Arctic/Aquatic Modifications (Very thick black skin;
+webbed fingers and toes).
+Date: 2097.
+Cost: $216,000.
+
+As an experiment, pushing
+the limits of current technology
+on a tight budget, the currentgeneration Purushmachh suffers
+from other compromises, making
+for less-than-formidable individual
+specimens.
+
+BUSR
+see Broken Dreams, p. 121; 9 points
+
+Seawolf
+see Under Pressure, p. 95; 127 points
+A U.S. Navy combat model. Not available to civilian groups,
+so effectively LC2 or 1.
+Attribute Modifiers: ST+1 [10]; DX+2 [40]; HT+1 [10].
+Advantages: Acute Taste and Smell 2 [4]; Acute Vision 1 [2];
+Amphibious [10]; Combat Reflexes [15]; Doesn’t Breathe
+(Oxygen Storage ¥50, -40%) [12]; Enhanced Move 1/2
+(Water) [5]; Fit [5]; Night Vision 5 [5]; Pressure Support 2
+[10]; Resistant to Disease (+8) [5]; Temperature Tolerance 2
+[2]; Versatile [5].
+Disadvantages: Bioroid Body [-4]; Unattractive [-4]; Workaholic [-5].
+Features: Aquatic Adaptations (Rubbery black skin; very light
+fur; webbed fingers); Unaffected by SAD (p. 8).
+Date: 2085.
+Cost: $200,000.
+
+Snow Viper
+see Under Pressure, p. 94; 83 points
+Another military model. It has extensive adaptations for arctic
+conditions analogous to those found on the Arctic Aquamorph
+
+A worker design found only in the Islamic Caliphate, often
+used for hazardous, life-shortening tasks. LC2 there, and effectively LC1 or 0 in most other areas.
+Attribute Modifiers: ST+2 [20]; IQ-2 [-40] HT+2 [20].
+Advantages: Breath-Holding 2 [4]; Damage Resistance 2
+(Tough Skin, -40%) [6]; Discriminatory Smell [15]; Filter
+Lungs [5]; Lifting ST 3 [9]; Nictitating Membrane 1 [1];
+Resistant to Disease (+8) [5]; Resistant to Poison (+3) [5].
+Disadvantages: Bad Smell [-10]; Bioroid Body [-4]; Monstrous
+[-20]; Selfless (9) [-7].
+Features: Radical Transgenic Features (Green skin derived
+from rhinoceros hide; head set deep into the frame of the
+body; very large unblinking eyes); Sexless.
+Date: 2087.
+Cost: $75,000.
+
+CHRONOS
+62 points
+The Chronos is a distinctly military bioroid model, designed
+for unsupported patrol and counterinsurgency operations –
+and, few doubt, to serve as a terror weapon. Chronos-series
+bioroids are optimized for tracking and spotting the enemy,
+and react to ambushes by shifting into biological overdrive.
+
+BIOROIDS
+
+20
+
+They are lean and muscular, with canine muzzles and sharp
+teeth, but large mouse-like ears and eyes. Their bodies are covered with short gray fur. Their tissues include transgenic
+material from human, canine, rodent, and shark sources. They
+possess modified stomachs so they can live off the land, and
+bone marrow and adrenal gland upgrades to improve emergency response and health.
+Simply making all this work together is a masterpiece of
+bioengineering. The compromises that give the Chronos a
+short functional lifespan aren’t considered a serious problem
+in a military design, and indeed may have been left in deliberately. However, many people involved in bioroid manufacture
+regard the mere existence of the design as one of the worst
+memetic problems they face – any hostile discussion of their
+business as “making monsters” ends up referring to the
+Chronos eventually. The design is effectively LC1.
+It was created by a previously unknown company, originally registered in Argentina, with no other known products
+to its name; the rights have subsequently changed hands several times, almost always to short-lived shell companies.
+Actual production is licensed to local operations around the
+world. So far as investigators can tell, this shell-game operation represents a one-off collaboration between several midsized biotech companies, all of whom are carefully protective
+of their public images and object to any public suggestion
+that they are responsible for the Chronos. Curiously,
+although information regarding the design has shown up
+occasionally on the TSA Web, very few Chronos troops have
+
+ever appeared in nanosocialist forces. Apparently, the Directorates of Defense and of Theory and Praxis have reached a
+calculated position that not using the Chronos garners propaganda advantages that outweigh any military benefits from
+deploying it.
+Attribute Modifiers: ST+2 [20]; DX+1 [20]; IQ-1 [-20]; HT+1
+[10].
+Secondary Characteristic Modifiers: Per+2 [10]; FP+3 [9];
+Basic Speed+1.00 (Costs Fatigue, 2 FP, -10%) [18].
+Advantages: Acute Hearing 2 [4]; Combat Reflexes [15]; Discriminatory Smell [15]; Fangs [2]; High Pain Threshold
+[10]; Single-Minded [5]; Reduced Consumption 2 (Cast-Iron
+Stomach, -50%) [2]; Very Rapid Healing [15].
+Perks: Fur. [1]
+Disadvantages: Bioroid Body [-4]; Bloodlust (12) [-10]; Disturbing Voice [-10]; Low Empathy [-20]; Self-Destruct [-10];
+Short Lifespan 2 [-20].
+Features: Multiple transgenic features (see description).
+Date: 2087.
+Cost: $112,000.
+
+CLARKE-1 VAC
+see High Frontier, p. 92; 15 points
+A bioroid model designed as a space worker, adapted to
+freefall and able to tolerate short periods of exposure to vacuum. All Vacs are fitted with implant communicators.
+
+Bioroids and Gender
+From some points of view, there is no reason why
+most bioroids should have human-style gender or sexual
+characteristics or impulses. They’re mostly based on a
+human-like body-plan, certainly, but in some ways, it’s
+easier to build them with minimal gender-specific features. Indeed, some bioroids are designed and built as
+sexless beings – but most are not.
+This strikes some people as odd. Some bioroids are
+designed as sex toys or companions, certainly, but most
+aren’t, and the sex-toy function is widely regarded as the
+least reputable aspect of the industry. Giving bioroids who
+don’t need it identifiable gender may remind observers of
+the subject, causing memetic problems. This is in fact one
+reason why some bioroids are built with no active gender.
+The reasons why most are nonetheless made “male” or
+“female” are varied and complex, including a lot of historical accident. The main one is that many are designed to fit
+into human society as comfortably as possible, and total
+sexlessness can strike humans as “uncanny” or “creepy.”
+Even if bioroids are never going to form sexual relationships, with humans or each other, humans seem to accept
+and value them more if they can refer to them as “he” or
+“she,” rather than “it.” Also, quite a few basic bioroid architectures were created to permit a wide range of options;
+even if one design has no use for gender, a related model
+from the same manufacturer may be a sex toy. For that
+matter, many early designs were based more closely on
+
+human genetics than the industry would like to admit.
+Some bioroids that work in groups, including some military designs, are even encouraged to form limited in-group
+sexual relationships as a way of boosting cohesion and loyalty – although that can lead to complications and has to
+be monitored carefully by supervisors.
+Few bioroids other than sex toys have very strong sex
+drives, as their hormonal systems tend to be set “quiet” – a
+worker-model bioroid with full-on Lecherousness would be
+considered odd. Nonetheless, the complexities of psychological development, and the well-trained bioroid tendency to
+go along with anything a human suggests, can lead to an
+extended range of relationship-related behaviors.
+In game terms, some bioroids have “Sexless” on their
+character sheets. If they are intended to be integrated fully
+into human society, this can rate as a quirk (p. B165), as
+some humans will regard it as an oddity. On models where
+it is commonplace or standard, it is a 0-point feature, being
+considered normal in those cases. Some templates have
+been given this as standard, because they seem highly
+unlikely to be gendered by design. Other types, especially
+military or worker models, could certainly have it added if
+the GM thinks that this is more plausible. Many common
+models can be built sexless, either as a “catalog option” for
+no extra charge or as a special order with nominal cost.
+Some purchasers like the idea, but most are too used to
+thinking in gendered terms.
+
+BIOROIDS
+
+21
+
+Attribute Modifiers: ST-2 [-20].
+Advantages: +1 to Breath Control [2]; +1 to Free Fall [2]; 3D
+Spatial Sense [10]; Damage Resistance 1 (Tough Skin, -40%)
+[3]; Doesn’t Breathe (Oxygen Storage ¥25, -50%) [10]; Extra
+Arms 2 (Foot Manipulators, -30%; Short, -50%) [4]; Lifting
+ST 1 [3]; Nictitating Membrane 1 [1]; Radiation Tolerance 5
+(p. 6) [10]; Resistant to Disease (+8) [5]; Telecommunication (Radio; Reduced Range 1/10, -30%; Temporary Disadvantage, Electrical, -20%) [5]; Temperature Tolerance 10
+[10]; Vacuum Support [5].
+Disadvantages: Bioroid Body [-4]; Restricted Diet
+(Special/unusual nutrients; Occasional) [-30].
+Quirks: Thin Frame (p. 7). [-1]
+Features: Home gravity of 0 G; Slick, hairless skin that
+changes color in different lighting levels.
+Date: 2073.
+Cost: $81,000.
+
+Notes
+The above stats represent more or less universal features of the Vac
+population. Clarke-1 Vacs
+are extremely tall and
+thin by most human standards – around 1’ taller
+than a typical human
+with their ST, but 50%
+lighter than a normal
+human of that height. In
+addition, other features
+are common among Vacs,
+though not genetically
+determined: A Vow to
+donate a large proportion
+of their income (usually
+2/3) to Clarke-1 is virtually universal. Disciplines
+of Faith (Mysticism) and
+Humble or Selfless are common, and Fanaticism (Christian
+Hyperevolutionism or Sapient Rights) is not unusual.
+
+EUROPAN
+see Deep Beyond, p. 112; 10 points
+A humanoid being designed as an inhabitant of Europa by
+Avatar Klusterkorp. Its standard temperature comfort range
+is from -10° to 55°, and it is designed to live in pressures far
+greater than are ever encountered in Earth’s oceans. This radical biological design in turn requires a rather exotic synthetic diet.
+Secondary Characteristic Modifiers: FP+3 [9]; Basic Move-1
+(Ground Only, -60%) [-2].
+Advantages: Enhanced Move 1/2 (Water) [10]; Fit [5];
+Longevity [2]; Nictitating Membrane 1 [1]; Night Vision 7
+[7]; Temperature Tolerance 1 [1]; Vibration Sense (Water)
+[10].
+Perks: Sanitized Metabolism. [1]
+Disadvantages: Bioroid Body [-4]; Increased Life Support
+(Pressurized) [-10]; No Legs (Aquatic) [0]; Restricted Diet
+(Common) [-20].
+
+Features: Doesn’t Breathe (Gills, Water Only); Radically exotic
+design, including bioluminescent skin.
+Date: 2090.
+Cost: $69,000.
+
+HAMLIN
+see Broken Dreams, p. 121; 124 points
+A memetic warfare weapon (supposedly) created for
+Britain’s MI-5 and trained to infiltrate and disrupt hostile
+groups and movements.
+Attribute Modifiers: IQ+1 [20]; HT+1 [10].
+Advantages: Combat Reflexes [15]; Fearlessness 2 [4];
+Handsome/Beautiful [12]; Pheromone Control (Sex)
+[27]; Pheromone Control (Trust) [29]; Voice [10].
+Perks: Passing Appearance (p. 6). [1]
+Disadvantages: Bioroid Body [-4].
+Features: Taboo Traits (Mental Instability).
+Date: 2085.
+Cost: $375,000.
+
+Notes
+Remember to adjust the cost of this template according
+to the GM’s decision about the effectiveness of pheromones
+in his campaign (see pp. 5 and 9-10).
+A crucial improvement for any Hamlin infiltrating more
+sophisticated groups would be to change Bioroid Body to
+Concealed Bioroid Body (Changing Times, p. 43).
+The GURPS Third Edition treatment of this type had
+“built-in” Charisma 2. The problem with this is that Charisma is something of an intangible, and is probably highly
+dependent on experience interacting with other people;
+designing it into a newly decanted bioroid would be very
+difficult. Hence, it has been replaced here with Pheromone
+Control (Trust), which will help the Hamlin gain access to
+organizations, leaving its Appearance and Voice to ensure
+it a leadership position. The GM is welcome to rearrange
+the template to fit his own concept of the design, possibly
+including Pheromone Control (Dominance) or even simple
+Charisma, presumably granted by very clever VR training.
+The Hamlin may be more of a paranoid myth than a plausible bioroid design. Even if pheromone engineering is up to
+this task, educating a new bioroid to pass as a convincing,
+experienced political radical could be very difficult. A GM who
+doesn’t want his game to feature such memetic super-weapons
+can still use the idea in play, though – as a dangerous rumor.
+The idea that governments might have access to such technologies will itself generate distrust within radical and subversive
+movements, directed especially at impressive or attractive
+leaders. Stories about the Hamlin may be spread – very carefully and subtly – as a memetic weapon in their own right.
+Alternatively, this might just be a new incarnation of the
+ever-popular “evil state double agent” memeplex. Technological challenges aside, given the cost of developing such a
+bioroid, the problems if the plot was exposed, the danger
+involved in giving subversive movements charismatic leaders, and the difficulties inherent in maintaining a Hamlin’s
+cover story (not to mention the tendency of radical movements to splinter without any outside encouragement), it
+hardly seems worth the effort. Or perhaps they just want
+people to think that.
+
+BIOROIDS
+
+22
+
+As another possibility, the Hamlin may exist, but be nothing this good. Delete the IQ bonus and Pheromone Control,
+and give its Appearance the Off-the-Shelf Looks limitation,
+making the template cost 42 points. Assume that the bioroid is
+carefully briefed and closely managed by skilled handlers.
+These alterations put it within reach of the setting’s technology, while still yielding a potentially effective infiltration agent.
+
+HECATE
+see Fifth Wave, p. 119; 51 points
+A hazardous-materials cleanup-worker design, prone to
+short lives and widely considered a moral abomination, hence
+LC2 at best, and LC0 in many places.
+Attribute Modifiers: ST+2 [20]; HT+2 [20].
+Advantages: Breath-Holding 2 [4]; Discriminatory Smell [15];
+Filter Lungs [5]; Immunity to Poison [15]; Lifting ST 2 [6];
+Nictitating Membrane 1 [1].
+Disadvantages: Bioroid Body [-4]; Selfless (9) [-7]; Short Lifespan 2 [-20]; Unattractive [-4].
+Features: Highly distinctive appearance (hairless; bright
+lemon-yellow skin; eyes with nictitating membrane; thick
+muscles around the mouth and nose); Sexless.
+Date: 2093.
+Cost: $69,000.
+
+HOURI
+see Broken Dreams, p. 122; 61 points
+An always-female pleasure model, widespread in the Islamic
+Caliphate even though local society disapproves of the idea.
+Attribute Modifiers: DX+1 [20], IQ-1 [-20], HT+2 [20].
+Secondary Characteristic Modifiers: Will-1 [-5].
+Advantages: +3 to Erotic Art [6]; Beautiful (Off-the-Shelf
+Looks, -50%) [6]; Breath-Holding 1 [2]; Fit [5]; Flexibility
+[5]; High Pain Threshold [10]; Immunity to Disease [10];
+Sensitive [5].
+Perks: Deep Sleeper; Sanitized Metabolism. [2]
+Disadvantages: Bioroid Body [-4].
+Quirks: Attentive. [-1]
+Features: Taboo Traits (Mental Instability).
+Date: 2078.
+Cost: $100,000.
+
+Notes
+In their normal situation in the Caliphate, Houris always
+have Social Stigma (Subjugated) and a Wealth level of Dead
+Broke (see Changing Times, p. 43). Many also have Secrets,
+because if the hidden establishments where they are held are
+exposed, they are likely to be killed. One that goes on the run
+usually gains some dangerous combination of Secret and Enemies. Even one that breaks the rules to a lesser extent, especially if she has raised IQ or Will, almost always ends up with
+significant extra problems.
+
+Variations
+Scheherazade: A more sophisticated variant, made as a
+personal luxury for the very wealthy. Remove the IQ penalty,
+change Appearance to Very Beautiful [16], and add Eidetic
+Memory [5] and Voice [10]. Most also have Public Speaking at
+
+13+, and quite a few have the Passing Appearance perk (p. 6).
+The notes above on Houri social problems apply just as much
+to this type. 106 points. (2082; $300,000.)
+
+MAY-I
+see In the Well, p. 86; 24 points
+Actually the Xiao Chu ZR-12, designed for service work and
+human interactions. Hidebound is an unintended feature,
+absent in about 25% of examples; a May-I known to lack this
+disadvantage costs an extra $5,000.
+Attribute Modifiers: HT+1 [10].
+Secondary Characteristic Modifiers: Per+1 [5].
+Advantages: Attractive [4]; Fearlessness 1 [2]; Language Talent
+[10]; Lightning Calculator [2].
+Disadvantages: Bioroid Body [-4]; Hidebound [-5].
+Date: 2074.
+Cost: $97,000.
+
+OMOKAGE LABS
+SLAVE DESIGNS
+As Deep Beyond explains on p. 107, Omokage Laboratories
+is (as of 2100) a biotech design consultancy, based in Liang
+Mountain in the Belt. The company creates a range of technologies, including bioroids, for others to construct. However,
+Omokage are noted for their complete lack of conventional
+ethics, and their engineers seem to regard the creation of
+extreme or perverse bioroids as the sort of challenge that
+makes their jobs interesting. Their designs are often distinctive
+for this reason, whoever may conduct the actual manufacture.
+
+Algonaut
+see Deep Beyond, p. 112; 104 points
+A pleasure bioroid specifically designed for sadistic owners
+– LC0 in most jurisdictions.
+Attribute Modifiers: ST-2 [-20]; HT+3 [30].
+Secondary Characteristic Modifiers: Will-1 [-5].
+Advantages: +2 to Artist (Slink Creation) [4]; Breath-Holding 4
+[8]; Flexibility [5]; Handsome/Beautiful [12]; Hard to Kill 2
+[4]; Immunity to Disease [10]; Less Sleep 3 [6]; Lifting ST 2
+[6]; Recovery [10]; Regrowth (Minor, -50%) [20]; Resistant
+to Acceleration (+3) [1]; Temperature Tolerance 2 [2]; Very
+Fit [15]; Very Rapid Healing [15].
+Perks: Sanitized Metabolism. [1]
+Disadvantages: Bioroid Body [-4]; Low Pain Threshold [-10];
+Lecherousness (9; Only if afraid or helpless, -70%) [-6].
+Date: 2095.
+Cost: $186,000.
+
+Variations
+Algonaut Bioshell: A common option, as persuading an
+organic brain to act the way that some owners want is difficult,
+while other owners are actually ethical enough not to want
+their toy to be self-aware. Rumors say that other bioshell Algonauts are used as assassins. For such bioshells, “Immunity to
+Disease” increases to “Immunity to Metabolic Hazards” for
+the skull hit location only; applying the -70% limitation for
+this to the 20 points for the increase makes the cost of this [6].
+
+BIOROIDS
+
+23
+
+Also, delete the Will modifier, Artist skill bonus, Less Sleep,
+Low Pain Threshold, and Lecherousness. Then add Absolute
+Direction (Requires Signal, -20%) [4], Telecommunication
+(Cable Jack; Sensie, +80%) [9], Telecommunication (Radio;
+Sensie, +80%) [18], Accessory (Small Computer) [1], and Electrical (Partial, Skull hit location only, -70%) [-6]. This makes
+the template cost 147 points.
+Free Algonaut: A very few Algonauts have been rescued from
+their creators before their psychological conditioning could
+become too well-embedded. They are provided with psychological and medical therapy that makes them socially functional
+in places where bioroids have legal rights. They still need special nanodrug treatments; these represent a Mitigator (weekly,
+needs special prescription), worth -60%, to their Low Pain
+Threshold and Lecherousness disadvantages. This changes the
+values of these to -4 points each, thus making the total template worth 112 points. Most free Algonauts withdraw from
+their mitigator drugs for short periods from time to time, in situations when they feel they can trust everyone around them
+absolutely; their design and conditioning run deep, and they
+dislike denying their fundamental natures as much as they
+hate the people who made them like this. All of them are now
+working against the people who designed or built them.
+
+Bīngmǎyǒng
+43 points
+Not all security/bodyguard bioroids have to be stylish
+fashion accessories who can double as courtesans. Some
+pragmatic customers, including quite a few successful Triad
+bosses, just want squads of solidly reliable goons who do as
+they’re told and handle both melee weapons and guns effectively. Omokage have a design to meet this specification.
+Bīngmǎyǒng (“terracotta warriors”) are solidly built
+bioroids with plain features. They usually have a little head
+hair but no facial hair, and they never smile. They are made
+unimaginative and sexless, precluding many commonplace
+subversion methods. Their standard conditioning gives them
+no sense of others’ pain, but they like making their “masters”
+happy and gain an almost ecstatic pleasure from obedience to
+authority. The only problem is that the conditioning that
+makes them so loyal makes it hard to reassign them once they
+have been given a leader, but few owners worry about that.
+Bīngmǎyǒng have various minor features that make them
+good soldiers. Some receive biomods or nanomods to enhance
+them further or to fit them for specific conditions such as high
+radiation or the Martian environment. They need leadership,
+though; Bīngmǎyǒng teams are usually coordinated by networked specialist AI systems, which provide any tactical ingenuity they may require.
+Attribute Modifiers: ST+2 [20]; DX+1 [20]; IQ-2 [-40]; HT+2 [20].
+Secondary Characteristic Modifiers: Will+2 [10]; Per+3 [15].
+Advantages: Combat Reflexes [15]; Fearlessness 2 [4]; High
+Pain Threshold [10]; Less Sleep 2 [4].
+Perks: Deep Sleeper; Sanitized Metabolism. [2]
+Disadvantages: Bioroid Body [-4]; Callous [-5]; Fanaticism
+(assigned “commander”) [-15]; Hidebound [-5]; Truthfulness (15) [-2]; Unattractive [-4].
+Quirks: Humble; Staid. [-2]
+Features: Closely resembles others of the same “model”; Sexless.
+Date: 2093.
+Cost: $95,000.
+
+Variations
+Early Bīngmǎyǒng were often overengineered to their psychological specification; the Slave Mentality disadvantage was
+not unusual in the first production run, replacing Hidebound
+(reduce the template cost to 8 points). Some current customers
+actually still ask for this, although it makes the bioroid dangerously easy for anyone to influence. Cash cost for those early
+“flawed” models was reduced to $60,000, but any built with
+Slave Mentality as a deliberate feature tend to go at near the
+normal price for the type – the customer can’t expect to pay less
+to get something they say they want.
+Omokage are currently working on a “zero-G” Bīngmǎyǒng
+variant, with a second pair of arms replacing their legs and
+intensive preparation for free fall operations. Add Extra Arms
+2 (Foot Manipulators, -30%) [14], and Free Fall (A) DX [2] as a
+racial skill, increasing template cost to 59 points and price to
+$165,000. However, market demand isn’t quite high enough
+yet; the predicted price tag may simply be too much.
+
+Elf Kitten
+see Deep Beyond, p. 112; -6 points
+A cat-girl bed-warmer. Confusing these with Felicias is a
+great way to annoy a Felicia.
+Attribute Modifiers: ST-2 [-20]; DX+1 [20]; IQ-1 [-20]; HT+2
+[20].
+Advantages: Longevity [2]; Radiation Tolerance 5 (p. 6) [10];
+Versatile [5]; Very Handsome/Beautiful (Off-the-Shelf
+Looks, -50%) [8].
+Perks: Sanitized Metabolism. [1]
+Disadvantages: Bioroid Body [-4]; Cannot Speak [-15]; Lecherousness (12) [-15].
+Features: Feline Style (Purr, pointy ears, etc.); Reflective Eyes
+(p. 8).
+Racial Skills: Free Fall (A) DX [2].
+Date: 2091.
+Cost: $50,000.
+
+Leonardo
+-17 points
+For various reasons (see Bioroid IQ, p. 7), many regulatory
+systems limit the degree to which bioroid intelligence can be
+augmented. Omokage designers happily ignore such restrictions when money is on the table (or when conducting longterm research or for technical interest). The “Leonardo” is
+their most widely licensed general-purpose “high intelligence” bioroid design, advertised as providing levels of intuition, empathy, and imaginative flexibility that digital AIs
+cannot match. The standard training process for the type is
+highly specialized, but flexible and “modular.” The result is a
+niche product, but one sometimes found in various roles
+around the Belt or on Mars. As the design is generally illegal,
+Leonardo assignments are often criminal.
+Ethics aside, whether the Leonardo lives up to the advertising is a matter for debate. Educating one in specific areas
+where high human-style intelligence is useful can be very tricky,
+and preventing it from developing inconvenient interests and
+foibles is even harder. The Leonardo training and conditioning system is designed to make these bioroids too compliant
+and focused to consider revolt. It usually works, but the results
+often look weird by normal human standards, at the very least.
+
+BIOROIDS
+
+24
+
+There is simply no way to make this model immune to mental
+instability; the old line about genius being close to insanity is
+too nearly true.
+Physically, a Leonardo resembles a slightly built human
+with long, delicate fingers. (“Brain work” sometimes requires
+fine physical manipulations.) The type always has a bald,
+bulging cranium. The bulge isn’t very pronounced but is noticeable. This may be deliberate – something intended as much to
+make the bioroid look intelligent to potential buyers as anything else. That enhanced brain has definite energy requirements, and the type’s exotic neurochemistry has some minor
+side effects, although neither is a major issue. Its speech centers have some difficulty synchronizing with its thoughts, leading to distinctive, repetitive speech patterns, and its teeming
+brain has trouble sleeping properly.
+Attribute Modifiers: ST-3 [-30]; DX-1 [-20];
+IQ+3 [60].
+Secondary Characteristic Modifiers: Will-1
+[-5]; Basic Speed-0.50 [-10].
+Advantages: Eidetic Memory [5]; High Manual Dexterity 3 [15]; Lightning Calculator
+[2]; Single-Minded [5]; Versatile [5].
+Perks: Sanitized Metabolism. [1]
+Disadvantages: Bioroid Body [-4]; Callous
+[-5]; Easy to Kill 2 [-4]; Impulsiveness
+(12) [-10]; Insomniac (Mild; Mitigator,
+Weekly nanodrug treatment, special prescription, -60%) [-4]; Light Sleeper [-5];
+Unattractive [-4]; Unfit [-5].
+Quirks: Acceleration Weakness; BroadMinded; Distinctive speech patterns;
+Slightly unusual dietary requirements.
+[-4]
+Features: Closely resembles others of the
+same “model”; Sexless.
+Date: 2096.
+Cost: $25,000.
+
+Notes
+
+Truthfulness, or Workaholic are common results. Notably,
+although some Leonardos are trained as social manipulators,
+with a good (if theoretical) grasp of human motivations, most
+of the rest are Oblivious, and some of them have Low Empathy. Low Pain Threshold is a common result of an upbringing
+with no exposure to physical discomfort. Psychological Addiction to cognition-enhancing drugs or nano is also possible, as
+determined Leonardos may pursue the goal of higher and
+higher intelligence past any safe limits.
+Many Leonardos have extensive digital implant systems,
+complete with Ally AIs. One frequent assignment for the type is
+as a “living interface” between high-end networked computer
+systems and groups of organic humans. Those Leonardos usually have Computer Wizard Talent and multiple computerrelated skills.
+
+Nonhumanoid Bioroids
+A very high proportion of bioroid types are humanoid, and in fact
+resemble humans – despite the fact that it is perfectly possible to give them
+completely different shapes (and sizes), subject only to broad engineering
+constraints. There are several reasons for this.
+To begin with, bioroid technology originally derived from work in
+human medicine, which made this the simplest option a lot of the time in
+early days. Much more importantly, though, bioroids are usually intended
+to be low-maintenance servant/workers who can fit into human societies.
+A human-shaped, human-sized bioroid can use tools or weapons designed
+for humans most efficiently. Bioroids intended as sex toys mostly have to
+be even more human-like.
+However, a few nonhumanoid bioroid models do exist, either based on
+other animals (or genetically modified animals) that fit well in specific situations or environments, or in roles where a very different shape is most
+useful (such as the Gillmorph, p. 19). Some radical designers consider the
+humanoid form a restrictive habit more than anything else, and many corporate memeticists note that inconvenient bioroid-rights campaigns gain
+strength because “sentimental” campaigners and their sympathizers so
+often “mistake the products for people.” Hence, more nonhumanoid
+bioroids may come on the market in the early years of the 22nd century.
+Industry memeticists are trying to keep designers’ enthusiasm under
+control, though. Humanoid bioroids are fairly easy to sell as basically
+harmless, even if people have to be persuaded not to think of them as too
+human. Worker bioroids with “robust outer casings” (scaly skins) and
+“multiple flexible work arms” (masses of tentacles) could be a nightmare to
+sell – almost literally.
+
+The template defines a baseline for the
+Leonardo; almost all individuals receive
+further specialist training and conditioning
+before they even emerge from the growth
+tanks. In game terms, some have a significantly higher GURPS IQ than the relatively
+modest template level, but most end up
+with multiple levels of some Talent, plus
+training in appropriate skills. Add $1,000 to
+the cost for every point spent on extra IQ or Talents, and $100
+for every point spent on skills. A Leonardo has the equivalent
+of extensive neural grafts included in the construction
+process; it cannot have its IQ increased further by standard
+brain-tissue graft biomods.
+Leonardos frequently end up with additional psychological disadvantages, as attempts to ensure that they focus
+intently on some specific task generate unintended consequences, or attempts to ensure their loyalty work all too well.
+Chummy, Clueless, Curious, Delusions (usually something
+really weird concerning an assigned field of operation),
+Fanaticism (an assigned “master”), worse Impulsiveness,
+Obsession (assigned role in life), Odious Personal Habits,
+
+RODOSHA
+51 points
+The Rodosha is a Japanese model designed to help compensate for that country’s perennial shortage of human workers.
+Hence, it is often seen as less “exotic” than many bioroid types,
+despite some interesting features. Most Rodosha certainly are
+employed in and psychologically conditioned for very routine
+tasks, and tend to be psychologically dependent on their managers and implant AIs. They often suffer from the Low SelfImage disadvantage, which is permitted as an exception to
+their Taboo Traits. Even so, Rodosha who lead more interesting lives often develop fairly interesting personalities.
+
+BIOROIDS
+
+25
+
+Rodosha look like husky humans with bland expressions and
+nonthreatening body language, except that they are all bald and
+their skin has a strong blue tinge; they are designed never to be
+confused with humanity. Their fingers are long and almost delicate, but not freakishly so, and their movements are usually
+slow and steady. Most are male, with Asian-style features.
+Rodosha are intended to be robust, deft, alert, and good
+team members (and not too expensive). Their exceptional lowfrequency hearing was almost accidental, but turned out to
+have uses in industrial environments. They are also designed to
+be methodical and highly sociable. The areas of their brains
+that process social interaction are deliberately “cross-wired” to
+the pleasure/reward centers.
+The vast majority of Rodosha are found in Japan, but a few
+have been exported, mostly to other PRA nations. Low-volume
+licensed production of the type takes place in Australia and
+India. The TSA’s Acquisitions Directorate has an interest in
+studying and reverse-engineering the design, or at least some
+of its features.
+Attribute Modifiers: DX+1 [20]; HT+1 [10].
+Secondary Characteristic Modifiers: HP+2 [4]; Per+2 [10];
+FP+2 [6]; Basic Speed-0.25 [-5].
+Advantages: High Manual Dexterity 2 [10]; Lifting ST 2 [6];
+Night Vision 2 [2]; Resistant to Disease (+3) [3]; Subsonic
+Hearing [5].
+Perks: Deep Sleeper. [1]
+Disadvantages: Bioroid Body [-4]; Gregarious [-10]; Workaholic [-5].
+Quirks: Attentive; Humble. [-2]
+Features: Bald with blue-tinged skin; Closely resembles others
+of the same “model”; Taboo Traits (Mental Instability).
+Date: 2075.
+Cost: $100,000.
+
+units to last too long. Additionally, high strength puts more
+stress on the bioroid’s metabolism.
+Attribute Modifiers: ST+3 [30]; HT+1 [10].
+Advantages: Combat Reflexes [15]; High Pain Threshold [10];
+Lifting ST 3 [9].
+Disadvantages: Bioroid Body [-4]; Short Lifespan 1 [-10];
+Unattractive [-4].
+Date: 2084.
+Cost: $160,000.
+
+TIAOQI
+see In the Well, p. 87; 41 points
+An enforcer/bouncer model, mostly produced by the
+Martian Triads.
+Attribute Modifiers: ST+3 (Size, -10%) [27]; HT+2 [20].
+Secondary Characteristic Modifiers: SM +1.
+Advantages: Damage Resistance 2 (Tough Skin, -40%) [6];
+Hard to Kill 1 [2]; Rapid Healing [5]; Striking ST 1
+(Size, -10%) [5]; Unfazeable [15].
+Perks: Alcohol Tolerance. [1]
+Disadvantages: Bioroid Body [-4]; Callous [-5]; Disturbing
+Voice [-10]; Hidebound [-5]; Hideous [-16].
+Date: 2086.
+Cost: $141,000.
+
+TITAN WRESTLER
+see Deep Beyond, p. 115; 88 points
+A huge, freakish bioshell type created for a publicity
+stunt/sport in the Deep Beyond. It is only physically functional
+in low gravities. Remember to add an infomorph (usually an
+LAI) to control each wrestler; this will usually be trained in a
+flamboyant fighting style – see GURPS Martial Arts for ideas.
+Attribute Modifiers: ST+6 (Size, -20%) [48].
+Secondary Characteristic Modifiers: SM +2; HP+9
+(Size, -20%) [15].
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Damage Resistance 2 (Tough Skin, -40%) [6]; Immunity to
+Metabolic Hazards (Partial, Skull hit location only, -70%)
+[9]; Striking ST 4 (Size, -20%) [16]; Telecommunication
+(Cable Jack; Sensie, +80%) [9].
+Perks: Accessory (Small Computer). [1]
+Disadvantages: Bioroid Body [-4]; Electrical (Partial, Skull hit
+location only, -70%) [-6]; Weakness (0.5 G or higher gravity;
+1d per 30 minutes; Common) [-10].
+Features: Home gravity of 0.14 G (totally nonfunctional in
+gravity greater than 0.5 G); Sexless.
+Date: 2085.
+Cost: $275,000.
+
+Variations
+The following are some active Titan Wrestlers.
+
+SPARTAN
+see Fifth Wave, p. 120; 56 points
+A combat model intended to carry (and fire) heavy
+weapons. The Short Lifespan disadvantage reflects a design
+optimized for fast-growth manufacturing and the fact that
+there’s little perceived point in building heavy-duty combat
+
+Bigger Daddy: Change SM to +3 (reflecting bulk rather than
+height), ST to +9 (Size, -30%) [63], HP to +15 (Size, -30%) [21],
+and Striking ST to 4 (Size, -30%) [14]. 107 points. ($295,000.)
+Thunder Lizard: Change Damage Resistance to 3 (Flexible, -20%) [12], and add Fangs [2], Sharp Claws [5], Striker
+(Crushing) [5], and Scales (p. 6) [1]. 107 points. ($295,000.)
+
+BIOROIDS
+
+26
+
+Whiplash Warrior: Delete the extra HP, change Striking ST
+to 5 (Size, -20%) [20], and add Constriction Attack [15],
+Enhanced Parry 1 (Bare Hands) [5], Flexibility [5], and Sharp
+Claws [5]. 107 points. ($295,000.)
+
+Disadvantages: Bioroid Body [-4]; Impulsiveness (9) [-15];
+Lecherousness (12) [-15].
+Date: 2082.
+Cost: $112,000.
+
+Notes
+Remember to adjust the cost of this template according to
+the GM’s decision about the effectiveness of pheromones in his
+campaign (see pp. 5 and 9-10).
+
+Girl/Boy Next Door
+6 points
+A design for people looking for a more “normal” companion.
+Attribute Modifiers: ST-1 [-10]; HT+1 [10].
+Advantages: Handsome/Beautiful [12]; Resistant to Disease
+(+8) [5].
+Perks: Deep Sleeper; No Hangover; Sanitized Metabolism. [3]
+Disadvantages: Bioroid Body [-4]; Impulsiveness (12) [-10].
+Date: 2083.
+Cost: $94,000.
+
+Huli
+56 points
+A “furry” fox-girl/boy.
+
+TRIAD PLEASURE MODELS
+see In the Well, pp. 87-88
+Products of one of the Martian Triads’ most profitable lines
+of work: black-market or merely dubious companions and sex
+toys. As the products of criminal activity, these are all effectively at least LC3.
+
+Budget Model
+-20 points
+Very much what the name implies.
+Attribute Modifiers: ST-1 [-10].
+Advantages: Handsome/Beautiful [12]; Resistant to Disease
+(+8) [5].
+Perks: Extreme Sexual Dimorphism 2 (p. 6). [2]
+Disadvantages: Bioroid Body [-4]; Impulsiveness (12) [-10];
+Lecherousness (12) [-15].
+Date: 2082.
+Cost: $55,000.
+
+Eros
+20 points
+The mainstay of the Triad bioroid business.
+Attribute Modifiers: ST-1 [-10]; HT+1 [10].
+Advantages: Pheromone Control (Sex) [27]; Resistant to Disease (+8) [5]; Very Handsome/Beautiful [16].
+Perks: Deep Sleeper; Extreme Sexual Dimorphism 3 (p. 6); No
+Hangover; Sanitized Metabolism. [6]
+
+Attribute Modifiers: ST-1 [-10]; DX+1 [20]; HT+1 [10].
+Advantages: Acute Hearing 1 [2]; Flexibility [5]; Handsome/Beautiful [12]; Perfect Balance [15]; Pheromone Control (Sex) [27]; Resistant to Disease (+8) [5]; Temperature
+Tolerance 1 [1].
+Perks: Deep Sleeper; Fur; Sanitized Metabolism. [3]
+Disadvantages: Bioroid Body [-4]; Impulsiveness (9) [-15];
+Lecherousness (12) [-15].
+Date: 2087.
+Cost: $138,000.
+
+Notes
+Remember to adjust the cost of this template according to
+the GM’s decision about the effectiveness of pheromones in his
+campaign (see pp. 5 and 9-10).
+
+Nyame
+52 points
+An exotic hermaphromorph model. Most Nyames have a
+very androgynous appearance. However, some subtypes
+remove Androgynous from their Appearance.
+Attribute Modifiers: HT+2 [20].
+Advantages: Handsome/Beautiful (Androgynous) [12]; Hermaphromorph [5]; Pheromone Control (Sex) [27]; Resistant
+to Disease (+8) [5].
+Perks: Deep Sleeper; Sanitized Metabolism. [2]
+Disadvantages: Bioroid Body [-4]; Lecherousness (12) [-15].
+Date: 2090.
+Cost: $152,000.
+
+Notes
+Remember to adjust the cost of this template according to
+the GM’s decision about the effectiveness of pheromones in his
+campaign (see pp. 5 and 9-10).
+
+BIOROIDS
+
+27
+
+Submissa
+49 points
+A robust toy for those who want to play rough.
+Attribute Modifiers: HT+3 [30].
+Secondary Characteristic Modifiers: Will-1 [-5].
+Advantages: Damage Resistance 1 (Tough Skin, -40%) [3];
+Resistant to Disease (+8) [5]; Very Handsome/Beautiful
+[16]; Very Rapid Healing [15].
+Perks: Extreme Sexual Dimorphism 3 (p. 6); Sanitized Metabolism. [4]
+Disadvantages: Bioroid Body [-4]; Lecherousness (12) [-15].
+Date: 2085.
+Cost: $137,000.
+
+VALKYRIE
+see In the Well,
+p. 87; 114 points
+A Triad-designed combined
+pleasure/combat model.
+Attribute Modifiers: ST+1 [10]; DX+2 [40]; HT+2 [20].
+Advantages: Beautiful [12]; Breath-Holding 1 [2]; Combat
+Reflexes [15]; High Pain Threshold [10]; Less Sleep 2 [4];
+Pheromone Control (Dominance) [8]; Pheromone Control
+(Sex) [27]; Resistant to Disease (+8) [5]; Resistant to Poison
+(+3) [5].
+Disadvantages: Bad Temper (12) [-10]; Bioroid Body [-4];
+Gluttony (12) [-5]; Impulsiveness (12) [-10]; Lecherousness (12) [-15].
+Date: 2088.
+Cost: $173,000.
+
+Perks: Sanitized Metabolism. [1]
+Disadvantages: Bioroid Body [-4]; G-Intolerance (0.05 G
+increment) [-20].
+Features: Home gravity of 0 G; Taboo Traits (Mental Instability); Vacuum-adapted physiology (Smooth, jet black skin;
+long hair that acts as a heat radiator).
+Racial Skills: Free Fall (A) DX+1 [4].
+Date: 2092.
+Cost: $100,000.
+
+Variations
+Void Dancer: KTT’s long-term intention is to produce a
+parahuman who can pass on these abilities to offspring.
+However, that is infeasible at current levels
+of biotechnological development. Anything
+approaching this goal would have to include
+multiple design compromises, some of them
+with significant ethical implications.
+Void Soldier: The military version of the
+Void Flyer. Add Combat Reflexes [15] and
+High Pain Threshold [10]; the template value
+becomes 60 points, and the cost $125,000.
+ZR-23: Another military model, similar to the Void Soldier,
+still under development by Xiao Chu. The company has
+attempted to incorporate more combat-useful features while
+mixing original design and features copied from KTT (probably
+without industrial espionage). To represent current prototypes,
+use the Void Flyer template but delete the Appearance, add
+Combat Reflexes [15], and change the G-Intolerance disadvantage to (0.1 G increment) [-10]. However, problems with the
+neurological and physiological design mean that it also adds
+DX-1 [-20] and HT-1 [-10], and changes the HP to -3 [-6]; the
+template value thus becomes 20 points. Production units will
+probably be significantly improved from this.
+
+Notes
+Remember to adjust the cost of this template according to
+the GM’s decision about the effectiveness of pheromones in his
+campaign (see pp. 5 and 9-10).
+The standard template makes for a rather unstable protector. Some Valkyries – especially those intended as bodyguards
+first, attractive companions second – may not have Lecherousness or use of sex pheromones (or for that matter the
+Dominance type). Some purchasers may prefer them not to
+have Impulsiveness. Perfume Glands (p. 9) could make a good
+replacement for the Pheromone Control; a bodyguard can
+smell nice and still do her job.
+
+VOID FLYER
+see Deep Beyond, p. 116; 35 points
+An exotic design from Kosmozavot Tenno Tanjo, able to
+survive unprotected in space for an hour or more.
+Attribute Modifiers: ST-1 [-10].
+Secondary Characteristic Modifiers: HP-1 [-2].
+Advantages: 3D Spatial Sense [10]; Damage Resistance 1
+(Tough Skin, -40%) [3]; Doesn’t Breathe (Oxygen Storage
+¥50, -40%) [12]; Extra Arms 2 (Foot Manipulators, -30%;
+Short, -50%) [4]; Handsome/Beautiful (Off-the-Shelf
+Looks, -50%) [6]; Nictitating Membrane 1 [1]; Radiation
+Tolerance 5 (p. 6) [10]; Resistant to Disease (+8) [5]; Temperature Tolerance 10 [10]; Vacuum Support [5].
+
+XENOCOP
+see Fifth Wave, p. 120; 107 points
+A U.S. design, intended for use in law-enforcement and
+security work. It is built to be fast and capable, and to inspire
+trust among humans.
+Attribute Modifiers: DX+1 [20]; IQ+1 [20].
+Secondary Characteristic Modifiers: Per+2 [10]; FP+3 [9];
+Basic Speed+1.00 [20].
+Advantages: Attractive [4]; Combat Reflexes [15]; Fit [5]; Hard
+to Kill 2 [4]; Voice [10].
+Disadvantages: Bioroid Body [-4]; Selfless (12) [-5].
+Quirks: Attentive. [-1]
+Features: Taboo Traits (Mental Instability; Unattractiveness,
+p. 8).
+Date: 2089.
+Cost: $138,000.
+
+Notes
+The original template for this type included Short Lifespan,
+but there is no obvious reason for that to be present, so it has
+been excluded here. (Strictly speaking, the cost should be
+increased by $10,000 to reflect this.) A GM who wants to retain
+consistency, or to emphasize the nature of bioroids as manufactured products, can simply put Short Lifespan 1 back into
+the template, reducing the total value by 10 points.
+
+BIOROIDS
+
+28
+
+CHAPTER FOUR
+
+UPLIFTED
+ANIMALS
+The templates given here cover various sorts of uplifted or
+modified animals that may make appropriate player characters in some campaigns. Genetically engineering animals for
+near-human intelligence has proven strictly a niche activity in
+economic terms. They are often regarded as a rather vulgar bit
+of showing off by academics in the field of applied genetic
+engineering. Still, some types have proven moderately useful in
+limited roles.
+These templates generally include Social Stigma (Valuable
+Property), as that is pretty much the universal situation for
+such creatures, and Dead Broke, because something that is
+regarded as property cannot itself own anything. Some
+uplifted animals might be able to make a case for greater civil
+rights in some broad-minded jurisdictions. In such situations,
+the creatures could have a different Social Stigma (or even
+none at all) and some higher Wealth level.
+
+human tongue; their brains have been changed too much for
+them to process natural dolphin speech. They need external
+hardware (and a computer of some kind) to produce comprehensible speech.
+Attribute Modifiers: ST+4 (No Fine Manipulators, -40%;
+Size, -10%) [20]; DX+3 (No Fine Manipulators, -40%) [36];
+IQ-2 [-40]; HT+1 [10].
+Secondary Characteristic Modifiers: SM +1; Will+2 [10];
+Per+2 [10].
+Advantages: Acute Hearing 4 [8]; Doesn’t Breathe (Oxygen
+Storage ¥100, -30%) [14]; Enhanced Move 1 (Water) [20];
+Enhanced Tracking 1 [5]; Injury Tolerance (No Neck) [5];
+Nictitating Membrane 1 [1]; Peripheral Vision [15]; Pressure Support 2 [10]; Scanning Sense (Sonar; Reduced
+Range 1/5, -20%) [16]; Temperature Tolerance 1 [1]; Ultrasonic Speech [10].
+Disadvantages: Cannot Speak (Mitigator, Vulnerable, External loudspeakers with computer connections, -60%) [-6];
+Dead Broke [-25]; Hidebound [-5]; Innumerate [-5]; Native
+Language reduced to Spoken (Accented)/Written (Broken)
+[-3]; No Legs (Aquatic) [0]; No Manipulators [-50]; No Sense
+of Smell/Taste (Can taste, -50%) [-2]; Short Lifespan 1 [-10];
+Social Stigma (Valuable Property) [-10]; Stress Atavism (12;
+Severe) [-20].
+Quirks: Distractible. [-1]
+Date: 2059.
+Cost: $80,000.
+
+Notes and Variations
+
+DOOLITTLE DOLPHIN
+see Under Pressure, p. 101; 14 points
+A dolphin raised to near-human intelligence by genetic
+engineering, at the expense of mental stability, alertness, and
+instinct. Note that a Doolittle’s “native” language is always a
+
+Some larger specimens may be SM +2. For these, change ST
+to +7 (No Fine Manipulators, -40%; Size, -20%) [28], increasing
+the template value to 22 points.
+A substantial minority of Doolittles experience severe personality disorders shortly after reaching maturity. In game
+terms, the most common symptoms are various combinations
+of Bestial, Bully, Incurious, Low Empathy, Manic-Depressive,
+Paranoia, and Slave Mentality. These often first develop after
+an episode of Stress Atavism. In some cases, they manifest only
+during such episodes – see the rules for Stress Atavism
+(pp. B156-157). These need not count against campaign disadvantage limits, at the GM’s option.
+The Doolittle germline has recently been developed further:
+Delphís: Change IQ to -1 [-20], Per to +1 [5], and Will to +1
+[5]. Remove Hidebound, Innumerate, and the limitations on
+Native Language. Change Stress Atavism to (Moderate) (15) [-7].
+
+UPLIFTED ANIMALS
+
+29
+
+Delphís can suffer the same sort of personality disorders as
+Doolittles, but this is rare. They are one species with a very
+good chance of acquiring substantial civil rights in many areas.
+50 points. ($122,000; 2084.)
+
+Not to go on all-fours; that
+is the Law. Are we not Men?
+– H.G. Wells, The Island
+of Doctor Moreau
+
+GANESH
+see Fifth Wave, p. 120; 150 points
+An uplifted elephant, most often encountered as a worker
+animal – but smarter than that implies.
+Attribute Modifiers: ST+35 (Size, -30%) [245]; DX+2 [40]; IQ-2
+[-40]; HT+2 [20].
+Secondary Characteristic Modifiers: SM +3; Will+2 [10];
+Per+1 [5]; Basic Speed-2.00 [-40].
+Advantages: Acute Hearing 1 [2]; Extra-Flexible Arm* [5];
+Long Arm (+1 SM)* [10]; Damage Resistance 4 (Tough
+Skin, -40%) [12]; Extra Legs (Four Legs) [5]; Less Sleep 4
+[8]; Peripheral Vision [15]; Subsonic Speech [10].
+Perks: Penetrating Voice. [1]
+Disadvantages: Bad Grip 3 [-15]; Cannot Speak [-15];
+Chummy [-5]; Dead Broke [-25]; Horizontal [-10]; Increased
+Consumption 1 [-10]; Increased Life Support (Massive)
+[-10]; Innumerate [-5]; No Depth Perception [-15]; One Arm
+[-20]; Social Stigma (Valuable property) [-10]; Stress
+Atavism (12; Mild) [-10]; Weak Arm (1/4 ST)* [-5].
+Quirks: Cannot Jump (p. 7); Dull; Staid. [-3]
+Features: Taboo Trait (Fixed IQ, p. 8).
+Date: 2081.
+Cost: $351,000.
+* Apply the modifiers Extra-Flexible (+50%), Long, +1 SM
+(+100%), and Weak, 1/4 ST (-50%) for Extra Arms to a single
+“arm” (the elephant’s trunk).
+
+MONKEY PLUS
+see Fifth Wave, p. 120; -65 points
+An uplifted monkey, intended as a pet/companion. Being
+based on a tropical species, it has a preferred temperature
+range of 55°-123°.
+Attribute Modifiers: ST-6 [-60]; DX+3 [60]; IQ-3 [-60]; HT+3 [30].
+Secondary Characteristic Modifiers: SM -4; Will+3 [15];
+Per+3 [15]; Basic Speed+0.50 [10].
+Advantages: Acute Hearing 2 [4]; Brachiator [5]; Extra Arm 1
+(No Physical Attack, -50%; Short, -50%) [2]; Temperature
+Tolerance 1 [1].
+Perks: Fur. [1]
+Disadvantages: Chummy [-5]; Dead Broke [-25]; Innumerate
+[-5]; Semi-Upright [-5]; Short Arms (p. 7) [-10]; Short
+
+Lifespan 1 [-10]; Sleepy (1/2 the time) [-8]; Social Stigma
+(Valuable Property) [-10]; Stuttering [-10].
+Features: Taboo Trait (Fixed IQ, p. 8; Genetic Defects).
+Date: 2082.
+Cost: $50,000.
+
+NEO-PINNIPED
+see Fifth Wave, p. 121; -6 points
+An uplifted sea lion, employed by both military and civilian
+organizations for shallow-water work.
+Attribute Modifiers: ST+3 (No Fine Manipulators, -40%;
+Size, -10%) [15]; DX+2 (No Fine Manipulators, -40%) [24];
+IQ-2 [-40]; HT+2 [20].
+Secondary Characteristic Modifiers: SM +1; Will+2 [10];
+Per+2 [10]; Basic Move-3 (Ground Only, -60%) [-6].
+Advantages: 3D Spatial Sense [10]; Acute Taste and Smell 2 [4];
+Amphibious [10]; Combat Reflexes [15]; Damage Resistance
+1 (Flexible, -20%) [4]; Doesn’t Breathe (Oxygen Storage
+¥100, -30%) [14]; Enhanced Move 1 (Water) [20]; Pressure
+Support 1 [5]; Sharp Teeth [1]; Temperature Tolerance 1 [1];
+Vibration Sense (Water) [10].
+Perks: Fur. [1]
+Disadvantages: Chummy [-5]; Colorblindness [-10]; Dead
+Broke [-25]; Increased Life Support (Massive) [-10]; Innumerate [-5]; Quadruped [-35]; Short Legs (p. 7) [-2]; Short
+Lifespan 1 [-10]; Social Stigma (Valuable Property) [-10];
+Stress Atavism (12; Mild) [-10]; Stuttering [-10].
+Quirks: Distractible; Dull. [-2]
+Features: Early Maturation 1; Taboo Trait (Fixed IQ, p. 8).
+Date: 2079.
+Cost: $50,000.
+
+RAT KING
+see Deep Beyond, p. 114; 0 points
+Rat kings are groups of uplifted and cybernetically
+enhanced rats, capable of functioning as a gestalt intelligence. The template represents one member of a pack of 11
+or more individuals.
+Attribute Modifiers: ST-8 [-80]; DX+3 [60]; IQ-1 [-20]; HT+3 [30].
+Secondary Characteristic Modifiers: Per+4 [20].
+Advantages: Acute Taste and Smell 4 [8]; Enhanced Time
+Sense [45]; Mind Reading (Racial, -20%; Sensory, +20%;
+Telecommunication, -20%) [24]; Mindlink (To Allies; 10-99
+beings; Racial, -20%; Sensory, +20%; Telecommunication, -20%) [16]; Night Vision 5 [5]; Peripheral Vision [15];
+Reduced Consumption 4 (Cast-Iron Stomach, -50%) [4];
+Resistant to Disease (+8) [5]; Sharp Teeth [1]; Telecommunication (Infrared; Reduced Range 1/2, -10%) [9]; Telecommunication (Radio; Reduced Range 1/5, -20%) [8];
+Temperature Tolerance 1 [1]; Vibration Sense (Air; Only
+works within 4 yards, -20%) [8].
+Perks: Fur; No Degeneration in Zero-G. [2]
+Disadvantages: Bad Grip 1 [-5]; Cannot Speak [-15]; Colorblindness [-10]; Dead Broke [-25]; Electrical [-20]; Gregarious [-10]; Horizontal [-10]; No Depth Perception [-15];
+Short Arms (p. 7) [-10]; Short Lifespan 2 [-20]; Sleepy (1/2
+the time) [-8]; Ugly [-8]; Unusual Biochemistry [-5].
+Quirks: Phobic response to loss of contact with its pack. [-1]
+
+UPLIFTED ANIMALS
+
+30
+
+Racial Skills: Urban Survival (A) Per-1 [1].
+Features: Sterile.
+Date: 2097.
+Cost: N/A.
+
+WAR-DOP “D-MODEL”
+see Under Pressure, p. 102; 54 points
+A modified harbor porpoise with extensive neurological
+and cybernetic enhancements. It was one of the first successful animal-intelligence upgrades, albeit using electronics as
+much as genetic enhancement. As a military design with a puppet implant integrated with its implant computer, a war-dop will
+virtually always have a substantial Duty, probably Involuntary –
+unless it is an escaped renegade, in which case its Enemies will
+be formidable. The built-in weaponry makes such designs LC2.
+
+Notes
+
+See Deep Beyond for typical skills. Smaller packs are possible; in a group of 10 or less, the Mindlink advantage costs just
+8 points.
+Because of their history, rat kings are generally regarded less
+as property than as the dangerous products of mad (or at least
+highly unwise) science. Thus, their social disadvantages vary
+Attribute Modifiers: ST+3 (No Fine Manipulators, -40%)
+with their current base of operations. A pack that has fallen into
+[18]; DX+2 (No Fine Manipulators, -40%) [24]; IQ-2 [-40];
+the hands of EDI would have Social Stigma (Subjugated) if it
+HT+1
+[10].
+was lucky, while one on the loose in Vesta would have EDI as a
+Secondary
+Characteristic Modifiers: Will+2 [10]; Per+2 [10].
+major Enemy. One that escaped into the wider outer system
+Advantages:
+3D Spatial Sense [10]; Acute Hearing 4 [8]; Burncould have anything from Second-Class Citizen up to Monster,
+ing Attack 1d (Costs Fatigue, 2 FP, -10%; Melee Attack,
+depending on how it interacts with other beings – but it would
+Reach C, Cannot Parry, -35%; No Signature, +20%; Surge,
+surely still have Enemies.
++20%; Temporary Disadvantage, Electrical, -20%) [4];
+Most rat kings are Dead Broke, having no access to physical
+Detect (Electrical and magnetic fields) [20]; Doesn’t Breathe
+resources. However, one that, say, formed part of an activist
+(Oxygen Storage ¥100, -30%) [14]; Enhanced Move 1.5
+group might have some functional assets, allowing this disad(Water) [30]; Enhanced Tracking 1 [5]; Injury Tolerance
+vantage to be reduced or eliminated.
+(No Neck) [5]; Nictitating Membrane 1 [1]; Peripheral
+The Electrical disadvantage here represents the rat’s effecVision [15]; Pressure Support 2 [10]; Protected Sense
+tively total dependence on its digital implants. Shut those
+(Sonar) [5]; Scanning Sense (Sonar) [20]; Temperature Toldown, and the loss of accustomed cognitive, communication,
+erance
+1 [1]; Ultrasonic Speech [10].
+and sensory ability will leave the creature helpless.
+Perks:
+Accessory
+(Tiny Computer). [1]
+Gregarious represents its need to remain in telecommuniDisadvantages:
+Cannot
+Speak (Mitigator, Vulnerable, Extercation contact as a group, and hence works in a slightly varinal loudspeakers with computer connections, -60%) [-6];
+ant way: So long as contact persists, each member of the pack
+Chummy [-5]; Dead Broke [-25]; No Legs (Aquatic) [0]; No
+can operate without penalty, even if out of sight of other
+Manipulators [-50]; No Sense of Smell/Taste (Can
+beings. Conversely, if the rat king loses contact with the others,
+taste, -50%) [-2]; Short Lifespan 2 [-20]; Social Stigma
+it immediately takes the penalties for being alone, which in this
+(Valuable Property) [-10]; Stress Atavism (9; Mild) [-15].
+case represent loss of gestalt intellectual capacity as much as
+Quirks:
+Cannot handle human language at all if implant comemotional trauma – even if it has other friendly beings in sight.
+puter
+isn’t operating; Counts as “Electrical” for purposes of
+Sudden loss of contact would justify a Fright Check at +4 – or
+attempts
+to locate it using EM field detectors; Distractible;
+unmodified or at a penalty, if the rat has reason to believe that
+Dull. [-4]
+the pack is taking casualties.
+Date: 2055.
+Although this template doesn’t include the Fixed IQ feature
+Cost: $170,000.
+(p. 8), it would be very hard for a rat king to display an IQ much
+above 9. There’s only so much intelligence that can
+be crammed into a rat-size brain, even with bleeding-edge microelectronic enhancements. However,
+“Here’s what I suggest,” he said. “You pretend
+a rat king might buy a point or two of extra IQ with
+that rats can think, and I’ll promise to pretend
+a -40% limitation, “Group Assisted,” meaning that it
+requires at least a half dozen other rats to be in conthat humans can think, too.”
+tact with the character and doing nothing but
+– Terry Pratchett,
+standing motionless as they lend their brains and
+processing capacity to assist with some task.
+The Amazing Maurice
+
+and His Educated Rodents
+
+Rat King PCs
+To design a rat king as a player character, create
+the other members of the pack using the above template and add an appropriate Social Stigma, any other relevant
+disadvantages, and a reasonable number of minor advantages,
+skills, etc. Pack members will be worth around 10-60 points,
+depending on circumstances. Then, take one member of the
+pack as the PC and give it the rest as Allies (Constantly). The
+Allies’ point totals typically will be 25% or 50% of the PC’s final
+value, and there will be 11-20 individuals, so the group will cost
+32 or 64 points. This allows a rat-king PC to be a 50- to 150-point
+character without much trouble.
+
+Notes and Variations
+E-Model: A more recent, more advanced dolphin-based
+U.S. military uplift. The E-model is still fairly rare and is
+regarded as not fully proven; one renegade, “Coak,” has
+become a dangerous terrorist. Increase ST to +5 (No Fine
+Manipulators, -40%; Size, -10%) [25] and SM to +1. Remove
+the IQ penalty, the Per and Will bonuses, and Dull. Reduce
+Short Lifespan to 1 [-10]. 92 points. ($320,000, 2085.)
+
+UPLIFTED ANIMALS
+
+31
+
+INDEX
+Active VNO meta-trait, 8-9.
+Advantages, 6.
+Algonaut template, 23-24; bioshell, 23-24;
+free, 24.
+Animals, see Uplifted Animals.
+Anu template, 13.
+Appearance trait, 4-5.
+Aquatic bioroids, 19-20.
+Arctic Aquamorph template, 11.
+Ariadne template, 11.
+Avatar template, 11-12.
+Bigger Daddy bioshell, 26.
+Bīngmǎyǒng template, 24.
+Bioroids, Appearance, 4-5; gender, 21; IQ,
+7; monetary costs, 4; nonhumanoid, 25;
+Reputation, 5; templates, 19-28;
+Unnatural Features, 5.
+Bioshells, Algonaut, 23-24; Gillmorph, 19;
+lens, 6; Titan Wrestler, 26.
+Boy Next Door template, 27.
+Brownie template, 12.
+Budget Model pleasure bioroid template,
+27.
+Build-related disadvantages, 6.
+Busr template, 20.
+Camazotz template, 12.
+Cannot Jump quirk, 7.
+Chiroptian template, 12.
+Chronos template, 20-21.
+Clarke-1 Vac, 21-22.
+Coak, 31.
+Compulsive Behavior disadvantage, 6-7.
+Compulsive Counting disadvantage, 7.
+Delphís template, 29-30.
+Disadvantages, 6-7.
+Doolittle dolphin template, 29-30.
+Drylander template, 12.
+Elf Kitten template, 24.
+Eros template, 27.
+Europan template, 22.
+Extreme Sexual Dimorphism perk, 6.
+Feathers perk, 6.
+Features, 8.
+Freefall parahumans, 12-13.
+Ganesh template, 30.
+Gender, 21.
+Germline Improvement Modification
+template, 15.
+Gillmorph template, 19; bioshell, 19.
+Girl Next Door template, 27.
+Guardian template, 17; feasibility of
+project, 17.
+Gullibility disadvantage, 7.
+GURPS, 5, 7, 8, 14, 18, 22, 25; Basic Set,
+4; Bio-Tech, 3, 4, 14; Martial Arts, 26;
+Power-Ups 2: Perks, 3; see also
+Transhuman Space.
+Hamas (Beta) template, 17-18.
+Hamlin template, 22-23.
+
+Han Alpha template, 13.
+Hecate template, 23.
+Helot template, 18.
+Herakles template, 13-14.
+Houri template, 23.
+Huli template, 27.
+Intelligence (IQ) characteristic, 7.
+Istislaam (Beta) template, 18.
+J7-S53 template, 15-16.
+Kouros template, 14.
+Kumo template, 12-13.
+Leonardo template, 24-15.
+MacLarren clone template, 14.
+Mahatma template, 14.
+Mars Adapt template, 14.
+May-I, 23.
+Meta-traits, 8-10.
+Methuselah template, 16.
+Misha template, 14.
+Monetary costs, 4.
+Monkey Plus template, 30.
+
+Nemo template, 19.
+Neo-Pinniped template, 30.
+No Pheromones, 10.
+Nonhumanoid bioroids, 25.
+Nyame template, 27.
+Omokage Labs slave designs, 23-25.
+Pandora template, 15.
+Parahumans and upgrades, Appearance
+and, 4-5; definition, 11; monetary costs,
+4; problematic early designs, 15-16;
+Reputation and, 5; templates, 11-18.
+Parthenogenesis perk, 6.
+Passing Appearance perk, 6.
+Perfume Glands meta-trait, 9.
+Perks, 6.
+Pheromone Control meta-trait, 9-10;
+options, 9.
+Pheromones, effects, 5; meta-traits, 9-10;
+setting default, 5.
+Pleasure bioroids, 23-24, 26-28.
+Pre-Alpha template, 15.
+Problematic early designs, 15-16.
+Proto-Tennin template, 13.
+Purushagor template, 16.
+Purushmachh template, 20.
+Quirks, 6, 7.
+Racial-interaction traits, 4.
+Radiation Tolerance advantage, 6.
+Ranger template, 16.
+Rat King template, 30-31; as PCs, 31.
+Red Bear template, 14.
+
+INDEX
+
+Reflective Eyes feature, 8.
+Rodosha template, 25.
+Salud template, 16.
+Scales perk, 6.
+Scheherazade template, 23.
+Seawolf template, 20.
+Short Arms disadvantage, 7.
+Short Legs disadvantage, 7.
+Snow Viper template, 20.
+Social engineering projects, 16-18.
+Spartan template, 26.
+Submissa template, 28.
+Taboo Traits features, 8.
+Templates, bioroids, 19-28; monetary
+costs, 4; parahumans and upgrades, 1118; uplifted animals, 29-31; see also
+Bioshells.
+Tennin parahuman, II template, 13; III
+template, 13; Proto template, 13; Skinny
+and, 6.
+Thin Frame quirk, 7.
+Thunder Lizard bioshell, 26.
+Tiaoqi template, 26.
+Titan Wrestler template, 26-27.
+Transhuman Space, 3-5, 9, 11, 13;
+Broken Dreams, 15-18, 20, 22, 23;
+Changing Times, 3, 4, 6, 8, 11-13, 17,
+19, 22, 23; Deep Beyond, 12, 13, 22-24,
+26, 28, 30, 31; Fifth Wave, 11-18, 23,
+26, 28, 30; High Frontier, 12, 14, 21;
+In the Well, 13, 14, 18, 23, 26-28;
+Personnel Files 2 – The Meme Team,
+3; Shell-Tech, 3; Under Pressure, 8,
+11, 16, 19, 20, 29, 31; Wings of the
+Rising Sun, 3; see also GURPS.
+Triad pleasure models, 27-28.
+Unaffected by SAD feature, 8.
+Unnatural Features disadvantage, 4-5.
+Upgrades, see Parahumans and Upgrades.
+Uplifted animals, Appearance, 4-5;
+common disadvantages, 29; monetary
+costs, 4; Reputation, 5; templates, 2931; Unnatural Features, 5.
+Utopia template, 18.
+Valkyrie template, 28.
+Void Dancer parahuman, 28.
+Void Flyer template, 28.
+Void Soldier lens, 28.
+Vomeronasal organ (VNO), 5; see also
+Pheromones.
+War-Dop, “D-Model” template, 31; “EModel” template, 31.
+Whiplash Warrior bioshell, 27.
+Wu Tsao parahuman, Skinny and, 6.
+Xenocop template, 28.
+Zhiminde template, 18.
+ZR-5 parahuman, Skinny and, 6.
+ZR-12 template, 23.
+ZR-23 lens, 28.
+
+32
+
+STUCK FOR AN ADVENTURE?
+
+NO PROBLEM.
+Warehouse 23 sells high-quality
+game adventures and supplements
+in print and PDF formats.
+l Free downloadable adventures for
+
+GURPS, In Nomine, and Traveller!
+l Fun gaming accessories – shot glasses,
+
+shirts, specialty six-siders, and more!
+l PDFs from Atlas Games, Amarillo Design
+
+Bureau, Pelgrane Press, Goodman Games,
+and many others – plus gems from
+the up-and-comers.
+l Original material for Transhuman Space
+
+and new GURPS supplements from
+Kenneth Hite, Phil Masters, David Pulver,
+Sean Punch, and William Stoddard!
+l Fully searchable files of GURPS Fourth
+
+Edition supplements.
+l Digital editions of out-of-print classics,
+
+from Orcslayer and the complete run of ADQ
+to GURPS China and GURPS Ice Age.
+l Buy board games and roleplaying PDFs in
+
+the same order! Download digital purchases
+again whenever you need to.
+
+®
+
+STEVE JACKSON GAMES
+warehouse23.com
+
+

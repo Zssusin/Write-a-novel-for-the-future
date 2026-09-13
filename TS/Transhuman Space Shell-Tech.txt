@@ -1,0 +1,3288 @@
+TM
+
+Written by PHIL MASTERS
+Edited by ANDREW HACKARD
+Illustrated by ANDY CLARKSON, NEIL COOK, PAUL DALY, JESSE DEGRAFF,
+MATTHEW KRESGE, LOKARIAN, JEREMY MCHUGH, and RAMÓN PÉREZ
+An e23 Sourcebook for GURPS ®
+
+STEVE JACKSON GAMES
+Stock #37-6702
+
+Version 1.0 – December 7, 2007
+
+®
+
+CONTENTS
+INTRODUCTION . . . . . . . . . . . 3
+About GURPS . . . . . . . . . . . . . . . . . 3
+About Transhuman Space. . . . . . . 3
+
+THE CYBERSHELLS. . . . . . . . . 4
+WEARABLES . . . . . . . . . . . . . . . . . . 4
+Cybertool . . . . . . . . . . . . . . . . . . . . . 4
+Reporter’s Vest . . . . . . . . . . . . . . . . . 6
+
+DOMESTIC AND UTILITY DEVICES . . 6
+Boatbot . . . . . . . . . . . . . . . . . . . . . . . 6
+“C-Brown” Gardener Shell . . . . . . . 7
+Ro-Ped . . . . . . . . . . . . . . . . . . . . . . . 8
+Shakoosh . . . . . . . . . . . . . . . . . . . . . 9
+Swarmdozer. . . . . . . . . . . . . . . . . . 10
+
+DATA COLLECTION AND
+EXPLORATION. . . . . . . . . . . . . 11
+Beobachter Data
+Collection Unit . . . . . . . . . . . . . 11
+Idmon Explorer Aquabot . . . . . . . 11
+Stormchaser. . . . . . . . . . . . . . . . . . 11
+
+BIOMORPHIC SHELLS . . . . . . . . . . 12
+Cyberdog. . . . . . . . . . . . . . . . . . . . . 12
+Cyberdolphin . . . . . . . . . . . . . . . . . 13
+
+High Arcadian Centaur. . . . . . . . . 13
+Medusa . . . . . . . . . . . . . . . . . . . . . . 14
+Mini-Snakebot . . . . . . . . . . . . . . . . 14
+Safari Shell (Gazelle). . . . . . . . . . . 15
+Safari Shell (Vulture) . . . . . . . . . . 15
+Treeshell . . . . . . . . . . . . . . . . . . . . . 16
+
+COMBAT SYSTEMS . . . . . . . . . . . . . 16
+Afrit . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Amphibious RATS . . . . . . . . . . . . . 17
+Ghola. . . . . . . . . . . . . . . . . . . . . . . . 17
+J-56 Ying
+Transatmospheric UCAV . . . . . 18
+Jump RATS . . . . . . . . . . . . . . . . . . 18
+Jungle RATS. . . . . . . . . . . . . . . . . . 18
+MCS-52 . . . . . . . . . . . . . . . . . . . . . . 19
+MCS-64 . . . . . . . . . . . . . . . . . . . . . . 19
+Medevac Shell . . . . . . . . . . . . . . . . 20
+Mini Scout-RATS. . . . . . . . . . . . . . 20
+Mini-UCAV . . . . . . . . . . . . . . . . . . . 21
+Seeker Missile . . . . . . . . . . . . . . . . 21
+Smart Torpedo . . . . . . . . . . . . . . . . 21
+Wingbot . . . . . . . . . . . . . . . . . . . . . 22
+
+GURPS System Design ❚ STEVE JACKSON
+GURPS Line Editor ❚ SEAN PUNCH
+Page Design ❚ PHIL REED and
+JUSTIN DE WITT
+
+Managing Editor ❚ PHIL REED
+Art Director ❚ WILL SCHOONOVER
+Production Artist ❚ ALEX FERNANDEZ
+Indexer ❚ MONICA STEPHENS
+Marketing Director ❚ PAUL CHAPMAN
+
+SPACE AND EXOTIC
+ENVIRONMENT MODELS . . . . 23
+Aerorover . . . . . . . . . . . . . . . . . . . . 23
+Baikal Cryobot . . . . . . . . . . . . . . . . 23
+Endymion Cybershell . . . . . . . . . . 23
+Gas Giant Aerobot. . . . . . . . . . . . . 24
+Herzberg Cybershell . . . . . . . . . . . 24
+Microgravity RATS . . . . . . . . . . . . 24
+Mining Worm. . . . . . . . . . . . . . . . . 25
+Service Nanosat . . . . . . . . . . . . . . . 25
+Tumbleweed . . . . . . . . . . . . . . . . . . 26
+Venus-Capable Cybershell . . . . . . 26
+Zero-G Stevedore. . . . . . . . . . . . . . 26
+
+SPECIALIST BIOSHELLS . . . . . . . . . 27
+Calamarine . . . . . . . . . . . . . . . . . . . 27
+Cetapod. . . . . . . . . . . . . . . . . . . . . . 28
+Crocshell. . . . . . . . . . . . . . . . . . . . . 28
+Monitor Monitor . . . . . . . . . . . . . . 28
+Sentient Snacks . . . . . . . . . . . . . . . 29
+Spionfisch. . . . . . . . . . . . . . . . . . . . 30
+Taniwha . . . . . . . . . . . . . . . . . . . . . 30
+Warshark . . . . . . . . . . . . . . . . . . . . 30
+
+Director of Sales ❚ ROSS JEPSON
+Errata Coordinator ❚ ANDY VETROMILE
+GURPS FAQ MAINTAINER ❚
+STÉPHANE THÉRIAULT
+
+Playtesters: Kyle Bresin, Eric Funk, Kelly Pedersen, Bill Seney, William H. Stoddard, and Roger Burton West
+GURPS, Warehouse 23, and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. Transhuman Space, Pyramid, Shell-Tech, e23, and the names
+of all products published by Steve Jackson Games Incorporated are registered trademarks or trademarks of Steve Jackson Games Incorporated, or used under license.
+Transhuman Space: Shell-Tech is copyright © 2007 by Steve Jackson Games Incorporated. All rights reserved.
+The scanning, uploading, and distribution of this material via the Internet or via any other means without the permission of the publisher is illegal,
+and punishable by law. Please purchase only authorized electronic editions, and do not participate in or encourage
+the electronic piracy of copyrighted materials. Your support of the author’s rights is appreciated.
+
+CONTENTS
+
+2
+
+INTRODUCTION
+One of the unique features that makes Transhuman Space
+an interesting RPG setting is the widespread use of cybershells.
+Any infomorph character can occupy and operate a wide variety of mechanical bodies, even moving between several in the
+course of a single scenario. The variety and pervasiveness of
+cybershells is extremely convenient. An infomorph in the right
+shell can perform an immense variety of tasks.
+A GM who wants to portray life in this setting in detail will
+need information on a wide variety of cybershells. Previous
+
+About GURPS
+Steve Jackson Games is committed to full support
+of GURPS players. Our address is SJ Games, P.O. Box
+18957, Austin, TX 78760. Please include a selfaddressed, stamped envelope (SASE) any time you
+write us! We can also be reached by e-mail:
+info@sjgames.com. Resources include:
+Pyramid (www.sjgames.com/pyramid). Our online
+magazine includes new GURPS rules and articles. It
+also covers the d20 system, Ars Magica, BESM, Call
+of Cthulhu, and many more top games – and other
+Steve Jackson Games releases like Illuminati, Car
+Wars, Transhuman Space, and more. Pyramid subscribers also get opportunities to playtest new GURPS
+books!
+New supplements and adventures. GURPS continues to grow, and we’ll be happy to let you know what’s
+new. For a current catalog, send us a legal-sized SASE,
+or just visit www.warehouse23.com.
+e23. Our e-publishing division offers GURPS
+adventures, play aids, and support not available anywhere else! Just head over to e23.sjgames.com.
+Errata. Everyone makes mistakes, including us –
+but we do our best to fix our errors. Up-to-date errata
+sheets for all GURPS releases, including this book, are
+available on our website – see below.
+Internet. Visit us on the World Wide Web at
+www.sjgames.com for errata, updates, Q&A, and
+much more. To discuss GURPS with SJ Games staff
+and fellow gamers, come to our forums at
+forums.sjgames.com. The GURPS Transhuman
+Space: Shell-Tech web page can be found at
+www.sjgames.com/transhuman/shell-tech.
+Bibliographies. Many of our books have extensive
+bibliographies, and we’re putting them online – with
+links to let you buy the books that interest you! Go to the
+book’s web page and look for the “Bibliography” link.
+
+Page References
+Rules and statistics in this book are specifically for
+the GURPS Basic Set, Fourth Edition. Page references
+that begin with B refer to that book, not this one.
+
+Transhuman Space supplements have included templates for
+a goodly number. However, all but the most recent of those
+books were for GURPS Third Edition. Changing Times
+(www.sjgames.com/transhuman/changingtimes/) converted
+Transhuman Space to GURPS Fourth Edition, but only had
+room for templates drawn from the Transhuman Space core
+book. Players and GMs can always use more.
+Shell-Tech includes GURPS Fourth Edition templates for
+every cybershell and bioshell found in every major
+Transhuman Space supplement, as well as several brand-new
+designs and variants. These shells cover every need, from
+household maintenance to extraterrestrial exploration, and
+can be useful in any Transhuman Space campaign. Each of
+them has to be combined with an infomorph to make a complete character. Changing Times includes a full set of infomorph templates. Readers will also need to refer to Chapter 3
+of Changing Times for a number of character features used in
+these templates, including the meta-traits Bioroid Body and
+Cybershell Body, Taboo Traits, Early Maturation, and No Legs
+(Portable).
+
+About the Author
+Phil Masters has been writing RPG material since 1980,
+GURPS supplements since 1993, and Transhuman Space supplements since 2002; among other things, he wrote Changing
+Times. He’s in a campaign in which he plays an SAI with the
+personality of a sarcastic English librarian, but that really isn’t
+typecasting.
+
+ABOUT TRANSHUMAN SPACE
+The Transhuman Space series presents a unique hard-science and high-biotech universe for roleplaying. Set in the Solar
+System in the year 2100, it is a setting rich in adventure, mystery, and ideological conflict. The core book is Transhuman
+Space, which presents an overview of the setting with game
+mechanics for GURPS Third Edition; other books in the line
+expand on specific aspects of the setting. Changing Times is a
+GM’s guide and Fourth Edition update for the line.
+
+INTRODUCTION
+
+3
+
+THE CYBERSHELLS
+“And . . . done!” Morag announced with a flourish as the
+cybertool on her left arm withdrew its miniature hands from the
+machine in front of her. She snapped a cover down, heard it
+latch, smiled, and ran a cable from her implant to the battered
+old cybershell’s socket as it powered up.
+“Fine. Will it work?” Felipe didn’t take his eyes away from the
+enclosed dock’s open window as he spoke.
+“Of course it will. I’m already getting nominal readings here.”
+She tapped her right temple. “Well, fairly nominal. It says it’s
+happy. All aboard!”
+Instead of answering, Felipe snapped off a burst from his
+assault pod. Something outside exploded, and a feathered wing
+fragment came through the window as Felipe ducked back.
+“Fake,” he snarled. “I recognized the model. Don’t think that’s
+even a local species here.”
+He began backing towards Morag, still watching the trees as
+he came. Morag began talking to the idiot AI in the machine, and
+a ceramic motor hummed into life. Felipe turned around for just
+
+long enough to help her push the thing down the slipway and
+into the water, where it turned of its own volition toward the sea.
+Morag quickly attached a towed platform to its hitch.
+“They’re coming!” yelled Felipe, firing off another burst.
+“So move!” yelled Morag, as the boatbot began to churn the
+water with its thrusters. The two agents jumped onto the towed
+platform and hunkered down as the boatbot moved out of the
+dock, quickly picking up speed. Morag risked a glance back and
+saw that a pair of the Colombians’ flashy new Hacha war-shells
+had emerged from the distant trees and were coming on at a run.
+Felipe snapped off a homing missile, but Morag didn’t even
+watch to see if it hit. She was too busy arguing with the boatbot’s
+AI, which was throwing up far too many amber flags in her
+vision – but at least it wasn’t slowing down.
+With a howl of exhilaration, Morag told it to head for the open
+sea.
+
+WEARABLES
+There are always uses for wearable or hand-portable equipment. In 2100, much of this gear has some degree of processing capacity – often enough to enable it to think for itself. Most
+wearable cybershells can be treated as a Wearable Virtual
+Interface (see Changing Times, p. 58), perhaps with a built-in
+tool purchased as a perk, or one or two sensory enhancements,
+but others merit complete templates of their own.
+
+CYBERTOOL
+129 points
+This is a type of device used by professional and hobbyist
+craftsmen and mechanics who aren’t too proud to employ not
+only the best tools, but also a little AI support in using them.
+The cybershell is a pod-like device, worn on the forearm. It can
+
+extend a pair of multi-jointed hands that can work on anything
+in the vicinity of the wearer’s own hand. Along with built-in
+cutting blades, a miniature “penlight,” and the ability to act as
+a power drill/screwdriver with a variety of heads, cybertools
+have micromanipulation capability and carry miniature cameras so that the controlling AI can see what they’re doing.
+Images are frequently passed on to another wearable or VII, so
+that the wearer can monitor operations. Normally, the wearer
+tells the AI what to do verbally, but someone with a linked VII,
+or a wearable interface and VR gloves or suit, can receive tactile feedback and learn to operate the micromanipulators
+directly, in effect acquiring miniature hands. (Teleoperation
+software isn’t needed for this; it’s an innate feature of the
+device, which can be used even while the shell’s AI is running,
+with no teleoperation penalty.) Alternatively, a skilled wearer
+
+Nevertheless he can use Tools, can devise Tools: with these the granite mountain
+melts into light dust before him; he kneads glowing iron, as if it were soft paste;
+seas are his smooth highway, winds and fire his unwearying steeds. Nowhere do
+you find him without tools; without Tools he is nothing, with Tools he is all.
+– Sartor Resartus, Thomas Carlyle (1831)
+
+THE CYBERSHELLS
+
+4
+
+and a well-trained NAI can become a very effective
+team, each performing part of a task in close coordination with minimal verbal interplay. Installed
+AIs are often optimized for tool use, and may provide features such as Ambidexterity.
+This template represents a professional-grade
+cybertool, robust enough to function in a wide
+range of environments. Use of such an item counts
+as at least improvised equipment for most tasks
+using skills such as Mechanic or Repair, and often
+qualifies as basic equipment at least equal to a
+mini-toolkit. For some tasks, especially when very
+small-scale work is involved, it’s better than that,
+granting a bonus or even permitting attempts at
+things that would otherwise be impossible. The
+GM determines how useful it is for any given purpose. 1.5 lbs., 5” long.
+Attribute Modifiers: ST-5 [-50]; HT+2 [20].
+Secondary Characteristic Modifiers: HP-1 [-2];
+SM-5.
+Advantages: Absolute Direction (Requires Signal,
+-20%) [4]; Claws (Sharp Claws) [5];
+Compartmentalized Mind (Controls) 1 [25];
+DR 7 (Can’t Wear Armor, -40%) [21]; Doesn’t
+Breathe [20]; Extra-Flexible Short Arms [0];
+High Manual Dexterity 4 [20]; Machine [25];
+Microscopic Vision 3 [15]; Night Vision 7
+[7]; Pressure Support 2 [10]; Protected Sense
+(Vision) [5]; Reduced Consumption 2
+(Recharge/refuel once a day) [4]; Sealed [15];
+Sensitive Touch [10]; Telecommunication
+(Cable Jack; Sensie, +80%) [9]; Telecommunication (Radio; Sensie, +80%; Reduced
+Range, 1/10, -30%) [15]; Temperature Tolerance
+4 [4]; Vacuum Support [5].
+Perks: Accessories (Built-in tool system with
+penlight, Micromanipulation Tools, Tiny
+Computer). [3]
+Disadvantages: Cybershell Body [-15]; No Legs
+(Portable) [-30]; No Sense of Smell/Taste [-5];
+Restricted Diet (Very Common, power cells)
+[-10].
+Quirks: Cannot Float. [-1]
+Features: Individuals of the same model closely
+resemble each other.
+Date: 2058. Cost: $1,500 + computer.
+Notes: The Compartmentalized Mind
+(Controls) advantage represents the user’s easy
+access to the cybertool’s senses, radio, built-in
+toolkit, and manipulators; this requires a VII or
+equivalent to be used to full effect.
+
+Variants
+Specialist cybertools have been developed for a
+number of purposes; most of these just add another Accessory perk or two. A few advanced models
+have Extra Arms; these may require specially
+designed AI software.
+
+Special Advantages,
+Disadvantages,
+and Modifiers
+A number of special features appear on several of these templates:
+
+Arm Modifications
+Cybershells often have special features incorporated in the design
+of their arms, which are evaluated by applying the special enhancements and limitations normally applied to Extra Arms to a base of
+10 points per arm; see Modifying Beings With One or Two Arms,
+p. B53. This produces advantages and disadvantages such as “ExtraFlexible Short Arms [0]” or “Weak Arms (Half Body ST) [-5].”
+
+Extra Wheels
+A number of these cybershells have the No Legs (Wheeled) disadvantage and also an Extra Wheels advantage. The latter is exactly the
+same as Extra Legs (p. B54), but applies to wheeled characters.
+
+Sealed (Acid-Resistant)
+Acid-Resistant is a new special enhancement for the Sealed
+advantage. It means that your impermeable layer is chemically highly resistant to acids. As a result, you are immune to the specific corrosive effects of acids, including the hostile atmosphere of planets
+such as Venus. This negates the DR-destroying effects of Innate
+Attacks with the Corrosion type which are defined as using acids,
+although they may still do regular damage if they penetrate the target’s DR. +40%.
+
+Short Legs
+Some legged beings – all quadrupeds in this book – can’t kick very
+far, either because they have short legs in proportion to their bodies,
+or because they are simply too small. (Note that even SM-1 or smaller creatures can nominally kick at Reach 1.) To reflect this, apply the
+Short limitation for Extra Arms (p. B53) to their Extra Legs advantage, meaning that they can only kick (or otherwise reach out with
+their feet) to Reach C. This gives them -2 points, which is treated as
+a disadvantage (Short Legs) in these templates for convenience.
+
+Super Jump (Bouncing Only)
+The Bouncing enhancement to Super Jump first appeared in
+GURPS Powers; this limited version appears in GURPS Supers.
+Figure your jumping distance as usual for the level of Super Jump –
+but you can’t actually jump using this! Instead, whenever you experience any fall or collision (deliberate or not), you get a roll against
+the best of your DX, Acrobatics, or Jumping, at -5 per multiple of
+your enhanced jumping Move, or fraction thereof, by which the
+impact velocity exceeds your jumping Move. On a success, you take
+no damage, but rebound with 90% of the impact velocity. -50%.
+
+Telecommunication (Sonar Comm)
+Telecommunication (Sonar Comm) is a new variant of this
+advantage (introduced in GURPS Powers) which uses modulated
+sonar. The transmission is omnidirectional; base range is 3 miles
+underwater, 50 yards multiplied by air pressure in atm when in air;
+base cost is 10 points.
+
+THE CYBERSHELLS
+
+5
+
+REPORTER’S VEST
+66 points
+This variant type of Wearable Virtual Interface isn’t actually restricted to professional media workers – similar designs
+have military, research, and hobby applications – but that’s
+their best-known use, to the point that the Reporter’s Vest has
+become something of a symbol of the profession. There are
+many variant designs; this template represents the GPSA Chal9c, a popular professional-grade model that is tough enough to
+survive vacuum or underwater operations, but similar (if less
+advanced) designs go back decades.
+The Chal-9c consists of an adjustable nanoweave torso harness/vest, with rigid modules at waist level holding batteries,
+computer, slots for extra data storage, a radio comms unit, and
+a coolant system to keep both the wearer and the electronics
+comfortable. (It also has plenty of pockets and pouches for
+spare equipment and possessions.) Clusters of cameras, microphones, and chemosensors, along with short-range lasercom
+and IR comms modules, are mounted around the wearer’s
+neck and on his shoulders, with additional cameras on a headband/earpiece mount (removable without deactivating the rest
+of the system when it would be inconvenient or socially unacceptable), all giving both a wide field of view and the option to
+record stereo visual and audio signals in a form that gives a
+good impression of direct personal experience for a human.
+Dedicated systems ensure excellent recording quality and resolution. The wearer uses a monocle or “sunglasses” display
+and dual earphones, and may even attach a small nose-plug for
+limited “scent playback”; alternatively, the system can be
+linked to a VII. The vest is rugged enough to act as reasonable
+torso armor for the wearer – not its primary function, but a
+life-saver for many reporters nonetheless. 5 lbs., 2’ in the
+largest dimension.
+Attribute Modifiers: ST-10 [-100]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+5 [10]; Per+2 [10];
+SM-1.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Compartmentalized Mind 1 (Dedicated Controls) [10];
+DR 10 (Can’t Wear Armor, -40%) [30]; Doesn’t Breathe
+[20]; Infravision [10]; Machine [25]; Night Vision 8 [8];
+Peripheral Vision [15]; Pressure Support 2 [10]; Protected
+Senses (Hearing, Vision) [10]; Reduced Consumption 3
+(Recharge/refuel once a week) [6]; Sealed [15];
+
+Telecommunication (Cable Jack; Sensie, +80%) [9];
+Telecommunication (Infrared Communication; Reduced
+Range, 1/10, -30%) [7]; Telecommunication (Laser
+Communication; Video, +40%; Reduced Range, 1/10, -30%)
+[17]; Telecommunication (Radio; Sensie, +80%) [18];
+Temperature Tolerance 5 [5]; Ultrahearing [5]; Vacuum
+Support [5].
+Perks: Accessory (Small Computer); Provides wearer with own
+DR as torso armor. [2]
+Disadvantages: Cybershell Body [-15]; No Legs (Portable)
+[-30]; No Manipulators [-50]; Restricted Diet (Very
+Common, power cells) [-10].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2039. Cost: $2,000 + computer.
+Note: The Dedicated Controls advantage represents the fact
+that the wearer can access the vest’s radio and senses, and also
+its vision protection if the wearer is using a “sunglasses” interface.
+
+Variants
+Police Vest: The NeoGuarda VY-2 is a similar model produced by PolyTacoma Inc. of Seattle and marketed to police
+forces; other similar designs exist. Aside from the sensory
+array’s usefulness in evidence gathering, it has a motorized
+mounting point for a light weapon on the shoulder, enabling
+the installed AI to provide the wearer with fire support. It usually runs a specially developed LAI with training in police and
+forensics skills and the ability to monitor images from multiple cameras and other sensors simultaneously, and even to
+track and engage multiple potential targets – claimed to be a
+potential life-saver in complex and unstable “arrest scenes,”
+but quite controversial among those who don’t trust LAIs with
+guns. Change ST to -4 [-40]; delete the HP modifier; change DR
+to 13 [39]; add Enhanced Tracking 2 (Multiple Lock-Ons,
++20%) [12]; delete the Laser communication; and change No
+Manipulators to “Arm is actually a Weapon Mount” [-8] and
+One Arm [-20]. (The special enhancement on Enhanced
+Tracking permits the character to take simultaneous Aim
+maneuvers against multiple targets with a single weapon, without having to point it at any of them; see GURPS Powers.) The
+price is $3,000 + computer, weapon, and the cost of a trained
+LAI which is usually part of the purchase, and the weight is 8
+lbs. 142 points.
+
+DOMESTIC AND UTILITY DEVICES
+One of the key features of the Transhuman Space setting is
+that cybershells are not merely widespread – they’re pervasive,
+especially in Fifth Wave areas but also elsewhere. Any ordinary
+“civilian” scene is likely to feature several items with significant built-in processing power, many of them too trivial to
+catch most people’s attention. PCs may purchase these items
+with cash rather than treat them as Allies. However, some
+items do have uses that may become important in plots.
+
+BOATBOT
+241 points
+This is a floating cybershell designed to perform light maritime maintenance or inshore search and rescue duties. It can
+also be used as a miniature tug, and similar units have occasionally been used as transport in infiltration and clandestine
+insurgency actions. It consists of a streamlined shell with a
+small turret on the top that holds a small radar system and a
+
+THE CYBERSHELLS
+
+6
+
+Boatbots are most likely to be found in coastal areas, harbors, and large rivers. They’re not really suited to open ocean
+use, although this one is reasonably rugged. 300 lbs., 5’ long.
+
+New Disadvantage:
+Reprogrammable
+(Exposed Controls)
+-10 points
+This disadvantage is a variant of Reprogrammable
+(p. B150). However, it is physical rather than mental,
+as it represents an exposed physical control system. It
+has the same value as the ordinary version, because it’s
+much easier for opponents to exploit, even in combat,
+but the results are much more restricted. It can be
+combined with the ordinary mental version of the disadvantage; Transhuman Space cybershell/infomorph
+characters may have standard Reprogrammable as
+part of their infomorph template and Exposed
+Controls in their cybershell template.
+If you take Reprogrammable (Exposed Controls),
+you have an exposed control panel or switchgear that
+others can use to shut down or activate your main abilities, if they grapple you or even strike the correct point
+on your body. The GM should usually prohibit you
+from wearing any armor or clothing over this; if you
+are allowed to wear any, it may press on the controls at
+inconvenient moments (i.e., at the GM’s whim), with
+odd results. To be worth points, the controls have to
+include, at minimum, an on/off switch. Other effects
+are possible, but must be the sort of simple, general
+operation that can be associated with throwing a simple switch, such as enabling and disabling your integral weapons or speech system, or causing a different
+control program to be loaded into a computer brain.
+More complex controls are possible, with the GM’s permission, but are not worth more points because using
+them will require a long action out of combat, and possibly some kind of skill roll. A specific switch is treated
+as a hit location with -5 to hit, and any physical blow
+that does exactly 0 damage or more (after any worn
+armor, if permitted, but before any innate DR) activates the control.
+
+Special Enhancement
+Very Easy Activation: Your Exposed Controls are
+designed to be obvious and extremely easy to activate,
+and doing so has a completely disabling effect on you.
+This may mean a well-marked switch with a hit location penalty of -3 or better, or even a standard voice
+command with no physical contact required. +100%.
+
+wide-angle camera array with modest magnification capability, a shrouded propeller at the back, a pair of multi-jointed
+work arms that fold into slots at the sides when moving at
+speed, and a small cargo compartment. The propeller can be
+steered, and the shell also has lateral thrusters, giving good
+low-speed maneuverability; retractable hydrofoils give it a
+decent top speed, and its passive sonar microphones are
+mounted on the foils. Its power comes from a compact ceramic engine which can burn a wide range of fuels, including gasoline, diesel, and alcohol.
+
+Attribute Modifiers: HT+2 [20].
+Secondary Characteristic Modifiers: HP+4 (Size, -10%) [8];
+SM+1.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Breath-Holding 3 [6]; DR 6 (Can’t Wear Armor, -40%) [18];
+Discriminatory Hearing (Only Underwater, -30%) [11];
+Enhanced Move 1 (Water) [20]; Enhanced Move +1 (Water;
+Temporary Disadvantage, No Manipulators, -50%) [10];
+Extra-Flexible Arms [10]; Filter Lungs [5]; Lifting ST +5
+(Size, -10%) [14]; Machine [25]; Nictitating Membrane 1 [1];
+Payload 6 [6]; Peripheral Vision [15]; Pressure Support 1
+[5]; Reduced Consumption 2 (Recharge/refuel once a
+day) [4]; Scanning Sense (Radar; Extended Arc, 360°,
++125%; Reduced Range, 1/5, -20%) [41]; Sealed [15];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Radio; Video, +40%) [14]; Telescopic
+Vision 2 [10]; Temperature Tolerance 5 [5].
+Perks: Accessory (Small or Microframe Computer) [1].
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; No Legs (Aquatic, Can’t Dive) [-5]; Restricted Diet (Very
+Common, multiple fuels) [-10].
+Features: Individuals of the same model closely resemble each
+other; Towing connector on stern.
+Date: 2055. Cost: $30,000 + computer.
+
+Variants
+DPV: By including a rechargeable air storage tank, improving the pressure seals, modifying the sensor array, and reshaping the hull, a boatbot design of this type can be transformed
+into a useful short-range, self-steering diver propulsion vehicle.
+Change Breath-Holding to Doesn’t Breathe (Oxygen Storage,
+300 times, -10%) [18], raise Pressure Support to 2 levels [10],
+replace the radar with Scanning Sense (Sonar; Extended Arc,
+360°, +125%; Reduced Range, 1/2, -10%) [43], delete the second, conditional level of Enhanced Move, change No Legs
+(Aquatic, Can’t Dive) to No Legs (Aquatic) [0], and replace the
+towing connector with a set of grab handles. This changes the
+price to $35,000. 255 points.
+
+“C-BROWN” GARDENER
+SHELL
+51 points
+Gardener cybershells of various sorts are widely used by
+parks departments and wealthy homeowners; the Hundegrün
+“C-Brown 3” is a popular larger domestic model. It would be
+vaguely humanoid if it didn’t have three legs, each ending in
+splayed feet. Its two odd-shaped hands can serve as a range of
+gardening tools, and its spherical head mounts quite good
+cameras, with high-resolution capability to aid in pest and
+plant disease identification. There’s also a chemosensor unit in
+the chest section, used to diagnose plant diseases and to assess
+flowers’ scents for their appeal to humans. External panniers
+at waist level are used to carry plants, supplies, and clippings.
+In general, gardener shells are built to be deft and fairly agile,
+but no one bothers making them especially fast.
+
+THE CYBERSHELLS
+
+7
+
+The controlling AIs installed in such shells are terribly
+mild-mannered, but something like the C-Brown does have a
+slightly worrying array of built-in clippers and shears that it
+keeps very sharp. Berserk or hijacked gardening shells have
+long been a staple of action-comedy InVids, despite the
+scarcity of actual incidents. Rather than fight too much of an
+hopeless memetic battle, the makers install big, red
+emergency-off buttons on the front and back. These can be
+targeted at -2; hitting either button cuts power to all of the
+shell’s systems except its brain while it settles into a stable
+“sitting” posture. Rebooting the shell is a simple but slightly
+lengthy procedure. These buttons are designed to be extremely hard for malicious tinkerers to bypass. 110 lbs., 6’ tall.
+Attribute Modifiers: ST-1 [-10]; HT+2 [20].
+Secondary Characteristic Modifiers: Basic Move-2 [-10].
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Claws (Sharp Claws) [5]; DR 4 (Can’t Wear Armor, -40%)
+[12]; Discriminatory Smell [15]; Extra Legs (3 legs) [5];
+Filter Lungs [5]; Machine [25]; Microscopic Vision 1 [5];
+Payload 6 (Exposed, -50%) [3]; Reduced Consumption 2
+(Recharge/refuel once a day) [4]; Telecommunication
+(Cable Jack; Video, +40%) [7]; Telecommunication (Radio;
+Video, +40%; Reduced Range, 1/5, -20%) [12];
+Temperature Tolerance 4 [4].
+Perks: Accessories (“Gardening Tool Hands,” Small
+Computer). [2]
+Disadvantages: Cybershell Body [-15]; Reprogrammable
+(Exposed Controls; Very Easy Activation, +100%) [-20];
+Restricted Diet (Common, any one liquid fuel) [-20].
+Quirks: Cannot Float; Has a Neck hit location, but no special
+vulnerabilities there. [-2]
+Features: Individuals of the same model closely resemble
+each other.
+Date: 2070. Cost: $8,000 + computer.
+
+RO-PED
+180 points
+This class of vehicles, known as the ro-ped, robobike,
+cyberscooter, and by dozens of other names, is the technological descendant of the light motorized two- and threewheeled urban transports that became popular across much
+of the globe in the second half of the 20th century. However,
+increasing technological sophistication grants additional
+capabilities; in 2100, these are no longer simply vehicles.
+With built-in intelligence, a ro-ped can drive itself if necessary (though many owners like to drive themselves, when
+this is legal or they can get away with it). “Work arms” enable
+it to pick up and pack cargo for itself, run other errands without a human operator (sometimes including light work such
+as gardening), and perform routine maintenance on itself.
+(Most ro-peds don’t need enough regular work to qualify for
+the Maintenance disadvantage, but those that do – usually
+because they’re old and run down – need more if they don’t
+have arms.) In order for these machines to be stable at low
+speeds, they have three wheels rather than two. (Twowheeled motorcycles still exist in 2100, but usually for longrange high-speed touring rather than as urban runabouts.)
+The borderline between personal transport and mediumsized civilian utility cybershell is thus becoming increasingly
+blurred. Still, any PCs who acquire ro-peds will probably buy
+
+them for cash and treat them as simple machines – but they
+can make serviceable cybershell Allies.
+In Fourth and Fifth Wave cities, ro-peds represent cheap
+personal transport for the young and the (relatively) poor.
+Fourth Wave citizens are more used to thinking of shortrange personal travel as necessary; in Fifth Wave areas, a roped is almost always primarily a toy. Third Wave city streets
+are frequently full of ro-peds, sometimes serving as a whole
+family’s only form of transport; these are generally older
+models, kept running by diligent or improvisational maintenance work. Many are purchased (or stolen) in more
+advanced areas by dealers who ship them overseas for
+second-hand sale. Several older designs have been flagrantly
+pirated by manufacturers in the TSA.
+The template below represents the CIT “Arlesienne” mk.
+III, the most popular model in CIT/Provençale’s cyberscooter
+range. With aluminum bodywork over a steel alloy frame, the
+Arlesienne is designed to be about as sleek and stylish as a
+three-wheeled urban transport can probably hope to manage.
+Typically sold with a cheap computer (cost $100) that is preloaded with a standard NAI-5 trained in Driving
+(Motorcycle)-10 and Mechanic (Motorcycle)-10 (software
+cost $1,100), it uses system architecture and interfaces based
+on a well-established, even slightly outdated industry open
+standard. This makes the model popular with hobbyist cyberhackers who tinker with the software and often the processor; while this brings few additional sales directly, it gives the
+Arlesienne a degree of “cool” in wider markets – exactly as the
+company’s memeticists planned.
+Note that a driver and passenger count as encumbrance
+when carried – determine or estimate their weight as
+required – but luggage in the generous internal compartment
+does not. This ro-ped uses a ceramic engine that usually
+burns alcohol; a full tank of fuel costs around $1 and is good
+for 11 hours driving at full speed, or about twice that in more
+normal use. (The engine can also run on other fuels, including expensive gasoline, which does give better mileage.) 270
+lbs., 5’ long.
+Attribute Modifiers: ST-3 [-30].
+Secondary Characteristic Modifiers: HP+18 [36]; Basic
+Move+1 [5].
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Compartmentalized Mind (Controls) [25]; DR 4 (Can’t
+Wear Armor, -40%) [12]; Enhanced Move 1 (Ground;
+Handling Bonus +1, +5%) [21]; Enhanced Move +2
+(Ground; Handling Bonus +1, +5%; Road-Bound, -50%)
+[22]; Extra Wheels (3 wheels) [5]; Filter Lungs [5];
+Infravision [10]; Lifting ST +13 [39]; Machine [25]; Night
+Vision 5 [5]; Payload 7 [7]; Peripheral Vision [15];
+Protected Sense (Vision) [5]; Reduced Consumption 3
+(Refuel once a week) [6]; Telecommunication (Cable Jack)
+[5]; Telecommunication (Radio; Video, +40%) [14];
+Telescopic Vision 2 [10]; Temperature Tolerance 3 [3].
+Perks: Accessories (Headlights, Small Computer). [2]
+Disadvantages: Cybershell Body [-15]; No Legs (Wheeled)
+[-20]; No Sense of Smell/Taste [-5]; Numb [-20]; Restricted
+Diet (Very Common, liquid fuels) [-10].
+Quirks: Cannot Float. [-1]
+Features: Double external cycle seat; Individuals of the same
+model closely resemble each other.
+Date: 2060. Cost: $3,600 + computer.
+
+THE CYBERSHELLS
+
+8
+
+The Ro-Ped as a Vehicle
+A ro-ped as described by this template has the following details as a vehicle in GURPS terms:
+ST/HP
+25
+
+Hnd/SR HT
++1/2
+10
+
+Move
+1/30*
+
+LWt
+0.36
+
+Load
+0.2
+
+SM
+0
+
+See pp. B462-463 for an explanation of this format. Most
+internal combustion engine vehicles are rated as flammable,
+but the ro-ped is a high-tech design carrying a small amount
+of only moderately flammable fuel in a well-protected tank,
+and so doesn’t really qualify for this problem unless the GM
+wants to be cruel. Use of electrical batteries rather than
+alcohol fuel eliminates any question of flammability; however, it also reduces Range to 240.
+
+Variants
+A wide range of different models can be represented by
+minor changes to this template:
+Battery Power: This option is popular in more advanced
+regions, where there are cheap, reliable electricity supplies
+and often significantly tighter anti-pollution laws. It also
+tends to be popular with users who want to drive the ro-ped
+indoors; even 2100-era alcohol-burning engines generate
+some unhealthy exhaust fumes. Replace Filter Lungs with
+Doesn’t Breathe [20], and change Restricted Diet to
+Restricted Diet (Very Common, power cells) [-10]; this adds
+15 points to the total cost, and also changes the price to
+$3,900 + computer. This also reduces its range somewhat; if
+the ro-ped is to see heavy use, it might have its Reduced
+Consumption advantage reduced to level 2, saving 2 points.
+One Arm: Manipulator arms actually contribute a fair
+amount to the cost of a ro-ped, to the extent that several manufacturers were surprised at how popular they proved when
+they were first introduced – it turned out that people were
+prepared to pay quite a lot for a vehicle that could maintain
+itself and help carry the shopping. Hence, there are quite a
+few cheaper models around with only one. Add One Arm
+[-20]; this reduces the cost by $750.
+No Arms: For a more extreme saving, give the ro-ped No
+Manipulators [-50]; this reduces the cost of the cybershell by
+$1,500.
+Bad Grip: A compromise can involve using cheaper, lowdexterity manipulator systems, though this is generally seen
+as losing too much functionality for too little cost reduction.
+Add two levels of Bad Grip [-10] and reduce cost by $750.
+Some badly maintained ro-peds acquire this problem over a
+lifetime of use.
+Liquid Crystal Skin: Liquid crystal “paint” is popular with
+wealthier users who can’t decide on their favorite color, and
+is also sometimes acquired by anyone who has to use a roped for clandestine operations; it costs $800. Add one level of
+Chameleon [5] and a Perk (Variable surface color; a neat gimmick that may give a small bonus to, e.g., Shadowing rolls, at
+the GM’s option, if the ability to look like a different ro-ped is
+useful.) [1].
+
+Occ
+1+1
+
+DR
+4
+
+Range
+800
+
+Cost
+$4K
+
+Locations
+E3W2A
+
+As indicated, this is essentially a road-bound vehicle, but
+it can manage an off-road speed of 5. All performance is for
+when the ro-ped is laden with two riders and their luggage;
+with just a driver, it has gSpeed 37, gAccel 2, and off-road
+speed 6; completely unladen, these figures rise to gSpeed 50,
+gAccel 2, and off-road speed 12. Double all off-road speeds
+for the All-Terrain version.
+
+360° Vision Software: The ro-ped has cameras giving 360°
+coverage, but a typical controlling AI’s visual analysis systems
+can usually only handle a limited fraction of this at any given
+time; hence, the template only has Peripheral Vision. Some
+recent models have superior software or firmware that
+changes this to 360° Vision, adding 10 points to the template
+total. Increase the cost by $500.
+All-Terrain Capability: Even with off-road wheels, steering,
+and suspension, a ro-ped can’t actually operate everywhere,
+but some variants have markedly less trouble with difficult
+conditions than others. While popular with some recreational users, such enhancements are mostly intended to make a
+ro-ped more useful as a general-purpose cybershell. Remove
+the Road-Bound limitation from another level of Enhanced
+move for +10 points, and add $1,300 to the price and 20 lbs.
+to the weight.
+
+SHAKOOSH
+see Broken Dreams, p. 124; 161 points
+A nonhumanoid shell with four legs and four arms, much
+used by SAIs in the Caliphate.
+Attribute Modifiers: ST+1 [10]; DX+1 [20]; HT+1 [10].
+Advantages: 360° Vision [25]; Absolute Direction [5]; Doesn’t
+Breathe [20]; DR 5 (Can’t Wear Armor, -40%) [15]; Extra
+Arms 2 [20]; Extra Legs (4 legs) [5]; Infravision [10];
+Machine [25]; Stretching 1 (Only to elevate body, -50%)
+[3]; Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Infrared Communication) [10];
+Temperature Tolerance 4 [4].
+Perks: Accessory (Small Computer). [1]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people,
+Monthly) [-4]; Restricted Diet (Very Common, power cells)
+[-10].
+Date: 2070. Cost: $20,000 + computer.
+Note: The Stretching advantage represents the Shakoosh’s
+ability to effectively extend its legs by up to about 3’ to look
+over barriers, step over obstacles, work on raised tasks, etc. It
+cannot increase its combat reach this way.
+
+THE CYBERSHELLS
+
+9
+
+The Robotic House
+The process of automating housework, which began in
+the 19th century, received a massive boost in the 21st with
+the development of autonomous AI. In Fifth Wave areas in
+2100, it’s advanced to the point where regular household
+maintenance now has something in common with earlier
+eras; the householder issues orders to a staff of “servants”
+who do all the physical work, and his main concern is one
+of management. Of course, a householder can delegate
+much of that to a superior servant – the housecomp –
+but such a controller has to be smart, flexible, and trustworthy.
+Typically, the housecomp itself is a static system, often
+a cheap microframe, though a small computer may be
+more than adequate. Large or wealthy houses have slightly more powerful systems. This in turn either teleoperates
+an array of small, mobile, specialist cybershells that are
+built to fetch, carry, and clean, or supervises them while
+they’re operated by lesser AIs. It’s also accustomed to interfacing with wearable or implant systems belonging to
+members of the family, sharing data about appointments
+and requirements at every opportunity; many people barely draw a distinction between wearable and housecomp, as
+each system knows what the other does, though teenagers
+are notoriously prone to order their wearables to keep
+secrets from the house. The housecomp also typically has
+control of an array of static devices such as washing
+machines, dishwashers, and ovens, and has fixed effectuator arms, especially in the kitchen. Many cooking and foodhandling tasks are more easily handled that way than by
+small, low-strength shells, and large mobile shells are
+expensive and get in the way of human inhabitants. It will
+also have a large array of sensors scattered around the
+house, enabling it to respond quickly to orders and to manage security.
+
+SWARMDOZER
+see Deep Beyond, p. 120; 51 points
+A miniature “civil engineering” shell, usually used in closely collaborating groups.
+Attribute Modifiers: ST-6 [-60]; HT+2 [20].
+Secondary Characteristic Modifiers: HP-1 [-2]; SM-4.
+Advantages: 360° Vision [25]; Absolute Direction (Requires
+Signal, -20%) [4]; DR 3 (Can’t Wear Armor, -40%) [9];
+Doesn’t Breathe [20]; Extra Wheels (4 wheels) [5]; Lifting ST
++1 [3]; Machine [25]; Payload 10 (Exposed, -50%) [5];
+Pressure Support 2 [10]; Radiation Tolerance 5 [10];
+Reduced Consumption 4 (Refuel once a month) [8]; Sealed
+[15]; Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Infrared Communication) [10];
+Telecommunication (Radio; Video, +40%) [14]; Temperature
+Tolerance 15 [15]; Tunneling (Move 1; Takes 64 times as
+long, or requires 64 coordinated swarmdozers to dig a single
+hex of tunnel per turn, -60%) [14]; Vacuum Support [5].
+
+General-purpose mobile shells are typically found at the
+top and bottom of the market, while specialist domestic
+devices are characteristic of mid-price house systems. A
+less wealthy homeowner may have one or two generalpurpose shells, usually volkspiders or similar, which can
+operate non-automated cooking and cleaning equipment;
+someone with a little more money will acquire several
+more shells – one to clean, one to garden, one to cook, and
+so on – each probably fitted with integral tools for its task.
+A wealthy householder will probably also have such specialist shells, but they’ll keep quietly in the background; the
+most visible “servants” in such a home will be showy, intelligent, versatile units, often humanoid in form and with
+distinctive personalities.
+Typically, all but the most extravagant mobile servant
+shells and the occasional “personal companion” have NAI
+systems, if they’re not just teleoperated by the housecomp;
+there’s little need for anything more expensive or versatile.
+The housecomp may also be an NAI, if the owner is content for it merely to obey orders (or if he has an LAI wearable or companion to manage more complex issues), but
+most people who can afford such things prefer low-sapient
+systems, which can anticipate problems, adapt to new situations without being told, and hold a conversation of
+sorts. SAI housecomps are rarer, even in areas where SAIs
+are classed as property and people can afford them; apart
+from anything else, a housecomp typically monitors events
+in every part of the house, all the time, and not everyone is
+comfortable having a sapient observer to all their personal
+activities. (Indeed, many people will tell an LAI or even an
+NAI to shut down its nearby cameras while they’re in the
+bathroom or at other private times.) Still, the fully sapient
+house is a symbol of enviable wealth to many people – and
+the sapient housecomp that is notably smarter than anyone else in the house is becoming a popular comedy image.
+
+Perks: Accessory (Tiny Computer) [1].
+Disadvantages: Bad Grip 2 [-10]; Cybershell Body [-15];
+Horizontal [-10]; Maintenance (Mechanic skill, 1 person,
+Monthly) [-2]; No Legs (Tracked) [-20]; No Sense of
+Smell/Taste [-5]; One Hand [-15]; Restricted Diet
+(Occasional, radioisotopes) [-30]; Short Arm [-5].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2040. Cost: $1,600 + computer.
+Notes: This type of swarmdozer’s radioisotope supply is
+assumed to need a small amount of replenishment once per
+month, when it receives its routine maintenance. (Other models may use different power systems and hence have other
+advantages and disadvantages, especially if they were designed
+purely for use on Earth, without this type’s full range of
+capabilities.)
+
+THE CYBERSHELLS
+
+10
+
+DATA COLLECTION
+AND EXPLORATION
+Often, a cybershell’s primary function is simply to use its
+senses – which may be substantially beyond the human.
+Media/reporting, scientific, police oversight, and low-level military recon tasks all have comparable requirements. Often,
+identical or closely similar cybershell models are sold into a
+range of different markets. Note that some of the templates in
+the section dedicated to Space and Exotic Environment
+Models (pp. 23-27) are also partly or primarily intended for
+exploration purposes.
+
+Quirks: Has a Neck hit location, but no special vulnerabilities
+there. [-1]
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2076. Cost: $15,000 + computer.
+
+IDMON EXPLORER AQUABOT
+see Under Pressure, p. 97; 120 points
+A teardrop-shaped self-mobile underwater camera.
+
+BEOBACHTER DATA
+COLLECTION UNIT
+91 points
+The Beobachter is designed for use as a general-purpose
+“robot cameraman.” It is widely employed by news-gathering
+teams and also for live-action InVid recordings. It’s also
+favored by scientific researchers who need to record a broad
+range of data inputs instead of, or as well as, more specialist
+material. It has better endurance and more sensors than a
+buzzbot, and provides a more stable platform in strong winds.
+Physically, the Beobachter is a fairly simple legged cybershell, designed to have roughly the same physical height as a
+human being, at least partly so sensory recordings it captures
+can be edited into convincing “character viewpoint” InVids. It’s
+not humanoid, though; its camera and sound recording systems and some other sensors (e.g., scent analyzers) are
+installed in an ovoid box studded with lenses and sensors,
+which in turn is mounted on a cylindrical body with a manyjointed walking tripod base and a couple of short, flexible work
+arms. The result is a spindly, comical appearance, beloved of
+cartoonists, but the Beobachter is actually quick and agile,
+with internal gyroscopes giving it Perfect Balance. 60 lbs., 6’
+tall.
+Attribute Modifiers: ST-4 [-40]; HT+2 [20].
+Secondary Characteristic Modifiers: Basic Move+1 [5].
+Advantages: Absolute Direction (Requires Signal, -20%) [4]; DR
+3 (Can’t Wear Armor, -40%) [9]; Extra Legs (3 legs) [5]; Filter
+Lungs [5]; Flexibility [5]; Infravision [10]; Machine [25];
+Parabolic Hearing 2 [8]; Perfect Balance [15]; Reduced
+Consumption 2 (Recharge/refuel once a day) [4];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Video, +40%) [14]; Telescopic
+Vision 5 [25]; Temperature Tolerance 4 [4].
+Perks: Accessory (Small Computer). [1]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; Restricted Diet (Common, any one liquid fuel) [-20];
+Short Arms [-10].
+
+Attribute Modifiers: ST-4 [-40]; HT+1 [10].
+Secondary Characteristic Modifiers: HP+2 [4]; SM-2.
+Advantages: DR 10 (Can’t Wear Armor, -40%) [30]; Doesn’t
+Breathe [20]; Enhanced Move 1.5 (Water) [30]; Machine
+[25]; Microscopic Vision 3 [15]; Pressure Support 3
+[15]; Radiation Tolerance 10 [15]; Sealed [15];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication; Video, +40%)
+[21]; Temperature Tolerance 25 [25]; Vacuum Support [5].
+Perks: Accessories (Built-in Spotlights, Small Computer) [2].
+Disadvantages: Cybershell Body [-15]; Ichthyoid [-50];
+Maintenance (Electronics Repair and Mechanic skills, 2
+people, Monthly) [-4]; Restricted Diet (Very Common, power
+cells) [-10].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2055. Cost: $80,000 + computer.
+
+STORMCHASER
+see Broken Dreams, p. 124; 374 points
+A rugged flying shell which can fly through the heart of a
+tornado and bring back experience recordings.
+Attribute Modifiers: ST+6 (No Fine Manipulators, -40%; Size,
+-20%) [24]; HT+3 [30].
+Secondary Characteristic Modifiers: SM+2.
+Advantages: 360° Vision [25]; 3D Spatial Sense [10]; DR 50
+(Can’t Wear Armor, -40%) [150]; Enhanced Move 2.5 (Air;
+Temporary Disadvantage, Increased Consumption 2, -20%)
+[40]; Extra Wheels (4 wheels) [5]; Filter Lungs [5]; Flight
+(Winged, -25%) [30]; High Pain Threshold [10];
+Hyperspectral Vision [25]; Machine [25]; Nictitating
+Membrane 5 [5]; Protected Sense (Hearing) [5]; Resistant to
+Acceleration (+8) [2]; Scanning Sense (Radar; Extended Arc,
+360°, +125%; Multi-Mode, +50%; Increased Range ¥20,
++40%) [63]; Telecommunication (Cable Jack; Video, +40%)
+[7]; Telecommunication (Laser Communication; Video,
++40%) [21]; Telecommunication (Radio; Video, +40%;
+Increased Range ¥5, +20%) [16]; Temperature Tolerance 10
+[10].
+Perks: Accessory (Microframe Computer). [1]
+
+THE CYBERSHELLS
+
+11
+
+Disadvantages: Cybershell Body [-15]; Horizontal [-10];
+Maintenance (Electronics Repair and Mechanic skills, 4
+people, Weekly) [-15]; No Legs (Wheeled) [-20]; No
+Manipulators [-50]; No Sense of Smell/Taste [-5]; Restricted
+Diet (Common, high-quality fuel) [-20].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2097. Cost: $340,000 + computer.
+
+Note: This conversion assumes that the Stormchaser runs
+on retractable wheels when on the ground. It’s also assumed to
+use a hydrocarbon-fuelled engine, with filters to protect the air
+intake from dust and debris while in action. It can go for a
+good 6 hours before refueling if it’s taxiing on the ground or
+flying at low speeds, but this drops to 2 hours (i.e., fuel consumption approximately triples) when operating at full speed.
+
+BIOMORPHIC SHELLS
+The cybershells detailed in this section are not organic;
+bioshells are treated separately (pp. 27-28). Rather, biomorphic
+shells simply look like living creatures, at least to casual inspection. Some also attempt to sound and even smell like the creatures they emulate. A cyberdoll is a classic example of a highquality biomorphic shell, where the living thing it emulates
+happens to be a human being.
+The quality of the imitation can vary enormously, from
+robots that look like something alive when glimpsed at a distance, through reasonable but explicitly incomplete models, to
+ones that require specialist close examination or a truly expert
+eye to spot. (Few designers bother faking breathing and heartbeat, but they can do so if they want.) However, TL10 scientific, medical, and even security scanners use a wide array of
+senses, operate to high levels of resolution, and often probe
+beneath the skin of their subjects; it’s extremely hard to fool any
+such system while using inorganic materials, and even
+bioshells with small cybernetic implants are usually spotted by
+professional security measures. A few biomorphic shells actually model imaginary species, and however “lifelike” a robot
+gryphon might be, most people in 2100 can immediately guess
+what it is.
+Reasons for cybershells to be designed this way vary enormously, from scientific research and teletourism (a biomorphic
+shell can often infiltrate groups of wild animals without
+
+disturbing their usual behavior patterns), through simple aesthetics or emotional appeal (many people still feel more comfortable dealing with a humanlike face or a furry quadruped
+than a walking statue or a metal spider), to hostile infiltration (a
+biomorphic shell can’t penetrate serious security, but it may well
+be able to get closer before the alarm sounds). Humanoid shells
+can also use most equipment made for humans, but they don’t
+have to be particularly convincingly biomorphic for this.
+
+CYBERDOG
+see Fifth Wave, p. 121; 95 points
+A robot dog, usually employed as a domestic helper.
+Attribute Modifiers: DX+2 (No Fine Manipulators, -40%) [24];
+HT+2 [20].
+Secondary Characteristic Modifiers: HP-2 [-4]; SM-2.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Acute Hearing 2 [4]; Acute Taste and Smell 2 [4]; Claws
+(Sharp Claws) [5]; Discriminatory Smell [15]; DR 3
+(Can’t Wear Armor, -40%; Flexible, -20%) [6]; Enhanced
+Move 1 (Ground) [20]; Machine [25]; Night Vision 7 [7];
+Teeth (Sharp Teeth) [1]; Telecommunication (Cable Jack;
+Video, +40%) [7]; Telecommunication (Infrared) [10];
+Telecommunication (Radio; Video, +40%) [14]; Temperature
+Tolerance 4 [4].
+
+THE CYBERSHELLS
+
+12
+
+Perks: Accessory (Small Computer); Fur. [2]
+Disadvantages: Cybershell Body [-15]; Quadruped [-35];
+Restricted Diet (Common, any one liquid fuel) [-20]; Short
+Legs [-2].
+Quirks: Has a Neck hit location, but no special vulnerabilities
+there. [-1]
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2063. Cost: $13,000 + computer.
+
+Variants
+The usual canine shape for this type of shell is just a popular but arbitrary option; people like and trust dogs.
+However, some purchasers have other tastes or requirements,
+and many low-production variants and custom builds appear
+occasionally. In some cases, the difference from the common
+canine design (or rather, designs – cyberdogs may resemble
+German shepherds, Great Danes, St. Bernards, Irish setters,
+or large mongrels or fanciful imaginary breeds) is negligible,
+but in others, the changes are enough to modify the GURPS
+game mechanics. In all cases, adjust the template point cost
+appropriately.
+Custom Appearance: Simply eliminating the listed feature
+adds about $1,000 to the price. This may also include deleting
+the Fur perk, possibly replacing it with a feature such as
+pseudo-reptilian scales or another perk, “Feathers” or “Heavy
+Scales,” with minor benefits much like Fur. This can represent
+anything from a shell made to look like a unique dog or a small,
+cute bear with blue feathers, to a really exotic and bizarre cybercreature.
+It’s hard to make a robot animal handsome enough to have
+any special appeal to anyone, but a few units have been sculpted into sinister or threatening forms, out of perverse aesthetics
+or to make them more threatening as “guard beasts.” Changes
+to eliminate the feature can also make the shell’s appearance
+Unattractive [-4] or Ugly [-8] for no extra cost; eliminating the
+feature (or creating a low-production special model) and
+adding Hideous [-16] or Monstrous [-20] Appearance adds
+about $1,500 to the price. The controlling AI should really be
+trained in Intimidation skill to make this worthwhile.
+Disarmament: Eliminating the cyberdog’s “natural” weapons
+(the Claws and/or Teeth advantages) is a moderately common
+order for householders who want a robot toy but are nervous
+about having anything sharp around their children; it adds a
+nominal amount to the price and possibly a few days to delivery time.
+Speed: Another moderately common variant type usually
+takes a physical form modeled on a greyhound or a cheetah,
+trading physical strength for running speed, often so that the
+cyberdog can be raced as a hobby. Add ST-2 [-20] and an extra
+level of Enhanced Move (Ground) [+20]; this adds $1,500 to the
+cost.
+Extra Weaponry: It’s easy enough to add more sharp components to this shell’s basic pattern, and this is sometimes done
+for purchasers who want a more dangerous household guard.
+However, it’s is not especially popular; there may be legality
+issues (the unit may become LC3 or even 2), and anyone who
+wants a real cybershell weapon will be looking for something
+much more powerful. Hence, such changes require relatively
+expensive special orders. Upgrading the Claws to Talons [8]
+costs $400; changing Sharp Teeth to a Sharp Beak [1] or Fangs
+
+[2] costs $300; adding Short Spines [1] costs $200. It’s also fairly easy to make the shell’s outer skin a little tougher; replacing
+the Fur perk with an extra point of Damage Resistance (with
+the standard limitations for this shell) [+2] costs $500. Any such
+change has to be accompanied by some kind of appearance
+change, with a reduced Appearance level – a heavily armed
+cyberdog looks odd at best, very sinister at worst.
+Example: A custom-built “robot monster” shell resembling a
+reptilian beast (Monstrous Appearance), complete with knifelike claws (Talons), saber-teeth (Fangs), and a leathery “hide”
+(no Fur, DR 4), has a template cost of 88 points and a cash price
+of $15,700.
+
+CYBERDOLPHIN
+see Under Pressure, p. 97; 147 points
+A marine utility shell in the shape of a dolphin.
+Attribute Modifiers: ST+3 [30]; HT+2 [20].
+Advantages: 3D Spatial Sense [10]; Arm DX +2 (Both Arms)
+[32]; DR 5 (Can’t Wear Armor, -40%) [15]; Doesn’t Breathe
+[20]; Enhanced Move 1.5 (Water; Temporary Disadvantage,
+No Manipulators, -50%) [15]; Machine [25]; Payload 1 [1];
+Pressure Support 1 [5]; Scanning Sense (Sonar; Targeting,
++20%) [24]; Telecommunication (Cable Jack; Video, +40%)
+[7]; Telecommunication (Radio; Video, +40%) [14];
+Temperature Tolerance 7 [7]; Ultrasonic Speech [10].
+Perks: Accessory (Small or microframe computer). [1]
+Disadvantages: Bad Sight (Nearsighted) [-25]; Cybershell Body
+[-15]; Disturbing Voice [-10]; Increased Consumption 1
+(Requires refueling, 4 hour endurance) [-10]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; No Legs (Aquatic) [0]; Restricted Diet (Common, any
+one liquid fuel) [-20]; Weak Arms (Half Body ST) [-5].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2070. Cost: $98,000 + computer.
+
+HIGH ARCADIAN CENTAUR
+see In the Well, p. 85; 110 points
+A robot centaur, built for the High Arcadia theme park.
+Attribute Modifiers: ST+2 (Size, -10%) [18]; HT+2 [20].
+Secondary Characteristic Modifiers: SM+1.
+Advantages: Appearance (Attractive) [4]; Claws (Hooves) [3];
+DR 5 (Can’t Wear Armor on lower body, -20%; Flexible,
+-20%) [15]; Enhanced Move 1 (Ground) [20]; Extra Legs (4
+legs) [5]; Lifting ST +4 (Not in Arms, -20%; Size, -10%) [9];
+Machine [25]; Striking ST +4 (Legs Only, -40%; Size, -10%)
+[10]; Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Radio; Video, +40%) [14]; Temperature
+Tolerance 3 [3].
+Perks: Accessory (Compact Mainframe Computer); Sanitized
+Metabolism. [2]
+Disadvantages: Cybershell Body [-15]; Restricted Diet
+(Occasional, Specially selected high-energy “fuel foods”)
+[-30].
+Features: Fairly close emulation of organic life – partial light
+fur, may even be able to fake sweating and bleeding, etc.
+Date: 2085. Cost: $100,000 + computer.
+
+THE CYBERSHELLS
+
+13
+
+emotional state; if its controlling software is programmed to
+make the “snakes” reflect her mood, that is a Feature of the AI.
+The standard configuration for a Labyrinth Designs
+“Gorgon II” features a Cheap Compact Tiny Computer ($40)
+running an NAI-4 ($250, 29 points) with Modular Abilities
+(Computer Brain) 3 (2, 2, 2) (Limited Integration, -20%; Skills
+and Languages Only, -10%) [30] included in the AI price and
+Fashion Sense [5] adding $500, a Duty to the wearer on 15 or
+less [-15], and two Complexity 3 skill set programs, Acting
+(specialized in snake-hair behavior) at IQ+1 and Professional
+Skill (Hairstylist) at DX, costing $50 each. This complete
+system costs $1,390 off the shelf, and represents a 71-point
+character.
+
+Variants
+
+MEDUSA
+see Toxic Memes, p. 88; 18 points
+A fashionable wearable cybershell that makes the wearer
+look like the legendary medusa.
+Attribute Modifiers: ST-9 [-90]; HT+2 [20].
+Secondary Characteristic Modifiers: SM-4.
+Advantages: 360° Vision (Easy to Hit, -20%) [20];
+Compartmentalized Mind (Dedicated Controls) 1 [10]; DR 1
+(Can’t Wear Armor, -40%) [3]; Doesn’t Breathe [20]; Doesn’t
+Eat or Drink [10]; Extra Arms 6 (Extra-Flexible, +50%; No
+Physical Attack, -50%; Short, -50%) [30]; High Manual
+Dexterity 3 [15]; Injury Tolerance (No Brain) [5]; Machine
+[25]; Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Infrared Communication; Reduced
+Range, 1/10, -30%) [7]; Telecommunication (Radio; Video,
++40%; Reduced Range, 1/5, -20%) [12].
+Perks: Accessory (Tiny Computer). [1]
+Disadvantages: Cybershell Body [-15]; Deafness [-20]; ExtraFlexible Short Arms w/No Physical Attack [-10];
+Maintenance (Mechanic skill, 1 person, Monthly) [-2]; No
+Legs (Portable) [-30].
+Features: Individuals of the same model resemble each other.
+Date: 2094. Cost: $500 or more + computer.
+Notes: The original template for this shell assumed that two
+of the Medusa’s snakes functioned as legs, enabling it to walk,
+albeit slowly. However, given that it is comprehensively entangled with the wearer’s hair when in use, this isn’t very relevant;
+this treatment assumes that all eight snakes function as arms.
+(Any entity with No Legs (Portable) and functioning arms can
+drag itself around when not held back, albeit slowly and inefficiently, at the GM’s discretion.) The Medusa’s power requirements are so low (annual replacement of a cheap power cell)
+that it easily qualifies for Doesn’t Eat or Drink.
+Remember that a Medusa can only be worn by someone
+with a VII; the wearer’s access to its senses (the “Dedicated
+Controls”) must be through that. Likewise, the Medusa can use
+the VII’s close link to the wearer’s brain and body to assess her
+
+The above is an eight-armed Medusa; each “snake” added to
+a more expensive model adds 5 points to the template cost.
+Medusas with built-in weaponry (probably fictional) would
+add Accessory perks (a drug injector and/or short-range spray
+gun) and possibly a few points of Payload for drugs, poisons,
+or nanoweapons. They could also eliminate the No Physical
+Attack limitation from some or all of their “arms,” at a cost of
+5 points per snake, and perhaps add Claws (Sharp Claws) [5].
+However, their teeth could never be long enough to rate as
+Talons, and they’d also need considerable, possibly infeasible,
+Striking ST to inflict useful amounts of damage. They’d also
+need controlling AIs trained for combat, probably with
+Brawling or Liquid Projector skill.
+
+MINI-SNAKEBOT
+-13 points
+“Mini-snakebot” cybershells were originally created as toys,
+appearing when cybernetic engineers managed to emulate a
+snake’s method of locomotion in a cheap, reliable mechanical
+body. Today, however, they’re sometimes used for espionage
+and infiltration; they’re good at slipping through ventilation
+ducts and other small spaces, and if they’re spotted, they will
+usually be ignored, or at least treated simply as wild animals.
+(This can lead to them being hunted and attacked, but at least
+it doesn’t provoke immediate suspicion – and if they can slip
+away into a wilderness area, they may escape entirely.) This
+template represents the NUK “Nehebkau,” a model which has
+functional “fangs” – a built-in drug injector, holding up to three
+doses.
+Nehebkaus are rather too obviously useful as assassination
+devices, so they aren’t generally sold into the domestic market;
+treat them as LC3 or worse, and they may attract a lot of suspicion. However, a few eccentric civilian owners carry one or two
+as holdout weapons, literally up their sleeves, and they may also
+be used in wildlife management, as a way to deliver injections
+to large animals for tranquilization or medical treatment.
+Similar models (without fangs) are often used for practical
+jokes or in the entertainment industry; theatrical companies
+often have one in the props box for use in productions of
+Anthony and Cleopatra. 2 lbs., 3’ long.
+Attribute Modifiers: ST-7 [-70]; HT+1 [10].
+Secondary Characteristic Modifiers: SM -2; Basic Move-1 [-5].
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+DR 1 (Can’t Wear Armor, -40%) [3]; Doesn’t Breathe [20];
+Infravision [10]; Machine [25]; Peripheral Vision [15];
+
+THE CYBERSHELLS
+
+14
+
+Pressure Support 2 [10]; Reduced Consumption 3 (Recharge
+once a week) [6]; Sealed [15]; Telecommunication (Cable
+Jack; Video, +40%) [7]; Telecommunication (Radio; Video,
++40%) [14]; Temperature Tolerance 5 [5]; Vacuum Support
+[5].
+Perks: Accessories (Tiny Computer, Drug Injector). [2]
+Disadvantages: Cybershell Body [-15]; Invertebrate [-20];
+Maintenance (Electronics Repair and Mechanic skills, 2
+people, Monthly) [-4]; No Sense of Smell/Taste [-5];
+Restricted Diet (Very Common, power cells) [-10];
+Vermiform [-35].
+Features: Standardized physical design.
+Date: 2048. Cost: $450 + computer.
+Note: Most mini-snakebots are designed to resemble some
+natural species; if they’re seen, they may be treated as possibly
+dangerous wild animals. If they’re identified, they’re likely to
+be regarded as sinister espionage gadgets. Hence, even if
+they’re operated by an LAI rather than an NAI, they may
+change that template’s Social Stigma (Valuable Property) to
+Subjugated, reflecting the worse treatment they can expect, for
+a net -10 points. One that’s made to look blatantly unnatural
+(with, say, metallic skin) will attract less hostility, but is of
+course far less suitable for infiltration purposes.
+
+Variants
+For a model without fangs, delete the relevant perk, reducing the template cost by 1 point, and reduce the cost to $400.
+Maintenance Snake: Miniature “tech-snake” shells are
+sometimes used for inspection and repair tasks in confined
+spaces, especially when the work needs more strength than a
+microbot swarm can provide. These aren’t usually designed to
+look like real snakes. A typical model is similar to the
+Nehebkau, but increase HT to +2 [20], add High Manual
+Dexterity 4 [20], Microscopic Vision 3 [15], Sensitive Touch
+[10], and two Accessories (Built-In Torch and
+Micromanipulation Tools), and delete the drug injector. This
+type can also act as a formidable saboteur! Cost is $1,200 +
+computer; template value is 43 points.
+
+SAFARI SHELL (GAZELLE)
+see Broken Dreams, p. 124; 61 points
+Used by tourists and zoological researchers, this shell can
+pass as an ordinary African gazelle.
+Attribute Modifiers: ST-3 [-30]; DX+2 (No Fine Manipulators,
+-40%) [24]; HT+2 [20].
+Secondary Characteristic Modifiers: SM-1.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Acute Hearing 1 [2]; Acute Vision 1 [2]; Enhanced Move 1.5
+(Ground) [30]; Filter Lungs [5]; Machine [25]; Night Vision
+8 [8]; Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Video, +40%) [14]; Telescopic
+Vision 6 (No Targeting, -60%) [12]; Temperature Tolerance 1
+[1].
+Perks: Accessory (Small Computer) [1].
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; No Sense of Smell/Taste [-5]; Quadruped [-35];
+Restricted Diet (Common, any one liquid fuel) [-20].
+
+Features: Close visual emulation of real animal; Individuals of
+the same model resemble each other.
+Date: 2072. Cost: $55,000 + computer.
+Notes: Being based on various medium-sized or small
+gazelle species, this cybershell is about 4’ long and weighs 60
+lbs. The computer type is changed from Broken Dreams; a
+microframe-sized computer isn’t really needed, and would add
+to the weight, which in turn would affect price and performance. Emulating natural gazelle behavior means that it has to
+keep in motion most of the time, obliging it to refuel slightly
+more often than the vulture-based shell (below), despite a
+slightly larger fuel tank, but not often enough to qualify for the
+Increased Consumption disadvantage – it returns to its home
+station three or four times a day.
+Variations: Some safari shells have upslink interfaces;
+change the Video enhancement on both the Cable Jack and the
+Radio to Sensie (+80%), increasing the template cost by 6
+points.
+
+SAFARI SHELL (VULTURE)
+see Broken Dreams, p. 124; 62 points
+Another tourism/research shell in the shape of a common
+wild creature.
+Attribute Modifiers: ST-4 [-40]; DX+2 (No Fine Manipulators,
+-40%) [24]; HT+2 [20].
+Secondary Characteristic Modifiers: SM-1.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Acute Hearing 1 [2]; Acute Vision 1 [2]; Enhanced Move 1.5
+(Air) [30]; Filter Lungs [5]; Flight (Cannot Hover, -15%;
+Winged, -25%) [24]; Machine [25]; Reduced Consumption 1
+(Refuel every 10 hours) [2]; Night Vision 8 [8];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Video, +40%) [14]; Telescopic
+Vision 6 (No Targeting, -60%) [12]; Temperature Tolerance 1
+[1].
+Perks: Accessory (Small Computer). [1]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; No Manipulators [-50]; No Sense of Smell/Taste [-5];
+Restricted Diet (Common, any one liquid fuel) [-20].
+Features: Close visual emulation of real bird; Individuals of the
+same model closely resemble each other.
+Date: 2072. Cost: $85,000 + computer.
+Notes: Modeled on some of the larger Old World vulture
+species, this cybershell is just under 4’ long, with a wingspan a
+little under 9’; hence, while it is SM -1 when on the ground,
+anyone shooting at it in flight can treat it as an SM +1 target.
+It weighs 25 lbs., including the small computer, slightly more
+than a real vulture. (As with the gazelle safari shell, the computer type is changed from Broken Dreams.) It uses a miniature fuel cell, and when in flight, it can spend most of its time
+gliding; as with a real bird, this makes it efficient in its energy
+use, so it only requires refueling a couple of times a day, unless
+it has to land and take off frequently. Its feet aren’t engineered
+to function as strikers or grippers in any way (although like a
+real vulture, it can run fairly well), and its wings are too flimsy and inflexible to act as strikers – hence it has the full No
+Manipulators disadvantage.
+
+THE CYBERSHELLS
+
+15
+
+Variations: As with the gazelle type, some safari shells have
+upslink interfaces; change the Video enhancement on both the
+Cable Jack and the Radio to Sensie (+80%), increasing the template cost by 6 points. The “Survey Shell” version (see Broken
+Dreams) adds another Accessory, specifically a “biosampler”
+system, and also incorporates a compact microframe computer. To compensate for the extra mass, the survey shell has
+slightly more advanced power and flight systems. This adds 1
+point to the template cost and $15,000 to the cash price (plus
+the cost of the superior computer).
+
+TREESHELL
+-105 points
+Technically, the Hildesheim Bios Baumcomputer-Q3 could
+be classed as a bioshell; much of its structure is organic, and it
+even uses biological processes as an ancillary source of energy.
+On the other hand, those organic components are, well, wood.
+This is, in fact, a small tree with a specially adapted compact microframe computer embedded within its trunk. It is a
+static system that blends in very well with its environment,
+making it useful for environmental monitoring or security systems supervision. Multiple cameras and other sensors (and a
+data cable connection port) are subtly hidden within the shape
+and the bark texture, and the shell can be made to match a
+variety of natural tree species. Spotting it for an oddity
+requires deliberate inspection and a Per-based Biology
+(Botany) or Naturalist roll at -4, or a similar roll at -12 if the
+observer is just passing casually and doesn’t have any reason to
+suspect anything. The genetically manipulated woody material uses photosynthesis primarily to maintain its own structure,
+although a chemical process extracts some energy to help keep
+the computer’s reserve batteries topped up. Mostly, though, the
+circuitry draws power through a buried cable that runs to a
+generator or large battery package.
+A treeshell is usually planted with the help of microbots and
+other tools that replace and pack soil around its roots once it’s
+in place. (It’s more tolerant of such treatment than any unmodified tree.) The manufacturers supply extensive guidelines for
+the task. At least 350 lbs. and 8’ tall (but see the note).
+Attribute Modifiers: ST-10 [-100]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+12 (Size, -10%) [22];
+SM+1.
+Advantages: 360° Vision [25]; DR 10 (Can’t Wear Armor, -40%;
+Semi-Ablative, -20%) [20]; Doesn’t Breathe [20]; Infravision
+
+Machines take me by surprise
+with great frequency.
+– Alan Turing (1950)
+
+[10]; Machine [25]; Telecommunication (Cable Jack; Sensie,
++80%) [9]; Telecommunication (Radio; Sensie, +80%) [18];
+Ultrahearing [5].
+Perks: Accessory (Microframe Computer). [1]
+Disadvantages: Cybershell Body [-15]; Fragile (Combustible)
+[-5]; Increased Consumption 3 (1 hour endurance if
+detached from power) [-30]; No Legs (Sessile) [-50]; No
+Manipulators [-50]; Numb [-20]; Restricted Diet (Very
+Common, electrical power supply) [-10].
+Features: Looks like a tree.
+Date: 2081. Cost: $2,500 + computer.
+Note: The treeshell is actually rather taller and wider than
+the listed height and SM values imply; however, most of this
+extra size consists of outer branches and leaves, which have no
+particular importance to the computer; an attacker can destroy
+most or all of this matter without affecting its function in any
+way. Damaged vegetable material can be repaired using a
+biotech kit supplied by the manufacturer; it even has a very
+limited ability to regenerate and repair itself, like any tree, but
+this is slow and unreliable enough to be treated as a special
+effect, balanced by the system’s vulnerability to herbicides,
+defoliants, and natural pests and parasites (any of which can
+trash the “tree” without harming the actual computer).
+
+Variants
+CSM-4: The Win-Thorne CSM-4 (Camouflaged Static
+Monitor) performs similar functions to the BaumcomputerQ3, and also looks like a tree, but is completely artificial – and
+two of its “branches” are fully functional arms. This makes it
+easier to identify, even when it isn’t moving; skill rolls are at +1
+for a deliberate inspection, -6 for casual observation. Change
+ST to +4 (Size, -10%) [36] and the Damage Resistance to 15
+(Can’t Wear Armor, -40%) [45], and delete the HP adjustment
+and the Fragile and No Manipulators disadvantages. Date
+2089, Cost $7,500 + computer. 89 points.
+
+COMBAT SYSTEMS
+The battlefield is a highly mechanized place in 2100. Fifth
+Wave frontline military forces are largely made up of machines,
+but any task that might require violent action may be assigned
+to a cybershell, if at all possible – it’s not just Fifth Wave nations
+who dislike seeing their sapient citizens coming home in bodybags and prefer to seek out alternatives. Even the most fanatical combat force, seeing its opponents fielding nonsapient
+forces, often begrudges the idea of wasting living troops’ lives;
+the lack of a chance to “take some of them with you” takes some
+of the luster off personal bravery. And while irregular and insurgent forces often have to resort to improvisation and hijacked
+
+civilian shells, many factions can acquire some sort of combat
+shells from supportive powers or the black market.
+Of course, not all combat-oriented cybershells are strictly
+military devices. While policing still tends to require the human
+touch somewhere near the point of delivery, many Fourth and
+Fifth Wave cops have cybershell aid – perhaps even an infomorph partner in a mobile shell. Such assistants can not only
+help immensely in violent situations, they can also incorporate
+an array of forensic equipment and other useful tools. Similar
+designs may also be used in private security work, animal control, and other situations.
+
+THE CYBERSHELLS
+
+16
+
+In GURPS terms, any combat shell may be subject to enough
+legal controls to qualify as LC3 or below; it will certainly be as
+restricted as any weapons it incorporates! Military shells usually
+have Social Stigma (Monster), as they are widely perceived as
+sinister death machines; sending one into a civilian situation is
+at least as provocative as sending in soldiers with automatic
+weapons and heavy body armor, and may be much worse if the
+local population has some level of prejudice against infomorphs.
+Police/security shells, on the other hand, are generally (though
+not universally) accepted. Combat-oriented shells also tend to
+have overload protection and damage compensation systems,
+giving them the High Pain Threshold advantage.
+Note also that this section deals with essentially terrestrial
+combat shell designs, although some are rugged enough to handle some extraterrestrial environments. See the next section for
+shells designed specifically for use off Earth.
+
+AFRIT
+see Broken Dreams, p. 122; 521 points
+The Caliphate’s best heavy combat shell, intimidatingly nonhumanoid in form.
+Attribute Modifiers: ST+7 (Size, -10%) [63]; DX+1 [20]; HT+3
+[30].
+Secondary Characteristic Modifiers: SM+1.
+Advantages: Absolute Direction [5]; Acute Hearing 3 [6];
+Chameleon 4 (Extended, Infrared, +20%) [24]; DR 75
+(Electromagnetic, +20%; Can’t Wear Armor, -40%) [300];
+Enhanced Move 1 (Ground) [20]; Filter Lungs [5]; High Pain
+Threshold [10]; Infravision [10]; Machine [25]; Payload 2 [2];
+Payload 4 (Exposed, -50%) [2]; Protected Sense (Vision) [5];
+Radiation Tolerance 5 [10]; Resistant to Electrical Pulses and
+Surges (+3) [1]; Silence 1 [5]; Telecommunication (Cable
+Jack) [5]; Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Temperature Tolerance 5 [5].
+Perks: Accessories (IFF transponder, Microframe Computer).
+[2]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 4 people, Weekly)
+[-15]; Restricted Diet (Common, gasoline) [-20]; Social
+Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2072. Cost: $600,000 + computer.
+Note: This conversion assumes that the Afrit uses a gasolinefueled engine, with filters to protect the air intake from dust and
+battlefield debris while in action. The enclosed Payload is the
+space in its arms in which a pair of assault pods are installed; the
+exposed Payload represents the mounting-point for the AMR on
+its back.
+
+AMPHIBIOUS RATS
+see Under Pressure, p. 95; 507 points
+An amphibious combat shell, switching between a shark-like
+shape in water and a quadrupedal configuration on land.
+Attribute Modifiers: ST+1 (Size, -10%) [9]; DX+1 [20]; HT+2
+[20].
+
+Secondary Characteristic Modifiers: HP+6 (Size, -10%) [11];
+SM+1.
+Advantages: 3D Spatial Sense [10]; Acute Hearing 3 [6];
+Amphibious [10]; Chameleon 2 [10]; DR 60 (Laminate,
++10%; Can’t Wear Armor, -40%) [210]; Doesn’t Breathe [20];
+Enhanced Move 2 (Water; Temporary Disadvantage, No
+Manipulators, -50%) [20]; Extra Attack 1 [25]; Extra Legs (4
+legs) [5]; High Pain Threshold [10]; Infravision [10];
+Machine [25]; Nictitating Membrane 5 [5]; Payload 5 [5];
+Pressure Support 2 [10]; Protected Senses (Hearing and
+Vision) [10]; Reduced Consumption 2 (Recharge/refuel once
+a day) [4]; Resistant to Electrical Pulses and Surges (+8) [2];
+Scanning Sense (Ladar; Increased Range ¥50, +50%) [30];
+Scanning Sense (Sonar) [20]; Sealed [15]; Silence 2 [10];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Temperature Tolerance 10 [10].
+Perks: Accessories (IFF transponder, Compact Microframe
+Computer). [2]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Weekly)
+[-10]; No Sense of Smell/Taste [-5]; Restricted Diet
+(Common, high-energy power cells) [-20]; Short Arms [-10];
+Social Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2090. Cost: $525,000 + computer.
+Note: For the purposes of this conversion, this cybershell is
+assumed to burn through the charge or fuel in its high-energy
+power supply rather more quickly than some RATS designs,
+due to having to operate in a denser medium. Whether the
+superior hardware/software interfaces that enable it to operate
+so efficiently that it gains Extra Attack will work for some
+other infomorph, at least without special training, is up to the
+GM. The Payload represents the space assigned to the recoilless rifle and assault pod.
+
+GHOLA
+see Broken Dreams, p. 122; 243 points
+An armored humanoid combat shell used by the Caliphate
+military.
+Attribute Modifiers: ST+2 [20]; DX+2 [40]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+5 [10].
+Advantages: Absolute Direction [5]; DR 20 [100]; Doesn’t
+Breathe [20]; High Pain Threshold [10]; Machine [25];
+Perfect Balance [15]; Resistant to Electrical Pulses and
+Surges (+3) [1]; Telecommunication (Cable Jack) [5];
+Telecommunication (Infrared Communication) [10];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Temperature Tolerance 5 [5].
+Perks: Accessories (IFF transponder, Small Computer). [2]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 4 people, Monthly)
+[-6]; No Sense of Smell/Taste [-5]; Restricted Diet (Common,
+high-energy power cells) [-20]; Social Stigma (Monster)
+[-15].
+Features: Individuals of the same model closely resemble each
+other.
+
+THE CYBERSHELLS
+
+17
+
+J-56 YING
+TRANSATMOSPHERIC UCAV
+see In the Well, p. 86; 855 points
+A UCAV design used by Chinese space forces around Mars.
+Attribute Modifiers: ST+6 (No Fine Manipulators, -40%; Size,
+-20%) [24]; HT+3 [30].
+Secondary Characteristic Modifiers: HP+12 (Size, -20%) [20];
+Air Move-8 (Space acceleration only; atmosphere move and
+space delta-v are unaffected, -80%) [-3]; SM+2.
+Advantages: 360° Vision [25]; 3D Spatial Sense [10]; Chameleon
+5 (Extended, Infrared and Radar, +40%) [35]; DR 120 (Can’t
+Wear Armor, -40%) [360]; Doesn’t Breathe [20]; Extra Wheels
+(3 wheels) [5]; Enhanced Move 5 (Air; Temporary
+Disadvantage, Increased Consumption 2, -20%) [80];
+Enhanced Move 7.5 (Space; Newtonian, -50%) [75]; Flight
+(Newtonian Space Flight, +25%; Small Wings, -10%;
+Temporary Disadvantage, Noisy 5, -10%) [42]; High Pain
+Threshold [10]; Hyperspectral Vision [25]; Injury Tolerance
+(No Brain) [5]; Machine [25]; Payload 58 [58]; Radiation
+Tolerance 10 [15]; Resistant to Acceleration (+8) [2]; Resistant
+to Electrical Pulses and Surges (+8) [2]; Sealed [15];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Secure, +20%; Video, +40%) [16];
+Telescopic Vision 12 [60]; Temperature Tolerance 20 [20];
+Vacuum Support [5].
+Perks: Accessories (IFF transponder, Microframe Computer). [2]
+Disadvantages: Cybershell Body [-15]; Maintenance (Multiple
+technical skills, 3-5 people, Weekly) [-15]; No Legs (Wheeled)
+[-20]; No Manipulators [-50]; No Sense of Smell/Taste [-5];
+Restricted Diet (Occasional, jet and rocket fuels) [-30]; Social
+Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2092. Cost: $1,080,000 + computer.
+Note: As noted, the J-56’s maximum space acceleration is 3
+yards/second2 (0.3 G). With its delta-v of just over 2,000 (4,000
+mph), this permits a little more than 10 minutes of thrust.
+
+JUMP RATS
+see Deep Beyond, p. 119; 651 points
+A rugged air/space assault shell, capable of making very
+rough landings on the way to a target.
+
+Attribute Modifiers: ST+1 [10]; DX+2 [40]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+4 [8].
+Advantages: 360° Vision [25]; Absolute Direction [5]; Acute
+Vision 2 [4]; Catfall [10]; Chameleon 4 (Extended, Infrared,
++20%) [24]; Claws (Sharp Claws) [5]; DR 70
+(Electromagnetic, +20%; Can’t Wear Armor, -40%) [280]; DR
++15 (Can’t Wear Armor, -40%; Limited, Crushing Attacks
+Only, -40%; Temporary Disadvantage, Blind and No
+Manipulators, -100%) [15]; Doesn’t Breathe [20]; Enhanced
+Move 1 (Ground) [20]; Extra Legs (4 legs) [5]; Extra Legs
+(increased to 6 legs; Temporary Disadvantage, Horizontal
+and No Fine Manipulators, -40%) [3]; Flexibility [5]; High
+Pain Threshold [10]; Immunity to Acceleration (Reduced to
+Resistant +3 except with Temporary Disadvantage, Blind
+and No Manipulators, -60%) [2]; Infravision [10]; Innate
+Attack 1 (Burning; Aura, +80%; No Signature, +20%; Surge,
++20%; Melee Attack, reach C, -30%) [10]; Machine [25];
+Nictitating Membrane 5 [5]; Payload 25 [25]; Pressure
+Support 2 [10]; Protected Sense (Vision) [5]; Radiation
+Tolerance 10 [15]; Resistant to Electrical Pulses and Surges
+(+8) [2]; Sealed [15]; Silence 1 [5]; Telecommunication
+(Cable Jack; Video, +40%) [7]; Telecommunication (Laser
+Communication) [15]; Telecommunication (Radio; Secure,
++20%; Video, +40%) [16]; Temperature Tolerance 10 [10];
+Tunneling (Move 1; Loose soil only, -50%) [18]; Vacuum
+Support [5].
+Perks: Accessories (IFF transponder, Microframe Computer).
+[2]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Weekly)
+[-10]; Restricted Diet (Common, high-energy power cells)
+[-20]; Social Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2090. Cost: $770,000 + computer.
+
+JUNGLE RATS
+see Deep Beyond, p. 117; 732 points
+A jungle and riverine warfare machine, capable of
+underwater operation or swinging through the trees with its
+four versatile limbs.
+Attribute Modifiers: DX+1 [20]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+3 [6]; SM-2.
+
+THE CYBERSHELLS
+
+18
+
+Advantages: Absolute Direction [5]; Acute Hearing 3 [6];
+Ambidexterity [5]; Amphibious [10]; Brachiator [5];
+Chameleon 4 (Extended, Infrared, +20%) [24]; Clinging [20];
+DR 40 (Electromagnetic, +20%; Can’t Wear Armor, -40%)
+[160]; Discriminatory Smell [15]; Doesn’t Breathe [20];
+Enhanced Tracking 3 [15]; Extra Arms 2 (Extra-Flexible,
++50%; Long, +4 SM, +400%) [110]; Extra-Flexible Long
+Arms (+4 SM) [90]; Extra Legs (4 legs; Long, +2 SM, +200%;
+Temporary Disadvantage, No Fine Manipulators, -30%) [14];
+Extra Attack 1 [25]; High Pain Threshold [10]; Infravision
+[10]; Innate Attack 2 (Burning; Accuracy +6, 30%; Armor
+Divisor (2), +50%; Increased Range ¥10, +30%; Increased
+Range raised to ¥50, 1/2D Only, +10%; Rapid Fire, RoF 3,
++50%) [27]; Machine [25]; Nictitating Membrane 2 [2];
+Perfect Balance [15]; Protected Sense (Vision) [5]; Radiation
+Tolerance 5 [10]; Reduced Consumption 2 (Refuel once a
+day) [4]; Resistant to Electrical Pulses and Surges (+8) [2];
+Scanning Sense (Ladar; Extended Arc, 240°, +75%;
+Increased Range ¥50, +50%; Targeting, +20%) [49]; Sealed
+[15]; Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Temperature Tolerance 7 [7].
+Perks: Accessories (Auxiliary cameras built into fingers, IFF
+transponder, Small Computer). [3]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Weekly)
+[-10]; Restricted Diet (Common, hydrogen-oxygen fuel supply) [-20]; Social Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2074. Cost: $585,000 + computer.
+
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2052. Cost: $10,000 + computer.
+Note: Some advantages were added in the conversion
+process.
+
+Variants
+
+Note: As this shell’s laser weapon is integral to its design, it’s
+purchased as an Innate Attack rather than having Payload
+space assigned. The laser is a 2d(2) tight-beam burning attack
+with Acc 9, Range 500/1,000, RoF 3, and Rcl 1. Having such a
+weapon built in means that the shell is LC2. The shell’s special
+capabilities, especially the Enhanced Tracking and Extra
+Attack, may require a specially designed, trained, or augmented infomorph to use them with full effect – GM’s option.
+
+MCS-52H (Broken Dreams, p. 123): Add Appearance
+(Attractive; Off-the-Shelf Looks, -50%) [2], and a quirk,
+“Resembles a human until inspected closely” (see the
+Cyberdoll template in Changing Times) [-1], and delete the
+Social Stigma. 102 points.
+Hacha 2c: Commissioned by the TSA’s Defense Directorate,
+the Hacha design is intended to reinforce the armies of some
+of the Alliance’s poorer members who already make use of the
+MCS-52 (or knock-off copies), with a minimum need for
+retooling or retraining. Employing the older cybershell’s frame
+design and control protocols, the Hacha uses more advanced
+armor materials and electronics, a broad-angle visual sensor
+array with matching firmware enhancements, and a reserve
+power cell that allows it to operate for short periods with the
+main motor shut down; as it has some pressure protection, it
+can briefly function underwater. It also has claws, mostly for
+show.
+The design hasn’t seen much action yet, only having been
+released in 2098, and may not represent a significant advance
+over the older model, but Bangladeshi, Bolivian, and
+Colombian forces already regard Hacha squads as something
+of a prized elite. As Hachas also tend to receive superior tactical infomorphs, they may prove quite effective in combat,
+especially against opponents who mistake them for the older
+shell. Change Damage Resistance to 15 [75] and add DX+1
+[20], Breath Holding 3 [6], Claws (Sharp Claws) [5]; Nictitating
+Membrane 1 [1]; Night Vision 5 [5], Peripheral Vision [15],
+Pressure Support 1 [5], Protected Sense (Vision) [5]; Resistant
+to Electrical Pulses and Surges (+3) [1]; and Sealed [15].
+Nominal cash price would probably be around $30,000, but
+most Hacha units are built in government-run workshops, and
+many are actually upgraded “52s,” some with unfixed mechanical problems. 189 points.
+
+MCS-52
+
+MCS-64
+
+see Broken Dreams, p. 123; 86 points
+
+see Broken Dreams, p. 123; 211 points
+
+A widely used but rather dated humanoid light combat shell
+design.
+
+A humanoid heavy combat shell with integral weapons. Too
+dated for the modern battlefield, its main use in 2100 is to terrorize civilians.
+
+Attribute Modifiers: ST+1 [10]; HT+1 [10].
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+DR 10 [50]; Filter Lungs [5]; High Pain Threshold [10];
+Machine [25]; Reduced Consumption 2 (Recharge/refuel
+once a day) [4]; Telecommunication (Cable Jack; Video,
++40%) [7]; Telecommunication (Radio; Video, +40%) [14];
+Temperature Tolerance 5 [5].
+Perks: Accessories (IFF transponder, Small Computer). [2]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; No Sense of Smell/Taste [-5]; Restricted Diet (Common,
+any one liquid fuel) [-20]; Social Stigma (Monster) [-15].
+Quirks: Has a Neck hit location, but no special vulnerabilities
+there. [-1]
+
+Attribute Modifiers: ST+4 (Size, -10%) [36]; HT+3 [30].
+Secondary Characteristic Modifiers: SM+1.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+DR 25 [125]; Filter Lungs [5]; High Pain Threshold [10];
+Machine [25]; Payload 4 [4]; Reduced Consumption 2
+(Recharge/refuel once a day) [4]; Telecommunication (Cable
+Jack; Video, +40%) [7]; Telecommunication (Radio; Video,
++40%) [14]; Temperature Tolerance 5 [5].
+Perks: Accessories (IFF transponder, Small Computer). [2]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; No Sense of Smell/Taste [-5]; Restricted Diet (Common,
+any one liquid fuel) [-20]; Social Stigma (Monster) [-15].
+
+THE CYBERSHELLS
+
+19
+
+Quirks: Has a Neck hit location, but no special vulnerabilities
+there. [-1]
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2064. Cost: $150,000 + computer.
+Note: As with the MCS-52, some advantages were added in
+the conversion process.
+
+MEDEVAC SHELL
+338 points
+The common informal military term “medevac shell” is
+slightly misleading; while cybershells such as the
+CIT/Provençale “Villaret” are definitely designed to evacuate
+injured biosapients from the battlefield, they’re capable of more
+than just that. The Villaret, a typical example, isn’t as comprehensively equipped as a high-end cyberdoc, but it is designed to
+act as an excellent paramedic. The controlling infomorph is
+trained to assess patients while treating them; only once it has
+completed the process of triage on all known casualties will it
+evacuate them, in order of urgency, usually at impressive speed.
+The price of this speed is relatively high fuel consumption in the
+shell’s high-energy fuel cell, which also has a small emergency
+oxygen reserve to enable the shell to wade rivers and so on. It
+can carry one patient internally while providing him with life
+support; it also has an external stretcher rack, but loading that
+up tends to slow the shell down badly.
+The shell consists of a four-legged capsule with a pair of dextrous surgical arms and a sensor array at the front, and a pair
+of stronger multi-jointed “lifting arms” toward the back. Given
+its mission, the resemblances to a walking coffin and to some
+kind of giant beetle are more or less inevitable, but they do
+inspire a predictable amount of morbid military humor. Troops
+who’ve had their lives saved by a medevac shell may be more
+polite.
+While standard cyberdoc designs are often quite robust, they
+aren’t usually suited for really extreme terrestrial environments
+– such as battlefields. A medevac shell, by contrast, is built to
+survive collateral damage, and even some small arms fire
+(though not direct hits from serious military weapons), and
+also a range of hostile conditions. Hence, this and similar models are also sometimes sold to civilian disaster relief agencies.
+350 lbs., 8’ long.
+Attribute Modifiers: ST+1 (Size, -10%) [9]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+5 (Size, -10%) [9];
+SM+1.
+Advantages: Absolute Direction [5]; Ambidexterity [5]; BreathHolding 3 [6]; Claws (Sharp Claws) [5]; DR 14 (Can’t Wear
+Armor, -40%) [42]; Enhanced Move 2 (Ground) [40]; Extra
+Arms 2 (Extra-Flexible, +50%; Long, +1 SM, +100%) [50];
+Extra Legs (4 legs) [5]; Filter Lungs [5]; High Manual
+Dexterity 3 (Front arms only, -20%) [12]; High Pain
+Threshold [10]; Lifting ST +4 (Size, -10%) [11]; Machine
+[25]; Microscopic Vision 2 [10]; Nictitating Membrane 2 [2];
+Night Vision 8 [8]; Payload 50 [50]; Pressure Support 1 [5];
+Reduced Consumption 1 (Recharge/refuel twice a day) [2];
+Sealed [15]; Telecommunication (Cable Jack; Video, +40%)
+[7]; Telecommunication (Infrared Communication) [10];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Temperature Tolerance 3 [3].
+
+Perks: Accessories (Air supply/life support for “passenger,”
+Drug dispenser/injector, IFF transponder, Microframe
+Computer, Ultrasound Scanner); Sanitized Metabolism. [6]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 3 people, Weekly)
+[-15]; Restricted Diet (Common, hydrogen-oxygen fuel supply) [-20]; Weak Arms (Front arm pair; Half Body ST) [-5].
+Features: External Stretcher Rack; Individuals of the same
+model closely resemble each other.
+Variations: Some Villaret units have surface coatings of liquid crystal “paint.” This is partly to provide some configurable
+camouflage when that is helpful, but is more often set to display
+a very visible red cross, red crescent, or whatever else is recognized locally as a symbol of medical neutrality. Add Chameleon
+1 [5] and a Perk (Variable surface symbols) [1]; the added cost
+is $1,000.
+
+MINI SCOUT-RATS
+194 points
+The battlefield is an extremely dangerous place in 2100, even
+for armored vehicles or well-armored cybershells – and uncertainty about what’s there makes things worse. Hence, Fifth
+Wave armies favor the development of extensive automated
+scouting capabilities. The Darwin-Sogo Type 134 Kaeru (“frog”)
+exemplifies one aspect of this doctrine.
+It’s roughly the size of a small dog and walks on four splayed
+legs. Its body is a flattened hemisphere, studded with sensors
+on ring-shaped fittings capable of 360° rotation. On the top is a
+miniature weapons mount, usually holding a mini-missile pod,
+while a small underbelly compartment can hold a single onehex cyberswarm, widening its mission options. Such a shell
+has, by military standards, a very limited offensive capability,
+but small size, a chameleon coating, and other design features
+give it good stealth functionality, its sensor array is extensive
+and sensitive, and it can seemingly get anywhere.
+Unfortunately, design compromises do make it a little fragile.
+Typically, it rides close to the battle zone in a bay or rack aboard
+a larger shell or vehicle, then dismounts to perform its mission;
+hence, it can get by with a relatively limited endurance.
+In fact, many analysts regard the installation of a weapon
+mount on such cybershells as a dangerous distraction or compromise; a scout that opens fire gives away its position, is frequently destroyed a moment later, and often invalidates its primary mission. Hence, some similar models are completely
+unarmed. Other commanders don’t like any of their troops to be
+incapable of fighting, even the nonsapient ones, and feel that
+scouts should be able to engage high-value targets of opportunity, provide fire support for other forces in emergencies, and
+serve as effective guards by way of a secondary duty. 20 lbs., 18”
+long.
+Attribute Modifiers: ST-5 [-50]; DX+1 [20]; HT+2 [20].
+Secondary Characteristic Modifiers: HP-1 [-2]; Per+3 [15];
+Basic Speed +0.25 [5]; SM-4.
+Advantages: 360° Vision [25]; Absolute Direction [5]; Catfall
+[10]; Chameleon 2 (Extended, Infrared, +20%) [12]; DR 3
+(Can’t Wear Armor, -40%) [9]; Doesn’t Breathe [20]; Extra
+Legs (4 legs) [5]; High Pain Threshold [10]; Hyperspectral
+Vision [25]; Injury Tolerance (No Head) [7]; Machine [25];
+Nictitating Membrane 1 [1]; Payload 2 [2]; Perfect Balance
+
+THE CYBERSHELLS
+
+20
+
+[15]; Pressure Support 1 [5]; Protected Sense (Vision) [5];
+Radiation Tolerance 5 [10]; Reduced Consumption 1
+(Recharge twice a day) [2]; Resistant to Electrical Pulses and
+Surges (+3) [1]; Sealed [15]; Silence 2 [10];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Telescopic Vision 2 [10]; Temperature Tolerance 7 [7].
+Perks: Accessories (IFF transponder, Tiny Computer). [2]
+Disadvantages: “Arm” is actually a Weapon Mount [-8];
+Cybershell Body [-15]; Horizontal [-10]; Maintenance
+(Electronics Repair and Mechanic skills, 1 person, Monthly)
+[-2]; One Arm [-20]; Restricted Diet (Common, high-energy
+power cells) [-20]; Social Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2081. Cost: $3,000 + computer.
+
+Variants
+A number of specialized Kaeru sub-models have been produced to handle specific terrestrial environments, mostly with
+modifications to the leg structures; these gain Terrain
+Adaptation [5] but also Basic Move-1 [-5], and often have a different temperature “comfort range,” all for +$350 to the price.
+For instance, the Model 134-c is intended for arctic operations
+and can move normally on snow; the 134-f is a desertoperations variant.
+
+MINI-UCAV
+see Deep Beyond, p. 118; 241 points
+A football-sized helicopter gunship with two counterrotating rotors and four legs for ground movement.
+Attribute Modifiers: ST-5 [-50]; DX+2 [40]; HT+1 [10].
+Secondary Characteristic Modifiers: HP+1 [2]; SM-4.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Acute Vision 1 [2]; Chameleon 3 (Extended, Infrared, +20%)
+[18]; DR 25 (Can’t Wear Armor, -40%) [75]; Doesn’t Breathe
+[20]; Enhanced Move 1 (Air) [20]; Extra Legs (4 legs) [5];
+Flight [40]; Infravision [10]; Machine [25]; Payload 10 [10];
+Protected Sense (Vision) [5]; Radiation Tolerance 2 [5];
+Reduced Consumption 2 (Recharge once a day) [4];
+Resistant to Acceleration (+8) [2]; Sealed [15];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Telescopic Vision 2 [10]; Vacuum Support [5].
+Perks: Accessories (IFF transponder, Tiny Computer). [2]
+Disadvantages: Both “Arms” are actually Weapon Mounts
+[-16]; Cybershell Body [-15]; Maintenance (Electronics
+Repair and Mechanic skills, 2 people, Weekly) [-10];
+Restricted Diet (Common, high-energy power cells) [-20];
+Social Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2087. Cost: $105,000 + computer.
+Note: The shell’s internal weapons load is assumed to be a
+slightly larger (four-shot, 5 lbs.) version of the standard minimissile pod, with similar attributes for game purposes.
+
+Variants
+Titan Version (Deep Beyond, p. 118): The template above is
+for the standard “terrestrial” AV-71, powered by a rechargeable
+power cell. The AV-71T takes the limitation “Requires Low
+Gravity, 0.2 G, -40%” on its Flight, reducing the cost to [24],
+replaces Reduced Consumption with Doesn’t Eat or Drink [10]
+(its six-monthly refueling cycle can be subsumed within its
+maintenance requirement), and changes the Restricted Diet
+disadvantage to (Occasional, radioisotopes) [-30]: 221 points.
+
+SEEKER MISSILE
+see In the Well, p. 86; 123 points
+A man-portable “brilliant” missile, capable of hunting down
+targets without human intervention.
+Attribute Modifiers: ST-9 [-90]; DX+2 (No Fine Manipulators,
+-40%) [24]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+3 [6]; SM-2.
+Advantages: 3D Spatial Sense [10]; DR 15 (Can’t Wear Armor,
+-40%) [45]; Doesn’t Breathe [20]; Enhanced Move 7 (Air)
+[140]; Flight (Cannot Hover, -15%) [34]; Infravision [10];
+Lifting ST +5 [15]; Machine [25]; Payload 9 [9]; Resistant to
+Acceleration (+8) [2]; Telecommunication (Cable Jack) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Secure, +20%; Video, +40%)
+[16]; Telescopic Vision 8 [40].
+Perks: Accessory (Tiny Computer). [1]
+Disadvantages: Cybershell Body [-15]; Deafness [-20];
+Increased Consumption 9 (Refuel after 1 minute) [-90]; No
+Legs (Aerial) [0]; No Manipulators [-50]; No Sense of
+Smell/Taste [-5]; Restricted Diet (Occasional, Rocket fuels)
+[-30]; Social Stigma (Monster) [-15].
+Quirks: Requires some maintenance if fired and then recovered for reuse. [-1]
+Features: Can self-destruct using warhead in payload;
+Individuals of the same model closely resemble each other.
+Date: 2082. Cost: $26,000 + computer.
+Note: The missile can be stored, inert, more or less indefinitely without attention before use, so it doesn’t qualify for the
+Maintenance disadvantage. However, if it is fired and then
+recalled or recovered without detonation, it will need at least a
+quick check (using Armoury skill) as well as refueling before
+being fired again. While this might seem like an unlikely decision, such missiles can be used for reconnaissance or microbot
+swarm delivery as well as direct attacks – which justifies providing a character template for them.
+
+SMART TORPEDO
+255 points
+The Hicks Mk 92 USMDS (Underwater Sub-Munitions
+Delivery System) is based on the Hicks Mk 90 torpedo (see
+Under Pressure, p. 128), but isn’t usually expected to expend
+itself in attacks on targets. In fact, the main difference from the
+Mk 90 is that the warhead is replaced with a payload/weapons
+bay capable of holding six 30mm minitorps (see Under
+Pressure, p. 121), enabling what is functionally an underwater
+combat cybershell to engage and destroy small or soft targets.
+The minitorps are fired from launchers that are effectively
+
+THE CYBERSHELLS
+
+21
+
+equivalent to a pair of standard mini-missile pods.
+Alternatively, the Payload space can hold other weapons,
+microbot swarms, etc., up to 9 lbs. in total; no weapons are
+included in the cybershell cost. The design also includes a
+PESA array and active/passive sonar (both with 360° coverage), guidance systems, and sonar and radio communications with a trailing-wire antenna to enable it to use the radio
+while submerged; another common mission for the Mk 92 is
+reconnaissance. It can be launched from a standard medium
+torpedo tube or bay, or carried on an external rack on a
+smaller vehicle.
+It retains the Mk 90’s short-range supercavitating “sprint”
+capability, which is usually used to gain a partial element of
+surprise when closing to engagement range, or to escape from
+a hostile encounter, possibly to a position from which it can
+transmit intelligence data. (The limitations on the Mk 90’s
+supercavitating ability – maximum depths, etc. – also apply to
+the Mk 92, and can be enforced if the GM desires; consider
+them as included in the limitations on the shell’s Basic Move
+and Enhanced Speed. Use of the supercavitation effect makes
+maneuvering very difficult; realistically, it ought also to impose
+large penalties to the shell’s hearing and vision.) A Mk 92 can
+make an “AKV-style” ramming run on a target that is considered both valuable enough to justify expending the shell and
+vulnerable enough to take serious damage from the collision;
+at its maximum speed of 300 mph, it hits for 6d¥11 crushing
+damage. It’s also possible for a well-equipped workshop to
+replace the payload and some of the sensors and other components with a warhead, effectively transforming this into a Mk
+90. Such ad hoc modifications may have side-effects, typically
+reducing the shell’s effective HT to 11. 1,700 lbs., 15’ long.
+Attribute Modifiers: ST-10 [-100]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+45 (Size, -20%) [72];
+Basic Move+5 [25]; Basic Move+65 (Only for determining
+acceleration to supercavitating speeds, -80%) [65]; SM+2.
+Advantages: 360° Vision [25]; 3D Spatial Sense [10]; DR 5
+(Can’t Wear Armor, -40%) [15]; Discriminatory Hearing
+(Only underwater, -30%) [11]; Doesn’t Breathe [20];
+Enhanced Move 1 (Water; Temporary Disadvantage,
+Increased Consumption 3, -30%) [14]; Enhanced Move +3
+(Water; Handling Penalty -5, -25%; Maximum Duration 22
+seconds, -75%) [12]; High Pain Threshold [10]; Infravision
+[10]; Lifting ST +3 (Size, -20%) [8]; Machine [25]; Nictitating
+Membrane 2 [2]; Night Vision 8 [8]; Payload 5 [5];
+Penetrating Vision 1 (Blockable by dense reflective materials, -20%; Only in Air, -30%) [5]; Pressure Support 2 (Can’t
+take more than 32 atmospheres except when supercavitating, -10%) [9]; Resistant to Electrical Pulses and Surges (+3)
+[1]; Scanning Sense (Sonar; Extended Arc, 360°, +125%)
+[45]; Sealed [15]; Telecommunication (Cable Jack; Video,
++40%) [7]; Telecommunication (Radio; Increased Range
+¥100, +60%; Secure, +20%; Video, +40%) [22];
+Telecommunication (Sonar Comm; Reduced Range, 1/2,
+-10%) [9]; Temperature Tolerance 10 [10].
+Perks: Accessories (IFF Transponder, Microframe Computer,
+Small Spotlights, Trailing Wire Antenna). [4]
+Disadvantages: Cybershell Body [-15]; Maintenance
+(Electronics Repair and Mechanic skills, 2 people, Monthly)
+[-4]; No Legs (Aquatic) [0]; No Manipulators [-50]; No Sense
+of Smell/Taste [-5]; Numb [-20]; Restricted Diet (Common,
+
+high-energy power cells) [-20]; Social Stigma (Monster)
+[-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2094. Cost: $235,000 + computer.
+Note: This shell has sufficient power in its battery to operate for at least six hours when using no more than its Basic
+Move and its sonar. Employing a level of Enhanced Move
+drains the battery much faster, reducing its endurance to just
+one hour of continuous operation. For supercavitating speed,
+it uses a VCR rocket and a bubble generator run off a highenergy power pack; these have a maximum endurance of just
+22 seconds.
+
+WINGBOT
+see Fifth Wave, p. 121; 240 points
+A multipurpose flying cybershell, mostly used for security
+work. This treatment assumes that the model described in
+Fifth Wave uses a miniature ceramic engine, capable of burning a range of liquid fuels including alcohol and gasoline.
+Variants that use power cells have no need for air, but suffer
+from reduced endurance or lower speed.
+Attribute Modifiers: ST-4 [-40]; DX+4 [80]; HT+2 [20].
+Secondary Characteristic Modifiers: HP -1 [-2]; SM -2.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Acute Vision 3 [6]; Affliction 3 (Stunning; Armor Divisor (2),
++50%; Melee Attack, Reach C, -30%) [36]; DR 3 (Can’t Wear
+Armor, -40%) [9]; Enhanced Move 2 (Air) (Temporary
+Disadvantage, replace Reduced Consumption 2 with
+Increased Consumption 2, -24%) [31]; Enhanced Move 1
+(Ground) [20]; Filter Lungs [5]; Flight (Cannot Hover, -15%;
+Small Wings, -10%; Temporary Disadvantage, replace
+Reduced Consumption 2 with Increased Consumption 2,
+-24%) [21]; Machine [25]; Night Vision 9 [9]; Payload 5 [5];
+Peripheral Vision [15]; Reduced Consumption 2 [4];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Laser Communication) [15];
+Telecommunication (Radio; Video, +40%) [14]; Telescopic
+Vision 4 [20]; Temperature Tolerance 3 [3].
+Perks: Accessories (Drug Injector, Small Computer). [2]
+Disadvantages: Cybershell Body [-15]; Horizontal [-10];
+Maintenance (Electronics Repair and Mechanic skills, 2
+people, Monthly) [-4]; Mute [-25]; No Sense of Smell/Taste
+[-5]; Restricted Diet (Very Common, liquid fuels) [-10].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2078. Cost: $24,000 + computer.
+Note: While most armed cybershells take Weapon Mount or
+Payload rather than Innate Attack (for reasons discussed in
+Changing Times), the wingbot’s electroshock device represents
+a valid exception; it’s completely integral to the machine. This
+is represented by an Affliction advantage, and is identical in
+effect to a shock glove. The wingbot’s drug injector, on the
+other hand, is the equivalent of a cheap hand-held device, and
+needs to be charged with whatever drug is to be injected, so it
+can be treated as a simple Accessory Perk. (Admittedly it can
+be used in combat, which isn’t normal for an Accessory, but we
+can stretch a point here – the electroshock device already adds
+substantially to the template cost, after all.)
+
+THE CYBERSHELLS
+
+22
+
+SPACE AND EXOTIC
+ENVIRONMENT MODELS
+Cybershells are useful in space and other extreme environments; they can be built to operate there, and even if they fail,
+it’s usually just property damage, whereas humans in even the
+best protective suits are risking their lives (and the stress
+caused by this knowledge can itself make them less efficient).
+In any case, the humanoid body plan, while useful for many
+purposes on Earth, isn’t always terribly appropriate in other
+environments. The Outer System especially has more infomorphs than humans, and many of them use highly specialized cybershells.
+Note that several cybershells described elsewhere are capable of handling vacuum or other extraterrestrial environments
+quite well; this section concerns shells designed purely for such
+purposes.
+
+AEROROVER
+see Deep Beyond, p. 116; 128 points
+Used in the exploration of Titan, this shell has three helium
+balloons that allow it to fly, float on hydrocarbon lakes, or roll
+and bounce along the ground.
+Attribute Modifiers: ST-1 [-10]; DX-2 [-40]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+3 (Size, -30%) [5];
+SM+3.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Amphibious [10]; DR 3 (Can’t Wear Armor, -40%) [9]; DR +1
+(Can’t Wear Armor, -40%; Crushing Damage Only, -40%) [1];
+Doesn’t Breathe [20]; Enhanced Move 1 (Ground) [20];
+Extra Wheels (3 wheels) [5]; Flight (Lighter Than Air, -10%)
+[36]; Machine [25]; Reduced Consumption 3 (Refuel once a
+week) [6]; Reduced Consumption +1 (Refuel once a month;
+Only with minimal systems activity – stationary or floating
+on the wind, -50%) [1]; Sealed [15]; Stretching 6 (Arm Only,
+-30%) [26]; Super Jump 1 (Bouncing Only, -50%) [5];
+Telecommunication (Cable Jack; Video, +40%) [7];
+Telecommunication (Radio; Video, +40%) [14]; Telescopic
+Vision 4 [20]; Temperature Tolerance 8 [8]; Terrain
+Adaptation (Methane Mud) [5]; Vacuum Support [5].
+Perks: Accessory (Small Computer). [1]
+Disadvantages: Bad Grip 2 [-10]; Cybershell Body [-15]; No
+Legs (Wheeled) [-20]; No Sense of Smell/Taste [-5]; One Arm
+[-20]; Restricted Diet (Common, hydrogen-oxygen fuel supply) [-20].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2071. Cost: $30,000 + computer.
+
+BAIKAL CRYOBOT
+see Under Pressure, p. 96; 371 points
+A typical early-model ice-tunneling/free-swimming explorer
+shell.
+Attribute Modifiers: ST+2 (Size, -10%) [18]; HT+3 [30].
+
+Secondary Characteristic Modifiers: HP+6 (Size, -10%) [11];
+SM+1.
+Advantages: DR 30 (Can’t Wear Armor, -40%) [90]; Doesn’t
+Breathe [20]; Doesn’t Eat or Drink [10]; Enhanced Move 1
+(Water) [20]; Extra-Flexible Arms [10]; Machine [25];
+Microscopic Vision 3 [15]; Permeation (Ice; Tunnel, +40%;
+Very slow, move only 1 yard/40 seconds, -80%) [6]; Pressure
+Support 3 [15]; Radiation Tolerance 1,000 [45]; Scanning
+Sense (Sonar; Extended Arc, 360°, +125%; Targeting, +20%;
+Accessibility – Must extend vulnerable sensor mast in direction
+to be scanned, -10%) [47]; Sealed [15]; Telecommunication
+(Cable Jack; Video, +40%) [7]; Telecommunication (Laser
+Communication; Video, +40%) [21]; Temperature Tolerance 25
+[25]; Vacuum Support [5].
+Perks: Accessory (Microframe Computer). [1]
+Disadvantages: Blindness [-50]; Cybershell Body [-15]; No Legs
+(Aquatic) [0].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2050. Cost: $350,000 + computer.
+Note: The Baikal’s radiothermal energy source requires occasional replenishment, but not often enough to eliminate the
+Doesn’t Eat or Drink advantage.
+
+ENDYMION CYBERSHELL
+see High Frontier, p. 59; 203 points
+A humanoid shell used on the moon for many purposes,
+including teletourism.
+Attribute Modifiers: ST+1 (Size, -10%) [9]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+4 [8]; SM+1.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Chameleon 1 [5]; DR 3 [15]; High Manual Dexterity 4 [20];
+Hyperspectral Vision [25]; Machine [25]; Microscopic Vision 3
+[15]; Sealed [15]; Sensitive Touch [10]; Telecommunication
+(Cable Jack; Sensie, +80%) [9]; Telecommunication (Laser
+Communication; Video, +40%) [21]; Telecommunication
+(Radio; Sensie, +80%) [18]; Temperature Tolerance 6 [6];
+Vacuum Support [5].
+Perks: Accessories (Microframe Computer, Micromanipulation
+Tools); Physically attractive in a stylized, abstract way (+1 reactions from people with a taste for stylish design who haven’t
+seen the model much before). [3]
+Disadvantages: Cybershell Body [-15]; Restricted Diet (Very
+Common, power cells) [-10]; Skinny [-5].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2092. Cost: $90,000 + computer.
+Note: The Skinny disadvantage isn’t normally allowed on
+racial templates; however, in this case, where all of the “race” are
+the same build, which is notably skinny compared to a very
+widespread human baseline that it otherwise resembles, it can
+be permitted.
+
+THE CYBERSHELLS
+
+23
+
+GAS GIANT AEROBOT
+see Deep Beyond, p. 118; 255 points
+These are computerized packages supported by balloons,
+used for operations in gas-giant atmospheres.
+Attribute Modifiers: HT+2 [20].
+Secondary Characteristic Modifiers: SM+5.
+Advantages: Discriminatory Taste [10]; DR 5 (Can’t Wear
+Armor, -40%) [15]; Doesn’t Breathe [20]; Doesn’t Eat or
+Drink [10]; Flight (Lighter Than Air, -10%) [36]; Machine
+[25]; Payload 2 [2]; Pressure Support 2 [10]; Scanning Sense
+(Radar; Extended Arc, 360°, +125%; Increased Range ¥20,
++40%) [53]; Sealed [15]; Telecommunication (Radio;
+Increased Range ¥1,000, +90%; Sensie, +80%) [27];
+Temperature Tolerance 20 [20]; Vacuum Support [5].
+Perks: Accessories (Microframe Computer, Scientific
+Instrument Package). [2]
+Disadvantages: Cybershell Body [-15]; No Legs (Aerial) [0].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2057+. Cost: $15,000 + computer.
+Note: Most of this aerobot’s size consists of its balloon; the
+electronics/thruster package is SM -2. Note that each shell’s
+“native” temperature and pressure will be appropriate for the
+gas giant for which it is designed.
+
+Variants
+Zeus-3: Change SM to +4 and Payload to level 3 [3], and add
+No Manipulators [-50]. 206 points.
+Tuxing Type-94: Add Chameleon 2 (Radar) [10] and
+Telescopic Vision 4 [20]. 285 points.
+TWX Type-97: Add HP-2 [-4]. 251 points.
+
+HERZBERG CYBERSHELL
+see High Frontier, p. 100; 153 points
+A serpentine zero-G worker shell used on Die
+Sonnenspinnerin Sieben station.
+Attribute Modifiers: ST-1 [-10]; DX+2 [40]; HT+1 [10].
+Secondary Characteristic Modifiers: Per+1 [5].
+Advantages: Absolute Direction [5]; DR 10 (Can’t Wear Armor,
+-40%) [30]; Doesn’t Breathe [20]; Double-Jointed [15];
+Infravision [10]; Long Arm (+2 SM: Temporary
+Disadvantage, No Legs (Sessile), -50%) [10]; Machine [25];
+Pressure Support 1 [5]; Sealed [15]; Telecommunication
+(Cable Jack; Video, +40%) [7]; Telecommunication (Laser
+Communication) [15]; Telecommunication (Radio; Video,
++40%) [14]; Vacuum Support [5].
+Perks: Accessory (Small Computer). [1]
+Disadvantages: Cybershell Body [-15]; Invertebrate [-20];
+Maintenance (Electronics Repair and Mechanic skills, 2
+people, Monthly) [-4]; One Arm [-20]; No Legs (Slithers) [0];
+Restricted Diet (Very Common, power cells) [-10].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2088. Cost: $52,000 + computer.
+Note: This shell effectively normally uses the front part of its
+body as a single “arm,” with approximately normal reach for
+its size. However, by clamping itself to a rigid, immobile object,
+
+it can extend its effective reach, using most of its body as its
+“arm.” This is treated as the “Long Arm” advantage (evaluated as
+two levels of the Long enhancement applied to the nominal 10
+point value of a single arm), with the Temporary Disadvantage
+No Legs (Sessile).
+
+MICROGRAVITY RATS
+see Deep Beyond, p. 117; 811 points
+A space-operations combat shell, based on the Jungle RATS
+(p. 18).
+Attribute Modifiers: DX+1 [20]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+3 [6]; Air Move-6
+(Space acceleration only; atmosphere move and space delta-v
+are unaffected, -80%) [-2]; SM-2.
+Advantages: Absolute Direction [5]; Ambidexterity [5];
+Brachiator [5]; Chameleon 4 (Extended, Infrared, +20%) [24];
+Clinging [20]; DR 40 (Electromagnetic, +20%; Can’t Wear
+Armor, -40%) [160]; Doesn’t Breathe [20]; Enhanced Move 7
+(Space; Newtonian, -50%) [70]; Enhanced Tracking 3 [15];
+Extra Arms 2 (Extra-Flexible, +50%; Long, +4 SM, +400%)
+[110]; Extra-Flexible Long Arms (+4 SM) [90]; Extra Legs (4
+legs; Long, +2 SM, +200%; Temporary Disadvantage, No Fine
+Manipulators, -30%) [14]; Extra Attack 1 [25]; Flight
+(Newtonian Space Flight, +25%; Requires Low Gravity, 0.5 G,
+-25%) [40]; High Pain Threshold [10]; Infravision [10]; Innate
+Attack 2 (Burning; Accuracy +6, 30%; Armor Divisor (2),
++50%; Increased Range ¥10, +30%; Increased Range raised to
+¥50, 1/2D Only, +10%; Rapid Fire, RoF 3, +50%) [27];
+Machine [25]; Nictitating Membrane 2 [2]; Perfect Balance
+[15]; Pressure Support 2 [10]; Protected Sense (Vision) [5];
+Radiation Tolerance 5 [10]; Sealed [15]; Telecommunication
+(Cable Jack; Video, +40%) [7]; Telecommunication (Laser
+Communication) [15]; Telecommunication (Radio; Secure,
++20%; Video, +40%) [16]; Temperature Tolerance 10 [10];
+Reduced Consumption 4 (Refuel once a month) [8]; Resistant
+
+THE CYBERSHELLS
+
+24
+
+to Electrical Pulses and Surges (+8) [2]; Scanning Sense
+(Ladar; Extended Arc, 240°, +75%; Targeting, +20%) [39];
+Vacuum Support [5].
+Perks: Accessories (Auxiliary cameras built into fingers, IFF
+transponder, Small Computer). [3]
+Disadvantages: Cybershell Body [-15]; Maintenance (Electronics
+Repair and Mechanic skills, 2 people, Weekly) [-10];
+Restricted Diet (Occasional, radioisotopes) [-30]; Social
+Stigma (Monster) [-15].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2080. Cost: $640,000 + computer.
+Notes: This shell’s maximum space acceleration is 5 yards/second2 (0.5 G). With its delta-v of just over 1,400 (2,800 mph), this
+permits around 5 minutes of thrust.
+As the shell’s laser weapon is integral to its design, it’s purchased as an Innate Attack rather than having Payload space
+assigned. The laser is a 2d(2) tight-beam burning attack with Acc
+9, Range 500/1,000, RoF 3, and Rcl 1, and having such a weapon
+built in means that the cybershell is LC2. The RATS uses a radiothermal generator for power, which only needs “feeding” (replenishment and clean-up of its radiothermal source) about once a
+month, as part of its routine maintenance cycle. Its special capabilities, especially the Enhanced Tracking and Extra Attack, may
+require a specially designed, trained, or augmented infomorph to
+use them with full effect – GM’s option.
+
+Variants
+Titan RATS (Deep Beyond, p. 117): A variant for use on Titan.
+Add Amphibious [10], and delete the modified Air Move,
+Enhanced Move and Flight. 713 points.
+
+MINING WORM
+see Deep Beyond, p. 118; 282 points
+A centipede-like asteroid mining machine which eats its way
+through rock.
+Attribute Modifiers: ST+4 (No Fine Manipulators, -40%; Size,
+-20%) [16]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+8 (Size, -20%) [13];
+SM+2.
+Advantages: Absolute Direction [5]; DR 10 (Can’t Wear Armor,
+-40%) [30]; Detect (Magnetic Fields) [10]; Discriminatory
+Taste (Only for Minerals, -50%) [5]; Doesn’t Breathe [20];
+Double-Jointed [15]; Enhanced Move 1/2 (Ground) [10]; Extra
+Legs (14 legs) [15]; Lifting ST +6 (Size, -20%) [15]; Machine
+[25]; Payload 25 [25]; Payload 150 (Exposed, -50%; Loose matter only, stored in “stomach sac,” -20%) [45]; Pressure Support
+1 [5]; Radiation Tolerance 5 [10]; Reduced Consumption 4
+(Refuel once a month) [8]; Sealed [15]; Telecommunication
+(Cable Jack; Video, +40%) [7]; Telecommunication (Laser
+Communication) [15]; Telecommunication (Radio; Increased
+Range ¥10, +30%; Video, +40%) [17]; Temperature Tolerance
+10 [10]; Tunneling (Move 1) [35]; Vacuum Support [5].
+Perks: Accessories (Internal Ore Separation System, Small
+Computer). [2]
+Disadvantages: Cybershell Body [-15]; Horizontal [-10];
+Invertebrate [-20]; Maintenance (Electronics Repair and
+Mechanic skills, 4 people, Monthly) [-6]; No Fine
+Manipulators [-30]; No Sense of Smell/Taste [-5]; Restricted
+Diet (Occasional, radioisotopes) [-30].
+
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2065. Cost: $180,000 + computer.
+
+Variants
+Armored Mining Worm: SM becomes +3, so ST becomes +4
+(No Fine Manipulators, -40%; Size, -30%) [12]; Damage
+Resistance becomes 20 (Can’t Wear Armor, -40%) [60];
+Radiation Tolerance becomes 20 [20]. 318 points.
+
+SERVICE NANOSAT
+see High Frontier, p. 11; 89 points
+A small shell used to maintain and refuel satellites in place.
+Attribute Modifiers: ST-6 [-60]; HT+1 [10].
+Secondary Characteristic Modifiers: HP-1 [-2]; Basic Move-2
+[-10]; SM-3.
+Advantages: 360° Vision [25]; 3D Spatial Sense [10]; DR 8
+(Can’t Wear Armor, -40%) [24]; Doesn’t Breathe [20]; Doesn’t
+Eat or Drink [10]; Extra Arms 2 (No Physical Attack, -50%;
+Short, -50%) [4]; High Manual Dexterity 4 [20]; Machine
+[25]; Microscopic Vision 3 [15]; Payload 10 (Liquids Only,
+-20%) [8]; Protected Sense (Vision) [5]; Radiation Tolerance
+5 [10]; Sensitive Touch [10]; Telecommunication (Cable
+Jack; Video, +40%) [7]; Telecommunication (Laser
+Communication; Increased Range ¥2, +10%) [17];
+Telecommunication (Radio; Increased Range ¥10, +30%;
+Video, +40%) [17]; Vacuum Support [5].
+Perks: Accessories (Micromanipulation Tools, Small
+Computer); Low-power thrusters (Can provide 0.01 G when
+in freefall, using fuel from Payload – not enough for combat
+movement, but sufficient for station-keeping and ordinary
+mission tasks). [3]
+Disadvantages: Cybershell Body [-15]; Deafness [-20];
+Maintenance (Electronics Repair and Mechanic skills, 2
+people, Monthly) [-4]; No Sense of Smell/Taste [-5]; Short
+Arms [-10]; Vulnerability (Crushing Damage ¥2) [-30].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2060. Cost: $10,000 + computer.
+Note: The Nanosat derives all the power it generally needs
+from a combination of solar cell input and small battery topups during its monthly maintenance periods. Hence, it has
+effectively no dietary needs for game purposes. It might run
+low on charge if required to exert its full strength for long
+periods.
+
+Variants
+Dust-Buster Nanosat: A free-floating module employed by
+some large stations to perform external inspections and light
+maintenance – and to eliminate or deflect small debris that
+might endanger the station. (Its actual ability to hit such
+objects before they hit the parent station is probably limited;
+although radar can detect even very small targets in space, and
+the shell typically receives targeting data from the controlling
+station, space debris relative velocities tend to be high. Still, it
+provides a reassuring last line of defense, and the laser can also
+be used as a cutting tool.) Replace the Extra Arms, High
+Manual Dexterity, Microscopic Vision, Sensitive Touch, and
+Micromanipulation Tools with Innate Attack 1 (Burning;
+Accuracy +6, 30%; Armor Divisor (2), +50%; Increased Range
+
+THE CYBERSHELLS
+
+25
+
+¥10, +30%; Increased Range raised to ¥50, 1/2D Only, +10%)
+[11] and Scanning Sense (Radar; Extended Arc, 360°, +125%;
+Increased Range ¥10, +30%; Targeting, +20%) [55]. (The builtin laser is a 1d(2) tight-beam burning attack with Acc 9, Range
+500/1,000, RoF 3, and Rcl 1.) Date 2081, Cost $11,000 + computer. 105 points.
+Sabotage Nanosat (High Frontier, p. 11): Add Chameleon 3
+(Extended, Infravision and Radar as well as normal vision,
++40%) [21]. 110 points.
+
+TUMBLEWEED
+see Deep Beyond, p. 120; -38 points
+A 10’ diameter inflated plastic ball with a small computerized
+core, used to survey various moons in the outer solar system.
+Attribute Modifiers: ST-10 [-100]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+10 (Size, -40%) [12];
+SM+4.
+Advantages: 360° Vision [25]; Absolute Direction [5]; DR 5
+(Can’t Wear Armor, -40%) [15]; DR +2 (Can’t Wear Armor,
+-40%; Crushing Damage Only, -40%) [2]; Doesn’t Breathe
+[20]; Doesn’t Eat or Drink [10]; Infravision [10]; Machine
+[25]; Pressure Support 1 [5]; Radiation Tolerance 10 [15];
+Resistant to Acceleration (+8) [2]; Super Jump 2 (Bouncing
+Only, -50%) [10]; Telecommunication (Cable Jack; Video,
++40%) [7]; Telecommunication (Radio; Increased Range ¥20,
++40%; Video, +40%) [18]; Vacuum Support [5].
+Perks: Accessory (Tiny Computer). [1]
+Disadvantages: Cybershell Body [-15]; Invertebrate [-20]; No
+Legs (Portable) [-30]; No Manipulators [-50]; Vulnerability
+(Impaling Damage ¥2) [-30].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2075. Cost: $2,000 + computer.
+Note: A Tumbleweed has no way to move itself, but can be
+moved around easily by external forces; hence, it’s given No
+Legs (Portable), despite the fact that it’s far too large to be
+carried by a human being. The thing that carries it merely
+happens to be the prevailing wind rather than a person.
+
+VENUS-CAPABLE
+CYBERSHELL
+see In the Well, p. 86; 256 points
+A cheap, ugly, utilitarian shell, used for general work and teletourism on Venus.
+Attribute Modifiers: ST+1 [10]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+1 [2].
+Advantages: DR 20 (Can’t Wear Armor, -40%) [60]; Doesn’t
+Breathe [20]; Extra Legs (4 legs) [5]; Machine [25]; Pressure
+Support 2 [10]; Sealed (Acid-Resistant, +40%) [21];
+Telecommunication (Cable Jack; Sensie, +80%) [9];
+Telecommunication (Radio; Sensie, +80%) [18]; Temperature
+Tolerance 80 [80].
+Perks: Accessory (Compact Mainframe Computer). [1]
+Disadvantages: Cybershell Body [-15]; Restricted Diet (Very
+Common, power cells) [-10].
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2090. Cost: $35,000 + computer.
+
+ZERO-G STEVEDORE
+327 points
+This is a typical medium-weight “space worker” shell, usually assigned to cargo transfer and simple maintenance tasks
+in the vicinity of a space station; some civilian craft also carry
+one or two. It’s essentially a compromise, cheaper than a
+crewed tug and able to fit into smaller spaces (including
+human-scale airlocks) while being stronger and more robust
+than a tech spider or a human worker. Most units have cheap
+computers with specialist NAIs installed, though some more
+sophisticated AIs operate such shells, usually as a secondary
+body. This is not a combat design, but police operations have
+occasionally employed available shells on an ad hoc basis, and
+their rugged strength makes them quite useful for this.
+
+The body is an instrument, the
+mind its function, the witness and
+reward of its operation.
+– The Life of Reason,
+George Santayana (1905)
+
+Physically, this model consists of a roughly ovoid pod with
+four heavy work arms that can all double as legs; its
+“hands/feet” all incorporate magnetic clamps. But it’s really
+built for free-fall operations; its casing is studded with ports for
+its chemical thruster system that can provide 1 G of thrust for
+up to 30 seconds, or lesser bursts for longer periods. (In theory, this might allow it to fly, briefly, on many worlds, but it
+doesn’t have any sort of control or stabilization systems to permit this.) A good AI can actually get around most of the time
+using well-judged leaps from surface to surface without wasting thruster fuel. Camera and short-range radar clusters at the
+“top” and “bottom” of the shell provide all-round awareness,
+but its auditory inputs are an afterthought, and are buried too
+deep in the body structure to work very well. The other minor
+drawback to the design is that it stints on power cell capacity,
+considering the requirements of its heavy-duty motors, meaning that it has to return to a power socket every few hours – but
+this is rarely a huge problem in normal use. 120 lbs., 5’ tall.
+Attribute Modifiers: ST+3 [30]; HT+2 [20].
+Secondary Characteristic Modifiers: HP+2 [4]; Air Move (actually Space acceleration) -1 [-2].
+Advantages: 360° Vision [25]; 3D Spatial Sense [10]; Clinging
+(Specific, Only materials on which magnetic clamps can
+work, -40%) [12]; DR 18 (Can’t Wear Armor, -40%) [54];
+Doesn’t Breathe [20]; Enhanced Move 5 (Space; Newtonian,
+-50%) [50]; Extra Arms 2 (Foot Manipulators, -30%) [14];
+Extra Legs (4 legs; Temporary Disadvantage, Horizontal and
+No Fine Manipulators, -40%) [3]; Flight (Newtonian Space
+Flight, +25%; Space Flight Only, -75%) [20]; Lifting ST +4
+[12]; Machine [25]; Nictitating Membrane 2 [2]; Night Vision
+3 [3]; Pressure Support 1 [5]; Radiation Tolerance 5 [10];
+Scanning Sense (Radar; Extended Arc, 360°, +125%; Reduced
+Range, 1/2, -10%) [43]; Sealed [15]; Telecommunication
+
+THE CYBERSHELLS
+
+26
+
+(Cable Jack; Video, +40%) [7]; Telecommunication (Laser
+Communication) [15]; Telecommunication (Radio; Video,
++40%) [14];Vacuum Support [5].
+Perks: Accessories (Small Computer, Small Spotlights). [2]
+Disadvantages: Cybershell Body [-15]; Hard of Hearing [-10];
+Increased Consumption 1 (Requires periodic recharging, 4
+hour endurance) [-10]; Maintenance (Electronics Repair and
+Mechanic skills, 2 people, Monthly) [-4]; No Sense of
+
+Smell/Taste [-5]; Restricted Diet (Very Common, power cells)
+[-10].
+Quirks: Cannot Float. [-1]
+Features: Individuals of the same model closely resemble each
+other.
+Date: 2063. Cost: $25,000 + computer.
+
+SPECIALIST BIOSHELLS
+Bioshells based directly on particular species can normally
+be represented by combining the species template with the
+Bioshell template from Changing Times, with maybe a few
+detail adjustments. However, some are unusual enough to
+require special treatment.
+Bioshells are fairly rare. Many humans find the idea
+unnerving enough to insist on legal or social restrictions, and
+AIs passing as “organics” – and especially those passing as
+human – are often assumed to be dangerous criminals with
+some kind of subversive, anti-human agenda. Furthermore,
+few jobs really require a infomorph mind in a biological body;
+there’s usually some kind of mechanical shell which can do
+things better. However, there are always some specialist tasks
+which can use the intellect of an AI and the special abilities of
+an organic body, and an infomorph in an apparently nonsapient organic body, especially one that’s clearly marked, isn’t
+always assumed to be up to no good. For that matter, some
+bioshells are explicitly intended to frighten people.
+Remember that a bioshell’s Immunity to Metabolic Hazards
+extends to brain infections, psychotropic agents, jet lag, etc.;
+however, anything that affects other parts of the body will still
+have an effect, possibly reduced if its primary effect is on the
+brain.
+
+Telecommunication (Cable Jack; Sensie, +80%) [9];
+Telecommunication (Radio; Sensie, +80%) [18].
+Perks: Accessory (Microframe Computer). [1]
+Disadvantages: Bad Grip 2 [-10]; Cold-Blooded (Threshold 50°)
+[-5]; Bioroid Body [-4]; Electrical (Partial, Skull hit locations
+only, -70%) [-6]; Increased Life Support (Massive – Requires
+enough water to support its body) [-10]; Invertebrate [-20];
+No Depth Perception [-15]; No Legs (Aquatic) [0].
+Date: 2092. Cost: $120,000 + computer.
+
+CALAMARINE
+see Under Pressure, p. 96; 332 points
+A bioshell based on a Humboldt squid.
+Attribute Modifiers: ST+2 (Size, -20%) [16]; DX+3 [60]; HT+2
+[20].
+Secondary Characteristic Modifiers: HP+3 (Size, -20%) [5];
+SM+2.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Chameleon 2 [10]; Constriction Attack [15]; DR 2 (Can’t
+Wear Armor, -40%; Tough Skin, -40%) [2]; Doesn’t Breathe
+(Gills, Breathe underwater only) [0]; Enhanced Move 1/2
+(Water) [10]; Enhanced Move +2 (Water; Limited
+Endurance, 2 seconds, -20%; Takes Recharge, 5 seconds,
+-10%) [28]; Extra-Flexible Arms [10]; Extra Arms 6 (ExtraFlexible, +50%) [90]; Extra Arms +2 (Extra-Flexible, +50%;
+Long, +1 SM, +100%) [50]; Immunity to Metabolic Hazards
+(Partial, Skull hit locations only, -70%) [9]; Night Vision 8
+[8]; Obscure 8 (Vision; Persistent, +40%; Only in Water,
+-20%; Limited Use, 4/day, -20%) [16]; Peripheral Vision [15];
+Pressure Support 1 [5]; Teeth (Sharp Beak) [1];
+
+Note: The Limited Endurance limitation on the shell’s higher levels of Enhanced Move can be considered as a form of
+Accessibility. Adding Persistent to Obscure (which represents a
+squid’s ability to produce a cloud of ink) simply causes it to
+remain in place for 10 seconds without further action from the
+shell.
+
+THE CYBERSHELLS
+
+27
+
+CETAPOD
+see Under Pressure, p. 98; 224 points
+A cloned humpback whale, used as a bioshell, mostly by
+humans and infomorphs who wish to experience life as a
+cetacean.
+Attribute Modifiers: ST+75 (No Fine Manipulators, -40%; Size,
+-60%) [150]; HT+4 [40].
+Secondary Characteristic Modifiers: SM+6.
+Advantages: Absolute Direction (Requires Signal, -20%) [4]; DR
+10 (Can’t Wear Armor, -40%; Tough Skin, -40%) [10]; Doesn’t
+Breathe (Oxygen Storage, ¥100, -30%) [14]; Enhanced Move
+1 (Water) [20]; Enhanced Tracking 1 [5]; Immunity to
+Metabolic Hazards (Partial, Skull hit locations only, -70%)
+[9]; Injury Tolerance (No Neck) [5]; Nictitating Membrane 1
+[1]; Peripheral Vision [15]; Pressure Support 2 [10]; Subsonic
+Speech (Normal and subsonic communication) [10]; Teeth
+(Sharp Teeth) [1]; Telecommunication (Cable Jack; Sensie,
++80%) [9]; Telecommunication (Radio; Sensie, +80%) [18];
+Temperature Tolerance 1 [1].
+Perks: Accessory (Microframe Computer). [1]
+Disadvantages: Bad Sight (Nearsighted, non-correctable) [-25];
+Bioroid Body [-4]; Electrical (Partial, Skull hit locations only,
+-70%) [-6]; Ichthyoid [-50]; Increased Life Support (Massive
+– Requires a water tank or special support for its body) [-10];
+No Sense of Smell/Taste (Can taste, -50%) [-2].
+Quirks: Poor color vision; Relatively short-lived. [-2]
+Date: 2068. Cost: $1,350,000 + computer.
+Note: This bioshell isn’t fully colorblind, but its color vision
+isn’t up to human standards; GMs can impose small penalties
+and inconveniences to reflect this at appropriate moments. Also,
+it doesn’t qualify for the full Short-Lived disadvantage under
+GURPS Fourth Edition; it’s a clone with bioroid features and in
+effect matures fast, but doesn’t live as long as a human.
+
+CROCSHELL
+87 points
+With fast natural growth cycles and excellent immune systems, reptiles can make good bioshells – especially for purposes
+that can exploit their natural advantages. Such creatures are too
+stupid and instinct-driven to be worth uplifting, but find a
+species with a large enough body that it can incorporate an
+implanted computer and they can be useful. They don’t even
+have to be specially cloned or heavily modified; engineers can,
+in effect, place a special puppet implant in an ordinary reptile,
+replacing some of the central nervous system. Such bioshells are
+widely regarded as deeply creepy; that may be the whole point.
+Various larger crocodile and alligator species make excellent
+examples; formidable ambush predators, they’re tough, well
+equipped for an amphibious lifestyle, and have mouths full of
+large teeth. The shell can benefit from the reptile’s predator
+senses, although it also suffers from some sensory limitations.
+Crocshells aren’t actually as common as action-adventure
+InVids might seem to suggest, but a few dictators and eccentric
+millionaires do employ them as estate guards – and there are
+always rumors of their enemies being fed to the crocs. A few
+find more innocuous uses in, say, the making of wildlife documentaries (or action-adventure InVids), although “gator
+wrestling” shows aren’t very common in 2100; audiences are
+
+too used to assuming that a “dangerous animal” is just a cybershell in such situations.
+One drawback to the reptilian body is its cold-blooded
+metabolism. To keep this sort of shell useful in cold conditions,
+bioengineers install a set of “metabolic boosters” – artificial
+organs that can maintain the creature’s body temperature at the
+fully active level when required. This enhancement can’t be kept
+running permanently without damage to the bioshell’s metabolism, and requires regular supplies of high-energy “feedstock”
+and dietary supplements, but it’s better than having the crocshell
+turn torpid at inconvenient moments. It can also be shut down
+by the shell’s computer to conserve energy, lowering its food
+requirements to the normal level for a Cold-Blooded creature
+(which combines with the creature’s Cast-Iron Stomach to make
+its food requirements very economical). Even with the enhancement, though, a crocshell isn’t really much use in, say, northern
+Europe or Canada; its “native temperature” for game purposes
+is somewhere in the tropical range. 1,500 lbs., 16’ long.
+Attribute Modifiers: ST+6 (No Fine Manipulators, -40%; Size,
+-30%) [18]; DX+2 (No Fine Manipulators, -40%) [24]; HT+3
+[30].
+Secondary Characteristic Modifiers: HP+4 (Size, -30%) [6];
+Per+1 [5]; Basic Move (Ground)-2 [-10]; Basic Move
+(Water)+2 [10]; SM+3.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Acute Hearing 2 [4]; Amphibious [10]; Breath-Holding 1 [2];
+Claws (Sharp Claws) [5]; DR 2 (Can’t Wear Armor, -40%;
+Tough Skin, -40%) [2]; DR +2 (Can’t Wear Armor, -40%;
+Tough Skin, -40%; Not on Underside, -10%) [2]; High Pain
+Threshold [10]; Immunity to Metabolic Hazards (Partial,
+Skull hit locations only, -70%) [9]; Nictitating Membrane 1
+[1]; Night Vision 3 [3]; Peripheral Vision [15]; Reduced
+Consumption 1 (Cast-Iron Stomach, -50%) [1]; Resistant to
+Disease (+3) [3]; Striker (Tail; Crushing; Cannot Parry, -40%;
+Clumsy, -1, -20%) [2]; Striking ST +3 (Bite Only, -60%) [6];
+Teeth (Sharp Teeth) [1]; Telecommunication (Cable Jack;
+Sensie, +80%) [9]; Telecommunication (Radio; Video, +40%)
+[14]; Vibration Sense (Water) [10].
+Perks: Accessory (Tiny Computer); Scaly Hide. [2]
+Disadvantages: Appearance (Monstrous) [-20]; Bad Smell [-10];
+Cold-Blooded (Threshold 50°; Mitigator, Food Supplements,
+Weekly, Special Source, -60%) [-2]; Colorblindness [-10];
+Electrical (Partial, Skull hit locations only, -70%) [-6];
+Frightens Animals [-10]; Quadruped [-35]; Short Legs [-2];
+Social Stigma (Monster) [-15].
+Quirks: Poor depth perception (can’t judge distances well; -3 on
+ranged attacks if it somehow gets to use them). [-1]
+Date: 2069. Cost: $45,000 + computer.
+Note: Normally, Amphibious characters have both Ground
+and Water move equal to their Basic Move, rather than buying
+either up or down separately. However, crocodiles are essentially amphibious, but are notably faster in water than on land;
+hence, the two Basic Move scores have been separated here. As
+the two modifiers cancel out, this can be regarded as a feature.
+
+MONITOR MONITOR
+99 points
+Like the crocshell, this bioshell, based on a the largest
+extant species of monitor lizard, the Komodo Dragon, exploits
+
+THE CYBERSHELLS
+
+28
+
+the robust constitution, combat capabilities, and other natural
+advantages of a big predatory reptile. Nicknamed the “monitor
+monitor” for its common uses as a guard, this bioshell can be
+fast, tough, and sneaky – like a normal Komodo. See the comments on the crocshell for explanations of many of this shell’s
+features. 150 lbs., 8’ long.
+Attribute Modifiers: ST+4 (No Fine Manipulators, -40%; Size,
+-10%) [20]; DX+2 (No Fine Manipulators, -40%) [24]; HT+5
+[50].
+Secondary Characteristic Modifiers: HP+3 (Size, -10%) [6];
+Per+1 [5]; Basic Speed+0.25 [5]; SM+1.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+Acute Taste and Smell 2 [4]; Claws (Sharp Claws) [5]; DR 2
+(Can’t Wear Armor, -40%; Tough Skin, -40%) [2];
+Discriminatory Smell [15]; Immunity to Metabolic Hazards
+(Partial, Skull hit locations only, -70%) [9]; Innate Attack 1d
+(Toxic; Cyclic, 1 day, 7 cycles, +60%; Follow-Up, Teeth, +0%;
+Onset, 1 hour, -20%; Resistible, HT-1, -25%) [5]; Peripheral
+Vision [15]; Reduced Consumption 1 (Cast-Iron Stomach,
+-50%) [1]; Resistant to other Komodos’ Toxic Attacks (+3)
+[1]; Striker (Tail; Crushing; Cannot Parry, -40%; Clumsy, -1,
+-20%) [2]; Striking ST +1 (Bite Only, -60%) [2]; Teeth (Sharp
+Teeth) [1]; Telecommunication (Cable Jack; Sensie, +80%)
+[9]; Telecommunication (Radio; Video, +40%) [14].
+Perks: Accessory (Tiny Computer); Scaly Hide. [2]
+Disadvantages: Appearance (Ugly) [-8]; Cold-Blooded
+(Threshold 65°; Mitigator, Food Supplements, Weekly,
+Special Source, -60%) [-4]; Electrical (Partial, Skull hit locations only, -70%) [-6]; Frightens Animals [-10]; Hard of
+Hearing [-10]; Night Blindness [-10]; Quadruped [-35]; Short
+Legs [-2]; Social Stigma (Monster) [-15].
+Quirks: Especially limited high and low frequency hearing;
+Poor depth perception (can’t judge distances well; -3 on
+ranged attacks if it somehow gets to use them). [-2]
+Date: 2071. Cost: $40,000 + computer.
+
+by Cold, -60%) [12]; Reduced Consumption 3 (Air Only,
++100%) [12]; Temperature Tolerance 3 [3].
+Perks: Accessory (Tiny Biodegradable Computer); Sanitized
+Metabolism. [2]
+Disadvantages: Bioroid Body [-4]; Electrical (Partial, Vitals hit
+locations only, -30%) [-14]; Invertebrate [-20]; Short Arms
+[-10]; Short Lifespan 4 [-40]; Terminally Ill (50 hours left;
+Mitigator, Hibernating, -60%) [-40]; Unhealing (Total) [-30].
+Features: Early Maturation increased to level 5; Edible, and
+available in a range of designs and flavors.
+Date: 2098. Cost: $50 + enhanced computer if desired.
+Note: See Changing Times for an explanation of the Air
+Only enhancement to Reduced Consumption. The Mitigator
+on Terminally Ill stops working once the shell reaches its aging
+threshold (3 years).
+
+Variants
+Animal Snack (Deep Beyond, p. 115): Add Quadruped [-35].
+-221 points.
+
+Note: Some implementations of this idea suppress the veritable soup of dangerous microbes that forms in a Komodo’s
+mouth, which in the wild enables the creature to bite a large
+victim once and then back off and wait for it to collapse due to
+infection. If this is done, delete the Innate Attack from the template, saving 5 points. However, users who find a use for this
+sort of shell often want it as a terror weapon, and choose to
+retain this feature.
+
+SENTIENT SNACKS
+see Deep Beyond, p. 114; -186 points
+Humanoid or animal-shaped synthetic snack food with
+enough cheap, disposable computer power to display a basic
+personality.
+Attribute Modifiers: ST-7 [-70]; DX-3 [-60].
+Secondary Characteristic Modifiers: Basic Move-2 [-10];
+SM-6.
+Advantages: Doesn’t Breathe (Oxygen Absorption, -25%) [15];
+Doesn’t Eat or Drink [10]; Flexibility [5]; High Pain
+Threshold [10]; Immunity to Disease [10]; Immunity to
+Metabolic Hazards (Brain-related effects only, -50%) [15];
+Injury Tolerance (No Blood; Not immune to blood-borne
+toxins, -50%) [3]; Injury Tolerance (No Brain, No Neck, No
+Vitals) [15]; Metabolism Control 6 (Hibernation, Triggered
+
+THE CYBERSHELLS
+
+29
+
+SPIONFISCH
+
+WARSHARK
+
+see Under Pressure, p. 97; 9 points
+A fish bioshell, mostly used for surveillance.
+
+see Under Pressure, p. 98; 141 points
+A military shark bioshell.
+
+Attribute Modifiers: HT+2 [20].
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+DR 1 (Can’t Wear Armor, -40%; Tough Skin, -40%) [1];
+Doesn’t Breathe (Gills, Breathe underwater only) [0];
+Enhanced Move 1 (Water) [20]; Immunity to Metabolic
+Hazards (Partial, Skull hit locations only, -70%) [9]; Injury
+Tolerance (No Neck) [5]; Peripheral Vision [15]; Pressure
+Support 1 [5]; Telecommunication (Cable Jack; Sensie,
++80%) [9]; Telecommunication (Radio; Video, +40%) [14].
+Perks: Accessory (Small Compact Computer). [1]
+Disadvantages: Appearance (Unattractive) [-4]; Bioroid Body
+[-4]; Cold-Blooded (Threshold 50°) [-5]; Electrical (Partial,
+Skull hit locations only, -70%) [-6]; Ichthyoid [-50];
+Increased Life Support (Massive – Requires enough water to
+support its body) [-10]; No Depth Perception [-15].
+Date: 2086. Cost: $17,000 + computer.
+
+Variants
+See Under Pressure for notes on these.
+Bonito (Small Spionfisch): SM is -3; Add ST-4 [-40] and
+delete the Increased Life Support (a tank large enough for a
+small Spionfisch doesn’t have to be Massive). -21 points.
+Tuna (Large Spionfisch): SM is +2. Add ST+3 (No Fine
+Manipulators, -40%; Size, -20%) [12], HP+2 (Size, -20%) [4],
+and an extra half-level of Enhanced Move (Water) [+10]. 35
+points.
+
+TANIWHA
+see Under Pressure, p. 98; 164 points
+A killer whale bioshell, generally converted from an adult
+orca, used for military or paramilitary ops.
+Attribute Modifiers: ST+35 (No Fine Manipulators, -40%; Size,
+-40%) [70]; HT+5 [50].
+Secondary Characteristic Modifiers: SM+4.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+DR 5 (Can’t Wear Armor, -40%; Tough Skin, -40%) [5];
+Doesn’t Breathe (Oxygen Storage, ¥50, -40%) [12];
+Enhanced Move 1.5 (Water) [30]; Enhanced Tracking 1 [5];
+Immunity to Metabolic Hazards (Partial, Skull hit locations
+only, -70%) [9]; Injury Tolerance (No Neck) [5]; Nictitating
+Membrane 1 [1]; Peripheral Vision [15]; Pressure Support 2
+[10]; Scanning Sense (Sonar; Reduced Range, 1/10, -30%;
+Underwater Only, -10%) [12]; Teeth (Sharp Teeth) [1];
+Telecommunication (Cable Jack; Sensie, +80%) [9];
+Telecommunication (Radio; Sensie, +80%) [18];
+Temperature Tolerance 1 [1]; Ultrasonic Speech (Normal
+and ultrasonic communication) [10].
+Perks: Accessory (Microframe Computer). [1]
+Disadvantages: Bad Sight (Nearsighted, non-correctable) [-25];
+Electrical (Partial, Skull hit locations only, -70%) [-6];
+Ichthyoid [-50]; Increased Life Support (Massive – Requires
+a water tank or special support for its body) [-10]; No Sense
+of Smell/Taste (Can taste, -50%) [-2]; Short Lifespan 1 [-10].
+Quirks: Poor color vision. [-1]
+Date: 2071. Cost: $500,000 + computer.
+
+Attribute Modifiers: ST+6 (No Fine Manipulators, -40%; Size,
+-20%) [24]; DX+3 (No Fine Manipulators, -40%) [36]; HT+2
+[20].
+Secondary Characteristic Modifiers: HP+4 (Size, -20%) [7];
+SM+2.
+Advantages: Absolute Direction (Requires Signal, -20%) [4];
+DR 1 (Can’t Wear Armor, -40%; Tough Skin, -40%) [1];
+Detect (Electrical and Magnetic Fields) [20]; Discriminatory
+Smell [15]; Doesn’t Breathe (Gills, Breathe underwater only)
+[0]; Enhanced Move 1 (Water) [20]; Enhanced Tracking 1
+[5]; Immunity to Metabolic Hazards (Partial, Skull hit locations only, -70%) [9]; Injury Tolerance (No Neck) [5]; Night
+Vision 7 [7]; Peripheral Vision [15]; Pressure Support 2 [10];
+Striker (Snout; Crushing; Cannot Parry, -40%) [3]; Teeth
+(Sharp Teeth) [1]; Subsonic Hearing (Low-frequency and
+normal sounds) [5]; Telecommunication (Cable Jack;
+Sensie, +80%) [9]; Telecommunication (Radio; Video, +40%;
+Reduced Range, 1/2, -10%) [13]; Telecommunication (Sonar
+Comm; Reduced Range, 1/2, -10%) [9]; Ultrasonic Speech
+(Normal and ultrasonic communication) [10]; Vibration
+Sense (Water) [10].
+Perks: Accessory (Small or Microframe Computer). [1]
+Disadvantages: Appearance (Ugly) [-8]; Bioroid Body [-4];
+Cold-Blooded (Threshold 50°) [-5]; Electrical (Partial, Skull
+hit locations only, -70%) [-6]; Ichthyoid [-50]; Increased Life
+Support (Massive – Requires enough water to support its
+body) [-10]; Short Lifespan 2 [-20]; Social Stigma (Monster)
+[-15].
+Features: Somewhat abrasive skin.
+Date: 2082. Cost: $65,000 + computer.
+Options: A warshark with weapon hardpoints or mountingpoints for other devices attached to its skeleton may take a few
+points in Payload with the Exposed limitation. Complex
+attachment systems with interfaces to the shell’s electronic systems might also be classed as a perk.
+
+THE CYBERSHELLS
+
+30
+
+INDEX
+Acid-Resistant
+enhancement, 5.
+Advantages, 5.
+Aerial cybershells, 11, 18, 21,
+22, 23, 24.
+Aerorover cybershell, 23.
+Afrit cybershell, 17.
+Animal snacks variant cybershell, 29.
+Arlesienne ro-ped
+cybershell, 8.
+Arm modification, 5.
+Asteroid mining
+cybershell, 25.
+Baikal cryobot
+cybershell, 23.
+Beobachter data-collection
+unit cybershell, 11.
+Biomorphic cybershells,
+12-16.
+Bioshells, specialist, 27-30.
+Boatbot cybershell, 6.
+Bonito (small spionfisch)
+cybershell, 30.
+Bouncing enhancement, 5.
+“C-Brown” gardener
+cybershell, 7.
+Calamarine cybershell, 27.
+Camouflaged Static Monitor
+cybershell, 16.
+Centaur cybershell, 13.
+Cetapod cybershell, 28.
+Combat systems, 16-22.
+Crocshell cybershell, 28.
+CSM-4 cybershell, 16.
+Cyberdog cybershell, 12;
+variants, 13.
+Cyberdolphin cybershell, 13.
+Cyberscooter vehicle, 8.
+Cybertool cybershell, 4.
+Data-collection cybershells,
+11; see also Space
+Cybershells and Exotic
+Environment Cybershells.
+Disadvantages, 5; new, 7;
+variant, 7.
+Diver Propulsion
+Vehicle (DPV) variant
+cybershell, 7.
+Dog cybershell, 12.
+Dolphin cybershell, 13.
+Domestic devices, 6-10.
+
+Dust-buster nanosat
+cybershell, 25.
+Endymion cybershell, 23.
+Engineering cybershell, 10.
+Enhancements, 5; special, 7.
+Exotic environment
+cybershells, 18, 23-27.
+Exploration cybershells, 11,
+23; see also Space
+Cybershells and Exotic
+Environment Cybershells.
+Exposed Controls
+modification, 7.
+Extra Wheels advantage, 5.
+Fish cybershell, 30.
+Flying cybershells, see Aerial
+Cybershells.
+Food cybershells, 29.
+Gardener cybershell, 7.
+Gas-giant aerobot
+cybershell, 24.
+Gazelle cybershell, 15.
+Ghola cybershell, 17.
+Gorgon II cybershell, 14.
+Hacha-2c cybershell, 19.
+Helicopter cybershell, 21.
+Herzberg cybershell, 24.
+Hicks Mk 92 cybershell, 21.
+High Arcadian centaur
+cybershell, 13.
+House, robotic, 10.
+Housecomp, 10.
+Ice-tunneling cybershell, 23.
+Idmon explorer aquabot
+cybershell, 11.
+Inorganic cybershell, 12-16.
+J-56 Ying transatmospheric
+UCAV cybershell, 18.
+Kaeru mini scout-RATS
+cybershell, 20.
+Komodo dragon
+cybershell, 28.
+Limitations, 5.
+Lizard cybershell, 28.
+Maintenance snake
+cybershell, 14-15.
+Marine cybershells, 6, 7,
+11, 13, 17, 18, 21, 23, 27,
+28, 29.
+Mars, 18.
+Medevac cybershell, 20.
+Medical cybershells, 20.
+
+Medusa cybershell, 14.
+MCS-52 cybershell, 19.
+MCS-64 cybershell, 19.
+Military cybershells, 20, 26,
+30; see also Combat
+Systems.
+Mini-snakebot cybershell,
+14.
+Mini-UCAV cybershell, 21.
+Mining worm cybershell, 25;
+armored, 25.
+Missile cybershell, seeker, 21.
+Modifiers, 5.
+Monitor monitor cybershell,
+28.
+Moon, 23, 26.
+Nanosat cybershell, dustbuster, 25; sabotage, 26;
+service, 25.
+Nehebkau mini-snakebot
+cybershell, 14.
+Police cybershells, vest, 6; see
+also Combat Systems.
+Portable cybershells, 4-6,
+14, 21.
+RATS cybershell,
+amphibious, 17; mini
+scout, 20; jump, 18; jungle,
+18;
+microgravity, 24; Titan, 25.
+Reporter’s Vest cybershell, 6.
+Reprogrammable disadvantage, Exposed Controls
+modification, 7.
+Robotic house, 10.
+Ro-ped vehicle, 8; variants,
+9.
+Robobike vehicle, 8.
+Sabotage nanosat
+cybershell, 26.
+Safari cybershell, Gazelle, 15;
+Vulture, 15.
+Satellite cybershell, 25-26.
+Sealed advantage, AcidResistant modification, 5.
+Security cybershells, 10, 16,
+22; see also Combat
+Systems.
+Seeker missile
+cybershell, 21.
+Sentient snacks
+cybershell, 29.
+Service nanosat
+cybershell, 25.
+Shakoosh cybershell, 9.
+Shark cybershell, 17;
+warshark, 30.
+Short Legs disadvantage, 5.
+
+INDEX
+
+Short limitation, 5.
+Smart torpedo cybershell,
+21.
+Snacks cybershell, 29.
+Snake cybershell, 14-15.
+Sonar Comm modification,
+5.
+Space cybershells, 18, 23-27.
+Space station, 24.
+Spionfisch cybershell, 30.
+Squid cybershell, 27.
+Stevedore cybershell, zero-G,
+26.
+Stormchaser cybershell, 11.
+Super Jump advantage,
+Bouncing Only
+modification, 5.
+Swarmdozer cybershell, 10.
+Taniwha cybershell, 30.
+Telecommunication
+advantage, Sonar Comm
+modification, 5.
+Titan, 23, 25.
+Tools cybershells, 4-6.
+Torpedo cybershell, smart,
+21.
+Treeshell cybershell, 16.
+Tumbleweed cybershell, 26.
+Tuna (large spionfisch)
+cybershell, 30.
+Tuxing Type-94 aerobot
+cybershell, 24.
+TWX Type-97 aerobot
+cybershell, 24.
+Underwater Sub-Munitions
+Delivery System (USMDS)
+cybershell, 21.
+Utility cybershells, 6-10.
+Vehicles, 7, 8.
+Venus-capable cybershell,
+26.
+Very Easy Activation
+variant, 9.
+Villaret medevac cybershell,
+20.
+Vulture cybershell, 7.
+Warshark cybershell, 30.
+Water-capable cybershells,
+15; see also Marine
+Cybershells.
+Wearable equipment, 4-6.
+Whale cybershell, 28, 30.
+Wingbot cybershell, 22.
+Zero-G stevedore cybershell,
+26.
+Zeus-3 aerobot cybershell,
+24.
+
+31
+
+STUCK FOR AN ADVENTURE?
+
+NO PROBLEM.
+e23 sells high-quality game adventures
+and supplements in PDF format.
+● Get complete sample adventures free, for
+
+GURPS, In Nomine, and Traveller!
+● PDFs from the major players in online
+
+publishing: Ronin Arts, Ken Hite,
+Atlas Games, and 01 Games.
+● New gems from up-and-coming publishers,
+
+like Atomic Sock Monkey Press and
+Expeditious Retreat Press.
+● Digital editions of out-of-print classics, from
+
+Man-to-Man and the complete run of ADQ
+to GURPS China and GURPS Ice Age.
+● Fully searchable files of GURPS Fourth Edition
+
+supplements.
+● Original material for Transhuman Space and
+
+In Nomine, with new GURPS supplements
+from William Stoddard, David Pulver, and
+Phil Masters!
+● Buy it once, have it always. Download your
+
+purchases again whenever you need to.
+
+STEVE JACKSON GAMES
+
+e23.sjgames.com
+
+Download ● Print ● Play
+
+STEVE JACKSON GAMES
+e23 is part of Warehouse 23, the online store at Steve Jackson Games.
+Warehouse 23 is also the official Internet retailer for Dork Storm Press, Atlas Games, and many other publishers.
+Visit us today at www.warehouse23.com for all your game STUFF!
+
+
