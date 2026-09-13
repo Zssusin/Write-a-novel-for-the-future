@@ -1,0 +1,586 @@
+TM
+
+2101, FIRST QUARTER
+
+TM
+
+Written by JAMAIS CASCIO, PHIL MASTERS, KENNETH PETERS,
+PATRICK SWEENEY, and JON F. ZEIGLER
+Edited by PHIL MASTERS
+Illustrated by MARCIO FIORITO
+An e23 Sourcebook for GURPS ®
+
+STEVE JACKSON GAMES
+Stock #37-6708
+
+Version 1.0 – February 2010
+
+®
+
+CONTENTS
+2101, FIRST QUARTER . . . . . . . . . . . . . . . . . 3
+Search for the Oldest Living Human. . . . . . . . . . . . . . . . . 3
+A Monstrous Ego? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Too Much to Swallow? . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Esperante Executive Assassinated . . . . . . . . . . . . . . . . . . . 4
+Gaza Desalination Plant Goes Online . . . . . . . . . . . . . . . . 4
+Triplanetary Lines Offers Discount Mars Rates . . . . . . . . 4
+
+Traveler’s Tale . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Record Attendance at UN General Assembly . . . . . . . . . . 5
+Divad Blasts to the Finish in
+Mars-Earth Plasma Sail Race . . . . . . . . . . . . . . . . . . . . 5
+Noted Philosopher Turns Isolate . . . . . . . . . . . . . . . . . . . . 6
+InVid Review: The Tempest . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+About GURPS
+Steve Jackson Games is committed to full support of
+GURPS players. Our address is SJ Games, P.O. Box 18957,
+Austin, TX 78760. Please include a self-addressed, stamped
+envelope (SASE) any time you write us! We can also be
+reached by e-mail: info@sjgames.com. Resources include:
+New supplements and adventures. GURPS continues to
+grow – see what’s new at www.sjgames.com/gurps.
+e23. Our e-publishing division offers GURPS adventures, play aids, and support in PDF form . . . digital
+copies of our books, plus exclusive material available only
+on e23! Just head over to e23.sjgames.com.
+Pyramid (www.sjgames.com/pyramid). Our monthly
+PDF magazine includes new rules and articles for GURPS,
+systemless locations, adventures, and much more. Look for
+each themed issue from e23!
+Internet. Visit us on the World Wide Web at
+www.sjgames.com for errata, updates, Q&A, and much
+
+more. To discuss GURPS with our staff and your
+fellow gamers, visit our forums at forums.sjgames.com.
+The web page for Transhuman Space: Teralogos News is
+at www.sjgames.com/transhuman/teralogos.
+Bibliographies. Many of our books have extensive bibliographies, and we’re putting them online – with links to let
+you buy the resources that interest you! Go to each book’s
+web page and look for the “Bibliography” link.
+Errata. Everyone makes mistakes, including us – but we
+do our best to fix our errors. Up-to-date errata pages for all
+GURPS releases, including this book, are available on our
+website – see above.
+Rules and statistics in this book are specifically for the
+GURPS Basic Set, Fourth Edition. Page references that
+begin with B refer to that book, not this one.
+
+INTRODUCTION
+Back in 2002-2003, the background for Steve Jackson
+Games’ Transhuman Space hard SF setting was expanded by
+a series of reports from that solar system’s leading news
+source, Teralogos News (Fifth Wave, p. 64), distributed
+through an e-mail mailing list. Since then, this rich collection
+of setting details, local color, and potential scenario seeds has
+only been available in the form of a little-known raw text file.
+So we’ve decided to do something about that. This is one of
+four free PDF files that collect those reports.
+The dates on each report are a bit of stylistic detail, related to
+the real-world dates on which the posts were originally distributed. Don’t take them too seriously as setting canon; after all,
+Transhuman Space doesn’t have a fixed future or “metaplot.”
+GURPS System Design ❚ STEVE JACKSON
+GURPS Line Editor ❚ SEAN PUNCH
+Transhuman Space Line Editor ❚ PHIL MASTERS
+e23 Manager ❚ STEVEN MARSH
+Page Design ❚ PHIL REED and JUSTIN DE WITT
+
+The incidents described in these reports can occur whenever
+suits your own campaign.
+– Phil Masters
+
+ABOUT THE EDITOR
+Phil Masters is the author of Transhuman Space:
+Changing Times, Transhuman Space: Shell-Tech,
+Transhuman Space: Personnel Files 1-5, and a chapter in
+Transhuman Space: High Frontier. He has also worked on
+countless other GURPS products, including GURPS Castle
+Falkenstein, The Discworld Roleplaying Game, and GURPS
+Y2K, and on products for other companies.
+
+Managing Editor ❚ PHILIP REED
+Asst. Managing Editor ❚ MONICA STEPHENS
+Art Director ❚ WILL SCHOONOVER
+Production Artist ❚ NIKOLA VRTIS
+Editorial Assistance ❚ JASON LEVINE
+
+INTRODUCTION
+
+Prepress Checker ❚ WILL SCHOONOVER
+Marketing Director ❚ PAUL CHAPMAN
+Director of Sales ❚ ROSS JEPSON
+GURPS FAQ Maintainer ❚ –––––––
+VICKY “MOLOKH” KOLENKO
+
+2
+
+2101, FIRST
+QUARTER
+SEARCH FOR THE
+OLDEST LIVING HUMAN
+MUMBAI, India/Teralogos: January 8, 2101
+Producers of the popular CenturyQuest! interactive video
+show have announced a search for the oldest living human
+being. When located, this individual will be offered a multi-million-euro contract for exclusive interviews and the publication of
+a biography. CenturyQuest! producers invite men or women
+who can prove that they were born before January 1, 1960 and
+have never undergone cryonic suspension or nanostasis to contact them at oldest_human@centuryquest.marwari.co.in.
+CenturyQuest! has been published on a weekly basis since
+March 16, 2096 by Marwari Digital. It combines reporting on
+genetic upgrades and geriatric medicine with human-interest
+stories on the super-elderly. Current ratings indicate that it
+reaches approximately 50.6 million viewers per week.
+– filed by Jon F. Zeigler
+
+A MONSTROUS EGO?
+TOKYO, Japan/Teralogos: January 21, 2101
+Reclusive director Kansuke O is said to be considering having a semi-sapient bioroid “monster” created to star in his next
+slinky. Yokose Studios recently signed O to direct the next
+release in its popular Kyoryura series of giant monster productions. Previous installments in the series have been InVids that
+relied on digital effects or cybershells to create the monstrous
+star, but O now reportedly favors a fully live-action slinky production starring a living Kyoryura.
+“If Kyoryura lives, slinky technology will enable fans to
+actually experience the action as if they were the monster,”
+said Yokose spokesperson Akiko Tomizawa. “Kyoryura X is
+the true, ultimate, realization of Kansuke O’s vision.”
+Plans for a slinky version of Kyoryura have been in the offing for some time. According to Yokose insiders, O only reluctantly gave up his initial plans for a full-sized version of the
+100-meter-tall Kyoryura due to liability and practical concerns,
+agreeing to an elephant-sized monster instead.
+
+“Biotech Euphrates is the most likely contractor,” said
+Tomizawa. “Although we’re also talking with Avatar. It
+depends on where we end up shooting, since ideally we’ll want
+to grow it locally. We intend to record the monster’s scenes in
+an indoor set in either one of the Huygens City domes on Titan
+or a lava tube complex on Luna: Kyoryura is bipedal, and in 1/7
+Earth gravity he’ll be able to walk upright or jump without
+worrying about the pesky square-cube law.”
+– filed by Patrick Sweeney
+
+TOO MUCH TO SWALLOW?
+THE COMBS, Mare Frigoris Industrial Zone,
+Luna/Teralogos: January 27, 2101
+“When I realized what had happened, I was giddy at first −
+then I got mad!”
+When lunar geology graduate student Beth Shang stumbled
+across what appeared to be alien artifacts in a previously unexplored lava tube in Mare Frigoris, she was stunned. So were her
+classmates from the University of Melbourne, on Luna for a field
+research trip. Excited (and skeptical) messages were flying
+across the web even as the artifacts − a series of black, diamondfiber pillars − were discovered. Equipment and personnel were
+rushed to the site from Luna City and even Earth. Unconfirmed
+reports had the Prime Minister of Australia being awakened to
+be told the news, and the JSDF/ADF Lunar Composite Force at
+Tranquility preparing to secure the site for the PRA.
+“I was there when Dr. Howard removed the last pillar, and
+we found the Don’t Eat That! sign under it,” continued Beth.
+“My first reaction was to laugh, and look for the cameras. Like
+pretty much everybody, I enjoy Don’t Eat That! on InVid whenever I can catch it. I just never expected to be the butt of one of
+their pranks.”
+Don’t Eat That! is the enormously popular InVid hiddencamera prank and game show hosted by former KT Event lead
+singer Min Volume. In a typical episode, hidden InVid cameras
+record a series of increasingly outlandish pranks played on an
+unsuspecting victim. When the victim realizes what’s going on,
+he or she can play games − typically involving messy substances − for cash prizes.
+
+GURPS, Warehouse 23, and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. Transhuman Space, Teralogos News, “2101, First Quarter,”
+Pyramid, e23, and the names of all products published by Steve Jackson Games Incorporated are registered trademarks or trademarks of Steve Jackson Games Incorporated,
+or used under license. Transhuman Space: Teralogos News – 2101, First Quarter is copyright © 2010 by Steve Jackson Games Incorporated.
+Some art © 2010 JupiterImages Corporation. All rights reserved.
+The scanning, uploading, and distribution of this material via the Internet or via any other means without the permission of the publisher is illegal,
+and punishable by law. Please purchase only authorized electronic editions, and do not participate in or encourage
+the electronic piracy of copyrighted materials. Your support of the author’s rights is appreciated.
+
+TERALOGOS NEWS: 2101, FIRST QUARTER
+
+3
+
+The Don’t Eat That! episode for January 26 was different,
+however, in that the producers spent upwards of $8 million to
+artfully conceal plausibly alien items in a fairly inaccessible
+part of Luna. One of the producers has a relative in the U.
+Melbourne graduate program, and learned of the upcoming
+expedition. Inspiration struck, and the Don’t Eat That! team
+scrambled to set up the prank in time.
+“We honestly never realized it would go that far,” claimed
+Don’t Eat That! producer Saito Aki. “We’d never done something on that scale, we didn’t know it would spiral out of control like that.”
+Don’t Eat That! has been hit with a $50 million bill from the
+University of Melbourne, which is trying to cover the costs of
+their rapid deployment to the site. The producers are still in
+discussions with their lawyers as to whether to comply with
+this demand. Other damages, however, will be harder to repair.
+“For a brief moment, I thought the universe was suddenly
+much more exciting than we had believed, and that we’d finally
+discover some sign of alien life in the cosmos,” said Beth
+Shang. “Now, I’m just kind of sad that the height of human civilization is a stupid game show.”
+– filed by Jamais Cascio
+
+For a brief moment,
+I thought the universe was
+suddenly much more exciting
+than we had believed . . .
+
+ESPERANTE
+EXECUTIVE ASSASSINATED
+LAGOS, Nigeria/Teralogos: February 3, 2101
+Acting on an anonymous tip, police found the body of corporate executive Henrik Muller in a back alley this morning.
+Muller was discovered bound with cufftape but otherwise
+unmarked. The cause of death was determined to be massive
+nervous damage due to “scrambler” nano. “His cerebral cortex
+had been reduced to a featureless jelly,” said Dr. William
+Gemade, medical examiner for the Lagos municipal police. “If
+he had any plans to become a ghost, I’d say they were decisively ruined. The worst part was that he was probably conscious when the process began.”
+Muller, who was reported missing on December 26, was a
+senior executive with Esperante Enterprises, a Lagos-based
+corporation specializing in development projects in poor Third
+Wave nations. Esperante Enterprises has long come under
+harsh criticism from human rights advocates for its alleged
+cooperation with corrupt local regimes and exploitation of
+local workers. While Esperante is a major employer in many
+developing nations, it mainly employs unskilled VT workers,
+who follow rote instruction from their virtual interfaces, which
+are not owned by the workers but rented to them.
+
+Lagos police reported that they had received an anonymous
+email, routed through Free Net, from an individual claiming to
+be Muller’s killer. The email denounced Esperante Enterprises,
+and promised further direct action “on behalf of the victims of
+global capitalism.” At present, authorities are treating the
+death as a politically-motivated murder.
+– filed by Jon F. Zeigler
+
+GAZA DESALINATION
+PLANT GOES ONLINE
+GAZA, Palestine/Teralogos: February 10, 2101
+Palestinian President Muhammad Al-Hamedi was present
+for the dedication of the Gaza Desalination Station, calling it
+“a major step toward the true independence of the Palestinian
+people.”
+Built largely with funds from the Islamic Caliphate and
+Israel, the fusion-powered plant has been plagued by accidents
+and delays. All of that was forgotten during today’s celebrations, as the plant operated smoothly on its first day online. By
+the end of the day, engineers reported that 52 million liters of
+Mediterranean seawater had been purified and pumped into
+the Gaza distribution system.
+The new plant is expected to end freshwater shortages in
+the Palestinian Enclaves, especially once a trans-Israel freshwater pipeline is completed later this year. Israeli officials
+expressed cautious optimism that the new pipeline would
+reduce cross-border tensions. “Water rights have always been
+a point of contention between Israel and its Palestinian neighbors,” said Israeli Prime Minister David Gould, a guest at
+today’s ceremony. “The progress of civilization is about ending
+such conflicts by replacing scarcity with plenty.”
+– filed by Jon F. Zeigler
+
+TRIPLANETARY LINES
+OFFERS DISCOUNT
+MARS RATES
+ISLANDIA, L4/Teralogos: February 18, 2101
+In an expansion of their successful TransMars program,
+Triplanetary Lines is reassigning two of their newest Meiziclass passenger space vessels − Zubatka and Golden Swan − to
+the Earth-Mars passenger route. The two vessels have been
+recently refitted with additional passenger accommodations
+and are expected to reenter service on March 10, 2101. The
+additions to the Earth-Mars route underlines a new strategy
+for the company, which had previously concentrated on highmargin cargo transports.
+“Since the Mars space elevator became operational,
+Triplanetary Lines has seen steady growth in the Earth-Mars
+passenger business. This has far outstripped our expectations,
+and we are working to give it more attention,” said Juan
+Cabrillo, Triplanetary Lines President and CEO. “The move of
+these two vessels to the TransMars route will further reduce
+our already-low prices and further cement our growing lead in
+this important market. We expect the current one-way economy ticket price from Earth HEO to Mars LEO to drop 7-10%
+by the end of this year.”
+
+TERALOGOS NEWS: 2101, FIRST QUARTER
+
+4
+
+Triplanetary has been aggressive in breaking the nearmonopoly enjoyed by rival Mars Interplanetary, establishing
+generous long-term shipping contract with brokers and
+expanding their network of freehauler affiliates for charter
+transport to the Main Belt and the rest of the Deep Beyond.
+Their liberal management policies regarding bioroid and AI
+rights have landed them several high-profile government contracts with the EU and they enjoy considerable clout with the
+independent Farhauler’s Guild − although at the expense of
+profits compared to the more aggressive cost-cutting actions of
+Mars Interplanetary.
+“Our expansion of Earth-Mars passenger service is an exciting opportunity for those planning to make an interplanetary
+trip,” Cabrillo stated. “Triplanetary Lines’ commitment to
+value and integrity has never diminished and our customers
+and partners can continue to rely on us as we move into the
+22nd century. As new vessels are added to our growing fleet we
+will further diversify our offerings and increase our presence
+both on Mars and the outer solar system.”
+– filed by Kenneth Peters
+
+TRAVELER’S TALE
+COLUMBIA STATION,
+Earth Orbit/Teralogos: February 25, 2101
+They gave Sven Egilsson the Fergus Memorial Award for
+travel writing last week. Normally, the ceremony is held in
+November, but they had to wait this time; Egilsson insisted on
+collecting it in person, and that meant that he had to come
+half-way across the system to Columbia Station. It may seem
+good of them to delay things just for him, but given what he
+won it for, it was fitting. And when I asked to interview him, he
+insisted on meeting me in person, too, and I couldn’t argue.
+That is why I’m sitting in a Columbia Station bar, drinking locally brewed beer, when everyone starts staring at the
+doorway. After all, you don’t see many non-humanoid cybershells in bars, and Egilsson’s custom ’shell is an arachnophobe’s nightmare, with limbs which switch between use as
+legs, arms, or sensor masts seemingly at random, and a heavy
+casing that looks like it’s been sandblasted and then tinted
+with unearthly acids. Which, in fact, it has − on Mars and
+Venus, among other places.
+He scuttles across the room to me, asks what I’m drinking,
+then pauses before announcing that he’s downloaded the flavor model from the Web, and yes, it tastes good to him. For a
+radical transhumanist personality upload − a ghost − Egilsson
+seems awfully attached to the experiences of flesh.
+Which is somewhat the point here. Egilsson is a traveler
+who believes in doing things the old-fashioned way. When he
+wants to visit another planet, he doesn’t just have himself
+beamed there, or even sit in orbit and teleoperate a tourist
+cybershell; he goes down in person, in the same cybershell
+every time. (Which is why it has to be a custom model. In fact,
+it’s probably the toughest, most versatile cybershell you’ll meet
+outside the U.S. Army.) And he doesn’t power down while he’s
+in transit, either; he travels by fastliner, and mingles with the
+other passengers all the way.
+You may gather that Egilsson is quite rich. Believe me, travel
+writing doesn’t pay well enough to support all that. So I ask him
+why he bothers, when he could just as easily sit at home on a
+very secure mainframe with a virtual harem, and download all
+the slinky records of other places that he might ever want.
+
+At which, a small screen pops out of the cybershell and displays
+the face that belonged on his old body, which smiles.
+“I’m interested in making the most of reality,” he says, “not
+in escaping from it.”
+>>This is a free sample from our popular magazine channels.
+For the full interview, in InVid or slinky format, please subscribe
+to Teralogos-People.<<
+– filed by Phil Masters
+
+RECORD ATTENDANCE AT
+UN GENERAL ASSEMBLY
+GENEVA, Switzerland/Teralogos: March 5, 2101
+Attendance of member nations at the United Nations
+General Assembly in Geneva has reached 42% this week, as
+nations send delegates to attend the ongoing U.N. Conference
+on International Aid. The last time attendance in the General
+Assembly rose above 40% of member nations was in 2084,
+when members of the Transpacific Socialist Alliance called for
+an emergency session to discuss the Pacific War. Since the UN
+began publishing attendance statistics in 2063, the average
+proportion of member states attending General Assembly sessions has been about 32%.
+“I’m quite encouraged,” said U.N. Secretary-General Rajiv
+Pandya in a public statement. “That so many member states
+have chosen to attend a non-emergency session demonstrates
+that the United Nations Organization is far from irrelevant in
+today’s world. Humanity needs a place in which to discuss
+and resolve ongoing problems, and we provide the best forum
+available.”
+Notable delegations attending this week’s session include
+those of the United States (last attending in 2076) and the
+People’s Republic of China (last attending in 2085).
+– filed by Jon F. Zeigler
+
+DIVAD BLASTS TO THE
+FINISH IN MARS-EARTH
+PLASMA SAIL RACE
+ISLANDIA/Teralogos: March 12, 2101
+Julia Divad won the 4th Annual Solar Cup on Wednesday,
+narrowly beating last year’s winner, Kei Noguchi, with a record
+time of three months, five days, and six minutes. Her racer,
+Raptor of Dawn, is the first to have been designed and assembled in the Islandia Lagrange 4 colony.
+“I really think I owe the win to my friends and family who
+kept me motivated over the trip,” said Divad. “I’ve raced by
+inhabiting cybershells, but the Solar Cup is significantly harder.
+They make an effort to keep the pilots as close to a baseline
+human as possible − three months in a stinky meat shell without
+any pain overrides makes me appreciate my other bodies a lot
+more. I’m just glad I lucked out towards the end, it was a tight
+race all the way back from the Mars gravity slingshot.”
+Divad had been in second place until an electrical fire in
+Noguchi’s crew compartment forced him and his racer Eye of
+Ra to drop out. The accident was one of several that have given
+the Solar Cup a reputation for dangerously lax safety regulations and restrictive race rules that prevent automation of
+piloting and repairs.
+
+TERALOGOS NEWS: 2101, FIRST QUARTER
+
+5
+
+“We’re all very disappointed by the accident but we’ll be
+back next year to get the Cup,” Team Noguchi chief engineer
+Byron McMahon told reporters, speaking from the team’s base
+at Bifrost Station, Earth orbit.
+In third place was Sun Yue’s Feng Huang, one of five Marsbuilt vessels in this year’s race.
+– filed by Kenneth Peters
+
+NOTED PHILOSOPHER
+TURNS ISOLATE
+LOS ANGELES, United States/Teralogos: March 19, 2101
+Citing increasing discontent with modern civilization,
+renowned bioethicist and philosopher Thomas Takahashi
+announced today that he would be retreating to an Isolate
+community in Qinghai province, People’s Republic of China.
+“By embracing biotechnology, human genetic engineering,
+and cybernetic uploading, we have destroyed our own humanity,” said Takahashi. “I find I can no longer tolerate the
+memetic dissonance that is a constant feature of Fifth Wave
+existence. It’s long past time for me to withdraw and seek to
+regain contact with my own human nature.” Takahashi did not
+give a date for his move, but claimed that it would be “a matter of days.”
+Takahashi will be joining the Gyaye Commune, an Isolate
+community not far from Lake Kokonor in Qinghai province.
+Gyaye Commune was established in 2093 by European
+Preservationists, who chose the site due to its extremely
+remote location. The community was built with the approval
+of Chinese officials, who welcomed Europeans’ investment in
+the local web infrastructure.
+A full professor of bioethics at UCLA, Takahashi has long
+been a passionate advocate for Preservationist ideas and a
+critic of modern culture. His first book, After Man, was a runaway bestseller in 2083, earning him a global audience. He is a
+close friend and confidante of U.S. President Roberto
+Marquez. He will be giving up his current position at UCLA in
+order to move to Gyaye Commune, although he announced
+plans to serve as an occasional guest lecturer via telepresence.
+– filed by Jon F. Zeigler
+
+INVID REVIEW:
+THE TEMPEST
+Starring Kao Tsu, Jen Shan-Ta, Katrina Brandt, and
+Kevin Lo; directed by Gupta Patel. Published by Calcutta
+Interactive.
+Over the last few years, Shakespeare’s final complete play
+has suffered the most tragic fate which can overtake a classic
+text; it has become relevant. I swear, if I see one more InVid
+staging which transmutes Prospero’s island into an L-5 station,
+with Ariel as an infomorph and Caliban as an experimental
+bioroid, I’ll claw out my implant. The one substantial exception, I suppose, was Ivana Gore’s treatment; her “Globe
+Reborn” sequence got around to The Tempest a couple of years
+ago, just before it finished, as Gore obeyed her rule of strict
+chronology. However, that was a slinky presentation. I’m told
+by those who’ve chosen to investigate the medium that it was
+a technical masterpiece; apparently, you could tell that the
+
+experiencer was a sailor down among the groundlings, freshly
+returned from months at sea, enjoying everything he’d missed
+and eyeing up the women between acts. But absolutely nothing will convince me that Gore’s quixotic project was anything
+more than a sterile exercise in “educational” reconstruction.
+The play deserves better than to be treated as an excuse for
+gimmickry of any kind.
+Given that, you may be surprised to learn that I found
+Gupta Patel’s new production surprisingly effective. It is modern dress, but I’m happy to say that Patel has found a new
+angle. To begin with, he’s located it back on an island, apparently somewhere in the Indonesian archipelago, which, thank
+god, means that the opening storm sequence makes some kind
+of sense without massive rewriting. (We may even imagine that
+this modern Prospero has access to weather mod technology,
+but the idea isn’t forced on us.) And when the storm abates, we
+see the most daring touch, as Prospero struts across his pocket
+kingdom in the uniform of a TSA military officer.
+The idea of the old wizard as a Nanosocialist may not be
+entirely new, but previously he’s been depicted as, at most, a
+Fifth Wave idealist, and an attractive spokesman. This
+Prospero, however, looks suspiciously like a Thai war criminal,
+hiding out from Chinese assassins as much as from the glib,
+shallow memeticists and politicians who’ve exiled him and
+classed him as “presumed dead.” Kao Tsu catches the part
+superbly, with something of that horrible mixture of pride and
+detachment we saw in the patchy post-Pacific War show trials.
+It makes the ending of the play, normally so problematic to
+modern audiences (or at least to transhumanists), as much a
+confession of guilt as a renunciation of power. And we are
+pleased by this; we may no longer believe in the dangers of
+magic, but we believe in “Crimes Against Humanity.”
+
+Am I prepared to
+forgive Patel the modern
+dress and the “relevance”?
+The problem that this reading of the play does impose is
+Prospero’s minions, who don’t seem to be spirits or monsters (or
+AIs, or bioroids), but all too human lieutenants who must have
+accompanied Prospero in his flight from defeat in the Pacific
+War. Ariel, played with fine control by Jen Shan-Ta, is a dapper
+staff officer-batman, responsible for the old man’s computer systems and also for the state of his uniform. (In one ostentatiously
+restrained sequence, the InVid narrows down to a single wordless three minute sequence where the only available viewpoint is
+from Ariel’s eyes as he polishes Prospero’s boots to a mirror
+sheen, his own face slowly becoming visible in the jet black surface. This Ariel may not literally be the wizard’s creation, but he
+exists to serve, and his identity is just a reflection.) Caliban
+(Kevin Lo) is a bodyguard and a thug, and probably a torturer,
+now grown bored with his position in the absence of anyone to
+hurt. All of which is fine in itself, but makes much of
+Shakespeare’s dialogue about the history of the relationship −
+preserved intact in this production − weirdly incongruous.
+
+TERALOGOS NEWS: 2101, FIRST QUARTER
+
+6
+
+Even as metaphors, calling Ariel and Caliban the former servant and the child of the witch Sycorax just doesn’t make sense
+if they are soldiers from his old unit.
+The production in general is naturalistic rather than realistic. There is no way that Katrina Brandt, who gives a neurotic,
+fastidious performance as Miranda, could be Kao’s daughter,
+whatever her mother’s origins and whatever genemods her
+parents might have chosen. Patel completely eschews manipulating the visual images of his actors, enabling the fine detail of
+their performances to shine through. The cast’s professional
+backgrounds are diverse, although most of them come from
+the East Asian theatrical world, but they’re all very good
+(except for Paul Marcos, who sleepwalks through the part of
+Ferdinand; he seems less transported by love, or concerned
+with the possibility that his future father-in-law may be
+inclined to xoxing and nanoplague warfare, than bored to be
+away from a reliable Web link for 10 minutes). Many of the
+viewpoints move close in to the cast’s faces at key moments,
+and I found myself locking onto these, enthralled by the understated but emotive performances. The sets and locations are
+
+handsome without distracting from the play, and again are
+mostly real. Even the background music, compiled by the
+Artistic SAI “Vivex” from historical sources, displays restraint
+and fine judgment.
+So, am I prepared to forgive Patel the modern dress and the
+“relevance”? Well, maybe, almost. His heart’s in the right place.
+It’s typical that the only synthespians in the cast are the ship’s
+crew, glimpsed briefly at the start and end of the production; the
+“illusory” actors in the magical masque are all real (although
+they include several exotic bioroids). This might seem perverse,
+but I think that it shows that Patel is not obsessed with spurious
+relevance, but cares about the play’s origins, while remembering
+that it is actually timeless. On the other hand, he seems so concerned with his big idea about Prospero that he forgets about
+most of the rest of the cast. Antonio and the rest of Prospero’s
+old foes are left as ciphers. Are they, we wonder, Chinese agents,
+collaborators, nationalist moderates, or what? There is no clear
+answer. But the fact that the question feels so appropriate is a
+sign of the production’s quality.
+– filed by Phil Masters
+
+STUCK FOR AN ADVENTURE?
+NO PROBLEM.
+e23 sells high-quality game adventures
+and supplements in PDF format.
+
+● Get complete sample adventures free for GURPS, In Nomine, and Traveller!
+● PDFs from the major players in online publishing: Ronin Arts, Ken Hite,
+Atlas Games, and 01 Games.
+● New gems from up-and-coming publishers, like Atomic Sock Monkey Press
+and Expeditious Retreat Press.
+● Digital editions of out-of-print classics, from Orcslayer and the complete
+run of ADQ to GURPS China and GURPS Ice Age.
+● Fully searchable files of GURPS Fourth Edition supplements.
+● Original material for Transhuman Space and In Nomine, with new GURPS
+supplements from Sean Punch, William Stoddard, David Pulver, and Phil Masters!
+● Buy it once, have it always. Download your purchases again whenever you need to.
+
+STEVE JACKSON GAMES
+
+e23.sjgames.com
+
+Download ● Print ● Play
+
+STEVE JACKSON GAMES
+e23 is part of Warehouse 23, the online store at Steve Jackson Games. Warehouse 23 is also the official Internet retailer for
+Dork Storm Press, Atlas Games, and many other publishers. Visit us today at www.warehouse23.com for all your game STUFF!
+
+TERALOGOS NEWS: 2101, FIRST QUARTER
+
+7
+
+

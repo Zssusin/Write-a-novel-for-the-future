@@ -1,0 +1,11 @@
+# Large binary models / raw GIS data
+*.pdf
+DEM/
+*.tif
+*.npy
+
+# Environment and builds
+.venv/
+__pycache__/
+node_modules/
+.DS_Store

@@ -1,0 +1,655 @@
+TM
+
+2100, FOURTH QUARTER
+
+TM
+
+Written by JAMAIS CASCIO, JÜRGEN HUBERT, PHIL MASTERS,
+KENNETH PETERS, PATRICK SWEENEY, and JON F. ZEIGLER
+Edited by PHIL MASTERS
+Illustrated by PAUL DALY
+An e23 Sourcebook for GURPS ®
+
+STEVE JACKSON GAMES
+Stock #37-6707
+
+Version 1.0 – February 2010
+
+®
+
+CONTENTS
+2100, FOURTH QUARTER. . . . . . . . . . . . . . 3
+Bioroid Implicated in Munich Murder? . . . . . . . . . . . . . . 3
+President Decries “Brain Drain” . . . . . . . . . . . . . . . . . . . . . 3
+Gen-Gap Dominates Debate as U.S. Election Nears. . . . . 4
+Ithemba Seeks to Quash “Eidolon Scandal” . . . . . . . . . . . 4
+Horus I Recovery Plan Falters . . . . . . . . . . . . . . . . . . . . . . 4
+Digital Heirs Feud Over Author’s Legacy. . . . . . . . . . . . . . 5
+
+MRsiv Anti-Virus Upgrade Released . . . . . . . . . . . . . . . . . 5
+Decivilization Advocates Defeated . . . . . . . . . . . . . . . . . . . 6
+AI Group Demands Ban on Recordings. . . . . . . . . . . . . . . 6
+U.S. Deputies Bust Martian Caravan Raiders . . . . . . . . . . 6
+Rogue AI Stopped in Capetown . . . . . . . . . . . . . . . . . . . . . 7
+Isolates Denounce Federal Raid . . . . . . . . . . . . . . . . . . . . . 7
+
+About GURPS
+Steve Jackson Games is committed to full support of
+GURPS players. Our address is SJ Games, P.O. Box 18957,
+Austin, TX 78760. Please include a self-addressed, stamped
+envelope (SASE) any time you write us! We can also be
+reached by e-mail: info@sjgames.com. Resources include:
+New supplements and adventures. GURPS continues to
+grow – see what’s new at www.sjgames.com/gurps.
+e23. Our e-publishing division offers GURPS adventures, play aids, and support in PDF form . . . digital
+copies of our books, plus exclusive material available only
+on e23! Just head over to e23.sjgames.com.
+Pyramid (www.sjgames.com/pyramid). Our monthly
+PDF magazine includes new rules and articles for GURPS,
+systemless locations, adventures, and much more. Look for
+each themed issue from e23!
+Internet. Visit us on the World Wide Web at
+www.sjgames.com for errata, updates, Q&A, and much
+
+more. To discuss GURPS with our staff and your
+fellow gamers, visit our forums at forums.sjgames.com.
+The web page for Transhuman Space: Teralogos News is
+at www.sjgames.com/transhuman/teralogos.
+Bibliographies. Many of our books have extensive bibliographies, and we’re putting them online – with links to let
+you buy the resources that interest you! Go to each book’s
+web page and look for the “Bibliography” link.
+Errata. Everyone makes mistakes, including us – but we
+do our best to fix our errors. Up-to-date errata pages for all
+GURPS releases, including this book, are available on our
+website – see above.
+Rules and statistics in this book are specifically for the
+GURPS Basic Set, Fourth Edition. Page references that
+begin with B refer to that book, not this one.
+
+INTRODUCTION
+Back in 2002-2003, the background for Steve Jackson
+Games’ Transhuman Space hard SF setting was expanded by
+a series of reports from that solar system’s leading news
+source, Teralogos News (Fifth Wave, p. 64), distributed
+through an e-mail mailing list. Since then, this rich collection
+of setting details, local color, and potential scenario seeds has
+only been available in the form of a little-known raw-text file.
+So we’ve decided to do something about that. This is one of
+four free PDF files that collect those reports.
+The dates on each report are a bit of stylistic detail, related
+to the real-world dates on which the posts were originally distributed. Don’t take them too seriously as setting canon;
+after all, Transhuman Space doesn’t have a fixed future or
+GURPS System Design ❚ STEVE JACKSON
+GURPS Line Editor ❚ SEAN PUNCH
+Transhuman Space Line Editor ❚ PHIL MASTERS
+e23 Manager ❚ STEVEN MARSH
+Page Design ❚ PHIL REED and JUSTIN DE WITT
+
+“metaplot.” The incidents described in these reports can
+occur whenever suits your own campaign.
+– Phil Masters
+
+ABOUT THE EDITOR
+Phil Masters is the author of Transhuman Space:
+Changing Times, Transhuman Space: Shell-Tech,
+Transhuman Space: Personnel Files 1-5, and a chapter in
+Transhuman Space: High Frontier. He has also worked on
+countless other GURPS products, including GURPS Castle
+Falkenstein, The Discworld Roleplaying Game, and GURPS
+Y2K, and on products for other companies.
+
+Managing Editor ❚ PHILIP REED
+Asst. Managing Editor ❚ MONICA STEPHENS
+Art Director ❚ WILL SCHOONOVER
+Production Artist ❚ NIKOLA VRTIS
+Editorial Assistance ❚ JASON LEVINE
+
+INTRODUCTION
+
+Prepress Checker ❚ WILL SCHOONOVER
+Marketing Director ❚ PAUL CHAPMAN
+Director of Sales ❚ ROSS JEPSON
+GURPS FAQ Maintainer ❚ –––––––
+VICKY “MOLOKH” KOLENKO
+
+2
+
+2100, FOURTH
+QUARTER
+BIOROID IMPLICATED
+IN MUNICH MURDER?
+MUNICH, Germany/Teralogos: October 21, 2100
+City police report progress in the investigation of the murder of preservationist activist Friedrich Knodt, who was found
+with a slit throat in an alley in Munich yesterday.
+According to a police spokesperson, hairs were uncovered
+on the victim’s body that contained DNA fragments common
+to biological androids, or bioroids as they are colloquially
+known. Bioroids are rarely seen in Germany, as their manufacture has been banned in European Union for the last decade.
+However, a small bioroid community does exist, as Germany
+and other E.U. states have granted refugee status to bioroids
+who have escaped exploitation in other nations.
+Sources in the Munich police department told Teralogos
+that a trace amount of synthetic sexual pheromones was found
+at the crime scene, which suggests that the perpetrator was a
+so-called pleasure bioroid such as the once-popular, but discontinued, Eros or Incubus series. Although these models are
+no longer nanofactured by major biotechnology companies,
+offworld factories in L5 and the Belt are rumored to supply an
+underground black market on Mars, Luna, and Earth.
+Police have so far declined to speculate on a motive for the
+murder. However, Knodt, 51, was the vice president of the
+German chapter of the Preservationist League, a Europewide non-governmental organization opposed to radical
+modification of human or animal genomes which has in the
+past advocated the institutionalization of all bioroid refugees
+for public safety. Asked to comment on reports that a bioroid
+may have been the assailant, Markus Lange, German president of the Preservationist League, said he was saddened but
+not surprised. “We all grieve for the loss of our colleague.
+Many of us have received death threats from radicals and
+malcontents before, but we all felt that our work was too
+important to abandon. And now our dear friend has paid the
+ultimate price.”
+“I would not be surprised if the killer turns out to be a
+bioroid that was legally granted asylum here. Their thought
+processes are not their own; while they look human, they are
+
+living machines. They remain slaves to their conditioning,
+which no amount of so-called socialization can truly erase. We
+should not let these beings run free in our streets merely out of
+a misplaced sense of pity for their fate.”
+Silvie Graf, a spokesperson for the Munich Bioroidenhauser,
+a pan-sapient rights advocacy group which operates half-way
+houses for bioroid refugees, responded indignantly to the
+accusation.
+“Let the police finish their investigation before rushing to
+judgment,” said Graf. “There are many unanswered questions. What was Markus Lange doing with a so-called pleasure bioroid? Some bioroid refugees are forced to hide their
+identities due to the prejudice that the Preservationist League
+exemplifies. I cannot speculate here, but in the past, Eros and
+Tianyi bioroids living as citizens in the E.U. have been blackmailed for sexual favors or subjected to attacks and abuse by
+unthinking humans. The true perpetrator of this violence
+may not have been a lost, confused and victimized artificial
+person, but society itself.”
+– filed by Jürgen Hubert
+
+PRESIDENT DECRIES
+“BRAIN DRAIN”
+WINDOW ROCK, Cibola/Teralogos: October 28, 2100
+U.S. President Roberto Marquez today used a campaign
+stop at a Cibola kindercomp factory to call for economic incentives intended to stem the flow of young, educated Americans
+leaving the United States for foreign jobs.
+“America is a free country, and that means that any
+American is free to seek his fortune wherever he may choose
+to go,” said Marquez. “Still, when talented young Americans
+leave these United States in such large numbers, we’ve got to
+recognize that there’s a problem. We’re suffering from a brain
+drain, and it’s past time to plug it if our great nation is going
+to have a future.”
+President Marquez went on to announce several new federal
+initiatives, including the relaxation of regulations on Fifth Wave
+industries, tax incentives for hiring American citizens, and the
+Cold Start! program for outer system economic development.
+
+GURPS, Warehouse 23, and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. Transhuman Space, Teralogos News, “2100, Fourth Quarter,”
+Pyramid, e23, and the names of all products published by Steve Jackson Games Incorporated are registered trademarks or trademarks of Steve Jackson Games Incorporated,
+or used under license. Transhuman Space: Teralogos News – 2100, Fourth Quarter is copyright © 2010 by Steve Jackson Games Incorporated.
+Some art © 2010 JupiterImages Corporation. All rights reserved.
+The scanning, uploading, and distribution of this material via the Internet or via any other means without the permission of the publisher is illegal,
+and punishable by law. Please purchase only authorized electronic editions, and do not participate in or encourage
+the electronic piracy of copyrighted materials. Your support of the author’s rights is appreciated.
+
+TERALOGOS NEWS: 2100, FOURTH QUARTER
+
+3
+
+Although he did not endorse the reduction in the minimum
+uploading age proposed by a minority of transhumanist
+Republicans, he steadfastly rejected any consideration of the
+so-called “Methuselah tax” on longevity upgrades that has
+found favor among an increasing number of preservationist
+Democrats.
+– filed by Jon F. Zeigler
+
+GEN-GAP DOMINATES
+DEBATE AS U.S.
+ELECTION NEARS
+PORTLAND, Oregon/Teralogos: October 28, 2100
+Speaking during a teletour of the popular Five Corners virtuality kingdom, U.S. presidential challenger Donna Kevlan
+denounced President Marquez’ plan to counter the so-called
+“brain drain” of young Americans.
+The former mayor of Chicago called the President’s program “the same tired mix of Third Wave rhetoric, pork-barrel
+spending, and half-measures we’ve come to expect from the
+Marquez administration.”
+Kevlan, who at 42 is two decades younger than her
+Republican opponent, said the President was out of touch with
+the concerns of younger Americans. “Aging is no longer a loss
+of vigor, but an accumulation of knowledge and power,”
+warned Kevlan. “Young Americans recognize that no matter
+how talented they are, they face a wait of decades before there
+is room for them at the top of any career ladder. Until fundamental reforms are made to our system, who can blame them
+when they move to the developing nations or out to the
+colonies?”
+President Marquez, en route to a meeting with Andes War
+veterans in Florida, responded sharply to Kevlan’s remarks.
+“As long as I’m president, this nation will not make decisions
+based on a policy of division,” Marquez told reporters. “We’re
+all Americans, whatever our genotype or generation.”
+– filed by Jon F. Zeigler
+
+People are seriously wondering
+if Ithemba Biotechnologies has
+been creating and running high-end
+eidolons of key politicians.
+
+ITHEMBA SEEKS TO
+QUASH “EIDOLON SCANDAL”
+JOHANNESBURG/Teralogos: November 4, 2100
+In the latest twist in a long-running scandal, it has been
+reported that over the last two years, Ithemba Biotechnologies
+recruited three or more specialist AI programmers from Red
+Duncanite “Trojan Mafia” companies. This raises the serious
+possibility that Ithemba have been creating near or fully sapient
+
+AI models of leading South African Coalition (SAC) politicians
+for strategic purposes. Ithemba, however, continues to insist
+that it is the victim of a smear campaign by radical factions
+within the SAC Council. “It’s nonsense,” said a spokesman, “but
+it’s dangerous nonsense. These supposed revelations − which
+involve the release of confidential immigration records − prove
+complicity at high levels in government.”
+The scandal, if that’s what it is, first broke early last year,
+when SAC officials confirmed that several leading politicians
+in both the Kenyan People’s Coalition party and Uganda’s New
+Democratic Alliance had reported strangers asking after their
+old friends and relatives in their home towns, and asking probing questions about their childhoods.
+In itself, this sounded like a case of overenthusiastic journalism or an attempt by political rivals to find material for
+smear campaigns. However, by June, these investigators had
+allegedly been traced back to Ithemba. Even then, no one read
+too much into it. Ithemba Biotechnologies is entangled with
+SAC politics at every level, and some degree of backgroundchecking is expected. The fact that some of the targets were
+politicians broadly sympathetic to Ithemba’s interests barely
+registered, and for some months, the matter seemed largely
+forgotten, apart from the occasional news of further corroborating details.
+However, the latest report, involving a supposedly routine
+release of information by an SAC agency in response to a private infosearch request, has put the cat back among the
+pigeons. And now people − sane, sensible people − are seriously wondering if the company has been creating and running
+high-end eidolons of key politicians, just to get a better handle
+on their behavior.
+Eidolon creation − computer modeling of specific human
+personalities, based on intensive psychological profiling and
+detailed biographical documentation − is not, in itself, illegal.
+In fact, nearly all governments and large corporations do
+something similar, the better to understand opponents,
+although most keep quiet about it. The most powerful models
+have to be at least somewhat self-aware, and according to
+experts, to be most useful, they have to possess a distorted conceptual model of their environment. Human psychologists
+would call them schizophrenic. Creating such AIs is illegal
+under most laws. Hence, the leading specialists in the field are
+believed to serve a small but profitable industry in the lawless
+areas of the Belt and the Trojan asteroids. And that, strangely
+enough, is where Ithemba’s computer division seems to have
+been recruiting.
+It sounds crazy. But Ithemba has always been entangled in the
+politics of the SAC; its economic and political influence is
+arguably what enabled the Coalition to organize throughout the
+last century. Helena Barrymore, a Cape Town business consultant
+who’s been watching Ithemba for the last seventy years, on and
+off, admits that she’d be less surprised than she’d like if some of
+the accusations turned out to be justified. “Ithemba aren’t evil” she
+says. “They’ve always done a lot of good, starting with their AIDS
+vaccine back in 2016. But the current management has a sense of
+entitlement, and that makes for arrogance. If some of them
+already think that they own the council, they might just see this as
+insuring their investment. They’ll probably start calling the other
+side nanosocialists any day now.”
+Ithemba and SAC representatives are both said to be
+preparing detailed responses to the reports.
+– filed by Phil Masters
+
+TERALOGOS NEWS: 2100, FOURTH QUARTER
+
+4
+
+HORUS I RECOVERY
+PLAN FALTERS
+WASHINGTON/Teralogos: November 11, 2002
+Citing budgetary concerns, the United States Astrographical
+Survey (USAGS) failed to come to an agreement with NASA
+regarding the salvage of the historic Horus I spacecraft.
+The Horus I mission was launched by NASA in 2024 with a
+joint U.S.-Russian crew to establish a permanent base on Mars.
+After an unusual series of software and hardware failures two
+astronauts and one cosmonaut were killed in 2025 when a lander crashed into an already occupied landing bay. The 34 survivors were transferred to Earth, but the Horus I itself continued
+past Earth into deep space. The failure of the mission delayed
+U.S. and Russian development of Mars and gave China the time
+to establish its dominant position on the Red Planet.
+“We are sensitive to the historical significance of the
+Horus I mission, but our resources do not support an operation to salvage the craft,” USAGS Inner System Director
+Chuck Capretta told the joint commission. “If our budgetary
+situation was to improve we would be more then happy to
+assist NASA in this endeavor.”
+NASA Director Dr. Jill Alaimo declined to comment, but
+according to anonymous sources NASA is considering alternate plans. Since losing jurisdiction over manned space exploration to the rival USAGS agency in 2057, NASA has lacked a
+deep-space salvage capability. The possibility remains that
+they may contract out the recovery operation to private parties,
+perhaps to Gypsy Angel freehaulers.
+Critics of NASA were skeptical of the plans. “The U.S. government and NASA have had plenty of opportunity to recover the
+craft over the decades,” said Dr. Emil Brontes, head of the
+Citizen Aerospace Advocacy watchdog group. “NASA have been
+playing a shell game ever since the Senate inquiry in 2027,” he
+continued. “If NASA had their way they would let the hulk rot in
+deep space; it’s an ugly reminder of their past failures.”
+According to historian and former USAGS astronaut Paul
+Santiago, the 2027 inquiry failed to get to the bottom of the
+Horus I issue. “There were many unusual circumstances surrounding the accident and NASA overreacted to prevent as
+much information regarding the incident from leaking,” said
+Santiago, whose recently-released InVid The Horus Meme
+Machine (Mawari Digital, 2100) looks at the many myths and
+misconceptions surrounding the disaster. “Personnel were
+given gag orders and the mission data that was released to the
+public had a number of puzzling gaps and omissions. We can
+only hope that the remains of the vessel are recovered with
+appropriate care and these mysteries are finally laid to rest.”
+– filed by Kenneth Peters
+
+DIGITAL HEIRS FEUD
+OVER AUTHOR’S LEGACY
+MEXICO CITY, Mexico/Teralogos: November 18, 2100
+Julita Reyes can hardly wait to read the latest installment in
+the epic Millennium Saga by author Jonathan Sky. But her sister, Pilar, prefers the rogue Millennium stories by his literary
+rival, J-X.
+
+Their mother, Rosario, thinks both her daughters are crazy:
+The real Millennium Saga died with its original author,
+Jonathan Taylor Bradley. As far as she’s concerned, neither of
+his feuding digital literary heirs are legitimate.
+The story behind the Millennium Saga has become at least
+as interesting as the convoluted plots of the books themselves,
+which detail the lives and loves of two powerful families whose
+fates converged in the year 2001.
+Over three decades, Bradley wrote eight installments in the
+wildly popular epic, which since its first publication in 2060
+has been enjoyed by over 12 billion readers. He passed away in
+2096, shortly after completing the blockbuster 4,424-page epic
+Salt of the Sun, which ended on a literary cliffhanger.
+Fans were devastated, until the Bradley estate revealed that
+a mind emulation had been taken shortly before the author’s
+death. Calling itself Jonathan Sky − after an early pen name of
+the author − the sapient shadow wrote a ninth Millennium
+book, A Brighter Tomorrow, in 2098. Most reviewers called the
+book a faithful, if uninspired, continuation of Bradley’s work.
+But the release of a rogue Millennium story on the TSA web
+by another emulation called J-X later in 2098 stirred excitement
+and controversy in the literary world. Broken Skies, while unmistakably carrying the Bradley stamp, took the story in a wild new
+direction that many critics said breathed new life into the series.
+The origin, nature, and even ownership of J-X remains a
+mystery. While the Bradley family refuses to concede that J-X
+has any connection to the author at all, most literary experts
+disagree, believing it is another shadow of Bradley that somehow escaped the family’s control.
+“Creating a program to pastiche an author’s writing style only
+takes you so far,” said Fadil Mohammed of the University of
+Basra. “The ideas and expression of ideas in J-X’s writing shows
+a clear link to Bradley on a deeper and more fundamental level
+than any mere eidolon. It’s undeniably a sapient emulation like
+Sky, although when and how it was created remains to be seen.”
+Other critics agree. Chance Mackintosh slogged that “the
+Bradley of Broken Skies is clearly from an earlier epoch of his
+organic period, possibly the mid-2070s. J-X’s style has the fresh
+intensity of early Bradley, lacking the baseline triumphalism,
+bordering on speciesism, that so diminished later installments
+of the saga.”
+And Jonathan Sky itself? For its part, the authorized
+shadow refuses to even discuss its rival. Interviewers are
+warned not mention J-X at all, or the interview will be ended.
+J-X and Jonathan Sky are both expected to release their
+respective versions of the long-awaited tenth book in the nowbifurcated Millennium Saga in December of 2100.
+– filed by Patrick Sweeney
+
+MRSIV ANTI-VIRUS
+UPGRADE RELEASED
+SHANGHAI, China/Teralogos: November 27, 2100
+Shanghai Interactive today announced a firmware update
+for its popular MRsiv brand augmented reality (AR) system,
+intended to prevent further infections of the “Lucky Horse”
+advirus. The advirus, which first appeared this September,
+overlays Mandarin-language advertisements for the Lucky
+Horse breath freshener product onto augmented visuals.
+
+TERALOGOS NEWS: 2100, FOURTH QUARTER
+
+5
+
+The inexpensive MRsiv augmented reality systems are popular in China and in the Islamic Caliphate. Like other wearable
+VIs, MRsiv systems display visual information on top of the
+real environment, providing data about whatever the wearer is
+looking at. Shanghai Interactive added a “shared reality” protocol in 2099, allowing wearers of MRsiv systems to exchange
+data easily and quickly. Normally, this transmission only happens between trusted AR systems, but the Lucky Horse advirus
+somehow breaks the protection and broadcasts itself to every
+MRsiv system within range.
+The MRsiv is not the only wearable afflicted by the ad virus.
+According to Viral Life Hourly, the ArMax, a knockoff of the
+MRsiv manufactured by Dhanmodi Dataflex and popular in
+Bangladesh, Vietnam and Indonesia, has also been afflicted by
+the spread of Lucky Horse.
+Users typically didn’t know they were infected for some
+time, as in the first stage of infection the Lucky Horse virus
+would only display the ads in visually appropriate locations
+so they appeared to be billboards or the like. After the virus
+copied itself to 20 other hosts, it would begin to show ads on
+the sides of buildings and vehicles, and would eventually start
+overlaying the Lucky Horse symbol − a laughing horse’s head
+− on top of the heads of people seen through the AR glasses.
+The Lucky Horse ad virus cycle is intended to last a week, but
+many users have reported multiple successive infections by
+Lucky Horse.
+Shanghai Interactive declined comment when asked
+exactly how the advirus exploited the flaw in the firmware
+encryption system, except to say that the problem is now
+being corrected for all 120 million registered users. Shanghai
+Interactive claims its firmware update will clear any existing
+infection and stop its further spread. The update is carried by
+all technical support channels, and all registered MRsiv users
+should automatically download the new firmware by the end
+of the day.
+At present, no patch is available for MRsiv clones such as
+the ArMax.
+Although the firmware update should prevent the further
+spread of Lucky Horse throughout China and the Caliphate,
+users of MRsiv equipment will still need to use third-party antiad software to block unwanted commercial augmentations
+transmitted through the standard AR channels.
+– filed by Jamais Cascio
+
+DECIVILIZATION
+ADVOCATES DEFEATED
+NEW YORK FREE CITY,
+United States/Teralogos: December 2, 2100
+The Decivilization movement suffered a setback today, as
+a federal judge issued an order granting temporary protection to the Empire State Building. Since 2097, the old building and a 10-block area around it have been slated for
+demolition as part of the ongoing Manhattan Redevelopment
+Project. In November, Preservationist advocates requested a
+stay order pending their application for World Heritage Site
+status for the building.
+“Once a building is torn down, it can never be replaced,”
+said U.S. district court judge Maryam Quesada. “Until the
+World Heritage Foundation has a chance to evaluate
+the site, any move to destroy the building would be grossly
+premature.”
+
+The decision is a defeat for Decivilization advocates, who
+have long argued for the return of most of Manhattan to an
+“unbuilt” state.
+– filed by Jon F. Zeigler
+
+AI GROUP DEMANDS
+BAN ON RECORDINGS
+EarthWeb/Teralogos: December 11, 2100
+SAI-ADA − the Sentient AI Anti-Defamation Association −
+has called for the banning of the sale of recordings of “robot
+fighting” shows from the late 21st century and early in this century, claiming that the programs demean and insult modern
+intelligent machines. The group alleges that these recordings
+are commonly shown at gatherings of biochauvinist organizations, encouraging anti-AI feelings. The programs, which
+largely date from before the advent of true artificial intelligence, show rudimentary teleoperated cybershells in gladiatorial-style combat. In most of the melees this reporter viewed,
+only one of the robots would emerge intact.
+I showed one of the bouts to a group of sapient infomorphs.
+Isolde, an E.U. citizen, said after watching the episode, “If I
+was in a bioshell, this would make me physically ill. Imagine
+how you’d feel if you saw a recording of humans who could be
+your ancestors forced to beat each other to death for the enjoyment of a cheering crowd?”
+Kanga, a sapient artificial intelligence (SAI) who is the legal
+property of the American DynaPower corporation, largely
+agreed. “I find the use of even pre-sentient cybernetic beings in
+this manner to be quite disturbing. Of course, it bears no
+resemblance to the situation of SAIs today. I am quite happy
+about my status. I am.”
+InVid-enabled copies of the “robot fighting” shows can
+readily be purchased over the Web. Most of the individuals selling the recordings refused to answer my questions, although
+one seller did send a brief response. His message read, in total,
+“Robot fighting shows have nothing to do with today’s robots
+[sic]. They were all remote control toys. This is just another
+excuse for metalheads to act all oppressed.”
+As yet, there has been no official response to SAI-ADA’s
+petition from any national legislature.
+– filed by Jamais Cascio
+
+U.S. DEPUTIES BUST
+MARTIAN CARAVAN RAIDERS
+NANTONG, Mars/Teralogos: December 18, 2100
+It’s no secret round here that Carlena Villareal and her team
+of areologists, whose day job is a continuing survey of Martian
+landforms and erosion patterns on behalf of the U.S. Martian
+Commonwealth, are also deputized U.S. Marshals. Any sort of
+government agents are thin on the ground on this planet, and
+filling two jobs is commonplace.
+But this week, the team have become something else: honorary members of the Martian Truckers’ Guild. They earned
+this by doing their second job, tracking down and helping
+arrest a bandit gang who had been preying on ground transporters in the Kasei Valles region. Thanks to Carlena and company, five people are due in court tomorrow to face a long list
+of charges, and everyone else is breathing a sigh of relief.
+
+TERALOGOS NEWS: 2100, FOURTH QUARTER
+
+6
+
+“Things were getting kind of unpleasant for a while,” says
+American mining engineer Ryan Bunnell. “In retrospect,
+it was pretty clear that the hijackers were just a bunch of
+freelance yahoos. But people always like to think the worst.
+The simplest theory that I heard was that the Martian Triads
+were trying to get a stranglehold on ground transport. Some
+guys wanted to blame the Chinese government, some were saying it was TSA agents from the Peruvian colony, some reckoned
+Negative Growth terrorists. There were even people saying our
+government was covering up major surface collapses, caused by
+terraforming processes. It’s good to have all that stopped.”
+“We’re getting far too much credit,” Villareal declares.
+“After all, the Rangers actually made the arrests.” But she’s
+being modest; so far as anyone can discover, her team not only
+located the target site, but mapped out all the likely attack and
+escape routes, and maybe even performed a little light sabotage on the raiders’ defense systems. The U.S. Army Rangers
+simply provided the firepower to complete the job.
+The part-time U.S. Marshals found themselves on the case
+when they responded to a call for help from the Beni Khasim,
+a mercantile caravan. “Those bandit bozos got way too cocky
+there” said Bunnell. “Those Saudis may play at being desert
+nomads, but they’re rich as hell. They can afford decent protection, and their comms people punched a signal right through
+the bandit’s jamming.” The Beni Khasim and their bodyguards
+actually drove off the initial attack, and after that, the deputies
+– who know the terrain in these parts better than anyone –
+tracked the raiders back to a hideout in the rugged country
+around Nantong. Then they went to work.
+“Mind you,” I was told in a bar in the U.S. colony of
+Sharona, “those guys were lucky it was the feds who nailed
+them. The Saudis are a bit old-fashioned about their law, and
+the Truckers definitely look after their own. I doubt that we’d
+be watching a trial tomorrow if someone else had caught up
+with them first.”
+– filed by Phil Masters
+
+ROGUE AI STOPPED
+IN CAPETOWN
+CAPETOWN, South Africa/Teralogos: December 23, 2100
+Yesterday evening, Cape Town special police in cooperation
+with Executive Decisions International security guards raided
+an Ithemba Biotechnologies biofac compound that specialized
+in manufacturing bioshells − biological bodies controlled by
+implanted computers.
+According to Ithemba executives, who are cooperating fully
+with Cape Town police authorities, a rogue AI had infested the
+factory’s mainframe and controlled the factory for the last
+seven weeks. The AI had allegedly controlled the six living factory workers through puppet implants, which prevented them
+from reporting anything unusual. Four of the workers were
+apparently forced to suicide by the AI, and two others were
+killed in an exchange of gunfire with police. The two survivors
+are now recovering in hospital, and are receiving counseling
+for the ordeal.
+Cape Town police recovered the SAI’s mainframe with
+only minor damage, and are now analyzing its contents.
+They stressed that they do not yet know where this rogue AI
+came from − whether it is an evolved form of web life,
+an emergent intelligence created by a computer virus, or an
+
+orphaned military AI, a remnant of the Pacific War like the
+infamous EI 2084-7-2097 that forcibly uploaded 76 humans
+in Shaoxing, China, in 2097.
+It is also unknown whether additional copies of this rogue
+survive elsewhere, but this is considered highly likely. “Any AI
+that is capable of subverting its programming to the extent of
+intentionally harming humans is erased as soon as it caught,”
+said a police spokesperson. “It certainly knows this, so it will
+be have tried to preserve its own existence by xoxing itself.”
+Also of concern to police is the factory’s inventory record,
+which shows that three dozen more bioshells were produced
+by the biofac then can be accounted for. In related news,
+Ithemba Biotechnologies recommends that everyone who has
+purchased a new bioshell from one of their dealers in the last
+three months should call their service hotline immediately.
+– filed by Jürgen Hubert
+
+Ithemba Biotechnologies
+recommends that everyone who has
+purchased a new bioshell should call
+their service hotline immediately.
+
+ISOLATES DENOUNCE
+FEDERAL RAID
+WASHINGTON, United States/Teralogos: December 30, 2100
+Isolate community representatives meeting physically in this
+Maryland city have issued harsh criticism of the December 27
+federal raid on New Jerusalem, Ohio. In their joint statement,
+the Isolates described themselves as “law-abiding Americans,
+who deserve to live without fear of our own government.” They
+denied that the citizens of New Jerusalem had broken any law,
+and demanded that the federal government revise its policy
+regarding such communities throughout the country.
+“American citizens have a right to be left alone so long as they
+are breaking no law,” said conference chairman Olivia Banners.
+“The citizens of New Jerusalem lived quietly and harmed no one.
+Their reward has been to be victimized by the state.”
+New Jerusalem is a typical Isolate community, composed of
+some 350 people who have withdrawn as far as possible from
+mainstream society. Relations between New Jerusalem and its
+neighbors have often been strained, with accusations of vandalism and property damage. In early December there were
+several reports of “rogue cyberswarms” causing minor damage
+to buildings and equipment in the region surrounding the
+Isolate town. On December 24, FBI and Federal Technological
+Regulatory Agency (FTRA) cybershells entered New Jerusalem,
+arresting 24 citizens and scattering surveillance dust through
+the community. Community leaders have since denied any
+wrongdoing, and have alleged that several citizens were
+injured when the federal agents applied “excessive force.”
+Federal officials had no comment on the advocates’ statements, other than to repeat denials that there was any
+improper use of force at New Jerusalem.
+– filed by Jon F. Zeigler
+
+TERALOGOS NEWS: 2100, FOURTH QUARTER
+
+7
+
+WE
+HAVE
+WHAT YOU NEED!
+Find all your favorites from
+Warehouse 23 is your one-stop shop for games,
+supplements, accessories, digital downloads,
+and merchandise you can’t find
+anywhere else.
+Discover weird and wonderful essentials
+for your next game night!
+
+warehouse23.com
+

@@ -1,0 +1,1925 @@
+TM
+
+TM
+
+SCHOOL DAYS 2100
+
+Written by PHIL MASTERS
+Edited by JASON “PK” LEVINE and NIKOLA VRTIS
+Illustrated by PAUL DALY, DOUG SHULER and DAN SMITH
+An e23 Sourcebook for GURPS ®
+
+STEVE JACKSON GAMES
+Stock #37-6706
+
+Version 1.0 – September 2009
+
+®
+
+CONTENTS
+INTRODUCTION . . . . . . . . . . . . . . . . . . . . . 3
+
+About GURPS
+
+About the Author. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+THE FIFTH WAVE SCHOOL CAMPAIGN . . . . . 4
+KÖNIGSBERG-KALININGRAD . . . . . . . . . . . . . . . . . . . . . . 4
+Geography . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+History . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+RUNNING THE CAMPAIGN . . . . . . . . . . . . . . . . . . . . . . . . 5
+Credibility Complications (Or Not) . . . . . . . . . . . . . . . . . . . 6
+Concepts and References . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Sample Scenario: Field Trip. . . . . . . . . . . . . . . . . . . . . . . . . 7
+Wealth, Status, Equipment, and Software . . . . . . . . . . . . . . 7
+Further Scenario Seeds . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+THE ENGLISH-SCHOOL STUDENTS . . . . . . . . . . . . . . . . 10
+Catherine Moltby . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Catherine’s AIs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+AI Allies and Duty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+Denise Walsh . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Denise’s AI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Mike Harris . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Mike’s AI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Dave Sheckley . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Dave’s AI. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Ian Chakrabarti . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+INDEX . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+About
+Transhuman Space
+The Transhuman Space series presents a unique
+hard-science and high-biotech universe for roleplaying. Set in the Solar System in the year 2100, it is a setting rich in adventure, mystery, and exploration of the
+possibilities of existence. The core book in the line is
+Transhuman Space, written by the series creator,
+David Pulver.
+
+GURPS System Design ❚ STEVE JACKSON
+GURPS Line Editor ❚ SEAN PUNCH
+Transhuman Space Line Editor ❚ PHIL MASTERS
+e23 Manager ❚ STEVEN MARSH
+Page Design ❚ PHIL REED and JUSTIN DE WITT
+
+Steve Jackson Games is committed to full support
+of GURPS players. Our address is SJ Games, P.O. Box
+18957, Austin, TX 78760. Please include a selfaddressed, stamped envelope (SASE) any time you
+write us! We can also be reached by e-mail:
+info@sjgames.com. Resources include:
+New supplements and adventures. GURPS continues
+to grow – see what’s new at www.sjgames.com/gurps.
+e23. Our e-publishing division offers GURPS
+adventures, play aids, and support in PDF form . . . digital copies of our books, plus exclusive material available only on e23! Just head over to e23.sjgames.com.
+Pyramid (www.sjgames.com/pyramid). Our
+monthly PDF magazine includes new rules and articles
+for GURPS, systemless locations, adventures, and
+much more. Look for each themed issue from e23!
+Internet. Visit us on the World Wide Web at
+www.sjgames.com for errata, updates, Q&A, and
+much more. To discuss GURPS with our staff and
+your fellow gamers, visit our forums at
+forums.sjgames.com. The web page for
+Transhuman Space: Personnel Files 5 – School
+Days 2100 can be found at www.sjgames.com/
+transhuman/personnel5.
+Bibliographies. Many of our books have extensive
+bibliographies, and we’re putting them online – with
+links to let you buy the resources that interest you! Go
+to each book’s web page and look for the “Bibliography” link.
+Errata. Everyone makes mistakes, including us –
+but we do our best to fix our errors. Up-to-date errata
+pages for all GURPS releases, including this book, are
+available on our website – see above.
+Rules and statistics in this book are specifically for
+the GURPS Basic Set, Fourth Edition. Page references
+that begin with B refer to that book, not this one.
+
+Managing Editor ❚ PHILIP REED
+Art Director ❚ WILL SCHOONOVER
+Production Artist & Indexer ❚ NIKOLA VRTIS
+Prepress Checker ❚ WILL SCHOONOVER
+Marketing Director ❚ PAUL CHAPMAN
+
+Director of Sales ❚ ROSS JEPSON
+Errata Coordinator ❚ WARREN
+MacLAUCHLAN McKENZIE
+GURPS FAQ Maintainer ❚ –––––––
+VICKY “MOLOKH” KOLENKO
+
+Playtesters: Leonardo de Moraes Holschuh
+GURPS, Warehouse 23, and the all-seeing pyramid are registered trademarks of Steve Jackson Games Incorporated. Transhuman Space, Personnel Files, School Days 2100,
+Pyramid, e23, and the names of all products published by Steve Jackson Games Incorporated are registered trademarks or trademarks of Steve Jackson Games Incorporated, or used
+under license. Transhuman Space: Personnel Files 5 – School Days 2100 is copyright © 2009 by Steve Jackson Games Incorporated. All rights reserved.
+The scanning, uploading, and distribution of this material via the Internet or via any other means without the permission of the publisher is illegal,
+and punishable by law. Please purchase only authorized electronic editions, and do not participate in or encourage
+the electronic piracy of copyrighted materials. Your support of the author’s rights is appreciated.
+
+CONTENTS
+
+2
+
+INTRODUCTION
+It’s sometimes said that Transhuman Space provides a
+wonderfully detailed world, but it’s hard to decide on and
+define an actual campaign to run there. The Personnel Files
+line is intended to provide an answer to this, and to demonstrate what PCs for the setting might look like. These characters can also be used as NPCs, as antagonists, allies, patrons,
+or background color.
+Each supplement in the Transhuman Space: Personnel
+Files line describes the outline of a campaign set in the world
+of Transhuman Space, complete with background, brief scenario suggestions, and notes for the GM. The material also
+provides a set of characters suitable to act as PCs in this same
+campaign. These characters are detailed using GURPS Fourth
+Edition, with templates and other details drawn from
+Transhuman Space: Changing Times (and Transhuman
+Space: Shell-Tech in a few cases), which are also available
+from e23. Personnel Files 5: School Days 2100 introduces a
+group of teenagers attending school in circumstances unusual
+for their day – they meet in person.
+
+ABOUT THE AUTHOR
+Phil Masters is the author of Transhuman Space:
+Changing Times, Transhuman Space: Shell-Tech,
+Transhuman Space: Personnel Files 1-4, and a chapter in
+Transhuman Space: High Frontier. He has also worked on
+countless other GURPS products, including GURPS Castle
+Falkenstein, The Discworld Roleplaying Game, and GURPS
+
+And what shall be
+their education? Can we
+find a better than the
+traditional sort? And
+this has two divisions,
+gymnastic for the body,
+and music for the soul.
+– Plato,
+The Republic
+Y2K, and on products for other companies. He was born and
+educated in the U.K., but he doesn’t recognize himself in any
+of these characters.
+
+INTRODUCTION
+
+3
+
+THE FIFTH
+WAVE SCHOOL
+CAMPAIGN
+The characters detailed in this supplement are a bunch of
+school kids. But school kids in the world of Transhuman Space
+can be strange and impressive beings, and this group is in a
+slightly unusual situation, even by the standards of the setting.
+In fact, a “kids” campaign has a lot of potential in
+Transhuman Space. In a world of broad possibilities and considerable wealth, kids continue to suffer specific restrictions
+and limited resources. Despite being in a setting with many
+radical or subtle differences from the 21st century, they are still
+learning their way around and finding a place. The situation of
+a Fifth Wave youngster in 2100 – probably uncertain, perhaps
+confused, but with immense potential – in many ways resembles that of a player character just starting out in the
+Transhuman Space setting. Such a character can logically be
+given exactly the sort of advice and hand-holding guidance – by
+parents, teachers, and AIs – that the GM may wish to offer PCs
+to keep a game moving.
+However, there are complications with the idea. To start
+with, most Fifth Wave youngsters receive their education on the
+Web and do much of their socializing online. Well-off families
+in the setting can provide their offspring with effective protection from danger, in the form of companion AIs with the smarts
+and initiative to yell for help whenever things start getting interesting. Nonetheless, the worst worries from the 21st century
+about overprotected kids who are never allowed outside to play,
+and juvenile couch potatoes who never run outside at all if they
+
+can help it, have been resolved in this future. Then again, a
+campaign entirely about school-age kids interacting and adventuring through the Web would almost certainly be too limited.
+Although one solution might be to set the campaign in a Fourth
+or even Third Wave area, the PCs wouldn’t have much access to
+interesting Fifth Wave resources. Hence, this supplement places
+its protagonists in a slightly unusual situation for the offspring
+of the advanced world.
+Specifically, it assumes that the PCs’ parents have decided
+to give them a slightly “old-fashioned” education, sending
+them to a real, physical school where they have to attend in
+person and interact with all their fellow students in the flesh,
+while somewhat restricting their access to AI resources in
+school hours (though by no means eliminating it). There are
+plenty of arguments for such arrangements, for parents of a
+certain cast of mind. The objective might be to ensure that
+the kids are fully and flexibly socialized, or that they don’t
+grow too dependent on Web resources. The parents might
+want to enable their children to work in places and situations
+where they have to think for themselves and fall back on their
+own capabilities.
+The supplement also sets the campaign in a “borderline”
+location. Specifically, it takes place in the free city of
+Königsberg-Kaliningrad, where Russia and the European
+Union meet and interact, and where there’s enough crime and
+shady activity to power plenty of game plots.
+
+KÖNIGSBERG-KALININGRAD
+The free city of Königsberg-Kaliningrad is an independent
+city-state on the Baltic coast, lying on the border between
+Lithuania and Poland. Technically speaking, “Kaliningrad” is
+the name of the city itself, while “Königsberg” is the entire
+microstate, which includes an area of surrounding countryside. Even so, most people are casual about the distinction.
+It isn’t a member of any big power bloc. Rather, it has
+close ties to the E.U. and maintains good relations with
+Russia, acting as a meeting point for trade between the two
+powers. It is also the site of the eastern headquarters of the
+Genetic Regulatory Agency. All of this has helped make it one
+of the fastest-growing cities in Europe. Law and commercial
+
+regulation haven’t always kept up with this growth, though,
+and local society is at least slightly corrupt. It has a Control
+Rating of 1, lower than most of Europe, although that may
+reflect practical realities more than the letter of the local law.
+
+GEOGRAPHY
+Kaliningrad lies at the mouth of the Pregolya River, where
+it empties into the freshwater Vistula Lagoon. The hinterland
+of Königsberg (what was once the Kaliningrad Oblast when it
+was part of Russia) is 5,800 square miles in area, with a scattering of small towns and villages in addition to the city.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+4
+
+The Vistula Lagoon is separated from the Baltic by the long, narrow Vistula Spit, the eastern end of which is part of Königsberg,
+while the rest is Polish. Likewise, the Curonian Lagoon, north of
+the city, is partly in Königsberg, partly in Lithuania.
+
+HISTORY
+This city was founded, as Königsberg, in the 13th century
+by the Teutonic Knights. For centuries, it stood as an outpost
+of imperial German power in eastern Europe, despite occasional local revolts and Russian invasions. It held a military
+garrison and a university, and it was one of the most important
+ports on the Baltic. It therefore suffered heavily from Allied
+bombing in WWII. Late in the war, as Russian armies
+advanced on the city, many of the German-speaking population fled. In the aftermath of the war, Russia in effect claimed
+it as the spoils of what had been for them a costly war. They
+deported the last remnants of the German-speaking population, and renamed it Kaliningrad.
+During the break-up of the Soviet Union, Russia was determined to retain control of the city, for its reliably ice-free harbor and as a forward base for its armed forces. However, when
+Lithuania gained independence, Kaliningrad found itself cut
+off from the main part of Russia – especially when both Poland
+and Lithuania joined NATO and the E.U.. Still, the Russians
+held on. Even at this time, there were suggestions that it could
+do well as a free port, but nothing came of them. Kaliningrad
+became rather rundown, with few natural resources, patchy
+industrial development, and not enough income from the
+remaining Russian military bases.
+Over the next few decades, the situation gradually improved.
+As Poland and Lithuania prospered, local entrepreneurs
+
+developed Kaliningrad as a transfer point or exploited its status
+as an outpost of Russian commercial law within E.U. territory
+– complete with an administrative system that was sometimes
+more flexible and occasionally downright corruptible, depending on Moscow’s policies. By the 2050s, the city was moderately
+prosperous. As Russia slipped toward civil war in that decade,
+with outlying regions contemplating secession, the local governors began to consider their options.
+The civil war of 2057-2063 generally saw Russia reassert
+central control over outlying regions. However, the E.U. was
+naturally unwilling to see military force projected over its territory. It made this fact clear to Moscow, while canny local
+politicians and businessmen in Kaliningrad spoke, not of
+independence, but of “special commercial status.” Distracted
+by larger concerns elsewhere, and persuaded by skilled E.U.
+diplomacy, Moscow acquiesced. Even in 2100, Russia still
+tends to refer to the city as a “special territory” rather than
+an independent nation-state, but the rest of the world thinks
+otherwise – although diplomats are, of course, diplomatic on
+the subject.
+While Kaliningrad is run as a democracy, all its major political factions are closely linked to one commercial clique or
+another. Some of them emphasize historical and ethnic relationships with Russia. Others are more associated with the
+E.U., pointing to the realities of geography and economics. All
+successful local politicians learn to play off different interests
+to get what they want. Many are also thought or assumed to
+have shady (if not downright criminal) connections, but the
+system isn’t so corrupt that they can afford to acknowledge this
+– especially given the importance of the GRA to the local economy. Overall, the citizenry tends to be “E.U. by principles,
+Russian by sentiment.”
+
+RUNNING THE CAMPAIGN
+The campaign implied here is based around a small ageband/class in a small school that’s known simply as the English
+School, Kaliningrad. This provides a syllabus consistent with
+the rules and requirements of U.K. education, because
+Königsberg-Kaliningrad, with its close relationship with the
+E.U., has quite a few U.K. citizens in residence. (In fact, all of
+these PCs are English-speaking U.K. citizens.) Note that
+schools as such aren’t universal in Fifth Wave 2100; the basis
+of most education is the use of “kindercomps,” usually at
+home. However, parents who are concerned about their children’s socialization, and who want to avoid overreliance on
+computers, can still opt for a formal school system. This establishment is very informal by older standards, but it does organize pupils into age-based classes for convenience.
+The school is also small, so that the five PCs given here can
+form the entirety of their age-band/class. Nevertheless, nothing
+stops the GM or players from bringing in other pupil characters, perhaps of slightly different ages, maybe even establishing
+a rotating cast, with different players running different characters for each scenario. This could make it hard to logically keep
+the number of characters present for some important incidents
+down to manageable levels, but GMs who are prepared to deal
+with this somehow are welcome to run the school as the basis
+of a big soap-operatic ongoing drama – perhaps with a few frequently appearing “star” figures.
+
+This campaign could be played on an episodic basis. Every
+week (or so), the PCs encounter some kind of puzzle, mystery,
+or problem that they have to deal with, for whatever reason.
+By the end of the week, they’ve solved the problem, possibly
+handing off crucial evidence of wrongdoing to an adult law
+enforcement agency to wrap things up and deal with the
+annoying paperwork.
+Most of these incidents should involve little or no physical
+violence, when the PCs are present. They’re not especially welltrained in combat. Certainly, armed combat in the setting can
+easily become very dangerous indeed. If these PCs get into
+actual firefights in which the opposition resort to lethal
+weapons, they will quickly die. Nonetheless, some opponents
+may, for good reasons of their own, opt for less-than lethal
+weapons (electrolasers, tangler rounds, etc.). For example,
+security guards at what appears on the outside to be a legitimate factory may well use such weapons to deal with annoying
+intruders, rather than risk the closer investigation and bad PR
+that would come from killing them – even if the factory is actually a criminal enterprise secretly doing something illegal.
+Likewise, the occasional low-key brawl isn’t out of the question, and some of the PCs have self-defense training or useful
+cybershell allies that can handle such incidents. Also, while
+actual fighting might be unwise, running away and hiding can
+be quite exciting enough.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+5
+
+This campaign can feature a certain number of continuing
+plots, some of them less about mysteries than about soap
+opera. Teenagers are notoriously prone to friendships, transient enmities, passing fads and obsessions, and social gameplaying, as they learn to make their way in the world. They
+have to put up with each other, even if they fall out – part of the
+point of this school arrangement is to teach the pupils how to
+handle such things. They can also suffer a range of adolescent
+traumas, misfortunes, and learning experiences, including
+family rows and break-ups. They may or may not choose to
+support each other at such times. Some players like soap opera
+in their games more than others, but for those who want it, a
+school campaign offers endless possibilities.
+Mystery plots can involve continuing, linking threads,
+which perhaps only appear gradually as the campaign continues. Königsberg-Kaliningrad has its share of secrets, mysteries,
+organized crime, and espionage. The PCs may stumble over
+more than one manifestation of such things, or pursue a string
+of clues back to some source over a period of weeks. However,
+the PCs will almost certainly come to the attention of dangerous adult opponents as a recurrent, serious problem. While a
+plotter may consider a bunch of random “meddling kids” as a
+one-off incident, not worth the risks of seeking revenge and
+best forgotten about as soon as possible, a persistent threat
+might be another matter, meriting ruthless elimination. GMs
+should balance such plots carefully, making sure that the
+heroes are aware of the risks and are prepared to duck, dodge,
+and hide. GMs also need to make more capable resources
+available to call on by the time that the plotter would logically
+choose to move against them.
+
+CREDIBILITY
+COMPLICATIONS (OR NOT)
+This campaign idea may strain credibility with its group of
+fairly ordinary young teens forever stumbling over mysteries,
+one per scenario. Although some might accept this as a matter
+of dramatic convention, this specific setting and group of PCs
+are designed to provide a solution to some of this problem. The
+setting is a moderately corrupt “frontier free city,” where criminal schemes and conflicting factions are a part of the background; crimes and mysteries are pretty much expected.
+Additionally, some of the characters are connected to law
+enforcement and security work through their families. Most of
+them can be treated as having a healthy dose of nosy-teenager
+curiosity, and will surely follow up any interesting discoveries.
+Some good reasons certainly exist to use curious juvenile
+amateurs as the protagonists of a Transhuman Space mystery campaign, rather than professional adult cops or detectives. Apart from the fact that they aren’t required to “follow
+procedure” or report to restrictive supervisors through TL10
+communication and management systems, the fact that their
+
+forensic resources are inherently limited can be a large advantage for the GM. Tech level 10 investigative equipment can be
+expected to be almost unthinkably sensitive and precise.
+Consider what contemporary, TL8 chemical and DNA tests
+are capable of, and then add 90+ years of advances, with
+cyberswarms, pervasive communication networks, and nighuniversal wearable or implanted computers. A professional
+detective who encounters a mystery, and who can apply
+department-level resources and standard police legal privileges, will almost always solve it in hours if not minutes.
+Teenage amateurs, however, will have to resort to improvisation, ingenuity, instinct, and a dose of bluff – which generally
+makes for a more interesting and interactive adventure.
+Of course, the teenagers may be tempted to hand problems
+over to the professionals, as many adults will tell them they
+should. Nevertheless, in a city where some of the authorities –
+including the cops – may be corrupt, where shady factions may
+have control of many communications and media channels,
+and where the local authorities may sometimes be in conflict
+with other nations (including those of which the PCs are citizens), turning to local law may not always be a real option. The
+danger is that the PCs may end up in serious conflict with
+those local powers-that-be. Nevertheless, they have their own
+“patrons,” primarily their parents and, to a lesser extent, their
+school. These resources may not be much help at first, but they
+can be useful once the youngsters have collected enough evidence to convince those in authority to take a case seriously.
+
+CONCEPTS AND REFERENCES
+Several reference points exist for GMs running a “School
+Days 2100” campaign. On one level, it can lie somewhere
+between a less goofy Scooby-Doo and a lower-lethality Buffy the
+Vampire Slayer, with high-tech gadgetry and the problems of a
+part-transhuman society replacing the supernatural or pseudosupernatural elements. On another, it may owe a lot to the long
+traditions of the “school-age detective” subgenre, from the
+Hardy Boys and Nancy Drew to Brick and Veronica Mars, with
+the science-fiction elements as an extra twist. From different
+point of view, it can be seen as a modern approach to the “SF
+juvenile” subgenre, as developed by the likes of Robert
+Heinlein, with his “young citizen of the future” protagonists.
+Equally, popular teen/school soaps can inspire soap-opera elements. The GM and players will have to determine how much
+to emphasize any particular element – though the emphasis
+can shift from scenario to scenario.
+In addition to the Transhuman Space line, some other
+GURPS supplements may be helpful to GMs running such a
+campaign. GURPS Ultra-Tech and GURPS Bio-Tech are
+always useful as sources for equipment and other technological details. GURPS Mysteries, meanwhile, provides an extensive guide to the art of running mystery plots; it even includes
+specific notes on science fiction mysteries (on pp. 74-79).
+
+My dad used to have this expression about roots and wings. Give your children
+roots and wings. You know, a good basis and the freedom to use it.
+– Dr. Donna Chen, Danger Bay #4.4
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+6
+
+Wealth, Status, Equipment, and Software
+These PCs combine high Status – typical of the citizens
+of Fifth Wave areas – with low wealth levels, as they are
+teenage students with no significant full-time employment.
+Normally this would lead to problems meeting cost of living requirements, but these characters can be considered
+to have “jobs” as legal minors living with their parents, who
+cover their living costs at their Status levels. The starting
+cash they receive for their wealth levels represents the
+spending money they’re given and the resources they can
+command directly, without having to ask their parent
+Patrons. Some of this has already been spent on minor
+items of equipment or software; the latter is listed with the
+AI system on which it’s usually installed.
+Each of the characters has a certain amount of accessible cash listed, which represents cash in hand (mostly held
+in easily accessible online accounts), after paying for any
+listed software or special equipment. Remember that, if
+they want to spend this money on “adventuring” gear, they
+are legal minors. They’re even more restricted by equipment legality than most civilians. Some items (such as
+motor vehicles, tools with possible criminal applications,
+and alcohol, minor brainbugs, or other mind-altering substances) are restricted for them despite being more or less
+freely available to adults. In any case, they obviously have
+to find somewhere which has what they want to buy in
+
+SAMPLE SCENARIO:
+FIELD TRIP
+On a fine Monday morning in May, the protagonists are
+informed by the English School’s head teacher, Dr. Leonard
+Simmons, that they are scheduled for a visit to an example of
+ecological restoration work. They’ll be under the supervision of
+a trusted LAI, but the point of this exercise is for them to
+research the topic for themselves and prepare InVid essays on
+the nature and status of the project. (All this is pretty much
+commonplace stuff in the English School.) Specifically, the
+location to which they’re being sent is on the Vistula Spit;
+they’ll be taking a minibus ride to the coastal town of Baltiysk,
+then a short boat trip to the spit.
+The school minibus has enough processor space installed
+to run the party’s supervisor, VICTOR-2, a reasonably smart
+AI with whom the PCs are very familiar. They mainly know it
+for its habit of repeating the last word it said while pondering
+problems, which it does a lot. It will transfer to the rented
+boat in Baltiysk.
+With little else to do on the run to Baltiysk harbor, they
+review the assigned subject as the group sets out.
+
+Background
+VICTOR-2 has been given a package of relevant information, which it will happily download to the pupils’ personal systems or display on the screens of the minibus. Some of the
+students may know some of these facts already, of course. The
+story begins with some background information: The only natural entrance to the Vistula Lagoon is the Strait of Baltiysk, at
+
+stock – the Web can help a lot here, but there are always
+limits. Furthermore, legal minors found in unauthorized
+possession of lethal weapons, even in a CR1 region such as
+Kaliningrad, are generally in for a world of trouble. Acquiring useful software, however, is generally pretty straightforward (aside from obvious special cases such as military
+targeting systems or criminal skill sets); it can usually be
+downloaded through the Web in minutes.
+Of course, these characters’ parents may be induced to
+buy or lend them equipment that they can claim to need
+for school projects, but getting hold of anything really
+interesting this way should be a roleplaying exercise in
+itself. Another possibility is to borrow some types of equipment from the school, which may mean persuading rather
+dim but sometimes stubborn supervisor AIs.
+As usual, it’s possible for richer PCs to loan cash or gear
+to their poorer associates. However, overusing this option
+is not only an abuse of the spirit of the wealth rules, it’s also
+poor roleplaying. Rich kids may help out less-rich kids
+from time to time, but they should be grudging or unhappy
+with providing such aid, and the recipients should feel
+embarrassed or patronized. If the characters get carried
+away, their parents may discover what’s happened, perhaps
+notified by domestic accounting software systems, and ask
+difficult questions about intentions and motives.
+
+the northeastern end of the Vistula Spit, adjacent to the town
+of Baltiysk. This previously put all access to the lagoon under
+the jurisdiction of whoever controlled Kaliningrad. Back in the
+2030s, uncertain about relations with Russia, the E.U. financed
+the construction of a canal through the Polish section of the
+spit, reactivating the Polish port of Elblag. (Those who know
+their regional history may recall that the canal was controversial in its time – the Russians weren’t pleased to lose their
+strategic monopoly – but that’s all in the past now.) This had
+long been proposed, but previously, worries about environmental effects (such as problems for wildlife migrations along
+the spit and salt-water surges into the freshwater lagoon),
+along with the cost, had prevented any action. A solution for
+one of these problems included dynamic management of
+surges through the canal. Unfortunately, this didn’t work as
+well as planned in the face of global warming-reinforced tides.
+Over the years, the lagoon has become increasingly brackish –
+yet another of the past century’s many ecological mess-ups.
+Now, the E.U. is financing attempts to repair the damage.
+As part of this ongoing project, an automated research and
+monitoring station has been set up near the northern end of the
+Vistula Spit, on Königsberg territory. Its job is to track salinity
+levels in the lagoon, as well as wildlife activity in the water and
+on the spit. The site used for this is an old Soviet-era airfield,
+which was abandoned and left to decay nearly 100 years ago. As
+abandoned wasteland, and still government property, it seemed
+like an ideal choice. The project may eventually lead to the construction of a movable barrage across the lagoon entrance to
+control saline tidal surges; managed wildlife restocking; and perhaps some kind of microbot-based environmental management.
+So far, things are still at the information-gathering stage.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+7
+
+Characters who know their local politics recognize this as a
+pretty typical well-meaning, well-financed, probably quite sensible scheme. Cynics will guess that less idealistic elements will
+have at least tried to lay claim to some of the money.
+
+they’ll cart it away; entangled humans will be left where they
+were hit. The dog is tired and scared, but if any PCs get close
+enough to it to talk before it collapses, it gasps out, “Tell Mr.
+Przenskala – I’ve been captured. Tell him – they may be after
+him! Tell him I did my best!”
+
+Approach and Arrival
+GMs who like to pay attention to such details can invoke the
+rules for motion sickness (p. B144 and p. B436) when the PCs
+are on the boat; its own NAI system will dispense helpful medications (reroll any sickness results with +3 to HT) if asked.
+Otherwise, the journey passes without incident.
+On arrival, VICTOR-2 discovers that, due to compatibility
+and security issues, it’s going to have to remain in the boat’s
+computer, albeit in radio contact with the students as they visit
+the site. (Anyone who queries this closely enough will realize
+that the site evidently has tight computer security.) Not to
+worry, though – lots of helpful systems are on the site, and they
+can provide the kids with any guidance they need, speaking
+through their communicators and the Web.
+The site turns out to be completely automated. No other
+humans are around, and even the AIs prove to be low-sapient
+at best. The station is also largely buried, leaving the site with
+the bleak and unprepossessing air of, well, a long-abandoned
+airfield. Still, the automated systems are more than happy to
+act as guides. The students get to see lots of cybershell bays on
+the waterfront, adjacent to the jetty where their boat is
+moored, with autonomous shells swimming in and out. They
+are then directed to some automated laboratories in the carefully landscaped, half-buried buildings, all run by static computers with no personalities whatsoever. There are lots of
+opportunities to take pictures – and even more opportunities to
+become rather bored.
+
+Mysteries
+The first hint of something curious comes when any of the
+visitors look at the site from the surface while listening to
+the tour guide. Plainly, six landscaped-in buildings squat in the
+area, but the guide refers to numbers one through four. If challenged, it declares that “additional fully automated facilities are
+of no interest to visitors.” If pushed further, it says that “facilities include maintenance and storage space and scope for
+expansion,” and simply ignores attempts to discuss the topic
+further. However, some online research can show that even
+high-level project documents only mention four buildings.
+Once the main tour is completed, the students are given some
+free time in which to wander around the site and “appreciate the
+aesthetically embellished landscaping.” As they do so, some of
+them spot something else unexpected: a large dog, running hard
+and being pursued by a couple of spider-configuration cybershells. Closer attention may determine that the dog has the
+enlarged skull of a genetic uplift, and that the cybershells are
+probably cheap “securibot” types (see Changing Times, p. 58).
+The spiders are focused on “herding” the near-exhausted dog
+into a position where they can stop it with tangler weapons, then
+tranquilize it with the hypo-injectors they’re carrying. If the students intervene, it becomes clear that the cybershells have basic
+NAI software installed and aren’t inclined to be conversational.
+They’ll ignore humans for as long as possible, but they will use
+their tangler rounds however is necessary to get their job done.
+They probably won’t use the injectors on humans – they don’t
+know for sure what the effects would be. If they capture the dog,
+
+Oh, talk not to me of a name great
+in story;
+The days of our youth are the days
+of our glory . . .
+– Lord Byron, “Stanzas Written
+on the Road Between
+Florence and Pisa”
+
+GM’s Background
+The kids have in fact blundered into an illegal Russian
+mafiskiya operation, which has previously relied on some
+manipulation of public data resources and the general complacency of anyone who did visit this rather uninteresting site. Of
+course, even this unusually nosy bunch of students might well
+not have blown the cover of the operation if it hadn’t have been
+for the escaped uplifted dog.
+Specifically, the criminal organization subverted the construction of the ecological facilities, using a front company to
+bid for the contract at a minimal price and then quietly incorporating some extra laboratory and computer facilities into the
+layout. These are now being used for assorted custom cloning
+and biogenesis commissions, including the creation of unlicensed K-10A guard dogs. The products of the lab are then
+smuggled into Poland and elsewhere on unmanned submersibles operating out of the station’s cybershell bays. This
+dog was being trained in a VR simulator when it awoke due to
+an anesthetic dose miscalculation, and it escaped. The LAI
+managing the secret operation, which can override all other
+systems on the installation, is now going into damage-limitation mode. Fortuitously for it, the site is designed to act as a
+Web node for everyone in the area, so it can monitor and
+restrict all communications on and off the site.
+To start with, it will route all messages to emergency services to a paid-off police supervisor, who’ll stonewall. It will also
+throw in a lot of “transient communications failures,” and
+inform the AIs on the visitors’ boat that, due to “temporary
+local maritime traffic management problems,” the boat can’t
+leave just yet. If it decides that the operation is compromised,
+as it probably will, it’ll also move its most valuable assets
+through a tunnel to the underwater dock holding its two submersible transports, and eventually send them away.
+Unfortunately, these are rather large (25’ long), and so its
+claims that they are “salinity measuring probes” rings hollow
+with anyone who see them, given that the probes they were
+shown on their site tour were all 4’ long.
+The AI isn’t likely to cause serious harm to stray bystanders
+such as the students if it can easily avoid it – that simply leads to
+more trouble later, and this is supposed to be a subtle operation.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+8
+
+Nonetheless, this is a professional criminal enterprise, a fair
+amount is at stake here, and the AI has no Honesty programming. Fortunately, the secret base’s systems are mostly designed
+to recapture stray products, not to conduct shoot-outs. Still,
+they may have some dangerous assets, at the GM’s option.
+
+Investigations and Developments
+Obviously, the teenagers should soon come to realize that
+there’s something odd going on, and their communications with
+the outside world are compromised. They can conduct Web
+searches and so on, but other, personal communications to anyone who might help keep mysteriously failing to get through.
+VICTOR-2 isn’t a lot of help – it’s inclined to believe what it’s
+told by the “trusted” research station systems – but it may be
+persuaded or finessed to do something not obviously dangerous, with some effort.
+One name that the PCs may choose to investigate online is
+“Mr. Przenskala.” This is a moderately common Polish name,
+but a little research will turn up one individual who sounds
+relevant – a wealthy and somewhat reclusive industrialist
+named Melchior Przenskala. A little more investigation might
+suggest that he is suspected of somewhat legally questionable
+activities, but nothing has ever been proved. Attempts to contact him, though, will bounce off NAI “idiot filters.” Actually,
+the K-10A hadn’t started working for him; it was being
+trained in VR, but it didn’t know that, and the simulation was
+good. Really strenuous attempts to contact Przenskala will at
+most alert him to the fact that the people who were selling
+him his new, illegal guard dog have somehow messed up and
+let his name get out, to his considerable annoyance.
+Bypassing the station systems and contacting the outside
+world isn’t impossible, but it requires some ingenuity. The plan
+may need direct access to the station’s radio antennae, which
+in turn may mean some trespassing into unauthorized areas
+and crawling through access spaces. Another option, given a
+moderately powerful communications unit, is to link up
+directly to a receiver across the lagoon. This may require a bit
+of tree-climbing or similar, for height, and some constructive
+use of Electronics and Computer Operation skills.
+The students may gain access to the “nonexistent” areas of
+the station through the ever-popular hidden ventilation shafts,
+and see enough to get some idea of what’s going on. Eventually,
+the caretaker LAI will notice something and send in a securibot or two to “restrain these overexcitable youths.”
+Lastly, the PCs might just try to leave. They could head
+cross-country, but that would be a long, boring walk across
+trackless ground, possibly pursued by security robots.
+Alternatively, they could hack past their boat’s obstinate NAI
+pilot, preferably with the aid of VICTOR-2. There are some
+safety overrides that would make this feasible, and the vehicle
+operating procedures, including a 2-point Boating skill set, are
+stored in its system memories.
+
+moving. Unfortunately, they might first discover that elements
+of the Kaliningrad police are being bought off – but others are
+honest, and if anyone can get solid evidence to, say, the GRA,
+things will really start moving.
+Alternatively, the students get away in their boat. They
+might choose to pursue one of the departing submersible
+transports. The boat has a small sonar system that makes this
+perfectly feasible; the transport’s sonar IFF system persistently
+identifies it as a research probe. This chase eventually leads the
+pursuers into Polish territorial waters, and automated border
+scanners will interrogate their onboard systems. However, no
+problems occur with passport control – they can identify themselves as E.U. citizens, and they have full legal right of entry.
+(The system will thoughtfully download a 500-page guide to
+customs procedures to their computers.)
+If the teenagers track the sub far enough, they determine
+that the transport will dock at a facility owned by a company
+that ultimately belongs to Mr. Przenskala. Visitors are politely
+but firmly warned off by armed guards, but this is all evidence
+for various police forces to follow up.
+In extreme cases, the PCs might choose to keep things quiet
+but sneak back to the station later, in their own time, probably
+in a rented boat. This gives them lots of options. Their best bets
+will involve a lot of information-gathering, calls to the right
+places, and a hasty or stealthy departure. It also runs the risk
+of discovering that the station’s illicit security now includes a
+few human goons with guns and less cautious attitudes than
+the caretaker LAI, of course. Hopefully, though, whatever they
+do will lead to a raid, very possibly lead by the GRA (an organization that, for all its attempts to look friendly and low-key,
+certainly owns at least a few helicopters that it can’t resist
+painting black). If the students are around for the wrap-up,
+they can even hear the caretaker LAI complaining that its mission would have been accomplished were it not for the interference of certain inconvenient young persons, before it deletes
+itself and trashes its own memory units.
+
+Tim Jones: “He’s 16. His body
+is 73% hormones.”
+– John Allison,
+Scary Go Round
+
+FURTHER SCENARIO SEEDS
+Here are some additional ideas for adventure ideas for this
+campaign.
+
+Blackmail Is a Dirty Word
+
+Resolutions
+Eventually, the protagonists get some kind of message to
+the outside world. At minimum, they are rescued and taken
+home, and the school and their parents will complain about
+the bizarre behavior of the station’s systems. How the PCs
+themselves are received depends on what they say and some
+reaction rolls. Assuming that they present some kind of evidence of something sinister, they might get an investigation
+
+The PCs are approached by a younger pupil at the school –
+a 10-year-old whose mother is the assistant British consul in
+Kaliningrad. He’s heard that they have a reputation for solving
+problems without involving adults too much, and he’s worried. His mother has been acting strangely lately, and she
+seems distracted. A few things that he’s overheard suggest that
+she has some kind of frightening personal secret, and that
+she’s doing something at work that could get her into trouble.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+9
+
+He’s smart enough to guess that she may be being blackmailed.
+He also understand that, if so, going to anyone official with this
+could make things worse for her – but he also realizes that she
+may get caught, which would be equally bad. He hopes that the
+PCs can help him resolve the problem somehow.
+Of course, one possibility is that he’s got everything wrong,
+and the problem is completely different – trouble in his parents’ marriage involving a work colleague, perhaps, which
+they’re trying to keep from him. However, assuming that things
+are as he’s guessed, can the PCs discover enough to help resolve
+the situation, perhaps turning the blackmailers’ own secrets
+against them?
+
+New Kid in Town
+The PCs’ age-band acquires a temporary member – a new,
+“young” SAI, developing its personality from basic principles
+rather than using a lot of “legacy code” characteristics. It isn’t
+really much like a young human, but in order to integrate
+effectively with human society, it’s trying to experience multiple aspects of human life, including the adolescent-stage learning processes that apparently do so much to shape human
+adults. The school has agreed to accept it as a pupil for a few
+weeks, partly as an experiment, partly to provide human pupils
+with valuable experience in interacting with advanced AIs, and
+partly because this seems like a good cause. Moreover, the AI’s
+guardians’ money is good for the fees. It’s teleoperating a lowend cyberdoll-style shell that enables it to function in human
+society fairly comfortably.
+This scenario can at least start out as a basic comedy of
+manners. The AI is simultaneously bright, quick, and hopelessly naïve. It’s prone to asking bizarre questions about basic
+human functions at the least appropriate moments. It experiments with all sorts of social interaction modes, from the toofriendly to the deeply annoying. It even tries to learn about
+deeper human emotions that are difficult enough for adolescents at the best of times (lust, wild enthusiasm, hatred, emotional cruelty . . .). However, it’s a quick learner, and it’s too
+sensible to want to be disliked all of the time.
+Bigger problems turn out to be related to its origins. At the
+very least, several groups seem to be claiming to have developed
+
+its core processes, some of them in jurisdictions where this
+implies strong property rights – and there may be hints that the
+thing is actually an emergent intelligence, which would be
+socially difficult. When agents of several factions and government groups show up with uncertain intent, where’s the kid to
+turn but to its new classmates?
+
+Personal Delivery
+A new memeplex is spreading through the English-speaking teenagers of the world, and especially those with a
+British cultural background – a fashion/dance subculture
+with a peculiar taste for hierarchy and regimentation. One
+oddity about this fashion is that it only ever seems to be
+transmitted by direct personal contact and word of mouth –
+it really doesn’t propagate effectively over the Web. Despite
+this feature, it’s cropped up in enough places to show up in
+several well-informed discussions of memetics. Theorists
+generally assume it to be a deliberate construct – that’s the
+standard assumption in 2100, after all – but if so, its purpose
+is unclear. One plausible guess is that it’s a rather scary
+socio-political tool; the whole thing has a rather nasty fascistic edge, and it’s possible that a manipulator with the right
+memetic “keys” could transform any group of devotees into
+a personal cult with political potential. However, there are
+more questions than answers at this point.
+Now, it’s shown up in Königsberg. This is interesting,
+because it needs a “carrier,” but no one has yet been identified as having introduced it. The other intriguing aspect is
+that the memeplex seems to key onto the effects of isolation
+from actual personal contact among heavy Web users, inducing and exploiting a reactive desire for group contact. Hence,
+the pupils at the English School, with their regular experience of personal contact, seem to be relatively well immunized. This makes them potentially useful as investigators
+and data collectors, either on their own initiative or as agents
+of the authorities. The only snag is that it’s just possible that
+this is going to get dangerous. Someone may have put a lot of
+effort in building a sleeper fascist personality cult, and that
+person won’t want it to be subverted.
+
+THE ENGLISH-SCHOOL STUDENTS
+This group of kids have two things in common: They all
+attend the same school, and they are all in the same age range.
+They can be played as player characters, as another group in
+the same age-band at the school, or as NPCs encountered by
+other children or adults living or working in the same city.
+
+CATHERINE MOLTBY
+Mum and Dad are in business together, troubleshooting
+cybershell goods-transport systems. This sounds like a guaranteed way to have to move around a lot – in person, even.
+
+Look, I don’t want to bother anyone, but has any of you seen this
+stuff in the high-metaverse chatspaces this morning?
+– Catherine Moltby
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+10
+
+They say that the customers like it when one of them actually
+turns up on site, rather than teleoperating some cheap, imprecise, rented cybershell. They managed to fit having you into
+their schedules somehow, but it didn’t slow them down much.
+Thus, despite the fact that they’re both from the U.K., you’ve
+barely spent six months living in any one place in your life.
+Until this last year or so, anyway – then, they hooked up this
+long-term contract here in Königsberg-Kaliningrad. They even
+said something about giving you a chance to take a straight run
+at some exams in a school environment. Up until then, they’d
+just fitted you out with a lot of teacher AIs and cybershells and
+nanosymbionts and stuff, and left you alone a lot of the time.
+You liked it that way.
+
+Playing Catherine
+You’re not that sure of yourself
+around people – well, people who
+you don’t know, anyhow. You’re okay
+with people you do know – Mum and
+Dad and a few online friends, some
+AIs and such. Mum had you checked
+over by a memetic therapist a while
+back. He said something about selfconfidence “issues,” and he got the
+medic systems to prescribe you
+some brainbugs, which have made
+you less jumpy. (You’re supposed to
+come off them by easy stages, eventually.) Even so, the first months at
+the English School were excruciating,
+though you’ve just about got used to things now.
+It’s not like you don’t try. Someone suggested that it might be
+easier if you took an interest in stuff that other kids would like,
+so you sat down and learned your way around what the house
+AI thought was cool – VR arts, music, what’s new from
+Bollywood. You even traded in one of your old AIs for a fashionable new Medusa ’shell that is coded to provide fashion advice.
+Then you found that the other kids weren’t actually that into this
+stuff. That was weird, because a lot of it is pretty interesting. You
+ended up picking up a bit about formal memetics to see how it
+all works, how the studios put it all together. Maybe the AIs even
+tricked you into learning “useful” stuff – or maybe it’s just you.
+You tend to focus onto things quite well. Like, a while back,
+Mum and Dad decided that if you were going to be going out
+on your own more, you ought to be able to defend yourself.
+They fixed you up with some VR/sim judo training. You ended
+up insisting on taking some follow-up courses too. After all,
+what’s the point of stuff if you don’t carry it through? Don’t people see that?
+In addition to the equipment and software listed below, you
+have easy access to about $1,800 cash.
+
+Catherine Moltby
+75 points
+A skinny, rather nervous-looking, but immaculately, fashionably dressed 14-year-old Alpha Upgrade with a high-tech
+“Medusa hairstyle.”
+ST 7 [-30]; DX 11 [0]*; IQ 10 [0]; HT 11 [0]*.
+Damage 1d-3/1d-2; BL 9.8 lbs.; HP 7 [0]; Will 12 [10]; Per 12
+[10]; FP 11 [0].
+
+Basic Speed 5.50 [0]; Basic Move 5 [0]; Dodge 8; Parry 9
+(Judo).
+5’2”; 80 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; German (Accented) [4];
+Spanish (Broken/None) [1].
+
+Advantages
+Ally (Medusa cybershell with “Gorgon II” software package;
+Built on 100%; Constantly Available; Minion, +0%) [20]; Ally
+(NAI in Virtual Interface Implant; Built on
+25%; Constantly Available; Minion, +0%)
+[4]; Alpha Upgrade [41]; Patron
+(Currently Available Parent; Powerful
+Individual; 12 or less; Minimal
+Intervention, -50%) [10]; Pop Culture
+Maven 2 [10]; Status 1 [5].
+Perks: Sanitized Metabolism (Multiple
+nanosymbiont treatments). [1]
+
+Disadvantages
+Fearfulness 2 (Mitigator, Weekly treatment with nanosymbionts, -65%)† [-1];
+Pacifism (Reluctant Killer) [-5]; Reputation -1 (Spoiled bubblehead; To the local
+Anglophone community; 10 or less) [-1];
+Shyness (Mild) [-5]; Skinny [-5]; Social
+Stigma (Minor) [-5]; Struggling [-10].
+Quirks: Attentive; Code of Honor (Stands by her “friends”
+and associates); Dislikes Aesthetic Minimalism (Thinks it’s
+creepy and lonely). [-3]
+
+Skills
+Connoisseur (Music) (A) IQ [2]-10; Connoisseur (Virtual
+Reality Arts) (A) IQ+3 [4]-13‡; Current Affairs/TL10 (Popular
+Culture) (E) IQ+3 [2]-13‡; Dancing (A) DX [2]-11; Expert Skill
+(Memetics) (H) IQ+1 [2]-11‡; Judo (H) DX+1 [8]-12;
+Makeup/TL10 (E) IQ [1]-10; Savoir-Faire (Dojo) (E) IQ-1
+[1]-9§; Stealth (A) DX [2]-11.
+* From Alpha Upgrade template.
+† Fearfulness 2 would normally reduce your Fright Check
+rolls from your Will roll of 12 to 10, but, so long as you keep up
+the weekly nanosymbiont treatment, this penalty is eliminated.
+‡ Includes +2 from Pop Culture Maven.
+§ Includes -1 from Shyness.
+
+Catherine’s Views of the Others
+The other four in your age-band at the English School aren’t
+so bad, really, now you’ve got used to them. They take you seriously some of the time, at least.
+Denise Walsh is smart and creative, full of ideas, probably
+because her parents got her one of those Metanoia genetic
+upgrades, which sometimes means that she, too, has trouble
+with people – but she doesn’t seem to care. You envy her that;
+people can call her a geek to her face and she shrugs. Her folks
+move around a lot too; she spent years up on Islandia Station,
+which must be downright weird.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+11
+
+Mike Harris is much more of a ground-hugger. His dad does
+some kind of security work, and Mike tags along with that,
+which seems a bit desperate. “Adolescent revolt” may be a dated
+sort of meme, but shouldn’t he try a bit harder to be himself?
+Still, he’s more mature than Dave Sheckley, who’s about your
+age but doesn’t act it. His mother works for the Genetic
+Regulatory Agency, which has a major office here in
+Kaliningrad. Dave parrots the Preservationist line – he even
+gives your Medusa funny looks, though it’s just a cybershell,
+not actually any more extreme than that cyberdog that tags
+around with him everywhere.
+At least he rubs Ian Chakrabarti the wrong way sometimes
+– Ian’s one of those oh-so-competitive Ishtar upgrades, and he
+doesn’t let anyone forget it. It makes him really cute, of course,
+and he acts all thoughtful, but that may just be a bit of crude
+memetic groundwork. Like Denise says, the great romance of
+his life is Ian Chakrabarti.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; French (Native) [6];
+German (Native) [6]; Spanish (Native) [6].
+
+Advantages
+Modular Abilities 3 (Computer Brain: 4, 4, 2) (Limited
+Integration, -20%; Skills and Languages Only, -10%) [41];
+NAI-5 [49].
+
+Disadvantages
+Duty (To owner; 15 or less) [-15]; Virtual Interface Implant
+[-100].
+
+Skills
+Computer Operation/TL10 (E) IQ+3 [0]-13†; Diagnosis/TL10 (User) (A) IQ+1 [4]-11; Electronics Operation/TL10 (Communications) (A) IQ [2]-10; Merchant
+(A) IQ-1 [1]-9; Research/TL10 (A) IQ+2 [8]-12.
+
+AI Allies and Duty
+
+Additional Software
+
+These characters’ AI Allies have all been given Duty (To
+owner) at 15 or less, worth -15 points. Strictly, this implies that
+the AIs are not only “on duty” virtually all the time (which is
+generally appropriate for these sorts of AI personal aides), but
+also that the duty is inherently somewhat dangerous. This may
+well be true in a version of the campaign that involves even
+moderate levels of peril for the PCs: Humans have little compunction about taking NAI or LAI assistants into dangerous situations with them and even sacrificing them to cover a retreat
+or achieve a very important objective. Opponents will have even
+fewer qualms about harming such objects. However, in a lowcombat, more soap-operatic “school days” campaign, this disadvantage might strictly be considered more than the AI’s
+experiences can justify. In that case, make these duties Nonhazardous, and find another -5 points of disadvantages for each AI
+from somewhere – perhaps in the form of minor programmedin or acquired personality foibles, turning the AIs into comic
+foils for the soap-operatic human juveniles.
+
+Mugshot (Complexity 4); 3D Social Telepresence
+(Complexity 4); Full Sensorium Neural VR (Complexity
+4); Custom Virtual Avatar (For Catherine); Off-the-Shelf
+Virtual Avatar (For NAI); Skill Set: Accented
+Lithuanian, Spoken and Written (4 points; Complexity
+4); Skill Set: Accented Polish, Spoken and Written (4
+points; Complexity 4); Skill Set: Accented Russian,
+Spoken and Written (4 points; Complexity 4); Skill Set:
+Area Knowledge (Kaliningrad) at IQ+2 (4 points;
+Complexity 4); Skill Set: Law (Königsberg Police) at IQ
+(4 points; Complexity 4).
+* From Virtual Interface Implant template.
+† From NAI-5 template.
+
+Medusa “Hairstyle” Cybershell
+75 points
+
+ST 1 [0]*; DX 10 [0]; IQ 8 [0]†; HT 12 [0]*.
+Damage N/A*; BL 0.2 lb.; HP 1 [0]; Will 8 [0]; Per 8 [0];
+FP N/A.
+Basic Speed 5.50 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+CATHERINE’S AIS
+You aren’t big on AI assistants – actually, your parents
+don’t want you leaning too much on software to handle your
+life – but you do actually run two low-end systems, though
+only one of them has much training beyond what it came
+with. “Spot” is loaded in your virtual interface implant. It is
+a general-purpose but well-trained Web access utility, linguistic translator, and entertainment player. Your Medusa
+cybershell runs a trained NAI-4. Normally, a Medusa would
+use skill-set software, but this one is a slightly more expensive model with integral training for the very basic stuff you
+ask it to handle.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Advantages
+Fashion Sense [5]; Medusa Cybershell [18]; Modular
+Abilities 3 (Computer Brain: 2, 2, 2) (Limited
+Integration, -20%; Skills and Languages Only, -10%) [30];
+NAI-4 [29].
+
+Disadvantages
+
+Spot
+
+Duty (To owner; 15 or less) [-15].
+
+18 points
+ST 0 [0]*; DX 10 [0]; IQ 10 [20]†; HT 14 [0]*.
+Damage N/A; BL N/A; HP 1 [0]*; Will 9 [-5]; Per 9 [-5]; FP N/A.
+Basic Speed 6.00 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+Skills
+Acting (Snake-Hair Behavior) (E) IQ+2 [4]-10; Computer
+Operation/TL10 (E) IQ+3 [0]-11†; Professional Skill
+(Hairstylist) (A) DX+1‡ [4]-11.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+12
+
+* From Medusa Cybershell template (see Shell-Tech, p. 14).
+† From NAI-4 template.
+‡ This AI’s Professional Skill (Hairstylist) is based on DX
+rather than IQ because it is more concerned with arranging a
+standard or carefully defined style just so than with creative
+style design. In fact, the cybershell’s High Manual Dexterity 3
+will often apply to this.
+
+DENISE WALSH
+Your mums tell you that you were born because they manage
+their careers so well. They met through work – they’re both in
+financial management, consulting for a bunch of British companies and the E.U. civil service – and they managed to synchronize things for years, long enough to have you engineered.
+They merged their DNA, and while they were having the work
+done, they got you a Metanoia-series upgrade, which is supposed to make you smarter, more focused, and healthier than
+average. They wouldn’t tell you which one of them carried you,
+but eventually you worked out that it must have been Mum-Pila.
+Well, maybe. Anyway, you were born on Earth, but for
+most of your life that you can remember, you were living with
+them on Islandia, the biggest space colony in the solar system
+(not counting Mars or its moons, of course), up at L4. The
+Metanoia focus kicked in on schedule, according to your
+kindercomps’ reports, partly as an interest in math and mathematical sciences, but mostly . . . You discovered the visual
+arts a while back, and then you found that you could get good
+at them. You think that your mums may be a bit disappointed
+– they’d probably like you to have followed them into their
+sort of business – but they hide it all right. Anyhow, who
+cares? You’re good at things like jewelry and photography,
+and there’s so much you can do with them.
+Then a year or so back,
+Mum-Annette got an offer of
+a contract that meant relocating back down to Earth, to
+Kaliningrad. The pair of them
+spent days looking serious
+together before they decided
+that she should go (fine),
+and that she should take you
+so that you could “get the
+hang of life in a planetary
+community” (hmm). The fact
+that the English-speaking
+community in Kaliningrad is
+tiny compared to the one up
+on Islandia doesn’t seem to
+have crossed their minds, but
+your curiosity did kick in, you
+admit. (The weirdness of wide open spaces with horizons
+didn’t occur to you until you experienced them in reality.)
+Unfortunately, life on Earth has brought you into personal
+contact with dumb memes like “Radical Preservationism,”
+which can’t survive on a high-tech community like Islandia –
+to be fair, the Genetic Regulatory Agency does have an HQ in
+this city. You’ve also met some plain stupid individuals here;
+some even get weirded out about you having two biological
+mothers and no father, like this was a new idea or something.
+Still, at least there are a lot of interesting things, people, and
+places to photograph.
+
+Playing Denise
+You see yourself as a normal, grounded sort of person, and
+in many ways you are. However, your background is unusual,
+even by the standards of your era, and you don’t always realize
+how much your assumptions may startle other people. You’re
+also significantly bright and creative, largely thanks to your
+genetic upgrade. In fact, people say that you’re full of ideas –
+and that they aren’t always good. Well, so what? It’s better than
+not having any ideas at all. You may grow up into a talented
+artist . . . or a scientist . . . or even both. The unifying factor is
+that you’re good at observing the world and then acting on
+those observations.
+In addition to the equipment and software listed below, you
+have easy access to about $230 cash.
+
+Denise Walsh
+75 points
+A thoughtful-looking 15-year-old girl (actually a Metanoia
+Upgrade) with a taste for baggy but well-made clothes, often
+carrying a camera.
+ST 8 [-20]; DX 10 [0]; IQ 12 [20]*; HT 11 [0]*.
+Damage 1d-3/1d-2; BL 13 lbs.; HP 8 [0]; Will 12 [0]; Per 12 [0];
+FP 11 [0].
+Basic Speed 5.25 [0]; Basic Move 5 [0]; Dodge 8; Parry 8
+(unarmed).
+5’5”; 130 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; French (Broken) [2].
+
+Advantages
+Ally (NAI in Wearable Interface; Built on 25%; Constantly
+Available; Minion, +0%) [4]; Gifted Artist 2 [0]*; MetanoiaSeries Upgrade [51]; Patron (Currently Available Parent;
+Powerful Individual; 15 or less; Minimal Intervention, -50%)
+[15]; Regeneration (DNA Repair Nanosymbionts; Slow;
+Radiation Only, 10 rads/12 hours, -60%) [4]; Status 1 [5].
+Perks: No Degeneration in Zero-G (Microgravity biochemistry nanosymbiont). [1]
+
+Disadvantages
+Curious (12) [-5]; Pacifism (Reluctant Killer) [-5]; Social
+Stigma (Minor) [-5]; Struggling [-10].
+Quirks: Overtly disdainful of Radical Preservationism;
+Slightly Agoraphobic (Avoids wide open spaces as much as possible, occasional -1 penalties when forced into the open). [-2]
+
+Skills
+Area Knowledge (L4) (E) IQ [1]-12; Artist (Drawing) (H)
+IQ [1]-12†; Artist (Painting) (H) IQ [1]-12†; Astronomy/TL10
+(H) IQ-2 [1]-10; Bicycling (E) DX [1]-10; Chemistry/TL10 (H)
+IQ-2 [1]-10; Electronics Operation/TL10 (Media) (A) IQ
+[2]-12; Free Fall (A) DX [2]-10; Jeweler/TL10 (H) IQ+1
+[2]-13†; Mathematics/TL10 (Applied) (H) IQ-2 [1]-10; Mathematics/TL10 (Statistics) (H) IQ-2 [1]-10; Observation (A) Per
+[2]-12; Photography/TL10 (A) IQ+2 [2]-14†; Physics/TL10
+(VH) IQ-3 [1]-9; Vacc Suit/TL10 (A) DX-1 [1]-9.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+13
+
+He may photograph fine, but I lost interest in that story when he
+opened his mouth. I’ve got better things to do with my time than listen to
+back-to-the-caves ranting.
+– Denise Walsh
+* From Metanoia-Series Upgrade template.
+† Includes +2 from Gifted Artist.
+
+Equipment
+Denise often carries a “portacam” – a small professionalquality movie camera with audio and 3D capability; 1,000 TB
+internal capacity; datachip slot and computer interfaces; 16¥
+parabolic audio magnification; 64¥ optical magnification; and
+Night Vision 9, all weighing 4 lbs.
+
+Denise’s Views of the Others
+Sending you to an old-style school for “socialization” was
+all Mum-Annette’s idea. The other people of around your own
+age who you’ve got to know as a result are a pretty varied lot,
+even though they don’t represent the full diversity of Earth.
+You’re still trying to get your head around some of their
+memetic weirdnesses, in truth, though they’re quite interesting sometimes.
+For example, Catherine Moltby has a reputation as a bit of
+an airhead, and she certainly doesn’t have much to say for herself. But you get the feeling that she’s not quite as stupid as people think, even if her cybernetic hairstyle is often more
+expressive than she is. Maybe she needs to not let people get to
+her so much; she comes across as all thin and jumpy.
+Mike Harris seems to do the strong, quiet thing quite naturally. Once or twice, when he’s looked at your artwork, you’ve
+got the impression that he’s got a pretty good eye. Some people
+think he’s tiresomely blunt, so maybe he’s learned to keep quiet
+to avoid giving offense.
+Dave Sheckley is a brash, naïve kid. His mother works for
+the GRA, and he’s obviously picked up a lot of Preservationist
+attitudes from them – all at the moderate end of the scale, fortunately, but he won’t shut up about them, and they’re boring.
+It’d be nice if he started thinking for himself and stopped leaning so much on Mummy and that blasted robot dog that trails
+round after him.
+Fortunately, Ian Chakrabarti is less annoying than that, even
+if his boosted self-confidence (thanks to his Ishtar upgrade –
+and people make remarks about Metanoias!) means that he’s
+sysadmin of his own fan community. He at least tries to balance things by being polite (he’s never used the word “geek” in
+your hearing, unlike some), and he is at least a bit cute.
+
+DENISE’S AI
+Denise uses a standard-model sunglasses-style wearable
+computer with a cheap-and-cheerful Complexity 4 processor
+and AI installed. Its virtual avatar is an elderly man with a
+bland expression, dressed in a “classical” tunic.
+
+Isaac
+18 points
+ST 0 [0]*; DX 10 [0]; IQ 8 [0]†; HT 12 [0]*.
+Damage N/A; BL N/A; HP 1 [0]*; Will 10 [0]; Per 10 [0]; FP N/A.
+Basic Speed 5.50 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Advantages
+Modular Abilities 3 (Computer Brain: 4, 2, 2) (Limited
+Integration, -20%; Skills and Languages Only, -10%) [35];
+NAI-4 [29].
+
+Disadvantages
+Duty (To owner; 15 or less) [-15]; Wearable Virtual Interface
+[-42].
+
+Skills
+Computer Operation/TL10 (E) IQ+3 [0]-11†; Electronics
+Operation/TL10 (Communications) (A) IQ [2]-8; Electronics
+Operation/TL10 (Media) (A) IQ-1 [1]-7; Research/TL10 (A)
+IQ+2 [8]-10.
+
+Additional Software
+Mugshot (Complexity 4); 2D Social Telepresence
+(Complexity 3); Basic VR (Complexity 3); Custom Virtual
+Avatar (For Denise); Off-the-Shelf Virtual Avatar (For NAI);
+Skill Set: Accented German, Spoken and Written (4 points;
+Complexity 4); Skill Set: Accented Polish, Spoken and Written
+(4 points; Complexity 4); Skill Set: Accented Russian, Spoken
+and Written (4 points; Complexity 4); Skill Set: Area
+Knowledge (Kaliningrad) at IQ+1 (2 points; Complexity 3).
+* From Wearable Virtual Interface template.
+† From NAI-4 template.
+
+MIKE HARRIS
+Your parents got divorced when you were eight, and Alan
+– your dad – ended up looking after you, partly because he
+has the most reliable income. Unfortunately, to further
+improve your circumstances, he needed to take a job that
+not many other people wanted, largely because it involved
+physical relocation. That’s how you ended up growing up
+mostly as one of the small English-speaking communities in
+Kaliningrad.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+14
+
+Alan used to be in the police. Now, he’s a security consultant, on a retainer from the British consulate and contracting
+with a lot of English-speaking companies who set up offices
+here. He’s been good to you, if sometimes busy. You’ve learned
+a lot from him – you’re seriously considering following him
+into the police as your own first career. You’ve
+also got to know some of his pals on the Web,
+especially JUVE, an AI based in Paris that
+does coordination work for the E.U. and
+Interpol. It really knows its way around the
+law enforcement business. AIs aren’t always
+big on emotions, but you think that JUVE sees
+you as a friend; he’s certainly willing to teach
+you a bit.
+You don’t get all of your education from
+computers. Alan always says that he’s in the
+business of dealing with people and that you
+need to learn about this – so he sends you to
+the English School. This is kind of weird at
+times, but you can hack it. When you don’t
+have classes, you like to walk, so you know
+the city quite well. You’ve recently had some
+lessons on a motorcycle simulator, so you’re
+hoping to explore further afield when you
+can get hold of a ro-ped or something.
+
+Playing Mike
+Some people see you as old before your time. Indeed, you
+may sometimes overemphasize your maturity and your willingness to learn from your father. But you actually have a real if
+rather pragmatic interest in the world around you, and a capacity for enthusiasm that matches your age. You’re extremely
+straightforward, and you just shrug off anyone who finds that
+dull. You also tend to judge people, sometimes harshly, because
+you’re always trying to grasp the situation quickly. You don’t
+automatically try to take control in difficult situations, but that’s
+mostly because you often find it easier to solve problems singlehanded. You don’t bother concealing your skills, although you
+don’t generally boast about them either.
+In addition to the equipment and software listed below, you
+have easy access to about $80 cash.
+
+Mike Harris
+75 points
+A quiet, slightly stocky but clearly fit 15-year-old, with a
+taste for practical clothes.
+ST 10 [0]; DX 10 [0]; IQ 11 [20]; HT 11 [10].
+Damage 1d-2/1d; BL 20 lbs.; HP 9 [-2]; Will 11 [0]; Per 14 [15];
+FP 11 [0].
+Basic Speed 5.25 [0]; Basic Move 5 [0]; Dodge 8; Parry 8
+(Brawling).
+5’9”; 145 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; French (Broken/Accented)
+[3]; German (Broken/Accented) [3]; Russian (Accented) [4].
+
+Advantages
+Acute Vision 1 [2]; Ally (NAI in Wearable Interface; Built on
+25%; Constantly Available; Minion, +0%) [4]; Contact (JUVE –
+Interpol/E.U. Police Coordination Computer; Criminology-18;
+9 or less; Completely Reliable) [9]; Fit [5]; Genefixed Human,
+post-2050 [0]; Patron (Father; Powerful
+Individual; 15 or less; Minimal
+Intervention, -50%) [15]; Resistant to
+Disease +3 (Immune Machine
+Nanosymbionts) [3].
+
+Disadvantages
+Honesty (12) [-10]; Pacifism
+(Reluctant Killer) [-5]; Poor [-15];
+Social
+Stigma
+(Minor)
+[-5];
+Truthfulness (15) [-2].
+Quirks: Intolerant of addicts and
+addictive personalities; Slightly
+humorless (Doesn’t laugh much; -1
+reactions from “jovial” company). [-2]
+
+Skills
+Area Knowledge (Kaliningrad) (E)
+IQ+2 [4]-13; Brawling (E) DX [1]-10;
+Criminology/TL10 (A) IQ [2]-11; Driving/TL10 (Motorcycle) (A)
+DX [2]-10; Forensics/TL10 (H) IQ-1 [2]-10; Observation (A) Per
+[1]-13; Running (A) HT [2]-11; Savoir-Faire (Police) (E) IQ+1
+[2]-12; Search (A) Per [2]-14; Smuggling (A) IQ-1 [1]-10;
+Stealth (A) DX+1 [4]-11.
+
+Equipment
+Mike owns a pair of electro-optical binoculars, which give
+Night Vision 9 and 128¥ magnification; these also incorporate a
+HUD, laser rangefinder, and digital camera, and weigh 0.6 lbs.
+
+Mike’s Views of the Others
+The school brings a diverse bunch into contact with each
+other. Unfortunately, a lot of them are diplomat’s brats or the
+clone-kids of rich business types who prefer to keep on the
+move. They’re wrapped up in their own little worlds; most of
+them can’t even find their way around the city without a software guide, even after living here for years. Still, some of them
+are okay, though your age-band is maybe a bit too diverse.
+To start with, Catherine Moltby is the school’s resident airhead. Well, maybe she’s not quite as far gone as people seem to
+think – among other things, she’s quite a hard worker when she
+puts her mind to something – but she wastes what brains she
+has on trivial stuff. She’s mentioned taking some self-defense
+classes once, which sounds a bit unlike her, but you don’t
+expect that any of that stuck; she doesn’t exactly have an athletic build (unless she became a sprinter).
+Denise Walsh is definitely smart – well, she has some kind
+of genetic upgrade, which may help. (Two mothers, no father
+– all so very posthuman.) Scores well in math, apparently, but
+spends most of her time wandering around with a camera or
+a sketchpad, snapping and drawing. She gets some nice pictures and not all of her bright ideas are daft; maybe she’s okay
+for an arty type.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+15
+
+Dave Sheckley is just a kid. He may not be much younger than
+you, but he hangs around like, well, an annoying kid brother. His
+mother’s in police work of a sort – she works at the big Genetic
+Regulatory Agency office here in the city, and he’s picked
+up the Preservationist party line that they all tend to spout.
+(Alan says that GRA agents all think that they save the world
+once a week and twice at Christmas, and they expect to be
+treated accordingly, whereas in fact they only save the world
+once a year or so.)
+Ian Chakrabarti has parents in the E.U. bureaucracy –
+memetics consultants, apparently – who must’ve thrown
+money at getting his genes tweaked. He’s a pretty boy with a
+real nice voice and the sort of pushy attitude that’s going to get
+him smacked down hard someday by someone who doesn’t
+make allowances. Still, he can manage a kind of surface politeness, he pulls back from being too snarky most of the time, and
+he puts his effort where his mouth is and tries to prove he can
+handle things without AI support, which verges on masochism.
+
+MIKE’S AI
+Mike uses a cheap off-the-shelf nonsapient AI, running on a
+“sunglasses” wearable, albeit with a little bit of personalized
+training by now. Its virtual avatar is an orange and blue “mannequin” figure.
+
+Grade
+18 points
+ST 0 [0]*; DX 10 [0]; IQ 8 [0]†; HT 12 [0]*.
+Damage N/A; BL N/A; HP 1 [0]*; Will 8 [0]; Per 8 [0]; FP N/A.
+Basic Speed 5.50 [0]; Basic Move N/A; Dodge N/A; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Advantages
+Modular Abilities 3 (Computer Brain: 2, 2, 2) (Limited
+Integration, -20%; Skills and Languages Only, -10%) [30];
+NAI-4 [29].
+
+Disadvantages
+Duty (To owner; 15 or less [-15]; Wearable Virtual Interface
+[-42].
+
+Skills
+Computer Operation/TL10 (E) IQ+3 [0]-11†; Electronics Operation/TL10 (Communications) (A) IQ [2]-8;
+
+Navigation/TL10 (Land) (A) IQ+3 [2]-11‡; Research/TL10 (A)
+IQ+3 [12]-11.
+
+Additional Software
+Mugshot (Complexity 4); 2D Social Telepresence (Complexity 3); Basic VR (Complexity 3); Custom Virtual Avatar
+(For Mike); Off-the-Shelf Virtual Avatar (For Grade); Skill Set:
+Broken Latvian, Spoken and Written (2 points; Complexity 3);
+Skill Set: Broken Lithuanian, Spoken and Written (2 points;
+Complexity 3); Skill Set: Broken Polish, Spoken and Written (2
+points; Complexity 3); Skill Set: Area Knowledge (Königsberg
+Oblast) at IQ+1 (2 points; Complexity 3).
+* From Wearable Virtual Interface template.
+† From NAI-4 template.
+‡ Includes +3 for built-in Absolute Direction (which
+depends on a GPS signal).
+
+DAVE SHECKLEY
+You’re in Kaliningrad, the main city of the Königsberg
+enclave, because Mum’s job brings her here. Unlike the parents
+of a lot of the kids at the English School, though, she isn’t some
+kind of big-money business consultant. Like she says, her job
+is more important than that. She works for the Genetic
+Regulatory Agency, which has a big office here. She helps track
+down rogue gene-hackers and bioterrorists and people who
+make kinky botched bioroids. It keeps her busy, but the way
+she explains it, it’s a job that someone has to do.
+Not that you have to buy everything that Mum and her colleagues say, of course – some of the stuff that gets in the news
+about the GRA slowing down medical research is bad for the
+look of the thing. Even Mum admits that one or two of the people she works with made some funny remarks when they heard
+that she’d bought you some defensive nanosymbionts and a
+liver upgrade biomod. But like Mum says, those are proven
+technologies, all very stable and safe. It’s not like dumping
+experimental smart-sharks in the Pacific, or making bioroid
+slaves, or rebuilding the genes for the human brain into something 10% faster and 50% crazier. What you’ve got is protection
+against bad biotech and nanotech.
+With Mum and Dad having split up years ago, and the so-so
+pay of the GRA, your house only has a little automation.
+(Besides, Mum isn’t that keen on more self-aware AI.) You’ve
+learned to look after yourself and the house without much programmed help.
+You’ve done decently at school, which has been online a lot
+of the time. A couple of years back, though, Mum decided that
+you needed more experience of people your own age, and
+signed you up for the English School.
+
+I think I know what sort of people we’re dealing with here. Bunch of
+low-end data crackers, pulling black soft off the TSA Web.
+– Mike Harris
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+16
+
+I’ve heard that there’s a lot of weird stuff happening in places like that.
+Charlie, pull all Mum’s reports for the last six weeks that reference
+Romania in the summaries off the home server.
+– Dave Sheckley
+Your mother gave you Charlie, your infomorph assistant,
+around then. He’s a low-end nonsapient AI installed in a
+“cyberdog” shell. Mum tells you never to forget that he’s just
+a machine, but he is a pretty versatile machine. People say
+that mothers worry about their kids going out alone, and
+Charlie is presumably Mum’s way of protecting you. Even so,
+he’s a cool thing to have, really, though his software is basic.
+Mum also paid for you to have an implant radio, mostly so you
+can keep in touch with Charlie.
+
+Playing Dave
+You’re stuck with being the kid of this group, and you can’t
+forget this, although you’ve learned to live with it. However,
+you’re not stupid, and you have a definite sense of right and
+wrong, which you don’t try to hide.
+The fact is, you don’t try to hide much. Some people find your
+brashness annoying, although others accept you for what you
+are. You certainly don’t set out to bother anyone. Indeed, you
+often try hard to help. Your impulsiveness is a large part of your
+personality; unfortunately, it can lead you into situations which
+will leave you shaken. Still, you have the robustness of youth.
+In addition to the equipment and software listed below, you
+have easy access to about $400 cash.
+
+Dave Sheckley
+75 points
+Sharp-featured and eager-to-please 14-year-old, usually
+plainly dressed and accompanied by what appears to be a large
+but unremarkable dog.
+ST 8 [-20]; DX 10 [0]; IQ 11 [20]; HT 11
+[10].
+Damage 1d-3/1d-2; BL 13 lbs.; HP 8 [0];
+Will 11 [0]; Per 12 [5]; FP 11 [0].
+Basic Speed 5.25 [0]; Basic Move 5 [0];
+Dodge 8; Parry 8 (unarmed).
+5’3”; 120 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0];
+German (Broken) [2]; Russian (Broken)
+[2].
+
+Advantages
+Ally (Cyberdog NAI Companion; Built on 200%; Constantly
+Available; Minion, +0%) [60]; Genefixed Human, post-2050 [0];
+Patron (Mother; Powerful Individual; 12 or less) [20]; Resistant
+
+to Disease +8 (Immune Machine Nanosymbionts) [5]; Resistant to Ingested Poison +8 (Liver Upgrade Biomod) [5]; Resistant to Nanomachines +8 (Guardian Nanosymbionts) [2];
+Status 1 [5]; Telecommunication (Implant Communicator;
+Radio; Reduced Range ¥1/10, -30%; Temporary Disadvantage,
+Electrical, -20%) [5].
+Perks: Alcohol Tolerance (Liver Upgrade Biomod). [1]
+
+Disadvantages
+Easy to Read [-10]; Honesty (15) [-5]; Impulsiveness (15)
+[-5]; Pacifism (Reluctant Killer) [-5]; Poor [-15]; Post-Combat
+Shakes (12) [-5]; Social Stigma (Minor) [-5].
+Quirks: Brash and naïve; Preservationist true believer. [-2]
+
+Skills
+Cooking (A) IQ [2]-11; First Aid/TL10 (Human) (E) IQ+1
+[2]-12; Housekeeping (E) IQ [1]-11.
+
+Dave’s Views of the Others
+You sometimes feel overwhelmed by the other people at the
+school, though some of them aren’t so bad when you get to
+know them. Like that joke says, though, it’s getting to know
+them that’s difficult. They’re kind of mixed, and not always
+friendly – and some of them have been a bit snarky about
+Mum’s job.
+To start with, Catherine Moltby is one of those people who
+think that they’re cool because their parents are rich; she
+stands off from everyone. She’s all skinny and well-dressed,
+with a cybernetic Medusa hairstyle. All she
+thinks about is music and VR art and stuff.
+She’s had one of the minor genetic upgrades,
+which is supposed to make her guaranteed
+sane – not that you’re sure it worked.
+Denise Walsh is less cocky, so far as you can
+see, but she’s full of odd ideas. She’s got two
+mothers but no father – they had their genetics combined in a lab, and then added one of
+the more fancy upgrades that’s supposed to
+make her smart and healthy. It’s nothing
+Mum’s office would have to worry about, but
+it sounds pretty bizarre to you, without any
+stability guarantee. Denise does seem to be
+quite bright, admittedly, and acts all “artistic,”
+forever pointing a high-end camera at things.
+Mike Harris is a pretty straightforward guy
+compared to those two, and you rather like
+him. His dad’s an ex-cop and sounds like a nice
+bloke. Mike knows the city better than anyone else you know –
+he’s worth talking to and hanging out with.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+17
+
+That’s more than you can say about Ian
+Chakrabarti, who’s another genetic
+upgrade and almost as bad about it as
+Catherine – dead pushy, though he insists
+that the tweaks don’t affect his brain. (He’s
+quite loud about that, especially if anyone
+hints that’s where his good marks come
+from.) At least he tries to be reasonable
+and to talk to people, even if he keeps suggesting competitions and stuff and getting
+sulky if he loses.
+
+Complexity 4); Skill Set: Accented Polish,
+Spoken and Written (4 points; Complexity
+4); Skill Set: Accented Russian, Spoken
+and Written (4 points; Complexity 4); Skill
+Set: Area Knowledge (Kaliningrad) at
+IQ+2 (4 points; Complexity 4); Skill Set:
+Law (Königsberg Police) at IQ (4 points;
+Complexity 4).
+* From Cyberdog template (see ShellTech, pp. 12-13).
+† From NAI-4 template.
+
+DAVE’S AI
+“Charlie” is installed in an effective
+cybershell, albeit with the limitations of its
+shape – and being nonsapient, the controlling AI has even more limitations.
+Although that AI is Complexity 4, its shell
+has a Complexity 5 processor, potentially enabling it to run
+some powerful software. The shell resembles some kind of
+dark-brown Labrador; its virtual avatar is simply a representation of its physical body.
+Should the PCs become involved in any sort of violence,
+check the full set of advantages included in the Cyberdog
+template (Claws, Teeth, Enhanced Move, DR, etc.). Its
+“pseudo-canine” senses may also be useful in all sorts of
+investigations.
+
+Charlie
+150 points
+ST 10 [0]; DX 12 [0]*; IQ 8 [0]†; HT 12 [0]*.
+Damage 1d-2/1d; BL 20 lbs.; HP 8 [0]*; Will 8 [0]; Per 8 [0]; FP
+N/A.
+Basic Speed 6.00 [0]; Basic Move 6 [0]; Dodge 10; Parry N/A.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0].
+
+Advantages
+Cyberdog [95]; Modular Abilities 2 (Computer Brain: 4, 4)
+(Limited Integration, -20%; Skills and Languages Only, -10%)
+[31]; NAI-4 [29].
+
+Disadvantages
+Duty (To owner; 15 or less) [-15].
+
+Skills
+Area Knowledge (Kaliningrad) (E) IQ+1 [2]-9; Computer
+Operation/TL10 (E) IQ+3 [0]-11†; Research/TL10 (A) IQ+2
+[8]-10.
+
+Additional Software
+Mugshot (Complexity 4); Skill Set: Accented French, Spoken and Written (4 points; Complexity 4); Skill Set: Accented
+German, Spoken and Written (4 points; Complexity 4);
+Skill Set: Accented Lithuanian, Spoken and Written (4 points;
+
+IAN CHAKRABARTI
+You’ve been lucky in your life so far –
+no denying it. Your parents – both consultants working for the E.U. – could
+afford to get you an Ishtar genetic
+upgrade, which makes you deft, healthy, and
+self-confident, with small but useful details like a good voice.
+(You’ve seen comments about the Ishtar sequences producing
+“arrogance,” but that’s just an apathetic person’s word for
+motivation.) They also made sure that you had an education
+to match – mostly using teaching software, of course, but not
+solely. In fact, you’ve come to understand that computers are
+best kept slightly at arm’s length. You know how to use them,
+of course, but you employ household and school systems,
+rather than letting a wearable or an implant control your life
+like some people.
+All this growing up hasn’t been too badly disrupted since
+Mum was asked to handle on-the-ground memetics assessment for E.U. diplomatic dealings with the free city of
+Kaliningrad-Königsberg, and Dad swung some adjustments to
+his own contract that allowed him to come with her (and bring
+you), but they did decide that you should get some “socialization” by sending you to the local English-language school. That
+has been kind of . . . interesting.
+Your surroundings haven’t influenced you too much, you
+think, but changes do group together. You always want to do
+well, naturally, and you’d previously spent a while learning
+your way around competitive gymnastics. However, that
+wasn’t proving a profitable use of your time, and the move
+gave you a chance to drop out of the sport. These days, you’re
+thinking about a career of your own in memetics, or perhaps
+politics. You’ve been doing some reading, finding out about
+the original infosocialist theories that supposedly lie behind
+the thuggish “nanosocialist” regimes of the Trans-Pacific
+Socialist Alliance. You’ve been surprised to discover that Kyle
+Porters, the founder of that field, may have been onto something. Treating ideas like physical property is no way to run a
+society, or an economy. Proper infosocialism may indeed be
+the way of the future. Not that infosocialism is any route to
+success in European politics, thanks to the TSA. Oh well – at
+least you can master the basic tools of the political trade –
+public speaking, for instance.
+
+Playing Ian
+You’d like to think of yourself as leadership material –
+not that this is anything to do with “Ishtar arrogance.”
+You have a strong sense of loyalty to those near you.
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+18
+
+Loyalty is the basis of ethics, so far as you can see. (Your parents explained this to you originally, but as a hypothetical idea;
+your practical grasp of the principle is entirely your own.) You
+don’t actually like rubbing people up the wrong way, even if
+they do naturally dislike being outcompeted.
+You really, honestly don’t see yourself as arrogant – so you
+say, anyway. Something may eventually chip away at your deepseated self-confidence, but it certainly hasn’t happened yet.
+You demonstrably are smart and good at most things you try.
+You quite enjoy demonstrating the fact, often by suggesting
+tests or contests. Maybe you need to work on learning from the
+times you lose, though. You don’t think of your normal reaction
+as sulking – just withdrawing to assess what happened.
+Your age-band at the school consists of the people against
+whom you measure yourself, and who are best placed to assess
+you. That ensures that you feel some concern for them, even
+when they don’t fully appreciate you. If they feel condescended
+to, that’s not your worry.
+In addition to the equipment and software listed below, you
+have easy access to about $2,900 cash.
+
+Ian Chakrabarti
+75 points
+A strikingly handsome, moderately athletic 15-year-old
+Ishtar Upgrade (with the standard Ishtar “elfin” looks), well
+but conventionally dressed.
+ST 8 [-10]*; DX 12 [20]*; IQ 11 [20]; HT 11 [0]*.
+Damage 1d-3/1d-2; BL 13 lbs.; HP 8 [0]; Will 10 [-5]; Per 11 [0];
+FP 11 [0].
+Basic Speed 6.00 [5]; Basic Move 6 [0]; Dodge 9; Parry 9.
+5’6”; 125 lbs.
+
+Social Background
+TL: 10 [0].
+CF: Western (Native) [0].
+Languages: English (Native) [0]; French (Native) [6];
+German (Accented) [4].
+
+Advantages
+Ishtar Upgrade [33]; Patron (Currently Available Parent;
+Powerful Individual; 9 or less) [10]; Status 1 [5].
+
+Disadvantages
+Odious Personal Habit (Competitive) [0]*; Pacifism
+(Reluctant Killer) [-5]; Selfish (9) [-2]*; Sense of Duty (Friends
+and family) [-5]; Social Stigma (Minor) [-5]; Struggling [-10].
+Quirks: Delusion (“I’m too smart to be manipulated by my
+parents or the memetics experts; my Sense of Duty is my own
+
+idea!”); Describes himself loudly as an infosocialist but not a
+nanosocialist; Personality Change (Gains Bad Temper when
+physically exhausted); Regards use of personal AI assistants
+with ironic amusement. [-4]
+
+Skills
+Acrobatics (H) DX [4]-12; Computer Operation/TL10 (E)
+IQ+2 [4]-13; Connoisseur (Music) (A) IQ-1 [1]-10; Current
+Affairs/TL10 (Politics) (E) IQ [1]-11; Games (Competitive
+Gymnastics Rules) (E) IQ [1]-11; History (21st-Century
+Political) (H) IQ-1 [2]-10; Literature (H) IQ-2 [1]-9; Public
+Speaking (Debate) (E) IQ+3 [2]-14†; Savoir-Faire (High
+Society) (E) IQ [1]-11; Sociology (H) IQ-2 [1]-9.
+* From Ishtar Upgrade template, which includes Odious
+Personal Habit (Competitive) [-5] and Selfish (12) [-5].
+† Includes +2 from Voice.
+
+Equipment
+As he doesn’t have a wearable computer, Ian usually carries
+a medium-range communicator – a palm-sized radio/phone
+with a built-in video screen and a 25-mile range.
+
+Ian’s Views of the Others
+Your sense of duty toward your classmates is serious, but
+you have to admit to yourself, some of them make things more
+complicated than others. Catherine Moltby at least isn’t any sort
+of serious problem, though anyone who wanders around with
+one AI inside her own head and the other one acting as her
+hairstyle is obviously missing something. Still, she’s quite polite
+to you, in her way.
+Conversely, Denise Walsh is smart – she’s a Metanoia
+genetic upgrade, and that lot are built for brains – but you
+really think that’s all she is. Metanoias tend to focus on something, and with her it’s either art or math (which seems a bit
+indecisive). She’s always on about her latest “creative” idea.
+That means that she’s no problem to you when it matters. Let
+her rack up scores in that stuff; it doesn’t impress the people
+who count.
+Mike Harris pulls off a slightly annoying pose of maturity.
+He’s academically unremarkable, but his air of pseudo-adulthood sometimes impresses the gullible – including some of the
+others in the age group. Still, your best chance might be to
+bring him onto your side.
+The same goes for Dave Sheckley, in a sense – though he’s
+more of a natural follower. His memetics are all screwed up –
+he’s picked up a Preservationist complex from his mother – but
+with a bit of effort, he might turn out useful. If he doesn’t drive
+you up the wall first.
+
+Look, I gave you a start, and you still only just won, so don’t get
+cocky about it. Anyway, we’re here now – so why don’t you check out the
+radio reception while I look for signs of life?
+– Ian Chakrabarti
+
+THE FIFTH WAVE SCHOOL CAMPAIGN
+
+19
+
+INDEX
+AI Allies and Duty, 12.
+Ally advantage, 12.
+“Blackmail Is a Dirty Word”
+scenario seed, 9-10.
+Chakrabarti, Ian, 18-19; views by
+others, 12, 14, 16, 18.
+Charlie, 18.
+Credibility complications, 6.
+Duty disadvantage, 12.
+Equipment of PCs, 7.
+European Union, 4, 5, 7.
+“Field Trip” scenario, 7.
+Genetic Regulatory Agency
+(GRA), 4, 5, 9, 13, 16.
+Grade, 16.
+
+GURPS, 3, 6; Bio-Tech, 6;
+Mysteries, 6; Ultra-Tech, 6.
+Harris, Mike, 14-16; views by
+others, 12, 14, 17, 19.
+Infosocialism, 18.
+Isaac, 14.
+Islandia, 13.
+JUVE, 15.
+K-10A dogs, 8.
+Kaliningrad, 4-5.
+Kids as PCs, 4.
+Königsberg-Kaliningrad, 4-5.
+Medusa “Hairstyle” cybershell,
+12-13.
+
+Moltby, Catherine, 10-12; views
+by others, 14, 15, 17, 19.
+Motion sickness, 8.
+Nanosocialism, 18.
+“New Kid in Town” scenario
+seed, 10.
+“Personal Delivery” scenario
+seed, 10.
+Porters, Kyle, 18.
+Przenskala, 8, 9.
+References for campaigns, 6.
+Research and monitoring station
+near Baltiysk, 7, 8.
+Running the campaign, 5-10.
+Russia, 4, 5, 7.
+
+Scenario, sample, 7-9; seeds, 9-10.
+Sheckley, Dave, 16-18; views by
+others, 12, 14, 16, 19 .
+Simmons, Dr., 7.
+Spot, 12.
+Status of PCs, 7.
+Student PCs, 10-19.
+Transhuman Space, 3, 4, 6;
+Changing Times, 3, 8;
+Shell-Tech, 3, 13, 18.
+VICTOR-2, 7-9.
+Violence in campaigns, 5.
+Walsh, Denise, 13-14; views by
+others, 11, 15, 17, 18.
+Wealth of PCs, 7.
+
+STUCK FOR AN ADVENTURE?
+NO PROBLEM.
+e23 sells high-quality game adventures
+and supplements in PDF format.
+
+● Get complete sample adventures free for GURPS, In Nomine, and Traveller!
+● PDFs from the major players in online publishing: Ronin Arts, Ken Hite,
+Atlas Games, and 01 Games.
+● New gems from up-and-coming publishers, like Atomic Sock Monkey Press
+and Expeditious Retreat Press.
+● Digital editions of out-of-print classics, from Orcslayer and the complete
+run of ADQ to GURPS China and GURPS Ice Age.
+● Fully searchable files of GURPS Fourth Edition supplements.
+● Original material for Transhuman Space and In Nomine, with new GURPS
+supplements from Sean Punch, William Stoddard, David Pulver, and Phil Masters!
+● Buy it once, have it always. Download your purchases again whenever you need to.
+
+STEVE JACKSON GAMES
+
+e23.sjgames.com
+
+Download ● Print ● Play
+
+STEVE JACKSON GAMES
+e23 is part of Warehouse 23, the online store at Steve Jackson Games. Warehouse 23 is also the official Internet retailer for
+Dork Storm Press, Atlas Games, and many other publishers. Visit us today at www.warehouse23.com for all your game STUFF!
+
+INDEX
+
+20
+
