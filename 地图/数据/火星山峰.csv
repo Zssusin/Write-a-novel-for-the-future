@@ -1,0 +1,13 @@
+﻿山,IAU中心纬度,IAU中心东经,峰顶纬度,峰顶东经,峰顶MOLA高程_m,基底直径_km,SpaceEngine
+Olympus Mons,18.653,226.198,17.340,226.551,21201,610.12,GoTo { Lat 17.340 Lon -133.449 HeightKm 0 }
+Ascraeus Mons,11.922,255.919,11.715,255.426,18222,456.39,GoTo { Lat 11.715 Lon -104.574 HeightKm 0 }
+Arsia Mons,-8.257,239.907,-8.848,238.582,17758,470.00,GoTo { Lat -8.848 Lon -121.418 HeightKm 0 }
+Pavonis Mons,1.480,247.038,0.012,246.949,14052,366.52,GoTo { Lat 0.012 Lon -113.051 HeightKm 0 }
+Elysium Mons,25.023,147.214,24.738,146.676,14023,401.00,GoTo { Lat 24.738 Lon 146.676 HeightKm 0 }
+Alba Mons,41.082,249.291,40.410,248.449,6832,548.02,GoTo { Lat 40.410 Lon -111.551 HeightKm 0 }
+Uranius Mons,26.898,267.850,25.988,266.254,4938,265.17,GoTo { Lat 25.988 Lon -93.746 HeightKm 0 }
+Ceraunius Tholus,24.002,262.749,23.973,263.145,8660,128.57,GoTo { Lat 23.973 Lon -96.855 HeightKm 0 }
+Hecates Tholus,32.120,150.244,31.809,150.121,4835,181.57,GoTo { Lat 31.809 Lon 150.121 HeightKm 0 }
+Albor Tholus,18.867,150.466,18.645,150.121,3923,158.37,GoTo { Lat 18.645 Lon 150.121 HeightKm 0 }
+Tharsis Tholus,13.254,269.307,13.512,268.668,8961,149.30,GoTo { Lat 13.512 Lon -91.332 HeightKm 0 }
+Apollinaris Mons,-9.171,174.793,-9.066,173.605,3234,275.39,GoTo { Lat -9.066 Lon 173.605 HeightKm 0 }

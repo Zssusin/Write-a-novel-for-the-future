@@ -1,11 +1,14 @@
 # Large binary models / raw GIS data
 *.pdf
-DEM/
 *.tif
 *.npy
+地图/DEM/
+地图/数据/**/*.zip
 
-# Environment and builds
-.venv/
+# Local environment, retired versions
+地图/.venv/
+地图/bin/
+地图/旧版_HUD/
 __pycache__/
 node_modules/
 .DS_Store
