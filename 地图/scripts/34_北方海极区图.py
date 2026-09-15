@@ -26,6 +26,7 @@ SS, PAD = 3, 10                      # 底图超采样倍数；底图比图框�
 P = Azimuthal(90, LON_BOTTOM, CX, CY, RM/(2*M.R/1e3*math.sin(math.radians(90-LAT_EDGE)/2)))
 SW, SH = 1848, int(CY + RM + 96)
 S = SVG(SW, SH, "北方海极区图 · 2100 年 3 月")
+S.layer("底图"); S.layer("土地利用")
 RISE = 200
 
 Z = M.load_masks()
@@ -71,9 +72,10 @@ def grab(mask32):
     return ndimage.binary_dilation(m, np.ones((5, 5), bool)) & (dem < LV + (RISE if mask32 is fut32 else 0)) & ok
 sea = grab(sea32)
 fut = grab(fut32) & ~sea
+alb = M.albedo_at(lon, lat)
 del lon, lat
 px_m = 1000/(P.scale*SS)
-rgb = M.colorize(dem, M.shade(dem, px_m, px_m, zfac=4.0), [sea], [LV])
+rgb = M.colorize(dem, M.shade(dem, px_m, px_m, zfac=4.0), [sea], [LV], albedo=alb)
 rgb[~ok] = 255
 S.add("底图", f'<clipPath id="clipMap"><circle cx="{CX}" cy="{CY}" r="{RM}"/></clipPath>')
 S.add("底图", f'<image x="{OX}" y="{OY}" width="{2*RM+2*PAD}" height="{2*RM+2*PAD}" preserveAspectRatio="none" '
@@ -81,6 +83,7 @@ S.add("底图", f'<image x="{OX}" y="{OY}" width="{2*RM+2*PAD}" height="{2*RM+2*
 del rgb
 
 TF = Affine(1/SS, 0, OX, 0, 1/SS, OY)
+print("  土地利用", M.landuse_svg(S, "土地利用", P, "clipMap", lambda lo, la: la >= LAT_EDGE, classes=("草场",)), "块")
 to_xy = lambda r, c: (OX + (c + 0.5)/SS, OY + (r + 0.5)/SS)
 
 # 再涨 200 m 的淹没带：蓝色细斜线
@@ -282,7 +285,7 @@ LY = 176
 S.text("图例", LX, LY, "图例", 11.5, "cjk_b", weight="bold")
 items = [("cn", "锈色中国"), ("us", "火星联邦（美）"), ("corp", "企业城邦"), ("other", "独立 / 其他"),
          ("major", "主要城市"), ("peak", "山峰（MOLA 峰顶高程）"), ("coast", "海岸线（−3,700 m）"),
-         ("iso", "等深线（间隔 1,000 m）"), ("rise", f"海面再涨 {RISE} m 将淹没"), ("star", "☆ 仅见于正典地图")]
+         ("iso", "等深线（间隔 1,000 m）"), ("rise", f"海面再涨 {RISE} m 将淹没"), ("veg", "草场 / 已绿化带（沿水推算）"), ("star", "☆ 仅见于正典地图")]
 for i, (k, t_) in enumerate(items):
     col, row = i % 2, i // 2
     x = LX + col*200; y = LY + 26 + row*21
@@ -292,9 +295,10 @@ for i, (k, t_) in enumerate(items):
     elif k == "coast": S.add("图例", f'<path d="M{x:.1f},{y-3.5:.1f} h18" stroke="{C["coast"]}" stroke-width="0.9"/>')
     elif k == "iso": S.add("图例", f'<path d="M{x:.1f},{y-3.5:.1f} h18" stroke="{C["coast"]}" stroke-width="0.45" opacity="0.7"/>')
     elif k == "rise": S.add("图例", f'<rect x="{x:.1f}" y="{y-9:.1f}" width="18" height="11" fill="url(#rise)" stroke="{C["coast"]}" stroke-width="0.4"/>')
+    elif k in ("crop", "veg", "aqua"): M.landuse_legend(S, "图例", x, y, {"crop": "农田", "veg": "草场", "aqua": "水产"}[k])
     S.text("图例", x+(26 if k != "star" else 0), y, t_, 9, "cjk")
 
-y0 = LY + 26 + 5*21 + 22
+y0 = LY + 26 + 6*21 + 22
 S.text("图例", LX, y0, "北方海数据", 11.5, "cjk_b", weight="bold")
 rows = [("水面高程", "−3,700 m（火星大地水准面起算）"),
         ("面积", f"{STATS['area']/1e4:,.0f} 万 km²  ≈ 北美洲，地中海的 10 倍"),
@@ -352,7 +356,7 @@ notes = ["· 北方海绕北极整整一圈，中间的北极冰盖是岛。正�
 y4 = M.note_lines(S, "图例", LX, y3 + 20, notes)
 M.index_map(S, "图例", LX, y4 + 26, 300, "北方海极区图")
 
-S.text("出处", 84, SH-24, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接），重采样到 32 px/度；晕渲光源方位 315°、高度 40°。"
+S.text("出处", 84, SH-24, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接），重采样到 32 px/度；多向晕渲（四光源 225–360°）× 天空可见度；陆地色调：MGS TES 反照率（USGS 7.4 km 拼接）。"
        "地貌名：IAU 行星地名库。城镇：GURPS Transhuman Space《In The Well》，位置按正典给出的地理关系在真实地形上重新确定。水位为推算值，见《火星坐标对照表》第 7 节。",
        7.0, "cjk", fill=C["ink3"])
 

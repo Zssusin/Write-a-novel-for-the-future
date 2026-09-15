@@ -28,6 +28,7 @@ IPPD = 46.0
 INSET = Equirect(ILON0, ILON1, ILAT0, ILAT1, X0, Y0 + MAIN.h + 96, IPPD)
 SH = int(INSET.y0 + INSET.h + 58)
 S = SVG(SW, SH, "水手峡谷战区图 · 2100 年 3 月")
+S.layer("底图"); S.layer("土地利用")                               # 图层顺序：土地利用压在晕渲上、海岸线下
 
 Z = M.load_masks()
 LV = {"borealis": int(Z["level_borealis"]), "marineris_ius": int(Z["level_ius"]),
@@ -40,7 +41,7 @@ def panel(proj, ppd_hr, scale, clip_id, coast_w):
     """一个地图面：晕渲底图 + 矢量海岸线。返回细化后的水体掩膜（给注记避让参考）。"""
     dem = M.read_dem_window(proj.lon0, proj.lon1, proj.lat0, proj.lat1, ppd_hr)
     masks = {k: M.refine_water(Z[k], LV[k], dem, ppd_hr, proj.lon0, proj.lat0) for k in LV}
-    rgb = M.relief_rgb(dem, list(masks.values()), list(LV.values()), ppd_hr, lat_top=proj.lat0)
+    rgb = M.relief_rgb(dem, list(masks.values()), list(LV.values()), ppd_hr, lat_top=proj.lat0, lon_left=proj.lon0)
     img = Image.fromarray(rgb).resize((int(proj.w*scale), int(proj.h*scale)), Image.LANCZOS)
     S.add("底图", f'<clipPath id="{clip_id}"><rect x="{proj.x0}" y="{proj.y0}" width="{proj.w:.1f}" height="{proj.h:.1f}"/></clipPath>')
     S.add("底图", f'<image x="{proj.x0}" y="{proj.y0}" width="{proj.w:.1f}" height="{proj.h:.1f}" preserveAspectRatio="none" '
@@ -94,6 +95,9 @@ def dam(proj, r, L, label=True):
 
 rail(MAIN, "clipMain")
 canal(MAIN, 1.1)
+# 土地利用层在这张图上不画（用户 2026-09-14：平地上按汇流算出的河道太直，绿带显得生硬）。要开：LANDUSE = ("草场",)
+LANDUSE = ()
+if LANDUSE: print("  土地利用", M.landuse_svg(S, "土地利用", MAIN, "clipMain", MAIN.inside, classes=LANDUSE), "块")
 
 # 先把所有符号的位置占住，注记不许压符号
 POINT_CATS = {"城市", "城镇", "遗址", "军事"}
@@ -128,14 +132,18 @@ def label2(layer, x, y, zh, en, zh_size, en_size, fill, spacing=2.5, anchor="mid
         placer.block(bx, y-zh_size-pad, bx+w, y+hgt-zh_size+pad+2)
 
 WATER_FILL, TERR_FILL = C["water_label"], "#707070"
-WATER = [("水手峡谷海", "MARINERIS SEA", 298.2, -13.35, 13, 7.5, 11.0),
-         ("坎多尔湖", "LAKE CANDOR", 290.9, -4.1, 10, 6.8, 0),
+WATER = [("坎多尔湖", "LAKE CANDOR", 290.9, -4.1, 10, 6.8, 0),
          ("伊乌斯段", "", 278.6, -9.95, 8.5, 0, 0),
          ("克律塞湾南支", "BOREALIS SEA · CHRYSE GULF", 327.8, -3.2, 10.5, 6.8, 0),
          ("Mutch 陨坑湖", "", 304.8, 3.1, 8.5, 0, 0),
          ("赫柏湖", "", 284.1, 0.9, 8, 0, 0)]
 for zh, en, lo, la, zs, es, rot in WATER:
     x, y = MAIN.xy(lo, la); label2("水体注记", x, y, zh, en, zs, es, WATER_FILL, spacing=3 if zs >= 10 else 1.5, rotate=rot)
+# 水手峡谷海：沿峡谷轴线弯着排（轴线 = 各经度上水面的平均纬度，从掩膜量出）
+SEA_AXIS = [(290.0, -10.4), (294.0, -11.7), (298.0, -13.1), (302.0, -14.1), (306.0, -14.8), (310.0, -14.4)]
+axis = M.path_lonlat(MAIN, SEA_AXIS)
+M.text_along(S, "水体注记", axis, "水手峡谷海", 13, "cjk", fill=WATER_FILL, spacing=3, halo=2.4, placer=placer)
+M.text_along(S, "水体注记", axis, "MARINERIS SEA", 7.5, "lat_i", fill=WATER_FILL, spacing=0.9, halo=2.0, italic=True, offset=10.5, placer=placer)
 TERR = [("诺克提斯迷宫", "NOCTIS LABYRINTHUS", 257.5, -4.2), ("叙利亚高原", "SYRIA PLANUM", 259.5, -15.6),
         ("西奈高原", "SINAI PLANUM", 273.0, -15.2), ("月神高原", "LUNAE PLANUM", 293.0, 2.4),
         ("俄斐高原", "OPHIR PLANUM", 297.5, -8.7), ("曙光高原", "AURORAE PLANUM", 309.0, -12.1),
@@ -195,6 +203,7 @@ if miss: print("  ⚠ 主图没放下的注记：", "、".join(miss))
 # ── 放大图：厄俄斯湖坝区 ─────────────────────────────────────────────
 print("放大图：厄俄斯湖坝区 …")
 panel(INSET, 128, 3, "clipInset", 0.9)
+if LANDUSE: M.landuse_svg(S, "土地利用", INSET, "clipInset", INSET.inside, classes=LANDUSE)
 graticule(INSET, 2, 0.5, 2, size=7.5)
 rail(INSET, "clipInset")
 S.text("图框标注", INSET.x0, INSET.y0-24, "厄俄斯湖坝区放大图", 11.5, "cjk_b", weight="bold")
@@ -242,7 +251,7 @@ LX, LY = INSET.x0 + INSET.w + 70, INSET.y0 - 4
 S.text("图例", LX, LY, "图例", 11.5, "cjk_b", weight="bold")
 items = [("cn", "锈色中国城镇"), ("us", "火星联邦（美）城镇"), ("corp", "企业城邦"), ("other", "独立 / 其他"),
          ("major", "主要城市"), ("dam", "闸 / 坝（军事目标）"), ("canal", "越岭运河"), ("rail", "赤道铁路及支线"),
-         ("station", "车站"), ("peak", "山峰"), ("star", "☆ 仅见于正典地图")]
+         ("station", "车站"), ("peak", "山峰")] + ([("veg", "草场 / 已绿化带")] if LANDUSE else []) + [("star", "☆ 仅见于正典地图")]
 for i, (k, t) in enumerate(items):
     col, row = i % 2, i // 2
     x = LX + col*190; y = LY + 24 + row*21
@@ -253,6 +262,7 @@ for i, (k, t) in enumerate(items):
     elif k == "rail": S.add("图例", M.rail_svg([(x-1, y-3.5), (x+19, y-3.5)], "干线"))
     elif k == "station": S.add("图例", f'<rect x="{x+5.8:.1f}" y="{y-5.7:.1f}" width="4.4" height="4.4" fill="#FFFFFF" stroke="{C["ink"]}" stroke-width="0.9"/>')
     elif k == "peak": S.add("图例", f'<path d="M{x+8:.1f},{y-7.1:.1f} L{x+11.4:.1f},{y-1.1:.1f} L{x+4.6:.1f},{y-1.1:.1f} Z" fill="{C["ink"]}"/>')
+    elif k in ("crop", "veg", "aqua"): M.landuse_legend(S, "图例", x, y, {"crop": "农田", "veg": "草场", "aqua": "水产"}[k])
     S.text("图例", x+(26 if k != "star" else 0), y, t, 9, "cjk")
 ly = LY
 LX2 = LX + 420
@@ -291,7 +301,7 @@ S.text("图例", SBX + 500/kpu, SBY+23, "500 km", 7.2, "lat", anchor="middle")
 
 # 出处
 NY = INSET.y0 + INSET.h + 26
-for i, t in enumerate(["底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；晕渲光源方位 315°、高度 40°。"
+for i, t in enumerate(["底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；多向晕渲（四光源 225–360°）× 天空可见度；陆地色调：MGS TES 反照率（USGS 7.4 km 拼接）。"
                        "地貌名：IAU 行星地名库。城镇、工程与铁路：GURPS Transhuman Space《In The Well》，位置按正典给出的地理关系在真实地形上重新确定。",
                        ""]):
     S.text("出处", X0, NY + i*12, t, 7.2, "cjk", fill=C["ink3"])

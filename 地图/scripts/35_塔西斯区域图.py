@@ -24,6 +24,7 @@ P = Mercator(LON0, LON1, LAT0, LAT1, X0, Y0, PPD)
 LX = int(X0 + P.w + 58)
 SW, SH = 1848, int(Y0 + P.h + 62)
 S = SVG(SW, SH, "塔西斯区域地形图 · 2100 年 3 月")
+S.layer("底图"); S.layer("土地利用")
 BREATH = 5*1609.344                            # 正典：海拔 5 英里以上无法呼吸
 BREATH_C = "#7B3F98"
 CONTOUR_STEP, INDEX_STEP = 1000, 5000
@@ -40,7 +41,7 @@ clip = f'clip-path="url(#clipMap)"'
 print("读 DEM、晕渲 …")
 dem = M.read_dem_window(LON0, LON1, LAT0, LAT1, HR)
 masks = {k: M.refine_water(Z[k], LV[k], dem, HR, LON0, LAT0) for k in LV}
-rgb = M.relief_rgb(dem, list(masks.values()), list(LV.values()), HR, lat_top=LAT0, zfac=2.6)
+rgb = M.relief_rgb(dem, list(masks.values()), list(LV.values()), HR, lat_top=LAT0, zfac=2.6, lon_left=LON0)
 W3, H3 = int(round(P.w*SS)), int(round(P.h*SS))
 img = np.asarray(Image.fromarray(rgb).resize((W3, rgb.shape[0]), Image.LANCZOS), np.float32)
 lat = P.lat_of(P.y0 + (np.arange(H3) + 0.5)/SS)
@@ -51,6 +52,7 @@ del img, rgb
 S.add("底图", f'<clipPath id="clipMap"><rect x="{P.x0}" y="{P.y0}" width="{P.w:.1f}" height="{P.h:.1f}"/></clipPath>')
 S.add("底图", f'<image x="{P.x0}" y="{P.y0}" width="{P.w:.1f}" height="{P.h:.1f}" preserveAspectRatio="none" href="{M.png_data_uri(merc, quality=90)}"/>')
 del merc
+print("  土地利用", M.landuse_svg(S, "土地利用", P, "clipMap", P.inside, classes=("草场",)), "块")
 
 # ── 等高线（32 px/度上提取）─────────────────────────────────────────
 print("等高线 …")
@@ -216,7 +218,7 @@ S.text("图例", LX, LY, "图例", 11.5, "cjk_b", weight="bold")
 items = [("cn", "锈色中国"), ("us", "火星联邦（美）"), ("other", "独立 / 沙特 / 其他"), ("corp", "设施"),
          ("major", "主要城市"), ("rail", "赤道铁路及支线"), ("station", "车站"), ("peak", "火山峰顶"),
          ("spot", "山丘顶（高程点）"), ("contour", "等高线 1,000 m"), ("index", "计曲线 5,000 m"),
-         ("breath", "呼吸线 8,047 m"), ("coast", "海岸线（−3,700 m）"), ("star", "☆ 仅见于正典地图")]
+         ("breath", "呼吸线 8,047 m"), ("coast", "海岸线（−3,700 m）"), ("veg", "草场 / 已绿化带（沿水推算）"), ("star", "☆ 仅见于正典地图")]
 for i, (k, t_) in enumerate(items):
     col, row = i % 2, i // 2
     x = LX + col*140; y = LY + 24 + row*19
@@ -230,13 +232,14 @@ for i, (k, t_) in enumerate(items):
     elif k == "index": S.add("图例", f'<path d="M{x},{y-3.5} h18" stroke="{M.CONTOUR}" stroke-width="0.7" opacity="0.8"/>')
     elif k == "breath": S.add("图例", f'<rect x="{x:.1f}" y="{y-9:.1f}" width="18" height="11" fill="url(#thin)" opacity="0.7" stroke="{BREATH_C}" stroke-width="0.9" stroke-dasharray="4 1.8"/>')
     elif k == "coast": S.add("图例", f'<path d="M{x},{y-3.5} h18" stroke="{C["coast"]}" stroke-width="0.9"/>')
+    elif k in ("crop", "veg", "aqua"): M.landuse_legend(S, "图例", x, y, {"crop": "农田", "veg": "草场", "aqua": "水产"}[k])
     S.text("图例", x+(25 if k != "star" else 0), y, t_, 8.6, "cjk")
 
 d_avg = M.load_dem32_avg()
 cell = (math.radians(1/32)*M.R/1e3)**2*np.cos(np.radians(90 - (np.arange(5760) + 0.5)/32))[:, None]
 BREATH_AREA, MARS_AREA = float((cell*(d_avg > BREATH)).sum()), float(cell.sum())*11520
 del d_avg
-yb = LY + 24 + 7*19 + 18
+yb = LY + 24 + 8*19 + 18
 S.text("图例", LX, yb, "呼吸线", 11.5, "cjk_b", weight="bold", fill=BREATH_C)
 for i, t_ in enumerate(["正典：海拔 5 英里（8,047 m）以上气压太低，",
                         "连基因改造的动物和人也无法呼吸（ITW p.34）。",
@@ -271,7 +274,7 @@ notes = [f"· 新上海在帕弗尼斯山顶火山口南缘，{float(ns['MOLA高
 y4 = M.note_lines(S, "图例", LX, yn + 18, notes, size=8.4, lh=14)
 M.index_map(S, "图例", LX, y4 + 30, 270, "塔西斯区域图")
 
-S.text("出处", X0, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；晕渲光源方位 315°、高度 40°；等高线由 32 px/度重采样高程平滑后提取。"
+S.text("出处", X0, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；多向晕渲（四光源 225–360°）× 天空可见度；陆地色调：MGS TES 反照率（USGS 7.4 km 拼接）；等高线由 32 px/度重采样高程平滑后提取。"
        "地貌名：IAU 行星地名库。城镇与铁路：GURPS Transhuman Space《In The Well》，位置按正典给出的地理关系在真实地形上重新确定。",
        7.0, "cjk", fill=C["ink3"])
 

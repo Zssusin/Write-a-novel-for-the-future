@@ -130,7 +130,7 @@ json.dump({"type": "FeatureCollection", "features": feats}, open(M.OUT/"路线_2
 print("底图 …")
 dem = M.read_dem_window(LON0, LON1, LAT0, LAT1, HR)
 masks = {k: M.refine_water(Z[k], LV[k], dem, HR, LON0, LAT0) for k in LV}
-rgb = M.relief_rgb(dem, list(masks.values()), list(LV.values()), HR, lat_top=LAT0, zfac=2.6)
+rgb = M.relief_rgb(dem, list(masks.values()), list(LV.values()), HR, lat_top=LAT0, zfac=2.6, lon_left=LON0)
 W3, H3 = int(round(P.w*SS)), int(round(P.h*SS))
 img = np.asarray(Image.fromarray(rgb).resize((W3, rgb.shape[0]), Image.LANCZOS), np.float32)
 lat = P.lat_of(P.y0 + (np.arange(H3) + 0.5)/SS)
@@ -298,6 +298,10 @@ def leg_label(txt, lat_, lon_, rot=0, size=9.4):
 leg_label(f"第一程 · 冰上 {LEN[0]:,.0f} km（见插图）", 31.6, 313.0, -50, 8.6)
 leg_label(f"第二程 · 河上 {LEN[1]:,.0f} km", 20.2, 292.3, 0)
 leg_label(f"第三程 · 高原 {LEN[2]:,.0f} km", 19.0, 240.0, 0)
+# 河名沿河排：取南通以北、卡塞落差以南那段河道（月神高原西缘，近南北向），字放在河线东侧
+sel = (s >= S_MOUTH + 1650) & (s <= S_MOUTH + 2350)
+river_xy = M.chaikin([tuple(map(float, P.xy(b_, a_))) for a_, b_ in zip(pla[sel][::6], plo[sel][::6])], 3)
+M.text_along(S, "水体注记", river_xy, "回　声　河", 10.5, "cjk", fill=WATER_FILL, spacing=2, halo=2.4, offset=7.5, placer=placer)
 if miss: print("  ⚠ 没放下的注记：", "、".join(miss))
 for _, x, y, br in pts: placer.block(x-br-7, y-br-7, x+br+7, y+br+7)
 print(f"  计曲线注记 {M.label_contours(S, placer, index_lines, every=520)} 处")
@@ -314,7 +318,7 @@ ok &= lat_i >= LAT_EDGE - 1
 dem_i = M.sample_lonlat(D, 32, lon_i, lat_i, order=1).astype(np.float32)
 sea_i = M.sample_lonlat(B, 32, lon_i, lat_i, order=0).astype(bool) & (dem_i < LV["borealis"]) & ok
 px_m = 1000/(A.scale*SSi)
-rgb_i = M.colorize(dem_i, M.shade(dem_i, px_m, px_m, zfac=4.0), [sea_i], [LV["borealis"]]); rgb_i[~ok] = 255
+rgb_i = M.colorize(dem_i, M.shade(dem_i, px_m, px_m, zfac=4.0), [sea_i], [LV["borealis"]], albedo=M.albedo_at(lon_i, lat_i)); rgb_i[~ok] = 255
 S.add("插图", f'<clipPath id="clipIns"><circle cx="{CX}" cy="{CY}" r="{RM}"/></clipPath>')
 S.add("插图", f'<image x="{OX}" y="{OY}" width="{n}" height="{n}" preserveAspectRatio="none" clip-path="url(#clipIns)" href="{M.png_data_uri(rgb_i, quality=88)}"/>')
 rings = M.mask_rings(sea_i, SSi, min_px=40, simplify=0.4, smooth=2, transform=Affine(1/SSi, 0, OX, 0, 1/SSi, OY))
@@ -469,7 +473,7 @@ RX = SW - 48
 S.text("图名", RX, 46, "主图墨卡托投影，204–326°E × 6°S–38°N  ·  火星 2000 参考球  R = 3,396.19 km", 8.2, "cjk", fill=C["ink2"], anchor="end")
 S.text("图名", RX, 60, "路线在 MOLA 地形上算出：海路为水面掩膜上的最短路，河为沿谷底的最低路径，高原为坡度最省力路径（高程封顶 3,500 m）", 8.2, "cjk", fill=C["ink2"], anchor="end")
 S.text("图名", RX, 74, "2198 年镜子已关，北方海与河面冬季封冻，冰面即路；铁路已停", 8.2, "cjk", fill=C["alert"], anchor="end")
-S.text("出处", X0, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；等高线由 32 px/度重采样高程平滑后提取。地貌名：IAU 行星地名库。"
+S.text("出处", X0, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；陆地色调：MGS TES 反照率（USGS 7.4 km 拼接）；等高线由 32 px/度重采样高程平滑后提取。地貌名：IAU 行星地名库。"
        "城镇与铁路：GURPS Transhuman Space《In The Well》，位置按正典给出的地理关系在真实地形上重新确定。路线：本书设定，见《路线：北方海到火大》。", 7.0, "cjk", fill=C["ink3"])
 
 svg = M.OUT/f"{NAME}.svg"; S.save(svg)

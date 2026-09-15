@@ -85,7 +85,7 @@ def mars_raster(P, x0, y0, w, h, ss=3, zfac=3.0, limb=False):
         m = M.sample_lonlat(Z[k], 32, lon, lat, order=0).astype(bool)
         ms.append(ndimage.binary_dilation(m, np.ones((3, 3), bool)) & (dem < lv) & ok)
     px_m = 1000/(P.scale*ss)
-    rgb = M.colorize(dem, M.shade(dem, px_m, px_m, zfac), ms, list(WL.values())).astype(np.float32)
+    rgb = M.colorize(dem, M.shade(dem, px_m, px_m, zfac), ms, list(WL.values()), albedo=M.albedo_at(lon, lat)).astype(np.float32)
     if limb:
         rho = np.hypot(x0 + (xs+0.5)/ss - P.cx, y0 + (ys+0.5)/ss - P.cy)/(P.scale*P.Rk)
         rgb *= (0.82 + 0.18*np.sqrt(np.clip(1 - rho**2, 0, 1)))[..., None]
@@ -444,7 +444,7 @@ S.text("图名", 84 + text_width("火星有多大", 30, "cjk_b", 3) + 18, 52, "�
 S.text("图名", 84, 72, "HOW BIG IS MARS  ·  SCALE COMPARISONS WITH EARTH  ·  MARCH 2100", 8.4, "lat", fill=C["ink2"], spacing=1.6)
 S.text("图名", SW-84, 46, "①③ 兰伯特等积方位投影　② 正射投影　⑤⑥ 剖面，垂直夸大 10 倍", 8.2, "cjk", fill=C["ink2"], anchor="end")
 S.text("图名", SW-84, 60, "红色 = 地球对照物；火星为真实地形，水面为 2100 年 3 月推算值", 8.2, "cjk", fill=EARTH, anchor="end")
-S.text("出处", 84, SH-20, "火星：MGS MOLA 数字高程模型（NASA GSFC · USGS Astrogeology）；城镇位置见《火星坐标对照表》；2100 年环境数据：GURPS Transhuman Space《In The Well》。"
+S.text("出处", 84, SH-20, "火星：MGS MOLA 数字高程模型（NASA GSFC · USGS Astrogeology），陆地色调 MGS TES 反照率；城镇位置见《火星坐标对照表》；2100 年环境数据：GURPS Transhuman Space《In The Well》。"
        "地球：Natural Earth 陆地与国界（中国视角版）；珠峰、冒纳凯阿、雅鲁藏布大峡谷、科罗拉多大峡谷为公认数值，剖面形状为示意。", 7.0, "cjk", fill=C["ink3"])
 
 svg = M.OUT/f"{NAME}.svg"; S.save(svg)

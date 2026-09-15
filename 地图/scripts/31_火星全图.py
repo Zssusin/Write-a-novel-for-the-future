@@ -30,7 +30,7 @@ d32 = M.load_dem32().astype(np.float32)
 d32[d32 > 30000] = np.nan
 d16 = np.nanmean(d32.reshape(2880, 2, 5760, 2), axis=(1, 3))
 m16 = {k: Z[k].reshape(2880, 2, 5760, 2).any(axis=(1, 3)) for k, _ in WATER}
-RGB16 = M.relief_rgb(d16, [m16[k] for k, _ in WATER], [v for _, v in WATER], 16, zfac=5.0)
+RGB16 = M.relief_rgb(d16, [m16[k] for k, _ in WATER], [v for _, v in WATER], 16, zfac=5.0, lon_left=-180)
 
 SEAS = [("北方海", "BOREALIS SEA", 66.0, 150.0, 15, 5), ("北方海", "BOREALIS SEA", 66.0, 320.0, 15, 5),
         ("克律塞湾", "CHRYSE BAY", 30.0, 322.0, 10.5, 3), ("亚马逊湾", "AMAZONIS BAY", 31.0, 196.0, 10.5, 3),
@@ -297,7 +297,7 @@ def render(kind):
             S.add("图例", f'<rect x="{x:.1f}" y="{LY+56}" width="{500/kpu:.1f}" height="4" fill="{C["ink"] if i % 2 == 0 else "#FFFFFF"}" stroke="{C["ink"]}" stroke-width="0.5"/>')
             S.text("图例", x, LY+70, f"{i*500:,}", 6.8, "lat", anchor="middle")
         S.text("图例", L3 + 2000/kpu, LY+70, "2,000 km", 6.8, "lat", anchor="middle")
-    S.text("出处", 84, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）。地貌名：IAU 行星地名库。"
+    S.text("出处", 84, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；陆地色调：MGS TES 反照率（USGS 7.4 km 拼接）。地貌名：IAU 行星地名库。"
            "城镇、工程与铁路：GURPS Transhuman Space《In The Well》，位置按正典给出的地理关系在真实地形上重新确定。水位为推算值，见《火星坐标对照表》第 7 节。",
            7.0, "cjk", fill=C["ink3"])
 

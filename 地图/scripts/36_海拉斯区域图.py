@@ -32,6 +32,7 @@ SS = 3                                                 # 底图超采样倍数
 P = Azimuthal(LAT_C, LON_C, X0 + W/2, Y0 + H/2, SCALE)
 LX = int(X0 + W + 58); SW, SH = 1848, int(Y0 + H + 62)
 S = SVG(SW, SH, "海拉斯区域图 · 2100 年 3 月")
+S.layer("底图"); S.layer("土地利用")
 clip = 'clip-path="url(#clipMap)"'
 CONTOUR_STEP, INDEX_STEP = 1000, 2000
 FUTURE = [-6000, -5000]                                # 预测岸线
@@ -156,12 +157,15 @@ def to_screen(mask, level):
 sea = to_screen(seaw, LV)
 futs = {L: to_screen(fut[L], L) for L in FUTURE}
 px_m = 1000/(SCALE*SS)
-rgb = M.colorize(dem_hr, M.shade(dem_hr, px_m, px_m, zfac=3.0), [sea], [LV])
+rgb = M.colorize(dem_hr, M.shade(dem_hr, px_m, px_m, zfac=3.0), [sea], [LV], albedo=M.albedo_at(lon, lat))
 rgb[~ok] = 255
 S.add("底图", f'<clipPath id="clipMap"><rect x="{X0}" y="{Y0}" width="{W}" height="{H}"/></clipPath>')
 S.add("底图", f'<image x="{X0}" y="{Y0}" width="{W}" height="{H}" preserveAspectRatio="none" href="{M.png_data_uri(rgb, quality=90)}"/>')
 del rgb
 TF = Affine(1/SS, 0, X0, 0, 1/SS, Y0)
+def _lu_inside(lo, la):
+    x_, y_ = P.xy(lo, la); return X0 <= x_ <= X0 + W and Y0 <= y_ <= Y0 + H
+print("  土地利用", M.landuse_svg(S, "土地利用", P, "clipMap", _lu_inside, classes=("草场",)), "块")
 
 # ── 等高线（屏幕网格 1 单位 = 2.5 km）────────────────────────────────
 print("等高线 …")
@@ -387,7 +391,7 @@ S.text("图例", LX, LY, "图例", 11.5, "cjk_b", weight="bold")
 items = [("other", "城镇（独立 / 混杂）"), ("station", "车站"), ("rail", "铁路支线"), ("peak", "火山（MOLA 峰顶）"),
          ("coast", "海岸线（−7,000 m）"), ("future", "预测岸线 −6,000 / −5,000 m"), ("river", "径流水道（按地形推算）"),
          ("divide", "海拉斯集水区界"), ("contour", "等高线 1,000 m"), ("index", "计曲线 2,000 m"),
-         ("bathy", "等深线 1,000 m"), ("tz", "时区界（正典）"), ("star", "☆ 仅见于正典地图")]
+         ("bathy", "等深线 1,000 m"), ("tz", "时区界（正典）"), ("veg", "草场 / 已绿化带（沿水推算）"), ("star", "☆ 仅见于正典地图")]
 for i, (k, t_) in enumerate(items):
     col, row = i % 2, i // 2
     x = LX + col*150; y = LY + 24 + row*19
@@ -403,9 +407,10 @@ for i, (k, t_) in enumerate(items):
     elif k == "index": S.add("图例", f'<path d="M{x},{y-3.5} h18" stroke="{M.CONTOUR}" stroke-width="0.7" opacity="0.8"/>')
     elif k == "bathy": S.add("图例", f'<path d="M{x},{y-3.5} h18" stroke="{C["coast"]}" stroke-width="0.45" opacity="0.7"/>')
     elif k == "tz": S.add("图例", f'<path d="M{x},{y-3.5} h18" stroke="{TZ_C}" stroke-width="0.9" stroke-dasharray="7 2.5 1.5 2.5"/>')
+    elif k in ("crop", "veg", "aqua"): M.landuse_legend(S, "图例", x, y, {"crop": "农田", "veg": "草场", "aqua": "水产"}[k])
     S.text("图例", x+(25 if k != "star" else 0), y, t_, 8.4, "cjk")
 
-yd = LY + 24 + 7*19 + 16
+yd = LY + 24 + 8*19 + 16
 S.text("图例", LX, yd, "海拉斯海数据", 11.5, "cjk_b", weight="bold")
 rows = [("水面高程", f"{M.fmt_m(LV)} m（火星最低处，坑底 {M.fmt_m(basin_min)} m）"),
         ("面积", f"{sea_area/1e4:,.1f} 万 km²  ≈ 福建省"),
@@ -450,7 +455,7 @@ S.add("图例", f'<path d="{" ".join(M.path_d(ix + e[:, 0]*ik, iy + (90-e[:, 1])
               f'fill="none" stroke="{C["ink"]}" stroke-width="0.7" stroke-dasharray="3 1.2 0.8 1.2"/>')
 S.text("图例", ix, iy + 135 + 20, "虚线：海拉斯集水区", 6.8, "cjk", fill=C["ink2"])
 
-S.text("出处", X0, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；晕渲光源方位 315°、高度 40°；等高线由 64 px/度重采样高程平滑后提取；"
+S.text("出处", X0, SH-22, "底图：MGS MOLA 463 m 数字高程模型（NASA GSFC · USGS Astrogeology 拼接）；多向晕渲（四光源 225–360°）× 天空可见度；陆地色调：MGS TES 反照率（USGS 7.4 km 拼接）；等高线由 64 px/度重采样高程平滑后提取；"
        "水道与集水区按 16 px/度高程 D8 汇流算得。地貌名：IAU 行星地名库。城镇、时区与铁路：GURPS Transhuman Space《In The Well》。",
        7.0, "cjk", fill=C["ink3"])
 

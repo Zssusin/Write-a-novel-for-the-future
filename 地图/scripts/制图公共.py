@@ -58,30 +58,125 @@ def ramp(values, stops):
         out[..., i] = np.interp(values, xs, [s[1][i] for s in stops])
     return out
 
-def shade(dem, dx_m, dy_m, zfac=2.2, az=315, alt=40):
-    """晕渲 0–1。dx_m / dy_m：像元东西、南北方向的真实尺寸（米，可以是按行广播的数组）。
-    zfac 适度夸张，火星地势大，别太重。"""
+def shade_single(dem, dx_m, dy_m, zfac=2.2, az=315, alt=40):
+    """单光源晕渲 0–1（Horn 法）。dx_m / dy_m：像元东西、南北方向的真实尺寸（米，可按行广播）。"""
     gy, gx = np.gradient(dem.astype(np.float32))
     dzdx, dzdy = gx/dx_m*zfac, -gy/dy_m*zfac
     slope = np.arctan(np.hypot(dzdx, dzdy)); aspect = np.arctan2(dzdy, -dzdx)
     zen, azr = math.radians(90-alt), math.radians(360-az+90)
     return np.clip(np.cos(zen)*np.cos(slope) + np.sin(zen)*np.sin(slope)*np.cos(azr-aspect), 0, 1)
 
-def colorize(dem, hs, water_masks=(), water_levels=()):
-    """陆地：分层设色 × 晕渲；水面：水深色，淡淡透出海底地形。"""
+def shade_multi(dem, dx_m, dy_m, zfac=2.2, alt=40, azs=(225, 270, 315, 360), stretch=1.7):
+    """多向加权晕渲（Mark 1992，USGS 的 MDOW 做法）：225°/270°/315°/360° 四个光源，每个像元按
+    sin²(坡向 − 光源方位) 加权——正对或背对光源的坡给低权重，侧对的给高权重，于是与主光线平行的
+    地貌（东西向的水手峡谷、环形的奥林匹斯断崖）不再被压平。四向平均会拉低对比度，最后绕平地值
+    cos(天顶角) 做一次线性拉伸补回来。"""
+    gy, gx = np.gradient(dem.astype(np.float32))
+    dzdx, dzdy = gx/dx_m*zfac, -gy/dy_m*zfac
+    slope = np.arctan(np.hypot(dzdx, dzdy)); aspect = np.arctan2(dzdy, -dzdx)
+    zen = math.radians(90-alt); cz, sz = math.cos(zen), math.sin(zen)
+    cs, ss = np.cos(slope), np.sin(slope)
+    num = np.zeros_like(slope); den = np.zeros_like(slope)
+    for az in azs:
+        azr = math.radians(360-az+90)
+        hs = np.clip(cz*cs + sz*ss*np.cos(azr-aspect), 0, 1)
+        w = np.sin(aspect - azr)**2 + 0.05
+        num += w*hs; den += w
+    flat = cz
+    return np.clip(flat + (num/den - flat)*stretch, 0, 1)
+
+def sky_view(dem, dx_m, dy_m, radius_px=24, ndir=16):
+    """天空可见度因子 SVF（Zakšek 等 2011）：每个像元沿 ndir 个方向在 radius_px 内找地平线最大仰角 h，
+    SVF = 1 − mean(sin h)。谷底、坑底四周被挡，值小；山脊、坑缘不受影响。乘到晕渲上相当于一层
+    环境光遮蔽，让峡谷读起来有深度，而不只是两条亮暗边。只用切片、不复制整幅数组。"""
+    d = dem.astype(np.float32); H, W = d.shape
+    dxm = np.broadcast_to(np.asarray(dx_m, np.float32), d.shape) if np.ndim(dx_m) else None
+    dxs = float(dx_m) if dxm is None else None
+    steps = sorted(set(int(round(v)) for v in np.geomspace(1, radius_px, 8)))
+    tot = np.zeros_like(d)
+    for k in range(ndir):
+        a = 2*math.pi*k/ndir; ux, uy = math.cos(a), math.sin(a)
+        best = np.zeros_like(d)
+        for sp in steps:
+            ox, oy = int(round(ux*sp)), int(round(uy*sp))
+            if ox == 0 and oy == 0: continue
+            # 目标像元 (r+oy, c+ox)；只算两者都在图内的区域
+            r0, r1 = max(0, -oy), min(H, H-oy); c0, c1 = max(0, -ox), min(W, W-ox)
+            if r1 <= r0 or c1 <= c0: continue
+            dz = d[r0+oy:r1+oy, c0+ox:c1+ox] - d[r0:r1, c0:c1]
+            if dxm is None: dist = math.hypot(ox*dxs, oy*float(dy_m))
+            else:           dist = np.hypot(ox*dxm[r0:r1, c0:c1], oy*float(dy_m))
+            np.maximum(best[r0:r1, c0:c1], dz/dist, out=best[r0:r1, c0:c1])
+        tot += best/np.sqrt(1 + best*best)                                  # sin(arctan(best))
+    return 1 - tot/ndir
+
+SHADE_MODE = "multi"        # "multi"（多向 + 天空可见度，默认）或 "single"（旧的 315°/40° 单光源）
+SVF_MIX = 0.40              # 天空可见度对亮度的影响幅度：hs × (1−SVF_MIX + SVF_MIX·svf′)
+
+def shade(dem, dx_m, dy_m, zfac=2.2, az=315, alt=40, mode=None, svf=True):
+    """晕渲 0–1。默认多向加权晕渲 × 天空可见度；mode="single" 退回旧的单光源。
+    zfac 适度夸张，火星地势大，别太重。"""
+    mode = mode or SHADE_MODE
+    if mode == "single": return shade_single(dem, dx_m, dy_m, zfac, az, alt)
+    hs = shade_multi(dem, dx_m, dy_m, zfac, alt)
+    if svf and min(dem.shape) > 64:
+        v = np.clip((sky_view(dem, dx_m, dy_m) - 0.6)/0.4, 0, 1)         # 0.6 以下当全遮蔽
+        hs = hs*(1 - SVF_MIX + SVF_MIX*v)
+    return hs
+
+ALBEDO_MIX = 0.09           # 反照率对陆地明度的影响幅度（0 关掉）：暗区 ×(1−MIX)，亮区 ×(1+MIX)
+ALBEDO_MID, ALBEDO_HALF = 0.20, 0.09   # 归一化：a′ = clip((反照率 − MID)/HALF, −1, 1)
+_alb = None
+def load_albedo():
+    """MGS TES 反照率（USGS 7,410 m 全球拼接，8 px/度，−180°E 起）。首次读时去条纹、极区淡出，缓存为 npy。
+    轨道条纹用高斯 σ=1.5 px（≈0.2°）压掉；78° 以上极区原图是十字噪声，线性淡到中性值 ALBEDO_MID。"""
+    global _alb
+    if _alb is None:
+        f = MAP_DIR/"DEM/albedo_8ppd.npy"
+        if not f.exists():
+            import rasterio
+            a = rasterio.open(MAP_DIR/"DEM/Mars_MGS_TES_Albedo_mosaic_global_7410m.tif").read(1).astype(np.float32)
+            a = np.where(a < -1e30, ALBEDO_MID, a)
+            a = ndimage.gaussian_filter(a, 1.5, mode=("nearest", "wrap"))
+            lat = 90 - (np.arange(a.shape[0]) + 0.5)/8
+            w = np.clip((86 - np.abs(lat))/8, 0, 1)[:, None]            # 78° 起淡出，86° 以上全中性
+            a = ALBEDO_MID + (a - ALBEDO_MID)*w
+            np.save(f, a.astype(np.float32))
+        _alb = np.load(f)
+    return _alb
+
+def albedo_at(lon, lat):
+    """按经纬度取归一化反照率 a′ ∈ [−1, 1]（三次样条插值，8 px/度放大到区域图不会有格子）。"""
+    a = sample_lonlat(load_albedo(), 8, lon, lat, order=3)
+    return np.clip((a - ALBEDO_MID)/ALBEDO_HALF, -1, 1).astype(np.float32)
+
+def colorize(dem, hs, water_masks=(), water_levels=(), albedo=None):
+    """陆地：分层设色 × 晕渲 × 反照率；水面：水深色，淡淡透出海底地形。
+    albedo：与 dem 同形的归一化反照率 a′（albedo_at 的输出）。暗的玄武岩区（大瑟提斯、阿西达利亚）压暗并
+    略去色，亮的浮尘区（塔西斯、阿拉伯）提亮一点——真实火星地形图上的暗区轮廓就是这么来的。"""
     rgb = ramp(dem, HYPSO) * (0.80 + 0.26*hs[..., None])
+    if albedo is not None and ALBEDO_MIX:
+        a = np.asarray(albedo, np.float32)[..., None]
+        rgb = rgb*(1 + ALBEDO_MIX*a)
+        dark = np.clip(-a, 0, 1)                                          # 暗区：向自身灰度靠 35%
+        lum = rgb @ np.array([0.299, 0.587, 0.114], np.float32)
+        rgb = rgb*(1 - 0.35*dark) + lum[..., None]*(0.35*dark)
     for m, lvl in zip(water_masks, water_levels):
         depth = np.clip(lvl - dem, 0, None)
         wc = ramp(depth, BATHY) * (0.95 + 0.06*hs[..., None])
         rgb = np.where(m[..., None], wc, rgb)
     return np.clip(rgb, 0, 255).astype(np.uint8)
 
-def relief_rgb(dem, water_masks, water_levels, ppd, lat_top=90.0, zfac=2.2):
-    """等距圆柱排布的 dem + 若干 (掩膜, 水面高程) → RGB。"""
+def relief_rgb(dem, water_masks, water_levels, ppd, lat_top=90.0, zfac=2.2, lon_left=None):
+    """等距圆柱排布的 dem + 若干 (掩膜, 水面高程) → RGB。给了 lon_left（东经）就叠反照率。"""
     lats = lat_top - (np.arange(dem.shape[0]) + 0.5)/ppd
     dyk = KMPD*1000/ppd
     cl = np.maximum(np.cos(np.radians(lats)), 0.05)[:, None]
-    return colorize(dem, shade(dem, dyk*cl, dyk, zfac), water_masks, water_levels)
+    alb = None
+    if lon_left is not None and ALBEDO_MIX:
+        lons = lon_left + (np.arange(dem.shape[1]) + 0.5)/ppd
+        alb = albedo_at(*np.meshgrid(lons, lats))
+    return colorize(dem, shade(dem, dyk*cl, dyk, zfac), water_masks, water_levels, albedo=alb)
 
 def png_data_uri(rgb, quality=None):
     buf = io.BytesIO()
@@ -98,10 +193,15 @@ class Equirect:
         self.x0, self.y0, self.ppd = x0, y0, ppd
         self.w, self.h = (lon1-lon0)*ppd, (lat0-lat1)*ppd
     def unwrap(self, lon):
-        # 已在 [lon0, lon0+360] 内的不取模：图幅东边线上的点（恰好 lon0+360）取模会被甩回西边线，
-        # 海岸线会拉出横贯全图的直线
         L = np.asarray(lon, float)
-        return np.where((L < self.lon0) | (L > self.lon0 + 360), self.lon0 + ((L - self.lon0) % 360), L)
+        if self.lon1 - self.lon0 >= 360 - 1e-9:
+            # 全球图幅：已在 [lon0, lon0+360] 内的不取模——图幅东边线上的点（恰好 lon0+360）取模会被甩回西边线，
+            # 海岸线会拉出横贯全图的直线
+            return np.where((L < self.lon0) | (L > self.lon0 + 360), self.lon0 + ((L - self.lon0) % 360), L)
+        # 区域图幅：取离图幅中央经线最近的那个表示。以前按 lon0 取模，图框西边线外一点点的顶点会被甩到 +360°，
+        # 跨西边线的多边形（土地利用）就拉出横贯全图的横带
+        mid = (self.lon0 + self.lon1)/2
+        return mid + ((L - mid + 180) % 360) - 180
     def xy(self, lon, lat):
         return self.x0 + (self.unwrap(lon)-self.lon0)*self.ppd, self.y0 + (self.lat0-np.asarray(lat))*self.ppd
     def inside(self, lon, lat, pad=0):
@@ -660,3 +760,103 @@ def split_line(coords, proj, max_jump_deg=1.0):
         cur.append((lo, la)); prev = (lo, la)
     if len(cur) > 1: segs.append(cur)
     return segs
+
+# ── 沿曲线排字（水体名沿海湾走向、河名沿河）─────────────────────────
+def chaikin(pts, n=4):
+    """Chaikin 角切平滑：把折线控制点变成光滑曲线（屏幕坐标），保留首尾。"""
+    P = np.asarray(pts, float)
+    for _ in range(n):
+        Q = np.empty((2*len(P)-2, 2))
+        Q[0::2] = 0.75*P[:-1] + 0.25*P[1:]
+        Q[1::2] = 0.25*P[:-1] + 0.75*P[1:]
+        P = np.vstack([P[:1], Q, P[-1:]])
+    return P
+
+def path_lonlat(proj, lonlat, n=4):
+    """经纬度控制点 → 投影 → 平滑后的屏幕折线。"""
+    xy = [tuple(map(float, proj.xy(lo, la))) for lo, la in lonlat]
+    return chaikin(xy, n)
+
+def text_along(S, layer, pts, s, size, kind="cjk", fill=None, spacing=0.0, halo=2.4, italic=False,
+               weight="normal", offset=0.0, align=0.5, placer=None, opacity=1.0):
+    """沿屏幕折线 pts 排字：每个字单独定位、按当地切线旋转，居中（align=0.5）于折线弧长。
+    offset：沿法线的偏移（正值向曲线右侧 = 屏幕上的下方），英文副标放在中文下方就用它。
+    折线总体从右往左时自动反向，保证字头朝上、从左往右读。返回 True/False（放不下时 False）。
+    SVG 里没有用 textPath：librsvg 不支持，且逐字定位才能量准包围盒给避让用。"""
+    P = np.asarray(pts, float)
+    v = P[-1] - P[0]
+    if v[0] < 0 or (abs(v[0]) < 1e-6 and v[1] > 0): P = P[::-1]        # 从左往右读；竖排从下往上读
+    seg = np.hypot(*np.diff(P, axis=0).T); cum = np.concatenate([[0], np.cumsum(seg)]); L = cum[-1]
+    ws = [text_width(ch, size, kind) + spacing for ch in s]; total = sum(ws) - spacing
+    if total > L: return False
+    fam = FAM_CJK if "cjk" in kind else FAM_LAT
+    st = ' font-style="italic"' if italic else ""
+    op = f' opacity="{opacity}"' if opacity != 1 else ""
+    h = (f' stroke="#FFFFFF" stroke-width="{halo:.2f}" stroke-linejoin="round" paint-order="stroke"' if halo else "")
+    def at(t):
+        t = np.clip(t, 0, L); i = min(np.searchsorted(cum, t, side="right") - 1, len(seg) - 1)
+        f = (t - cum[i])/seg[i] if seg[i] > 0 else 0
+        return P[i]*(1-f) + P[i+1]*f
+    pos = (L - total)*align; out = []
+    for ch, w in zip(s, ws):
+        adv = w - spacing; tm = pos + adv/2
+        a, b = at(tm - max(adv, size)/2), at(tm + max(adv, size)/2)
+        tx, ty = b - a; nrm = math.hypot(tx, ty) or 1; tx, ty = tx/nrm, ty/nrm
+        nx, ny = -ty, tx                                                  # 法线（切线右侧）
+        c = at(tm); x = c[0] + nx*(offset + size*0.35); y = c[1] + ny*(offset + size*0.35)
+        rot = math.degrees(math.atan2(ty, tx))
+        out.append(f'<text x="{x:.1f}" y="{y:.1f}" transform="rotate({rot:.1f} {x:.1f} {y:.1f})" font-family="{fam}" '
+                   f'font-size="{size:.2f}" font-weight="{weight}"{st}{h}{op} fill="{fill or C["ink"]}" '
+                   f'text-anchor="middle">{esc(ch)}</text>')
+        if placer is not None:
+            r = max(adv, size)*0.55; placer.block(c[0]-r, c[1]-r, c[0]+r, c[1]+r)
+        pos += w
+    S.add(layer, "\n".join(out))
+    return True
+
+# ── 土地利用图层（22_土地利用.py 的产出）────────────────────────────
+LU = {  # 类别 → 样式。绿色只给土地利用，和水面的蓝、闸坝的红、呼吸线的紫互不抢
+    "农田": dict(fill="#7EA65A", fo=0.72, stroke="#4C7A33", sw=0.3),
+    "草场": dict(fill="#B3CC98", fo=0.5, stroke=None, sw=0),
+    "水产": dict(fill="url(#aquaHatch)", fo=0.9, stroke="#3F6D96", sw=0.45),
+    "城区": dict(fill="#3C3C3C", fo=0.85, stroke="#1A1A1A", sw=0.3),
+}
+_lu = None
+def load_landuse():
+    global _lu
+    if _lu is None:
+        f = OUT/"土地利用_2100.geojson"
+        _lu = json.load(open(f, encoding="utf-8"))["features"] if f.exists() else []
+    return _lu
+
+def landuse_svg(S, layer, proj, clip_id, inside, classes=("草场", "农田", "水产"), min_area_km2=0.0, seam_jump=None):
+    """把土地利用多边形画到 layer 上。inside(lon, lat) 判断多边形代表点是否在图内（各投影自己给）。
+    画序固定：草场在下、农田在上、水产再上、城区最上。城区只在大比例尺图上画（调用方决定 classes）。"""
+    feats = load_landuse()
+    if not feats: return 0
+    S.add(layer, f'<pattern id="aquaHatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+                 f'<line x1="0" y1="0" x2="0" y2="3.2" stroke="{C["coast"]}" stroke-width="0.6"/></pattern>')
+    n = 0
+    for cls in classes:
+        st = LU[cls]; parts = []
+        for f in feats:
+            if f["properties"]["class"] != cls or f["properties"].get("area_km2", 0) < min_area_km2: continue
+            rings = f["geometry"]["coordinates"]
+            lo0, la0 = rings[0][len(rings[0])//2]
+            if not inside(lo0 % 360, la0): continue
+            for ring in rings:
+                arr = np.asarray(ring, float)
+                x, y = proj.xy(arr[:, 0] % 360, arr[:, 1])
+                if seam_jump and (np.abs(np.diff(x)) > seam_jump).any(): continue
+                parts.append("M" + " L".join(f"{a:.1f},{b:.1f}" for a, b in zip(x, y)) + " Z")
+            n += 1
+        if not parts: continue
+        sk = f' stroke="{st["stroke"]}" stroke-width="{st["sw"]}" stroke-linejoin="round"' if st["stroke"] else ""
+        S.add(layer, f'<path d="{" ".join(parts)}" fill="{st["fill"]}" fill-opacity="{st["fo"]}" fill-rule="evenodd"{sk} clip-path="url(#{clip_id})"/>')
+    return n
+
+def landuse_legend(S, layer, x, y, cls, size=9, w=18, h=11):
+    """图例里的一格：与图上同样式的小矩形 + 文字由调用方写。"""
+    st = LU[cls]
+    sk = f' stroke="{st["stroke"]}" stroke-width="{max(st["sw"], 0.4)}"' if st["stroke"] else f' stroke="{st["fill"]}" stroke-width="0.4"'
+    S.add(layer, f'<rect x="{x:.1f}" y="{y-h+2:.1f}" width="{w}" height="{h}" fill="{st["fill"]}" fill-opacity="{st["fo"]}"{sk}/>')
