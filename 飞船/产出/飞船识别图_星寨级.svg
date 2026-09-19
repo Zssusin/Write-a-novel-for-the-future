@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1848" height="1685" viewBox="0 0 1848 1685">
+<title>星寨级空间支配载具 · 识别图</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<g id="A侧视">
+<rect x="84" y="104" width="18" height="18" fill="#1A1A1A"/>
+<text x="93.0" y="118.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="11.00" font-weight="bold" fill="#FFFFFF" text-anchor="middle">A</text>
+<text x="110.0" y="118.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="12.50" font-weight="bold" fill="#1A1A1A" text-anchor="start">右舷侧视图</text>
+<text x="182.5" y="118.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.60" font-weight="normal" fill="#5C5C5C" text-anchor="start">散热翼在船身两侧，本图中侧对视线，只见铰链座</text>
+<rect x="132.0" y="193.4" width="800.1" height="137.2" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.9"/>
+<path d="M132.0,193.4 A11.2,68.6 0 0 0 132.0,330.6 Z" fill="#CFCFCB" stroke="#1A1A1A" stroke-width="0.9" stroke-linejoin="round"/>
+<rect x="132.0" y="193.4" width="11.2" height="137.2" fill="#CFCFCB" stroke="#1A1A1A" stroke-width="0.0"/>
+<path d="M143.2,193.4 L143.2,330.6" stroke="#1A1A1A" stroke-width="0.9" fill="none"/>
+<path d="M297.0,193.4 L297.0,330.6" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M852.0,193.4 L852.0,330.6" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<rect x="297.0" y="193.4" width="555.0" height="137.2" fill="#FAFAF8" stroke="#1A1A1A" stroke-width="0.0"/>
+<path d="M300.0,204.9 L849.0,204.9" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,216.3 L849.0,216.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,227.7 L849.0,227.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,239.1 L849.0,239.1" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,250.6 L849.0,250.6" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,262.0 L849.0,262.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,273.4 L849.0,273.4" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,284.9 L849.0,284.9" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,296.3 L849.0,296.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,307.7 L849.0,307.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,319.2 L849.0,319.2" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M357.0,193.4 L357.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M432.0,193.4 L432.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M507.0,193.4 L507.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M582.0,193.4 L582.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M657.0,193.4 L657.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M732.0,193.4 L732.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M807.0,193.4 L807.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<rect x="852.0" y="193.4" width="80.1" height="137.2" fill="#B9B9B5" stroke="#1A1A1A" stroke-width="0.0"/>
+<path d="M874.5,193.4 L874.5,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M897.0,193.4 L897.0,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M919.5,193.4 L919.5,330.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<rect x="132.0" y="193.4" width="800.1" height="137.2" fill="none" stroke="#1A1A1A" stroke-width="0.9"/>
+<path d="M932.1,208.5 L1018.4,181.1 L1018.4,342.9 L932.1,315.5 Z" fill="#E4E4E1" stroke="#1A1A1A" stroke-width="0.9" stroke-linejoin="round"/>
+<path d="M946.5,203.9 L946.5,320.1" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M960.9,199.4 L960.9,324.6" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M975.2,194.8 L975.2,329.2" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M989.6,190.2 L989.6,333.8" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M1004.0,185.6 L1004.0,338.4" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M1018.4,181.1 L1018.4,342.9" stroke="#1A1A1A" stroke-width="1.4" fill="none"/>
+<rect x="833.2" y="193.4" width="15.0" height="4.5" fill="#B9B9B5" stroke="#1A1A1A" stroke-width="0.6"/>
+<rect x="833.2" y="189.5" width="15.0" height="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="833.2" y="326.1" width="15.0" height="4.5" fill="#B9B9B5" stroke="#1A1A1A" stroke-width="0.6"/>
+<rect x="833.2" y="331.9" width="15.0" height="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="315.8" y="187.9" width="24.0" height="5.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.7"/>
+<rect x="315.8" y="330.6" width="24.0" height="5.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.7"/>
+<rect x="544.4" y="259.0" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="666.8" y="259.0" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="789.3" y="259.0" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<path d="M514.7,262.0 L837.0,262.0" stroke="#5C5C5C" stroke-width="0.5" fill="none" stroke-dasharray="4 2"/>
+<rect x="348.8" y="173.9" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="352.9" y="167.9" width="8.2" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="438.8" y="330.6" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="442.9" y="311.1" width="8.2" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="536.2" y="173.9" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="540.4" y="167.9" width="8.2" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="626.2" y="330.6" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="630.4" y="311.1" width="8.2" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="723.8" y="173.9" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="727.9" y="167.9" width="8.2" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="806.2" y="330.6" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="810.4" y="311.1" width="8.2" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="342.0" cy="262.0" r="7.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="342.0" cy="262.0" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="492.0" cy="262.0" r="7.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="492.0" cy="262.0" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="642.0" cy="262.0" r="7.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="642.0" cy="262.0" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="792.0" cy="262.0" r="7.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="792.0" cy="262.0" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="859.5" cy="262.0" r="6.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="859.5" cy="262.0" r="2.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<path d="M154.5,193.4 A15.0,6.0 0 0 1 184.5,193.4 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M154.5,330.6 A15.0,6.0 0 0 0 184.5,330.6 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<circle cx="169.5" cy="262.0" r="9.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="169.5" cy="262.0" r="3.0" fill="none" stroke="#1A1A1A" stroke-width="0.5"/>
+<circle cx="199.5" cy="224.3" r="5.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="199.5" cy="299.7" r="5.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="150.8" y="219.5" width="42.0" height="85.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M171.8,219.5 L171.8,304.5" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<rect x="195.8" y="219.5" width="42.0" height="85.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M216.8,219.5 L216.8,304.5" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<rect x="240.8" y="219.5" width="42.0" height="85.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M261.8,219.5 L261.8,304.5" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<rect x="154.5" y="191.2" width="125.7" height="2.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.6"/>
+<path d="M132.0,147.4 L132.0,155.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M932.1,147.4 L932.1,155.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M132.0,151.4 L932.1,151.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M129.5,153.9 L134.5,148.9" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M929.6,153.9 L934.6,148.9" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="532.0" y="148.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="middle">106.7 m（350 ft）</text>
+<path d="M932.1,147.4 L932.1,155.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1018.4,147.4 L1018.4,155.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M932.1,151.4 L1018.4,151.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M929.6,153.9 L934.6,148.9" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M1015.9,153.9 L1020.9,148.9" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="975.2" y="148.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.40" font-weight="normal" fill="#1A1A1A" text-anchor="middle">12 m</text>
+<path d="M1036.3,193.4 L1044.3,193.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1036.3,330.6 L1044.3,330.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1040.3,193.4 L1040.3,330.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1037.8,195.9 L1042.8,190.9" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M1037.8,333.1 L1042.8,328.1" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="1035.3" y="262.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.2" fill="#1A1A1A" text-anchor="middle" transform="rotate(-90 1035.3 262.0)">18.3 m</text>
+<path d="M297.0,372.6 L297.0,380.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M852.0,372.6 L852.0,380.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M297.0,376.6 L852.0,376.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M294.5,379.1 L299.5,374.1" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M849.5,379.1 L854.5,374.1" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="574.5" y="386.8" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="middle">燃料段 74 m</text>
+<path d="M134.2,224.3 L102.0,189.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="102.0" cy="189.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="102.0" y="192.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">1</text>
+<path d="M169.5,187.4 L199.5,163.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="199.5" cy="163.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="199.5" y="166.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">3</text>
+<path d="M214.5,191.4 L282.0,163.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="282.0" cy="163.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="282.0" y="166.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">5</text>
+<path d="M216.8,304.5 L237.0,352.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="237.0" cy="352.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="237.0" y="355.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">6</text>
+<path d="M327.0,335.6 L357.0,352.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="357.0" cy="352.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="357.0" y="355.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">7</text>
+<path d="M544.5,173.9 L544.5,153.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="544.5" cy="153.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="544.5" y="156.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">8</text>
+<path d="M642.0,262.0 L658.0,352.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="658.0" cy="352.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="658.0" y="355.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">9</text>
+<path d="M769.5,296.3 L769.5,352.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="769.5" cy="352.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="769.5" y="355.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">10</text>
+<path d="M975.2,196.8 L975.2,163.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="975.2" cy="163.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="975.2" y="166.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">13</text>
+<path d="M840.8,333.6 L846.8,352.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="846.8" cy="352.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="846.8" y="355.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">14</text>
+<text x="132.0" y="394.6" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.00" font-weight="bold" fill="#1A1A1A" text-anchor="middle">艏</text>
+<text x="1018.4" y="394.6" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.00" font-weight="bold" fill="#1A1A1A" text-anchor="middle">艉</text>
+</g>
+<g id="纵剖">
+<text x="84.0" y="422.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.60" font-weight="bold" fill="#1A1A1A" text-anchor="start">纵剖 · 内部空间分配</text>
+<text x="186.5" y="422.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.00" font-weight="normal" fill="#5C5C5C" text-anchor="start">船体 2,016 格 × 14.2 m³ = 28.5 万 m³；1 格 = 500 立方英尺</text>
+<rect x="132.0" y="430.0" width="11.2" height="26.0" fill="#CFCFCB" stroke="#1A1A1A" stroke-width="0.7"/>
+<rect x="143.2" y="430.0" width="153.8" height="26.0" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.7"/>
+<rect x="297.0" y="430.0" width="555.0" height="26.0" fill="#FAFAF8" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="574.5" y="446.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.60" font-weight="normal" fill="#1A1A1A" text-anchor="middle">核弹丸燃料罐 1,500 格 · 18,000 t · 船体 74%</text>
+<rect x="852.0" y="430.0" width="80.1" height="26.0" fill="#B9B9B5" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="892.1" y="446.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.60" font-weight="normal" fill="#1A1A1A" text-anchor="middle">驱动 200 格</text>
+<clipPath id="h132_430"><rect x="132.0" y="430.0" width="11.2" height="26.0"/></clipPath>
+<path d="M132.0,430.0 l-26.0,26.0 M136.2,430.0 l-26.0,26.0 M140.4,430.0 l-26.0,26.0 M144.6,430.0 l-26.0,26.0 M148.8,430.0 l-26.0,26.0 M153.0,430.0 l-26.0,26.0 M157.2,430.0 l-26.0,26.0 M161.4,430.0 l-26.0,26.0 M165.6,430.0 l-26.0,26.0 M169.8,430.0 l-26.0,26.0 " stroke="#8A8A8A" stroke-width="0.35" clip-path="url(#h132_430)"/>
+<rect x="136.5" y="462.0" width="685.8" height="4.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<text x="823.8" y="469.5" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.60" font-weight="normal" fill="#5C5C5C" text-anchor="start">旧式粒子束加速器 91 m（300 ft），前向，射口在艏板中心</text>
+<text x="145.2" y="469.5" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="6.00" font-weight="normal" fill="#1A1A1A" text-anchor="start">▶</text>
+<text x="220.1" y="446.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.60" font-weight="normal" fill="#1A1A1A" text-anchor="middle">前段 20.5 m</text>
+<path d="M277.0,456.0 L277.0,486.0" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<text x="283.0" y="490.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.60" font-weight="normal" fill="#5C5C5C" text-anchor="start">前段：指挥舰桥（重型风暴掩体）· 机库 55 格 · AKV 舱 6 × 6 格 · 居住 4 舱室 + 6 通铺 · 手术室 · 新式裂变堆 80 MW（20.5 格）</text>
+<path d="M177.0,434.0 L102.0,443.0" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="102.0" cy="443.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="102.0" y="446.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">4</text>
+<path d="M769.5,430.0 L769.5,414.0" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="769.5" cy="414.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="769.5" y="417.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">12</text>
+</g>
+<g id="参照">
+<text x="84.0" y="522.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.60" font-weight="bold" fill="#1A1A1A" text-anchor="start">同比例参照</text>
+<text x="142.0" y="522.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.00" font-weight="normal" fill="#5C5C5C" text-anchor="start">054A 型护卫舰，长 134 m，桅顶高约 25 m；艏前小人高 1.7 m</text>
+<path d="M162.2,722.0 L1137.0,722.0 L1137.0,684.5 L936.0,684.5 L936.0,647.0 L755.1,647.0 L755.1,683.0 L654.6,683.0 L654.6,635.8 L604.3,635.8 L604.3,683.0 L574.2,683.0 L574.2,628.2 L539.0,628.2 L539.0,534.5 L529.0,534.5 L529.0,628.2 L433.5,628.2 L433.5,680.8 L343.0,680.8 L343.0,663.5 L307.9,663.5 L307.9,678.5 L132.0,668.0 Z" fill="#E9E9E6" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M132.0,722.0 L1137.0,722.0" stroke="#3F6D96" stroke-width="1.0" fill="none"/>
+<text x="1131.0" y="679.5" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.60" font-weight="bold" fill="#1A1A1A" text-anchor="end">054A</text>
+<path d="M106.0,722.0 L106.0,714.1" stroke="#1A1A1A" stroke-width="1.0" fill="none"/>
+<circle cx="106.0" cy="711.5" r="2.3" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<path d="M103.0,714.1 L109.0,714.1" stroke="#1A1A1A" stroke-width="1.0" fill="none"/>
+<text x="114.0" y="720.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.20" font-weight="normal" fill="#5C5C5C" text-anchor="start">1.7 m</text>
+</g>
+<g id="B前视">
+<rect x="1180" y="104" width="18" height="18" fill="#1A1A1A"/>
+<text x="1189.0" y="118.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="11.00" font-weight="bold" fill="#FFFFFF" text-anchor="middle">B</text>
+<text x="1206.0" y="118.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="12.50" font-weight="bold" fill="#1A1A1A" text-anchor="start">前视图</text>
+<text x="1253.5" y="118.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.60" font-weight="normal" fill="#5C5C5C" text-anchor="start">散热翼展开、截断表示；实际每侧伸出 43 m</text>
+<circle cx="1330.0" cy="250.0" r="68.6" fill="#CFCFCB" stroke="#1A1A1A" stroke-width="1.0"/>
+<clipPath id="hfront"><circle cx="1330.0" cy="250.0" r="68.6"/></clipPath>
+<path d="M1261.4,181.4 l-137.2,137.2 M1266.4,181.4 l-137.2,137.2 M1271.4,181.4 l-137.2,137.2 M1276.4,181.4 l-137.2,137.2 M1281.4,181.4 l-137.2,137.2 M1286.4,181.4 l-137.2,137.2 M1291.4,181.4 l-137.2,137.2 M1296.4,181.4 l-137.2,137.2 M1301.4,181.4 l-137.2,137.2 M1306.4,181.4 l-137.2,137.2 M1311.4,181.4 l-137.2,137.2 M1316.4,181.4 l-137.2,137.2 M1321.4,181.4 l-137.2,137.2 M1326.4,181.4 l-137.2,137.2 M1331.4,181.4 l-137.2,137.2 M1336.4,181.4 l-137.2,137.2 M1341.4,181.4 l-137.2,137.2 M1346.4,181.4 l-137.2,137.2 M1351.4,181.4 l-137.2,137.2 M1356.4,181.4 l-137.2,137.2 M1361.4,181.4 l-137.2,137.2 M1366.4,181.4 l-137.2,137.2 M1371.4,181.4 l-137.2,137.2 M1376.4,181.4 l-137.2,137.2 M1381.4,181.4 l-137.2,137.2 M1386.4,181.4 l-137.2,137.2 M1391.4,181.4 l-137.2,137.2 M1396.4,181.4 l-137.2,137.2 M1401.4,181.4 l-137.2,137.2 M1406.4,181.4 l-137.2,137.2 M1411.4,181.4 l-137.2,137.2 M1416.4,181.4 l-137.2,137.2 M1421.4,181.4 l-137.2,137.2 M1426.4,181.4 l-137.2,137.2 M1431.4,181.4 l-137.2,137.2 M1436.4,181.4 l-137.2,137.2 M1441.4,181.4 l-137.2,137.2 M1446.4,181.4 l-137.2,137.2 M1451.4,181.4 l-137.2,137.2 M1456.4,181.4 l-137.2,137.2 M1461.4,181.4 l-137.2,137.2 M1466.4,181.4 l-137.2,137.2 M1471.4,181.4 l-137.2,137.2 M1476.4,181.4 l-137.2,137.2 M1481.4,181.4 l-137.2,137.2 M1486.4,181.4 l-137.2,137.2 M1491.4,181.4 l-137.2,137.2 M1496.4,181.4 l-137.2,137.2 M1501.4,181.4 l-137.2,137.2 M1506.4,181.4 l-137.2,137.2 M1511.4,181.4 l-137.2,137.2 M1516.4,181.4 l-137.2,137.2 M1521.4,181.4 l-137.2,137.2 M1526.4,181.4 l-137.2,137.2 M1531.4,181.4 l-137.2,137.2 M1536.4,181.4 l-137.2,137.2 " stroke="#8A8A8A" stroke-width="0.3" clip-path="url(#hfront)"/>
+<circle cx="1330.0" cy="250.0" r="68.6" fill="none" stroke="#1A1A1A" stroke-width="1.0"/>
+<circle cx="1330.0" cy="250.0" r="37.7" fill="none" stroke="#1A1A1A" stroke-width="0.5"/>
+<circle cx="1330.0" cy="250.0" r="10.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.9"/>
+<circle cx="1330.0" cy="250.0" r="3.8" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="1364.9" cy="284.9" r="6.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="1364.9" cy="284.9" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="1295.1" cy="284.9" r="6.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="1295.1" cy="284.9" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="1295.1" cy="215.1" r="6.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="1295.1" cy="215.1" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<circle cx="1364.9" cy="215.1" r="6.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="1364.9" cy="215.1" r="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="1321.8" y="161.9" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="1321.8" y="318.6" width="16.5" height="19.5" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M1261.4,240.2 A5.2,9.8 0 0 0 1261.4,259.8 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<rect x="1165.4" y="248.4" width="90.0" height="3.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M1165.4,243.0 l-3.0,4 l6.0,6 l-3.0,4" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+<path d="M1165.4,243.0 l-3.0,4 l6.0,6 l-3.0,4" fill="none" stroke="#1A1A1A" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="1165.4" y="248.4" width="90.0" height="3.2" fill="none" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M1398.6,240.2 A5.2,9.8 0 0 1 1398.6,259.8 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<rect x="1404.6" y="248.4" width="90.0" height="3.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M1494.6,243.0 l3.0,4 l-6.0,6 l3.0,4" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+<path d="M1494.6,243.0 l3.0,4 l-6.0,6 l3.0,4" fill="none" stroke="#1A1A1A" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="1404.6" y="248.4" width="90.0" height="3.2" fill="none" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M1515.6,181.4 L1523.6,181.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1515.6,318.6 L1523.6,318.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1519.6,181.4 L1519.6,318.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1517.1,183.9 L1522.1,178.9" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M1517.1,321.1 L1522.1,316.1" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="1514.6" y="250.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.2" fill="#1A1A1A" text-anchor="middle" transform="rotate(-90 1514.6 250.0)">18.3 m（60 ft）</text>
+<path d="M1369.9,210.1 L1406.6,167.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="1406.6" cy="167.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1406.6" y="170.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">2</text>
+<path d="M1193.9,252.0 L1193.9,342.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="1193.9" cy="342.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1193.9" y="345.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">11</text>
+<text x="1330.0" y="393.6" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.80" font-weight="normal" fill="#5C5C5C" text-anchor="middle">船体截面：圆柱，无自旋舱，全程微重力</text>
+<text x="1590.0" y="271.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.60" font-weight="bold" fill="#1A1A1A" text-anchor="start">正阳级 AKV（舰载 6 架）</text>
+<text x="1590.0" y="284.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.00" font-weight="normal" fill="#5C5C5C" text-anchor="start">11.4 × 3.0 m · 150 t · 0.21 G · 同比例</text>
+<rect x="1590.0" y="323.6" width="85.7" height="22.9" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="1590.0" y="323.6" width="6.8" height="22.9" fill="#CFCFCB" stroke="#1A1A1A" stroke-width="0.8"/>
+<rect x="1637.1" y="286.8" width="36.8" height="36.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<rect x="1637.1" y="346.4" width="36.8" height="36.8" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="1606.5" cy="335.0" r="3.8" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<path d="M1675.7,327.0 l16.5,-3.4 l0,22.9 l-16.5,-3.4 Z" fill="#E4E4E1" stroke="#1A1A1A" stroke-width="0.8" stroke-linejoin="round"/>
+<text x="1590.0" y="397.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.80" font-weight="normal" fill="#5C5C5C" text-anchor="start">钨弹丸包或 X 射线激光弹包各一，</text>
+<text x="1590.0" y="410.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.80" font-weight="normal" fill="#5C5C5C" text-anchor="start">比美军掠食者多带一包备用弹药。</text>
+</g>
+<g id="C俯视">
+<rect x="84" y="741.0939999999999" width="18" height="18" fill="#1A1A1A"/>
+<text x="93.0" y="755.1" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="11.00" font-weight="bold" fill="#FFFFFF" text-anchor="middle">C</text>
+<text x="110.0" y="755.1" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="12.50" font-weight="bold" fill="#1A1A1A" text-anchor="start">俯视图</text>
+<text x="157.5" y="755.1" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.60" font-weight="normal" fill="#5C5C5C" text-anchor="start">巡航状态，散热翼展开；战斗时收拢以免被激光烧穿</text>
+<rect x="514.7" y="805.1" width="322.3" height="322.3" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.9"/>
+<path d="M516.7,819.7 L835.0,819.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,834.4 L835.0,834.4" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,849.0 L835.0,849.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,863.7 L835.0,863.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,878.3 L835.0,878.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,893.0 L835.0,893.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,907.7 L835.0,907.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,922.3 L835.0,922.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,937.0 L835.0,937.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,951.6 L835.0,951.6" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,966.3 L835.0,966.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,980.9 L835.0,980.9" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,995.6 L835.0,995.6" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1010.2 L835.0,1010.2" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1024.9 L835.0,1024.9" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1039.5 L835.0,1039.5" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1054.2 L835.0,1054.2" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1068.8 L835.0,1068.8" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1083.5 L835.0,1083.5" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1098.1 L835.0,1098.1" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1112.8 L835.0,1112.8" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M595.3,805.1 L595.3,1127.4" stroke="#5C5C5C" stroke-width="0.45" fill="none"/>
+<path d="M675.8,805.1 L675.8,1127.4" stroke="#5C5C5C" stroke-width="0.45" fill="none"/>
+<path d="M756.4,805.1 L756.4,1127.4" stroke="#5C5C5C" stroke-width="0.45" fill="none"/>
+<rect x="544.4" y="1127.4" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="666.8" y="1127.4" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="789.3" y="1127.4" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="514.7" y="1276.6" width="322.3" height="322.3" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.9"/>
+<path d="M516.7,1291.2 L835.0,1291.2" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1305.9 L835.0,1305.9" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1320.5 L835.0,1320.5" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1335.2 L835.0,1335.2" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1349.8 L835.0,1349.8" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1364.5 L835.0,1364.5" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1379.1 L835.0,1379.1" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1393.8 L835.0,1393.8" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1408.4 L835.0,1408.4" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1423.1 L835.0,1423.1" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1437.7 L835.0,1437.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1452.4 L835.0,1452.4" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1467.0 L835.0,1467.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1481.7 L835.0,1481.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1496.3 L835.0,1496.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1511.0 L835.0,1511.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1525.7 L835.0,1525.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1540.3 L835.0,1540.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1555.0 L835.0,1555.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1569.6 L835.0,1569.6" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M516.7,1584.3 L835.0,1584.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M595.3,1276.6 L595.3,1598.9" stroke="#5C5C5C" stroke-width="0.45" fill="none"/>
+<path d="M675.8,1276.6 L675.8,1598.9" stroke="#5C5C5C" stroke-width="0.45" fill="none"/>
+<path d="M756.4,1276.6 L756.4,1598.9" stroke="#5C5C5C" stroke-width="0.45" fill="none"/>
+<rect x="544.4" y="1270.6" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="666.8" y="1270.6" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="789.3" y="1270.6" width="18.0" height="6.0" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="132.0" y="1133.4" width="800.1" height="137.2" fill="#F3F3F1" stroke="#1A1A1A" stroke-width="0.9"/>
+<path d="M132.0,1133.4 A11.2,68.6 0 0 0 132.0,1270.6 Z" fill="#CFCFCB" stroke="#1A1A1A" stroke-width="0.9" stroke-linejoin="round"/>
+<rect x="132.0" y="1133.4" width="11.2" height="137.2" fill="#CFCFCB" stroke="#1A1A1A" stroke-width="0.0"/>
+<path d="M143.2,1133.4 L143.2,1270.6" stroke="#1A1A1A" stroke-width="0.9" fill="none"/>
+<path d="M297.0,1133.4 L297.0,1270.6" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M852.0,1133.4 L852.0,1270.6" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<rect x="297.0" y="1133.4" width="555.0" height="137.2" fill="#FAFAF8" stroke="#1A1A1A" stroke-width="0.0"/>
+<path d="M300.0,1144.9 L849.0,1144.9" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1156.3 L849.0,1156.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1167.7 L849.0,1167.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1179.1 L849.0,1179.1" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1190.6 L849.0,1190.6" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1202.0 L849.0,1202.0" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1213.4 L849.0,1213.4" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1224.9 L849.0,1224.9" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1236.3 L849.0,1236.3" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1247.7 L849.0,1247.7" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M300.0,1259.2 L849.0,1259.2" stroke="#8A8A8A" stroke-width="0.3" fill="none"/>
+<path d="M357.0,1133.4 L357.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M432.0,1133.4 L432.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M507.0,1133.4 L507.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M582.0,1133.4 L582.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M657.0,1133.4 L657.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M732.0,1133.4 L732.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M807.0,1133.4 L807.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<rect x="852.0" y="1133.4" width="80.1" height="137.2" fill="#B9B9B5" stroke="#1A1A1A" stroke-width="0.0"/>
+<path d="M874.5,1133.4 L874.5,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M897.0,1133.4 L897.0,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<path d="M919.5,1133.4 L919.5,1270.6" stroke="#5C5C5C" stroke-width="0.4" fill="none"/>
+<rect x="132.0" y="1133.4" width="800.1" height="137.2" fill="none" stroke="#1A1A1A" stroke-width="0.9"/>
+<path d="M932.1,1148.5 L1018.4,1121.1 L1018.4,1282.9 L932.1,1255.5 Z" fill="#E4E4E1" stroke="#1A1A1A" stroke-width="0.9" stroke-linejoin="round"/>
+<path d="M946.5,1143.9 L946.5,1260.1" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M960.9,1139.4 L960.9,1264.6" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M975.2,1134.8 L975.2,1269.2" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M989.6,1130.2 L989.6,1273.8" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M1004.0,1125.6 L1004.0,1278.4" stroke="#5C5C5C" stroke-width="0.35" fill="none"/>
+<path d="M1018.4,1121.1 L1018.4,1282.9" stroke="#1A1A1A" stroke-width="1.4" fill="none"/>
+<rect x="833.2" y="1133.4" width="15.0" height="4.5" fill="#B9B9B5" stroke="#1A1A1A" stroke-width="0.6"/>
+<rect x="833.2" y="1129.5" width="15.0" height="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="833.2" y="1266.1" width="15.0" height="4.5" fill="#B9B9B5" stroke="#1A1A1A" stroke-width="0.6"/>
+<rect x="833.2" y="1271.9" width="15.0" height="2.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="315.8" y="1121.4" width="24.0" height="24.0" fill="none" stroke="#1A1A1A" stroke-width="0.5" stroke-dasharray="1.5 1.5"/>
+<rect x="315.8" y="1258.6" width="24.0" height="24.0" fill="none" stroke="#1A1A1A" stroke-width="0.5" stroke-dasharray="1.5 1.5"/>
+<rect x="348.8" y="1193.8" width="16.5" height="16.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="357.0" cy="1202.0" r="4.1" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="438.8" y="1193.8" width="16.5" height="16.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="447.0" cy="1202.0" r="4.1" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="536.2" y="1193.8" width="16.5" height="16.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="544.5" cy="1202.0" r="4.1" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="626.2" y="1193.8" width="16.5" height="16.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="634.5" cy="1202.0" r="4.1" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="723.8" y="1193.8" width="16.5" height="16.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="732.0" cy="1202.0" r="4.1" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="806.2" y="1193.8" width="16.5" height="16.5" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<circle cx="814.5" cy="1202.0" r="4.1" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<path d="M334.5,1133.4 A7.5,4.1 0 0 1 349.5,1133.4 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M334.5,1270.6 A7.5,4.1 0 0 0 349.5,1270.6 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M484.5,1133.4 A7.5,4.1 0 0 1 499.5,1133.4 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M484.5,1270.6 A7.5,4.1 0 0 0 499.5,1270.6 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M634.5,1133.4 A7.5,4.1 0 0 1 649.5,1133.4 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M634.5,1270.6 A7.5,4.1 0 0 0 649.5,1270.6 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M784.5,1133.4 A7.5,4.1 0 0 1 799.5,1133.4 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M784.5,1270.6 A7.5,4.1 0 0 0 799.5,1270.6 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M852.8,1133.4 A6.8,3.8 0 0 1 866.2,1133.4 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M852.8,1270.6 A6.8,3.8 0 0 0 866.2,1270.6 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M159.8,1133.4 A9.8,5.2 0 0 1 179.2,1133.4 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<path d="M159.8,1270.6 A9.8,5.2 0 0 0 179.2,1270.6 Z" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7" stroke-linejoin="round"/>
+<rect x="154.5" y="1196.0" width="30.0" height="12.0" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<circle cx="199.5" cy="1202.0" r="5.2" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="150.8" y="1131.8" width="42.0" height="1.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="150.8" y="1270.6" width="42.0" height="1.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="195.8" y="1131.8" width="42.0" height="1.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="195.8" y="1270.6" width="42.0" height="1.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="240.8" y="1131.8" width="42.0" height="1.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="240.8" y="1270.6" width="42.0" height="1.6" fill="#1A1A1A" stroke="#1A1A1A" stroke-width="0"/>
+<rect x="154.5" y="1179.1" width="125.7" height="45.7" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.8"/>
+<path d="M154.5,1202.0 L280.2,1202.0" stroke="#5C5C5C" stroke-width="0.45" fill="none" stroke-dasharray="3 2"/>
+<path d="M1036.3,805.1 L1044.3,805.1" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1036.3,1598.9 L1044.3,1598.9" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1040.3,805.1 L1040.3,1598.9" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M1037.8,807.6 L1042.8,802.6" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M1037.8,1601.4 L1042.8,1596.4" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="1035.3" y="1202.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.2" fill="#1A1A1A" text-anchor="middle" transform="rotate(-90 1035.3 1202.0)">翼展 106 m</text>
+<path d="M514.7,1616.9 L514.7,1624.9" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M837.0,1616.9 L837.0,1624.9" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M514.7,1620.9 L837.0,1620.9" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M512.2,1623.4 L517.2,1618.4" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M834.5,1623.4 L839.5,1618.4" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="675.8" y="1631.1" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="middle">43 m（141 ft）</text>
+<path d="M486.7,1127.4 L494.7,1127.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M486.7,805.1 L494.7,805.1" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M490.7,1127.4 L490.7,805.1" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<path d="M488.2,1129.9 L493.2,1124.9" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<path d="M488.2,807.6 L493.2,802.6" stroke="#1A1A1A" stroke-width="0.7" fill="none"/>
+<text x="485.7" y="966.3" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.2" fill="#1A1A1A" text-anchor="middle" transform="rotate(-90 485.7 966.3)">43 m</text>
+<text x="118.0" y="966.3" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.00" font-weight="bold" fill="#1A1A1A" text-anchor="end">左舷</text>
+<text x="118.0" y="1437.7" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.00" font-weight="bold" fill="#1A1A1A" text-anchor="end">右舷</text>
+<path d="M217.5,1201.0 L282.0,1087.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="282.0" cy="1087.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="282.0" y="1090.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">5</text>
+<path d="M216.8,1271.6 L237.0,1310.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="237.0" cy="1310.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="237.0" y="1313.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">6</text>
+<path d="M544.5,1200.0 L492.0,1087.4" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="492.0" cy="1087.4" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="492.0" y="1090.4" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">8</text>
+<path d="M492.0,1269.6 L432.0,1310.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="432.0" cy="1310.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="432.0" y="1313.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">9</text>
+<path d="M708.1,966.3 L748.1,926.3" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="748.1" cy="926.3" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="748.1" y="929.3" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">11</text>
+<path d="M432.0,1229.4 L357.0,1310.6" stroke="#1A1A1A" stroke-width="0.5" fill="none"/>
+<circle cx="357.0" cy="1310.6" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="357.0" y="1313.6" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">10</text>
+</g>
+<g id="图注">
+<text x="1180.0" y="1095.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.60" font-weight="bold" fill="#1A1A1A" text-anchor="start">图注</text>
+<text x="1209.2" y="1095.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.00" font-weight="normal" fill="#5C5C5C" text-anchor="start">编号见三视图与纵剖</text>
+<circle cx="1186.0" cy="1114.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1117.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">1</text>
+<text x="1198.0" y="1117.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">重装甲艏板：cDR 65，侧面 15、艉部 5。永远把这一面对着敌人；被两个方向夹住就得选一个</text>
+<circle cx="1186.0" cy="1132.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1135.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">2</text>
+<text x="1198.0" y="1135.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">重激光 ×4（10 MJ，前向固定）；中心是粒子束射口。粒子束供电时六门重激光塔不能同时开火</text>
+<circle cx="1186.0" cy="1150.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1153.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">3</text>
+<text x="1198.0" y="1153.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">传感器组：大型被动阵列 ×2、中型雷达 ×2、中型雷达激光 ×3。被动阵列十万英里外就能看见任何热的船</text>
+<circle cx="1186.0" cy="1168.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1171.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">4</text>
+<text x="1198.0" y="1171.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">指挥舰桥（旧式），内置，套在重型风暴掩体里（cPF 1,000）；另一处轻掩体罩着陆战队座舱</text>
+<circle cx="1186.0" cy="1186.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1189.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">5</text>
+<text x="1198.0" y="1189.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">机库门 16.8 × 6.1 m，机库 55 格，常载 500 t 的备用 AKV 或陆战队装备</text>
+<circle cx="1186.0" cy="1204.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1207.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">6</text>
+<text x="1198.0" y="1207.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">正阳级 AKV 发射舱 ×6，每舷 3，每舱 6 格 85 m³</text>
+<circle cx="1186.0" cy="1222.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1225.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">7</text>
+<text x="1198.0" y="1225.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">大型出入口 ×2（对接环），背腹各一</text>
+<circle cx="1186.0" cy="1240.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1243.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">8</text>
+<text x="1198.0" y="1243.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">重激光塔 ×6（10 MJ，可缩回），3 背 3 腹交错，塔式安装可以向前后射击</text>
+<circle cx="1186.0" cy="1258.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1261.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">9</text>
+<text x="1198.0" y="1261.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">轻激光 ×8（2.5 MJ，固定泡），每舷 4；艉部另有 2，对付尾追的 AKV</text>
+<circle cx="1186.0" cy="1276.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1279.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">10</text>
+<text x="1198.0" y="1279.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">船体散热板 6,500 m²，覆盖燃料段整个外壳（正典：70 ksf 船体散热器）</text>
+<circle cx="1186.0" cy="1294.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1297.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">11</text>
+<text x="1198.0" y="1297.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">折叠散热翼 ×2，43 × 43 m，共 3,700 m²。展开时是全舰最大、最软的目标</text>
+<circle cx="1186.0" cy="1312.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1315.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">12</text>
+<text x="1198.0" y="1315.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">燃料段：核弹丸 1,500 格、18,000 t，占船体 74%。满载 31,224 t 里 58% 是燃料</text>
+<circle cx="1186.0" cy="1330.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1333.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">13</text>
+<text x="1198.0" y="1333.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">高比冲聚变脉冲驱动，200 格；磁喷管。0.04 G，可连续点火 187.5 小时，ΔV 82.5 英里/秒（133 km/s）</text>
+<circle cx="1186.0" cy="1348.0" r="6.2" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="0.7"/>
+<text x="1186.0" y="1351.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="7.60" font-weight="bold" fill="#1A1A1A" text-anchor="middle">14</text>
+<text x="1198.0" y="1351.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#1A1A1A" text-anchor="start">姿态控制推进器组 ×4，随驱动附送；船可以独立于航向转动，这是「侧击靠数量」的物理根源</text>
+</g>
+<g id="参数">
+<text x="1180.0" y="560.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="11.00" font-weight="bold" fill="#1A1A1A" text-anchor="start">主要参数</text>
+<text x="1234.0" y="560.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.00" font-weight="normal" fill="#5C5C5C" text-anchor="start">数值照抄正典，英制换算成公制</text>
+<text x="1180.0" y="582.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">舰级</text>
+<text x="1252.0" y="582.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">星寨级（Xingzhai，「星」）空间支配载具</text>
+<text x="1180.0" y="599.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">设计 / 建造</text>
+<text x="1252.0" y="599.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">MAST 2073 年立项；原型「久星号」2086 年成；2088 年起量产</text>
+<text x="1180.0" y="616.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">数量</text>
+<text x="1252.0" y="616.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">20 艘（2100 年）；预计服役至 2120 年以后</text>
+<text x="1180.0" y="633.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">隶属</text>
+<text x="1252.0" y="633.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">人民解放军海军太空部队深空舰队主力；母港火卫一</text>
+<text x="1180.0" y="650.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">船体</text>
+<text x="1252.0" y="650.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">圆柱 106.7 m × 直径 18.3 m，碳复合材料特重框架，智能船体</text>
+<text x="1180.0" y="667.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">装甲</text>
+<text x="1252.0" y="667.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">金属基复合材料；cDR 前 65 / 侧 15 / 后 5；变色蒙皮</text>
+<text x="1180.0" y="684.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">质量</text>
+<text x="1252.0" y="684.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">空重 11,768 t · 战斗 22,224 t · 满载 31,224 t</text>
+<text x="1180.0" y="701.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">载荷</text>
+<text x="1252.0" y="701.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">1,456 t（含 6 架 AKV 与 500 t 舰载物资）</text>
+<text x="1180.0" y="718.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">动力</text>
+<text x="1252.0" y="718.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">高比冲聚变脉冲驱动 200 格；新式裂变堆 80 MW</text>
+<text x="1180.0" y="735.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">性能</text>
+<text x="1252.0" y="735.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">0.04 G · 点火 187.5 h · ΔV 82.5 mps（133 km/s）</text>
+<text x="1180.0" y="752.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">散热</text>
+<text x="1252.0" y="752.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">船体 70 ksf + 折叠翼 40 ksf；需求 105 ksf</text>
+<text x="1180.0" y="769.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">武器</text>
+<text x="1252.0" y="769.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">重激光 10 MJ：6 塔（侧）+ 4（前）；轻激光 2.5 MJ：8（侧）+ 2（后）</text>
+<text x="1252.0" y="786.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">旧式粒子束 91 m（前）；正阳级 AKV × 6</text>
+<text x="1180.0" y="803.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">传感器</text>
+<text x="1252.0" y="803.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">中型雷达激光 × 3 · 大型被动阵列 × 2 · 中型雷达 × 2</text>
+<text x="1180.0" y="820.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">乘员</text>
+<text x="1252.0" y="820.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">舰长、领航、飞行员、2 武器官、20 工程师、3 军医；多为赛博壳</text>
+<text x="1180.0" y="837.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">搭载</text>
+<text x="1252.0" y="837.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">24 名动力甲陆战队（第 67 太空步兵师）</text>
+<text x="1180.0" y="854.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">居住</text>
+<text x="1252.0" y="854.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">4 舱室 + 6 通铺 + 座舱；无自旋舱，全员微重力适应</text>
+<text x="1180.0" y="871.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">造价</text>
+<text x="1252.0" y="871.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">9.27 亿美元（2100 年美元）</text>
+<text x="1180.0" y="888.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">维护</text>
+<text x="1252.0" y="888.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">每 1.32 小时一次检查，每天 73 工时</text>
+<text x="1180.0" y="905.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="bold" fill="#5C5C5C" text-anchor="start">同代对手</text>
+<text x="1252.0" y="905.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.40" font-weight="normal" fill="#1A1A1A" text-anchor="start">美军 DFS-3 天使级 114 m · 欧盟 SDV-90 114 m · 法国柯尼斯堡级球形 29 m</text>
+<path d="M1180.0,568.0 L1764.0,568.0" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
+<path d="M1180.0,913.0 L1764.0,913.0" stroke="#1A1A1A" stroke-width="0.6" fill="none"/>
+<text x="1180.0" y="936.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="9.60" font-weight="bold" fill="#1A1A1A" text-anchor="start">读图要点</text>
+<text x="1180.0" y="954.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="start">· 这是一根装了引擎的油罐：船体四分之三是燃料，人住的地方不到一成。0.04 G 的加速度</text>
+<text x="1190.9" y="968.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="start">意味着离开火卫一去地球，要连续点火一个星期。</text>
+<text x="1180.0" y="982.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="start">· 装甲只在艏板上。TS 的太空战因此像地中海桨帆船：把鼻子对准敌人，用数量绕到对方侧面。</text>
+<text x="1180.0" y="996.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="start">· 散热翼展开时翼展超过船长，是被激光优先烧的部位；收拢后靠船体散热板撑，撑不了太久。</text>
+<text x="1180.0" y="1010.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="start">· 部件位置是按正典对 SDV 通用布局的描述排的，正典没有给出本级的图。</text>
+<text x="1180.0" y="1024.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="start">· 2198 年：火卫一若还留着星寨级，它们已服役一百一十年，火卫一船厂是唯一能修它们的地方。</text>
+</g>
+<g id="图名">
+<text x="84.0" y="52.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="30.00" font-weight="bold" letter-spacing="3.00" fill="#1A1A1A" text-anchor="start">星寨级</text>
+<text x="198.0" y="52.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="14.00" font-weight="normal" fill="#5C5C5C" text-anchor="start">空间支配载具 · 人民解放军海军太空部队 · 深空舰队 · 火卫一</text>
+<text x="84.0" y="72.0" font-family="Liberation Sans, Helvetica, Arial, sans-serif" font-size="8.40" font-weight="normal" letter-spacing="1.60" fill="#5C5C5C" text-anchor="start">XINGZHAI-CLASS SPACE DOMINANCE VEHICLE  ·  PLAN-SF DEEP SPACE FLEET  ·  RECOGNITION DRAWING  ·  2100</text>
+<text x="1764.0" y="46.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="end">比例 1 : 7.5 屏幕单位/米，三视图与参照物同比例</text>
+<text x="1764.0" y="60.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#B3261E" text-anchor="end">尺寸、质量、模块清单取自正典；部件排布为本图推定</text>
+<text x="1764.0" y="74.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="8.20" font-weight="normal" fill="#5C5C5C" text-anchor="end">飞船识别图 · 第 1 号</text>
+</g>
+<g id="出处">
+<text x="84.0" y="1667.0" font-family="FandolHei, Noto Sans CJK SC, Liberation Sans, sans-serif" font-size="7.00" font-weight="normal" fill="#8A8A8A" text-anchor="start">数据：GURPS Transhuman Space《Spacecraft of the Solar System》p.35–36（星寨级）、《In The Well》p.107（正阳级 AKV）、核心书 p.173–203（设计与战斗规则）。参照物：054A 型护卫舰公开尺寸。1 格 = 500 立方英尺 = 14.16 m³。</text>
+</g>
+</svg>
